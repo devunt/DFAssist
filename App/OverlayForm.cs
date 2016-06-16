@@ -104,7 +104,7 @@ namespace App
                 panel_Move.BackColor = Color.FromArgb(64, 0, 0);
 
                 CancelDutyFinder();
-                label_DutyName.Text = "< 클라이언트가 연결되지 않음 >";
+                label_DutyName.Text = "< 클라이언트 통신 대기중... >";
             }
         }
 
