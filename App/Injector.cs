@@ -54,11 +54,13 @@ namespace App
                 }
             }
 
+            string fullpath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Global.DLL_PATH);
+
             IntPtr procHandle = OpenProcess(PROCESS_CREATE_THREAD | PROCESS_QUERY_INFORMATION | PROCESS_VM_OPERATION | PROCESS_VM_WRITE | PROCESS_VM_READ, false, TargetProcess.Id);
             IntPtr loadLibraryAddr = GetProcAddress(GetModuleHandle("kernel32.dll"), "LoadLibraryA");
-            IntPtr allocMemAddress = VirtualAllocEx(procHandle, IntPtr.Zero, (uint)((Global.DLL_PATH.Length + 1) * Marshal.SizeOf(typeof(char))), MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
+            IntPtr allocMemAddress = VirtualAllocEx(procHandle, IntPtr.Zero, (uint)((fullpath.Length + 1) * Marshal.SizeOf(typeof(char))), MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
             UIntPtr bytesWritten;
-            WriteProcessMemory(procHandle, allocMemAddress, Encoding.Default.GetBytes(Global.DLL_PATH), (uint)((Global.DLL_PATH.Length + 1) * Marshal.SizeOf(typeof(char))), out bytesWritten);
+            WriteProcessMemory(procHandle, allocMemAddress, Encoding.Default.GetBytes(fullpath), (uint)((fullpath.Length + 1) * Marshal.SizeOf(typeof(char))), out bytesWritten);
             CreateRemoteThread(procHandle, IntPtr.Zero, 0, loadLibraryAddr, allocMemAddress, 0, IntPtr.Zero);
             Log.S("DFH 모듈 로드됨.");
         }

@@ -10,7 +10,7 @@ namespace App
     {
         public const string VERSION = "v20160617.1-v64";
 
-        public const string DLL_PATH = @"C:\projects\DutyFinderHelper\x64\Release\dfhelper.dll";
+        public const string DLL_PATH = @".\dfhelper.dll";
         public const string SETTINGS_FILEPATH = @".\dfh.ini";
 
         public const string GITHUB_REPO = @"devunt/DFHelper";
