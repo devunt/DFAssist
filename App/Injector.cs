@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
@@ -43,13 +42,13 @@ namespace App
 
         internal static void Inject()
         {
-            Log.I("DFH 모듈 로드중...");
+            Log.I("DFA 모듈 로드중...");
 
             foreach (ProcessModule mod in TargetProcess.Modules)
             {
                 if (mod.ModuleName == Path.GetFileName(Global.DLL_PATH))
                 {
-                    Log.E("DFH 모듈이 이미 로드되어 있습니다.");
+                    Log.E("DFA 모듈이 이미 로드되어 있습니다.");
                     return;
                 }
             }
@@ -62,12 +61,12 @@ namespace App
             UIntPtr bytesWritten;
             WriteProcessMemory(procHandle, allocMemAddress, Encoding.Default.GetBytes(fullpath), (uint)((fullpath.Length + 1) * Marshal.SizeOf(typeof(char))), out bytesWritten);
             CreateRemoteThread(procHandle, IntPtr.Zero, 0, loadLibraryAddr, allocMemAddress, 0, IntPtr.Zero);
-            Log.S("DFH 모듈 로드됨.");
+            Log.S("DFA 모듈 로드됨.");
         }
 
         internal static void Eject()
         {
-            Log.I("DFH 모듈 언로드중...");
+            Log.I("DFA 모듈 언로드중...");
 
             IntPtr procHandle = OpenProcess(PROCESS_CREATE_THREAD | PROCESS_QUERY_INFORMATION | PROCESS_VM_OPERATION | PROCESS_VM_WRITE | PROCESS_VM_READ, false, TargetProcess.Id);
             IntPtr freeLibraryAddr = GetProcAddress(GetModuleHandle("kernel32.dll"), "FreeLibrary");
@@ -76,12 +75,12 @@ namespace App
             {
                 if (mod.ModuleName == Path.GetFileName(Global.DLL_PATH))
                 {
-                    Log.D("DFH 모듈 언로드: 0x{0:X}", mod.BaseAddress);
+                    Log.D("DFA 모듈 언로드: 0x{0:X}", mod.BaseAddress);
                     CreateRemoteThread(procHandle, IntPtr.Zero, 0, freeLibraryAddr, mod.BaseAddress, 0, IntPtr.Zero);
                 }
             }
 
-            Log.S("DFH 모듈 언로드됨.");
+            Log.S("DFA 모듈 언로드됨.");
         }
     }
 }

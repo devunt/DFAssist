@@ -5,7 +5,7 @@ Hooker::TypeInflatePacket Hooker::fpInflatePacket;
 
 
 void Hooker::Initialise() {
-    Communicator::Connect(L"\\\\.\\pipe\\FFXIV_DX11_DFH_PIPE");
+    Communicator::Connect(L"\\\\.\\pipe\\FFXIV_DX11_DFA_PIPE");
 
     if (MH_Initialize() != MH_OK) {
         return;
@@ -22,14 +22,14 @@ void Hooker::Initialise() {
     MH_CreateHookEx(reinterpret_cast<void *>(InflatePacket), &Hooker::HkInflatePacket, &Hooker::fpInflatePacket);
     MH_EnableHook(reinterpret_cast<void *>(InflatePacket));
 
-    Log::d(L"RDF have been initialised.");
+    Log::d(L"DFA have been initialised.");
 }
 
 void Hooker::Uninitialise() {
     MH_DisableHook(fpInflatePacket);
     MH_Uninitialize();
 
-    Log::d(L"RDF have been unintialised.");
+    Log::d(L"DFA have been unintialised.");
 }
 
 int __fastcall Hooker::HkInflatePacket(int64_t out, int *p_outlen, int64_t in, int a4) {

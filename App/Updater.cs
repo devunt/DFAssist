@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -47,7 +44,7 @@ namespace App
         {
             var url = string.Format("https://api.github.com/repos/{0}/releases/latest", Global.GITHUB_REPO);
             var request = (HttpWebRequest)WebRequest.Create(url);
-            request.UserAgent = "DFH";
+            request.UserAgent = "DFA";
             request.Timeout = 1000;
 
             string resp = null;

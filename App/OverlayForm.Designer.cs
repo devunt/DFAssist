@@ -95,7 +95,7 @@
             this.Name = "OverlayForm";
             this.Opacity = 0.6D;
             this.ShowInTaskbar = false;
-            this.Text = "DFH OverlayForm";
+            this.Text = "DFA OverlayForm";
             this.TopMost = true;
             this.LocationChanged += new System.EventHandler(this.OverlayForm_LocationChanged);
             this.ResumeLayout(false);

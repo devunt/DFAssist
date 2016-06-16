@@ -31,7 +31,7 @@ namespace App
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            label_AboutTitle.Text = string.Format("DFH {0}", Global.VERSION);
+            label_AboutTitle.Text = string.Format("DFA {0}", Global.VERSION);
             communicator = new Communicator(this);
 
             Log.I("파이널판타지14 프로세스를 찾는 중...");

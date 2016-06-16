@@ -11,7 +11,7 @@ public:
 
         wchar_t wbuf1[256], wbuf2[256];
         vswprintf(wbuf1, 256, fmt, args);
-        swprintf(wbuf2, 256, L"[RDF] %s", wbuf1);
+        swprintf(wbuf2, 256, L"[DFA] %s", wbuf1);
 
         OutputDebugString(wbuf2);
         va_end(args);

@@ -32,6 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage_Setting = new System.Windows.Forms.TabPage();
+            this.comboBox_Process = new System.Windows.Forms.ComboBox();
+            this.checkBox_StartupUpdate = new System.Windows.Forms.CheckBox();
+            this.checkBox_StartupShow = new System.Windows.Forms.CheckBox();
+            this.button_Eject = new System.Windows.Forms.Button();
             this.linkLabel_NewUpdate = new System.Windows.Forms.LinkLabel();
             this.label_Separator = new System.Windows.Forms.Label();
             this.button_SelectProcess = new System.Windows.Forms.Button();
@@ -48,10 +52,6 @@
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem_Open = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_Close = new System.Windows.Forms.ToolStripMenuItem();
-            this.button_Eject = new System.Windows.Forms.Button();
-            this.checkBox_StartupShow = new System.Windows.Forms.CheckBox();
-            this.checkBox_StartupUpdate = new System.Windows.Forms.CheckBox();
-            this.comboBox_Process = new System.Windows.Forms.ComboBox();
             this.tabControl.SuspendLayout();
             this.tabPage_Setting.SuspendLayout();
             this.tabPage_Log.SuspendLayout();
@@ -93,6 +93,48 @@
             this.tabPage_Setting.Text = "설정";
             this.tabPage_Setting.UseVisualStyleBackColor = true;
             // 
+            // comboBox_Process
+            // 
+            this.comboBox_Process.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Process.FormattingEnabled = true;
+            this.comboBox_Process.Location = new System.Drawing.Point(21, 35);
+            this.comboBox_Process.Name = "comboBox_Process";
+            this.comboBox_Process.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_Process.Sorted = true;
+            this.comboBox_Process.TabIndex = 0;
+            // 
+            // checkBox_StartupUpdate
+            // 
+            this.checkBox_StartupUpdate.AutoSize = true;
+            this.checkBox_StartupUpdate.Location = new System.Drawing.Point(21, 159);
+            this.checkBox_StartupUpdate.Name = "checkBox_StartupUpdate";
+            this.checkBox_StartupUpdate.Size = new System.Drawing.Size(233, 17);
+            this.checkBox_StartupUpdate.TabIndex = 0;
+            this.checkBox_StartupUpdate.Text = "프로그램 시작시 업데이트 확인하기";
+            this.checkBox_StartupUpdate.UseVisualStyleBackColor = true;
+            this.checkBox_StartupUpdate.CheckedChanged += new System.EventHandler(this.checkBox_StartupUpdate_CheckedChanged);
+            // 
+            // checkBox_StartupShow
+            // 
+            this.checkBox_StartupShow.AutoSize = true;
+            this.checkBox_StartupShow.Location = new System.Drawing.Point(21, 136);
+            this.checkBox_StartupShow.Name = "checkBox_StartupShow";
+            this.checkBox_StartupShow.Size = new System.Drawing.Size(198, 17);
+            this.checkBox_StartupShow.TabIndex = 0;
+            this.checkBox_StartupShow.Text = "프로그램 시작시 이 창 보이기";
+            this.checkBox_StartupShow.UseVisualStyleBackColor = true;
+            this.checkBox_StartupShow.CheckedChanged += new System.EventHandler(this.checkBox_StartupShow_CheckedChanged);
+            // 
+            // button_Eject
+            // 
+            this.button_Eject.Location = new System.Drawing.Point(361, 33);
+            this.button_Eject.Name = "button_Eject";
+            this.button_Eject.Size = new System.Drawing.Size(90, 23);
+            this.button_Eject.TabIndex = 0;
+            this.button_Eject.Text = "모듈 언로드";
+            this.button_Eject.UseVisualStyleBackColor = true;
+            this.button_Eject.Click += new System.EventHandler(this.button_Eject_Click);
+            // 
             // linkLabel_NewUpdate
             // 
             this.linkLabel_NewUpdate.Location = new System.Drawing.Point(8, 266);
@@ -100,7 +142,7 @@
             this.linkLabel_NewUpdate.Size = new System.Drawing.Size(460, 13);
             this.linkLabel_NewUpdate.TabIndex = 0;
             this.linkLabel_NewUpdate.TabStop = true;
-            this.linkLabel_NewUpdate.Text = "새로운 업데이트가 가능합니다!";
+            this.linkLabel_NewUpdate.Text = "새로운 업데이트가 있습니다!";
             this.linkLabel_NewUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.linkLabel_NewUpdate.Visible = false;
             this.linkLabel_NewUpdate.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_NewUpdate_LinkClicked);
@@ -254,48 +296,6 @@
             this.toolStripMenuItem_Close.Size = new System.Drawing.Size(98, 22);
             this.toolStripMenuItem_Close.Text = "종료";
             this.toolStripMenuItem_Close.Click += new System.EventHandler(this.toolStripMenuItem_Close_Click);
-            // 
-            // button_Eject
-            // 
-            this.button_Eject.Location = new System.Drawing.Point(361, 33);
-            this.button_Eject.Name = "button_Eject";
-            this.button_Eject.Size = new System.Drawing.Size(90, 23);
-            this.button_Eject.TabIndex = 0;
-            this.button_Eject.Text = "모듈 언로드";
-            this.button_Eject.UseVisualStyleBackColor = true;
-            this.button_Eject.Click += new System.EventHandler(this.button_Eject_Click);
-            // 
-            // checkBox_StartupShow
-            // 
-            this.checkBox_StartupShow.AutoSize = true;
-            this.checkBox_StartupShow.Location = new System.Drawing.Point(21, 136);
-            this.checkBox_StartupShow.Name = "checkBox_StartupShow";
-            this.checkBox_StartupShow.Size = new System.Drawing.Size(198, 17);
-            this.checkBox_StartupShow.TabIndex = 0;
-            this.checkBox_StartupShow.Text = "프로그램 시작시 이 창 보이기";
-            this.checkBox_StartupShow.UseVisualStyleBackColor = true;
-            this.checkBox_StartupShow.CheckedChanged += new System.EventHandler(this.checkBox_StartupShow_CheckedChanged);
-            // 
-            // checkBox_StartupUpdate
-            // 
-            this.checkBox_StartupUpdate.AutoSize = true;
-            this.checkBox_StartupUpdate.Location = new System.Drawing.Point(21, 159);
-            this.checkBox_StartupUpdate.Name = "checkBox_StartupUpdate";
-            this.checkBox_StartupUpdate.Size = new System.Drawing.Size(233, 17);
-            this.checkBox_StartupUpdate.TabIndex = 0;
-            this.checkBox_StartupUpdate.Text = "프로그램 시작시 업데이트 확인하기";
-            this.checkBox_StartupUpdate.UseVisualStyleBackColor = true;
-            this.checkBox_StartupUpdate.CheckedChanged += new System.EventHandler(this.checkBox_StartupUpdate_CheckedChanged);
-            // 
-            // comboBox_Process
-            // 
-            this.comboBox_Process.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_Process.FormattingEnabled = true;
-            this.comboBox_Process.Location = new System.Drawing.Point(21, 35);
-            this.comboBox_Process.Name = "comboBox_Process";
-            this.comboBox_Process.Size = new System.Drawing.Size(121, 21);
-            this.comboBox_Process.Sorted = true;
-            this.comboBox_Process.TabIndex = 0;
             // 
             // MainForm
             // 

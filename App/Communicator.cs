@@ -33,13 +33,13 @@ namespace App
 
         private void Task()
         {
-            Log.I("DFHP: 서버 시작중...");
-            var server = new NamedPipeServerStream("FFXIV_DX11_DFH_PIPE", PipeDirection.In);
-            Log.S("DFHP: 서버 시작됨");
+            Log.I("DFAP: 서버 시작중...");
+            var server = new NamedPipeServerStream("FFXIV_DX11_DFA_PIPE", PipeDirection.In);
+            Log.S("DFAP: 서버 시작됨");
 
             Log.I("클라이언트 연결 대기중...");
             server.WaitForConnection();
-            Log.S("DFHP: 클라이언트 연결됨");
+            Log.S("DFAP: 클라이언트 연결됨");
 
             while (true)
             {
@@ -67,7 +67,7 @@ namespace App
                         });
                     }
 
-                    //Log.D("DFHP: PING");
+                    //Log.D("DFAP: PING");
                 }
                 else if (type == 2)
                 {
@@ -87,7 +87,7 @@ namespace App
                     });
 
                     state = DFState.WAITING;
-                    Log.I("DFHP: 매칭 시작됨 [{0}]", string.Join(", ", instances.Select(x => x.Name).ToArray()));
+                    Log.I("DFAP: 매칭 시작됨 [{0}]", string.Join(", ", instances.Select(x => x.Name).ToArray()));
                 }
                 else if (type == 3)
                 {
@@ -108,7 +108,7 @@ namespace App
 
                     state = DFState.WAITING;
 
-                    Log.I("DFHP: 매칭 상태 업데이트됨 [{0}, {1}/{2}, {3}/{4}, {5}/{6}]",
+                    Log.I("DFAP: 매칭 상태 업데이트됨 [{0}, {1}/{2}, {3}/{4}, {5}/{6}]",
                         instance.Name, tank, instance.Tank, healer, instance.Healer, dps, instance.DPS);
                 }
                 else if (type == 4)
@@ -122,7 +122,7 @@ namespace App
                     });
 
                     state = DFState.MATCHED;
-                    Log.S("DFHP: 매칭됨 [{0}]", instance.Name);
+                    Log.S("DFAP: 매칭됨 [{0}]", instance.Name);
                 }
                 else if (type == 5)
                 {
@@ -131,11 +131,11 @@ namespace App
                     });
 
                     state = DFState.IDLE;
-                    Log.E("DFHP: 매칭 중지됨");
+                    Log.E("DFAP: 매칭 중지됨");
                 }
                 else
                 {   
-                    Log.E("DFHP: 잘못된 데이터 받음");
+                    Log.E("DFAP: 잘못된 데이터 받음");
                 }
             }
 
@@ -144,7 +144,7 @@ namespace App
             });
 
             state = DFState.IDLE;
-            Log.E("DFHP: 클라이언트 연결 종료됨");
+            Log.E("DFAP: 클라이언트 연결 종료됨");
         }
     }
 }

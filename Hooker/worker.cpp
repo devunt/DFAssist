@@ -120,6 +120,6 @@ void Worker::Task() {
 
     Communicator::Disconnect();
 
-    HMODULE hModule = GetModuleHandle(L"dfhelper");
+    HMODULE hModule = GetModuleHandle(L"dfassist");
     FreeLibrary(hModule);
 }
