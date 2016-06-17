@@ -66,7 +66,7 @@ namespace App
                 catch (Exception ex)
                 {
                     IsValid = false;
-                    Log.Ex(ex, "IP 패킷 파싱 에러: {0}");
+                    Log.Ex(ex, "IP 패킷 파싱 에러");
                 }
             }
         }
@@ -115,7 +115,7 @@ namespace App
                 catch (Exception ex)
                 {
                     IsValid = false;
-                    Log.Ex(ex, "TCP 패킷 파싱 에러: {0}");
+                    Log.Ex(ex, "TCP 패킷 파싱 에러");
                 }
             }
         }

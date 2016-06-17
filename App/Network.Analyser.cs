@@ -69,7 +69,7 @@ namespace App
                 }
                 catch (Exception ex)
                 {
-                    Log.Ex(ex, "메시지 처리 요청중 에러 발생함: {0}");
+                    Log.Ex(ex, "메시지 처리 요청중 에러 발생함");
                 }
             }
         }
@@ -166,7 +166,7 @@ namespace App
             }
             catch (Exception ex)
             {
-                Log.Ex(ex, "메시지 처리중 에러 발생함: {0}");
+                Log.Ex(ex, "메시지 처리중 에러 발생함");
             }
         }
 
