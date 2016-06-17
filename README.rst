@@ -8,9 +8,8 @@
 
 정보
 ----
-:최신 버전: v20160617.1-x64 (`다운로드 <https://github.com/devunt/DFAssist/releases/latest>`_)
+:최신 버전: v20160618.1 (`다운로드 <https://github.com/devunt/DFAssist/releases/latest>`_)
 :게임 버전: 2016.06.07.0000.0000(2001960, ex1:2016.05.31.0000.0000)
-:지원 환경: **64비트 DirectX 11 클라이언트** (32비트 DirectX 9 클라이언트는 사용 불가)
 
 사용법
 ------
@@ -20,7 +19,6 @@
 
 기능
 ----
-- 임무가 매칭되면 파이널판타지14 작업 표시줄 아이콘을 깜빡임
 - 실시간 임무 찾기 상태를 볼 수 있는 전용 오버레이 UI
 
   - 파이널판타지14가 최소화되어 있는 상태에서 현재 매칭 상태를 확인 가능
@@ -59,7 +57,7 @@
 
 프로그램 UI
 ~~~~~~~~~~~
-.. image:: http://i.imgur.com/XnUBVgX.png
+.. image:: http://i.imgur.com/Du4rwNZ.png
 
 알림창 아이콘
 ~~~~~~~~~~~~~
