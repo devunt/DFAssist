@@ -20,10 +20,10 @@ namespace App
 
     class InstanceList
     {
-        private static Dictionary<short, Instance> instanceDict = new Dictionary<short, Instance>()
+        private static Dictionary<ushort, Instance> instanceDict = new Dictionary<ushort, Instance>()
         {
             // 오류
-            { -1, new Instance("<오류>", 0, 0, 0) },
+            { 0, new Instance("<오류>", 0, 0, 0) },
 
 
             // 던전 (2.x)
@@ -162,13 +162,13 @@ namespace App
             { 422, new Instance("외곽 유적지대(섬멸전)", 0, 0, 0) },
         };
 
-        public static Instance GetInstance(short code)
+        public static Instance GetInstance(ushort code)
         {
             if (instanceDict.ContainsKey(code))
             {
                 return instanceDict[code];
             }
-            return instanceDict[-1];
+            return instanceDict[0];
         }
     }
 }

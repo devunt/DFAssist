@@ -45,10 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Communicator.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="INIFile.cs" />
-    <Compile Include="Injector.cs" />
     <Compile Include="Instance.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="MainForm.cs">
@@ -57,6 +55,9 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Network.cs" />
+    <Compile Include="Network.Analyser.cs" />
+    <Compile Include="Network.Packet.cs" />
     <Compile Include="OverlayForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +97,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="NetFwTypeLib">
+      <Guid>{58FBCF7C-E7A9-467C-80B3-FC65E8FCCA08}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

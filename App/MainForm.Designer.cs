@@ -35,7 +35,6 @@
             this.comboBox_Process = new System.Windows.Forms.ComboBox();
             this.checkBox_StartupUpdate = new System.Windows.Forms.CheckBox();
             this.checkBox_StartupShow = new System.Windows.Forms.CheckBox();
-            this.button_Eject = new System.Windows.Forms.Button();
             this.linkLabel_NewUpdate = new System.Windows.Forms.LinkLabel();
             this.label_Separator = new System.Windows.Forms.Label();
             this.button_SelectProcess = new System.Windows.Forms.Button();
@@ -78,7 +77,6 @@
             this.tabPage_Setting.Controls.Add(this.comboBox_Process);
             this.tabPage_Setting.Controls.Add(this.checkBox_StartupUpdate);
             this.tabPage_Setting.Controls.Add(this.checkBox_StartupShow);
-            this.tabPage_Setting.Controls.Add(this.button_Eject);
             this.tabPage_Setting.Controls.Add(this.linkLabel_NewUpdate);
             this.tabPage_Setting.Controls.Add(this.label_Separator);
             this.tabPage_Setting.Controls.Add(this.button_SelectProcess);
@@ -124,16 +122,6 @@
             this.checkBox_StartupShow.Text = "프로그램 시작시 이 창 보이기";
             this.checkBox_StartupShow.UseVisualStyleBackColor = true;
             this.checkBox_StartupShow.CheckedChanged += new System.EventHandler(this.checkBox_StartupShow_CheckedChanged);
-            // 
-            // button_Eject
-            // 
-            this.button_Eject.Location = new System.Drawing.Point(361, 33);
-            this.button_Eject.Name = "button_Eject";
-            this.button_Eject.Size = new System.Drawing.Size(90, 23);
-            this.button_Eject.TabIndex = 0;
-            this.button_Eject.Text = "모듈 언로드";
-            this.button_Eject.UseVisualStyleBackColor = true;
-            this.button_Eject.Click += new System.EventHandler(this.button_Eject_Click);
             // 
             // linkLabel_NewUpdate
             // 
@@ -341,7 +329,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Open;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Close;
-        private System.Windows.Forms.Button button_Eject;
         private System.Windows.Forms.CheckBox checkBox_StartupUpdate;
         private System.Windows.Forms.CheckBox checkBox_StartupShow;
         private System.Windows.Forms.ComboBox comboBox_Process;

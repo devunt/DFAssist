@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Text;
 using System.Windows.Forms;
 
 namespace App
@@ -39,9 +40,43 @@ namespace App
             Write(Color.Red, format, args);
         }
 
+        internal static void Ex(Exception ex, string format, params object[] args)
+        {
+            E(string.Format("{0}: {1}", format, ex.Message), args);
+        }
+
         internal static void D(string format, params object[] args)
         {
             Write(Color.Gray, format, args);
+        }
+
+        internal static void B(byte[] buffer)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine();
+
+            for (int i = 0; i < buffer.Length; i++)
+            {
+                if (i != 0)
+                {
+                    if (i % 16 == 0)
+                    {
+                        sb.AppendLine();
+                    }
+                    else if (i % 8 == 0)
+                    {
+                        sb.Append(' ', 2);
+                    }
+                    else
+                    {
+                        sb.Append(' ');
+                    }
+                }
+
+                sb.Append(buffer[i].ToString("X2"));
+            }
+
+            D(sb.ToString());
         }
     }
 }
