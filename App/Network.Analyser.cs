@@ -58,7 +58,15 @@ namespace App
                 try
                 {
                     var buffer = new byte[4];
-                    messages.Read(buffer, 0, 4);
+                    var read = messages.Read(buffer, 0, 4);
+                    if (read < 4)
+                    {
+                        if (read != 0)
+                        {
+                            Log.E("메시지 처리 요청중 길이 에러 발생함: {0}, {1}/{2}", read, i, messageCount);
+                        }
+                        break;
+                    }
                     var length = BitConverter.ToInt32(buffer, 0);
 
                     var message = new byte[length];
@@ -116,15 +124,17 @@ namespace App
                 else if (opcode == 0x02DE)
                 {
                     var code = BitConverter.ToUInt16(data, 0);
+                    var status = data[4];
                     var tank = data[5];
                     var dps = data[6];
                     var healer = data[7];
 
                     var instance = InstanceList.GetInstance(code);
 
-                    if (state == DFState.MATCHED)
+                    if (status == 4)
                     {
-                        // 매칭 뒤에 오는 패킷
+                        // 매칭 뒤 참가자 확인용 패킷
+                        // 현재로서는 처리 계획 없음
                     }
                     else
                     {
