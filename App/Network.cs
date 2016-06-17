@@ -1,13 +1,11 @@
-﻿using System;
+﻿using NetFwTypeLib;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Runtime.InteropServices;
-using NetFwTypeLib;
-using System.IO;
-using System.IO.Compression;
 using System.Windows.Forms;
 
 namespace App
