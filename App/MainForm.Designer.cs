@@ -348,7 +348,6 @@
         private System.Windows.Forms.Label label_Process;
         private System.Windows.Forms.Button button_SelectProcess;
         private System.Windows.Forms.Label label_Separator;
-        private System.Windows.Forms.LinkLabel linkLabel_NewUpdate;
         private System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Open;
@@ -358,6 +357,7 @@
         private System.Windows.Forms.ComboBox comboBox_Process;
         private System.Windows.Forms.Button button_CopyLog;
         private System.Windows.Forms.Button button_ResetProcess;
+        internal System.Windows.Forms.LinkLabel linkLabel_NewUpdate;
     }
 }
 

@@ -47,11 +47,7 @@ namespace App
             if (Settings.StartupCheckUpdate)
             {
                 checkBox_StartupUpdate.Checked = true;
-                if (Updater.CheckNewVersion())
-                {
-                    linkLabel_NewUpdate.Visible = true;
-                    Show();
-                }
+                Updater.CheckNewVersion(this);
             }
 
             checkBox_StartupShow.Checked = Settings.StartupShowMainForm;

@@ -15,7 +15,8 @@ namespace App
             var formatted = string.Format(format, args);
             var message = string.Format("[{0}] {1}{2}", datetime, formatted, Environment.NewLine);
 
-            Form.Invoke((MethodInvoker)delegate {
+            Form.Invoke((MethodInvoker)delegate
+            {
                 Form.richTextBox_Log.SelectionStart = Form.richTextBox_Log.TextLength;
                 Form.richTextBox_Log.SelectionLength = 0;
 

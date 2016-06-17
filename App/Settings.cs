@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 
 namespace App
 {
@@ -18,9 +19,12 @@ namespace App
 
         public static void Load()
         {
-            iniFile = new INIFile(Global.SETTINGS_FILEPATH);
-            if (!File.Exists(Global.SETTINGS_FILEPATH))
+            var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Global.SETTINGS_FILEPATH);
+
+            iniFile = new INIFile(path);
+            if (!File.Exists(path))
             {
+                Directory.CreateDirectory(Path.GetDirectoryName(path));
                 Init();
                 Save();
             }
