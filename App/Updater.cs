@@ -56,7 +56,7 @@ namespace App
             var url = string.Format("https://api.github.com/repos/{0}/releases/latest", Global.GITHUB_REPO);
             var request = (HttpWebRequest)WebRequest.Create(url);
             request.UserAgent = "DFA";
-            request.Timeout = 1000;
+            request.Timeout = 10000;
 
             string resp = null;
             try
