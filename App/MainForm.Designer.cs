@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage_Setting = new System.Windows.Forms.TabPage();
+            this.button_ResetProcess = new System.Windows.Forms.Button();
             this.comboBox_Process = new System.Windows.Forms.ComboBox();
             this.checkBox_StartupUpdate = new System.Windows.Forms.CheckBox();
             this.checkBox_StartupShow = new System.Windows.Forms.CheckBox();
@@ -42,6 +43,7 @@
             this.button_ResetOverlayPosition = new System.Windows.Forms.Button();
             this.checkBox_Overlay = new System.Windows.Forms.CheckBox();
             this.tabPage_Log = new System.Windows.Forms.TabPage();
+            this.button_CopyLog = new System.Windows.Forms.Button();
             this.richTextBox_Log = new System.Windows.Forms.RichTextBox();
             this.tabPage_About = new System.Windows.Forms.TabPage();
             this.label_AboutTitle = new System.Windows.Forms.Label();
@@ -74,6 +76,7 @@
             // 
             // tabPage_Setting
             // 
+            this.tabPage_Setting.Controls.Add(this.button_ResetProcess);
             this.tabPage_Setting.Controls.Add(this.comboBox_Process);
             this.tabPage_Setting.Controls.Add(this.checkBox_StartupUpdate);
             this.tabPage_Setting.Controls.Add(this.checkBox_StartupShow);
@@ -90,6 +93,16 @@
             this.tabPage_Setting.TabIndex = 0;
             this.tabPage_Setting.Text = "설정";
             this.tabPage_Setting.UseVisualStyleBackColor = true;
+            // 
+            // button_ResetProcess
+            // 
+            this.button_ResetProcess.Location = new System.Drawing.Point(225, 34);
+            this.button_ResetProcess.Name = "button_ResetProcess";
+            this.button_ResetProcess.Size = new System.Drawing.Size(75, 23);
+            this.button_ResetProcess.TabIndex = 6;
+            this.button_ResetProcess.Text = "재설정";
+            this.button_ResetProcess.UseVisualStyleBackColor = true;
+            this.button_ResetProcess.Click += new System.EventHandler(this.button_ResetProcess_Click);
             // 
             // comboBox_Process
             // 
@@ -185,6 +198,7 @@
             // 
             // tabPage_Log
             // 
+            this.tabPage_Log.Controls.Add(this.button_CopyLog);
             this.tabPage_Log.Controls.Add(this.richTextBox_Log);
             this.tabPage_Log.Location = new System.Drawing.Point(4, 23);
             this.tabPage_Log.Name = "tabPage_Log";
@@ -193,6 +207,16 @@
             this.tabPage_Log.TabIndex = 2;
             this.tabPage_Log.Text = "로그";
             this.tabPage_Log.UseVisualStyleBackColor = true;
+            // 
+            // button_CopyLog
+            // 
+            this.button_CopyLog.Location = new System.Drawing.Point(374, 253);
+            this.button_CopyLog.Name = "button_CopyLog";
+            this.button_CopyLog.Size = new System.Drawing.Size(75, 23);
+            this.button_CopyLog.TabIndex = 1;
+            this.button_CopyLog.Text = "로그 복사";
+            this.button_CopyLog.UseVisualStyleBackColor = true;
+            this.button_CopyLog.Click += new System.EventHandler(this.button_CopyLog_Click);
             // 
             // richTextBox_Log
             // 
@@ -332,6 +356,8 @@
         private System.Windows.Forms.CheckBox checkBox_StartupUpdate;
         private System.Windows.Forms.CheckBox checkBox_StartupShow;
         private System.Windows.Forms.ComboBox comboBox_Process;
+        private System.Windows.Forms.Button button_CopyLog;
+        private System.Windows.Forms.Button button_ResetProcess;
     }
 }
 

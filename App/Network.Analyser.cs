@@ -77,7 +77,8 @@ namespace App
 
         private void HandleMessage(byte[] message)
         {
-            try {
+            try
+            {
                 if (message.Length < 32)
                 {
                     return;
@@ -105,7 +106,8 @@ namespace App
                         instances.Add(InstanceList.GetInstance(code));
                     }
 
-                    mainForm.overlayForm.Invoke((MethodInvoker)delegate {
+                    mainForm.overlayForm.Invoke((MethodInvoker)delegate
+                    {
                         mainForm.overlayForm.SetDutyCount(instances.Count);
                     });
 
@@ -144,7 +146,8 @@ namespace App
 
                     var instance = InstanceList.GetInstance(code);
 
-                    mainForm.overlayForm.Invoke((MethodInvoker)delegate {
+                    mainForm.overlayForm.Invoke((MethodInvoker)delegate
+                    {
                         mainForm.overlayForm.SetDutyAsMatched(instance);
                     });
 
@@ -153,7 +156,8 @@ namespace App
                 }
                 else if (opcode == 0x006F || opcode == 0x0070)
                 {
-                    mainForm.overlayForm.Invoke((MethodInvoker)delegate {
+                    mainForm.overlayForm.Invoke((MethodInvoker)delegate
+                    {
                         mainForm.overlayForm.CancelDutyFinder();
                     });
 

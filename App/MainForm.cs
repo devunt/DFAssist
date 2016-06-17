@@ -35,31 +35,8 @@ namespace App
             networkWorker = new Network(this);
 
             label_AboutTitle.Text = string.Format("DFA {0}", Global.VERSION);
-            
-            Log.I("파이널판타지14 프로세스를 찾는 중...");
-            Process[] processes = Process.GetProcessesByName("ffxiv_dx11");
-            if (processes.Length == 0)
-            {
-                Log.E("파이널판타지14 프로세스를 찾을 수 없습니다");
-                Log.E("실행중인 파이널판타지14가 DX11 버전이 맞는지 확인해주세요");
-                button_SelectProcess.Enabled = false;
-                comboBox_Process.Enabled = false;
-            }
-            else if (processes.Length >= 2)
-            {
-                Log.E("파이널판타지14가 2개 이상 실행중입니다");
-                button_SelectProcess.Enabled = true;
-                comboBox_Process.Enabled = true;
 
-                foreach (var process in processes)
-                {
-                    comboBox_Process.Items.Add(string.Format("{0}:{1}", process.ProcessName, process.Id));
-                }
-                comboBox_Process.SelectedIndex = 0;
-            }
-            else {
-                SetFFXIVProcess(processes[0]);
-            }
+            FindFFXIVProcess();
 
             if (Settings.ShowOverlay)
             {
@@ -67,7 +44,8 @@ namespace App
                 overlayForm.Show();
             }
 
-            if (Settings.StartupCheckUpdate) {
+            if (Settings.StartupCheckUpdate)
+            {
                 checkBox_StartupUpdate.Checked = true;
                 if (Updater.CheckNewVersion())
                 {
@@ -110,6 +88,12 @@ namespace App
             richTextBox_Log.ScrollToCaret();
         }
 
+        private void button_CopyLog_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(richTextBox_Log.Text);
+            MessageBox.Show("로그가 클립보드에 복사되었습니다.", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         private void linkLabel_GitHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(string.Format("https://github.com/{0}", Global.GITHUB_REPO));
@@ -122,7 +106,21 @@ namespace App
 
         private void button_SelectProcess_Click(object sender, EventArgs e)
         {
-            SetFFXIVProcess(Process.GetProcessById(int.Parse(((string)comboBox_Process.SelectedItem).Split(':')[1])));
+            try
+            {
+                SetFFXIVProcess(Process.GetProcessById(int.Parse(((string)comboBox_Process.SelectedItem).Split(':')[1])));
+            }
+            catch
+            {
+                Log.E("파이널판타지14 프로세스 설정에 실패했습니다");
+            }
+        }
+
+        private void button_ResetProcess_Click(object sender, EventArgs e)
+        {
+            networkWorker.StopCapture();
+            FFXIVProcess = null;
+            FindFFXIVProcess();
         }
 
         private void checkBox_Overlay_CheckedChanged(object sender, EventArgs e)
@@ -155,6 +153,34 @@ namespace App
         {
             Settings.StartupCheckUpdate = checkBox_StartupUpdate.Checked;
             Settings.Save();
+        }
+
+        private void FindFFXIVProcess()
+        {
+            Log.I("파이널판타지14 프로세스를 찾는 중...");
+            Process[] processes = Process.GetProcessesByName("ffxiv_dx11");
+            if (processes.Length == 0)
+            {
+                Log.E("파이널판타지14 프로세스를 찾을 수 없습니다");
+                Log.E("실행중인 파이널판타지14가 DX11 버전이 맞는지 확인해주세요");
+                button_SelectProcess.Enabled = false;
+                comboBox_Process.Enabled = false;
+            }
+            else if (processes.Length >= 2)
+            {
+                Log.E("파이널판타지14가 2개 이상 실행중입니다");
+                button_SelectProcess.Enabled = true;
+                comboBox_Process.Enabled = true;
+
+                foreach (var process in processes)
+                {
+                    comboBox_Process.Items.Add(string.Format("{0}:{1}", process.ProcessName, process.Id));
+                }
+                comboBox_Process.SelectedIndex = 0;
+            }
+            else {
+                SetFFXIVProcess(processes[0]);
+            }
         }
 
         private void SetFFXIVProcess(Process process)

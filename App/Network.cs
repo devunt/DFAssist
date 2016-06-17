@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using NetFwTypeLib;
 using System.IO;
 using System.IO.Compression;
+using System.Windows.Forms;
 
 namespace App
 {
@@ -42,7 +43,7 @@ namespace App
         private MainForm mainForm;
         private Socket socket;
         private byte[] recvBuffer = new byte[0x8000];
-        private bool stopCaptureFlag = false;
+        private bool isRunning = false;
 
         public Network(MainForm mainForm)
         {
@@ -52,38 +53,57 @@ namespace App
 
         public void StartCapture()
         {
-            Log.I("N: 시작중...");
-            connections = GetConnections();
-
-            if (connections.Count == 0)
+            try
             {
-                Log.E("N: 파이널판타지14 연결을 찾을 수 없음");
-                return;
+                Log.I("N: 시작중...");
+
+                if (isRunning)
+                {
+                    Log.E("N: 이미 시작되어 있음");
+                    return;
+                }
+
+                connections = GetConnections();
+
+                if (connections.Count == 0)
+                {
+                    Log.E("N: 파이널판타지14 연결을 찾을 수 없음");
+                    return;
+                }
+
+                Connection connection = connections[0]; // TODO: FF14 게임 서버가 맞는지 체크하기
+
+                Log.S("N: 파이널판타지14 연결을 찾음: {0}", connection.localEndPoint.Address.ToString());
+
+                RegisterToFirewall();
+
+                socket = new Socket(AddressFamily.InterNetwork, SocketType.Raw, ProtocolType.IP);
+                socket.Bind(new IPEndPoint(connection.localEndPoint.Address, 0));
+                socket.SetSocketOption(SocketOptionLevel.IP, SocketOptionName.HeaderIncluded, true);
+                socket.SetSocketOption(SocketOptionLevel.IP, SocketOptionName.AcceptConnection, true);
+                socket.IOControl(IOControlCode.ReceiveAll, RCVALL_IPLEVEL, null);
+
+                socket.BeginReceive(recvBuffer, 0, recvBuffer.Length, 0, new AsyncCallback(OnReceive), null);
+                isRunning = true;
+
+                mainForm.overlayForm.SetStatus(true);
+                Log.S("N: 시작됨");
             }
-
-            Connection connection = connections[0]; // TODO: FF14 게임 서버가 맞는지 체크하기
-
-            Log.S("N: 파이널판타지14 연결을 찾음: {0}", connection.localEndPoint.Address.ToString());
-
-            RegisterToFirewall();
-
-            socket = new Socket(AddressFamily.InterNetwork, SocketType.Raw, ProtocolType.IP);
-            socket.Bind(new IPEndPoint(connection.localEndPoint.Address, 0));
-            socket.SetSocketOption(SocketOptionLevel.IP, SocketOptionName.HeaderIncluded, true);
-            socket.SetSocketOption(SocketOptionLevel.IP, SocketOptionName.AcceptConnection, true);
-            socket.IOControl(IOControlCode.ReceiveAll, RCVALL_IPLEVEL, null);
-
-            stopCaptureFlag = false;
-            socket.BeginReceive(recvBuffer, 0, recvBuffer.Length, 0, new AsyncCallback(OnReceive), null);
-
-            mainForm.overlayForm.SetStatus(true);
-            Log.S("N: 시작됨");
+            catch (Exception ex)
+            {
+                Log.Ex(ex, "N: 시작하지 못함");
+            }
         }
 
         public void StopCapture()
         {
-            Log.S("N: 중지중...");
-            stopCaptureFlag = true;
+            socket.Close();
+            isRunning = false;
+            mainForm.overlayForm.Invoke((MethodInvoker)delegate
+            {
+                mainForm.overlayForm.SetStatus(false);
+            });
+            Log.S("N: 중지됨");
         }
 
         private void OnReceive(IAsyncResult ar)
@@ -93,20 +113,21 @@ namespace App
                 int length = socket.EndReceive(ar);
                 FilterAndProcessPacket(recvBuffer, length);
             }
+            catch (ObjectDisposedException) { return; }
             catch (Exception ex)
             {
-                Log.Ex(ex, "N: 패킷을 받는 중 에러 발생: {0}");
+                Log.Ex(ex, "N: 패킷을 받는 중 에러 발생");
             }
             finally
             {
-                if (!stopCaptureFlag)
+                try
                 {
                     socket.BeginReceive(recvBuffer, 0, recvBuffer.Length, 0, new AsyncCallback(OnReceive), null);
                 }
-                else
+                catch (ObjectDisposedException) { }
+                catch (Exception ex)
                 {
-                    mainForm.overlayForm.SetStatus(false);
-                    Log.S("N: 중지됨");
+                    Log.Ex(ex, "N: 시작하지 못함");
                 }
             }
         }
@@ -173,7 +194,7 @@ namespace App
             }
             catch (Exception ex)
             {
-                Log.Ex(ex, "FW: 추가중 오류 발생함: {0}");
+                Log.Ex(ex, "FW: 추가중 오류 발생함");
             }
         }
 
