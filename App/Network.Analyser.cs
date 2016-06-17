@@ -163,7 +163,7 @@ namespace App
                     state = DFState.MATCHED;
                     Log.S("DFAN: 매칭됨 [{0}]", instance.Name);
                 }
-                else if (opcode == 0x006F || opcode == 0x0070)
+                else if (opcode == 0x006F || opcode == 0x0070 || opcode == 0x2DB)
                 {
                     mainForm.overlayForm.Invoke((MethodInvoker)delegate
                     {
