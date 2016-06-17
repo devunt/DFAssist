@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows.Forms;
 
@@ -154,15 +155,18 @@ namespace App
         private void FindFFXIVProcess()
         {
             Log.I("파이널판타지14 프로세스를 찾는 중...");
-            Process[] processes = Process.GetProcessesByName("ffxiv_dx11");
-            if (processes.Length == 0)
+
+            var processes = new List<Process>();
+            processes.AddRange(Process.GetProcessesByName("ffxiv"));
+            processes.AddRange(Process.GetProcessesByName("ffxiv_dx11"));
+
+            if (processes.Count == 0)
             {
                 Log.E("파이널판타지14 프로세스를 찾을 수 없습니다");
-                Log.E("실행중인 파이널판타지14가 DX11 버전이 맞는지 확인해주세요");
                 button_SelectProcess.Enabled = false;
                 comboBox_Process.Enabled = false;
             }
-            else if (processes.Length >= 2)
+            else if (processes.Count >= 2)
             {
                 Log.E("파이널판타지14가 2개 이상 실행중입니다");
                 button_SelectProcess.Enabled = true;
