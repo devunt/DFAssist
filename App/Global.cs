@@ -10,6 +10,7 @@ namespace App
         public const string SETTINGS_FILEPATH = @"DFAssist/config.ini";
 
         public const string GITHUB_REPO = @"devunt/DFAssist";
+        public const string RAVEN_DSN = @"http://1ef7c7a5d0004eaea1815b200c2db6ba:a531662520b5493685a1789e0760e3ec@s.devunt.kr/4";
 
         public static readonly Color ACCENT_COLOR = Color.Red;
         public const int BLINK_COUNT = 100;
