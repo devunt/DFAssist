@@ -52,6 +52,8 @@ namespace App
             }
 
             checkBox_StartupShow.Checked = Settings.StartupShowMainForm;
+
+            Sentry.ReportAsync("App started");
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)

@@ -6,7 +6,6 @@ using System.IO;
 using System.IO.Compression;
 using System.Net;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -64,7 +63,6 @@ namespace App
                             {
                                 mainForm.Hide();
                                 mainForm.overlayForm.Hide();
-                                mainForm.WindowState = FormWindowState.Minimized;
                             });
 
                             Task.Factory.StartNew(() =>
@@ -73,6 +71,8 @@ namespace App
                                 updaterForm.SetVersion(latest);
                                 updaterForm.ShowDialog();
                             });
+
+                            Sentry.Report("Update started");
 
                             var stream = GetDownloadStreamByUrl(url);
 

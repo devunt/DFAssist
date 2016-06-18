@@ -100,6 +100,7 @@
     <Compile Include="Network.cs" />
     <Compile Include="Network.Analyser.cs" />
     <Compile Include="Network.Packet.cs" />
+    <Compile Include="Sentry.cs" />
     <Compile Include="UpdaterForm.cs">
       <SubType>Form</SubType>
     </Compile>

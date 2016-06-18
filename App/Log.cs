@@ -1,9 +1,7 @@
-﻿using SharpRaven.Data;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace App
@@ -51,21 +49,7 @@ namespace App
             message = Escape(message);
             E(string.Format("{0}: {1}", format, message), args);
 
-#if !DEBUG
-            Task.Factory.StartNew(() =>
-            {
-                try
-                {
-                    var @event = new SentryEvent(ex);
-                    @event.Level = ErrorLevel.Error;
-                    @event.Tags.Add("version", Global.VERSION);
-                    @event.Extra = new { LogMessage = string.Format(format, args) };
-
-                    Program.ravenClient.Capture(@event);
-                }
-                catch { }
-            });
-#endif
+            Sentry.ReportAsync(ex, new { LogMessage = string.Format(format, args) });
         }
 
         internal static void D(string format, params object[] args)
