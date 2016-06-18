@@ -152,6 +152,12 @@ namespace App
             Settings.Save();
         }
 
+        private void checkBox_StartupAutoUpdate_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.StartupAutoUpdate = checkBox_StartupAutoUpdate.Checked;
+            Settings.Save();
+        }
+
         private void FindFFXIVProcess()
         {
             Log.I("파이널판타지14 프로세스를 찾는 중...");

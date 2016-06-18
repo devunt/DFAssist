@@ -12,6 +12,7 @@ namespace App
         public static int OverlayY { get; set; } = Global.OVERLAY_XY_UNSET;
         public static bool StartupShowMainForm { get; set; } = true;
         public static bool StartupCheckUpdate { get; set; } = true;
+        public static bool StartupAutoUpdate { get; set; } = true;
 
         private static void Init()
         {
@@ -30,9 +31,10 @@ namespace App
             }
             else
             {
-                StartupShowMainForm = iniFile.ReadValue("startup", "show") == "1";
-                StartupCheckUpdate = iniFile.ReadValue("startup", "update") == "1";
-                ShowOverlay = iniFile.ReadValue("overlay", "show") == "1";
+                StartupShowMainForm = iniFile.ReadValue("startup", "show") != "0";
+                StartupCheckUpdate = iniFile.ReadValue("startup", "update") != "0";
+                StartupAutoUpdate = iniFile.ReadValue("startup", "autoupdate") != "0";
+                ShowOverlay = iniFile.ReadValue("overlay", "show") != "0";
                 OverlayX = int.Parse(iniFile.ReadValue("overlay", "x"));
                 OverlayY = int.Parse(iniFile.ReadValue("overlay", "y"));
             }
@@ -42,6 +44,7 @@ namespace App
         {
             iniFile.WriteValue("startup", "show", StartupShowMainForm ? "1" : "0");
             iniFile.WriteValue("startup", "update", StartupCheckUpdate ? "1" : "0");
+            iniFile.WriteValue("startup", "autoupdate", StartupAutoUpdate ? "1" : "0");
             iniFile.WriteValue("overlay", "show", ShowOverlay ? "1" : "0");
             iniFile.WriteValue("overlay", "x", OverlayX.ToString());
             iniFile.WriteValue("overlay", "y", OverlayY.ToString());

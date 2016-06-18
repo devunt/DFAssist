@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage_Setting = new System.Windows.Forms.TabPage();
+            this.label_OverlayDescription = new System.Windows.Forms.Label();
+            this.label_Separator2 = new System.Windows.Forms.Label();
             this.button_ResetProcess = new System.Windows.Forms.Button();
             this.comboBox_Process = new System.Windows.Forms.ComboBox();
             this.checkBox_StartupUpdate = new System.Windows.Forms.CheckBox();
@@ -53,8 +55,7 @@
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem_Open = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_Close = new System.Windows.Forms.ToolStripMenuItem();
-            this.label_Separator2 = new System.Windows.Forms.Label();
-            this.label_OverlayDescription = new System.Windows.Forms.Label();
+            this.checkBox_StartupAutoUpdate = new System.Windows.Forms.CheckBox();
             this.tabControl.SuspendLayout();
             this.tabPage_Setting.SuspendLayout();
             this.tabPage_Log.SuspendLayout();
@@ -78,6 +79,7 @@
             // 
             // tabPage_Setting
             // 
+            this.tabPage_Setting.Controls.Add(this.checkBox_StartupAutoUpdate);
             this.tabPage_Setting.Controls.Add(this.label_OverlayDescription);
             this.tabPage_Setting.Controls.Add(this.label_Separator2);
             this.tabPage_Setting.Controls.Add(this.button_ResetProcess);
@@ -97,6 +99,23 @@
             this.tabPage_Setting.TabIndex = 0;
             this.tabPage_Setting.Text = "설정";
             this.tabPage_Setting.UseVisualStyleBackColor = true;
+            // 
+            // label_OverlayDescription
+            // 
+            this.label_OverlayDescription.AutoSize = true;
+            this.label_OverlayDescription.Location = new System.Drawing.Point(18, 118);
+            this.label_OverlayDescription.Name = "label_OverlayDescription";
+            this.label_OverlayDescription.Size = new System.Drawing.Size(385, 13);
+            this.label_OverlayDescription.TabIndex = 8;
+            this.label_OverlayDescription.Text = "오버레이 창은 해당 창의 좌측 바를 드래그해 이동할 수 있습니다.";
+            // 
+            // label_Separator2
+            // 
+            this.label_Separator2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label_Separator2.Location = new System.Drawing.Point(21, 153);
+            this.label_Separator2.Name = "label_Separator2";
+            this.label_Separator2.Size = new System.Drawing.Size(430, 2);
+            this.label_Separator2.TabIndex = 7;
             // 
             // button_ResetProcess
             // 
@@ -313,22 +332,16 @@
             this.toolStripMenuItem_Close.Text = "종료";
             this.toolStripMenuItem_Close.Click += new System.EventHandler(this.toolStripMenuItem_Close_Click);
             // 
-            // label_Separator2
+            // checkBox_StartupAutoUpdate
             // 
-            this.label_Separator2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label_Separator2.Location = new System.Drawing.Point(21, 153);
-            this.label_Separator2.Name = "label_Separator2";
-            this.label_Separator2.Size = new System.Drawing.Size(430, 2);
-            this.label_Separator2.TabIndex = 7;
-            // 
-            // label_OverlayDescription
-            // 
-            this.label_OverlayDescription.AutoSize = true;
-            this.label_OverlayDescription.Location = new System.Drawing.Point(18, 118);
-            this.label_OverlayDescription.Name = "label_OverlayDescription";
-            this.label_OverlayDescription.Size = new System.Drawing.Size(385, 13);
-            this.label_OverlayDescription.TabIndex = 8;
-            this.label_OverlayDescription.Text = "오버레이 창은 해당 창의 좌측 바를 드래그해 이동할 수 있습니다.";
+            this.checkBox_StartupAutoUpdate.AutoSize = true;
+            this.checkBox_StartupAutoUpdate.Location = new System.Drawing.Point(21, 214);
+            this.checkBox_StartupAutoUpdate.Name = "checkBox_StartupAutoUpdate";
+            this.checkBox_StartupAutoUpdate.Size = new System.Drawing.Size(285, 17);
+            this.checkBox_StartupAutoUpdate.TabIndex = 9;
+            this.checkBox_StartupAutoUpdate.Text = "업데이트가 존재하면 자동으로 업데이트하기";
+            this.checkBox_StartupAutoUpdate.UseVisualStyleBackColor = true;
+            this.checkBox_StartupAutoUpdate.CheckedChanged += new System.EventHandler(this.checkBox_StartupAutoUpdate_CheckedChanged);
             // 
             // MainForm
             // 
@@ -381,6 +394,7 @@
         internal System.Windows.Forms.LinkLabel linkLabel_NewUpdate;
         private System.Windows.Forms.Label label_OverlayDescription;
         private System.Windows.Forms.Label label_Separator2;
+        private System.Windows.Forms.CheckBox checkBox_StartupAutoUpdate;
     }
 }
 

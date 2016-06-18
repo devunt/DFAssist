@@ -43,51 +43,62 @@ namespace App
                     {
                         Log.S("새로운 업데이트가 존재합니다");
 
-                        string url = null;
-                        foreach (var asset in api.assets)
+                        if (Settings.StartupAutoUpdate)
                         {
-                            if (asset.name == string.Format("DFAssist.{0}.zip", latest))
+                            string url = null;
+                            foreach (var asset in api.assets)
                             {
-                                url = asset.browser_download_url;
+                                if (asset.name == string.Format("DFAssist.{0}.zip", latest))
+                                {
+                                    url = asset.browser_download_url;
+                                }
                             }
-                        }
 
-                        if (url == null)
-                        {
-                            Log.E("업데이트 파일을 찾을 수 없습니다");
-                            return;
-                        }
-
-                        mainForm.Invoke((MethodInvoker)delegate
-                        {
-                            mainForm.Hide();
-                            mainForm.overlayForm.Hide();
-                            mainForm.WindowState = FormWindowState.Minimized;
-                        });
-
-                        Task.Factory.StartNew(() =>
-                        {
-                            var updaterForm = new UpdaterForm();
-                            updaterForm.SetVersion(latest);
-                            updaterForm.ShowDialog();
-                        });
-
-                        var stream = GetDownloadStreamByUrl(url);
-
-                        var exepath = Process.GetCurrentProcess().MainModule.FileName;
-                        File.Move(exepath, temppath);
-
-                        using (ZipStorer zip = ZipStorer.Open(stream, FileAccess.Read))
-                        {
-                            List<ZipStorer.ZipFileEntry> dir = zip.ReadCentralDir();
-                            foreach (ZipStorer.ZipFileEntry entry in dir)
+                            if (url == null)
                             {
-                                zip.ExtractFile(entry, Path.Combine(Path.GetDirectoryName(exepath), entry.FilenameInZip));
+                                Log.E("업데이트 파일을 찾을 수 없습니다");
+                                return;
                             }
-                        }
 
-                        Process.Start(new ProcessStartInfo(exepath));
-                        Application.Exit();
+                            mainForm.Invoke((MethodInvoker)delegate
+                            {
+                                mainForm.Hide();
+                                mainForm.overlayForm.Hide();
+                                mainForm.WindowState = FormWindowState.Minimized;
+                            });
+
+                            Task.Factory.StartNew(() =>
+                            {
+                                var updaterForm = new UpdaterForm();
+                                updaterForm.SetVersion(latest);
+                                updaterForm.ShowDialog();
+                            });
+
+                            var stream = GetDownloadStreamByUrl(url);
+
+                            var exepath = Process.GetCurrentProcess().MainModule.FileName;
+                            File.Move(exepath, temppath);
+
+                            using (ZipStorer zip = ZipStorer.Open(stream, FileAccess.Read))
+                            {
+                                List<ZipStorer.ZipFileEntry> dir = zip.ReadCentralDir();
+                                foreach (ZipStorer.ZipFileEntry entry in dir)
+                                {
+                                    zip.ExtractFile(entry, Path.Combine(Path.GetDirectoryName(exepath), entry.FilenameInZip));
+                                }
+                            }
+
+                            Process.Start(new ProcessStartInfo(exepath));
+                            Application.Exit();
+                        }
+                        else
+                        {
+                            mainForm.Invoke((MethodInvoker)delegate
+                            {
+                                mainForm.linkLabel_NewUpdate.Visible = true;
+                                mainForm.Show();
+                            });
+                        }
                     }
                 }
                 catch (Exception ex)
