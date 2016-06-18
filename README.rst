@@ -8,7 +8,7 @@
 
 정보
 ----
-:최신 버전: v20160618.2 (`다운로드 <https://github.com/devunt/DFAssist/releases/latest>`_)
+:최신 버전: v20160618.3 (`다운로드 <https://github.com/devunt/DFAssist/releases/latest>`_)
 :타겟 버전: Microsoft .NET Framework 4.0 (`다운로드 <https://www.microsoft.com/en-us/download/details.aspx?id=17851>`_)
 :게임 버전: 2016.06.07.0000.0000(2001960, ex1:2016.05.31.0000.0000)
 
@@ -35,7 +35,7 @@
 문제 해결
 ---------
 문제 발생시 `이슈 트래커 <https://github.com/devunt/DFAssist/issues>`_ 에 발생 상황과 결과를 남겨주세요.
-프로그램 창의 로그 캡춰 이미지도 문제 해결에 큰 도움이 됩니다.
+프로그램 창의 로그 기록도 문제 해결에 큰 도움이 됩니다.
 
 스크린샷
 --------
