@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Drawing;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace App
 {
     class Log
     {
+        private static Regex escape = new Regex(@"\{(.+?)\}");
         internal static MainForm Form { get; set; }
 
         private static void Write(Color color, string format, params object[] args)
@@ -43,7 +45,9 @@ namespace App
 
         internal static void Ex(Exception ex, string format, params object[] args)
         {
-            E(string.Format("{0}: {1}", format, ex.Message), args);
+            var message = ex.Message;
+            message = Escape(message);
+            E(string.Format("{0}: {1}", format, message), args);
         }
 
         internal static void D(string format, params object[] args)
@@ -78,6 +82,11 @@ namespace App
             }
 
             D(sb.ToString());
+        }
+
+        private static string Escape(string line)
+        {
+            return escape.Replace(line, "{{$1}}");
         }
     }
 }
