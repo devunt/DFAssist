@@ -95,13 +95,26 @@ namespace App
 
         public void StopCapture()
         {
-            socket.Close();
-            isRunning = false;
-            mainForm.overlayForm.Invoke((MethodInvoker)delegate
+            try {
+                if (socket == null)
+                {
+                    Log.E("N: 이미 중지되어 있음");
+                    return;
+                }
+
+                socket.Close();
+                socket = null;
+                isRunning = false;
+                mainForm.overlayForm.Invoke((MethodInvoker)delegate
+                {
+                    mainForm.overlayForm.SetStatus(false);
+                });
+                Log.S("N: 중지됨");
+            }
+            catch (Exception ex)
             {
-                mainForm.overlayForm.SetStatus(false);
-            });
-            Log.S("N: 중지됨");
+                Log.Ex(ex, "N: 중지하지 못함");
+            }
         }
 
         private void OnReceive(IAsyncResult ar)
