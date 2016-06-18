@@ -9,6 +9,7 @@
 정보
 ----
 :최신 버전: v20160618.2 (`다운로드 <https://github.com/devunt/DFAssist/releases/latest>`_)
+:타겟 버전: Microsoft .NET Framework 4.0 (`다운로드 <https://www.microsoft.com/en-us/download/details.aspx?id=17851>`_)
 :게임 버전: 2016.06.07.0000.0000(2001960, ex1:2016.05.31.0000.0000)
 
 사용법
@@ -16,6 +17,7 @@
 1. 상단 다운로드 링크의 파일 목록에서 ``DFAssist.zip`` 파일을 내려받습니다.
 2. 원하는 경로에 ``DFAssist.zip`` 파일의 압축을 해제합니다.
 3. 해당 경로에서 ``DFAssist.exe`` 파일을 실행합니다.
+4. 실행이 되지 않을 시 상단 ``Microsoft .NET Framework 4.0`` 다운로드 링크에서 파일을 받아 설치합니다.
 
 기능
 ----

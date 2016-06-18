@@ -39,14 +39,14 @@ namespace App
 
                 if (payload[33] == 0x00)
                 {
-                    StreamCopy(stream, messages);
+                    stream.CopyTo(messages);
                 }
                 else {
                     stream.Seek(2, SeekOrigin.Current); // .Net DeflateStream 버그 (앞 2바이트 강제 무시)
 
                     using (DeflateStream z = new DeflateStream(stream, CompressionMode.Decompress))
                     {
-                        StreamCopy(z, messages);
+                        z.CopyTo(messages);
                     }
                 }
             }
@@ -177,17 +177,6 @@ namespace App
             catch (Exception ex)
             {
                 Log.Ex(ex, "메시지 처리중 에러 발생함");
-            }
-        }
-
-        private void StreamCopy(Stream source, Stream destination)
-        {
-            byte[] buffer = new byte[16 * 1024];
-            int bytesRead;
-
-            while ((bytesRead = source.Read(buffer, 0, buffer.Length)) > 0)
-            {
-                destination.Write(buffer, 0, bytesRead);
             }
         }
     }
