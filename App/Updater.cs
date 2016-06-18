@@ -1,8 +1,9 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace App
@@ -11,9 +12,8 @@ namespace App
     {
         internal static void CheckNewVersion(MainForm mainForm)
         {
-            Thread thread = new Thread(new ThreadStart(() =>
+            Task.Factory.StartNew(() =>
             {
-
                 var resp = QueryGitHubReleases();
                 if (resp == null)
                 {
@@ -47,8 +47,7 @@ namespace App
                         mainForm.Show();
                     });
                 }
-            }));
-            thread.Start();
+            });
         }
 
         static string QueryGitHubReleases()
@@ -70,7 +69,9 @@ namespace App
                         resp = reader.ReadToEnd();
                 }
             }
-            catch (WebException) { }
+            catch (Exception ex) {
+                Log.Ex(ex, "업데이트 체크중 에러 발생함");
+            }
 
             return resp;
         }
