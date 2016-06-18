@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.IO;
 using System.Net;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -21,31 +21,31 @@ namespace App
                     return;
                 }
 
-                Regex pattern = new Regex("\"tag_name\":\"(v.+?)\",");
-                Match m = pattern.Match(resp);
-                if (!m.Success)
-                {
-                    Log.E("새 업데이트 정보에 문제가 있습니다");
-                    return;
-                }
+                try {
+                    var api = JsonConvert.DeserializeObject<dynamic>(resp);
 
-                string latest = m.Groups[1].Value;
-                Log.I("현재 버전: {0}", Global.VERSION);
-                Log.I("최신 버전: {0}", latest);
+                    var latest = api.tag_name.ToObject<string>();
+                    Log.I("현재 버전: {0}", Global.VERSION);
+                    Log.I("최신 버전: {0}", latest);
 
-                if (Global.VERSION == latest)
-                {
-                    Log.S("최신 버전을 이용중입니다");
-                }
-                else
-                {
-                    Log.S("새로운 업데이트가 존재합니다");
-
-                    mainForm.Invoke((MethodInvoker)delegate
+                    if (Global.VERSION == latest)
                     {
-                        mainForm.linkLabel_NewUpdate.Visible = true;
-                        mainForm.Show();
-                    });
+                        Log.S("최신 버전을 이용중입니다");
+                    }
+                    else
+                    {
+                        Log.S("새로운 업데이트가 존재합니다");
+
+                        mainForm.Invoke((MethodInvoker)delegate
+                        {
+                            mainForm.linkLabel_NewUpdate.Visible = true;
+                            mainForm.Show();
+                        });
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Log.Ex(ex, "업데이트 데이터 처리중 에러 발생");
                 }
             });
         }
@@ -70,7 +70,7 @@ namespace App
                 }
             }
             catch (Exception ex) {
-                Log.Ex(ex, "업데이트 체크중 에러 발생함");
+                Log.Ex(ex, "업데이트 체크중 에러 발생");
             }
 
             return resp;
