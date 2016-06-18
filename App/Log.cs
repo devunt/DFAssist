@@ -51,6 +51,7 @@ namespace App
             message = Escape(message);
             E(string.Format("{0}: {1}", format, message), args);
 
+#if !DEBUG
             Task.Factory.StartNew(() =>
             {
                 try
@@ -64,6 +65,7 @@ namespace App
                 }
                 catch { }
             });
+#endif
         }
 
         internal static void D(string format, params object[] args)

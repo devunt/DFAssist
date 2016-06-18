@@ -7,7 +7,9 @@ namespace App
 {
     static class Program
     {
+#if !DEBUG
         internal static RavenClient ravenClient;
+#endif
 
         /// <summary>
         /// The main entry point for the application.
@@ -15,10 +17,12 @@ namespace App
         [STAThread]
         static void Main()
         {
+#if !DEBUG
             ravenClient = new RavenClient(Global.RAVEN_DSN);
 
             Application.SetUnhandledExceptionMode(UnhandledExceptionMode.ThrowException);
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
+#endif
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -27,6 +31,7 @@ namespace App
             Application.Run(form);
         }
 
+#if !DEBUG
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
             try
@@ -42,5 +47,6 @@ namespace App
             }
             catch { }
         }
+#endif
     }
 }
