@@ -40,7 +40,7 @@ namespace App
         private string exePath;
         private MainForm mainForm;
         private Socket socket;
-        private byte[] recvBuffer = new byte[0x8000];
+        private byte[] recvBuffer = new byte[0x10000]; // maximum ip packet size (65535)
         private bool isRunning = false;
 
         public Network(MainForm mainForm)
