@@ -42,7 +42,7 @@ namespace App
                     {
                         Log.S("새로운 업데이트가 존재합니다");
 
-                        if (Settings.StartupAutoUpdate)
+                        if (Settings.AutoUpdate)
                         {
                             string url = null;
                             foreach (var asset in api.assets)

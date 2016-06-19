@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage_Setting = new System.Windows.Forms.TabPage();
-            this.checkBox_StartupAutoUpdate = new System.Windows.Forms.CheckBox();
+            this.checkBox_AutoUpdate = new System.Windows.Forms.CheckBox();
             this.label_OverlayDescription = new System.Windows.Forms.Label();
             this.label_Separator2 = new System.Windows.Forms.Label();
             this.button_ResetProcess = new System.Windows.Forms.Button();
@@ -79,7 +79,7 @@
             // 
             // tabPage_Setting
             // 
-            this.tabPage_Setting.Controls.Add(this.checkBox_StartupAutoUpdate);
+            this.tabPage_Setting.Controls.Add(this.checkBox_AutoUpdate);
             this.tabPage_Setting.Controls.Add(this.label_OverlayDescription);
             this.tabPage_Setting.Controls.Add(this.label_Separator2);
             this.tabPage_Setting.Controls.Add(this.button_ResetProcess);
@@ -102,14 +102,14 @@
             // 
             // checkBox_StartupAutoUpdate
             // 
-            this.checkBox_StartupAutoUpdate.AutoSize = true;
-            this.checkBox_StartupAutoUpdate.Location = new System.Drawing.Point(21, 214);
-            this.checkBox_StartupAutoUpdate.Name = "checkBox_StartupAutoUpdate";
-            this.checkBox_StartupAutoUpdate.Size = new System.Drawing.Size(285, 17);
-            this.checkBox_StartupAutoUpdate.TabIndex = 9;
-            this.checkBox_StartupAutoUpdate.Text = "업데이트가 존재하면 자동으로 업데이트하기";
-            this.checkBox_StartupAutoUpdate.UseVisualStyleBackColor = true;
-            this.checkBox_StartupAutoUpdate.CheckedChanged += new System.EventHandler(this.checkBox_StartupAutoUpdate_CheckedChanged);
+            this.checkBox_AutoUpdate.AutoSize = true;
+            this.checkBox_AutoUpdate.Location = new System.Drawing.Point(21, 214);
+            this.checkBox_AutoUpdate.Name = "checkBox_StartupAutoUpdate";
+            this.checkBox_AutoUpdate.Size = new System.Drawing.Size(285, 17);
+            this.checkBox_AutoUpdate.TabIndex = 9;
+            this.checkBox_AutoUpdate.Text = "업데이트가 존재하면 자동으로 업데이트하기";
+            this.checkBox_AutoUpdate.UseVisualStyleBackColor = true;
+            this.checkBox_AutoUpdate.CheckedChanged += new System.EventHandler(this.checkBox_StartupAutoUpdate_CheckedChanged);
             // 
             // label_OverlayDescription
             // 
@@ -394,7 +394,7 @@
         internal System.Windows.Forms.LinkLabel linkLabel_NewUpdate;
         private System.Windows.Forms.Label label_OverlayDescription;
         private System.Windows.Forms.Label label_Separator2;
-        private System.Windows.Forms.CheckBox checkBox_StartupAutoUpdate;
+        private System.Windows.Forms.CheckBox checkBox_AutoUpdate;
     }
 }
 

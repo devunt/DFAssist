@@ -47,6 +47,11 @@ namespace App
                 overlayForm.Show();
             }
 
+            if (Settings.AutoUpdate)
+            {
+                checkBox_AutoUpdate.Checked = true;
+            }
+
             if (Settings.CheckUpdate)
             {
                 checkBox_CheckUpdate.Checked = true;
@@ -196,7 +201,7 @@ namespace App
 
         private void checkBox_StartupAutoUpdate_CheckedChanged(object sender, EventArgs e)
         {
-            Settings.StartupAutoUpdate = checkBox_StartupAutoUpdate.Checked;
+            Settings.AutoUpdate = checkBox_AutoUpdate.Checked;
             Settings.Save();
         }
 
