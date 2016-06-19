@@ -1,11 +1,15 @@
 ﻿using NetFwTypeLib;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
+using System.Management;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace App
@@ -40,8 +44,9 @@ namespace App
         private string exePath;
         private MainForm mainForm;
         private Socket socket;
-        private byte[] recvBuffer = new byte[0x10000]; // maximum ip packet size (65535)
+        private byte[] recvBuffer = new byte[0x20000];
         private bool isRunning = false;
+        private object lockAnalyse = new object();
 
         public Network(MainForm mainForm)
         {
@@ -49,67 +54,80 @@ namespace App
             this.mainForm = mainForm;
         }
 
-        public void StartCapture()
+        public void StartCapture(Process process)
         {
-            try
+            Task.Factory.StartNew(() =>
             {
-                Log.I("N: 시작중...");
-
-                if (isRunning)
+                try
                 {
-                    Log.E("N: 이미 시작되어 있음");
-                    return;
+                    Log.I("N: 시작중...");
+
+                    if (isRunning)
+                    {
+                        Log.E("N: 이미 시작되어 있음");
+                        return;
+                    }
+
+                    connections = GetConnections(process);
+                    var lobbyEndPoint = GetLobbyEndPoint(process);
+                    IPAddress localAddress = null;
+
+                    foreach (var connection in connections)
+                    {
+                        if (!connection.remoteEndPoint.Equals(lobbyEndPoint))
+                        {
+                            Log.I("N: 게임서버 연결 감지: {0}", connection.ToString());
+                            localAddress = connection.localEndPoint.Address;
+                        }
+                    }
+
+                    if (localAddress == null)
+                    {
+                        Log.E("N: 게임 서버 연결을 찾지 못했습니다");
+                        return;
+                    }
+
+                    RegisterToFirewall();
+
+                    socket = new Socket(AddressFamily.InterNetwork, SocketType.Raw, ProtocolType.IP);
+                    socket.Bind(new IPEndPoint(localAddress, 0));
+                    socket.SetSocketOption(SocketOptionLevel.IP, SocketOptionName.HeaderIncluded, true);
+                    socket.SetSocketOption(SocketOptionLevel.IP, SocketOptionName.AcceptConnection, true);
+                    socket.IOControl(IOControlCode.ReceiveAll, RCVALL_IPLEVEL, null);
+                    socket.ReceiveBufferSize = recvBuffer.Length * 4;
+
+                    socket.BeginReceive(recvBuffer, 0, recvBuffer.Length, 0, new AsyncCallback(OnReceive), null);
+                    isRunning = true;
+
+                    mainForm.overlayForm.Invoke((MethodInvoker)delegate
+                    {
+                        mainForm.overlayForm.SetStatus(true);
+                    });
+                    Log.S("N: 시작됨");
                 }
-
-                connections = GetConnections();
-
-                if (connections.Count == 0)
+                catch (Exception ex)
                 {
-                    Log.E("N: 파이널판타지14 연결을 찾을 수 없음");
-                    return;
+                    Log.Ex(ex, "N: 시작하지 못함");
                 }
-
-                Connection connection = connections[0]; // TODO: FF14 게임 서버가 맞는지 체크하기
-
-                Log.S("N: 파이널판타지14 연결을 찾음: {0}", connection.localEndPoint.Address.ToString());
-
-                RegisterToFirewall();
-
-                socket = new Socket(AddressFamily.InterNetwork, SocketType.Raw, ProtocolType.IP);
-                socket.Bind(new IPEndPoint(connection.localEndPoint.Address, 0));
-                socket.SetSocketOption(SocketOptionLevel.IP, SocketOptionName.HeaderIncluded, true);
-                socket.SetSocketOption(SocketOptionLevel.IP, SocketOptionName.AcceptConnection, true);
-                socket.IOControl(IOControlCode.ReceiveAll, RCVALL_IPLEVEL, null);
-
-                socket.BeginReceive(recvBuffer, 0, recvBuffer.Length, 0, new AsyncCallback(OnReceive), null);
-                isRunning = true;
-
-                mainForm.overlayForm.SetStatus(true);
-                Log.S("N: 시작됨");
-            }
-            catch (Exception ex)
-            {
-                Log.Ex(ex, "N: 시작하지 못함");
-            }
+            });
         }
 
         public void StopCapture()
         {
             try {
-                if (socket == null)
+                if (!isRunning)
                 {
                     Log.E("N: 이미 중지되어 있음");
                     return;
                 }
 
                 socket.Close();
-                socket = null;
-                isRunning = false;
+
                 mainForm.overlayForm.Invoke((MethodInvoker)delegate
                 {
                     mainForm.overlayForm.SetStatus(false);
                 });
-                Log.S("N: 중지됨");
+                Log.I("N: 중지 요청중...");
             }
             catch (Exception ex)
             {
@@ -121,49 +139,68 @@ namespace App
         {
             try
             {
-                int length = socket.EndReceive(ar);
-                FilterAndProcessPacket(recvBuffer, length);
+                var length = socket.EndReceive(ar);
+                var buffer = recvBuffer.Take(length).ToArray();
+                socket.BeginReceive(recvBuffer, 0, recvBuffer.Length, 0, new AsyncCallback(OnReceive), null);
+
+                FilterAndProcessPacket(buffer);
             }
-            catch (ObjectDisposedException) { return; }
+            catch (Exception ex) when (ex is ObjectDisposedException || ex is NullReferenceException)
+            {
+                isRunning = false;
+                socket = null;
+                Log.S("N: 중지됨");
+            }
             catch (Exception ex)
             {
                 Log.Ex(ex, "N: 패킷을 받는 중 에러 발생");
             }
-            finally
-            {
-                try
-                {
-                    socket.BeginReceive(recvBuffer, 0, recvBuffer.Length, 0, new AsyncCallback(OnReceive), null);
-                }
-                catch (ObjectDisposedException) { }
-                catch (Exception ex)
-                {
-                    Log.Ex(ex, "N: 시작하지 못함");
-                }
-            }
         }
 
-        private void FilterAndProcessPacket(byte[] buffer, int length)
+        private void FilterAndProcessPacket(byte[] buffer)
         {
-            IPPacket ipPacket = new IPPacket(buffer, length);
+            try {
+                IPPacket ipPacket = new IPPacket(buffer);
 
-            if (ipPacket.IsValid && (ipPacket.Protocol == ProtocolType.Tcp))
+                if (ipPacket.IsValid && (ipPacket.Protocol == ProtocolType.Tcp))
+                {
+                    TCPPacket tcpPacket = new TCPPacket(ipPacket.Data);
+
+                    if (!tcpPacket.IsValid)
+                    {
+                        // 올바르지 못한 TCP 패킷
+                        return;
+                    }
+
+                    if (!tcpPacket.Flags.HasFlag(TCPFlags.ACK | TCPFlags.PSH))
+                    {
+                        // 파판 서버에서 클라이언트로 보내주는 모든 TCP 패킷에는
+                        // ACK와 PSH 플래그가 설정되어 있음을 이용해 필터링 부하를 낮춤
+                        return;
+                    }
+
+                    IPEndPoint sourceEndPoint = new IPEndPoint(ipPacket.SourceIPAddress, tcpPacket.SourcePort);
+                    IPEndPoint destinationEndPoint = new IPEndPoint(ipPacket.DestinationIPAddress, tcpPacket.DestinationPort);
+                    Connection connection = new Connection() { remoteEndPoint = sourceEndPoint, localEndPoint = destinationEndPoint };
+
+                    if (!connections.Contains(connection))
+                    {
+                        // 파판 서버에서 오는 패킷이 아님
+                        return;
+                    }
+
+                    // TODO: TCP seq 분석하기
+
+                    // 파판 서버에서 오는 패킷이니 분석함
+                    lock (lockAnalyse)
+                    {
+                        AnalyseFFXIVPacket(tcpPacket.Payload);
+                    }
+                }
+            }
+            catch (Exception ex)
             {
-                TCPPacket tcpPacket = new TCPPacket(ipPacket.Data, ipPacket.Data.Length);
-
-                if (!tcpPacket.IsValid)
-                {
-                    return;
-                }
-
-                IPEndPoint sourceEndPoint = new IPEndPoint(ipPacket.SourceIPAddress, tcpPacket.SourcePort);
-                IPEndPoint destinationEndPoint = new IPEndPoint(ipPacket.DestinationIPAddress, tcpPacket.DestinationPort);
-                Connection connection = new Connection() { remoteEndPoint = sourceEndPoint, localEndPoint = destinationEndPoint };
-
-                if (connections.Contains(connection))
-                {
-                    AnalyseFFIXPacket(tcpPacket.Payload);
-                }
+                Log.Ex(ex, "패킷 필터링 중 에러 발생함");
             }
         }
 
@@ -209,15 +246,55 @@ namespace App
             }
         }
 
-        private List<Connection> GetConnections()
+        private IPEndPoint GetLobbyEndPoint(Process process)
+        {
+            IPEndPoint ipep = null;
+            string lobbyHost = null;
+            int lobbyPort = 0;
+
+            try {
+                using (var searcher = new ManagementObjectSearcher("SELECT CommandLine FROM Win32_Process WHERE ProcessId = " + process.Id))
+                {
+                    foreach (var @object in searcher.Get())
+                    {
+                        var commandline = @object["CommandLine"].ToString();
+                        var argv = commandline.Split(' ');
+
+                        foreach (var arg in argv)
+                        {
+                            var splitted = arg.Split('=');
+                            if (splitted.Length == 2)
+                            {
+                                if (splitted[0] == "DEV.LobbyHost01")
+                                {
+                                    lobbyHost = splitted[1];
+                                }
+                                else if (splitted[0] == "DEV.LobbyPort01")
+                                {
+                                    lobbyPort = int.Parse(splitted[1]);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                if ((lobbyHost != null) && (lobbyPort > 0))
+                {
+                    IPAddress address = Dns.GetHostAddresses(lobbyHost)[0];
+                    ipep = new IPEndPoint(address, lobbyPort);
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Ex(ex, "N: 로비 서버 정보를 받아오는 중 에러 발생함");
+            }
+
+            return ipep;
+        }
+
+        private List<Connection> GetConnections(Process process)
         {
             var connections = new List<Connection>();
-
-            if (mainForm.FFXIVProcess == null)
-            {
-                Log.E("N: 파이널판타지14 프로세스가 설정되지 않음");
-                return connections;
-            }
 
             IntPtr tcpTable = IntPtr.Zero;
             int tcpTableLength = 0;
@@ -236,7 +313,7 @@ namespace App
                         {
                             TcpRow row = (TcpRow)Marshal.PtrToStructure(rowPtr, typeof(TcpRow));
 
-                            if (row.owningPid == mainForm.FFXIVProcess.Id)
+                            if (row.owningPid == process.Id)
                             {
                                 IPEndPoint local = new IPEndPoint(row.localAddr, (ushort)IPAddress.NetworkToHostOrder((short)row.localPort));
                                 IPEndPoint remote = new IPEndPoint(row.remoteAddr, (ushort)IPAddress.NetworkToHostOrder((short)row.remotePort));
@@ -280,6 +357,11 @@ namespace App
             public override int GetHashCode()
             {
                 return localEndPoint.GetHashCode() ^ remoteEndPoint.GetHashCode();
+            }
+
+            public override string ToString()
+            {
+                return string.Format("{0} -> {1}", localEndPoint.ToString(), remoteEndPoint.ToString());
             }
         }
 

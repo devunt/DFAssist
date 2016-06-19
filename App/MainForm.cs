@@ -206,6 +206,7 @@ namespace App
             comboBox_Process.SelectedIndex = 0;
 
             networkWorker.StartCapture();
+            networkWorker.StartCapture(FFXIVProcess);
         }
     }
 }

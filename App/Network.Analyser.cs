@@ -9,76 +9,110 @@ namespace App
 {
     partial class Network
     {
-        enum DFState
+        private void AnalyseFFXIVPacket(byte[] payload)
         {
-            IDLE,
-            RUNNING,
-            MATCHED,
-        }
-
-        DFState state = DFState.IDLE;
-
-
-        private void AnalyseFFIXPacket(byte[] payload)
-        {
-            if (payload.Length <= 40)
-            {
-                return;
-            }
-
-            ushort type = BitConverter.ToUInt16(payload, 0);
-            if (type != 0x5252)
-            {
-                return;
-            }
-
-            MemoryStream messages = new MemoryStream();
-            using (MemoryStream stream = new MemoryStream(payload))
-            {
-                stream.Seek(40, SeekOrigin.Begin);
-
-                if (payload[33] == 0x00)
+            try {
+                while (true)
                 {
-                    stream.CopyTo(messages);
-                }
-                else {
-                    stream.Seek(2, SeekOrigin.Current); // .Net DeflateStream 버그 (앞 2바이트 강제 무시)
-
-                    using (DeflateStream z = new DeflateStream(stream, CompressionMode.Decompress))
+                    if (payload.Length < 4)
                     {
-                        z.CopyTo(messages);
-                    }
-                }
-            }
-            messages.Seek(0, SeekOrigin.Begin);
-
-            ushort messageCount = BitConverter.ToUInt16(payload, 30);
-            for (int i = 0; i < messageCount; i++)
-            {
-                try
-                {
-                    var buffer = new byte[4];
-                    var read = messages.Read(buffer, 0, 4);
-                    if (read < 4)
-                    {
-                        if (read != 0)
-                        {
-                            Log.E("메시지 처리 요청중 길이 에러 발생함: {0}, {1}/{2}", read, i, messageCount);
-                        }
                         break;
                     }
-                    var length = BitConverter.ToInt32(buffer, 0);
 
-                    var message = new byte[length];
-                    messages.Seek(-4, SeekOrigin.Current);
-                    messages.Read(message, 0, length);
+                    var type = BitConverter.ToUInt16(payload, 0);
 
-                    HandleMessage(message);
+                    if (type == 0x0000 || type == 0x5252)
+                    {
+                        if (payload.Length < 28)
+                        {
+                            break;
+                        }
+
+                        var length = BitConverter.ToInt32(payload, 24);
+
+                        if (payload.Length < length)
+                        {
+                            break;
+                        }
+
+                        using (MemoryStream messages = new MemoryStream())
+                        {
+                            using (MemoryStream stream = new MemoryStream(payload, 0, length))
+                            {
+                                stream.Seek(40, SeekOrigin.Begin);
+
+                                if (payload[33] == 0x00)
+                                {
+                                    stream.CopyTo(messages);
+                                }
+                                else {
+                                    stream.Seek(2, SeekOrigin.Current); // .Net DeflateStream 버그 (앞 2바이트 강제 무시)
+
+                                    using (DeflateStream z = new DeflateStream(stream, CompressionMode.Decompress))
+                                    {
+                                        z.CopyTo(messages);
+                                    }
+                                }
+                            }
+                            messages.Seek(0, SeekOrigin.Begin);
+
+                            var messageCount = BitConverter.ToUInt16(payload, 30);
+                            for (int i = 0; i < messageCount; i++)
+                            {
+                                try
+                                {
+                                    var buffer = new byte[4];
+                                    var read = messages.Read(buffer, 0, 4);
+                                    if (read < 4)
+                                    {
+                                        Log.E("메시지 처리 요청중 길이 에러 발생함: {0}, {1}/{2}", read, i, messageCount);
+                                    }
+                                    var messageLength = BitConverter.ToInt32(buffer, 0);
+
+                                    var message = new byte[messageLength];
+                                    messages.Seek(-4, SeekOrigin.Current);
+                                    messages.Read(message, 0, messageLength);
+
+                                    HandleMessage(message);
+                                }
+                                catch (Exception ex)
+                                {
+                                    Log.Ex(ex, "메시지 처리 요청중 에러 발생함");
+                                }
+                            }
+                        }
+
+                        if (length < payload.Length)
+                        {
+                            // 더 처리해야 할 패킷이 남아 있음
+                            payload = payload.Skip(length).ToArray();
+                            continue;
+                        }
+                    }
+                    else
+                    {
+                        // 앞쪽이 잘려서 오는 패킷 workaround
+                        // 잘린 패킷 1개는 버리고 바로 다음 패킷부터 찾기...
+                        // TODO: 버리는 패킷 없게 제대로 수정하기
+
+                        for (var offset = 0; offset < (payload.Length - 2); offset++)
+                        {
+                            var possibleType = BitConverter.ToUInt16(payload, offset);
+                            if (possibleType == 0x5252)
+                            {
+                                payload = payload.Skip(offset).ToArray();
+                                AnalyseFFXIVPacket(payload);
+                                break;
+                            }
+                        }
+                    }
+
+                    break;
                 }
-                catch (Exception ex)
-                {
-                    Log.Ex(ex, "메시지 처리 요청중 에러 발생함");
-                }
+            }
+            catch (Exception ex)
+            {
+                Log.Ex(ex, "패킷 처리중 에러 발생함");
             }
         }
 
@@ -88,16 +122,26 @@ namespace App
             {
                 if (message.Length < 32)
                 {
+                    // type == 0x0000 이였던 메시지는 여기서 걸러짐
                     return;
                 }
 
                 var opcode = BitConverter.ToInt16(message, 18);
-                var data = new byte[message.Length - 32];
-                Array.Copy(message, 32, data, 0, message.Length - 32);
+                var data = message.Skip(32).ToArray();
 
+                //Log.D("opcode = {0:X}", opcode);
                 if (opcode == 0x006C)
                 {
                     var code = BitConverter.ToUInt16(data, 12);
+
+                    var instance = InstanceList.GetInstance(code);
+
+                    mainForm.overlayForm.Invoke((MethodInvoker)delegate
+                    {
+                        mainForm.overlayForm.SetDutyCount(1);
+                    });
+
+                    Log.I("DFAN: 매칭 시작됨 [{0}]", instance.Name);
                 }
                 else if (opcode == 0x0074)
                 {
@@ -118,7 +162,6 @@ namespace App
                         mainForm.overlayForm.SetDutyCount(instances.Count);
                     });
 
-                    state = DFState.RUNNING;
                     Log.I("DFAN: 매칭 시작됨 [{0}]", string.Join(", ", instances.Select(x => x.Name).ToArray()));
                 }
                 else if (opcode == 0x02DE)
@@ -142,8 +185,6 @@ namespace App
                         {
                             mainForm.overlayForm.SetDutyStatus(instance, tank, dps, healer);
                         });
-
-                        state = DFState.RUNNING;
                     }
 
                     Log.I("DFAN: 매칭 상태 업데이트됨 [{0}, {1}/{2}, {3}/{4}, {5}/{6}]",
@@ -160,17 +201,16 @@ namespace App
                         mainForm.overlayForm.SetDutyAsMatched(instance);
                     });
 
-                    state = DFState.MATCHED;
                     Log.S("DFAN: 매칭됨 [{0}]", instance.Name);
                 }
-                else if (opcode == 0x006F || opcode == 0x0070 || opcode == 0x2DB)
+                else if (opcode == 0x006F || opcode == 0x0070)
                 {
+                    // TODO: 파티 상태에서 다른 사람이 매칭 취소했을 때 날아오는 패킷 찾기
                     mainForm.overlayForm.Invoke((MethodInvoker)delegate
                     {
                         mainForm.overlayForm.CancelDutyFinder();
                     });
 
-                    state = DFState.IDLE;
                     Log.E("DFAP: 매칭 중지됨");
                 }
             }

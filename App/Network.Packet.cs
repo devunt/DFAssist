@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 
@@ -28,12 +29,12 @@ namespace App
 
             public bool IsValid { get; }
 
-            public IPPacket(byte[] buffer, int length)
+            public IPPacket(byte[] buffer)
             {
 
                 try
                 {
-                    MemoryStream memoryStream = new MemoryStream(buffer, 0, length);
+                    MemoryStream memoryStream = new MemoryStream(buffer);
                     BinaryReader binaryReader = new BinaryReader(memoryStream);
 
                     byte versionAndHeaderLength = binaryReader.ReadByte();
@@ -58,8 +59,7 @@ namespace App
                     SourceIPAddress = new IPAddress(binaryReader.ReadUInt32());
                     DestinationIPAddress = new IPAddress(binaryReader.ReadUInt32());
 
-                    Data = new byte[TotalLength - HeaderLength];
-                    Array.Copy(buffer, HeaderLength, Data, 0, TotalLength - HeaderLength);
+                    Data = buffer.Skip(HeaderLength).ToArray();
 
                     IsValid = true;
                 }
@@ -78,7 +78,7 @@ namespace App
             public uint SequenceNumber { get; }
             public uint AcknowledgementNumber { get; }
             public byte DataOffset { get; }
-            public ushort Flags { get; }
+            public TCPFlags Flags { get; }
             public ushort Window { get; }
             public short Checksum { get; }
             public ushort UrgentPointer { get; }
@@ -87,11 +87,11 @@ namespace App
 
             public bool IsValid { get; }
 
-            public TCPPacket(byte[] buffer, int length)
+            public TCPPacket(byte[] buffer)
             {
                 try
                 {
-                    MemoryStream memoryStream = new MemoryStream(buffer, 0, length);
+                    MemoryStream memoryStream = new MemoryStream(buffer);
                     BinaryReader binaryReader = new BinaryReader(memoryStream);
 
                     SourcePort = (ushort)IPAddress.NetworkToHostOrder(binaryReader.ReadInt16());
@@ -101,14 +101,13 @@ namespace App
 
                     ushort offsetAndFlags = (ushort)IPAddress.NetworkToHostOrder(binaryReader.ReadInt16());
                     DataOffset = (byte)((offsetAndFlags >> 12) * 4);
-                    Flags = (ushort)(offsetAndFlags & 511); // 0b111111111 = 511
+                    Flags = (TCPFlags)(offsetAndFlags & 511); // 0b111111111 = 511
 
                     Window = (ushort)IPAddress.NetworkToHostOrder(binaryReader.ReadInt16());
                     Checksum = IPAddress.NetworkToHostOrder(binaryReader.ReadInt16());
                     UrgentPointer = (ushort)IPAddress.NetworkToHostOrder(binaryReader.ReadInt16());
 
-                    Payload = new byte[length - DataOffset];
-                    Array.Copy(buffer, DataOffset, Payload, 0, length - DataOffset);
+                    Payload = buffer.Skip(DataOffset).ToArray();
 
                     IsValid = true;
                 }
@@ -120,8 +119,10 @@ namespace App
             }
         }
 
+        [Flags]
         public enum TCPFlags
         {
+            NONE = 0,
             FIN = 1,
             SYN = 2,
             RST = 4,
