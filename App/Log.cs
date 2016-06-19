@@ -45,7 +45,11 @@ namespace App
 
         internal static void Ex(Exception ex, string format, params object[] args)
         {
+#if DEBUG
+            var message = ex.ToString();
+#else
             var message = ex.Message;
+#endif
             message = Escape(message);
             E(string.Format("{0}: {1}", format, message), args);
 
