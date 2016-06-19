@@ -32,11 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage_Setting = new System.Windows.Forms.TabPage();
+            this.checkBox_StartupAutoUpdate = new System.Windows.Forms.CheckBox();
             this.label_OverlayDescription = new System.Windows.Forms.Label();
             this.label_Separator2 = new System.Windows.Forms.Label();
             this.button_ResetProcess = new System.Windows.Forms.Button();
             this.comboBox_Process = new System.Windows.Forms.ComboBox();
-            this.checkBox_StartupUpdate = new System.Windows.Forms.CheckBox();
+            this.checkBox_CheckUpdate = new System.Windows.Forms.CheckBox();
             this.checkBox_StartupShow = new System.Windows.Forms.CheckBox();
             this.linkLabel_NewUpdate = new System.Windows.Forms.LinkLabel();
             this.label_Separator = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem_Open = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_Close = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkBox_StartupAutoUpdate = new System.Windows.Forms.CheckBox();
             this.tabControl.SuspendLayout();
             this.tabPage_Setting.SuspendLayout();
             this.tabPage_Log.SuspendLayout();
@@ -84,7 +84,7 @@
             this.tabPage_Setting.Controls.Add(this.label_Separator2);
             this.tabPage_Setting.Controls.Add(this.button_ResetProcess);
             this.tabPage_Setting.Controls.Add(this.comboBox_Process);
-            this.tabPage_Setting.Controls.Add(this.checkBox_StartupUpdate);
+            this.tabPage_Setting.Controls.Add(this.checkBox_CheckUpdate);
             this.tabPage_Setting.Controls.Add(this.checkBox_StartupShow);
             this.tabPage_Setting.Controls.Add(this.linkLabel_NewUpdate);
             this.tabPage_Setting.Controls.Add(this.label_Separator);
@@ -99,6 +99,17 @@
             this.tabPage_Setting.TabIndex = 0;
             this.tabPage_Setting.Text = "설정";
             this.tabPage_Setting.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_StartupAutoUpdate
+            // 
+            this.checkBox_StartupAutoUpdate.AutoSize = true;
+            this.checkBox_StartupAutoUpdate.Location = new System.Drawing.Point(21, 214);
+            this.checkBox_StartupAutoUpdate.Name = "checkBox_StartupAutoUpdate";
+            this.checkBox_StartupAutoUpdate.Size = new System.Drawing.Size(285, 17);
+            this.checkBox_StartupAutoUpdate.TabIndex = 9;
+            this.checkBox_StartupAutoUpdate.Text = "업데이트가 존재하면 자동으로 업데이트하기";
+            this.checkBox_StartupAutoUpdate.UseVisualStyleBackColor = true;
+            this.checkBox_StartupAutoUpdate.CheckedChanged += new System.EventHandler(this.checkBox_StartupAutoUpdate_CheckedChanged);
             // 
             // label_OverlayDescription
             // 
@@ -137,16 +148,16 @@
             this.comboBox_Process.Sorted = true;
             this.comboBox_Process.TabIndex = 0;
             // 
-            // checkBox_StartupUpdate
+            // checkBox_CheckUpdate
             // 
-            this.checkBox_StartupUpdate.AutoSize = true;
-            this.checkBox_StartupUpdate.Location = new System.Drawing.Point(21, 191);
-            this.checkBox_StartupUpdate.Name = "checkBox_StartupUpdate";
-            this.checkBox_StartupUpdate.Size = new System.Drawing.Size(233, 17);
-            this.checkBox_StartupUpdate.TabIndex = 0;
-            this.checkBox_StartupUpdate.Text = "프로그램 시작시 업데이트 확인하기";
-            this.checkBox_StartupUpdate.UseVisualStyleBackColor = true;
-            this.checkBox_StartupUpdate.CheckedChanged += new System.EventHandler(this.checkBox_StartupUpdate_CheckedChanged);
+            this.checkBox_CheckUpdate.AutoSize = true;
+            this.checkBox_CheckUpdate.Location = new System.Drawing.Point(21, 191);
+            this.checkBox_CheckUpdate.Name = "checkBox_CheckUpdate";
+            this.checkBox_CheckUpdate.Size = new System.Drawing.Size(299, 17);
+            this.checkBox_CheckUpdate.TabIndex = 0;
+            this.checkBox_CheckUpdate.Text = "주기적으로 업데이트 확인하기 (재시작시 반영)";
+            this.checkBox_CheckUpdate.UseVisualStyleBackColor = true;
+            this.checkBox_CheckUpdate.CheckedChanged += new System.EventHandler(this.checkBox_StartupUpdate_CheckedChanged);
             // 
             // checkBox_StartupShow
             // 
@@ -332,17 +343,6 @@
             this.toolStripMenuItem_Close.Text = "종료";
             this.toolStripMenuItem_Close.Click += new System.EventHandler(this.toolStripMenuItem_Close_Click);
             // 
-            // checkBox_StartupAutoUpdate
-            // 
-            this.checkBox_StartupAutoUpdate.AutoSize = true;
-            this.checkBox_StartupAutoUpdate.Location = new System.Drawing.Point(21, 214);
-            this.checkBox_StartupAutoUpdate.Name = "checkBox_StartupAutoUpdate";
-            this.checkBox_StartupAutoUpdate.Size = new System.Drawing.Size(285, 17);
-            this.checkBox_StartupAutoUpdate.TabIndex = 9;
-            this.checkBox_StartupAutoUpdate.Text = "업데이트가 존재하면 자동으로 업데이트하기";
-            this.checkBox_StartupAutoUpdate.UseVisualStyleBackColor = true;
-            this.checkBox_StartupAutoUpdate.CheckedChanged += new System.EventHandler(this.checkBox_StartupAutoUpdate_CheckedChanged);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -386,7 +386,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Open;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Close;
-        private System.Windows.Forms.CheckBox checkBox_StartupUpdate;
+        private System.Windows.Forms.CheckBox checkBox_CheckUpdate;
         private System.Windows.Forms.CheckBox checkBox_StartupShow;
         private System.Windows.Forms.ComboBox comboBox_Process;
         private System.Windows.Forms.Button button_CopyLog;

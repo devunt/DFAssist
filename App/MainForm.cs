@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace App
@@ -45,13 +47,51 @@ namespace App
                 overlayForm.Show();
             }
 
-            if (Settings.StartupCheckUpdate)
+            if (Settings.CheckUpdate)
             {
-                checkBox_StartupUpdate.Checked = true;
-                Updater.CheckNewVersion(this);
+                checkBox_CheckUpdate.Checked = true;
+
+                Task.Factory.StartNew(() =>
+                {
+                    while (true)
+                    {
+                        Updater.CheckNewVersion(this);
+                        Thread.Sleep(5 * 60 * 1000);
+                    }
+                });
             }
 
             checkBox_StartupShow.Checked = Settings.StartupShowMainForm;
+
+            Task.Factory.StartNew(() =>
+            {
+                while (true)
+                {
+                    Thread.Sleep(30 * 1000);
+
+                    if ((FFXIVProcess == null) || FFXIVProcess.HasExited)
+                    {
+                        FFXIVProcess = null;
+
+                        Invoke((MethodInvoker)delegate
+                        {
+                            FindFFXIVProcess();
+                        });
+                    }
+                    else {
+                        // FFXIVProcess is alive
+
+                        if (networkWorker.IsRunning)
+                        {
+                            networkWorker.UpdateGameConnections(FFXIVProcess);
+                        }
+                        else
+                        {
+                            networkWorker.StartCapture(FFXIVProcess);
+                        }
+                    }
+                }
+            });
 
             Sentry.ReportAsync("App started");
         }
@@ -150,7 +190,7 @@ namespace App
 
         private void checkBox_StartupUpdate_CheckedChanged(object sender, EventArgs e)
         {
-            Settings.StartupCheckUpdate = checkBox_StartupUpdate.Checked;
+            Settings.CheckUpdate = checkBox_CheckUpdate.Checked;
             Settings.Save();
         }
 
@@ -205,7 +245,6 @@ namespace App
             comboBox_Process.Items.Add(name);
             comboBox_Process.SelectedIndex = 0;
 
-            networkWorker.StartCapture();
             networkWorker.StartCapture(FFXIVProcess);
         }
     }

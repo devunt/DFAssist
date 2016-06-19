@@ -39,21 +39,21 @@ namespace App
             public uint owningPid;
         }
 
-        private List<Connection> connections;
+        private List<Connection> connections = new List<Connection>();
         private string exePath;
         private MainForm mainForm;
         private Socket socket;
         private byte[] recvBuffer = new byte[0x20000];
-        private bool isRunning = false;
+        internal bool IsRunning { get; private set; } = false;
         private object lockAnalyse = new object();
 
-        public Network(MainForm mainForm)
+        internal Network(MainForm mainForm)
         {
             exePath = Process.GetCurrentProcess().MainModule.FileName;
             this.mainForm = mainForm;
         }
 
-        public void StartCapture(Process process)
+        internal void StartCapture(Process process)
         {
             Task.Factory.StartNew(() =>
             {
@@ -61,30 +61,21 @@ namespace App
                 {
                     Log.I("N: 시작중...");
 
-                    if (isRunning)
+                    if (IsRunning)
                     {
                         Log.E("N: 이미 시작되어 있음");
                         return;
                     }
 
-                    connections = GetConnections(process);
-                    var lobbyEndPoint = GetLobbyEndPoint(process);
-                    IPAddress localAddress = null;
+                    UpdateGameConnections(process);
 
-                    foreach (var connection in connections)
-                    {
-                        if (!connection.remoteEndPoint.Equals(lobbyEndPoint))
-                        {
-                            Log.I("N: 게임서버 연결 감지: {0}", connection.ToString());
-                            localAddress = connection.localEndPoint.Address;
-                        }
-                    }
-
-                    if (localAddress == null)
+                    if (connections.Count < 2)
                     {
                         Log.E("N: 게임 서버 연결을 찾지 못했습니다");
                         return;
                     }
+
+                    IPAddress localAddress = connections[0].localEndPoint.Address;
 
                     RegisterToFirewall();
 
@@ -96,7 +87,7 @@ namespace App
                     socket.ReceiveBufferSize = recvBuffer.Length * 4;
 
                     socket.BeginReceive(recvBuffer, 0, recvBuffer.Length, 0, new AsyncCallback(OnReceive), null);
-                    isRunning = true;
+                    IsRunning = true;
 
                     mainForm.overlayForm.Invoke((MethodInvoker)delegate
                     {
@@ -111,16 +102,17 @@ namespace App
             });
         }
 
-        public void StopCapture()
+        internal void StopCapture()
         {
             try {
-                if (!isRunning)
+                if (!IsRunning)
                 {
                     Log.E("N: 이미 중지되어 있음");
                     return;
                 }
 
                 socket.Close();
+                connections.Clear();
 
                 mainForm.overlayForm.Invoke((MethodInvoker)delegate
                 {
@@ -131,6 +123,22 @@ namespace App
             catch (Exception ex)
             {
                 Log.Ex(ex, "N: 중지하지 못함");
+            }
+        }
+
+        internal void UpdateGameConnections(Process process)
+        {
+            if (connections.Count < 2)
+            {
+                var allConnections = GetConnections(process);
+                var lobbyEndPoint = GetLobbyEndPoint(process);
+
+                connections = allConnections.Where(x => !x.remoteEndPoint.Equals(lobbyEndPoint)).ToList();
+
+                foreach (var connection in connections)
+                {
+                    Log.I("N: 게임서버 연결 감지: {0}", connection.ToString());
+                }
             }
         }
 
@@ -146,7 +154,7 @@ namespace App
             }
             catch (Exception ex) when (ex is ObjectDisposedException || ex is NullReferenceException)
             {
-                isRunning = false;
+                IsRunning = false;
                 socket = null;
                 Log.S("N: 중지됨");
             }
@@ -180,15 +188,28 @@ namespace App
 
                     IPEndPoint sourceEndPoint = new IPEndPoint(ipPacket.SourceIPAddress, tcpPacket.SourcePort);
                     IPEndPoint destinationEndPoint = new IPEndPoint(ipPacket.DestinationIPAddress, tcpPacket.DestinationPort);
-                    Connection connection = new Connection() { remoteEndPoint = sourceEndPoint, localEndPoint = destinationEndPoint };
+                    Connection outgoingConnection = new Connection() { remoteEndPoint = sourceEndPoint, localEndPoint = destinationEndPoint };
+                    Connection incomingConnection = new Connection() { localEndPoint = sourceEndPoint, remoteEndPoint = destinationEndPoint };
 
-                    if (!connections.Contains(connection))
+                    if (!connections.Contains(outgoingConnection) && !connections.Contains(incomingConnection))
                     {
-                        // 파판 서버에서 오는 패킷이 아님
+                        // 파판 서버와 주고받는 패킷이 아님
                         return;
                     }
 
-                    // TODO: TCP seq 분석하기
+                    if (tcpPacket.Flags.HasFlag(TCPFlags.RST) || tcpPacket.Flags.HasFlag(TCPFlags.FIN))
+                    {
+                        // 연결 종료 발생. 네트워크 캡춰를 중지함
+                        // connections.Remove(connection);
+                        Log.E("게임서버와의 연결 종료됨");
+                        StopCapture();
+                    }
+
+                    if (!connections.Contains(outgoingConnection))
+                    {
+                        // 받는 패킷이 아님
+                        return;
+                    }
 
                     // 파판 서버에서 오는 패킷이니 분석함
                     lock (lockAnalyse)
