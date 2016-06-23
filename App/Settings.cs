@@ -20,7 +20,7 @@ namespace App
 
         public static void Load()
         {
-            var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Global.SETTINGS_FILEPATH);
+            var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Global.APPNAME, Global.SETTINGS_FILEPATH);
 
             iniFile = new INIFile(path);
             if (!File.Exists(path))

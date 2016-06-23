@@ -251,7 +251,7 @@ namespace App
                     var netAuthApp = GetInstance<INetFwAuthorizedApplication>("HNetCfg.FwAuthorizedApplication");
 
                     netAuthApp.Enabled = true;
-                    netAuthApp.Name = Global.FW_APPNAME;
+                    netAuthApp.Name = Global.APPNAME;
                     netAuthApp.ProcessImageFileName = exePath;
                     netAuthApp.Scope = NET_FW_SCOPE_.NET_FW_SCOPE_ALL;
 
