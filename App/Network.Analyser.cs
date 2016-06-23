@@ -30,7 +30,7 @@ namespace App
 
                         var length = BitConverter.ToInt32(payload, 24);
 
-                        if ((length < 0) || (payload.Length < length))
+                        if ((length <= 0) || (payload.Length < length))
                         {
                             break;
                         }
