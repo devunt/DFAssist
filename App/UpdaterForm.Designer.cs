@@ -63,6 +63,7 @@
             this.Name = "UpdaterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DFA UpdaterForm";
+            this.TopMost = true;
             this.ResumeLayout(false);
 
         }
