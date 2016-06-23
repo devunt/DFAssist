@@ -17,8 +17,14 @@ namespace App
         {
             Task.Factory.StartNew(() =>
             {
-                var temppath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Global.UPDATE_TEMP_FILEPATH);
-                File.Delete(temppath);
+                var tempdir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Global.APPNAME, Global.UPDATE_TEMP_DIRPATH);
+                var batchpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Global.APPNAME, "update.bat");
+
+                if (Directory.Exists(tempdir))
+                {
+                    Directory.Delete(tempdir, true);
+                }
+                Directory.CreateDirectory(tempdir);
 
                 var resp = QueryGitHubReleases();
                 if (resp == null)
@@ -75,20 +81,39 @@ namespace App
                             Sentry.Report("Update started");
 
                             var stream = GetDownloadStreamByUrl(url);
-
-                            var exepath = Process.GetCurrentProcess().MainModule.FileName;
-                            File.Move(exepath, temppath);
-
                             using (ZipStorer zip = ZipStorer.Open(stream, FileAccess.Read))
                             {
                                 List<ZipStorer.ZipFileEntry> dir = zip.ReadCentralDir();
                                 foreach (ZipStorer.ZipFileEntry entry in dir)
                                 {
-                                    zip.ExtractFile(entry, Path.Combine(Path.GetDirectoryName(exepath), entry.FilenameInZip));
+                                    zip.ExtractFile(entry, Path.Combine(tempdir, entry.FilenameInZip));
                                 }
                             }
 
-                            Process.Start(new ProcessStartInfo(exepath));
+                            var exepath = Process.GetCurrentProcess().MainModule.FileName;
+                            var currentdir = Path.GetDirectoryName(exepath);
+
+                            File.WriteAllText(batchpath, string.Format(
+                                "@echo off\r\n" +
+                                "title DFAssist Updater\r\n" +
+                                "echo Updating DFAssist...\r\n" +
+                                "ping 127.0.0.1 -n 3 > nul\r\n" +
+                                "move /y {0}\\* {1} > nul\r\n" +
+                                "start {2}\r\n" + 
+                                "echo Running DFAssist...\r\n",
+
+                                tempdir,    // 0
+                                currentdir, // 1
+                                exepath     // 2
+                            ));
+
+                            ProcessStartInfo si = new ProcessStartInfo();
+                            si.FileName = batchpath;
+                            si.CreateNoWindow = true;
+                            si.UseShellExecute = false;
+                            si.WindowStyle = ProcessWindowStyle.Hidden;
+
+                            Process.Start(si);
                             Application.Exit();
                         }
                         else

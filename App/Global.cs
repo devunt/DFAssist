@@ -6,9 +6,9 @@ namespace App
     {
         public const string VERSION = "v20160620.1";
 
-        public const string UPDATE_TEMP_FILEPATH = @"DFAssist/.DFAssist.old";
         public const string APPNAME = "DFAssist";
         public const string SETTINGS_FILEPATH = @"config.ini";
+        public const string UPDATE_TEMP_DIRPATH = @"Updates/";
 
         public const string GITHUB_REPO = @"devunt/DFAssist";
         public const string RAVEN_DSN = @"http://1ef7c7a5d0004eaea1815b200c2db6ba:a531662520b5493685a1789e0760e3ec@s.devunt.kr/4";
