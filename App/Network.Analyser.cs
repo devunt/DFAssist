@@ -169,7 +169,7 @@ namespace App
                     {
                         mainForm.overlayForm.CancelDutyFinder();
 
-                        Log.E("DFAP: 매칭 중지됨");
+                        Log.E("DFAN: 매칭 중지됨");
                     }
                     else if (status == 6)
                     {
