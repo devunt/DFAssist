@@ -68,6 +68,10 @@ namespace App
 
             checkBox_StartupShow.Checked = Settings.StartupShowMainForm;
 
+            checkBox_Twitter.Checked = Settings.TwitterEnabled;
+            textBox_Twitter.Enabled = Settings.TwitterEnabled;
+            textBox_Twitter.Text = Settings.TwitterAccount;
+
             Task.Factory.StartNew(() =>
             {
                 while (true)
@@ -199,6 +203,19 @@ namespace App
         private void checkBox_StartupAutoUpdate_CheckedChanged(object sender, EventArgs e)
         {
             Settings.AutoUpdate = checkBox_AutoUpdate.Checked;
+            Settings.Save();
+        }
+
+        private void checkBox_Twitter_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox_Twitter.Enabled = checkBox_Twitter.Checked;
+            Settings.TwitterEnabled = checkBox_Twitter.Checked;
+            Settings.Save();
+        }
+
+        private void textBox_Twitter_TextChanged(object sender, EventArgs e)
+        {
+            Settings.TwitterAccount = textBox_Twitter.Text;
             Settings.Save();
         }
 

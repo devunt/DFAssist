@@ -13,6 +13,8 @@ namespace App
         public static bool StartupShowMainForm { get; set; } = true;
         public static bool CheckUpdate { get; set; } = true;
         public static bool AutoUpdate { get; set; } = true;
+        public static bool TwitterEnabled { get; set; } = false;
+        public static string TwitterAccount { get; set; } = "";
 
         private static void Init()
         {
@@ -37,6 +39,8 @@ namespace App
                 ShowOverlay = iniFile.ReadValue("overlay", "show") != "0";
                 OverlayX = int.Parse(iniFile.ReadValue("overlay", "x"));
                 OverlayY = int.Parse(iniFile.ReadValue("overlay", "y"));
+                TwitterEnabled = iniFile.ReadValue("notification", "twitter") == "1";
+                TwitterAccount = iniFile.ReadValue("notification", "twitteraccount");
             }
         }
 
@@ -48,6 +52,8 @@ namespace App
             iniFile.WriteValue("overlay", "show", ShowOverlay ? "1" : "0");
             iniFile.WriteValue("overlay", "x", OverlayX.ToString());
             iniFile.WriteValue("overlay", "y", OverlayY.ToString());
+            iniFile.WriteValue("notification", "twitter", TwitterEnabled ? "1" : "0");
+            iniFile.WriteValue("notification", "twitteraccount", TwitterAccount);
         }
     }
 }

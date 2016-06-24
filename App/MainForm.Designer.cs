@@ -45,6 +45,7 @@
             this.label_Process = new System.Windows.Forms.Label();
             this.button_ResetOverlayPosition = new System.Windows.Forms.Button();
             this.checkBox_Overlay = new System.Windows.Forms.CheckBox();
+            this.tabPage_Notification = new System.Windows.Forms.TabPage();
             this.tabPage_Log = new System.Windows.Forms.TabPage();
             this.button_CopyLog = new System.Windows.Forms.Button();
             this.richTextBox_Log = new System.Windows.Forms.RichTextBox();
@@ -56,8 +57,14 @@
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem_Open = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_Close = new System.Windows.Forms.ToolStripMenuItem();
+            this.label_Twitter = new System.Windows.Forms.Label();
+            this.label_TwitterAt = new System.Windows.Forms.Label();
+            this.textBox_Twitter = new System.Windows.Forms.TextBox();
+            this.label_TwitterAbout = new System.Windows.Forms.Label();
+            this.checkBox_Twitter = new System.Windows.Forms.CheckBox();
             this.tabControl.SuspendLayout();
             this.tabPage_Setting.SuspendLayout();
+            this.tabPage_Notification.SuspendLayout();
             this.tabPage_Log.SuspendLayout();
             this.tabPage_About.SuspendLayout();
             this.contextMenuStrip.SuspendLayout();
@@ -66,6 +73,7 @@
             // tabControl
             // 
             this.tabControl.Controls.Add(this.tabPage_Setting);
+            this.tabControl.Controls.Add(this.tabPage_Notification);
             this.tabControl.Controls.Add(this.tabPage_Log);
             this.tabControl.Controls.Add(this.tabPage_About);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -100,13 +108,13 @@
             this.tabPage_Setting.Text = "설정";
             this.tabPage_Setting.UseVisualStyleBackColor = true;
             // 
-            // checkBox_StartupAutoUpdate
+            // checkBox_AutoUpdate
             // 
             this.checkBox_AutoUpdate.AutoSize = true;
             this.checkBox_AutoUpdate.Location = new System.Drawing.Point(21, 214);
-            this.checkBox_AutoUpdate.Name = "checkBox_StartupAutoUpdate";
+            this.checkBox_AutoUpdate.Name = "checkBox_AutoUpdate";
             this.checkBox_AutoUpdate.Size = new System.Drawing.Size(285, 17);
-            this.checkBox_AutoUpdate.TabIndex = 9;
+            this.checkBox_AutoUpdate.TabIndex = 0;
             this.checkBox_AutoUpdate.Text = "업데이트가 존재하면 자동으로 업데이트하기";
             this.checkBox_AutoUpdate.UseVisualStyleBackColor = true;
             this.checkBox_AutoUpdate.CheckedChanged += new System.EventHandler(this.checkBox_StartupAutoUpdate_CheckedChanged);
@@ -117,7 +125,7 @@
             this.label_OverlayDescription.Location = new System.Drawing.Point(18, 118);
             this.label_OverlayDescription.Name = "label_OverlayDescription";
             this.label_OverlayDescription.Size = new System.Drawing.Size(385, 13);
-            this.label_OverlayDescription.TabIndex = 8;
+            this.label_OverlayDescription.TabIndex = 0;
             this.label_OverlayDescription.Text = "오버레이 창은 해당 창의 좌측 바를 드래그해 이동할 수 있습니다.";
             // 
             // label_Separator2
@@ -126,14 +134,14 @@
             this.label_Separator2.Location = new System.Drawing.Point(21, 153);
             this.label_Separator2.Name = "label_Separator2";
             this.label_Separator2.Size = new System.Drawing.Size(430, 2);
-            this.label_Separator2.TabIndex = 7;
+            this.label_Separator2.TabIndex = 0;
             // 
             // button_ResetProcess
             // 
             this.button_ResetProcess.Location = new System.Drawing.Point(225, 34);
             this.button_ResetProcess.Name = "button_ResetProcess";
             this.button_ResetProcess.Size = new System.Drawing.Size(75, 23);
-            this.button_ResetProcess.TabIndex = 6;
+            this.button_ResetProcess.TabIndex = 0;
             this.button_ResetProcess.Text = "재설정";
             this.button_ResetProcess.UseVisualStyleBackColor = true;
             this.button_ResetProcess.Click += new System.EventHandler(this.button_ResetProcess_Click);
@@ -188,7 +196,7 @@
             this.label_Separator.Location = new System.Drawing.Point(21, 72);
             this.label_Separator.Name = "label_Separator";
             this.label_Separator.Size = new System.Drawing.Size(430, 2);
-            this.label_Separator.TabIndex = 5;
+            this.label_Separator.TabIndex = 0;
             // 
             // button_SelectProcess
             // 
@@ -206,7 +214,7 @@
             this.label_Process.Location = new System.Drawing.Point(18, 17);
             this.label_Process.Name = "label_Process";
             this.label_Process.Size = new System.Drawing.Size(157, 13);
-            this.label_Process.TabIndex = 2;
+            this.label_Process.TabIndex = 0;
             this.label_Process.Text = "파이널판타지14 프로세스:";
             // 
             // button_ResetOverlayPosition
@@ -230,6 +238,21 @@
             this.checkBox_Overlay.UseVisualStyleBackColor = true;
             this.checkBox_Overlay.CheckedChanged += new System.EventHandler(this.checkBox_Overlay_CheckedChanged);
             // 
+            // tabPage_Notification
+            // 
+            this.tabPage_Notification.Controls.Add(this.checkBox_Twitter);
+            this.tabPage_Notification.Controls.Add(this.label_TwitterAbout);
+            this.tabPage_Notification.Controls.Add(this.textBox_Twitter);
+            this.tabPage_Notification.Controls.Add(this.label_TwitterAt);
+            this.tabPage_Notification.Controls.Add(this.label_Twitter);
+            this.tabPage_Notification.Location = new System.Drawing.Point(4, 23);
+            this.tabPage_Notification.Name = "tabPage_Notification";
+            this.tabPage_Notification.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Notification.Size = new System.Drawing.Size(476, 284);
+            this.tabPage_Notification.TabIndex = 3;
+            this.tabPage_Notification.Text = "알림";
+            this.tabPage_Notification.UseVisualStyleBackColor = true;
+            // 
             // tabPage_Log
             // 
             this.tabPage_Log.Controls.Add(this.button_CopyLog);
@@ -247,7 +270,7 @@
             this.button_CopyLog.Location = new System.Drawing.Point(374, 253);
             this.button_CopyLog.Name = "button_CopyLog";
             this.button_CopyLog.Size = new System.Drawing.Size(75, 23);
-            this.button_CopyLog.TabIndex = 1;
+            this.button_CopyLog.TabIndex = 0;
             this.button_CopyLog.Text = "로그 복사";
             this.button_CopyLog.UseVisualStyleBackColor = true;
             this.button_CopyLog.Click += new System.EventHandler(this.button_CopyLog_Click);
@@ -343,6 +366,54 @@
             this.toolStripMenuItem_Close.Text = "종료";
             this.toolStripMenuItem_Close.Click += new System.EventHandler(this.toolStripMenuItem_Close_Click);
             // 
+            // label_Twitter
+            // 
+            this.label_Twitter.AutoSize = true;
+            this.label_Twitter.Location = new System.Drawing.Point(18, 17);
+            this.label_Twitter.Name = "label_Twitter";
+            this.label_Twitter.Size = new System.Drawing.Size(80, 13);
+            this.label_Twitter.TabIndex = 0;
+            this.label_Twitter.Text = "트위터 알림:";
+            // 
+            // label_TwitterAt
+            // 
+            this.label_TwitterAt.AutoSize = true;
+            this.label_TwitterAt.Location = new System.Drawing.Point(18, 38);
+            this.label_TwitterAt.Name = "label_TwitterAt";
+            this.label_TwitterAt.Size = new System.Drawing.Size(17, 13);
+            this.label_TwitterAt.TabIndex = 0;
+            this.label_TwitterAt.Text = "@";
+            // 
+            // textBox_Twitter
+            // 
+            this.textBox_Twitter.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.textBox_Twitter.Location = new System.Drawing.Point(35, 33);
+            this.textBox_Twitter.MaxLength = 16;
+            this.textBox_Twitter.Name = "textBox_Twitter";
+            this.textBox_Twitter.Size = new System.Drawing.Size(156, 22);
+            this.textBox_Twitter.TabIndex = 0;
+            this.textBox_Twitter.TextChanged += new System.EventHandler(this.textBox_Twitter_TextChanged);
+            // 
+            // label_TwitterAbout
+            // 
+            this.label_TwitterAbout.AutoSize = true;
+            this.label_TwitterAbout.Location = new System.Drawing.Point(18, 69);
+            this.label_TwitterAbout.Name = "label_TwitterAbout";
+            this.label_TwitterAbout.Size = new System.Drawing.Size(441, 26);
+            this.label_TwitterAbout.TabIndex = 0;
+            this.label_TwitterAbout.Text = "매칭이 됐을 시 입력된 트위터 계정으로 멘션을 보내 해당 사실을 알립니다.\r\n계정명 입력시 앞의 @ 표시는 제외하고 순수 계정명만 입력해주세요.";
+            // 
+            // checkBox_Twitter
+            // 
+            this.checkBox_Twitter.AutoSize = true;
+            this.checkBox_Twitter.Location = new System.Drawing.Point(197, 37);
+            this.checkBox_Twitter.Name = "checkBox_Twitter";
+            this.checkBox_Twitter.Size = new System.Drawing.Size(65, 17);
+            this.checkBox_Twitter.TabIndex = 0;
+            this.checkBox_Twitter.Text = "활성화";
+            this.checkBox_Twitter.UseVisualStyleBackColor = true;
+            this.checkBox_Twitter.CheckedChanged += new System.EventHandler(this.checkBox_Twitter_CheckedChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -360,6 +431,8 @@
             this.tabControl.ResumeLayout(false);
             this.tabPage_Setting.ResumeLayout(false);
             this.tabPage_Setting.PerformLayout();
+            this.tabPage_Notification.ResumeLayout(false);
+            this.tabPage_Notification.PerformLayout();
             this.tabPage_Log.ResumeLayout(false);
             this.tabPage_About.ResumeLayout(false);
             this.contextMenuStrip.ResumeLayout(false);
@@ -395,6 +468,12 @@
         private System.Windows.Forms.Label label_OverlayDescription;
         private System.Windows.Forms.Label label_Separator2;
         private System.Windows.Forms.CheckBox checkBox_AutoUpdate;
+        private System.Windows.Forms.TabPage tabPage_Notification;
+        private System.Windows.Forms.TextBox textBox_Twitter;
+        private System.Windows.Forms.Label label_TwitterAt;
+        private System.Windows.Forms.Label label_Twitter;
+        private System.Windows.Forms.Label label_TwitterAbout;
+        private System.Windows.Forms.CheckBox checkBox_Twitter;
     }
 }
 

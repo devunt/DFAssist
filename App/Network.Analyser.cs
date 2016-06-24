@@ -211,6 +211,11 @@ namespace App
 
                     mainForm.overlayForm.SetDutyAsMatched(instance);
 
+                    if (Settings.TwitterEnabled)
+                    {
+                        Api.Tweet("< {0} > 매칭!", instance.Name);
+                    }
+
                     Log.S("DFAN: 매칭됨 [{0}]", instance.Name);
 
                     // TODO: 랜덤 매칭에서 누군가가 매칭을 취소했을 경우
