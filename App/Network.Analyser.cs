@@ -149,7 +149,7 @@ namespace App
 
                     for (int i = 0; i < 5; i++)
                     {
-                        var code = BitConverter.ToUInt16(data, 48 + (i * 2));
+                        var code = BitConverter.ToUInt16(data, 192 + (i * 2));
                         if (code == 0)
                         {
                             break;
@@ -161,6 +161,25 @@ namespace App
 
                     Log.I("DFAN: 매칭 시작됨 [{0}]", string.Join(", ", instances.Select(x => x.Name).ToArray()));
                 }
+                else if (opcode == 0x02DB)
+                {
+                    var status = data[4];
+
+                    if (status == 3)
+                    {
+                        mainForm.overlayForm.CancelDutyFinder();
+
+                        Log.E("DFAP: 매칭 중지됨");
+                    }
+                    else if (status == 6)
+                    {
+                        var code = BitConverter.ToUInt16(data, 0);
+
+                        var instance = InstanceList.GetInstance(code);
+
+                        // 인스턴스 입장함
+                    }
+                }
                 else if (opcode == 0x02DE)
                 {
                     var code = BitConverter.ToUInt16(data, 0);
@@ -171,14 +190,14 @@ namespace App
 
                     var instance = InstanceList.GetInstance(code);
 
-                    if (status == 4)
-                    {
-                        // 매칭 뒤 참가자 확인용 패킷
-                        // 현재로서는 처리 계획 없음
-                    }
-                    else
+                    if (status == 1)
                     {
                         mainForm.overlayForm.SetDutyStatus(instance, tank, dps, healer);
+                    }
+                    if (status == 4)
+                    {
+                        // 매칭 뒤 참가자 확인 현황 패킷
+                        // 현재로서는 처리 계획 없음
                     }
 
                     Log.I("DFAN: 매칭 상태 업데이트됨 [{0}, {1}/{2}, {3}/{4}, {5}/{6}]",
@@ -193,13 +212,9 @@ namespace App
                     mainForm.overlayForm.SetDutyAsMatched(instance);
 
                     Log.S("DFAN: 매칭됨 [{0}]", instance.Name);
-                }
-                else if (opcode == 0x006F || opcode == 0x0070)
-                {
-                    // TODO: 파티 상태에서 다른 사람이 매칭 취소했을 때 날아오는 패킷 찾기
-                    mainForm.overlayForm.CancelDutyFinder();
 
-                    Log.E("DFAP: 매칭 중지됨");
+                    // TODO: 랜덤 매칭에서 누군가가 매칭을 취소했을 경우
+                    // 매칭이 재시작되는 패킷 찾아내기
                 }
             }
             catch (Exception ex)

@@ -23,7 +23,8 @@ namespace App
         private static Dictionary<ushort, Instance> instanceDict = new Dictionary<ushort, Instance>()
         {
             // 오류
-            { 0, new Instance("<오류>", 0, 0, 0) },
+            { 0, new Instance("알 수 없음", 0, 0, 0) },
+            { 65535, new Instance("오류 발생!", 0, 0, 0) },
 
 
             // 던전 (2.x)
