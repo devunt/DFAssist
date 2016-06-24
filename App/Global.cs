@@ -4,7 +4,7 @@ namespace App
 {
     class Global
     {
-        public const string VERSION = "v20160624.1";
+        public const string VERSION = "v20160625.1";
 
         public const string APPNAME = "DFAssist";
         public const string SETTINGS_FILEPATH = @"config.ini";
