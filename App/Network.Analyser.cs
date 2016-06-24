@@ -194,7 +194,7 @@ namespace App
                     {
                         mainForm.overlayForm.SetDutyStatus(instance, tank, dps, healer);
                     }
-                    if (status == 4)
+                    else if (status == 4)
                     {
                         // 매칭 뒤 참가자 확인 현황 패킷
                         // 현재로서는 처리 계획 없음
