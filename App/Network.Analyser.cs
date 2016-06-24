@@ -130,7 +130,14 @@ namespace App
                 var data = message.Skip(32).ToArray();
 
                 //Log.D("opcode = {0:X}", opcode);
-                if (opcode == 0x006C)
+                if (opcode == 0x0143)
+                {
+                    mainForm.overlayForm.Invoke((MethodInvoker)delegate
+                    {
+                        mainForm.overlayForm.SetStatus(true);
+                    });
+                }
+                else if (opcode == 0x006C)
                 {
                     var code = BitConverter.ToUInt16(data, 12);
 

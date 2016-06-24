@@ -19,6 +19,7 @@ namespace App
 
         Timer timer = null;
         int blinkCount;
+        bool isOkay = false;
 
         internal OverlayForm()
         {
@@ -88,19 +89,20 @@ namespace App
 
         internal void SetStatus(bool isOkay)
         {
-            if (isOkay)
+            if (isOkay && !this.isOkay)
             {
                 panel_Move.BackColor = Color.FromArgb(0, 64, 0);
 
                 CancelDutyFinder();
             }
-            else
+            else if (!isOkay)
             {
                 panel_Move.BackColor = Color.FromArgb(64, 0, 0);
 
                 CancelDutyFinder();
                 label_DutyName.Text = "< 클라이언트 통신 대기중... >";
             }
+            this.isOkay = isOkay;
         }
 
         internal void SetDutyCount(int dutyCount)

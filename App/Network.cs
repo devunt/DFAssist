@@ -89,10 +89,6 @@ namespace App
                     socket.BeginReceive(recvBuffer, 0, recvBuffer.Length, 0, new AsyncCallback(OnReceive), null);
                     IsRunning = true;
 
-                    mainForm.overlayForm.Invoke((MethodInvoker)delegate
-                    {
-                        mainForm.overlayForm.SetStatus(true);
-                    });
                     Log.S("N: 시작됨");
                 }
                 catch (Exception ex)
