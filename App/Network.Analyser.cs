@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
-using System.Windows.Forms;
 
 namespace App
 {
@@ -132,10 +131,7 @@ namespace App
                 //Log.D("opcode = {0:X}", opcode);
                 if (opcode == 0x0143)
                 {
-                    mainForm.overlayForm.Invoke((MethodInvoker)delegate
-                    {
-                        mainForm.overlayForm.SetStatus(true);
-                    });
+                    mainForm.overlayForm.SetStatus(true);
                 }
                 else if (opcode == 0x006C)
                 {
@@ -143,10 +139,7 @@ namespace App
 
                     var instance = InstanceList.GetInstance(code);
 
-                    mainForm.overlayForm.Invoke((MethodInvoker)delegate
-                    {
-                        mainForm.overlayForm.SetDutyCount(1);
-                    });
+                    mainForm.overlayForm.SetDutyCount(1);
 
                     Log.I("DFAN: 매칭 시작됨 [{0}]", instance.Name);
                 }
@@ -164,10 +157,7 @@ namespace App
                         instances.Add(InstanceList.GetInstance(code));
                     }
 
-                    mainForm.overlayForm.Invoke((MethodInvoker)delegate
-                    {
-                        mainForm.overlayForm.SetDutyCount(instances.Count);
-                    });
+                    mainForm.overlayForm.SetDutyCount(instances.Count);
 
                     Log.I("DFAN: 매칭 시작됨 [{0}]", string.Join(", ", instances.Select(x => x.Name).ToArray()));
                 }
@@ -188,10 +178,7 @@ namespace App
                     }
                     else
                     {
-                        mainForm.overlayForm.Invoke((MethodInvoker)delegate
-                        {
-                            mainForm.overlayForm.SetDutyStatus(instance, tank, dps, healer);
-                        });
+                        mainForm.overlayForm.SetDutyStatus(instance, tank, dps, healer);
                     }
 
                     Log.I("DFAN: 매칭 상태 업데이트됨 [{0}, {1}/{2}, {3}/{4}, {5}/{6}]",
@@ -203,20 +190,14 @@ namespace App
 
                     var instance = InstanceList.GetInstance(code);
 
-                    mainForm.overlayForm.Invoke((MethodInvoker)delegate
-                    {
-                        mainForm.overlayForm.SetDutyAsMatched(instance);
-                    });
+                    mainForm.overlayForm.SetDutyAsMatched(instance);
 
                     Log.S("DFAN: 매칭됨 [{0}]", instance.Name);
                 }
                 else if (opcode == 0x006F || opcode == 0x0070)
                 {
                     // TODO: 파티 상태에서 다른 사람이 매칭 취소했을 때 날아오는 패킷 찾기
-                    mainForm.overlayForm.Invoke((MethodInvoker)delegate
-                    {
-                        mainForm.overlayForm.CancelDutyFinder();
-                    });
+                    mainForm.overlayForm.CancelDutyFinder();
 
                     Log.E("DFAP: 매칭 중지됨");
                 }

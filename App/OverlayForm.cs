@@ -29,8 +29,6 @@ namespace App
             timer.Interval = Global.BLINK_INTERVAL;
             timer.Tick += Timer_Tick;
 
-            SetStatus(false);
-
             if (Settings.OverlayX == Global.OVERLAY_XY_UNSET || Settings.OverlayY == Global.OVERLAY_XY_UNSET)
             {
                 StartPosition = FormStartPosition.CenterScreen;
@@ -51,6 +49,11 @@ namespace App
                 cp.ExStyle |= WS_EX_TOOLWINDOW;
                 return cp;
             }
+        }
+
+        private void OverlayForm_Load(object sender, EventArgs e)
+        {
+            SetStatus(false);
         }
 
         private void panel_Move_MouseDown(object sender, MouseEventArgs e)
@@ -89,49 +92,64 @@ namespace App
 
         internal void SetStatus(bool isOkay)
         {
-            if (isOkay && !this.isOkay)
+            this.Invoke(() =>
             {
-                panel_Move.BackColor = Color.FromArgb(0, 64, 0);
+                if (isOkay && !this.isOkay)
+                {
+                    panel_Move.BackColor = Color.FromArgb(0, 64, 0);
 
-                CancelDutyFinder();
-            }
-            else if (!isOkay)
-            {
-                panel_Move.BackColor = Color.FromArgb(64, 0, 0);
+                    CancelDutyFinder();
+                }
+                else if (!isOkay)
+                {
+                    panel_Move.BackColor = Color.FromArgb(64, 0, 0);
 
-                CancelDutyFinder();
-                label_DutyName.Text = "< 클라이언트 통신 대기중... >";
-            }
-            this.isOkay = isOkay;
+                    CancelDutyFinder();
+                    label_DutyName.Text = "< 클라이언트 통신 대기중... >";
+                }
+                this.isOkay = isOkay;
+            });
         }
 
         internal void SetDutyCount(int dutyCount)
         {
-            label_DutyCount.Text = string.Format("총 {0}개 임무 매칭중", dutyCount);
+            this.Invoke(() =>
+            {
+                label_DutyCount.Text = string.Format("총 {0}개 임무 매칭중", dutyCount);
+            });
         }
 
         internal void SetDutyStatus(Instance instance, byte tank, byte dps, byte healer)
         {
-            label_DutyName.Text = string.Format("< {0} >", instance.Name);
-            label_DutyStatus.Text = string.Format("{0}/{3}    {1}/{4}    {2}/{5}", tank, healer, dps, instance.Tank, instance.Healer, instance.DPS);
+            this.Invoke(() =>
+            {
+                label_DutyName.Text = string.Format("< {0} >", instance.Name);
+                label_DutyStatus.Text = string.Format("{0}/{3}    {1}/{4}    {2}/{5}", tank, healer, dps, instance.Tank, instance.Healer, instance.DPS);
+            });
         }
 
         internal void SetDutyAsMatched(Instance instance)
         {
-            label_DutyCount.Text = "입장 확인 대기중";
-            label_DutyName.Text = string.Format("< {0} >", instance.Name);
-            label_DutyStatus.Text = "매칭!";
+            this.Invoke(() =>
+            {
+                label_DutyCount.Text = "입장 확인 대기중";
+                label_DutyName.Text = string.Format("< {0} >", instance.Name);
+                label_DutyStatus.Text = "매칭!";
 
-            StartBlink();
+                StartBlink();
+            });
         }
 
         internal void CancelDutyFinder()
         {
-            StopBlink();
+            this.Invoke(() =>
+            {
+                StopBlink();
 
-            label_DutyCount.Text = "";
-            label_DutyName.Text = "< 매칭중인 임무 없음 >";
-            label_DutyStatus.Text = "";
+                label_DutyCount.Text = "";
+                label_DutyName.Text = "< 매칭중인 임무 없음 >";
+                label_DutyStatus.Text = "";
+            });
         }
 
         internal void ResetFormLocation()

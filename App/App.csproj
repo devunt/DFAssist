@@ -91,6 +91,7 @@
     <Compile Include="Global.cs" />
     <Compile Include="INIFile.cs" />
     <Compile Include="Instance.cs" />
+    <Compile Include="Invoker.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>

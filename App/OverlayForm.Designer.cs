@@ -97,6 +97,7 @@
             this.ShowInTaskbar = false;
             this.Text = "DFA OverlayForm";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.OverlayForm_Load);
             this.LocationChanged += new System.EventHandler(this.OverlayForm_LocationChanged);
             this.ResumeLayout(false);
 

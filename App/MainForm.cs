@@ -78,10 +78,7 @@ namespace App
                     {
                         FFXIVProcess = null;
 
-                        Invoke((MethodInvoker)delegate
-                        {
-                            FindFFXIVProcess();
-                        });
+                        this.Invoke(() => FindFFXIVProcess());
                     }
                     else {
                         // FFXIVProcess is alive

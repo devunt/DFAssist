@@ -110,10 +110,8 @@ namespace App
                 socket.Close();
                 connections.Clear();
 
-                mainForm.overlayForm.Invoke((MethodInvoker)delegate
-                {
-                    mainForm.overlayForm.SetStatus(false);
-                });
+                mainForm.overlayForm.SetStatus(false);
+
                 Log.I("N: 중지 요청중...");
             }
             catch (Exception ex)
