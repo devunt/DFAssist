@@ -98,14 +98,14 @@ namespace App
                                 "title DFAssist Updater\r\n" +
                                 "echo Updating DFAssist...\r\n" +
                                 "ping 127.0.0.1 -n 3 > nul\r\n" +
-                                "move /y {0}\\* {1} > nul\r\n" +
-                                "start {2}\r\n" + 
+                                "move /y \"{0}\\*\" \"{1}\" > nul\r\n" +
+                                "\"{2}\"\r\n" + 
                                 "echo Running DFAssist...\r\n",
 
                                 tempdir,    // 0
                                 currentdir, // 1
                                 exepath     // 2
-                            ));
+                            ), Encoding.Default);
 
                             ProcessStartInfo si = new ProcessStartInfo();
                             si.FileName = batchpath;
