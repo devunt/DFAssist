@@ -161,6 +161,12 @@ namespace App
 
                     Log.I("DFAN: 매칭 시작됨 [{0}]", string.Join(", ", instances.Select(x => x.Name).ToArray()));
                 }
+                else if (opcode == 0x006F)
+                {
+                    mainForm.overlayForm.CancelDutyFinder();
+
+                    Log.E("DFAN: 매칭 중지됨");
+                }
                 else if (opcode == 0x02DB)
                 {
                     var status = data[4];
