@@ -252,6 +252,9 @@ namespace App
 
         private void SetFFXIVProcess(Process process)
         {
+            //old process stack item not deleted cause active reloaded.
+			comboBox_Process.Items.Clear();
+			
             FFXIVProcess = process;
 
             var name = string.Format("{0}:{1}", FFXIVProcess.ProcessName, FFXIVProcess.Id);
