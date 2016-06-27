@@ -141,7 +141,7 @@ namespace App
 
                     mainForm.overlayForm.SetDutyCount(1);
 
-                    Log.I("DFAN: 매칭 시작됨 [{0}]", instance.Name);
+                    Log.I("DFAN: 매칭 시작됨 (6C) [{0}]", instance.Name);
                 }
                 else if (opcode == 0x0074)
                 {
@@ -159,13 +159,13 @@ namespace App
 
                     mainForm.overlayForm.SetDutyCount(instances.Count);
 
-                    Log.I("DFAN: 매칭 시작됨 [{0}]", string.Join(", ", instances.Select(x => x.Name).ToArray()));
+                    Log.I("DFAN: 매칭 시작됨 (74) [{0}]", string.Join(", ", instances.Select(x => x.Name).ToArray()));
                 }
                 else if (opcode == 0x006F)
                 {
                     mainForm.overlayForm.CancelDutyFinder();
 
-                    Log.E("DFAN: 매칭 중지됨");
+                    Log.E("DFAN: 매칭 중지됨 (6F)");
                 }
                 else if (opcode == 0x02DB)
                 {
@@ -175,7 +175,7 @@ namespace App
                     {
                         mainForm.overlayForm.CancelDutyFinder();
 
-                        Log.E("DFAN: 매칭 중지됨");
+                        Log.E("DFAN: 매칭 중지됨 (2DB)");
                     }
                     else if (status == 6)
                     {
@@ -206,8 +206,8 @@ namespace App
                         // 현재로서는 처리 계획 없음
                     }
 
-                    Log.I("DFAN: 매칭 상태 업데이트됨 [{0}, {1}/{2}, {3}/{4}, {5}/{6}]",
-                        instance.Name, tank, instance.Tank, healer, instance.Healer, dps, instance.DPS);
+                    Log.I("DFAN: 매칭 상태 업데이트됨 [{0}, {1}, {2}/{3}, {4}/{5}, {6}/{7}]",
+                        instance.Name, status, tank, instance.Tank, healer, instance.Healer, dps, instance.DPS);
                 }
                 else if (opcode == 0x0338)
                 {
