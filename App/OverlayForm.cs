@@ -157,13 +157,13 @@ namespace App
             CenterToScreen();
         }
 
-        private void StartBlink()
+        internal void StartBlink()
         {
             blinkCount = 0;
             timer.Start();
         }
 
-        private void StopBlink()
+        internal void StopBlink()
         {
             timer.Stop();
             BackColor = Color.Black;

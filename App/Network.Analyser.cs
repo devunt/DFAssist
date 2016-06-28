@@ -8,6 +8,8 @@ namespace App
 {
     partial class Network
     {
+        private State state = State.IDLE;
+
         private void AnalyseFFXIVPacket(byte[] payload)
         {
             try {
@@ -139,6 +141,7 @@ namespace App
 
                     var instance = InstanceList.GetInstance(code);
 
+                    state = State.QUEUED;
                     mainForm.overlayForm.SetDutyCount(1);
 
                     Log.I("DFAN: 매칭 시작됨 (6C) [{0}]", instance.Name);
@@ -157,15 +160,10 @@ namespace App
                         instances.Add(InstanceList.GetInstance(code));
                     }
 
+                    state = State.QUEUED;
                     mainForm.overlayForm.SetDutyCount(instances.Count);
 
                     Log.I("DFAN: 매칭 시작됨 (74) [{0}]", string.Join(", ", instances.Select(x => x.Name).ToArray()));
-                }
-                else if (opcode == 0x006F)
-                {
-                    mainForm.overlayForm.CancelDutyFinder();
-
-                    Log.E("DFAN: 매칭 중지됨 (6F)");
                 }
                 else if (opcode == 0x02DB)
                 {
@@ -173,6 +171,7 @@ namespace App
 
                     if (status == 3)
                     {
+                        state = State.IDLE;
                         mainForm.overlayForm.CancelDutyFinder();
 
                         Log.E("DFAN: 매칭 중지됨 (2DB)");
@@ -183,7 +182,26 @@ namespace App
 
                         var instance = InstanceList.GetInstance(code);
 
-                        // 인스턴스 입장함
+                        state = State.IDLE;
+                        mainForm.overlayForm.CancelDutyFinder();
+
+                        Log.I("DFAN: 입장함 [{0}]", instance.Name);
+                    }
+                }
+                else if (opcode == 0x006F)
+                {
+                    var status = data[0];
+
+                    if (status == 0)
+                    {
+                        // 플레이어가 매칭 참가 확인 창에서 취소를 누르거나 참가 확인 제한 시간이 초과됨
+                        // 매칭 중단을 알리기 위해 상단 2DB status 3 패킷이 연이어 옴
+                    }
+                    if (status == 1)
+                    {
+                        // 플레이어가 매칭 참가 확인 창에서 확인을 누름
+                        // 다른 매칭 인원들도 전부 확인을 눌렀을 경우 입장을 위해 상단 2DB status 6 패킷이 옴
+                        mainForm.overlayForm.StopBlink();
                     }
                 }
                 else if (opcode == 0x02DE)
@@ -198,12 +216,23 @@ namespace App
 
                     if (status == 1)
                     {
-                        mainForm.overlayForm.SetDutyStatus(instance, tank, dps, healer);
+                        // 매칭 전 인원 현황 패킷
+
+                        if (state == State.IDLE)
+                        {
+                            // 프로그램이 매칭 중간에 켜짐
+                            state = State.QUEUED;
+                            mainForm.overlayForm.SetDutyCount(1); // 임의로 1개로 설정함 (TODO: 알아낼 방법 있으면 정학히 나오게 수정하기)
+                            mainForm.overlayForm.SetDutyStatus(instance, tank, dps, healer);
+                        }
+                        else if (state == State.QUEUED)
+                        {
+                            mainForm.overlayForm.SetDutyStatus(instance, tank, dps, healer);
+                        }
                     }
                     else if (status == 4)
                     {
                         // 매칭 뒤 참가자 확인 현황 패킷
-                        // 현재로서는 처리 계획 없음
                     }
 
                     Log.I("DFAN: 매칭 상태 업데이트됨 [{0}, {1}, {2}/{3}, {4}/{5}, {6}/{7}]",
@@ -215,6 +244,7 @@ namespace App
 
                     var instance = InstanceList.GetInstance(code);
 
+                    state = State.MATCHED;
                     mainForm.overlayForm.SetDutyAsMatched(instance);
 
                     if (Settings.TwitterEnabled)
@@ -223,15 +253,23 @@ namespace App
                     }
 
                     Log.S("DFAN: 매칭됨 [{0}]", instance.Name);
-
-                    // TODO: 랜덤 매칭에서 누군가가 매칭을 취소했을 경우
-                    // 매칭이 재시작되는 패킷 찾아내기
                 }
+
+                // TODO: 매칭이 된 뒤에 다른 누군가가 참가 확인을 거부하거나
+                // 제한시간 초과로 참가 확인이 취소됐을 경우 어떤 패킷이 오는지 알아내기
+                // 매칭에서 누군가가 참가 확인을 안 누르는 상황을 재현하기 힘들어 찾아내지 못함...
             }
             catch (Exception ex)
             {
                 Log.Ex(ex, "메시지 처리중 에러 발생함");
             }
+        }
+
+        enum State
+        {
+            IDLE,
+            QUEUED,
+            MATCHED,
         }
     }
 }
