@@ -122,12 +122,27 @@ namespace App
 
         internal void UpdateGameConnections(Process process)
         {
-            if (connections.Count < 2)
+            bool update = (connections.Count < 2);
+            var currentConnections = GetConnections(process);
+
+            foreach (var connection in connections)
             {
-                var allConnections = GetConnections(process);
+                if (!currentConnections.Contains(connection))
+                {
+                    // 기존에 있던 연결이 끊겨 있음. 새롭게 갱신 필요
+                    update = true;
+                    Log.E("N: 게임서버와의 연결 종료 감지됨");
+                    break;
+                }
+            }
+
+            if (update)
+            {
+                mainForm.overlayForm.SetStatus(false);
+
                 var lobbyEndPoint = GetLobbyEndPoint(process);
 
-                connections = allConnections.Where(x => !x.remoteEndPoint.Equals(lobbyEndPoint)).ToList();
+                connections = currentConnections.Where(x => !x.remoteEndPoint.Equals(lobbyEndPoint)).ToList();
 
                 foreach (var connection in connections)
                 {
@@ -173,33 +188,44 @@ namespace App
                         return;
                     }
 
-                    if (!tcpPacket.Flags.HasFlag(TCPFlags.ACK | TCPFlags.PSH))
+                    if (!(tcpPacket.Flags.HasFlag(TCPFlags.ACK | TCPFlags.PSH) /* || */
+                          /* tcpPacket.Flags.HasFlag(TCPFlags.RST) ||
+                          tcpPacket.Flags.HasFlag(TCPFlags.FIN) */ ))
                     {
                         // 파판 서버에서 클라이언트로 보내주는 모든 TCP 패킷에는
                         // ACK와 PSH 플래그가 설정되어 있음을 이용해 필터링 부하를 낮춤
+                        /* // 연결 종료 감지를 위해 RST와 FIN도 하단으로 넘겨줌 */
                         return;
                     }
 
                     IPEndPoint sourceEndPoint = new IPEndPoint(ipPacket.SourceIPAddress, tcpPacket.SourcePort);
                     IPEndPoint destinationEndPoint = new IPEndPoint(ipPacket.DestinationIPAddress, tcpPacket.DestinationPort);
-                    Connection outgoingConnection = new Connection() { remoteEndPoint = sourceEndPoint, localEndPoint = destinationEndPoint };
-                    Connection incomingConnection = new Connection() { localEndPoint = sourceEndPoint, remoteEndPoint = destinationEndPoint };
+                    Connection connection = new Connection() { localEndPoint = sourceEndPoint, remoteEndPoint = destinationEndPoint };
+                    Connection reverseConnection = new Connection() { localEndPoint = destinationEndPoint, remoteEndPoint = sourceEndPoint };
 
-                    if (!connections.Contains(outgoingConnection) && !connections.Contains(incomingConnection))
+                    if (!(connections.Contains(connection) || connections.Contains(reverseConnection)))
                     {
                         // 파판 서버와 주고받는 패킷이 아님
                         return;
                     }
 
+                    /*
                     if (tcpPacket.Flags.HasFlag(TCPFlags.RST) || tcpPacket.Flags.HasFlag(TCPFlags.FIN))
                     {
-                        // 연결 종료 발생. 네트워크 캡춰를 중지함
-                        // connections.Remove(connection);
-                        Log.E("게임서버와의 연결 종료됨");
-                        StopCapture();
+                        // 연결 종료 발생. 현재 연결 목록에서 삭제함
+                        if (connections.Remove(connection) || connections.Remove(reverseConnection))
+                        {
+                            mainForm.overlayForm.SetStatus(false);
+                            Log.E("N: 게임서버와의 연결 종료됨");
+                            return;
+                        }
                     }
+                    */
 
-                    if (!connections.Contains(outgoingConnection))
+                    // 성능 문제로 연결 종료 즉시 중단 체크를 건너 뜀
+                    // (어차피 30초마다 MainForm.cs::MainForm_Load에서 실행된 Task에서 체크하므로)
+
+                    if (!connections.Contains(reverseConnection))
                     {
                         // 받는 패킷이 아님
                         return;
@@ -370,7 +396,7 @@ namespace App
 
             public override int GetHashCode()
             {
-                return localEndPoint.GetHashCode() ^ remoteEndPoint.GetHashCode();
+                return (localEndPoint.GetHashCode() + 0x0609) ^ remoteEndPoint.GetHashCode();
             }
 
             public override string ToString()
