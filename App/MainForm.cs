@@ -221,6 +221,7 @@ namespace App
 
         private void FindFFXIVProcess()
         {
+            comboBox_Process.Items.Clear();
             Log.I("파이널판타지14 프로세스를 찾는 중...");
 
             var processes = new List<Process>();
@@ -252,6 +253,9 @@ namespace App
 
         private void SetFFXIVProcess(Process process)
         {
+            //old process stack item not deleted cause active reloaded.
+			comboBox_Process.Items.Clear();
+			
             FFXIVProcess = process;
 
             var name = string.Format("{0}:{1}", FFXIVProcess.ProcessName, FFXIVProcess.Id);
