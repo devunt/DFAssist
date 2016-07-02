@@ -67,6 +67,7 @@ namespace App
                                     if (read < 4)
                                     {
                                         Log.E("메시지 처리 요청중 길이 에러 발생함: {0}, {1}/{2}", read, i, messageCount);
+                                        break;
                                     }
                                     var messageLength = BitConverter.ToInt32(buffer, 0);
 
