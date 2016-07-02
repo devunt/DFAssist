@@ -8,7 +8,7 @@
 
 정보
 ----
-:최신 버전: v20160628.1 (`다운로드 <https://github.com/devunt/DFAssist/releases/latest>`_)
+:최신 버전: v20160703.1 (`다운로드 <https://github.com/devunt/DFAssist/releases/latest>`_)
 :타겟 버전: Microsoft .NET Framework 4.0 (`다운로드 <https://www.microsoft.com/en-us/download/details.aspx?id=17851>`_)
 :게임 버전: 2016.06.07.0000.0000(2001960, ex1:2016.05.31.0000.0000)
 
