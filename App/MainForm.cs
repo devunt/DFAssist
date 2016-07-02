@@ -35,16 +35,17 @@ namespace App
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            overlayForm.Show();
             networkWorker = new Network(this);
 
             label_AboutTitle.Text = string.Format("DFA {0}", Global.VERSION);
 
             FindFFXIVProcess();
 
-            if (Settings.ShowOverlay)
+            if (!Settings.ShowOverlay)
             {
-                checkBox_Overlay.Checked = true;
-                overlayForm.Show();
+                overlayForm.Hide();
+                checkBox_Overlay.Checked = false;
             }
 
             if (Settings.AutoUpdate)

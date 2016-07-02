@@ -46,6 +46,11 @@
             this.button_ResetOverlayPosition = new System.Windows.Forms.Button();
             this.checkBox_Overlay = new System.Windows.Forms.CheckBox();
             this.tabPage_Notification = new System.Windows.Forms.TabPage();
+            this.checkBox_Twitter = new System.Windows.Forms.CheckBox();
+            this.label_TwitterAbout = new System.Windows.Forms.Label();
+            this.textBox_Twitter = new System.Windows.Forms.TextBox();
+            this.label_TwitterAt = new System.Windows.Forms.Label();
+            this.label_Twitter = new System.Windows.Forms.Label();
             this.tabPage_Log = new System.Windows.Forms.TabPage();
             this.button_CopyLog = new System.Windows.Forms.Button();
             this.richTextBox_Log = new System.Windows.Forms.RichTextBox();
@@ -57,11 +62,6 @@
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem_Open = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_Close = new System.Windows.Forms.ToolStripMenuItem();
-            this.label_Twitter = new System.Windows.Forms.Label();
-            this.label_TwitterAt = new System.Windows.Forms.Label();
-            this.textBox_Twitter = new System.Windows.Forms.TextBox();
-            this.label_TwitterAbout = new System.Windows.Forms.Label();
-            this.checkBox_Twitter = new System.Windows.Forms.CheckBox();
             this.tabControl.SuspendLayout();
             this.tabPage_Setting.SuspendLayout();
             this.tabPage_Notification.SuspendLayout();
@@ -230,6 +230,8 @@
             // checkBox_Overlay
             // 
             this.checkBox_Overlay.AutoSize = true;
+            this.checkBox_Overlay.Checked = true;
+            this.checkBox_Overlay.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_Overlay.Location = new System.Drawing.Point(21, 94);
             this.checkBox_Overlay.Name = "checkBox_Overlay";
             this.checkBox_Overlay.Size = new System.Drawing.Size(179, 17);
@@ -252,6 +254,54 @@
             this.tabPage_Notification.TabIndex = 3;
             this.tabPage_Notification.Text = "알림";
             this.tabPage_Notification.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_Twitter
+            // 
+            this.checkBox_Twitter.AutoSize = true;
+            this.checkBox_Twitter.Location = new System.Drawing.Point(197, 37);
+            this.checkBox_Twitter.Name = "checkBox_Twitter";
+            this.checkBox_Twitter.Size = new System.Drawing.Size(65, 17);
+            this.checkBox_Twitter.TabIndex = 0;
+            this.checkBox_Twitter.Text = "활성화";
+            this.checkBox_Twitter.UseVisualStyleBackColor = true;
+            this.checkBox_Twitter.CheckedChanged += new System.EventHandler(this.checkBox_Twitter_CheckedChanged);
+            // 
+            // label_TwitterAbout
+            // 
+            this.label_TwitterAbout.AutoSize = true;
+            this.label_TwitterAbout.Location = new System.Drawing.Point(18, 69);
+            this.label_TwitterAbout.Name = "label_TwitterAbout";
+            this.label_TwitterAbout.Size = new System.Drawing.Size(441, 26);
+            this.label_TwitterAbout.TabIndex = 0;
+            this.label_TwitterAbout.Text = "매칭이 됐을 시 입력된 트위터 계정으로 멘션을 보내 해당 사실을 알립니다.\r\n계정명 입력시 앞의 @ 표시는 제외하고 순수 계정명만 입력해주세요.";
+            // 
+            // textBox_Twitter
+            // 
+            this.textBox_Twitter.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.textBox_Twitter.Location = new System.Drawing.Point(35, 33);
+            this.textBox_Twitter.MaxLength = 16;
+            this.textBox_Twitter.Name = "textBox_Twitter";
+            this.textBox_Twitter.Size = new System.Drawing.Size(156, 22);
+            this.textBox_Twitter.TabIndex = 0;
+            this.textBox_Twitter.TextChanged += new System.EventHandler(this.textBox_Twitter_TextChanged);
+            // 
+            // label_TwitterAt
+            // 
+            this.label_TwitterAt.AutoSize = true;
+            this.label_TwitterAt.Location = new System.Drawing.Point(18, 38);
+            this.label_TwitterAt.Name = "label_TwitterAt";
+            this.label_TwitterAt.Size = new System.Drawing.Size(17, 13);
+            this.label_TwitterAt.TabIndex = 0;
+            this.label_TwitterAt.Text = "@";
+            // 
+            // label_Twitter
+            // 
+            this.label_Twitter.AutoSize = true;
+            this.label_Twitter.Location = new System.Drawing.Point(18, 17);
+            this.label_Twitter.Name = "label_Twitter";
+            this.label_Twitter.Size = new System.Drawing.Size(80, 13);
+            this.label_Twitter.TabIndex = 0;
+            this.label_Twitter.Text = "트위터 알림:";
             // 
             // tabPage_Log
             // 
@@ -365,54 +415,6 @@
             this.toolStripMenuItem_Close.Size = new System.Drawing.Size(98, 22);
             this.toolStripMenuItem_Close.Text = "종료";
             this.toolStripMenuItem_Close.Click += new System.EventHandler(this.toolStripMenuItem_Close_Click);
-            // 
-            // label_Twitter
-            // 
-            this.label_Twitter.AutoSize = true;
-            this.label_Twitter.Location = new System.Drawing.Point(18, 17);
-            this.label_Twitter.Name = "label_Twitter";
-            this.label_Twitter.Size = new System.Drawing.Size(80, 13);
-            this.label_Twitter.TabIndex = 0;
-            this.label_Twitter.Text = "트위터 알림:";
-            // 
-            // label_TwitterAt
-            // 
-            this.label_TwitterAt.AutoSize = true;
-            this.label_TwitterAt.Location = new System.Drawing.Point(18, 38);
-            this.label_TwitterAt.Name = "label_TwitterAt";
-            this.label_TwitterAt.Size = new System.Drawing.Size(17, 13);
-            this.label_TwitterAt.TabIndex = 0;
-            this.label_TwitterAt.Text = "@";
-            // 
-            // textBox_Twitter
-            // 
-            this.textBox_Twitter.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.textBox_Twitter.Location = new System.Drawing.Point(35, 33);
-            this.textBox_Twitter.MaxLength = 16;
-            this.textBox_Twitter.Name = "textBox_Twitter";
-            this.textBox_Twitter.Size = new System.Drawing.Size(156, 22);
-            this.textBox_Twitter.TabIndex = 0;
-            this.textBox_Twitter.TextChanged += new System.EventHandler(this.textBox_Twitter_TextChanged);
-            // 
-            // label_TwitterAbout
-            // 
-            this.label_TwitterAbout.AutoSize = true;
-            this.label_TwitterAbout.Location = new System.Drawing.Point(18, 69);
-            this.label_TwitterAbout.Name = "label_TwitterAbout";
-            this.label_TwitterAbout.Size = new System.Drawing.Size(441, 26);
-            this.label_TwitterAbout.TabIndex = 0;
-            this.label_TwitterAbout.Text = "매칭이 됐을 시 입력된 트위터 계정으로 멘션을 보내 해당 사실을 알립니다.\r\n계정명 입력시 앞의 @ 표시는 제외하고 순수 계정명만 입력해주세요.";
-            // 
-            // checkBox_Twitter
-            // 
-            this.checkBox_Twitter.AutoSize = true;
-            this.checkBox_Twitter.Location = new System.Drawing.Point(197, 37);
-            this.checkBox_Twitter.Name = "checkBox_Twitter";
-            this.checkBox_Twitter.Size = new System.Drawing.Size(65, 17);
-            this.checkBox_Twitter.TabIndex = 0;
-            this.checkBox_Twitter.Text = "활성화";
-            this.checkBox_Twitter.UseVisualStyleBackColor = true;
-            this.checkBox_Twitter.CheckedChanged += new System.EventHandler(this.checkBox_Twitter_CheckedChanged);
             // 
             // MainForm
             // 
