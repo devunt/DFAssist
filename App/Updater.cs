@@ -65,7 +65,7 @@ namespace App
                                 return;
                             }
 
-                            mainForm.Invoke((MethodInvoker)delegate
+                            mainForm.Invoke(() =>
                             {
                                 mainForm.Hide();
                                 mainForm.overlayForm.Hide();
@@ -118,7 +118,7 @@ namespace App
                         }
                         else
                         {
-                            mainForm.Invoke((MethodInvoker)delegate
+                            mainForm.Invoke(() =>
                             {
                                 mainForm.linkLabel_NewUpdate.Visible = true;
                                 mainForm.Show();
