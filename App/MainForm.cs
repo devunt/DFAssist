@@ -83,6 +83,7 @@ namespace App
                     {
                         FFXIVProcess = null;
 
+                        overlayForm.SetStatus(false);
                         this.Invoke(() => FindFFXIVProcess());
                     }
                     else {
