@@ -106,6 +106,7 @@ namespace App
                     panel_Move.BackColor = Color.FromArgb(64, 0, 0);
 
                     CancelDutyFinder();
+                    label_DutyStatus.Text = "";
                     label_DutyName.Text = "< 클라이언트 통신 대기중... >";
                 }
                 this.isOkay = isOkay;
@@ -182,6 +183,14 @@ namespace App
         {
             timer.Stop();
             BackColor = Color.Black;
+
+            if (accentColor == Color.DarkOrange) // 현재 타이머가 돌발이면
+            {
+                accentColor = Color.Black;
+
+                // 내용을 비움
+                CancelDutyFinder();
+            }
         }
     }
 }
