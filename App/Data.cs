@@ -49,7 +49,6 @@ namespace App
             { 0, new Instance("알 수 없음", 0, 0, 0) },
             { 65535, new Instance("오류 발생!", 0, 0, 0) },
 
-
             // 던전 (2.x)
             { 169, new Instance("토토라크 감옥", 1, 1, 2) },
             { 164, new Instance("탐타라 묘소", 1, 1, 2) },
@@ -93,7 +92,6 @@ namespace App
             { 438, new Instance("마과학 연구소", 1, 1, 2) },
             { 435, new Instance("용의 둥지", 1, 1, 2) },
 
-
             // 길드 작전 (2.x)
             { 214, new Instance("집단전 훈련을 완수하라!", 1, 1, 2) },
             { 190, new Instance("방황하는 사령을 쓰러뜨려라!", 1, 1, 2) },
@@ -109,7 +107,6 @@ namespace App
             { 298, new Instance("봄을 거느린 '봄 여왕'을 쓰러뜨려라!", 1, 1, 2) },
             { 299, new Instance("불길한 진형을 짜는 요마를 섬멸하라!", 1, 1, 2) },
             { 300, new Instance("세 거인족을 제압하여 유물을 지켜내라!", 2, 2, 4) },
-
 
             // 토벌전 (2.x)
             { 202, new Instance("이프리트 토벌전", 1, 1, 2) },
@@ -149,7 +146,6 @@ namespace App
             { 436, new Instance("진 비스마르크 토벌전", 2, 2, 4) },
             { 447, new Instance("극 비스마르크 토벌전", 2, 2, 4) },
             { 437, new Instance("나이츠 오브 라운드 토벌전", 2, 2, 4) },
-
 
             // 레이드 (2.x)
             { 174, new Instance("크리스탈 타워: 고대인의 미궁", 6, 6, 12) },
