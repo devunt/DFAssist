@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace App
 {
@@ -15,6 +17,7 @@ namespace App
         public static bool AutoUpdate { get; set; } = true;
         public static bool TwitterEnabled { get; set; } = false;
         public static string TwitterAccount { get; set; } = "";
+        public static HashSet<ushort> FATEs { get; set; } = new HashSet<ushort>();
 
         private static void Init()
         {
@@ -41,6 +44,12 @@ namespace App
                 OverlayY = int.Parse(iniFile.ReadValue("overlay", "y"));
                 TwitterEnabled = iniFile.ReadValue("notification", "twitter") == "1";
                 TwitterAccount = iniFile.ReadValue("notification", "twitteraccount");
+
+                string fates = iniFile.ReadValue("fate", "fates");
+                if (!string.IsNullOrEmpty(fates))
+                {
+                    FATEs = new HashSet<ushort>(from x in fates.Split(',') select ushort.Parse(x));
+                }
             }
         }
 
@@ -54,6 +63,7 @@ namespace App
             iniFile.WriteValue("overlay", "y", OverlayY.ToString());
             iniFile.WriteValue("notification", "twitter", TwitterEnabled ? "1" : "0");
             iniFile.WriteValue("notification", "twitteraccount", TwitterAccount);
+            iniFile.WriteValue("fate", "fates", string.Join(",", FATEs));
         }
     }
 }

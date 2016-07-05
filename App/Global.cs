@@ -15,7 +15,6 @@ namespace App
 
         public const string API_ENDPOINT = @"http://df.devunt.kr/";
 
-        public static readonly Color ACCENT_COLOR = Color.Red;
         public const int BLINK_COUNT = 100;
         public const int BLINK_INTERVAL = 200;
 

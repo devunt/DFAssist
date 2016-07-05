@@ -12,6 +12,7 @@ namespace App
         internal Network networkWorker;
         internal Process FFXIVProcess;
         internal OverlayForm overlayForm;
+        internal List<TreeNode> nodes;
 
         public MainForm()
         {
@@ -21,6 +22,7 @@ namespace App
 
             Log.Form = this;
             overlayForm = new OverlayForm();
+            nodes = new List<TreeNode>();
         }
 
         protected override void OnShown(EventArgs e)
@@ -72,6 +74,18 @@ namespace App
             checkBox_Twitter.Checked = Settings.TwitterEnabled;
             textBox_Twitter.Enabled = Settings.TwitterEnabled;
             textBox_Twitter.Text = Settings.TwitterAccount;
+
+            foreach (var zone in Data.GetZones())
+            {
+                triStateTreeView_FATEs.Nodes.Add(zone.Key.ToString(), zone.Value.Name);
+            }
+
+            foreach (var fate in Data.GetFATEs())
+            {
+                var node = triStateTreeView_FATEs.Nodes[fate.Value.Zone.ToString()].Nodes.Add(fate.Key.ToString(), fate.Value.Name);
+                node.Checked = Settings.FATEs.Contains(fate.Key);
+                nodes.Add(node);
+            }
 
             Task.Factory.StartNew(() =>
             {
@@ -218,6 +232,33 @@ namespace App
         private void textBox_Twitter_TextChanged(object sender, EventArgs e)
         {
             Settings.TwitterAccount = textBox_Twitter.Text;
+            Settings.Save();
+        }
+
+        private void button_UncheckAll_Click(object sender, EventArgs e)
+        {
+            foreach (var node in nodes)
+            {
+                node.Checked = false;
+            }
+            Settings.FATEs.Clear();
+            Settings.Save();
+            overlayForm.SetFATEAsAppeared(Data.GetFATE(120));
+        }
+
+        private void button_Save_Click(object sender, EventArgs e)
+        {
+            foreach (var node in nodes)
+            {
+                if (node.Checked)
+                {
+                    Settings.FATEs.Add(ushort.Parse(node.Name));
+                }
+                else
+                {
+                    Settings.FATEs.Remove(ushort.Parse(node.Name));
+                }
+            }
             Settings.Save();
         }
 

@@ -17,6 +17,7 @@ namespace App
         const int WM_NCLBUTTONDOWN = 0xA1;
         const int HT_CAPTION = 0x2;
 
+        Color accentColor;
         Timer timer = null;
         int blinkCount;
         bool isOkay = false;
@@ -81,7 +82,7 @@ namespace App
             else {
                 if (BackColor == Color.Black)
                 {
-                    BackColor = Global.ACCENT_COLOR;
+                    BackColor = accentColor;
                 }
                 else
                 {
@@ -136,6 +137,20 @@ namespace App
                 label_DutyName.Text = string.Format("< {0} >", instance.Name);
                 label_DutyStatus.Text = "매칭!";
 
+                accentColor = Color.Red;
+                StartBlink();
+            });
+        }
+
+        internal void SetFATEAsAppeared(FATE fate)
+        {
+            this.Invoke(() =>
+            {
+                label_DutyCount.Text = Data.GetZone(fate.Zone).Name;
+                label_DutyName.Text = string.Format("< {0} >", fate.Name);
+                label_DutyStatus.Text = "돌발 임무 발생!";
+
+                accentColor = Color.DarkOrange;
                 StartBlink();
             });
         }

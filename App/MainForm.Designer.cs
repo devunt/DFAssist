@@ -45,6 +45,9 @@
             this.label_Process = new System.Windows.Forms.Label();
             this.button_ResetOverlayPosition = new System.Windows.Forms.Button();
             this.checkBox_Overlay = new System.Windows.Forms.CheckBox();
+            this.tabPage_FATE = new System.Windows.Forms.TabPage();
+            this.button_Save = new System.Windows.Forms.Button();
+            this.triStateTreeView_FATEs = new RikTheVeggie.TriStateTreeView();
             this.tabPage_Notification = new System.Windows.Forms.TabPage();
             this.checkBox_Twitter = new System.Windows.Forms.CheckBox();
             this.label_TwitterAbout = new System.Windows.Forms.Label();
@@ -62,8 +65,10 @@
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem_Open = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_Close = new System.Windows.Forms.ToolStripMenuItem();
+            this.button_UncheckAll = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tabPage_Setting.SuspendLayout();
+            this.tabPage_FATE.SuspendLayout();
             this.tabPage_Notification.SuspendLayout();
             this.tabPage_Log.SuspendLayout();
             this.tabPage_About.SuspendLayout();
@@ -73,12 +78,12 @@
             // tabControl
             // 
             this.tabControl.Controls.Add(this.tabPage_Setting);
+            this.tabControl.Controls.Add(this.tabPage_FATE);
             this.tabControl.Controls.Add(this.tabPage_Notification);
             this.tabControl.Controls.Add(this.tabPage_Log);
             this.tabControl.Controls.Add(this.tabPage_About);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Location = new System.Drawing.Point(0, 0);
-            this.tabControl.Multiline = true;
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(484, 311);
@@ -239,6 +244,40 @@
             this.checkBox_Overlay.Text = "반투명 오버레이 UI 띄우기";
             this.checkBox_Overlay.UseVisualStyleBackColor = true;
             this.checkBox_Overlay.CheckedChanged += new System.EventHandler(this.checkBox_Overlay_CheckedChanged);
+            // 
+            // tabPage_FATE
+            // 
+            this.tabPage_FATE.Controls.Add(this.button_UncheckAll);
+            this.tabPage_FATE.Controls.Add(this.button_Save);
+            this.tabPage_FATE.Controls.Add(this.triStateTreeView_FATEs);
+            this.tabPage_FATE.Location = new System.Drawing.Point(4, 23);
+            this.tabPage_FATE.Name = "tabPage_FATE";
+            this.tabPage_FATE.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_FATE.Size = new System.Drawing.Size(476, 284);
+            this.tabPage_FATE.TabIndex = 4;
+            this.tabPage_FATE.Text = "돌발";
+            this.tabPage_FATE.UseVisualStyleBackColor = true;
+            // 
+            // button_Save
+            // 
+            this.button_Save.Location = new System.Drawing.Point(374, 253);
+            this.button_Save.Name = "button_Save";
+            this.button_Save.Size = new System.Drawing.Size(75, 23);
+            this.button_Save.TabIndex = 2;
+            this.button_Save.Text = "선택 적용";
+            this.button_Save.UseVisualStyleBackColor = true;
+            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
+            // 
+            // triStateTreeView_FATEs
+            // 
+            this.triStateTreeView_FATEs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.triStateTreeView_FATEs.FullRowSelect = true;
+            this.triStateTreeView_FATEs.HotTracking = true;
+            this.triStateTreeView_FATEs.Location = new System.Drawing.Point(3, 3);
+            this.triStateTreeView_FATEs.Name = "triStateTreeView_FATEs";
+            this.triStateTreeView_FATEs.Size = new System.Drawing.Size(470, 278);
+            this.triStateTreeView_FATEs.TabIndex = 0;
+            this.triStateTreeView_FATEs.TriStateStyleProperty = RikTheVeggie.TriStateTreeView.TriStateStyles.Installer;
             // 
             // tabPage_Notification
             // 
@@ -416,6 +455,16 @@
             this.toolStripMenuItem_Close.Text = "종료";
             this.toolStripMenuItem_Close.Click += new System.EventHandler(this.toolStripMenuItem_Close_Click);
             // 
+            // button_UncheckAll
+            // 
+            this.button_UncheckAll.Location = new System.Drawing.Point(293, 253);
+            this.button_UncheckAll.Name = "button_UncheckAll";
+            this.button_UncheckAll.Size = new System.Drawing.Size(75, 23);
+            this.button_UncheckAll.TabIndex = 3;
+            this.button_UncheckAll.Text = "모두 해제";
+            this.button_UncheckAll.UseVisualStyleBackColor = true;
+            this.button_UncheckAll.Click += new System.EventHandler(this.button_UncheckAll_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -433,6 +482,7 @@
             this.tabControl.ResumeLayout(false);
             this.tabPage_Setting.ResumeLayout(false);
             this.tabPage_Setting.PerformLayout();
+            this.tabPage_FATE.ResumeLayout(false);
             this.tabPage_Notification.ResumeLayout(false);
             this.tabPage_Notification.PerformLayout();
             this.tabPage_Log.ResumeLayout(false);
@@ -476,6 +526,10 @@
         private System.Windows.Forms.Label label_Twitter;
         private System.Windows.Forms.Label label_TwitterAbout;
         private System.Windows.Forms.CheckBox checkBox_Twitter;
+        private System.Windows.Forms.TabPage tabPage_FATE;
+        internal RikTheVeggie.TriStateTreeView triStateTreeView_FATEs;
+        private System.Windows.Forms.Button button_Save;
+        private System.Windows.Forms.Button button_UncheckAll;
     }
 }
 

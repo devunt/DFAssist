@@ -92,7 +92,7 @@
     <Compile Include="Api.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="INIFile.cs" />
-    <Compile Include="Instance.cs" />
+    <Compile Include="Data.cs" />
     <Compile Include="Invoker.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="MainForm.cs">
@@ -105,6 +105,9 @@
     <Compile Include="Network.Analyser.cs" />
     <Compile Include="Network.Packet.cs" />
     <Compile Include="Sentry.cs" />
+    <Compile Include="TriStateTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UpdaterForm.cs">
       <SubType>Form</SubType>
     </Compile>

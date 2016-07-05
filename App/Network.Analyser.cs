@@ -128,19 +128,72 @@ namespace App
                     return;
                 }
 
-                var opcode = BitConverter.ToInt16(message, 18);
+                var opcode = BitConverter.ToUInt16(message, 18);
                 var data = message.Skip(32).ToArray();
 
                 //Log.D("opcode = {0:X}", opcode);
-                if (opcode == 0x0143)
+                if (opcode == 0x0142)
                 {
-                    mainForm.overlayForm.SetStatus(true);
+                    var type = data[0];
+
+                    if (type == 0xCF)
+                    {
+                        var code = BitConverter.ToUInt16(data, 16);
+
+                        var zone = Data.GetZone(code);
+
+                        //Log.D("[{0} ({1})] 지역 진입", zone.Name, code);
+                    }
+                }
+                else if (opcode == 0x0143)
+                {
+                    var type = data[0];
+
+                    if (type == 0x18)
+                    {
+                        mainForm.overlayForm.SetStatus(true);
+                    }
+                    else if (type == 0x9B)
+                    {
+                        var code = BitConverter.ToUInt16(data, 4);
+                        var progress = data[8];
+
+                        var fate = Data.GetFATE(code);
+
+                        //Log.D("\"{0}\" 돌발 진행도 {1}%", fate.Name, progress);
+                    }
+                    else if (type == 0x79)
+                    {
+                        // 돌발 임무 종료 (지역 이동시 발생할 수 있는 모든 임무에 대해 전부 옴)
+
+                        var code = BitConverter.ToUInt16(data, 4);
+                        var status = BitConverter.ToUInt16(data, 28);
+
+                        var fate = Data.GetFATE(code);
+
+                        //Log.D("\"{0}\" 돌발 종료!", fate.Name);
+                    }
+                    else if (type == 0x74)
+                    {
+                        // 돌발 임무 발생 (지역 이동시에도 기존 돌발 목록이 옴)
+
+                        var code = BitConverter.ToUInt16(data, 4);
+
+                        var fate = Data.GetFATE(code);
+
+                        if (Settings.FATEs.Contains(code))
+                        {
+                            mainForm.overlayForm.SetFATEAsAppeared(fate);
+                        }
+
+                        Log.D("\"{0}\" 돌발 발생!", fate.Name);
+                    }
                 }
                 else if (opcode == 0x006C)
                 {
                     var code = BitConverter.ToUInt16(data, 12);
 
-                    var instance = InstanceList.GetInstance(code);
+                    var instance = Data.GetInstance(code);
 
                     state = State.QUEUED;
                     mainForm.overlayForm.SetDutyCount(1);
@@ -158,7 +211,7 @@ namespace App
                         {
                             break;
                         }
-                        instances.Add(InstanceList.GetInstance(code));
+                        instances.Add(Data.GetInstance(code));
                     }
 
                     state = State.QUEUED;
@@ -181,7 +234,7 @@ namespace App
                     {
                         var code = BitConverter.ToUInt16(data, 0);
 
-                        var instance = InstanceList.GetInstance(code);
+                        var instance = Data.GetInstance(code);
 
                         state = State.IDLE;
                         mainForm.overlayForm.CancelDutyFinder();
@@ -213,7 +266,7 @@ namespace App
                     var dps = data[6];
                     var healer = data[7];
 
-                    var instance = InstanceList.GetInstance(code);
+                    var instance = Data.GetInstance(code);
 
                     if (status == 1)
                     {
@@ -243,7 +296,7 @@ namespace App
                 {
                     var code = BitConverter.ToUInt16(data, 4);
 
-                    var instance = InstanceList.GetInstance(code);
+                    var instance = Data.GetInstance(code);
 
                     state = State.MATCHED;
                     mainForm.overlayForm.SetDutyAsMatched(instance);

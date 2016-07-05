@@ -50,9 +50,9 @@ namespace App
         /// <returns></returns>
         public string ReadValue(string Section, string Key)
         {
-            StringBuilder temp = new StringBuilder(255);
+            StringBuilder temp = new StringBuilder(4096);
             int i = GetPrivateProfileString(Section, Key, "", temp,
-                                            255, this.path);
+                                            4096, this.path);
             return temp.ToString();
 
         }
