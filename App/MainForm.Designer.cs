@@ -46,8 +46,8 @@
             this.button_ResetOverlayPosition = new System.Windows.Forms.Button();
             this.checkBox_Overlay = new System.Windows.Forms.CheckBox();
             this.tabPage_FATE = new System.Windows.Forms.TabPage();
+            this.button_UncheckAll = new System.Windows.Forms.Button();
             this.button_Save = new System.Windows.Forms.Button();
-            this.triStateTreeView_FATEs = new RikTheVeggie.TriStateTreeView();
             this.tabPage_Notification = new System.Windows.Forms.TabPage();
             this.checkBox_Twitter = new System.Windows.Forms.CheckBox();
             this.label_TwitterAbout = new System.Windows.Forms.Label();
@@ -65,7 +65,7 @@
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem_Open = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_Close = new System.Windows.Forms.ToolStripMenuItem();
-            this.button_UncheckAll = new System.Windows.Forms.Button();
+            this.triStateTreeView_FATEs = new RikTheVeggie.TriStateTreeView();
             this.tabControl.SuspendLayout();
             this.tabPage_Setting.SuspendLayout();
             this.tabPage_FATE.SuspendLayout();
@@ -258,6 +258,16 @@
             this.tabPage_FATE.Text = "돌발";
             this.tabPage_FATE.UseVisualStyleBackColor = true;
             // 
+            // button_UncheckAll
+            // 
+            this.button_UncheckAll.Location = new System.Drawing.Point(293, 253);
+            this.button_UncheckAll.Name = "button_UncheckAll";
+            this.button_UncheckAll.Size = new System.Drawing.Size(75, 23);
+            this.button_UncheckAll.TabIndex = 3;
+            this.button_UncheckAll.Text = "모두 해제";
+            this.button_UncheckAll.UseVisualStyleBackColor = true;
+            this.button_UncheckAll.Click += new System.EventHandler(this.button_UncheckAll_Click);
+            // 
             // button_Save
             // 
             this.button_Save.Location = new System.Drawing.Point(374, 253);
@@ -267,17 +277,6 @@
             this.button_Save.Text = "선택 적용";
             this.button_Save.UseVisualStyleBackColor = true;
             this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
-            // 
-            // triStateTreeView_FATEs
-            // 
-            this.triStateTreeView_FATEs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.triStateTreeView_FATEs.FullRowSelect = true;
-            this.triStateTreeView_FATEs.HotTracking = true;
-            this.triStateTreeView_FATEs.Location = new System.Drawing.Point(3, 3);
-            this.triStateTreeView_FATEs.Name = "triStateTreeView_FATEs";
-            this.triStateTreeView_FATEs.Size = new System.Drawing.Size(470, 278);
-            this.triStateTreeView_FATEs.TabIndex = 0;
-            this.triStateTreeView_FATEs.TriStateStyleProperty = RikTheVeggie.TriStateTreeView.TriStateStyles.Installer;
             // 
             // tabPage_Notification
             // 
@@ -310,9 +309,10 @@
             this.label_TwitterAbout.AutoSize = true;
             this.label_TwitterAbout.Location = new System.Drawing.Point(18, 69);
             this.label_TwitterAbout.Name = "label_TwitterAbout";
-            this.label_TwitterAbout.Size = new System.Drawing.Size(441, 26);
+            this.label_TwitterAbout.Size = new System.Drawing.Size(441, 39);
             this.label_TwitterAbout.TabIndex = 0;
-            this.label_TwitterAbout.Text = "매칭이 됐을 시 입력된 트위터 계정으로 멘션을 보내 해당 사실을 알립니다.\r\n계정명 입력시 앞의 @ 표시는 제외하고 순수 계정명만 입력해주세요.";
+            this.label_TwitterAbout.Text = "매칭이 됐을 시 입력된 트위터 계정으로 멘션을 보내 해당 사실을 알립니다.\r\n원하는 돌발이 발생했을 시에도 멘션을 보내 해당 사실을 알립니다.\r\n" +
+    "계정명 입력시 앞의 @ 표시는 제외하고 순수 계정명만 입력해주세요.";
             // 
             // textBox_Twitter
             // 
@@ -374,7 +374,7 @@
             this.richTextBox_Log.Name = "richTextBox_Log";
             this.richTextBox_Log.ReadOnly = true;
             this.richTextBox_Log.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
-            this.richTextBox_Log.Size = new System.Drawing.Size(470, 278);
+            this.richTextBox_Log.Size = new System.Drawing.Size(470, 279);
             this.richTextBox_Log.TabIndex = 0;
             this.richTextBox_Log.Text = "";
             this.richTextBox_Log.TextChanged += new System.EventHandler(this.richTextBox_Log_TextChanged);
@@ -418,7 +418,7 @@
             this.label_About.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_About.Location = new System.Drawing.Point(3, 3);
             this.label_About.Name = "label_About";
-            this.label_About.Size = new System.Drawing.Size(470, 278);
+            this.label_About.Size = new System.Drawing.Size(470, 279);
             this.label_About.TabIndex = 0;
             this.label_About.Text = "\r\n\r\n\r\n\r\n\r\n\r\n유채색 @ 오딘 <<리녹>>\r\ndevunt@gmail.com\r\n\r\n\r\n기재되어있는 회사명 · 제품명 · 시스템 이름은\r\n해당" +
     " 소유자의 상표 또는 등록 상표입니다.\r\n(C) 2010 - 2016 SQUARE ENIX CO., LTD All Rights Reserved." +
@@ -455,15 +455,16 @@
             this.toolStripMenuItem_Close.Text = "종료";
             this.toolStripMenuItem_Close.Click += new System.EventHandler(this.toolStripMenuItem_Close_Click);
             // 
-            // button_UncheckAll
+            // triStateTreeView_FATEs
             // 
-            this.button_UncheckAll.Location = new System.Drawing.Point(293, 253);
-            this.button_UncheckAll.Name = "button_UncheckAll";
-            this.button_UncheckAll.Size = new System.Drawing.Size(75, 23);
-            this.button_UncheckAll.TabIndex = 3;
-            this.button_UncheckAll.Text = "모두 해제";
-            this.button_UncheckAll.UseVisualStyleBackColor = true;
-            this.button_UncheckAll.Click += new System.EventHandler(this.button_UncheckAll_Click);
+            this.triStateTreeView_FATEs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.triStateTreeView_FATEs.FullRowSelect = true;
+            this.triStateTreeView_FATEs.HotTracking = true;
+            this.triStateTreeView_FATEs.Location = new System.Drawing.Point(3, 3);
+            this.triStateTreeView_FATEs.Name = "triStateTreeView_FATEs";
+            this.triStateTreeView_FATEs.Size = new System.Drawing.Size(470, 279);
+            this.triStateTreeView_FATEs.TabIndex = 0;
+            this.triStateTreeView_FATEs.TriStateStyleProperty = RikTheVeggie.TriStateTreeView.TriStateStyles.Installer;
             // 
             // MainForm
             // 

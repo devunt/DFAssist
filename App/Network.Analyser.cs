@@ -184,6 +184,11 @@ namespace App
                         if (Settings.FATEs.Contains(code))
                         {
                             mainForm.overlayForm.SetFATEAsAppeared(fate);
+
+                            if (Settings.TwitterEnabled)
+                            {
+                                Api.Tweet("< {0} > 돌발 발생!", fate.Name);
+                            }
                         }
 
                         Log.D("\"{0}\" 돌발 발생!", fate.Name);

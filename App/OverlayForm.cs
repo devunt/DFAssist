@@ -105,7 +105,7 @@ namespace App
                 {
                     panel_Move.BackColor = Color.FromArgb(64, 0, 0);
 
-                    CancelDutyFinder();
+                    CancelDutyFinderSync();
                     label_DutyName.Text = "< 클라이언트 통신 대기중... >";
                 }
                 this.isOkay = isOkay;
@@ -159,12 +159,17 @@ namespace App
         {
             this.Invoke(() =>
             {
-                StopBlink();
-
-                label_DutyCount.Text = "";
-                label_DutyName.Text = "< 매칭중인 임무 없음 >";
-                label_DutyStatus.Text = "";
+                CancelDutyFinderSync();
             });
+        }
+
+        internal void CancelDutyFinderSync()
+        {
+            StopBlink();
+
+            label_DutyCount.Text = "";
+            label_DutyName.Text = "< 매칭중인 임무 없음 >";
+            label_DutyStatus.Text = "";
         }
 
         internal void ResetFormLocation()
@@ -182,6 +187,14 @@ namespace App
         {
             timer.Stop();
             BackColor = Color.Black;
+
+            if (accentColor == Color.DarkOrange) // 현재 타이머가 돌발이면
+            {
+                accentColor = Color.Black;
+
+                // 내용을 비움
+                CancelDutyFinder();
+            }
         }
     }
 }
