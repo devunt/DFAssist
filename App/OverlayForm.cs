@@ -11,6 +11,8 @@ namespace App
         static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImport("user32.dll")]
         static extern bool ReleaseCapture();
+        [DllImport("user32.dll")]
+        static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int X, int Y, int cx, int cy, uint uFlags);
 
         const int WS_EX_LAYERED = 0x80000;
         const int WS_EX_TOOLWINDOW = 0x80;
@@ -19,6 +21,7 @@ namespace App
 
         Color accentColor;
         Timer timer = null;
+        Timer topmostTimer = null;
         int blinkCount;
         bool isOkay = false;
 
@@ -29,6 +32,10 @@ namespace App
             timer = new Timer();
             timer.Interval = Global.BLINK_INTERVAL;
             timer.Tick += Timer_Tick;
+
+            topmostTimer = new Timer();
+            topmostTimer.Interval = 250;
+            topmostTimer.Tick += (s, e) => SetWindowPos(this.Handle, new IntPtr(-1), 0, 0, 0, 0, 3);
 
             if (Settings.OverlayX == Global.OVERLAY_XY_UNSET || Settings.OverlayY == Global.OVERLAY_XY_UNSET)
             {
