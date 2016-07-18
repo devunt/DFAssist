@@ -29,7 +29,6 @@ namespace App
         const int SWP_NOMOVE = 0x2;
         const int SWP_NOSIZE = 0x1;
 
-        const int EVENT_SYSTEM_MENUEND = 0x5;
         const int EVENT_SYSTEM_FOREGROUND = 0x3;
 
         const int WINEVENT_OUTOFCONTEXT = 0;
