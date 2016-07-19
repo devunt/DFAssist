@@ -40,48 +40,48 @@
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem_Open = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_Close = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel_TopSetting = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.tabControlBlack1 = new App.TabControlBlack();
-            this.DefaultTab = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tabControl = new App.TabControlBlack();
+            this.tabPage_Settings = new System.Windows.Forms.TabPage();
+            this.groupBox_TwitterSet = new System.Windows.Forms.GroupBox();
             this.textBox_Twitter = new System.Windows.Forms.TextBox();
             this.label_TwitterAt = new System.Windows.Forms.Label();
             this.label_TwitterAbout = new System.Windows.Forms.Label();
             this.checkBox_Twitter = new System.Windows.Forms.CheckBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox_DefaultSet = new System.Windows.Forms.GroupBox();
             this.checkBox_StartupShow = new System.Windows.Forms.CheckBox();
             this.checkBox_CheckUpdate = new System.Windows.Forms.CheckBox();
             this.checkBox_AutoUpdate = new System.Windows.Forms.CheckBox();
             this.linkLabel_NewUpdate = new System.Windows.Forms.LinkLabel();
-            this.FATETab = new System.Windows.Forms.TabPage();
+            this.tabPage_FATE = new System.Windows.Forms.TabPage();
             this.triStateTreeView_FATEs = new RikTheVeggie.TriStateTreeView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.allSelectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.allDeselectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.selectApplyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.LogTab = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.menuStrip_FATETab = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem_SelectAll = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_UnSelectAll = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_SelectApply = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPage_Log = new System.Windows.Forms.TabPage();
+            this.panel_LogCover = new System.Windows.Forms.Panel();
             this.richTextBox_Log = new System.Windows.Forms.RichTextBox();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.logCopyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logClearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.InformationTab = new System.Windows.Forms.TabPage();
+            this.menuStrip_LogTab = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem_LogCopy = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_LogClear = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPage_Info = new System.Windows.Forms.TabPage();
             this.label_About = new System.Windows.Forms.Label();
             this.linkLabel_GitHub = new System.Windows.Forms.LinkLabel();
             this.contextMenuStrip.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.tabControlBlack1.SuspendLayout();
-            this.DefaultTab.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.FATETab.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            this.LogTab.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.menuStrip2.SuspendLayout();
-            this.InformationTab.SuspendLayout();
+            this.panel_TopSetting.SuspendLayout();
+            this.tabControl.SuspendLayout();
+            this.tabPage_Settings.SuspendLayout();
+            this.groupBox_TwitterSet.SuspendLayout();
+            this.groupBox_DefaultSet.SuspendLayout();
+            this.tabPage_FATE.SuspendLayout();
+            this.menuStrip_FATETab.SuspendLayout();
+            this.tabPage_Log.SuspendLayout();
+            this.panel_LogCover.SuspendLayout();
+            this.menuStrip_LogTab.SuspendLayout();
+            this.tabPage_Info.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_AboutTitle
@@ -188,21 +188,21 @@
             this.toolStripMenuItem_Close.Text = "종료";
             this.toolStripMenuItem_Close.Click += new System.EventHandler(this.toolStripMenuItem_Close_Click);
             // 
-            // panel1
+            // panel_TopSetting
             // 
-            this.panel1.BackColor = System.Drawing.Color.Silver;
-            this.panel1.Controls.Add(this.button_ResetOverlayPosition);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.comboBox_Process);
-            this.panel1.Controls.Add(this.button_SelectProcess);
-            this.panel1.Controls.Add(this.button_ResetProcess);
-            this.panel1.Controls.Add(this.checkBox_Overlay);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(544, 27);
-            this.panel1.TabIndex = 1;
+            this.panel_TopSetting.BackColor = System.Drawing.Color.Silver;
+            this.panel_TopSetting.Controls.Add(this.button_ResetOverlayPosition);
+            this.panel_TopSetting.Controls.Add(this.label1);
+            this.panel_TopSetting.Controls.Add(this.comboBox_Process);
+            this.panel_TopSetting.Controls.Add(this.button_SelectProcess);
+            this.panel_TopSetting.Controls.Add(this.button_ResetProcess);
+            this.panel_TopSetting.Controls.Add(this.checkBox_Overlay);
+            this.panel_TopSetting.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_TopSetting.Location = new System.Drawing.Point(0, 0);
+            this.panel_TopSetting.Name = "panel_TopSetting";
+            this.panel_TopSetting.Padding = new System.Windows.Forms.Padding(5);
+            this.panel_TopSetting.Size = new System.Drawing.Size(544, 27);
+            this.panel_TopSetting.TabIndex = 1;
             // 
             // label1
             // 
@@ -216,48 +216,48 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "FFXIV 프로세스";
             // 
-            // tabControlBlack1
+            // tabControl
             // 
-            this.tabControlBlack1.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tabControlBlack1.Controls.Add(this.DefaultTab);
-            this.tabControlBlack1.Controls.Add(this.FATETab);
-            this.tabControlBlack1.Controls.Add(this.LogTab);
-            this.tabControlBlack1.Controls.Add(this.InformationTab);
-            this.tabControlBlack1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlBlack1.ItemSize = new System.Drawing.Size(30, 110);
-            this.tabControlBlack1.Location = new System.Drawing.Point(0, 27);
-            this.tabControlBlack1.Multiline = true;
-            this.tabControlBlack1.Name = "tabControlBlack1";
-            this.tabControlBlack1.SelectedIndex = 0;
-            this.tabControlBlack1.Size = new System.Drawing.Size(544, 270);
-            this.tabControlBlack1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControlBlack1.TabIndex = 2;
+            this.tabControl.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tabControl.Controls.Add(this.tabPage_Settings);
+            this.tabControl.Controls.Add(this.tabPage_FATE);
+            this.tabControl.Controls.Add(this.tabPage_Log);
+            this.tabControl.Controls.Add(this.tabPage_Info);
+            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.ItemSize = new System.Drawing.Size(30, 110);
+            this.tabControl.Location = new System.Drawing.Point(0, 27);
+            this.tabControl.Multiline = true;
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(544, 270);
+            this.tabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControl.TabIndex = 2;
             // 
-            // DefaultTab
+            // tabPage_Settings
             // 
-            this.DefaultTab.BackColor = System.Drawing.SystemColors.Control;
-            this.DefaultTab.Controls.Add(this.groupBox2);
-            this.DefaultTab.Controls.Add(this.groupBox1);
-            this.DefaultTab.Controls.Add(this.linkLabel_NewUpdate);
-            this.DefaultTab.Location = new System.Drawing.Point(114, 4);
-            this.DefaultTab.Name = "DefaultTab";
-            this.DefaultTab.Size = new System.Drawing.Size(426, 262);
-            this.DefaultTab.TabIndex = 1;
-            this.DefaultTab.Text = "일반";
+            this.tabPage_Settings.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_Settings.Controls.Add(this.groupBox_TwitterSet);
+            this.tabPage_Settings.Controls.Add(this.groupBox_DefaultSet);
+            this.tabPage_Settings.Controls.Add(this.linkLabel_NewUpdate);
+            this.tabPage_Settings.Location = new System.Drawing.Point(114, 4);
+            this.tabPage_Settings.Name = "tabPage_Settings";
+            this.tabPage_Settings.Size = new System.Drawing.Size(426, 262);
+            this.tabPage_Settings.TabIndex = 1;
+            this.tabPage_Settings.Text = "일반";
             // 
-            // groupBox2
+            // groupBox_TwitterSet
             // 
-            this.groupBox2.Controls.Add(this.textBox_Twitter);
-            this.groupBox2.Controls.Add(this.label_TwitterAt);
-            this.groupBox2.Controls.Add(this.label_TwitterAbout);
-            this.groupBox2.Controls.Add(this.checkBox_Twitter);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox2.Location = new System.Drawing.Point(0, 110);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(426, 117);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "트위터 알림";
+            this.groupBox_TwitterSet.Controls.Add(this.textBox_Twitter);
+            this.groupBox_TwitterSet.Controls.Add(this.label_TwitterAt);
+            this.groupBox_TwitterSet.Controls.Add(this.label_TwitterAbout);
+            this.groupBox_TwitterSet.Controls.Add(this.checkBox_Twitter);
+            this.groupBox_TwitterSet.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox_TwitterSet.Location = new System.Drawing.Point(0, 110);
+            this.groupBox_TwitterSet.Name = "groupBox_TwitterSet";
+            this.groupBox_TwitterSet.Size = new System.Drawing.Size(426, 117);
+            this.groupBox_TwitterSet.TabIndex = 2;
+            this.groupBox_TwitterSet.TabStop = false;
+            this.groupBox_TwitterSet.Text = "트위터 알림";
             // 
             // textBox_Twitter
             // 
@@ -299,18 +299,18 @@
             this.checkBox_Twitter.UseVisualStyleBackColor = true;
             this.checkBox_Twitter.CheckedChanged += new System.EventHandler(this.checkBox_Twitter_CheckedChanged);
             // 
-            // groupBox1
+            // groupBox_DefaultSet
             // 
-            this.groupBox1.Controls.Add(this.checkBox_StartupShow);
-            this.groupBox1.Controls.Add(this.checkBox_CheckUpdate);
-            this.groupBox1.Controls.Add(this.checkBox_AutoUpdate);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(426, 110);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "기본설정";
+            this.groupBox_DefaultSet.Controls.Add(this.checkBox_StartupShow);
+            this.groupBox_DefaultSet.Controls.Add(this.checkBox_CheckUpdate);
+            this.groupBox_DefaultSet.Controls.Add(this.checkBox_AutoUpdate);
+            this.groupBox_DefaultSet.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox_DefaultSet.Location = new System.Drawing.Point(0, 0);
+            this.groupBox_DefaultSet.Name = "groupBox_DefaultSet";
+            this.groupBox_DefaultSet.Size = new System.Drawing.Size(426, 110);
+            this.groupBox_DefaultSet.TabIndex = 1;
+            this.groupBox_DefaultSet.TabStop = false;
+            this.groupBox_DefaultSet.Text = "기본설정";
             // 
             // checkBox_StartupShow
             // 
@@ -361,16 +361,16 @@
             this.linkLabel_NewUpdate.Visible = false;
             this.linkLabel_NewUpdate.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_NewUpdate_LinkClicked);
             // 
-            // FATETab
+            // tabPage_FATE
             // 
-            this.FATETab.BackColor = System.Drawing.SystemColors.Control;
-            this.FATETab.Controls.Add(this.triStateTreeView_FATEs);
-            this.FATETab.Controls.Add(this.menuStrip1);
-            this.FATETab.Location = new System.Drawing.Point(114, 4);
-            this.FATETab.Name = "FATETab";
-            this.FATETab.Size = new System.Drawing.Size(446, 262);
-            this.FATETab.TabIndex = 0;
-            this.FATETab.Text = "돌발";
+            this.tabPage_FATE.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_FATE.Controls.Add(this.triStateTreeView_FATEs);
+            this.tabPage_FATE.Controls.Add(this.menuStrip_FATETab);
+            this.tabPage_FATE.Location = new System.Drawing.Point(114, 4);
+            this.tabPage_FATE.Name = "tabPage_FATE";
+            this.tabPage_FATE.Size = new System.Drawing.Size(426, 262);
+            this.tabPage_FATE.TabIndex = 0;
+            this.tabPage_FATE.Text = "돌발";
             // 
             // triStateTreeView_FATEs
             // 
@@ -380,63 +380,63 @@
             this.triStateTreeView_FATEs.HotTracking = true;
             this.triStateTreeView_FATEs.Location = new System.Drawing.Point(0, 24);
             this.triStateTreeView_FATEs.Name = "triStateTreeView_FATEs";
-            this.triStateTreeView_FATEs.Size = new System.Drawing.Size(446, 238);
+            this.triStateTreeView_FATEs.Size = new System.Drawing.Size(426, 238);
             this.triStateTreeView_FATEs.TabIndex = 0;
             this.triStateTreeView_FATEs.TriStateStyleProperty = RikTheVeggie.TriStateTreeView.TriStateStyles.Installer;
             // 
-            // menuStrip1
+            // menuStrip_FATETab
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.allSelectToolStripMenuItem,
-            this.allDeselectToolStripMenuItem,
-            this.selectApplyToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(446, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip_FATETab.BackColor = System.Drawing.SystemColors.Control;
+            this.menuStrip_FATETab.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem_SelectAll,
+            this.toolStripMenuItem_UnSelectAll,
+            this.toolStripMenuItem_SelectApply});
+            this.menuStrip_FATETab.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip_FATETab.Name = "menuStrip_FATETab";
+            this.menuStrip_FATETab.Size = new System.Drawing.Size(426, 24);
+            this.menuStrip_FATETab.TabIndex = 0;
+            this.menuStrip_FATETab.Text = "menuStrip1";
             // 
-            // allSelectToolStripMenuItem
+            // toolStripMenuItem_SelectAll
             // 
-            this.allSelectToolStripMenuItem.Name = "allSelectToolStripMenuItem";
-            this.allSelectToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.allSelectToolStripMenuItem.Text = "모두 선택";
-            this.allSelectToolStripMenuItem.Click += new System.EventHandler(this.allSelectToolStripMenuItem_Click);
+            this.toolStripMenuItem_SelectAll.Name = "toolStripMenuItem_SelectAll";
+            this.toolStripMenuItem_SelectAll.Size = new System.Drawing.Size(71, 20);
+            this.toolStripMenuItem_SelectAll.Text = "모두 선택";
+            this.toolStripMenuItem_SelectAll.Click += new System.EventHandler(this.toolStripMenuItem_SelectAll_Click);
             // 
-            // allDeselectToolStripMenuItem
+            // toolStripMenuItem_UnSelectAll
             // 
-            this.allDeselectToolStripMenuItem.Name = "allDeselectToolStripMenuItem";
-            this.allDeselectToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.allDeselectToolStripMenuItem.Text = "모두 해제";
-            this.allDeselectToolStripMenuItem.Click += new System.EventHandler(this.allDeselectToolStripMenuItem_Click);
+            this.toolStripMenuItem_UnSelectAll.Name = "toolStripMenuItem_UnSelectAll";
+            this.toolStripMenuItem_UnSelectAll.Size = new System.Drawing.Size(71, 20);
+            this.toolStripMenuItem_UnSelectAll.Text = "모두 해제";
+            this.toolStripMenuItem_UnSelectAll.Click += new System.EventHandler(this.toolStripMenuItem_UnSelectAll_Click);
             // 
-            // selectApplyToolStripMenuItem
+            // toolStripMenuItem_SelectApply
             // 
-            this.selectApplyToolStripMenuItem.Name = "selectApplyToolStripMenuItem";
-            this.selectApplyToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.selectApplyToolStripMenuItem.Text = "선택 적용";
+            this.toolStripMenuItem_SelectApply.Name = "toolStripMenuItem_SelectApply";
+            this.toolStripMenuItem_SelectApply.Size = new System.Drawing.Size(71, 20);
+            this.toolStripMenuItem_SelectApply.Text = "선택 적용";
             // 
-            // LogTab
+            // tabPage_Log
             // 
-            this.LogTab.BackColor = System.Drawing.SystemColors.Control;
-            this.LogTab.Controls.Add(this.panel2);
-            this.LogTab.Controls.Add(this.menuStrip2);
-            this.LogTab.Location = new System.Drawing.Point(114, 4);
-            this.LogTab.Name = "LogTab";
-            this.LogTab.Size = new System.Drawing.Size(446, 262);
-            this.LogTab.TabIndex = 2;
-            this.LogTab.Text = "로그";
+            this.tabPage_Log.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_Log.Controls.Add(this.panel_LogCover);
+            this.tabPage_Log.Controls.Add(this.menuStrip_LogTab);
+            this.tabPage_Log.Location = new System.Drawing.Point(114, 4);
+            this.tabPage_Log.Name = "tabPage_Log";
+            this.tabPage_Log.Size = new System.Drawing.Size(426, 262);
+            this.tabPage_Log.TabIndex = 2;
+            this.tabPage_Log.Text = "로그";
             // 
-            // panel2
+            // panel_LogCover
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.richTextBox_Log);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 24);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(446, 238);
-            this.panel2.TabIndex = 1;
+            this.panel_LogCover.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_LogCover.Controls.Add(this.richTextBox_Log);
+            this.panel_LogCover.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_LogCover.Location = new System.Drawing.Point(0, 24);
+            this.panel_LogCover.Name = "panel_LogCover";
+            this.panel_LogCover.Size = new System.Drawing.Size(426, 238);
+            this.panel_LogCover.TabIndex = 1;
             // 
             // richTextBox_Log
             // 
@@ -448,47 +448,47 @@
             this.richTextBox_Log.Name = "richTextBox_Log";
             this.richTextBox_Log.ReadOnly = true;
             this.richTextBox_Log.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
-            this.richTextBox_Log.Size = new System.Drawing.Size(444, 236);
+            this.richTextBox_Log.Size = new System.Drawing.Size(424, 236);
             this.richTextBox_Log.TabIndex = 0;
             this.richTextBox_Log.Text = "";
             this.richTextBox_Log.TextChanged += new System.EventHandler(this.richTextBox_Log_TextChanged);
             // 
-            // menuStrip2
+            // menuStrip_LogTab
             // 
-            this.menuStrip2.BackColor = System.Drawing.SystemColors.Control;
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.logCopyToolStripMenuItem,
-            this.logClearToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(446, 24);
-            this.menuStrip2.TabIndex = 0;
-            this.menuStrip2.Text = "menuStrip2";
+            this.menuStrip_LogTab.BackColor = System.Drawing.SystemColors.Control;
+            this.menuStrip_LogTab.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem_LogCopy,
+            this.toolStripMenuItem_LogClear});
+            this.menuStrip_LogTab.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip_LogTab.Name = "menuStrip_LogTab";
+            this.menuStrip_LogTab.Size = new System.Drawing.Size(426, 24);
+            this.menuStrip_LogTab.TabIndex = 0;
+            this.menuStrip_LogTab.Text = "menuStrip2";
             // 
-            // logCopyToolStripMenuItem
+            // toolStripMenuItem_LogCopy
             // 
-            this.logCopyToolStripMenuItem.Name = "logCopyToolStripMenuItem";
-            this.logCopyToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.logCopyToolStripMenuItem.Text = "로그 복사";
-            this.logCopyToolStripMenuItem.Click += new System.EventHandler(this.logCopyToolStripMenuItem_Click);
+            this.toolStripMenuItem_LogCopy.Name = "toolStripMenuItem_LogCopy";
+            this.toolStripMenuItem_LogCopy.Size = new System.Drawing.Size(71, 20);
+            this.toolStripMenuItem_LogCopy.Text = "로그 복사";
+            this.toolStripMenuItem_LogCopy.Click += new System.EventHandler(this.toolStripMenuItem_LogCopy_Click);
             // 
-            // logClearToolStripMenuItem
+            // toolStripMenuItem_LogClear
             // 
-            this.logClearToolStripMenuItem.Name = "logClearToolStripMenuItem";
-            this.logClearToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.logClearToolStripMenuItem.Text = "로그 삭제";
-            this.logClearToolStripMenuItem.Click += new System.EventHandler(this.logClearToolStripMenuItem_Click);
+            this.toolStripMenuItem_LogClear.Name = "toolStripMenuItem_LogClear";
+            this.toolStripMenuItem_LogClear.Size = new System.Drawing.Size(71, 20);
+            this.toolStripMenuItem_LogClear.Text = "로그 삭제";
+            this.toolStripMenuItem_LogClear.Click += new System.EventHandler(this.toolStripMenuItem_LogClear_Click);
             // 
-            // InformationTab
+            // tabPage_Info
             // 
-            this.InformationTab.BackColor = System.Drawing.SystemColors.Control;
-            this.InformationTab.Controls.Add(this.label_About);
-            this.InformationTab.Controls.Add(this.linkLabel_GitHub);
-            this.InformationTab.Location = new System.Drawing.Point(114, 4);
-            this.InformationTab.Name = "InformationTab";
-            this.InformationTab.Size = new System.Drawing.Size(446, 262);
-            this.InformationTab.TabIndex = 3;
-            this.InformationTab.Text = "정보";
+            this.tabPage_Info.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_Info.Controls.Add(this.label_About);
+            this.tabPage_Info.Controls.Add(this.linkLabel_GitHub);
+            this.tabPage_Info.Location = new System.Drawing.Point(114, 4);
+            this.tabPage_Info.Name = "tabPage_Info";
+            this.tabPage_Info.Size = new System.Drawing.Size(426, 262);
+            this.tabPage_Info.TabIndex = 3;
+            this.tabPage_Info.Text = "정보";
             // 
             // label_About
             // 
@@ -496,7 +496,7 @@
             this.label_About.Font = new System.Drawing.Font("맑은 고딕", 8F);
             this.label_About.Location = new System.Drawing.Point(0, 0);
             this.label_About.Name = "label_About";
-            this.label_About.Size = new System.Drawing.Size(446, 210);
+            this.label_About.Size = new System.Drawing.Size(426, 210);
             this.label_About.TabIndex = 1;
             this.label_About.Text = "유채색 @ 오딘 <<리녹>>\r\ndevunt@gmail.com\r\n\r\n\r\n기재되어있는 회사명 · 제품명 · 시스템 이름은\r\n해당 소유자의 상표 또는 " +
     "등록 상표입니다.\r\n(C) 2010 - 2016 SQUARE ENIX CO., LTD All Rights Reserved.\r\nKorea Publ" +
@@ -508,7 +508,7 @@
             this.linkLabel_GitHub.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.linkLabel_GitHub.Location = new System.Drawing.Point(0, 210);
             this.linkLabel_GitHub.Name = "linkLabel_GitHub";
-            this.linkLabel_GitHub.Size = new System.Drawing.Size(446, 52);
+            this.linkLabel_GitHub.Size = new System.Drawing.Size(426, 52);
             this.linkLabel_GitHub.TabIndex = 0;
             this.linkLabel_GitHub.TabStop = true;
             this.linkLabel_GitHub.Text = "GitHub";
@@ -519,12 +519,12 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(544, 321);
-            this.Controls.Add(this.tabControlBlack1);
+            this.Controls.Add(this.tabControl);
             this.Controls.Add(this.label_AboutTitle);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel_TopSetting);
             this.Font = new System.Drawing.Font("맑은 고딕", 9.75F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.menuStrip_FATETab;
             this.MinimumSize = new System.Drawing.Size(560, 360);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -532,24 +532,24 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.contextMenuStrip.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.tabControlBlack1.ResumeLayout(false);
-            this.DefaultTab.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.FATETab.ResumeLayout(false);
-            this.FATETab.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.LogTab.ResumeLayout(false);
-            this.LogTab.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.menuStrip2.ResumeLayout(false);
-            this.menuStrip2.PerformLayout();
-            this.InformationTab.ResumeLayout(false);
+            this.panel_TopSetting.ResumeLayout(false);
+            this.panel_TopSetting.PerformLayout();
+            this.tabControl.ResumeLayout(false);
+            this.tabPage_Settings.ResumeLayout(false);
+            this.groupBox_TwitterSet.ResumeLayout(false);
+            this.groupBox_TwitterSet.PerformLayout();
+            this.groupBox_DefaultSet.ResumeLayout(false);
+            this.groupBox_DefaultSet.PerformLayout();
+            this.tabPage_FATE.ResumeLayout(false);
+            this.tabPage_FATE.PerformLayout();
+            this.menuStrip_FATETab.ResumeLayout(false);
+            this.menuStrip_FATETab.PerformLayout();
+            this.tabPage_Log.ResumeLayout(false);
+            this.tabPage_Log.PerformLayout();
+            this.panel_LogCover.ResumeLayout(false);
+            this.menuStrip_LogTab.ResumeLayout(false);
+            this.menuStrip_LogTab.PerformLayout();
+            this.tabPage_Info.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -576,25 +576,25 @@
         private System.Windows.Forms.Label label_TwitterAbout;
         private System.Windows.Forms.CheckBox checkBox_Twitter;
         internal RikTheVeggie.TriStateTreeView triStateTreeView_FATEs;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel_TopSetting;
         private System.Windows.Forms.Label label1;
-        private TabControlBlack tabControlBlack1;
-        private System.Windows.Forms.TabPage FATETab;
-        private System.Windows.Forms.TabPage DefaultTab;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem allSelectToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem allDeselectToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem selectApplyToolStripMenuItem;
-        private System.Windows.Forms.TabPage LogTab;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem logCopyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logClearToolStripMenuItem;
+        private TabControlBlack tabControl;
+        private System.Windows.Forms.TabPage tabPage_FATE;
+        private System.Windows.Forms.TabPage tabPage_Settings;
+        private System.Windows.Forms.MenuStrip menuStrip_FATETab;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_SelectAll;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_UnSelectAll;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_SelectApply;
+        private System.Windows.Forms.TabPage tabPage_Log;
+        private System.Windows.Forms.Panel panel_LogCover;
+        private System.Windows.Forms.MenuStrip menuStrip_LogTab;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_LogCopy;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_LogClear;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.TabPage InformationTab;
+        private System.Windows.Forms.TabPage tabPage_Info;
         private System.Windows.Forms.Label label_About;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox_TwitterSet;
+        private System.Windows.Forms.GroupBox groupBox_DefaultSet;
     }
 }
 
