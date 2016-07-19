@@ -9,8 +9,6 @@ namespace App
 {
     public class TabControlBlack : TabControl
     {
-        new public Color BackColor { get; set; } = Color.FromArgb(63,63,70);
-
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
@@ -55,11 +53,12 @@ namespace App
         {
             Alignment = TabAlignment.Left;
             
-
             SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+
             SetStyle(ControlStyles.ResizeRedraw, true);
             SetStyle(ControlStyles.UserPaint, true);
-            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+
             DoubleBuffered = true;
 
             ItemSize = new Size(30, 110);

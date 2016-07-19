@@ -406,22 +406,22 @@
             // allSelectToolStripMenuItem
             // 
             this.allSelectToolStripMenuItem.Name = "allSelectToolStripMenuItem";
-            this.allSelectToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.allSelectToolStripMenuItem.Text = "AllSelect";
+            this.allSelectToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.allSelectToolStripMenuItem.Text = "모두 선택";
             this.allSelectToolStripMenuItem.Click += new System.EventHandler(this.allSelectToolStripMenuItem_Click);
             // 
             // allDeselectToolStripMenuItem
             // 
             this.allDeselectToolStripMenuItem.Name = "allDeselectToolStripMenuItem";
-            this.allDeselectToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
-            this.allDeselectToolStripMenuItem.Text = "AllDeselect";
+            this.allDeselectToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.allDeselectToolStripMenuItem.Text = "모두 해제";
             this.allDeselectToolStripMenuItem.Click += new System.EventHandler(this.allDeselectToolStripMenuItem_Click);
             // 
             // selectApplyToolStripMenuItem
             // 
             this.selectApplyToolStripMenuItem.Name = "selectApplyToolStripMenuItem";
-            this.selectApplyToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
-            this.selectApplyToolStripMenuItem.Text = "SelectApply";
+            this.selectApplyToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.selectApplyToolStripMenuItem.Text = "선택 적용";
             // 
             // LogTab
             // 
@@ -474,15 +474,15 @@
             // logCopyToolStripMenuItem
             // 
             this.logCopyToolStripMenuItem.Name = "logCopyToolStripMenuItem";
-            this.logCopyToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.logCopyToolStripMenuItem.Text = "LogCopy";
+            this.logCopyToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.logCopyToolStripMenuItem.Text = "로그 복사";
             this.logCopyToolStripMenuItem.Click += new System.EventHandler(this.logCopyToolStripMenuItem_Click);
             // 
             // logClearToolStripMenuItem
             // 
             this.logClearToolStripMenuItem.Name = "logClearToolStripMenuItem";
-            this.logClearToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.logClearToolStripMenuItem.Text = "LogClear";
+            this.logClearToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.logClearToolStripMenuItem.Text = "로그 삭제";
             this.logClearToolStripMenuItem.Click += new System.EventHandler(this.logClearToolStripMenuItem_Click);
             // 
             // MainForm
