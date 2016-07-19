@@ -45,14 +45,16 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabControlBlack1 = new App.TabControlBlack();
             this.DefaultTab = new System.Windows.Forms.TabPage();
-            this.linkLabel_NewUpdate = new System.Windows.Forms.LinkLabel();
-            this.checkBox_Twitter = new System.Windows.Forms.CheckBox();
-            this.checkBox_AutoUpdate = new System.Windows.Forms.CheckBox();
-            this.label_TwitterAbout = new System.Windows.Forms.Label();
-            this.checkBox_StartupShow = new System.Windows.Forms.CheckBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox_Twitter = new System.Windows.Forms.TextBox();
-            this.checkBox_CheckUpdate = new System.Windows.Forms.CheckBox();
             this.label_TwitterAt = new System.Windows.Forms.Label();
+            this.label_TwitterAbout = new System.Windows.Forms.Label();
+            this.checkBox_Twitter = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox_StartupShow = new System.Windows.Forms.CheckBox();
+            this.checkBox_CheckUpdate = new System.Windows.Forms.CheckBox();
+            this.checkBox_AutoUpdate = new System.Windows.Forms.CheckBox();
+            this.linkLabel_NewUpdate = new System.Windows.Forms.LinkLabel();
             this.FATETab = new System.Windows.Forms.TabPage();
             this.triStateTreeView_FATEs = new RikTheVeggie.TriStateTreeView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -66,22 +68,20 @@
             this.logCopyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logClearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.InformationTab = new System.Windows.Forms.TabPage();
-            this.linkLabel_GitHub = new System.Windows.Forms.LinkLabel();
             this.label_About = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.linkLabel_GitHub = new System.Windows.Forms.LinkLabel();
             this.contextMenuStrip.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControlBlack1.SuspendLayout();
             this.DefaultTab.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.FATETab.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.LogTab.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.InformationTab.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_AboutTitle
@@ -90,9 +90,9 @@
             this.label_AboutTitle.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label_AboutTitle.Font = new System.Drawing.Font("맑은 고딕", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label_AboutTitle.ForeColor = System.Drawing.Color.Gray;
-            this.label_AboutTitle.Location = new System.Drawing.Point(0, 379);
+            this.label_AboutTitle.Location = new System.Drawing.Point(0, 297);
             this.label_AboutTitle.Name = "label_AboutTitle";
-            this.label_AboutTitle.Size = new System.Drawing.Size(626, 24);
+            this.label_AboutTitle.Size = new System.Drawing.Size(544, 24);
             this.label_AboutTitle.TabIndex = 0;
             this.label_AboutTitle.Text = "VERSION STRING";
             this.label_AboutTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -100,11 +100,11 @@
             // button_ResetProcess
             // 
             this.button_ResetProcess.Font = new System.Drawing.Font("맑은 고딕", 8F);
-            this.button_ResetProcess.Location = new System.Drawing.Point(316, 0);
+            this.button_ResetProcess.Location = new System.Drawing.Point(295, 0);
             this.button_ResetProcess.Name = "button_ResetProcess";
-            this.button_ResetProcess.Size = new System.Drawing.Size(89, 27);
+            this.button_ResetProcess.Size = new System.Drawing.Size(60, 27);
             this.button_ResetProcess.TabIndex = 0;
-            this.button_ResetProcess.Text = "프로세스 선택";
+            this.button_ResetProcess.Text = "재설정";
             this.button_ResetProcess.UseVisualStyleBackColor = true;
             this.button_ResetProcess.Click += new System.EventHandler(this.button_ResetProcess_Click);
             // 
@@ -114,16 +114,16 @@
             this.comboBox_Process.FormattingEnabled = true;
             this.comboBox_Process.Location = new System.Drawing.Point(114, 1);
             this.comboBox_Process.Name = "comboBox_Process";
-            this.comboBox_Process.Size = new System.Drawing.Size(132, 25);
+            this.comboBox_Process.Size = new System.Drawing.Size(120, 25);
             this.comboBox_Process.Sorted = true;
             this.comboBox_Process.TabIndex = 0;
             // 
             // button_SelectProcess
             // 
             this.button_SelectProcess.Font = new System.Drawing.Font("맑은 고딕", 8F);
-            this.button_SelectProcess.Location = new System.Drawing.Point(247, 0);
+            this.button_SelectProcess.Location = new System.Drawing.Point(235, 0);
             this.button_SelectProcess.Name = "button_SelectProcess";
-            this.button_SelectProcess.Size = new System.Drawing.Size(69, 27);
+            this.button_SelectProcess.Size = new System.Drawing.Size(60, 27);
             this.button_SelectProcess.TabIndex = 0;
             this.button_SelectProcess.Text = "수동설정";
             this.button_SelectProcess.UseVisualStyleBackColor = true;
@@ -133,9 +133,9 @@
             // 
             this.button_ResetOverlayPosition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_ResetOverlayPosition.Font = new System.Drawing.Font("맑은 고딕", 8F);
-            this.button_ResetOverlayPosition.Location = new System.Drawing.Point(547, 0);
+            this.button_ResetOverlayPosition.Location = new System.Drawing.Point(470, 0);
             this.button_ResetOverlayPosition.Name = "button_ResetOverlayPosition";
-            this.button_ResetOverlayPosition.Size = new System.Drawing.Size(79, 27);
+            this.button_ResetOverlayPosition.Size = new System.Drawing.Size(74, 27);
             this.button_ResetOverlayPosition.TabIndex = 0;
             this.button_ResetOverlayPosition.Text = "위치 초기화";
             this.button_ResetOverlayPosition.UseVisualStyleBackColor = true;
@@ -147,11 +147,11 @@
             this.checkBox_Overlay.AutoSize = true;
             this.checkBox_Overlay.Checked = true;
             this.checkBox_Overlay.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_Overlay.Font = new System.Drawing.Font("맑은 고딕", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.checkBox_Overlay.Font = new System.Drawing.Font("맑은 고딕", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.checkBox_Overlay.ForeColor = System.Drawing.Color.Gray;
-            this.checkBox_Overlay.Location = new System.Drawing.Point(417, 4);
+            this.checkBox_Overlay.Location = new System.Drawing.Point(356, 4);
             this.checkBox_Overlay.Name = "checkBox_Overlay";
-            this.checkBox_Overlay.Size = new System.Drawing.Size(129, 21);
+            this.checkBox_Overlay.Size = new System.Drawing.Size(119, 19);
             this.checkBox_Overlay.TabIndex = 0;
             this.checkBox_Overlay.Text = "오버레이 UI 사용";
             this.toolTip1.SetToolTip(this.checkBox_Overlay, "오버레이 UI의 좌측 막대를 이용해 드래그 할 수 있습니다.");
@@ -191,17 +191,17 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.button_ResetOverlayPosition);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.comboBox_Process);
             this.panel1.Controls.Add(this.button_SelectProcess);
             this.panel1.Controls.Add(this.button_ResetProcess);
             this.panel1.Controls.Add(this.checkBox_Overlay);
-            this.panel1.Controls.Add(this.button_ResetOverlayPosition);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(626, 27);
+            this.panel1.Size = new System.Drawing.Size(544, 27);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -229,7 +229,7 @@
             this.tabControlBlack1.Multiline = true;
             this.tabControlBlack1.Name = "tabControlBlack1";
             this.tabControlBlack1.SelectedIndex = 0;
-            this.tabControlBlack1.Size = new System.Drawing.Size(626, 352);
+            this.tabControlBlack1.Size = new System.Drawing.Size(544, 270);
             this.tabControlBlack1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControlBlack1.TabIndex = 2;
             // 
@@ -241,22 +241,52 @@
             this.DefaultTab.Controls.Add(this.linkLabel_NewUpdate);
             this.DefaultTab.Location = new System.Drawing.Point(114, 4);
             this.DefaultTab.Name = "DefaultTab";
-            this.DefaultTab.Size = new System.Drawing.Size(508, 344);
+            this.DefaultTab.Size = new System.Drawing.Size(426, 262);
             this.DefaultTab.TabIndex = 1;
             this.DefaultTab.Text = "일반";
             // 
-            // linkLabel_NewUpdate
+            // groupBox2
             // 
-            this.linkLabel_NewUpdate.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.linkLabel_NewUpdate.Location = new System.Drawing.Point(0, 327);
-            this.linkLabel_NewUpdate.Name = "linkLabel_NewUpdate";
-            this.linkLabel_NewUpdate.Size = new System.Drawing.Size(508, 17);
-            this.linkLabel_NewUpdate.TabIndex = 0;
-            this.linkLabel_NewUpdate.TabStop = true;
-            this.linkLabel_NewUpdate.Text = "새로운 업데이트가 있습니다!";
-            this.linkLabel_NewUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.linkLabel_NewUpdate.Visible = false;
-            this.linkLabel_NewUpdate.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_NewUpdate_LinkClicked);
+            this.groupBox2.Controls.Add(this.textBox_Twitter);
+            this.groupBox2.Controls.Add(this.label_TwitterAt);
+            this.groupBox2.Controls.Add(this.label_TwitterAbout);
+            this.groupBox2.Controls.Add(this.checkBox_Twitter);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox2.Location = new System.Drawing.Point(0, 110);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(426, 117);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "트위터 알림";
+            // 
+            // textBox_Twitter
+            // 
+            this.textBox_Twitter.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.textBox_Twitter.Location = new System.Drawing.Point(37, 25);
+            this.textBox_Twitter.MaxLength = 16;
+            this.textBox_Twitter.Name = "textBox_Twitter";
+            this.textBox_Twitter.Size = new System.Drawing.Size(156, 25);
+            this.textBox_Twitter.TabIndex = 0;
+            this.textBox_Twitter.TextChanged += new System.EventHandler(this.textBox_Twitter_TextChanged);
+            // 
+            // label_TwitterAt
+            // 
+            this.label_TwitterAt.AutoSize = true;
+            this.label_TwitterAt.Location = new System.Drawing.Point(12, 28);
+            this.label_TwitterAt.Name = "label_TwitterAt";
+            this.label_TwitterAt.Size = new System.Drawing.Size(21, 17);
+            this.label_TwitterAt.TabIndex = 0;
+            this.label_TwitterAt.Text = "@";
+            // 
+            // label_TwitterAbout
+            // 
+            this.label_TwitterAbout.Font = new System.Drawing.Font("맑은 고딕", 8F);
+            this.label_TwitterAbout.Location = new System.Drawing.Point(13, 61);
+            this.label_TwitterAbout.Name = "label_TwitterAbout";
+            this.label_TwitterAbout.Size = new System.Drawing.Size(379, 41);
+            this.label_TwitterAbout.TabIndex = 0;
+            this.label_TwitterAbout.Text = "매칭이 됐을 시 입력된 트위터 계정으로 멘션을 보내 해당 사실을 알립니다.\r\n원하는 돌발이 발생했을 시에도 멘션을 보내 해당 사실을 알립니다.\r\n" +
+    "계정명 입력시 앞의 @ 표시는 제외하고 순수 계정명만 입력해주세요.";
             // 
             // checkBox_Twitter
             // 
@@ -269,27 +299,18 @@
             this.checkBox_Twitter.UseVisualStyleBackColor = true;
             this.checkBox_Twitter.CheckedChanged += new System.EventHandler(this.checkBox_Twitter_CheckedChanged);
             // 
-            // checkBox_AutoUpdate
+            // groupBox1
             // 
-            this.checkBox_AutoUpdate.AutoSize = true;
-            this.checkBox_AutoUpdate.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.checkBox_AutoUpdate.Location = new System.Drawing.Point(14, 75);
-            this.checkBox_AutoUpdate.Name = "checkBox_AutoUpdate";
-            this.checkBox_AutoUpdate.Size = new System.Drawing.Size(266, 19);
-            this.checkBox_AutoUpdate.TabIndex = 0;
-            this.checkBox_AutoUpdate.Text = "업데이트가 존재하면 자동으로 업데이트하기";
-            this.checkBox_AutoUpdate.UseVisualStyleBackColor = true;
-            this.checkBox_AutoUpdate.CheckedChanged += new System.EventHandler(this.checkBox_StartupAutoUpdate_CheckedChanged);
-            // 
-            // label_TwitterAbout
-            // 
-            this.label_TwitterAbout.Font = new System.Drawing.Font("맑은 고딕", 8F);
-            this.label_TwitterAbout.Location = new System.Drawing.Point(13, 61);
-            this.label_TwitterAbout.Name = "label_TwitterAbout";
-            this.label_TwitterAbout.Size = new System.Drawing.Size(379, 41);
-            this.label_TwitterAbout.TabIndex = 0;
-            this.label_TwitterAbout.Text = "매칭이 됐을 시 입력된 트위터 계정으로 멘션을 보내 해당 사실을 알립니다.\r\n원하는 돌발이 발생했을 시에도 멘션을 보내 해당 사실을 알립니다.\r\n" +
-    "계정명 입력시 앞의 @ 표시는 제외하고 순수 계정명만 입력해주세요.";
+            this.groupBox1.Controls.Add(this.checkBox_StartupShow);
+            this.groupBox1.Controls.Add(this.checkBox_CheckUpdate);
+            this.groupBox1.Controls.Add(this.checkBox_AutoUpdate);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(426, 110);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "기본설정";
             // 
             // checkBox_StartupShow
             // 
@@ -303,16 +324,6 @@
             this.checkBox_StartupShow.UseVisualStyleBackColor = true;
             this.checkBox_StartupShow.CheckedChanged += new System.EventHandler(this.checkBox_StartupShow_CheckedChanged);
             // 
-            // textBox_Twitter
-            // 
-            this.textBox_Twitter.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.textBox_Twitter.Location = new System.Drawing.Point(37, 25);
-            this.textBox_Twitter.MaxLength = 16;
-            this.textBox_Twitter.Name = "textBox_Twitter";
-            this.textBox_Twitter.Size = new System.Drawing.Size(156, 25);
-            this.textBox_Twitter.TabIndex = 0;
-            this.textBox_Twitter.TextChanged += new System.EventHandler(this.textBox_Twitter_TextChanged);
-            // 
             // checkBox_CheckUpdate
             // 
             this.checkBox_CheckUpdate.AutoSize = true;
@@ -325,14 +336,30 @@
             this.checkBox_CheckUpdate.UseVisualStyleBackColor = true;
             this.checkBox_CheckUpdate.CheckedChanged += new System.EventHandler(this.checkBox_StartupUpdate_CheckedChanged);
             // 
-            // label_TwitterAt
+            // checkBox_AutoUpdate
             // 
-            this.label_TwitterAt.AutoSize = true;
-            this.label_TwitterAt.Location = new System.Drawing.Point(12, 28);
-            this.label_TwitterAt.Name = "label_TwitterAt";
-            this.label_TwitterAt.Size = new System.Drawing.Size(21, 17);
-            this.label_TwitterAt.TabIndex = 0;
-            this.label_TwitterAt.Text = "@";
+            this.checkBox_AutoUpdate.AutoSize = true;
+            this.checkBox_AutoUpdate.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.checkBox_AutoUpdate.Location = new System.Drawing.Point(14, 75);
+            this.checkBox_AutoUpdate.Name = "checkBox_AutoUpdate";
+            this.checkBox_AutoUpdate.Size = new System.Drawing.Size(266, 19);
+            this.checkBox_AutoUpdate.TabIndex = 0;
+            this.checkBox_AutoUpdate.Text = "업데이트가 존재하면 자동으로 업데이트하기";
+            this.checkBox_AutoUpdate.UseVisualStyleBackColor = true;
+            this.checkBox_AutoUpdate.CheckedChanged += new System.EventHandler(this.checkBox_StartupAutoUpdate_CheckedChanged);
+            // 
+            // linkLabel_NewUpdate
+            // 
+            this.linkLabel_NewUpdate.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.linkLabel_NewUpdate.Location = new System.Drawing.Point(0, 245);
+            this.linkLabel_NewUpdate.Name = "linkLabel_NewUpdate";
+            this.linkLabel_NewUpdate.Size = new System.Drawing.Size(426, 17);
+            this.linkLabel_NewUpdate.TabIndex = 0;
+            this.linkLabel_NewUpdate.TabStop = true;
+            this.linkLabel_NewUpdate.Text = "새로운 업데이트가 있습니다!";
+            this.linkLabel_NewUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.linkLabel_NewUpdate.Visible = false;
+            this.linkLabel_NewUpdate.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_NewUpdate_LinkClicked);
             // 
             // FATETab
             // 
@@ -341,7 +368,7 @@
             this.FATETab.Controls.Add(this.menuStrip1);
             this.FATETab.Location = new System.Drawing.Point(114, 4);
             this.FATETab.Name = "FATETab";
-            this.FATETab.Size = new System.Drawing.Size(508, 344);
+            this.FATETab.Size = new System.Drawing.Size(446, 262);
             this.FATETab.TabIndex = 0;
             this.FATETab.Text = "돌발";
             // 
@@ -353,7 +380,7 @@
             this.triStateTreeView_FATEs.HotTracking = true;
             this.triStateTreeView_FATEs.Location = new System.Drawing.Point(0, 24);
             this.triStateTreeView_FATEs.Name = "triStateTreeView_FATEs";
-            this.triStateTreeView_FATEs.Size = new System.Drawing.Size(508, 320);
+            this.triStateTreeView_FATEs.Size = new System.Drawing.Size(446, 238);
             this.triStateTreeView_FATEs.TabIndex = 0;
             this.triStateTreeView_FATEs.TriStateStyleProperty = RikTheVeggie.TriStateTreeView.TriStateStyles.Installer;
             // 
@@ -366,7 +393,7 @@
             this.selectApplyToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(508, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(446, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -397,7 +424,7 @@
             this.LogTab.Controls.Add(this.menuStrip2);
             this.LogTab.Location = new System.Drawing.Point(114, 4);
             this.LogTab.Name = "LogTab";
-            this.LogTab.Size = new System.Drawing.Size(508, 344);
+            this.LogTab.Size = new System.Drawing.Size(446, 262);
             this.LogTab.TabIndex = 2;
             this.LogTab.Text = "로그";
             // 
@@ -408,7 +435,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 24);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(508, 320);
+            this.panel2.Size = new System.Drawing.Size(446, 238);
             this.panel2.TabIndex = 1;
             // 
             // richTextBox_Log
@@ -421,7 +448,7 @@
             this.richTextBox_Log.Name = "richTextBox_Log";
             this.richTextBox_Log.ReadOnly = true;
             this.richTextBox_Log.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
-            this.richTextBox_Log.Size = new System.Drawing.Size(506, 318);
+            this.richTextBox_Log.Size = new System.Drawing.Size(444, 236);
             this.richTextBox_Log.TabIndex = 0;
             this.richTextBox_Log.Text = "";
             this.richTextBox_Log.TextChanged += new System.EventHandler(this.richTextBox_Log_TextChanged);
@@ -434,7 +461,7 @@
             this.logClearToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(508, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(446, 24);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -455,76 +482,50 @@
             // InformationTab
             // 
             this.InformationTab.BackColor = System.Drawing.SystemColors.Control;
-            this.InformationTab.Controls.Add(this.linkLabel_GitHub);
             this.InformationTab.Controls.Add(this.label_About);
+            this.InformationTab.Controls.Add(this.linkLabel_GitHub);
             this.InformationTab.Location = new System.Drawing.Point(114, 4);
             this.InformationTab.Name = "InformationTab";
-            this.InformationTab.Size = new System.Drawing.Size(508, 344);
+            this.InformationTab.Size = new System.Drawing.Size(446, 262);
             this.InformationTab.TabIndex = 3;
             this.InformationTab.Text = "정보";
             // 
-            // linkLabel_GitHub
-            // 
-            this.linkLabel_GitHub.Dock = System.Windows.Forms.DockStyle.Top;
-            this.linkLabel_GitHub.Location = new System.Drawing.Point(0, 222);
-            this.linkLabel_GitHub.Name = "linkLabel_GitHub";
-            this.linkLabel_GitHub.Size = new System.Drawing.Size(508, 17);
-            this.linkLabel_GitHub.TabIndex = 0;
-            this.linkLabel_GitHub.TabStop = true;
-            this.linkLabel_GitHub.Text = "GitHub";
-            this.linkLabel_GitHub.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.linkLabel_GitHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_GitHub_LinkClicked);
-            // 
             // label_About
             // 
-            this.label_About.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label_About.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_About.Font = new System.Drawing.Font("맑은 고딕", 8F);
             this.label_About.Location = new System.Drawing.Point(0, 0);
             this.label_About.Name = "label_About";
-            this.label_About.Size = new System.Drawing.Size(508, 222);
+            this.label_About.Size = new System.Drawing.Size(446, 210);
             this.label_About.TabIndex = 1;
             this.label_About.Text = "유채색 @ 오딘 <<리녹>>\r\ndevunt@gmail.com\r\n\r\n\r\n기재되어있는 회사명 · 제품명 · 시스템 이름은\r\n해당 소유자의 상표 또는 " +
     "등록 상표입니다.\r\n(C) 2010 - 2016 SQUARE ENIX CO., LTD All Rights Reserved.\r\nKorea Publ" +
     "ished by EYEDENTITY MOBILE.";
             this.label_About.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox1
+            // linkLabel_GitHub
             // 
-            this.groupBox1.Controls.Add(this.checkBox_StartupShow);
-            this.groupBox1.Controls.Add(this.checkBox_CheckUpdate);
-            this.groupBox1.Controls.Add(this.checkBox_AutoUpdate);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(508, 110);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "기본설정";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.textBox_Twitter);
-            this.groupBox2.Controls.Add(this.label_TwitterAt);
-            this.groupBox2.Controls.Add(this.label_TwitterAbout);
-            this.groupBox2.Controls.Add(this.checkBox_Twitter);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox2.Location = new System.Drawing.Point(0, 110);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(508, 117);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "트위터 알림";
+            this.linkLabel_GitHub.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.linkLabel_GitHub.Location = new System.Drawing.Point(0, 210);
+            this.linkLabel_GitHub.Name = "linkLabel_GitHub";
+            this.linkLabel_GitHub.Size = new System.Drawing.Size(446, 52);
+            this.linkLabel_GitHub.TabIndex = 0;
+            this.linkLabel_GitHub.TabStop = true;
+            this.linkLabel_GitHub.Text = "GitHub";
+            this.linkLabel_GitHub.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.linkLabel_GitHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_GitHub_LinkClicked);
             // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(626, 403);
+            this.ClientSize = new System.Drawing.Size(544, 321);
             this.Controls.Add(this.tabControlBlack1);
             this.Controls.Add(this.label_AboutTitle);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("맑은 고딕", 9.75F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(560, 360);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "임무 찾기 도우미";
@@ -535,6 +536,10 @@
             this.panel1.PerformLayout();
             this.tabControlBlack1.ResumeLayout(false);
             this.DefaultTab.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.FATETab.ResumeLayout(false);
             this.FATETab.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -545,10 +550,6 @@
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.InformationTab.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
