@@ -271,6 +271,23 @@ namespace App
             Settings.Save();
         }
 
+        private void toolStripMenuItem_SelectApply_Click(object sender, EventArgs e)
+        {
+            foreach (var node in nodes)
+            {
+                if (node.Checked)
+                {
+                    Settings.FATEs.Add(ushort.Parse(node.Name));
+                }
+                else
+                {
+                    Settings.FATEs.Remove(ushort.Parse(node.Name));
+                }
+            }
+
+            Settings.Save();
+        }
+
         private void FindFFXIVProcess()
         {
             comboBox_Process.Items.Clear();

@@ -416,6 +416,7 @@
             this.toolStripMenuItem_SelectApply.Name = "toolStripMenuItem_SelectApply";
             this.toolStripMenuItem_SelectApply.Size = new System.Drawing.Size(71, 20);
             this.toolStripMenuItem_SelectApply.Text = "선택 적용";
+            this.toolStripMenuItem_SelectApply.Click += new System.EventHandler(this.toolStripMenuItem_SelectApply_Click);
             // 
             // tabPage_Log
             // 
