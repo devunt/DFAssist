@@ -307,7 +307,6 @@ namespace App
             }
 
             Settings.Save();
-            overlayForm.SetFATEAsAppeared(Data.GetFATE(120));
         }
 
         private void allDeselectToolStripMenuItem_Click(object sender, EventArgs e)
@@ -319,7 +318,6 @@ namespace App
             Settings.FATEs.Clear();
 
             Settings.Save();
-            overlayForm.SetFATEAsAppeared(Data.GetFATE(120));
         }
     }
 }
