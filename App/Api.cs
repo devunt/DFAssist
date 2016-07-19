@@ -66,9 +66,10 @@ namespace App
                 return null;
             }
 
-            MD5 md5 = new MD5CryptoServiceProvider();
             byte[] textToHash = Encoding.UTF8.GetBytes(text);
-            byte[] result = md5.ComputeHash(textToHash);
+            byte[] result;
+            using (MD5 md5 = new MD5CryptoServiceProvider())
+                result = md5.ComputeHash(textToHash);
 
             return BitConverter.ToString(result).Replace("-", "").ToLower();
         }

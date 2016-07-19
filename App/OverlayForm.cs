@@ -8,15 +8,34 @@ namespace App
     public partial class OverlayForm : Form
     {
         [DllImport("user32.dll")]
-        static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        static extern IntPtr SendMessage(IntPtr hWnd, int Msg, IntPtr wParam, IntPtr lParam);
         [DllImport("user32.dll")]
         static extern bool ReleaseCapture();
+        
+        public delegate void WinEventDelegate(IntPtr hWinEventHook, uint eventType, IntPtr hwnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime);
+
+        [DllImport("user32.dll")]
+        public static extern IntPtr SetWinEventHook(uint eventMin, uint eventMax, IntPtr hmodWinEventProc, WinEventDelegate lpfnWinEventProc, uint idProcess, uint idThread, uint dwFlags);
+
+        [DllImport("user32.dll")]
+        static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int X, int Y, int cx, int cy, uint uFlags);
 
         const int WS_EX_LAYERED = 0x80000;
         const int WS_EX_TOOLWINDOW = 0x80;
         const int WM_NCLBUTTONDOWN = 0xA1;
         const int HT_CAPTION = 0x2;
 
+        const int HWND_TOPMOST = -1;
+        const int SWP_NOMOVE = 0x2;
+        const int SWP_NOSIZE = 0x1;
+
+        const int EVENT_SYSTEM_FOREGROUND = 0x3;
+
+        const int WINEVENT_OUTOFCONTEXT = 0;
+        const int WINEVENT_SKIPOWNPROCESS = 2;
+
+
+        public readonly WinEventDelegate m_hookProc;
         Color accentColor;
         Timer timer = null;
         int blinkCount;
@@ -25,6 +44,8 @@ namespace App
         internal OverlayForm()
         {
             InitializeComponent();
+
+            this.m_hookProc = new WinEventDelegate(this.WinEventProc);
 
             timer = new Timer();
             timer.Interval = Global.BLINK_INTERVAL;
@@ -39,8 +60,18 @@ namespace App
                 StartPosition = FormStartPosition.Manual;
                 Location = new Point(Settings.OverlayX, Settings.OverlayY);
             }
+
+            SetWinEventHook(EVENT_SYSTEM_FOREGROUND, EVENT_SYSTEM_FOREGROUND, IntPtr.Zero, this.m_hookProc, 0, 0, WINEVENT_OUTOFCONTEXT | WINEVENT_SKIPOWNPROCESS);
         }
-        
+
+        private void WinEventProc(IntPtr hWinEventHook, uint eventType, IntPtr hwnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime)
+        {
+            if (idObject != 0 || idChild != 0)
+                return;
+
+            SetWindowPos(this.Handle, new IntPtr(HWND_TOPMOST), 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
+        }
+
         protected override CreateParams CreateParams
         {
             get
@@ -62,7 +93,7 @@ namespace App
             if (e.Button == MouseButtons.Left)
             {
                 ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+                SendMessage(Handle, WM_NCLBUTTONDOWN, new IntPtr(HT_CAPTION), IntPtr.Zero);
             }
         }
 
