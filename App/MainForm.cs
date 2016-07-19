@@ -292,7 +292,7 @@ namespace App
 
         private void logClearToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("로그를 비우시겠습니까?", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+            if (MessageBox.Show("로그를 비우시겠습니까?", "DFA 알림", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
             {
                 richTextBox_Log.Text = "";
             }
