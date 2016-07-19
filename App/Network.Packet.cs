@@ -8,104 +8,115 @@ namespace App
 {
     partial class Network
     {
-        class IPPacket
+        struct IPPacket
         {
-            public ProtocolFamily Version { get; }
-            public byte HeaderLength { get; }
-            public byte DifferentiatedServices { get; }
-            public byte Congestion { get; }
-            public ushort TotalLength { get; }
-            public ushort Identification { get; }
-            public byte Flags { get; }
-            public ushort FragmentOffset { get; }
-            private byte TTL { get; }
-            public ProtocolType Protocol { get; }
-            public short Checksum { get; }
+            public ProtocolFamily Version;
+            public byte HeaderLength;
+            public byte DifferentiatedServices;
+            public byte Congestion;
+            public ushort TotalLength;
+            public ushort Identification;
+            public byte Flags;
+            public ushort FragmentOffset;
+            private byte TTL;
+            public ProtocolType Protocol;
+            public short Checksum;
 
             public IPAddress SourceIPAddress;
             public IPAddress DestinationIPAddress;
 
-            public byte[] Data { get; }
+            public byte[] Data;
 
-            public bool IsValid { get; }
+            public bool IsValid;
 
             public IPPacket(byte[] buffer)
             {
-
                 try
                 {
-                    MemoryStream memoryStream = new MemoryStream(buffer);
-                    BinaryReader binaryReader = new BinaryReader(memoryStream);
-
-                    byte versionAndHeaderLength = binaryReader.ReadByte();
+                    byte versionAndHeaderLength = buffer[0];
                     Version = (versionAndHeaderLength >> 4) == 4 ? ProtocolFamily.InterNetwork : ProtocolFamily.InterNetworkV6;
                     HeaderLength = (byte)((versionAndHeaderLength & 15) * 4); // 0b1111 = 15
 
-                    byte dscpAndEcn = binaryReader.ReadByte();
+                    byte dscpAndEcn = buffer[1];
                     DifferentiatedServices = (byte)(dscpAndEcn >> 2);
                     Congestion = (byte)(dscpAndEcn & 3); // 0b11 = 3
 
-                    TotalLength = (ushort)IPAddress.NetworkToHostOrder(binaryReader.ReadInt16());
-                    Identification = (ushort)IPAddress.NetworkToHostOrder(binaryReader.ReadInt16());
+                    TotalLength = (ushort)IPAddress.NetworkToHostOrder(BitConverter.ToInt16(buffer, 2));
+                    Identification = (ushort)IPAddress.NetworkToHostOrder(BitConverter.ToInt16(buffer, 4));
 
-                    ushort flagsAndOffset = (ushort)IPAddress.NetworkToHostOrder(binaryReader.ReadInt16());
+                    ushort flagsAndOffset = (ushort)IPAddress.NetworkToHostOrder(BitConverter.ToInt16(buffer, 6));
                     Flags = (byte)(flagsAndOffset >> 13);
                     FragmentOffset = (ushort)(flagsAndOffset & 8191); // 0b1111111111111 = 8191
 
-                    TTL = binaryReader.ReadByte();
-                    Protocol = (ProtocolType)binaryReader.ReadByte();
-                    Checksum = IPAddress.NetworkToHostOrder(binaryReader.ReadInt16());
+                    TTL = buffer[8];
+                    Protocol = (ProtocolType)buffer[9];
+                    Checksum = IPAddress.NetworkToHostOrder(BitConverter.ToInt16(buffer, 10));
 
-                    SourceIPAddress = new IPAddress(binaryReader.ReadUInt32());
-                    DestinationIPAddress = new IPAddress(binaryReader.ReadUInt32());
-
+                    SourceIPAddress = new IPAddress(BitConverter.ToUInt32(buffer, 12));
+                    DestinationIPAddress = new IPAddress(BitConverter.ToUInt32(buffer, 16));
+                    
                     Data = buffer.Skip(HeaderLength).ToArray();
 
                     IsValid = true;
                 }
                 catch (Exception ex)
                 {
+                    Version = ProtocolFamily.Unknown;
+                    HeaderLength = 0;
+                    DifferentiatedServices = 0;
+                    Congestion = 0;
+                    TotalLength = 0;
+                    Identification = 0;
+                    Flags = 0;
+                    FragmentOffset = 0;
+                    TTL = 0;
+                    Protocol = ProtocolType.Unknown;
+                    Checksum = 0;
+
+                    SourceIPAddress = null;
+                    DestinationIPAddress = null;
+
+                    Data = null;
+
                     IsValid = false;
                     Log.Ex(ex, "IP 패킷 파싱 에러");
                 }
             }
         }
 
-        class TCPPacket
+        struct TCPPacket
         {
-            public ushort SourcePort { get; }
-            public ushort DestinationPort { get; }
-            public uint SequenceNumber { get; }
-            public uint AcknowledgementNumber { get; }
-            public byte DataOffset { get; }
-            public TCPFlags Flags { get; }
-            public ushort Window { get; }
-            public short Checksum { get; }
-            public ushort UrgentPointer { get; }
+            public ushort SourcePort;
+            public ushort DestinationPort;
+            public uint SequenceNumber;
+            public uint AcknowledgementNumber;
+            public byte DataOffset;
+            public TCPFlags Flags;
+            public ushort Window;
+            public short Checksum;
+            public ushort UrgentPointer;
 
             public byte[] Payload;
 
-            public bool IsValid { get; }
+            public bool IsValid;
 
             public TCPPacket(byte[] buffer)
             {
+
                 try
                 {
-                    MemoryStream memoryStream = new MemoryStream(buffer);
-                    BinaryReader binaryReader = new BinaryReader(memoryStream);
+                    SourcePort = (ushort)IPAddress.NetworkToHostOrder(BitConverter.ToInt16(buffer, 0));
+                    DestinationPort = (ushort)IPAddress.NetworkToHostOrder(BitConverter.ToInt16(buffer, 2));
+                    SequenceNumber = (uint)IPAddress.NetworkToHostOrder(BitConverter.ToInt32(buffer, 4));
+                    AcknowledgementNumber = (uint)IPAddress.NetworkToHostOrder(BitConverter.ToInt32(buffer, 8));
 
-                    SourcePort = (ushort)IPAddress.NetworkToHostOrder(binaryReader.ReadInt16());
-                    DestinationPort = (ushort)IPAddress.NetworkToHostOrder(binaryReader.ReadInt16());
-                    SequenceNumber = (uint)IPAddress.NetworkToHostOrder(binaryReader.ReadInt32());
-                    AcknowledgementNumber = (uint)IPAddress.NetworkToHostOrder(binaryReader.ReadInt32());
-
-                    ushort offsetAndFlags = (ushort)IPAddress.NetworkToHostOrder(binaryReader.ReadInt16());
+                    ushort offsetAndFlags = (ushort)IPAddress.NetworkToHostOrder(BitConverter.ToInt16(buffer, 12));
                     DataOffset = (byte)((offsetAndFlags >> 12) * 4);
                     Flags = (TCPFlags)(offsetAndFlags & 511); // 0b111111111 = 511
 
-                    Window = (ushort)IPAddress.NetworkToHostOrder(binaryReader.ReadInt16());
-                    Checksum = IPAddress.NetworkToHostOrder(binaryReader.ReadInt16());
-                    UrgentPointer = (ushort)IPAddress.NetworkToHostOrder(binaryReader.ReadInt16());
+                    Window = (ushort)IPAddress.NetworkToHostOrder(BitConverter.ToInt16(buffer, 14));
+                    Checksum = IPAddress.NetworkToHostOrder(BitConverter.ToInt16(buffer, 16));
+                    UrgentPointer = (ushort)IPAddress.NetworkToHostOrder(BitConverter.ToInt16(buffer, 18));
 
                     Payload = buffer.Skip(DataOffset).ToArray();
 
@@ -113,7 +124,20 @@ namespace App
                 }
                 catch (Exception ex)
                 {
+                    SourcePort = 0;
+                    DestinationPort = 0;
+                    SequenceNumber = 0;
+                    AcknowledgementNumber = 0;
+                    DataOffset = 0;
+                    Flags = TCPFlags.NONE;
+                    Window = 0;
+                    Checksum = 0;
+                    UrgentPointer = 0;
+
+                    Payload = null;
+
                     IsValid = false;
+
                     Log.Ex(ex, "TCP 패킷 파싱 에러");
                 }
             }
