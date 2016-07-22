@@ -41,8 +41,8 @@
             this.toolStripMenuItem_Open = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_Close = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_TopSetting = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label_Process = new System.Windows.Forms.Label();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl = new App.TabControlBlack();
             this.tabPage_Settings = new System.Windows.Forms.TabPage();
             this.groupBox_TwitterSet = new System.Windows.Forms.GroupBox();
@@ -88,7 +88,7 @@
             // 
             this.label_AboutTitle.BackColor = System.Drawing.Color.Silver;
             this.label_AboutTitle.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label_AboutTitle.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label_AboutTitle.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.label_AboutTitle.ForeColor = System.Drawing.Color.Gray;
             this.label_AboutTitle.Location = new System.Drawing.Point(0, 297);
             this.label_AboutTitle.Name = "label_AboutTitle";
@@ -154,7 +154,7 @@
             this.checkBox_Overlay.Size = new System.Drawing.Size(102, 19);
             this.checkBox_Overlay.TabIndex = 0;
             this.checkBox_Overlay.Text = "오버레이 사용";
-            this.toolTip1.SetToolTip(this.checkBox_Overlay, "오버레이 UI의 좌측 막대를 이용해 드래그 할 수 있습니다.");
+            this.toolTip.SetToolTip(this.checkBox_Overlay, "오버레이 UI의 좌측 막대를 이용해 드래그 할 수 있습니다.");
             this.checkBox_Overlay.UseVisualStyleBackColor = true;
             this.checkBox_Overlay.CheckedChanged += new System.EventHandler(this.checkBox_Overlay_CheckedChanged);
             // 
@@ -192,7 +192,7 @@
             // 
             this.panel_TopSetting.BackColor = System.Drawing.Color.Silver;
             this.panel_TopSetting.Controls.Add(this.button_ResetOverlayPosition);
-            this.panel_TopSetting.Controls.Add(this.label1);
+            this.panel_TopSetting.Controls.Add(this.label_Process);
             this.panel_TopSetting.Controls.Add(this.comboBox_Process);
             this.panel_TopSetting.Controls.Add(this.button_SelectProcess);
             this.panel_TopSetting.Controls.Add(this.button_ResetProcess);
@@ -204,17 +204,17 @@
             this.panel_TopSetting.Size = new System.Drawing.Size(544, 27);
             this.panel_TopSetting.TabIndex = 1;
             // 
-            // label1
+            // label_Process
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(5, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "FFXIV 프로세스";
+            this.label_Process.AutoSize = true;
+            this.label_Process.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label_Process.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_Process.ForeColor = System.Drawing.Color.Gray;
+            this.label_Process.Location = new System.Drawing.Point(5, 5);
+            this.label_Process.Name = "label_Process";
+            this.label_Process.Size = new System.Drawing.Size(100, 17);
+            this.label_Process.TabIndex = 0;
+            this.label_Process.Text = "FFXIV 프로세스";
             // 
             // tabControl
             // 
@@ -231,7 +231,7 @@
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(544, 270);
             this.tabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl.TabIndex = 2;
+            this.tabControl.TabIndex = 0;
             // 
             // tabPage_Settings
             // 
@@ -579,7 +579,7 @@
         private System.Windows.Forms.CheckBox checkBox_Twitter;
         internal RikTheVeggie.TriStateTreeView triStateTreeView_FATEs;
         private System.Windows.Forms.Panel panel_TopSetting;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_Process;
         private TabControlBlack tabControl;
         private System.Windows.Forms.TabPage tabPage_FATE;
         private System.Windows.Forms.TabPage tabPage_Settings;
@@ -592,7 +592,7 @@
         private System.Windows.Forms.MenuStrip menuStrip_LogTab;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_LogCopy;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_LogClear;
-        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.TabPage tabPage_Info;
         private System.Windows.Forms.Label label_About;
         private System.Windows.Forms.GroupBox groupBox_TwitterSet;
