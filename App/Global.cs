@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-
-namespace App
+﻿namespace App
 {
     class Global
     {
