@@ -255,7 +255,7 @@
             this.groupBox_TwitterSet.Location = new System.Drawing.Point(0, 110);
             this.groupBox_TwitterSet.Name = "groupBox_TwitterSet";
             this.groupBox_TwitterSet.Size = new System.Drawing.Size(426, 117);
-            this.groupBox_TwitterSet.TabIndex = 2;
+            this.groupBox_TwitterSet.TabIndex = 0;
             this.groupBox_TwitterSet.TabStop = false;
             this.groupBox_TwitterSet.Text = "트위터 알림";
             // 
@@ -308,7 +308,7 @@
             this.groupBox_DefaultSet.Location = new System.Drawing.Point(0, 0);
             this.groupBox_DefaultSet.Name = "groupBox_DefaultSet";
             this.groupBox_DefaultSet.Size = new System.Drawing.Size(426, 110);
-            this.groupBox_DefaultSet.TabIndex = 1;
+            this.groupBox_DefaultSet.TabIndex = 0;
             this.groupBox_DefaultSet.TabStop = false;
             this.groupBox_DefaultSet.Text = "기본설정";
             // 
@@ -499,7 +499,7 @@
             this.label_About.Location = new System.Drawing.Point(0, 0);
             this.label_About.Name = "label_About";
             this.label_About.Size = new System.Drawing.Size(426, 210);
-            this.label_About.TabIndex = 1;
+            this.label_About.TabIndex = 0;
             this.label_About.Text = "제작 및 문의\r\n유채색 @ 오딘\r\n\r\n\r\n저작권\r\n기재되어있는 회사명 · 제품명 · 시스템 이름은\r\n해당 소유자의 상표 또는 등록 상표입니다.\r\n" +
     "(C) 2010 - 2016 SQUARE ENIX CO., LTD All Rights Reserved.\r\nKorea Published by EY" +
     "EDENTITY MOBILE.";

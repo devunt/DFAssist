@@ -90,7 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api.cs" />
-    <Compile Include="customDesign\tabControlBlack.cs">
+    <Compile Include="TabControlBlack.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Global.cs" />
