@@ -64,7 +64,7 @@ namespace App
                     while (true)
                     {
                         Updater.CheckNewVersion(this);
-                        Thread.Sleep(5 * 60 * 1000);
+                        Thread.Sleep(30 * 60 * 1000);
                     }
                 });
             }
