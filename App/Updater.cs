@@ -121,6 +121,7 @@ namespace App
                             mainForm.Invoke(() =>
                             {
                                 mainForm.linkLabel_NewUpdate.Visible = true;
+                                mainForm.linkLabel_NewUpdate.Select();
                                 mainForm.Show();
                             });
                         }
