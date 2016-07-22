@@ -286,6 +286,7 @@ namespace App
             }
 
             Settings.Save();
+            MessageBox.Show("돌발 알림 설정이 적용되었습니다.", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void FindFFXIVProcess()
