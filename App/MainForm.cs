@@ -162,7 +162,7 @@ namespace App
 
         private void linkLabel_NewUpdate_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start(string.Format("https://github.com/{0}/releases", Global.GITHUB_REPO));
+            Process.Start(string.Format("https://github.com/{0}/releases/latest", Global.GITHUB_REPO));
         }
 
         private void button_SelectProcess_Click(object sender, EventArgs e)
