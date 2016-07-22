@@ -500,9 +500,9 @@
             this.label_About.Name = "label_About";
             this.label_About.Size = new System.Drawing.Size(426, 210);
             this.label_About.TabIndex = 0;
-            this.label_About.Text = "제작 및 문의\r\n유채색 @ 오딘\r\n\r\n\r\n저작권\r\n기재되어있는 회사명 · 제품명 · 시스템 이름은\r\n해당 소유자의 상표 또는 등록 상표입니다.\r\n" +
-    "(C) 2010 - 2016 SQUARE ENIX CO., LTD All Rights Reserved.\r\nKorea Published by EY" +
-    "EDENTITY MOBILE.";
+            this.label_About.Text = "[제작 및 문의]\r\n유채색 @ 오딘\r\n\r\n\r\n[저작권]\r\n기재되어있는 회사명 · 제품명 · 시스템 이름은\r\n해당 소유자의 상표 또는 등록 상표입니" +
+    "다.\r\n(C) 2010 - 2016 SQUARE ENIX CO., LTD All Rights Reserved.\r\nKorea Published b" +
+    "y EYEDENTITY MOBILE.";
             this.label_About.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel_GitHub
