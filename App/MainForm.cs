@@ -235,18 +235,43 @@ namespace App
             Settings.Save();
         }
 
-        private void button_UncheckAll_Click(object sender, EventArgs e)
+        private void toolStripMenuItem_LogCopy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(richTextBox_Log.Text);
+            MessageBox.Show("로그가 클립보드에 복사되었습니다.", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void toolStripMenuItem_LogClear_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("로그를 비우시겠습니까?", "DFA 알림", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+            {
+                richTextBox_Log.Text = "";
+            }
+        }
+
+        private void toolStripMenuItem_SelectAll_Click(object sender, EventArgs e)
+        {
+            foreach (var node in nodes)
+            {
+                node.Checked = true;
+                Settings.FATEs.Add(ushort.Parse(node.Name));
+            }
+
+            Settings.Save();
+        }
+
+        private void toolStripMenuItem_UnSelectAll_Click(object sender, EventArgs e)
         {
             foreach (var node in nodes)
             {
                 node.Checked = false;
             }
+
             Settings.FATEs.Clear();
             Settings.Save();
-            overlayForm.SetFATEAsAppeared(Data.GetFATE(120));
         }
 
-        private void button_Save_Click(object sender, EventArgs e)
+        private void toolStripMenuItem_SelectApply_Click(object sender, EventArgs e)
         {
             foreach (var node in nodes)
             {
@@ -259,6 +284,7 @@ namespace App
                     Settings.FATEs.Remove(ushort.Parse(node.Name));
                 }
             }
+
             Settings.Save();
         }
 
