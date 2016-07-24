@@ -330,9 +330,9 @@
             this.checkBox_CheckUpdate.Font = new System.Drawing.Font("Malgun Gothic", 9F);
             this.checkBox_CheckUpdate.Location = new System.Drawing.Point(14, 52);
             this.checkBox_CheckUpdate.Name = "checkBox_CheckUpdate";
-            this.checkBox_CheckUpdate.Size = new System.Drawing.Size(278, 19);
+            this.checkBox_CheckUpdate.Size = new System.Drawing.Size(284, 19);
             this.checkBox_CheckUpdate.TabIndex = 0;
-            this.checkBox_CheckUpdate.Text = "주기적으로 업데이트 확인하기 (재시작시 반영)";
+            this.checkBox_CheckUpdate.Text = "30분 주기로 업데이트 확인하기 (재시작시 반영)";
             this.checkBox_CheckUpdate.UseVisualStyleBackColor = true;
             this.checkBox_CheckUpdate.CheckedChanged += new System.EventHandler(this.checkBox_StartupUpdate_CheckedChanged);
             // 
