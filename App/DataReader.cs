@@ -13,21 +13,6 @@ namespace App
         // 0: 지역이름 1: 임무이름 2:지역타입(0=필드/1=던전,토벌) 3:탱힐딜 계수 또는 돌발임무 목록
         public static Dictionary<ushort, object[]> Zone { get; set; } = new Dictionary<ushort, object[]>();
 
-        public static string getXmlAttribute(this XmlAttributeCollection attr, string searchAttribute, bool stringtolower = true)
-        {
-            string findattr = searchAttribute;
-            if (stringtolower)
-                findattr = searchAttribute.ToLower();
-
-            foreach(XmlAttribute attribute in attr)
-            {
-                if (attribute.Name == findattr)
-                    return attribute.Value;
-            }
-
-            return null;
-        }
-
         public static void Initializer()
         {
             XmlDocument doc = new XmlDocument();
@@ -85,6 +70,11 @@ namespace App
                 return "알수없는 지역";
         }
 
+        public static string getZoneString(string hexa)
+        {
+            return getZoneString(hexa.getHexValue());
+        }
+
         public static string getZoneDutyname(ushort key)
         {
             if (!Initialized)
@@ -94,6 +84,11 @@ namespace App
                 return Zone[key].GetValue(1).ToString();
             else
                 return "알수없는 임무";
+        }
+
+        public static string getZoneDutyname(string hexa)
+        {
+            return getZoneDutyname(hexa.getHexValue());
         }
 
         public static bool getZoneIsDuty(ushort key)
@@ -108,6 +103,31 @@ namespace App
                     return false;
             else
                 return false;
+        }
+
+        public static bool getZoneIsDuty(string hexa)
+        {
+            return getZoneIsDuty(hexa.getHexValue());
+        }
+
+        public static string getXmlAttribute(this XmlAttributeCollection attr, string searchAttribute, bool stringtolower = true)
+        {
+            string findattr = searchAttribute;
+            if (stringtolower)
+                findattr = searchAttribute.ToLower();
+
+            foreach (XmlAttribute attribute in attr)
+            {
+                if (attribute.Name == findattr)
+                    return attribute.Value;
+            }
+
+            return null;
+        }
+
+        public static ushort getHexValue(this string hexa)
+        {
+            return ushort.Parse(hexa.ToUpper(), System.Globalization.NumberStyles.HexNumber);
         }
     }
 }
