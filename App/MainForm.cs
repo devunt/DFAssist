@@ -64,7 +64,7 @@ namespace App
                     while (true)
                     {
                         Updater.CheckNewVersion(this);
-                        Thread.Sleep(5 * 60 * 1000);
+                        Thread.Sleep(30 * 60 * 1000);
                     }
                 });
             }
@@ -162,7 +162,7 @@ namespace App
 
         private void linkLabel_NewUpdate_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start(string.Format("https://github.com/{0}/releases", Global.GITHUB_REPO));
+            Process.Start(string.Format("https://github.com/{0}/releases/latest", Global.GITHUB_REPO));
         }
 
         private void button_SelectProcess_Click(object sender, EventArgs e)
@@ -286,6 +286,7 @@ namespace App
             }
 
             Settings.Save();
+            MessageBox.Show("돌발 알림 설정이 적용되었습니다.", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void FindFFXIVProcess()

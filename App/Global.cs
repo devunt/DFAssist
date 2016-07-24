@@ -1,10 +1,8 @@
-﻿using System.Drawing;
-
-namespace App
+﻿namespace App
 {
     class Global
     {
-        public const string VERSION = "v20160706.2";
+        public const string VERSION = "v20160724.1";
 
         public const string APPNAME = "DFAssist";
         public const string SETTINGS_FILEPATH = @"config.ini";
