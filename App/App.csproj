@@ -91,6 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api.cs" />
+    <Compile Include="DataReader.cs" />
     <Compile Include="TabControlBlack.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -167,6 +168,9 @@
   <ItemGroup>
     <Content Include="App.ico" />
     <Content Include="ILMergeOrder.txt" />
+    <Content Include="Resources\ZoneList.xml">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="NetFwTypeLib">
