@@ -63,8 +63,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>
-    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>devunt.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
@@ -91,7 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api.cs" />
-    <Compile Include="customDesign\tabControlBlack.cs">
+    <Compile Include="TabControlBlack.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Global.cs" />
@@ -152,6 +151,7 @@
     <None Include="app.manifest">
       <SubType>Designer</SubType>
     </None>
+    <None Include="devunt.snk" />
     <None Include="ILMerge.props" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
