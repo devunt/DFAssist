@@ -21,38 +21,25 @@ namespace App
             foreach(XmlNode xn in doc.SelectNodes("/Data/Item"))
             {
                 object[] item = new object[] { "", "", 0, null };
-                if (xn.Attributes.getXmlAttribute("Text") != null)
-                    item[0] = xn.Attributes.getXmlAttribute("Text");
+                if ((xn as XmlElement).GetAttribute("Text") != string.Empty)
+                    item[0] = (xn as XmlElement).GetAttribute("Text");
 
-                if (xn.Attributes.getXmlAttribute("Duty") != null)
+                if ((xn as XmlElement).GetAttribute("Duty") != string.Empty)
                 {
-                    item[1] = xn.Attributes.getXmlAttribute("Duty");
+                    item[1] = (xn as XmlElement).GetAttribute("Duty");
                     item[2] = 1;
-                    object[] dutyMembers;
-                    XmlNode xnc = xn.SelectSingleNode("/Duty");
-                    try
-                    {
-                        dutyMembers = new object[]
-                        {
-                            int.Parse(xnc.Attributes.getXmlAttribute("Tank")),
-                            int.Parse(xnc.Attributes.getXmlAttribute("Healer")),
-                            int.Parse(xnc.Attributes.getXmlAttribute("DPS")),
-                        };
-                    }
-                    catch
-                    {
-                        dutyMembers = new object[] { 0, 0, 0 };
-                    }
-                    item[3] = dutyMembers;
                 }
 
                 try
                 {
-                    Zone.Add(ushort.Parse(xn.Attributes.getXmlAttribute("ZoneId")), item);
+                    //Log.E(xn.Attributes.getXmlAttribute("zoneid"));
+                    ushort us = (xn as XmlElement).GetAttribute("ZoneId").getHexValue();
+                    //Log.E(us.ToString());
+                    Zone.Add(us, item);
                 }
-                catch
+                catch(Exception ex)
                 {
-
+                    Log.E(ex.Message);
                 }
             }
 
@@ -108,21 +95,6 @@ namespace App
         public static bool getZoneIsDuty(string hexa)
         {
             return getZoneIsDuty(hexa.getHexValue());
-        }
-
-        public static string getXmlAttribute(this XmlAttributeCollection attr, string searchAttribute, bool stringtolower = true)
-        {
-            string findattr = searchAttribute;
-            if (stringtolower)
-                findattr = searchAttribute.ToLower();
-
-            foreach (XmlAttribute attribute in attr)
-            {
-                if (attribute.Name == findattr)
-                    return attribute.Value;
-            }
-
-            return null;
         }
 
         public static ushort getHexValue(this string hexa)
