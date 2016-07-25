@@ -45,7 +45,7 @@ namespace App
                 OverlayY = int.Parse(iniFile.ReadValue("overlay", "y"));
                 TwitterEnabled = iniFile.ReadValue("notification", "twitter") == "1";
                 TwitterAccount = iniFile.ReadValue("notification", "twitteraccount");
-                AutoOverlayHide = iniFile.ReadValue("overlay", "autohide") == "1";
+                AutoOverlayHide = iniFile.ReadValue("overlay", "autohide") != "0";
 
                 string fates = iniFile.ReadValue("fate", "fates");
                 if (!string.IsNullOrEmpty(fates))
