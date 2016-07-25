@@ -127,22 +127,39 @@ namespace App
                     // type == 0x0000 이였던 메시지는 여기서 걸러짐
                     return;
                 }
-
                 var opcode = BitConverter.ToUInt16(message, 18);
                 var data = message.Skip(32).ToArray();
 
-                //Log.D("opcode = {0:X}", opcode);
                 if (opcode == 0x0142)
                 {
                     var type = data[0];
 
                     if (type == 0xCF)
                     {
-                        var code = BitConverter.ToUInt16(data, 16);
+                        var selfkey = BitConverter.ToInt32(message, 8);
+                        var charkey = BitConverter.ToInt32(message, 40);
 
+                        var code = BitConverter.ToUInt16(data, 16);
                         var zone = Data.GetZone(code);
 
-                        //Log.D("[{0} ({1})] 지역 진입", zone.Name, code);
+                        byte teleMeasure = message[36];
+                        
+                        if (selfkey == charkey) // isSelf
+                        {
+                            ushort lastCode = (BitConverter.ToUInt16(System.Text.Encoding.Unicode.GetBytes(new char[] { DataStorage.GetZoneString(code).Last() }), 0));
+                            string lastChar = ((lastCode - 0xAC00U) % 28 == 0 || lastCode - 0xAC00U == 8 ? "로" : "으로");
+
+                            if (teleMeasure != 0x0C)
+                            {
+                                Log.D("{1}{2} 지역을 이동했습니다. ({0})", code, DataStorage.GetZoneString(code), lastChar);
+                            }
+                            else
+                            {
+                                Log.D("임무에서 퇴장했습니다. ({0})", teleMeasure);
+                            }
+
+                            mainForm.overlayForm.currentArea = code;
+                        }
                     }
                 }
                 else if (opcode == 0x0143)
@@ -190,7 +207,7 @@ namespace App
                                 Api.Tweet("< {0} > 돌발 발생!", fate.Name);
                             }
                         }
-
+                        
                         Log.D("\"{0}\" 돌발 발생!", fate.Name);
                     }
                 }
