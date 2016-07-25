@@ -70,15 +70,16 @@ namespace App
             }
 
             checkBox_StartupShow.Checked = Settings.StartupShowMainForm;
+            checkBox_AutoOverlayHide.Checked = Settings.AutoOverlayHide;
 
             checkBox_Twitter.Checked = Settings.TwitterEnabled;
             textBox_Twitter.Enabled = Settings.TwitterEnabled;
             textBox_Twitter.Text = Settings.TwitterAccount;
 
-            foreach (var zone in DataStorage.Zone)
+            foreach (var zone in Data.Areas)
             {
                 if (!zone.Value.isDuty && zone.Value.FATEList.Count > 0)
-                    triStateTreeView_FATEs.Nodes.Add(zone.Key.ToString(), zone.Value.Text);
+                    triStateTreeView_FATEs.Nodes.Add(zone.Key.ToString(), zone.Value.Name);
             }
 
             foreach (var fate in Data.GetFATEs())
@@ -227,6 +228,12 @@ namespace App
         {
             textBox_Twitter.Enabled = checkBox_Twitter.Checked;
             Settings.TwitterEnabled = checkBox_Twitter.Checked;
+            Settings.Save();
+        }
+
+        private void checkBox_AutoOverlayHide_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.AutoOverlayHide = checkBox_AutoOverlayHide.Checked;
             Settings.Save();
         }
 

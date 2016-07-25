@@ -51,8 +51,10 @@ namespace App
             set
             {
                 bool isHide = false;
-                if (DataStorage.GetZoneIsDuty(value))
+                if (Data.GetIsDuty(value) && Settings.AutoOverlayHide)
+                {
                     isHide = true;
+                }
 
                 this.Invoke(() =>
                 {
@@ -200,7 +202,7 @@ namespace App
         {
             this.Invoke(() =>
             {
-                label_DutyCount.Text = Data.GetZone(fate.Zone).Text;
+                label_DutyCount.Text = Data.GetArea(fate.Zone).Name;
                 label_DutyName.Text = string.Format("< {0} >", fate.Name);
                 label_DutyStatus.Text = "돌발 임무 발생!";
 

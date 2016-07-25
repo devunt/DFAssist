@@ -1,14 +1,48 @@
 ﻿<Data>
-    <!--지역 코드가 임무 코드와 동일합니다.-->
     <Item ZoneId="80" Text="림사 로민사 상층 갑판" Rest="1" />
-    <Item ZoneId="81" Text="림사 로민사 하층 갑판" />
+    <Item ZoneId="81" Text="림사 로민사 하층 갑판" Rest="1" />
     
     <Item ZoneId="82" Text="울다하 날 회랑" Rest="1" />
     <Item ZoneId="83" Text="울다하 달 회랑" Rest="1" />
     
     <Item ZoneId="84" Text="그리다니아 신시가지" Rest="1" />
     <Item ZoneId="85" Text="그리다니아 구시가지" Rest="1" />
+    
+    <Item ZoneId="90" Text="골드 소서" Rest="1" />
+  
+    <!-- 거주구 -->
+    <Item ZoneId="11a" Text="안갯빛 마을: 소형 주택" Rest="1" />
+    <Item ZoneId="11b" Text="안갯빛 마을: 중형 주택" Rest="1" />
+    <Item ZoneId="11c" Text="안갯빛 마을: 대형 주택" Rest="1" />
+    
+    <Item ZoneId="152" Text="? ? ?" />
+  
+    <Item ZoneId="153" Text="안갯빛 마을" Rest="1" />
+    <Item ZoneId="154" Text="라벤더 안식처" Rest="1" />
+    <Item ZoneId="155" Text="하늘잔 마루" Rest="1" />
+    
+    <Item ZoneId="156" Text="라벤더 안식처: 소형 주택" Rest="1" />
+    <Item ZoneId="157" Text="라벤더 안식처: 중형 주택" Rest="1" />
+    <Item ZoneId="158" Text="라벤더 안식처: 대형 주택" Rest="1" />
+  
+    <Item ZoneId="159" Text="하늘잔 마루: 소형 주택" Rest="1" />
+    <Item ZoneId="15a" Text="하늘잔 마루: 중형 주택" Rest="1" />
+    <Item ZoneId="15b" Text="하늘잔 마루: 대형 주택" Rest="1" />
+    
+    <Item ZoneId="180" Text="안갯빛 마을: 개인실" Rest="1" />
+    <Item ZoneId="181" Text="라벤더 안식처: 개인실" Rest="1" />
+    <Item ZoneId="182" Text="하늘잔 마루: 개인실" Rest="1" />
+    
+    <Item ZoneId="1A7" Text="안갯빛 마을: 지하공방" Rest="1" />
+    <Item ZoneId="1A8" Text="하늘잔 마루: 지하공방" Rest="1" />
+    <Item ZoneId="1A9" Text="라벤더 안식처: 지하공방" Rest="1" />
 
+    <!-- 미분류 -->
+    <Item ZoneId="B2" Text="모래시계" />
+    <Item ZoneId="131" Text="카스트룸 센트리에서 탈출하라" />
+    <Item ZoneId="14D" Text="도름 키마이라" />    
+    <Item ZoneId="14E" Text="하이드라" />
+      
     <Item ZoneId="86" Text="중부 라노시아">
         <FATE Parent="86" Id="533" Name="돌아온 거대 화염마수" />
         <FATE Parent="86" Id="649" Name="그 바다생물을 보라" />
@@ -131,6 +165,23 @@
         <FATE Parent="8B" Id="453" Name="가여운 여인의 제재소 부흥: 커얼 처치" />
         <FATE Parent="8B" Id="454" Name="가여운 여인의 제재소 부흥: 야생 물소 처치" />
     </Item>
+    <Item ZoneId="B4" Text="외지 라노시아">
+        <FATE Parent="B4" Id="580" Name="내가 가는 길" />
+        <FATE Parent="B4" Id="581" Name="흑와단의 원수" />
+        <FATE Parent="B4" Id="583" Name="커얼아, 커얼아" />
+        <FATE Parent="B4" Id="586" Name="땅굴단의 산길잡이" />
+        <FATE Parent="B4" Id="587" Name="시굴지 강습 작전" />
+        <FATE Parent="B4" Id="588" Name="전방에 폭탄" />
+        <FATE Parent="B4" Id="589" Name="뇌우를 부르는 자" />
+        <FATE Parent="B4" Id="591" Name="전설의 거룡" />
+        <FATE Parent="B4" Id="593" Name="광기의 산맥" />
+        <FATE Parent="B4" Id="594" Name="폐기된 실험체" />
+        <FATE Parent="B4" Id="595" Name="보급부대 구출명령" />
+        <FATE Parent="B4" Id="597" Name="벌레 양식자" />
+        <FATE Parent="B4" Id="598" Name="깨어난 석상" />
+        <FATE Parent="B4" Id="599" Name="바위신을 부르는 자" />
+        <FATE Parent="B4" Id="700" Name="요마 사냥꾼" />
+    </Item>
 
     <Item ZoneId="8C" Text="서부 다날란">
         <FATE Parent="8C" Id="342" Name="긴급 점검" />
@@ -177,8 +228,6 @@
         <FATE Parent="8D" Id="695" Name="별빛축제: 마법 눈사람" />
         <FATE Parent="8D" Id="719" Name="거대 알 사냥" />
     </Item>
-    
-    <Item ZoneId="90" Text="골드 소서" />
     <Item ZoneId="91" Text="동부 다날란">
         <FATE Parent="91" Id="536" Name="돌아온 거대 화염마수" />
         <FATE Parent="91" Id="540" Name="꿈틀꿈틀 도브란" />
@@ -431,6 +480,7 @@
         <FATE Parent="9B" Id="507" Name="돌아온 사나이" />
         <FATE Parent="9B" Id="508" Name="바람신을 부르는 자" />
     </Item>
+  
     <Item ZoneId="9C" Text="모르도나">
         <FATE Parent="9C" Id="512" Name="잃어버린 풍경" />
         <FATE Parent="9C" Id="514" Name="엉킨덩굴 습지대 대청소" />
@@ -451,25 +501,7 @@
         <FATE Parent="9C" Id="657" Name="섬광 강림: 시룡 토벌전" />
         <FATE Parent="9C" Id="658" Name="섬광 강림: 시룡 토벌전" />
     </Item>
-
-    <Item ZoneId="B4" Text="외지 라노시아">
-        <FATE Parent="B4" Id="580" Name="내가 가는 길" />
-        <FATE Parent="B4" Id="581" Name="흑와단의 원수" />
-        <FATE Parent="B4" Id="583" Name="커얼아, 커얼아" />
-        <FATE Parent="B4" Id="586" Name="땅굴단의 산길잡이" />
-        <FATE Parent="B4" Id="587" Name="시굴지 강습 작전" />
-        <FATE Parent="B4" Id="588" Name="전방에 폭탄" />
-        <FATE Parent="B4" Id="589" Name="뇌우를 부르는 자" />
-        <FATE Parent="B4" Id="591" Name="전설의 거룡" />
-        <FATE Parent="B4" Id="593" Name="광기의 산맥" />
-        <FATE Parent="B4" Id="594" Name="폐기된 실험체" />
-        <FATE Parent="B4" Id="595" Name="보급부대 구출명령" />
-        <FATE Parent="B4" Id="597" Name="벌레 양식자" />
-        <FATE Parent="B4" Id="598" Name="깨어난 석상" />
-        <FATE Parent="B4" Id="599" Name="바위신을 부르는 자" />
-        <FATE Parent="B4" Id="700" Name="요마 사냥꾼" />
-    </Item>
-    
+  
     <!-- 던전 -->
     <Item ZoneId="9D" Text="사스타샤 침식 동굴" Duty="사스타샤 침식 동굴">
         <Duty Tank="1" Healer="1" DPS="2" />
@@ -557,6 +589,19 @@
     <Item ZoneId="129" Text="울부짖는 눈 석탑군" Duty="극 가루다 토벌전">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
+  
+    <Item ZoneId="14C" Text="하늬바람 곶" Duty="리트아틴 강습전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
+    <Item ZoneId="15C" Text="" Duty="알테마 웨폰 파괴작전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
+    <Item ZoneId="170" Text="" Duty="도름 키마이라 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
+    <Item ZoneId="171" Text="" Duty="하이드라 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
     
     <!-- 레이드 -->
     <Item ZoneId="AE" Text="고대인의 미궁" Duty="크리스탈 타워: 고대인의 미궁">
@@ -577,8 +622,6 @@
     <Item ZoneId="F5" Text="라그나로크급 구속함" Extend="중추구획 - 지하 1910얄름" Duty="대미궁 바하무트: 해후편 5">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    
-    <Item ZoneId="152" Text="? ? ?" />
     
     <!-- 2.2 혼돈의 소용돌이 -->
     <!-- 던전 -->
@@ -983,48 +1026,24 @@
     </Item>
     <Item ZoneId="1F9" Text="고르디우스의 매듭" Note="?..."/>
     
-    <!-- 미분류 -->
-    <Item ZoneId="B2" Text="모래시계" />
-    <Item ZoneId="131" Text="카스트룸 센트리에서 탈출하라" />
-    <Item ZoneId="14C" Text="하늬바람 곶" Duty="리트아틴 강습전">
-        <Duty Tank="2" Healer="2" DPS="4" />
-    </Item> 
-    <Item ZoneId="14D" Text="도름 키마이라" />    
-    <Item ZoneId="14E" Text="하이드라" />
-    <Item ZoneId="15C" Text="" Duty="알테마 웨폰 파괴작전">
-        <Duty Tank="2" Healer="2" DPS="4" />
-    </Item> 
-    <Item ZoneId="170" Text="" Duty="도름 키마이라 토벌전">
-        <Duty Tank="2" Healer="2" DPS="4" />
-    </Item> 
-    <Item ZoneId="171" Text="" Duty="하이드라 토벌전">
-        <Duty Tank="2" Healer="2" DPS="4" />
-    </Item> 
-    
-    <!-- 거주구 -->
-    <Item ZoneId="11a" Text="안갯빛 마을: 소형 주택" Rest="1" />
-    <Item ZoneId="11b" Text="안갯빛 마을: 중형 주택" Rest="1" />
-    <Item ZoneId="11c" Text="안갯빛 마을: 대형 주택" Rest="1" />
-    
-    <Item ZoneId="153" Text="안갯빛 마을" Rest="1" />
-    <Item ZoneId="154" Text="라벤더 안식처" Rest="1" />
-    <Item ZoneId="155" Text="하늘잔 마루" Rest="1" />
-    
-    <Item ZoneId="156" Text="라벤더 안식처: 소형 주택" Rest="1" />
-    <Item ZoneId="157" Text="라벤더 안식처: 중형 주택" Rest="1" />
-    <Item ZoneId="158" Text="라벤더 안식처: 대형 주택" Rest="1" />
+    <!-- 3.10 -->
+    <!-- 던전 -->
+    <Item ZoneId="1FE" Text="시리우스 대등대" Duty="시리우스 대등대 (어려움)">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="1FF" Text="성 모샨 식물원" Duty="성 모샨 식물원">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
   
-    <Item ZoneId="159" Text="하늘잔 마루: 소형 주택" Rest="1" />
-    <Item ZoneId="15a" Text="하늘잔 마루: 중형 주택" Rest="1" />
-    <Item ZoneId="15b" Text="하늘잔 마루: 대형 주택" Rest="1" />
-    
-    <Item ZoneId="180" Text="안갯빛 마을: 개인실" Rest="1" />
-    <Item ZoneId="181" Text="라벤더 안식처: 개인실" Rest="1" />
-    <Item ZoneId="182" Text="하늘잔 마루: 개인실" Rest="1" />
-    
-    <Item ZoneId="1A7" Text="안갯빛 마을: 지하공방" Rest="1" /> <!---->
-    <Item ZoneId="1A8" Text="하늘잔 마루: 지하공방" Rest="1" /> <!-- 추측... -->
-    <Item ZoneId="1A9" Text="라벤더 안식처: 지하공방" Rest="1" />
+    <!-- 레이드 -->
+    <Item ZoneId="1FC" Text="보이드의 방주" Duty="보이드의 방주">
+        <Duty Tank="3" Healer="6" DPS="15" />
+    </Item>
+  
+    <!-- 토벌전 -->
+    <Item ZoneId="1C0" Text="특이점 반응기관" Duty="나이츠 오브 라운드" Note="">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
     
     <!-- 길드 작전 -->
     <Item ZoneId="BE" Text="" Duty="방황하는 사령을 쓰러뜨려라!">
