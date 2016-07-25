@@ -89,7 +89,7 @@
             // 
             this.label_AboutTitle.BackColor = System.Drawing.Color.Silver;
             this.label_AboutTitle.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label_AboutTitle.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label_AboutTitle.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.label_AboutTitle.ForeColor = System.Drawing.Color.Gray;
             this.label_AboutTitle.Location = new System.Drawing.Point(0, 297);
             this.label_AboutTitle.Name = "label_AboutTitle";
@@ -100,7 +100,7 @@
             // 
             // button_ResetProcess
             // 
-            this.button_ResetProcess.Font = new System.Drawing.Font("맑은 고딕", 8F);
+            this.button_ResetProcess.Font = new System.Drawing.Font("Malgun Gothic", 8F);
             this.button_ResetProcess.Location = new System.Drawing.Point(288, 0);
             this.button_ResetProcess.Name = "button_ResetProcess";
             this.button_ResetProcess.Size = new System.Drawing.Size(60, 27);
@@ -121,7 +121,7 @@
             // 
             // button_SelectProcess
             // 
-            this.button_SelectProcess.Font = new System.Drawing.Font("맑은 고딕", 8F);
+            this.button_SelectProcess.Font = new System.Drawing.Font("Malgun Gothic", 8F);
             this.button_SelectProcess.Location = new System.Drawing.Point(228, 0);
             this.button_SelectProcess.Name = "button_SelectProcess";
             this.button_SelectProcess.Size = new System.Drawing.Size(60, 27);
@@ -133,7 +133,7 @@
             // button_ResetOverlayPosition
             // 
             this.button_ResetOverlayPosition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_ResetOverlayPosition.Font = new System.Drawing.Font("맑은 고딕", 8F);
+            this.button_ResetOverlayPosition.Font = new System.Drawing.Font("Malgun Gothic", 8F);
             this.button_ResetOverlayPosition.Location = new System.Drawing.Point(470, 0);
             this.button_ResetOverlayPosition.Name = "button_ResetOverlayPosition";
             this.button_ResetOverlayPosition.Size = new System.Drawing.Size(74, 27);
@@ -148,7 +148,7 @@
             this.checkBox_Overlay.AutoSize = true;
             this.checkBox_Overlay.Checked = true;
             this.checkBox_Overlay.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_Overlay.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold);
+            this.checkBox_Overlay.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold);
             this.checkBox_Overlay.ForeColor = System.Drawing.Color.Gray;
             this.checkBox_Overlay.Location = new System.Drawing.Point(372, 4);
             this.checkBox_Overlay.Name = "checkBox_Overlay";
@@ -209,7 +209,7 @@
             // 
             this.label_Process.AutoSize = true;
             this.label_Process.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label_Process.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_Process.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label_Process.ForeColor = System.Drawing.Color.Gray;
             this.label_Process.Location = new System.Drawing.Point(5, 5);
             this.label_Process.Name = "label_Process";
@@ -281,7 +281,7 @@
             // 
             // label_TwitterAbout
             // 
-            this.label_TwitterAbout.Font = new System.Drawing.Font("맑은 고딕", 8F);
+            this.label_TwitterAbout.Font = new System.Drawing.Font("Malgun Gothic", 8F);
             this.label_TwitterAbout.Location = new System.Drawing.Point(13, 61);
             this.label_TwitterAbout.Name = "label_TwitterAbout";
             this.label_TwitterAbout.Size = new System.Drawing.Size(379, 41);
@@ -317,7 +317,7 @@
             // checkBox_AutoOverlayHide
             // 
             this.checkBox_AutoOverlayHide.AutoSize = true;
-            this.checkBox_AutoOverlayHide.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.checkBox_AutoOverlayHide.Font = new System.Drawing.Font("Malgun Gothic", 9F);
             this.checkBox_AutoOverlayHide.Location = new System.Drawing.Point(14, 96);
             this.checkBox_AutoOverlayHide.Name = "checkBox_AutoOverlayHide";
             this.checkBox_AutoOverlayHide.Size = new System.Drawing.Size(222, 19);
@@ -329,7 +329,7 @@
             // checkBox_StartupShow
             // 
             this.checkBox_StartupShow.AutoSize = true;
-            this.checkBox_StartupShow.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.checkBox_StartupShow.Font = new System.Drawing.Font("Malgun Gothic", 9F);
             this.checkBox_StartupShow.Location = new System.Drawing.Point(14, 25);
             this.checkBox_StartupShow.Name = "checkBox_StartupShow";
             this.checkBox_StartupShow.Size = new System.Drawing.Size(186, 19);
@@ -341,7 +341,7 @@
             // checkBox_CheckUpdate
             // 
             this.checkBox_CheckUpdate.AutoSize = true;
-            this.checkBox_CheckUpdate.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.checkBox_CheckUpdate.Font = new System.Drawing.Font("Malgun Gothic", 9F);
             this.checkBox_CheckUpdate.Location = new System.Drawing.Point(14, 48);
             this.checkBox_CheckUpdate.Name = "checkBox_CheckUpdate";
             this.checkBox_CheckUpdate.Size = new System.Drawing.Size(284, 19);
@@ -353,7 +353,7 @@
             // checkBox_AutoUpdate
             // 
             this.checkBox_AutoUpdate.AutoSize = true;
-            this.checkBox_AutoUpdate.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.checkBox_AutoUpdate.Font = new System.Drawing.Font("Malgun Gothic", 9F);
             this.checkBox_AutoUpdate.Location = new System.Drawing.Point(14, 71);
             this.checkBox_AutoUpdate.Name = "checkBox_AutoUpdate";
             this.checkBox_AutoUpdate.Size = new System.Drawing.Size(266, 19);
@@ -509,7 +509,7 @@
             // label_About
             // 
             this.label_About.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_About.Font = new System.Drawing.Font("맑은 고딕", 10F);
+            this.label_About.Font = new System.Drawing.Font("Malgun Gothic", 10F);
             this.label_About.Location = new System.Drawing.Point(0, 0);
             this.label_About.Name = "label_About";
             this.label_About.Size = new System.Drawing.Size(426, 210);
@@ -538,7 +538,7 @@
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.label_AboutTitle);
             this.Controls.Add(this.panel_TopSetting);
-            this.Font = new System.Drawing.Font("맑은 고딕", 9.75F);
+            this.Font = new System.Drawing.Font("Malgun Gothic", 9.75F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip_FATETab;
             this.MinimumSize = new System.Drawing.Size(560, 360);
