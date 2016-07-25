@@ -127,7 +127,6 @@ namespace App
                     // type == 0x0000 이였던 메시지는 여기서 걸러짐
                     return;
                 }
-
                 var opcode = BitConverter.ToUInt16(message, 18);
                 var data = message.Skip(32).ToArray();
 
