@@ -1027,20 +1027,48 @@
     <Item ZoneId="1A9" Text="라벤더 안식처: 지하공방" Rest="1" />
     
     <!-- 길드 작전 -->
-    <Item ZoneId="BE" Text="" Duty="방황하는 사령을 쓰러뜨려라!" />
-    <Item ZoneId="BF" Text="" Duty="독성 요괴꽃을 제거하라!"/>
-    <Item ZoneId="C0" Text="" Duty="무법자 '나나니단'을 섬멸하라!"/>
-    <Item ZoneId="D6" Text="" Duty="집단전 훈련을 완수하라!" />
-    <Item ZoneId="D7" Text="" Duty="관문을 돌파하고 최심부의 적을 쓰러뜨려라!"/>
-    <Item ZoneId="D8" Text="" Duty="길거북을 사로잡아라!"/>
-    <Item ZoneId="DB" Text="" Duty="폭탄광 고블린 군단을 섬멸하라!" />
-    <Item ZoneId="DC" Text="" Duty="몽환의 브라크시오를 쓰러뜨려라!" />
-    <Item ZoneId="DD" Text="" Duty="오염원 몰볼을 쓰러뜨려라!"/>
-    <Item ZoneId="DE" Text="" Duty="갱도에 나타난 요마 부소를 쓰러뜨려라!"/>
-    <Item ZoneId="DF" Text="" Duty="무적의 부하를 조종하는 요마를 쓰러뜨려라!" />
-    <Item ZoneId="12A" Text="" Duty="봄을 거느린 '봄 여왕'을 쓰러뜨려라!"/>
-    <Item ZoneId="12B" Text="" Duty="불길한 진영을 짜는 요마를 섬멸하라!" />
-    <Item ZoneId="12C" Text="" Duty="세 거인족을 제압하여 유물을 지켜내라! "/>
+    <Item ZoneId="BE" Text="" Duty="방황하는 사령을 쓰러뜨려라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="BF" Text="" Duty="독성 요괴꽃을 제거하라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="C0" Text="" Duty="무법자 '나나니단'을 섬멸하라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="D6" Text="" Duty="집단전 훈련을 완수하라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="D7" Text="" Duty="관문을 돌파하고 최심부의 적을 쓰러뜨려라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="D8" Text="" Duty="길거북을 사로잡아라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="DB" Text="" Duty="폭탄광 고블린 군단을 섬멸하라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="DC" Text="" Duty="몽환의 브라크시오를 쓰러뜨려라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="DD" Text="" Duty="오염원 몰볼을 쓰러뜨려라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="DE" Text="" Duty="갱도에 나타난 요마 부소를 쓰러뜨려라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="DF" Text="" Duty="무적의 부하를 조종하는 요마를 쓰러뜨려라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="12A" Text="" Duty="봄을 거느린 '봄 여왕'을 쓰러뜨려라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="12B" Text="" Duty="불길한 진영을 짜는 요마를 섬멸하라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="12C" Text="" Duty="세 거인족을 제압하여 유물을 지켜내라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
 
     <!-- PvP -->
     <Item ZoneId="AF" Text="" Duty="늑대우리" PVP="1">
