@@ -42,6 +42,10 @@ namespace App
             {
                 Duty = XE.FindAttribute("Duty");
                 Text = XE.FindAttribute("Text");
+
+                if (Text == string.Empty && isDuty)
+                    Text = Duty;
+
                 string ZoneIdVal = XE.FindAttribute("ZoneId").ToUpper();
 
                 ZoneId = int.Parse(ZoneIdVal, System.Globalization.NumberStyles.HexNumber);
