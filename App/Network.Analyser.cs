@@ -122,11 +122,6 @@ namespace App
         {
             try
             {
-                if (message.Contains((byte)0x9D))
-                {
-                    //Log.B(message);
-                }
-
                 if (message.Length < 32)
                 {
                     // type == 0x0000 이였던 메시지는 여기서 걸러짐
@@ -136,44 +131,34 @@ namespace App
                 var opcode = BitConverter.ToUInt16(message, 18);
                 var data = message.Skip(32).ToArray();
 
-
-                //Log.D("opcode = {0:X}", opcode);
-
                 if (opcode == 0x0142)
                 {
                     var type = data[0];
 
                     if (type == 0xCF)
                     {
-                        int selfkey = BitConverter.ToInt32(message, 8);
-                        int charkey = BitConverter.ToInt32(message, 40);
+                        var selfkey = BitConverter.ToInt32(message, 8);
+                        var charkey = BitConverter.ToInt32(message, 40);
 
                         var code = BitConverter.ToUInt16(data, 16);
                         var zone = Data.GetZone(code);
 
-
                         byte teleMeasure = message[36];
-                        // 01 : NPC를 통한 이동
-                        // 02 : ?
-                        // 03 : 일반이동
-                        // 04 : 텔레포
-                        // 05 : ?
-                        // 06 : ?
-                        // 07 : 데존
-                        // 0C : 퇴장
-                        // 0E : 도시 내 이동
-                        // 13 : 거주구 이동
-                        Log.D("{0:X2}:{1}", teleMeasure, DataStorage.getZoneString(code));
-                        Log.B(message);
+                        
                         if (selfkey == charkey) // isSelf
                         {
-                            Log.D("자신 지역이동 {0} : {1}", code, DataStorage.getZoneString(code));
+                            ushort lastCode = (BitConverter.ToUInt16(System.Text.Encoding.Unicode.GetBytes(new char[] { DataStorage.getZoneString(code).Last() }), 0));
+                            string lastChar = ((lastCode - 0xAC00U) % 28 == 0 || lastCode - 0xAC00U == 8 ? "로" : "으로");
+
+                            if (teleMeasure != 0x0C)
+                            {
+                                Log.D("{1}{2} 지역을 이동했습니다. ({0})", code, DataStorage.getZoneString(code), lastChar);
+                            }
+                            else
+                            {
+                                Log.D("임무에서 퇴장했습니다. ({0})", teleMeasure);
+                            }
                         }
-                        else
-                        {
-                            Log.D("타인 지역이동 {0} : {1}", code, DataStorage.getZoneString(code));
-                        }
-                        //Log.D("[{0} ({1})] 지역 진입", zone.Name, code);
                     }
                 }
                 else if (opcode == 0x0143)

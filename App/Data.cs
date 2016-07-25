@@ -857,6 +857,22 @@ namespace App
             { 402, new Zone("아지스 라") },
         };
 
+        public static Dictionary<int, string> WarpMeasure = new Dictionary<int, string>()
+        {
+            {1, "NPC/사물" },
+            {2, "" },
+            {3, "지역 이동" },
+            {4, "텔레포" },
+            {5, "" },
+            {6, "" },
+            {7, "데존" },
+            {8, "" },
+            {9, "" },
+            {10, "" },
+            {11, "임무 입장" },
+            {12, "임무 퇴장" }
+        };
+
         internal static Instance GetInstance(ushort code)
         {
             if (instances.ContainsKey(code))

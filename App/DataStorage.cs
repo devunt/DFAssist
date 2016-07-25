@@ -10,8 +10,7 @@ namespace App
     {
         public static bool Initialized = false;
 
-        // 0: 지역이름 1: 임무이름 2:지역타입(0=필드/1=던전,토벌) 3:탱힐딜 계수 또는 돌발임무 목록
-        public static Dictionary<ushort, object[]> Zone { get; set; } = new Dictionary<ushort, object[]>();
+        public static Dictionary<int, ZoneItem> Zone { get; set; } = new Dictionary<int, ZoneItem>();
 
         public static void Initializer()
         {
@@ -20,39 +19,20 @@ namespace App
 
             foreach(XmlNode xn in doc.SelectNodes("/Data/Item"))
             {
-                object[] item = new object[] { "", "", 0, null };
-                if ((xn as XmlElement).GetAttribute("Text") != string.Empty)
-                    item[0] = (xn as XmlElement).GetAttribute("Text");
-
-                if ((xn as XmlElement).GetAttribute("Duty") != string.Empty)
-                {
-                    item[1] = (xn as XmlElement).GetAttribute("Duty");
-                    item[2] = 1;
-                }
-
-                try
-                {
-                    //Log.E(xn.Attributes.getXmlAttribute("zoneid"));
-                    ushort us = (xn as XmlElement).GetAttribute("ZoneId").getHexValue();
-                    //Log.E(us.ToString());
-                    Zone.Add(us, item);
-                }
-                catch(Exception ex)
-                {
-                    Log.E(ex.Message);
-                }
+                ZoneItem zone = new ZoneItem(xn);
+                if (!Zone.ContainsKey(zone.ZoneId))
+                    Zone.Add(zone.ZoneId, zone);
             }
-
             Initialized = true;
         }
 
-        public static string getZoneString(ushort key)
+        public static string getZoneString(int key)
         {
             if (!Initialized)
                 Initializer();
 
             if (Zone.ContainsKey(key))
-                return Zone[key].GetValue(0).ToString();
+                return Zone[key].Text;
             else
                 return "알수없는 지역";
         }
@@ -62,13 +42,13 @@ namespace App
             return getZoneString(hexa.getHexValue());
         }
 
-        public static string getZoneDutyname(ushort key)
+        public static string getZoneDutyname(int key)
         {
             if (!Initialized)
                 Initializer();
 
             if (Zone.ContainsKey(key))
-                return Zone[key].GetValue(1).ToString();
+                return Zone[key].Duty;
             else
                 return "알수없는 임무";
         }
@@ -78,13 +58,13 @@ namespace App
             return getZoneDutyname(hexa.getHexValue());
         }
 
-        public static bool getZoneIsDuty(ushort key)
+        public static bool getZoneIsDuty(int key)
         {
             if (!Initialized)
                 Initializer();
 
             if (Zone.ContainsKey(key))
-                if (int.Parse(Zone[key].GetValue(2).ToString()) == 1)
+                if (Zone[key].isDuty)
                     return true;
                 else
                     return false;
@@ -100,6 +80,34 @@ namespace App
         public static ushort getHexValue(this string hexa)
         {
             return ushort.Parse(hexa.ToUpper(), System.Globalization.NumberStyles.HexNumber);
+        }
+
+        public static string FindAttribute(this XmlNode xn, string findAttr, bool IgnoreCase = true)
+        {
+            try
+            {
+                string FindKey = findAttr;
+
+                if (IgnoreCase)
+                    FindKey = findAttr.ToLower();
+
+                foreach (XmlAttribute xa in xn.Attributes)
+                {
+                    string attr = xa.Name;
+
+                    if (IgnoreCase)
+                        attr = attr.ToLower();
+
+                    if (attr == FindKey)
+                        return xa.Value;
+                }
+            }
+            catch
+            {
+                Log.E("요소 찾기 오류");
+            }
+
+            return string.Empty;
         }
     }
 }

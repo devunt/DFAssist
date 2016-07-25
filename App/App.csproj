@@ -91,7 +91,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api.cs" />
-    <Compile Include="DataReader.cs" />
+    <Compile Include="DataStorage.cs" />
+    <Compile Include="DataClass.cs" />
     <Compile Include="TabControlBlack.cs">
       <SubType>Component</SubType>
     </Compile>
