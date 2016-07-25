@@ -40,6 +40,31 @@ namespace App
         Timer timer = null;
         int blinkCount;
         bool isOkay = false;
+        internal int currentZone = 0;
+
+        public int currentArea
+        {
+            get
+            {
+                return currentZone;
+            }
+            set
+            {
+                bool isHide = false;
+                if (Data.GetIsDuty(value) && Settings.AutoOverlayHide)
+                {
+                    isHide = true;
+                }
+
+                this.Invoke(() =>
+                {
+                    if (isHide && Visible)
+                        Hide();
+                    else
+                        Show();
+                });
+            }
+        }
 
         internal OverlayForm()
         {
@@ -177,7 +202,7 @@ namespace App
         {
             this.Invoke(() =>
             {
-                label_DutyCount.Text = Data.GetZone(fate.Zone).Name;
+                label_DutyCount.Text = Data.GetArea(fate.Zone).Name;
                 label_DutyName.Text = string.Format("< {0} >", fate.Name);
                 label_DutyStatus.Text = "돌발 임무 발생!";
 
