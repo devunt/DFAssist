@@ -10,7 +10,8 @@ namespace App
     {
         public static bool Initialized = false;
 
-        public static Dictionary<int, ZoneItem> Zone { get; set; } = new Dictionary<int, ZoneItem>();
+        public static Dictionary<int, Area> Zone { get; set; } = new Dictionary<int, Area>();
+        public static Dictionary<int, FATE> FATEs { get; set; } = new Dictionary<int, FATE>();
 
         public static void Initializer()
         {
@@ -19,14 +20,18 @@ namespace App
 
             foreach(XmlNode xn in doc.SelectNodes("/Data/Item"))
             {
-                ZoneItem zone = new ZoneItem(xn);
+                Area zone = new Area(xn);
                 if (!Zone.ContainsKey(zone.ZoneId))
+                {
                     Zone.Add(zone.ZoneId, zone);
+                    foreach (KeyValuePair<int, string> fate in zone.FATEList)
+                        FATEs.Add(fate.Key, new FATE(zone.ZoneId, fate.Value));
+                }
             }
             Initialized = true;
         }
 
-        public static string getZoneString(int key)
+        public static string GetZoneString(int key)
         {
             if (!Initialized)
                 Initializer();
@@ -37,12 +42,12 @@ namespace App
                 return "알수없는 지역";
         }
 
-        public static string getZoneString(string hexa)
+        public static string GetZoneString(string hexa)
         {
-            return getZoneString(hexa.getHexValue());
+            return GetZoneString(hexa.GetHexValue());
         }
 
-        public static string getZoneDutyname(int key)
+        public static string GetZoneDutyname(int key)
         {
             if (!Initialized)
                 Initializer();
@@ -53,12 +58,12 @@ namespace App
                 return "알수없는 임무";
         }
 
-        public static string getZoneDutyname(string hexa)
+        public static string GetZoneDutyname(string hexa)
         {
-            return getZoneDutyname(hexa.getHexValue());
+            return GetZoneDutyname(hexa.GetHexValue());
         }
 
-        public static bool getZoneIsDuty(int key)
+        public static bool GetZoneIsDuty(int key)
         {
             if (!Initialized)
                 Initializer();
@@ -72,12 +77,12 @@ namespace App
                 return false;
         }
 
-        public static bool getZoneIsDuty(string hexa)
+        public static bool GetZoneIsDuty(string hexa)
         {
-            return getZoneIsDuty(hexa.getHexValue());
+            return GetZoneIsDuty(hexa.GetHexValue());
         }
 
-        public static ushort getHexValue(this string hexa)
+        public static ushort GetHexValue(this string hexa)
         {
             return ushort.Parse(hexa.ToUpper(), System.Globalization.NumberStyles.HexNumber);
         }

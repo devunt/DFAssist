@@ -146,17 +146,19 @@ namespace App
                         
                         if (selfkey == charkey) // isSelf
                         {
-                            ushort lastCode = (BitConverter.ToUInt16(System.Text.Encoding.Unicode.GetBytes(new char[] { DataStorage.getZoneString(code).Last() }), 0));
+                            ushort lastCode = (BitConverter.ToUInt16(System.Text.Encoding.Unicode.GetBytes(new char[] { DataStorage.GetZoneString(code).Last() }), 0));
                             string lastChar = ((lastCode - 0xAC00U) % 28 == 0 || lastCode - 0xAC00U == 8 ? "로" : "으로");
 
                             if (teleMeasure != 0x0C)
                             {
-                                Log.D("{1}{2} 지역을 이동했습니다. ({0})", code, DataStorage.getZoneString(code), lastChar);
+                                Log.D("{1}{2} 지역을 이동했습니다. ({0})", code, DataStorage.GetZoneString(code), lastChar);
                             }
                             else
                             {
                                 Log.D("임무에서 퇴장했습니다. ({0})", teleMeasure);
                             }
+
+                            mainForm.overlayForm.currentArea = code;
                         }
                     }
                 }
@@ -205,7 +207,7 @@ namespace App
                                 Api.Tweet("< {0} > 돌발 발생!", fate.Name);
                             }
                         }
-
+                        
                         Log.D("\"{0}\" 돌발 발생!", fate.Name);
                     }
                 }

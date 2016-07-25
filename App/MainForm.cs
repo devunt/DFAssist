@@ -75,9 +75,10 @@ namespace App
             textBox_Twitter.Enabled = Settings.TwitterEnabled;
             textBox_Twitter.Text = Settings.TwitterAccount;
 
-            foreach (var zone in Data.GetZones())
+            foreach (var zone in DataStorage.Zone)
             {
-                triStateTreeView_FATEs.Nodes.Add(zone.Key.ToString(), zone.Value.Name);
+                if (!zone.Value.isDuty && zone.Value.FATEList.Count > 0)
+                    triStateTreeView_FATEs.Nodes.Add(zone.Key.ToString(), zone.Value.Text);
             }
 
             foreach (var fate in Data.GetFATEs())
