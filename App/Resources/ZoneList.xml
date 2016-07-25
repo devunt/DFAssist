@@ -1086,7 +1086,7 @@
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
     <Item ZoneId="12C" Text="" Duty="세 거인족을 제압하여 유물을 지켜내라!">
-        <Duty Tank="1" Healer="1" DPS="2" />
+        <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
 
     <!-- PvP -->
