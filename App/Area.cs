@@ -8,7 +8,7 @@ namespace App
     {
         public int ZoneId { get; set; } = 0;
 
-        public string Text { get; private set; } = string.Empty;
+        public string Name { get; private set; } = string.Empty;
         public string Duty { get; private set; } = string.Empty;
 
         public Dictionary<int, string> FATEList { get; private set; } = new Dictionary<int, string>();
@@ -60,10 +60,10 @@ namespace App
             try
             {
                 Duty = XE.FindAttribute("Duty");
-                Text = XE.FindAttribute("Text");
+                Name = XE.FindAttribute("Text");
 
-                if (Text == string.Empty && isDuty)
-                    Text = Duty;
+                if (Name == string.Empty && isDuty)
+                    Name = Duty;
 
                 string ZoneIdVal = XE.FindAttribute("ZoneId").ToUpper();
 

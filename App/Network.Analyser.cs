@@ -140,18 +140,18 @@ namespace App
                         var charkey = BitConverter.ToInt32(message, 40);
 
                         var code = BitConverter.ToUInt16(data, 16);
-                        var zone = Data.GetZone(code);
+                        var zone = Data.GetArea(code);
 
                         byte teleMeasure = message[36];
                         
                         if (selfkey == charkey) // isSelf
                         {
-                            ushort lastCode = (BitConverter.ToUInt16(System.Text.Encoding.Unicode.GetBytes(new char[] { DataStorage.GetZoneString(code).Last() }), 0));
+                            ushort lastCode = (BitConverter.ToUInt16(System.Text.Encoding.Unicode.GetBytes(new char[] { Data.GetAreaName(code).Last() }), 0));
                             string lastChar = ((lastCode - 0xAC00U) % 28 == 0 || lastCode - 0xAC00U == 8 ? "로" : "으로");
 
                             if (teleMeasure != 0x0C)
                             {
-                                Log.D("{1}{2} 지역을 이동했습니다. ({0})", code, DataStorage.GetZoneString(code), lastChar);
+                                Log.D("{1}{2} 지역을 이동했습니다. ({0})", code, Data.GetAreaName(code), lastChar);
                             }
                             else
                             {

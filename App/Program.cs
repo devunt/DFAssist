@@ -17,7 +17,7 @@ namespace App
 #if !DEBUG
             Sentry.Initialise();
 #endif
-            DataStorage.Initializer();
+            Data.Initializer();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
