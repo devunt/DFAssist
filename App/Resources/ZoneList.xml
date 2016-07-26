@@ -981,6 +981,9 @@
     <Item ZoneId="1B9" Text="솜 알" Duty="솜 알">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
+    <Item ZoneId="1A4" Text="거두지 않는 섬" Duty="거두지 않는 섬">
+      <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
     
     <!-- 3.0 토벌전 -->
     <Item ZoneId="1B0" Text="무신의 투기장" Duty="진 라바나 토벌전">
