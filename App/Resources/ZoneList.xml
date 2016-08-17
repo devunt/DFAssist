@@ -1,4 +1,5 @@
 ﻿<Data>
+    <!-- 2.x 신생 에오르제아 -->
     <Item ZoneId="80" Text="림사 로민사 상층 갑판" Rest="1" />
     <Item ZoneId="81" Text="림사 로민사 하층 갑판" Rest="1" />
     
@@ -512,9 +513,6 @@
     <Item ZoneId="9F" Text="방랑자의 궁전" Duty="방랑자의 궁전">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
-    <Item ZoneId="A0" Text="시리우스 대등대" Duty="시리우스 대등대">
-        <Duty Tank="1" Healer="1" DPS="2" />
-    </Item>
     <Item ZoneId="A1" Text="구리종 광산" Duty="구리종 광산">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
@@ -554,12 +552,6 @@
     <Item ZoneId="E0" Text="마도성 프라이토리움" Duty="마도성 프라이토리움">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    <Item ZoneId="15D" Text="구리종 광산" Duty="구리종 광산 (어려움)">
-        <Duty Tank="1" Healer="1" DPS="2" />
-    </Item>
-    <Item ZoneId="15E" Text="하우케타 별궁" Duty="하우케타 별궁 (어려움)">
-        <Duty Tank="1" Healer="1" DPS="2" />
-    </Item>
     
     <!-- 토벌전 -->
     <Item ZoneId="CA" Text="불꽃신의 제단" Duty="이프리트 토벌전">
@@ -580,6 +572,27 @@
     <Item ZoneId="126" Text="울부짖는 눈 석탑군" Duty="진 가루다 토벌전">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
+  
+    <Item ZoneId="14C" Text="서부 다날란" Duty="리트아틴 강습전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
+  
+    <!-- 2.1 각성한 자들 -->
+    <!-- 2.1 던전 -->
+    <Item ZoneId="A0" Text="시리우스 대등대" Duty="시리우스 대등대">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="15D" Text="구리종 광산" Duty="구리종 광산 (어려움)">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="15E" Text="하우케타 별궁" Duty="하우케타 별궁 (어려움)">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+  
+    <!-- 2.1 토벌전 -->
+    <Item ZoneId="CF" Text="가시 정원" Duty="선왕 모그루 모그 XII세 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
     <Item ZoneId="127" Text="불꽃신의 제단" Duty="극 이프리트 토벌전">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
@@ -589,83 +602,81 @@
     <Item ZoneId="129" Text="울부짖는 눈 석탑군" Duty="극 가루다 토벌전">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
+    <Item ZoneId="15C" Text="후방 출입구" Duty="알테마 웨폰 파괴작전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <!-- 2.16 토벌전-->
+    <Item ZoneId="170" Text="성 다니펜의 눈물" Duty="도름 키마이라 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
+    <Item ZoneId="171" Text="수투 훈련장" Duty="하이드라 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
   
-    <Item ZoneId="14C" Text="하늬바람 곶" Duty="리트아틴 강습전">
-        <Duty Tank="2" Healer="2" DPS="4" />
-    </Item> 
-    <Item ZoneId="15C" Text="" Duty="알테마 웨폰 파괴작전">
-        <Duty Tank="2" Healer="2" DPS="4" />
-    </Item> 
-    <Item ZoneId="170" Text="" Duty="도름 키마이라 토벌전">
-        <Duty Tank="2" Healer="2" DPS="4" />
-    </Item> 
-    <Item ZoneId="171" Text="" Duty="하이드라 토벌전">
-        <Duty Tank="2" Healer="2" DPS="4" />
-    </Item> 
-    
-    <!-- 레이드 -->
+    <!-- 2.1 레이드 -->
     <Item ZoneId="AE" Text="고대인의 미궁" Duty="크리스탈 타워: 고대인의 미궁">
         <Duty Tank="6" Healer="6" DPS="12" />
     </Item>
-    <Item ZoneId="F1" Text="메테오 탐사갱 상부" Extend="지하 287얄름" Duty="대미궁 바하무트: 해후편 1">
+    <Item ZoneId="F1" Text="메테오 탐사갱 상부" Duty="대미궁 바하무트: 해후편 1">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    <Item ZoneId="F2" Text="메테오 탐사갱 하부" Extend="지하 912얄름" Duty="대미궁 바하무트: 해후편 2">
+    <Item ZoneId="F2" Text="메테오 탐사갱 하부" Duty="대미궁 바하무트: 해후편 2">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    <Item ZoneId="F3" Text="라그나로크급 구속함" Extend="기관부 - 지하 1233얄름" Duty="대미궁 바하무트: 해후편 3">
+    <Item ZoneId="F3" Text="라그나로크급 구속함" Duty="대미궁 바하무트: 해후편 3">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    <Item ZoneId="F4" Text="라그나로크급 구속함" Extend="가동격벽" Duty="대미궁 바하무트: 해후편 4">
+    <Item ZoneId="F4" Text="가동격벽" Duty="대미궁 바하무트: 해후편 4">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    <Item ZoneId="F5" Text="라그나로크급 구속함" Extend="중추구획 - 지하 1910얄름" Duty="대미궁 바하무트: 해후편 5">
+    <Item ZoneId="F5" Text="중추구획" Duty="대미궁 바하무트: 해후편 5">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
     
+  
     <!-- 2.2 혼돈의 소용돌이 -->
-    <!-- 던전 -->
+    <!-- 2.2 던전 -->
+    <Item ZoneId="16B" Text="옛 암다포르 시가지" Duty="옛 암다포르 시가지">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
     <Item ZoneId="168" Text="할라탈리 수련장" Duty="할라탈리 수련장 (어려움)">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
     <Item ZoneId="16A" Text="브레이플록스의 야영지" Duty="브레이플록스의 야영지 (어려움)">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
-    <Item ZoneId="16B" Text="옛 암다포르 시가지" Duty="옛 암다포르 시가지">
-        <Duty Tank="1" Healer="1" DPS="2" />
-    </Item>
     
-    <!-- 토벌전 -->
+    <!-- 2.2 토벌전 -->
     <Item ZoneId="119" Text="대 리바이어선 쌍동선" Duty="진 리바이어선 토벌전">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
     <Item ZoneId="167" Text="대 리바이어선 쌍동선" Duty="극 리바이어선 토벌전">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    
-    <Item ZoneId="CF" Text="가시 정원" Duty="선왕 모그루 모그 XII세 토벌전">
-        <Duty Tank="2" Healer="2" DPS="4" />
-    </Item>
     <Item ZoneId="16C" Text="가시 정원" Duty="극왕 모그루 모그 XII세 토벌전">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
+    <Item ZoneId="16E" Text="그리핀 대교" Duty="길가메시 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
     
-    <!-- 레이드 -->
-    <Item ZoneId="163" Text="메테오의 그림자" Extend="검은장막 숲" Duty="대미궁 바하무트: 침공편 1">
+    <!-- 2.2 레이드 -->
+    <Item ZoneId="163" Text="메테오의 그림자" Duty="대미궁 바하무트: 침공편 1">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    <Item ZoneId="164" Text="구속의 고리" Extend="검은장막 숲" Duty="대미궁 바하무트: 침공편 2">
+    <Item ZoneId="164" Text="구속의 고리" Duty="대미궁 바하무트: 침공편 2">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    <Item ZoneId="165" Text="" Duty="대미궁 바하무트: 침공편 3">
+    <Item ZoneId="165" Text="라그나로크급 3번함 함체 중앙부" Duty="대미궁 바하무트: 침공편 3">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    <Item ZoneId="166" Text="" Duty="대미궁 바하무트: 침공편 4">
+    <Item ZoneId="166" Text="라그나로크급 3번함 작전실" Duty="대미궁 바하무트: 침공편 4">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
     
+  
     <!-- 2.3 에오르제아의 수호자 -->
-    <!-- 던전 -->
+    <!-- 2.3 던전 -->
     <Item ZoneId="169" Text="난파선의 섬" Duty="난파선의 섬">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
@@ -676,7 +687,7 @@
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
     
-    <!-- 토벌전 -->
+    <!-- 2.3 토벌전 -->
     <Item ZoneId="176" Text="심판의 나무" Duty="진 라무 토벌전">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item> 
@@ -684,60 +695,64 @@
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item> 
     
-    <!-- 레이드 -->
+    <!-- 2.3 레이드 -->
     <Item ZoneId="174" Text="시르쿠스 탑" Duty="크리스탈 타워: 시르쿠스 탑">
         <Duty Tank="3" Healer="6" DPS="15" />
     </Item>
-    <Item ZoneId="17C" Text="" Duty="대미궁 바하무트: 침공편 1 (영웅)">
+    <Item ZoneId="17C" Text="메테오의 그림자" Duty="대미궁 바하무트: 침공편 1 (영웅)">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    <Item ZoneId="17D" Text="" Duty="대미궁 바하무트: 침공편 2 (영웅)">
+    <Item ZoneId="17D" Text="구속의 고리" Duty="대미궁 바하무트: 침공편 2 (영웅)">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    <Item ZoneId="17E" Text="" Duty="대미궁 바하무트: 침공편 3 (영웅)">
+    <Item ZoneId="17E" Text="라그나로크급 3번함 함체 중앙부" Duty="대미궁 바하무트: 침공편 3 (영웅)">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    <Item ZoneId="17F" Text="" Duty="대미궁 바하무트: 침공편 4 (영웅)">
+    <Item ZoneId="17F" Text="라그나로크급 3번함 작전실" Duty="대미궁 바하무트: 침공편 4 (영웅)">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
 
+  
     <!-- 2.4 빙결의 환상 -->
-    <!-- 던전 -->
+    <!-- 2.4 던전 -->
+    <Item ZoneId="173" Text="얼음외투 대빙벽" Duty="얼음외투 대빙벽">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
     <Item ZoneId="16F" Text="카른의 무너진 사원" Duty="카른의 무너진 사원 (어려움)">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
     <Item ZoneId="183" Text="사스타샤 침식 동굴" Duty="사스타샤 침식 동굴 (어려움)">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
-    <Item ZoneId="173" Text="얼음외투 대빙벽" Duty="얼음외투 대빙벽">
-        <Duty Tank="1" Healer="1" DPS="2" />
-    </Item>
     
-    <!-- 토벌전 -->
+    <!-- 2.4 토벌전 -->
     <Item ZoneId="179" Text="아크 아파 원형극장" Duty="진 시바 토벌전">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
     <Item ZoneId="17A" Text="아크 아파 원형극장" Duty="극 시바 토벌전">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
+    <Item ZoneId="8E" Text="할라탈리 수련장" Duty="아마지나배 투기대회 결승전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
     
-    <!-- 레이드 -->
-    <Item ZoneId="C1" Text="" Duty="대미궁 바하무트: 진성편 1">
+    <!-- 2.4 레이드 -->
+    <Item ZoneId="C1" Text="라그나로크급 6번함 함체 중앙부" Duty="대미궁 바하무트: 진성편 1">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    <Item ZoneId="C2" Text="" Duty="대미궁 바하무트: 진성편 2">
+    <Item ZoneId="C2" Text="라그나로크급 6번함 재생 제어 구역" Duty="대미궁 바하무트: 진성편 2">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    <Item ZoneId="C3" Text="" Duty="대미궁 바하무트: 진성편 3">
+    <Item ZoneId="C3" Text="라그나로크급 6번함 제1함교" Duty="대미궁 바하무트: 진성편 3">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
     <Item ZoneId="C4" Text="바하무트 핵심부" Duty="대미궁 바하무트: 진성편 4">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
     
+  
     <!-- 2.5 희망의 등불 -->
-    
-    <!-- 던전 -->
+    <!-- 2.5 던전 -->
     <Item ZoneId="96" Text="묵약의 탑" Duty="묵약의 탑">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
@@ -748,32 +763,30 @@
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
     
-        <!-- 토벌전 -->
-    <Item ZoneId="18A" Text="우르드의 선물" Duty="투신 오딘 토벌전">
-        <Duty Tank="2" Healer="2" DPS="4" />
-    </Item>
+    <!-- 2.5 토벌전 -->
     <Item ZoneId="1AA" Text="계율의 고치" Duty="아씨엔 나브리알레스 토벌전">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
+    <Item ZoneId="18A" Text="우르드의 선물" Duty="투신 오딘 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="18C" Text="옛 암다포르 성" Duty="진 길가메시 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <!-- 2.55 토벌전 -->
+    <Item ZoneId="8F" Text="구름길" Duty="성도 이슈가르드 방어전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
     
-    <!-- 레이드 -->
+    <!-- 2.5 레이드 -->
     <Item ZoneId="97" Text="어둠의 세계" Duty="크리스탈 타워: 어둠의 세계">
         <Duty Tank="3" Healer="6" DPS="15" />
     </Item>
-    
-    <!--외전: 힐디브랜드 퀘스트-->
-    <Item ZoneId="8E" Text="아마지나배 투기대회장" Duty="아마지나배 투기대회 결승전">
-        <Duty Tank="2" Healer="2" DPS="4" />
-    </Item> 
-    <Item ZoneId="16E" Text="" Duty="길가메시 토벌전">
-        <Duty Tank="2" Healer="2" DPS="4" />
-    </Item> 
-    <Item ZoneId="18C" Text="" Duty="진 길가메시 토벌전">
-        <Duty Tank="2" Healer="2" DPS="4" />
-    </Item> 
-    
-    <!-- 창천의 이슈가르드 지역 -->
-    <Item ZoneId="185" Text="특이점 반응기관" /> <!-- 마과학 연구소 종료 후 나이츠 오브 라운드 토벌전 직전에 있는 구역... -->
+  
+  
+    <!-- 3.0 창천의 이슈가르드 -->
+    <!-- 3.x 지역 -->
+    <Item ZoneId="185" Text="특이점 반응기관" />
     <Item ZoneId="18D" Text="커르다스 서부고지">
         <FATE Parent="18D" Id="787" Name="지켜보고 있다" />
         <FATE Parent="18D" Id="788" Name="순례 기사" />
@@ -959,7 +972,7 @@
     <Item ZoneId="1B1" Text="포르탕 가 저택" Rest="1" />
     <Item ZoneId="1DE" Text="이딜샤이어" Rest="1" />
     
-    <!-- 3.0 임무 -->
+    <!-- 3.0 던전 -->
     <Item ZoneId="1B3" Text="용의 둥지" Duty="용의 둥지">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
@@ -1002,7 +1015,7 @@
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item> 
     
-    <!-- 기공성 알렉산더 -->
+    <!-- 3.01 레이드 -->
     <Item ZoneId="1BA" Text="고르디우스의 주먹" Duty="기공성 알렉산더: 기동편 1">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item> 
@@ -1015,6 +1028,8 @@
     <Item ZoneId="1BD" Text="고르디우스의 어깨" Duty="기공성 알렉산더: 기동편 4">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
+    <Item ZoneId="1F9" Text="고르디우스의 매듭" Note="?..."/>
+    <!-- 3.05 레이드-->
     <Item ZoneId="1C1" Text="고르디우스의 주먹" Duty="기공성 알렉산더: 기동편 1 (영웅)">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item> 
@@ -1027,10 +1042,10 @@
     <Item ZoneId="1C4" Text="고르디우스의 어깨" Duty="기공성 알렉산더: 기동편 4 (영웅)">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    <Item ZoneId="1F9" Text="고르디우스의 매듭" Note="?..."/>
     
-    <!-- 3.10 -->
-    <!-- 던전 -->
+  
+    <!-- 3.1 빛과 어둠의 경계 -->
+    <!-- 3.1 던전 -->
     <Item ZoneId="1FE" Text="시리우스 대등대" Duty="시리우스 대등대 (어려움)">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
@@ -1038,16 +1053,17 @@
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
   
-    <!-- 레이드 -->
+    <!-- 3.1 토벌전 -->
+    <Item ZoneId="1C0" Text="특이점 반응기관" Duty="나이츠 오브 라운드">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+
+    <!-- 3.1 레이드 -->
     <Item ZoneId="1FC" Text="보이드의 방주" Duty="보이드의 방주">
         <Duty Tank="3" Healer="6" DPS="15" />
     </Item>
-  
-    <!-- 토벌전 -->
-    <Item ZoneId="1C0" Text="특이점 반응기관" Duty="나이츠 오브 라운드" Note="">
-        <Duty Tank="2" Healer="2" DPS="4" />
-    </Item>
     
+  
     <!-- 길드 작전 -->
     <Item ZoneId="BE" Text="" Duty="방황하는 사령을 쓰러뜨려라!">
         <Duty Tank="1" Healer="1" DPS="2" />
@@ -1092,6 +1108,7 @@
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
 
+  
     <!-- PvP -->
     <Item ZoneId="AF" Text="" Duty="늑대우리" PVP="1">
         <Duty Tank="0" Healer="0" DPS="0" />
