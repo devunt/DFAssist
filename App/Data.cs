@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using SharpRaven.Data;
+using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
 
@@ -39,7 +40,11 @@ namespace App
             }
             else
             {
-                return "알 수 없는 지역";
+                var @event = new SentryEvent("Missing area code");
+                @event.Level = ErrorLevel.Warning;
+                @event.Extra = key;
+                Sentry.ReportAsync(@event);
+                return string.Format("알 수 없는 지역 ({0})", key);
             }
         }
 
@@ -96,7 +101,12 @@ namespace App
                 return Areas[code].Instance;
             }
 
-            return new Instance("알 수 없는 임무", 0, 0, 0);
+            var @event = new SentryEvent("Missing instance code");
+            @event.Level = ErrorLevel.Warning;
+            @event.Extra = code;
+            Sentry.ReportAsync(@event);
+
+            return new Instance(string.Format("알 수 없는 임무 ({0})", code), 0, 0, 0);
         }
 
         internal static FATE GetFATE(int code)
@@ -106,7 +116,12 @@ namespace App
                 return FATEs[code];
             }
 
-            return new FATE(0, "알 수 없는 돌발임무");
+            var @event = new SentryEvent("Missing FATE code");
+            @event.Level = ErrorLevel.Warning;
+            @event.Extra = code;
+            Sentry.ReportAsync(@event);
+
+            return new FATE(0, string.Format("알 수 없는 돌발임무 ({0})", code));
         }
 
         internal static Area GetArea(int code)
