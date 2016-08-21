@@ -1131,10 +1131,10 @@
     <Item ZoneId="178" Text="카르테노 평원: 외곽 유적지대" Duty="외곽 유적지대 (제압전)" PVP="1">
         <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
-    <Item ZoneId="95" Text="카르테노 평원: 외곽 유적지대" Duty="★ 카르테노 평원: 외곽 유적지대" PVP="1">
+    <Item ZoneId="1A6" Text="카르테노 평원: 외곽 유적지대" Duty="외곽 유적지대 (섬멸전)" PVP="1">
         <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
-    <Item ZoneId="1A6" Text="카르테노 평원: 외곽 유적지대" Duty="외곽 유적지대 (섬멸전)" PVP="1">
+    <Item ZoneId="1AF" Text="봉인된 바위섬" Duty="봉인된 바위섬 (쟁탈점)" PVP="1">
         <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
 </Data>
