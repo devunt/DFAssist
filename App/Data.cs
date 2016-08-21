@@ -42,7 +42,7 @@ namespace App
             {
                 var @event = new SentryEvent("Missing area code");
                 @event.Level = ErrorLevel.Warning;
-                @event.Extra = key;
+                @event.Tags["code"] = key.ToString();
                 Sentry.ReportAsync(@event);
                 return string.Format("알 수 없는 지역 ({0})", key);
             }
@@ -103,7 +103,7 @@ namespace App
 
             var @event = new SentryEvent("Missing instance code");
             @event.Level = ErrorLevel.Warning;
-            @event.Extra = code;
+            @event.Tags["code"] = code.ToString();
             Sentry.ReportAsync(@event);
 
             return new Instance(string.Format("알 수 없는 임무 ({0})", code), 0, 0, 0);
@@ -118,7 +118,7 @@ namespace App
 
             var @event = new SentryEvent("Missing FATE code");
             @event.Level = ErrorLevel.Warning;
-            @event.Extra = code;
+            @event.Tags["code"] = code.ToString();
             Sentry.ReportAsync(@event);
 
             return new FATE(0, string.Format("알 수 없는 돌발임무 ({0})", code));
