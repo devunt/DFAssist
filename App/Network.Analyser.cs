@@ -323,6 +323,11 @@ namespace App
                     state = State.MATCHED;
                     mainForm.overlayForm.SetDutyAsMatched(instance);
 
+                    if (!Settings.ShowOverlay)
+                    {
+                        mainForm.ShowNotification("< {0} > 매칭!", instance.Name);
+                    }
+
                     if (Settings.TwitterEnabled)
                     {
                         Api.Tweet("< {0} > 매칭!", instance.Name);
