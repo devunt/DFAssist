@@ -57,10 +57,10 @@ namespace App
             ReportAsync(@event);
         }
 
-        internal static void ReportAsync(string message)
+        internal static void ReportAsync(string message, ErrorLevel level = ErrorLevel.Debug)
         {
             var @event = new SentryEvent(new SentryMessage(message));
-            @event.Level = ErrorLevel.Debug;
+            @event.Level = level;
             ReportAsync(@event);
         }
 

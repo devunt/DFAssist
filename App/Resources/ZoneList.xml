@@ -43,7 +43,8 @@
     <Item ZoneId="131" Text="카스트룸 센트리에서 탈출하라" />
     <Item ZoneId="14D" Text="도름 키마이라" />    
     <Item ZoneId="14E" Text="하이드라" />
-      
+    
+    <!-- 2.0 지역 -->
     <Item ZoneId="86" Text="중부 라노시아">
         <FATE Parent="86" Id="533" Name="돌아온 거대 화염마수" />
         <FATE Parent="86" Id="649" Name="그 바다생물을 보라" />
@@ -503,7 +504,7 @@
         <FATE Parent="9C" Id="658" Name="섬광 강림: 시룡 토벌전" />
     </Item>
   
-    <!-- 던전 -->
+    <!-- 2.0 던전 -->
     <Item ZoneId="9D" Text="사스타샤 침식 동굴" Duty="사스타샤 침식 동굴">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
@@ -553,7 +554,7 @@
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
     
-    <!-- 토벌전 -->
+    <!-- 2.0 토벌전 -->
     <Item ZoneId="CA" Text="불꽃신의 제단" Duty="이프리트 토벌전">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
@@ -572,7 +573,6 @@
     <Item ZoneId="126" Text="울부짖는 눈 석탑군" Duty="진 가루다 토벌전">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-  
     <Item ZoneId="14C" Text="서부 다날란" Duty="리트아틴 강습전">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item> 
@@ -1028,7 +1028,7 @@
     <Item ZoneId="1BD" Text="고르디우스의 어깨" Duty="기공성 알렉산더: 기동편 4">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    <Item ZoneId="1F9" Text="고르디우스의 매듭" Note="?..."/>
+    <Item ZoneId="1F9" Text="고르디우스의 매듭" />
     <!-- 3.05 레이드-->
     <Item ZoneId="1C1" Text="고르디우스의 주먹" Duty="기공성 알렉산더: 기동편 1 (영웅)">
         <Duty Tank="2" Healer="2" DPS="4" />
@@ -1065,67 +1065,67 @@
     
   
     <!-- 길드 작전 -->
-    <Item ZoneId="BE" Text="" Duty="방황하는 사령을 쓰러뜨려라!">
+    <Item ZoneId="BE" Text="검은장막 숲 중부삼림" Duty="방황하는 사령을 쓰러뜨려라!">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
-    <Item ZoneId="BF" Text="" Duty="독성 요괴꽃을 제거하라!">
+    <Item ZoneId="BF" Text="검은장막 숲 동부삼림" Duty="독성 요괴꽃을 제거하라!">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
-    <Item ZoneId="C0" Text="" Duty="무법자 '나나니단'을 섬멸하라!">
+    <Item ZoneId="C0" Text="검은장막 숲 남부삼림" Duty="무법자 '나나니단'을 섬멸하라!">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
-    <Item ZoneId="D6" Text="" Duty="집단전 훈련을 완수하라!">
+    <Item ZoneId="D6" Text="중부 라노시아" Duty="집단전 훈련을 완수하라!">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
-    <Item ZoneId="D7" Text="" Duty="관문을 돌파하고 최심부의 적을 쓰러뜨려라!">
+    <Item ZoneId="D7" Text="서부 다날란" Duty="관문을 돌파하고 최심부의 적을 쓰러뜨려라!">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
-    <Item ZoneId="D8" Text="" Duty="길거북을 사로잡아라!">
+    <Item ZoneId="D8" Text="중부 다날란" Duty="길거북을 사로잡아라!">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
-    <Item ZoneId="DB" Text="" Duty="폭탄광 고블린 군단을 섬멸하라!">
+    <Item ZoneId="DB" Text="검은장막 숲 중부삼림" Duty="폭탄광 고블린 군단을 섬멸하라!">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
-    <Item ZoneId="DC" Text="" Duty="몽환의 브라크시오를 쓰러뜨려라!">
+    <Item ZoneId="DC" Text="검은장막 숲 남부삼림" Duty="몽환의 브라크시오를 쓰러뜨려라!">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
-    <Item ZoneId="DD" Text="" Duty="오염원 몰볼을 쓰러뜨려라!">
+    <Item ZoneId="DD" Text="고지 라노시아" Duty="오염원 몰볼을 쓰러뜨려라!">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
-    <Item ZoneId="DE" Text="" Duty="갱도에 나타난 요마 부소를 쓰러뜨려라!">
+    <Item ZoneId="DE" Text="저지 라노시아" Duty="갱도에 나타난 요마 부소를 쓰러뜨려라!">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
-    <Item ZoneId="DF" Text="" Duty="무적의 부하를 조종하는 요마를 쓰러뜨려라!">
+    <Item ZoneId="DF" Text="커르다스 중앙고지" Duty="무적의 부하를 조종하는 요마를 쓰러뜨려라!">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
-    <Item ZoneId="12A" Text="" Duty="봄을 거느린 '봄 여왕'을 쓰러뜨려라!">
+    <Item ZoneId="12A" Text="커르다스 중앙고지" Duty="봄을 거느린 '봄 여왕'을 쓰러뜨려라!">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
-    <Item ZoneId="12B" Text="" Duty="불길한 진영을 짜는 요마를 섬멸하라!">
+    <Item ZoneId="12B" Text="모르도나" Duty="불길한 진영을 짜는 요마를 섬멸하라!">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
-    <Item ZoneId="12C" Text="" Duty="세 거인족을 제압하여 유물을 지켜내라!">
+    <Item ZoneId="12C" Text="모르도나" Duty="세 거인족을 제압하여 유물을 지켜내라!">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
 
   
     <!-- PvP -->
-    <Item ZoneId="AF" Text="" Duty="늑대우리" PVP="1">
+    <Item ZoneId="AF" Text="늑대우리" Duty="늑대우리" PVP="1">
         <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
-    <Item ZoneId="150" Text="" Duty="늑대우리" PVP="1">
+    <Item ZoneId="150" Text="늑대우리" Duty="늑대우리" PVP="1">
         <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
-    <Item ZoneId="151" Text="" Duty="늑대우리 (매칭 파티 전용)" PVP="1">
+    <Item ZoneId="151" Text="늑대우리" Duty="늑대우리 (매칭 파티 전용)" PVP="1">
         <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
-    <Item ZoneId="160" Text="" Duty="늑대우리 (고정 소규모 파티 전용)" PVP="1">
+    <Item ZoneId="160" Text="늑대우리" Duty="늑대우리 (고정 소규모 파티 전용)" PVP="1">
         <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
-    <Item ZoneId="B8" Text="" Duty="늑대우리 (매칭 파티 전용)" PVP="1">
+    <Item ZoneId="B8" Text="늑대우리" Duty="늑대우리 (매칭 파티 전용)" PVP="1">
         <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
-    <Item ZoneId="BA" Text="" Duty="늑대우리 (고정 소규모 파티 전용)" PVP="1">
+    <Item ZoneId="BA" Text="늑대우리" Duty="늑대우리 (고정 소규모 파티 전용)" PVP="1">
         <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
     <Item ZoneId="178" Text="카르테노 평원: 외곽 유적지대" Duty="외곽 유적지대 (제압전)" PVP="1">

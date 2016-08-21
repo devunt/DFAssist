@@ -50,15 +50,9 @@ namespace App
             }
             set
             {
-                bool isHide = false;
-                if (Data.GetIsDuty(value) && Settings.AutoOverlayHide)
-                {
-                    isHide = true;
-                }
-
                 this.Invoke(() =>
                 {
-                    if (isHide && Visible)
+                    if (Data.GetIsDuty(value) && Settings.AutoOverlayHide)
                         Hide();
                     else
                         Show();
