@@ -117,6 +117,13 @@ namespace App
                 }
             });
 
+            if (Settings.Updated)
+            {
+                Settings.Updated = false;
+                Settings.Save();
+                ShowNotification("버전 {0} 업데이트됨", Global.VERSION);
+            }
+
             Sentry.ReportAsync("App started");
         }
 
@@ -344,6 +351,14 @@ namespace App
             comboBox_Process.SelectedIndex = 0;
 
             networkWorker.StartCapture(FFXIVProcess);
+        }
+
+        internal void ShowNotification(string format, params object[] args)
+        {
+            this.Invoke(() =>
+            {
+                notifyIcon.ShowBalloonTip(10 * 1000, "임무/돌발 찾기 도우미", string.Format(format, args), ToolTipIcon.Info);
+            });
         }
     }
 }

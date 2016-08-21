@@ -163,7 +163,7 @@
             // 
             this.notifyIcon.ContextMenuStrip = this.contextMenuStrip;
             this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
-            this.notifyIcon.Text = "임무 찾기 도우미";
+            this.notifyIcon.Text = "임무/돌발 찾기 도우미";
             this.notifyIcon.Visible = true;
             this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
             // 
@@ -414,14 +414,14 @@
             // toolStripMenuItem_SelectAll
             // 
             this.toolStripMenuItem_SelectAll.Name = "toolStripMenuItem_SelectAll";
-            this.toolStripMenuItem_SelectAll.Size = new System.Drawing.Size(71, 20);
+            this.toolStripMenuItem_SelectAll.Size = new System.Drawing.Size(70, 20);
             this.toolStripMenuItem_SelectAll.Text = "모두 선택";
             this.toolStripMenuItem_SelectAll.Click += new System.EventHandler(this.toolStripMenuItem_SelectAll_Click);
             // 
             // toolStripMenuItem_UnSelectAll
             // 
             this.toolStripMenuItem_UnSelectAll.Name = "toolStripMenuItem_UnSelectAll";
-            this.toolStripMenuItem_UnSelectAll.Size = new System.Drawing.Size(71, 20);
+            this.toolStripMenuItem_UnSelectAll.Size = new System.Drawing.Size(70, 20);
             this.toolStripMenuItem_UnSelectAll.Text = "모두 해제";
             this.toolStripMenuItem_UnSelectAll.Click += new System.EventHandler(this.toolStripMenuItem_UnSelectAll_Click);
             // 
@@ -484,14 +484,14 @@
             // toolStripMenuItem_LogCopy
             // 
             this.toolStripMenuItem_LogCopy.Name = "toolStripMenuItem_LogCopy";
-            this.toolStripMenuItem_LogCopy.Size = new System.Drawing.Size(71, 20);
+            this.toolStripMenuItem_LogCopy.Size = new System.Drawing.Size(70, 20);
             this.toolStripMenuItem_LogCopy.Text = "로그 복사";
             this.toolStripMenuItem_LogCopy.Click += new System.EventHandler(this.toolStripMenuItem_LogCopy_Click);
             // 
             // toolStripMenuItem_LogClear
             // 
             this.toolStripMenuItem_LogClear.Name = "toolStripMenuItem_LogClear";
-            this.toolStripMenuItem_LogClear.Size = new System.Drawing.Size(71, 20);
+            this.toolStripMenuItem_LogClear.Size = new System.Drawing.Size(70, 20);
             this.toolStripMenuItem_LogClear.Text = "로그 삭제";
             this.toolStripMenuItem_LogClear.Click += new System.EventHandler(this.toolStripMenuItem_LogClear_Click);
             // 
@@ -577,7 +577,6 @@
         private System.Windows.Forms.Label label_AboutTitle;
         private System.Windows.Forms.Button button_ResetOverlayPosition;
         private System.Windows.Forms.Button button_SelectProcess;
-        private System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Open;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Close;
@@ -612,6 +611,7 @@
         private System.Windows.Forms.GroupBox groupBox_TwitterSet;
         private System.Windows.Forms.GroupBox groupBox_DefaultSet;
         private System.Windows.Forms.CheckBox checkBox_AutoOverlayHide;
+        internal System.Windows.Forms.NotifyIcon notifyIcon;
     }
 }
 

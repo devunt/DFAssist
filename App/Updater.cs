@@ -114,6 +114,8 @@ namespace App
                             si.WindowStyle = ProcessWindowStyle.Hidden;
 
                             Process.Start(si);
+                            Settings.Updated = true;
+                            Settings.Save();
                             Application.Exit();
                         }
                         else
