@@ -2,12 +2,15 @@
     <!-- 2.x 신생 에오르제아 -->
     <Item ZoneId="80" Text="림사 로민사 상층 갑판" Rest="1" />
     <Item ZoneId="81" Text="림사 로민사 하층 갑판" Rest="1" />
+    <Item ZoneId="B2" Text="여관 '뒷돗대'" Rest="1" />
     
     <Item ZoneId="82" Text="울다하 날 회랑" Rest="1" />
     <Item ZoneId="83" Text="울다하 달 회랑" Rest="1" />
+    <Item ZoneId="B2" Text="여관 '모래시계'" Rest="1" />
     
     <Item ZoneId="84" Text="그리다니아 신시가지" Rest="1" />
     <Item ZoneId="85" Text="그리다니아 구시가지" Rest="1" />
+    <Item ZoneId="B3" Text="여관 '둥지나무'" Rest="1" />
     
     <Item ZoneId="90" Text="골드 소서" Rest="1" />
   
@@ -15,8 +18,6 @@
     <Item ZoneId="11a" Text="안갯빛 마을: 소형 주택" Rest="1" />
     <Item ZoneId="11b" Text="안갯빛 마을: 중형 주택" Rest="1" />
     <Item ZoneId="11c" Text="안갯빛 마을: 대형 주택" Rest="1" />
-    
-    <Item ZoneId="152" Text="? ? ?" />
   
     <Item ZoneId="153" Text="안갯빛 마을" Rest="1" />
     <Item ZoneId="154" Text="라벤더 안식처" Rest="1" />
@@ -39,9 +40,8 @@
     <Item ZoneId="1A9" Text="라벤더 안식처: 지하공방" Rest="1" />
 
     <!-- 미분류 -->
-    <Item ZoneId="B2" Text="모래시계" />
     <Item ZoneId="131" Text="카스트룸 센트리에서 탈출하라" />
-    <Item ZoneId="14D" Text="도름 키마이라" />    
+    <Item ZoneId="14D" Text="도름 키마이라" />
     <Item ZoneId="14E" Text="하이드라" />
     
     <!-- 2.0 지역 -->
@@ -969,6 +969,7 @@
      
     <Item ZoneId="1A2" Text="이슈가르드 하층" Rest="1" />
     <Item ZoneId="1A3" Text="이슈가르드 상층" Rest="1" />
+    <Item ZoneId="1AD" Text="여인숙 '아홉 구름'" Rest="1" />
     <Item ZoneId="1B1" Text="포르탕 가 저택" Rest="1" />
     <Item ZoneId="1DE" Text="이딜샤이어" Rest="1" />
     
