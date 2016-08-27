@@ -967,8 +967,8 @@
         <FATE Parent="192" Id="901" Name="꿈꾸는 무인기" />
     </Item>
      
-    <Item ZoneId="1A2" Text="이슈가르드 상층" Rest="1" />
-    <Item ZoneId="1A3" Text="이슈가르드 하층" Rest="1" />
+    <Item ZoneId="1A2" Text="이슈가르드 하층" Rest="1" />
+    <Item ZoneId="1A3" Text="이슈가르드 상층" Rest="1" />
     <Item ZoneId="1B1" Text="포르탕 가 저택" Rest="1" />
     <Item ZoneId="1DE" Text="이딜샤이어" Rest="1" />
     
