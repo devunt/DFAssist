@@ -37,7 +37,7 @@ namespace App
                 }
                 else
                 {
-                    return new Instance("알 수 없는 임무", 0, 0, 0);
+                    return new Instance(string.Format("알 수 없는 임무 ({0})", ZoneId), 0, 0, 0);
                 }
             }
         }
@@ -47,7 +47,7 @@ namespace App
             if (FATEList.ContainsKey(key))
                 return new FATE(key, FATEList[key]);
             else
-                return new FATE(0, "알 수 없는 돌발임무");
+                return new FATE(0, string.Format("알 수 없는 돌발임무 ({0})", key));
         }
 
         public Area()
