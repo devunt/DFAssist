@@ -127,6 +127,9 @@ namespace App
                     // type == 0x0000 이였던 메시지는 여기서 걸러짐
                     return;
                 }
+
+                mainForm.overlayForm.SetStatus(true);
+
                 var opcode = BitConverter.ToUInt16(message, 18);
                 var data = message.Skip(32).ToArray();
 
@@ -166,11 +169,7 @@ namespace App
                 {
                     var type = data[0];
 
-                    if (type == 0x18)
-                    {
-                        mainForm.overlayForm.SetStatus(true);
-                    }
-                    else if (type == 0x9B)
+                    if (type == 0x9B)
                     {
                         var code = BitConverter.ToUInt16(data, 4);
                         var progress = data[8];
