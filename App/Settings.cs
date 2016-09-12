@@ -16,8 +16,10 @@ namespace App
         public static bool CheckUpdate { get; set; } = true;
         public static bool AutoUpdate { get; set; } = true;
         public static bool TwitterEnabled { get; set; } = false;
+        public static bool AutoOverlayHide { get; set; } = false;
         public static string TwitterAccount { get; set; } = "";
-        public static HashSet<ushort> FATEs { get; set; } = new HashSet<ushort>();
+        public static bool Updated { get; set; } = true;
+        public static HashSet<int> FATEs { get; set; } = new HashSet<int>();
 
         private static void Init()
         {
@@ -40,15 +42,17 @@ namespace App
                 CheckUpdate = iniFile.ReadValue("startup", "update") != "0";
                 AutoUpdate = iniFile.ReadValue("startup", "autoupdate") != "0";
                 ShowOverlay = iniFile.ReadValue("overlay", "show") != "0";
+                AutoOverlayHide = iniFile.ReadValue("overlay", "autohide") != "0";
                 OverlayX = int.Parse(iniFile.ReadValue("overlay", "x"));
                 OverlayY = int.Parse(iniFile.ReadValue("overlay", "y"));
                 TwitterEnabled = iniFile.ReadValue("notification", "twitter") == "1";
                 TwitterAccount = iniFile.ReadValue("notification", "twitteraccount");
+                Updated = iniFile.ReadValue("internal", "updated") != "0";
 
                 string fates = iniFile.ReadValue("fate", "fates");
                 if (!string.IsNullOrEmpty(fates))
                 {
-                    FATEs = new HashSet<ushort>(from x in fates.Split(',') select ushort.Parse(x));
+                    FATEs = new HashSet<int>(from x in fates.Split(',') select int.Parse(x));
                 }
             }
         }
@@ -59,11 +63,13 @@ namespace App
             iniFile.WriteValue("startup", "update", CheckUpdate ? "1" : "0");
             iniFile.WriteValue("startup", "autoupdate", AutoUpdate ? "1" : "0");
             iniFile.WriteValue("overlay", "show", ShowOverlay ? "1" : "0");
+            iniFile.WriteValue("overlay", "autohide", AutoOverlayHide ? "1" : "0");
             iniFile.WriteValue("overlay", "x", OverlayX.ToString());
             iniFile.WriteValue("overlay", "y", OverlayY.ToString());
             iniFile.WriteValue("notification", "twitter", TwitterEnabled ? "1" : "0");
             iniFile.WriteValue("notification", "twitteraccount", TwitterAccount);
             iniFile.WriteValue("fate", "fates", string.Join(",", FATEs));
+            iniFile.WriteValue("internal", "updated", Updated ? "1" : "0");
         }
     }
 }

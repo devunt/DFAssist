@@ -114,6 +114,8 @@ namespace App
                             si.WindowStyle = ProcessWindowStyle.Hidden;
 
                             Process.Start(si);
+                            Settings.Updated = true;
+                            Settings.Save();
                             Application.Exit();
                         }
                         else
@@ -121,6 +123,7 @@ namespace App
                             mainForm.Invoke(() =>
                             {
                                 mainForm.linkLabel_NewUpdate.Visible = true;
+                                mainForm.linkLabel_NewUpdate.Select();
                                 mainForm.Show();
                             });
                         }
