@@ -7,23 +7,20 @@ namespace App
 {
     public partial class OverlayForm : Form
     {
-        [DllImport("user32.dll")]
-        static extern IntPtr SendMessage(IntPtr hWnd, int Msg, IntPtr wParam, IntPtr lParam);
-        [DllImport("user32.dll")]
-        static extern bool ReleaseCapture();
-        
         public delegate void WinEventDelegate(IntPtr hWinEventHook, uint eventType, IntPtr hwnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime);
 
         [DllImport("user32.dll")]
         public static extern IntPtr SetWinEventHook(uint eventMin, uint eventMax, IntPtr hmodWinEventProc, WinEventDelegate lpfnWinEventProc, uint idProcess, uint idThread, uint dwFlags);
 
         [DllImport("user32.dll")]
+        public static extern bool UnhookWinEvent(IntPtr hWinEventHook);
+
+        [DllImport("user32.dll")]
         static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int X, int Y, int cx, int cy, uint uFlags);
 
         const int WS_EX_LAYERED = 0x80000;
         const int WS_EX_TOOLWINDOW = 0x80;
-        const int WM_NCLBUTTONDOWN = 0xA1;
-        const int HT_CAPTION = 0x2;
+        const int WS_EX_TRANSPARENT = 0x20;
 
         const int HWND_TOPMOST = -1;
         const int SWP_NOMOVE = 0x2;
@@ -33,14 +30,15 @@ namespace App
 
         const int WINEVENT_OUTOFCONTEXT = 0;
         const int WINEVENT_SKIPOWNPROCESS = 2;
-
-
+        
         public readonly WinEventDelegate m_hookProc;
+        readonly OverlayFormMove m_overlay;
         Color accentColor;
         Timer timer = null;
         int blinkCount;
         bool isOkay = false;
         internal int currentZone = 0;
+        IntPtr m_eventHook;
 
         public int currentArea
         {
@@ -64,6 +62,7 @@ namespace App
         {
             InitializeComponent();
 
+            this.m_overlay = new OverlayFormMove(this);
             this.m_hookProc = new WinEventDelegate(this.WinEventProc);
 
             timer = new Timer();
@@ -79,8 +78,6 @@ namespace App
                 StartPosition = FormStartPosition.Manual;
                 Location = new Point(Settings.OverlayX, Settings.OverlayY);
             }
-
-            SetWinEventHook(EVENT_SYSTEM_FOREGROUND, EVENT_SYSTEM_FOREGROUND, IntPtr.Zero, this.m_hookProc, 0, 0, WINEVENT_OUTOFCONTEXT | WINEVENT_SKIPOWNPROCESS);
         }
 
         private void WinEventProc(IntPtr hWinEventHook, uint eventType, IntPtr hwnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime)
@@ -89,6 +86,7 @@ namespace App
                 return;
 
             SetWindowPos(this.Handle, new IntPtr(HWND_TOPMOST), 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
+            SetWindowPos(this.m_overlay.Handle, new IntPtr(HWND_TOPMOST), 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
         }
 
         protected override CreateParams CreateParams
@@ -98,6 +96,7 @@ namespace App
                 CreateParams cp = base.CreateParams;
                 cp.ExStyle |= WS_EX_LAYERED;
                 cp.ExStyle |= WS_EX_TOOLWINDOW;
+                cp.ExStyle |= WS_EX_TRANSPARENT;
                 return cp;
             }
         }
@@ -105,22 +104,6 @@ namespace App
         private void OverlayForm_Load(object sender, EventArgs e)
         {
             SetStatus(false);
-        }
-
-        private void panel_Move_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, new IntPtr(HT_CAPTION), IntPtr.Zero);
-            }
-        }
-
-        private void OverlayForm_LocationChanged(object sender, EventArgs e)
-        {
-            Settings.OverlayX = Location.X;
-            Settings.OverlayY = Location.Y;
-            Settings.Save();
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -147,13 +130,13 @@ namespace App
             {
                 if (isOkay && !this.isOkay)
                 {
-                    panel_Move.BackColor = Color.FromArgb(0, 64, 0);
+                    m_overlay.BackColor = Color.FromArgb(0, 64, 0);
 
                     CancelDutyFinder();
                 }
                 else if (!isOkay)
                 {
-                    panel_Move.BackColor = Color.FromArgb(64, 0, 0);
+                    m_overlay.BackColor = Color.FromArgb(64, 0, 0);
 
                     CancelDutyFinderSync();
                     label_DutyName.Text = "< 클라이언트 통신 대기중... >";
@@ -207,10 +190,7 @@ namespace App
 
         internal void CancelDutyFinder()
         {
-            this.Invoke(() =>
-            {
-                CancelDutyFinderSync();
-            });
+            this.Invoke(CancelDutyFinderSync);
         }
 
         internal void CancelDutyFinderSync()
@@ -224,7 +204,7 @@ namespace App
 
         internal void ResetFormLocation()
         {
-            CenterToScreen();
+            this.m_overlay.CenterToScreen();
         }
 
         internal void StartBlink()
@@ -244,6 +224,30 @@ namespace App
 
                 // 내용을 비움
                 CancelDutyFinder();
+            }
+        }
+
+        protected override void OnFormClosed(FormClosedEventArgs e)
+        {
+            base.OnFormClosed(e);
+            UnhookWinEvent(this.m_eventHook);
+        }
+
+        protected override void OnVisibleChanged(EventArgs e)
+        {
+            base.OnVisibleChanged(e);
+
+            if (this.Visible)
+            {
+                this.m_overlay.Show();
+                this.m_overlay.Width  = this.Width - 10;
+                this.m_overlay.Height = this.Height;
+                m_eventHook = SetWinEventHook(EVENT_SYSTEM_FOREGROUND, EVENT_SYSTEM_FOREGROUND, IntPtr.Zero, this.m_hookProc, 0, 0, WINEVENT_OUTOFCONTEXT | WINEVENT_SKIPOWNPROCESS);
+            }
+            else
+            {
+                this.m_overlay.Hide();
+                UnhookWinEvent(m_eventHook);
             }
         }
     }
