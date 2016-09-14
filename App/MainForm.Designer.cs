@@ -539,6 +539,7 @@
             this.Controls.Add(this.label_AboutTitle);
             this.Controls.Add(this.panel_TopSetting);
             this.Font = new System.Drawing.Font("Malgun Gothic", 9.75F);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip_FATETab;
             this.MinimumSize = new System.Drawing.Size(560, 360);
