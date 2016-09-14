@@ -1055,7 +1055,7 @@
     </Item>
   
     <!-- 3.1 토벌전 -->
-    <Item ZoneId="1C0" Text="특이점 반응기관" Duty="나이츠 오브 라운드">
+    <Item ZoneId="1C0" Text="특이점 반응기관" Duty="극 나이츠 오브 라운드 토벌전">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
 
