@@ -258,7 +258,7 @@
         <FATE Parent="91" Id="705" Name="현자의 알" />
         <FATE Parent="91" Id="720" Name="거대 알 사냥" />
     </Item>
-    <Item ZoneId="92" Text="서부 다날란">
+    <Item ZoneId="92" Text="남부 다날란">
         <FATE Parent="92" Id="545" Name="황야의 소화전" />
         <FATE Parent="92" Id="546" Name="비운의 투사" />
         <FATE Parent="92" Id="548" Name="정의란 무엇인가" />
