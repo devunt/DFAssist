@@ -133,6 +133,15 @@ namespace App
                 var opcode = BitConverter.ToUInt16(message, 18);
                 var data = message.Skip(32).ToArray();
 
+                if (data.Length < 50 &&
+                    opcode != 0x191 &&
+                    opcode != 0x192 &&
+                    opcode != 0x194 &&
+                    opcode != 0x142 &&
+                    opcode != 0x144 &&
+                    opcode != 0x145)
+                    Log.I("{0:X} {1}", opcode, BitConverter.ToString(data));
+
                 if (opcode == 0x0142)
                 {
                     var type = data[0];
@@ -265,6 +274,7 @@ namespace App
                 }
                 else if (opcode == 0x006F)
                 {
+
                     var status = data[0];
 
                     if (status == 0)
@@ -313,7 +323,7 @@ namespace App
                     Log.I("DFAN: 매칭 상태 업데이트됨 [{0}, {1}, {2}/{3}, {4}/{5}, {6}/{7}]",
                         instance.Name, status, tank, instance.Tank, healer, instance.Healer, dps, instance.DPS);
                 }
-                else if (opcode == 0x0338)
+                else if (opcode == 0x0339)
                 {
                     var code = BitConverter.ToUInt16(data, 4);
 
@@ -334,10 +344,13 @@ namespace App
 
                     Log.S("DFAN: 매칭됨 [{0}]", instance.Name);
                 }
+                else if (opcode == 0x005D)
+                {
+                    // 참가 거부
 
-                // TODO: 매칭이 된 뒤에 다른 누군가가 참가 확인을 거부하거나
-                // 제한시간 초과로 참가 확인이 취소됐을 경우 어떤 패킷이 오는지 알아내기
-                // 매칭에서 누군가가 참가 확인을 안 누르는 상황을 재현하기 힘들어 찾아내지 못함...
+                    state = State.QUEUED;
+                    mainForm.overlayForm.CancelDutyFinder();
+                }
             }
             catch (Exception ex)
             {

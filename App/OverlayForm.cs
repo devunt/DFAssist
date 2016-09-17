@@ -155,11 +155,19 @@ namespace App
 
         internal void SetDutyStatus(Instance instance, byte tank, byte dps, byte healer)
         {
-            this.Invoke(() =>
-            {
-                label_DutyName.Text = string.Format("< {0} >", instance.Name);
-                label_DutyStatus.Text = string.Format("{0}/{3}    {1}/{4}    {2}/{5}", tank, healer, dps, instance.Tank, instance.Healer, instance.DPS);
-            });
+            if (tank == 0 && dps == 0 && healer == 0)
+                this.Invoke(() =>
+                {
+                    label_DutyCount.Text = "무작위 임무";
+                    label_DutyName.Text = "서버 예약";
+                    label_DutyStatus.Text = "";
+                });
+            else
+                this.Invoke(() =>
+                {
+                    label_DutyName.Text = string.Format("< {0} >", instance.Name);
+                    label_DutyStatus.Text = string.Format("{0}/{3}    {1}/{4}    {2}/{5}", tank, healer, dps, instance.Tank, instance.Healer, instance.DPS);
+                });
         }
 
         internal void SetDutyAsMatched(Instance instance)
