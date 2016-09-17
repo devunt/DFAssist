@@ -27,10 +27,6 @@ namespace App
                     byte versionAndHeaderLength = buffer[0];
                     Version = (versionAndHeaderLength >> 4) == 4 ? ProtocolFamily.InterNetwork : ProtocolFamily.InterNetworkV6;
                     HeaderLength = (byte)((versionAndHeaderLength & 15) * 4); // 0b1111 = 15
-
-                    byte dscpAndEcn = buffer[1];
-
-                    ushort flagsAndOffset = (ushort)IPAddress.NetworkToHostOrder(BitConverter.ToInt16(buffer, 6));
                     
                     Protocol = (ProtocolType)buffer[9];
 
@@ -73,7 +69,6 @@ namespace App
 
             public TCPPacket(byte[] buffer)
             {
-
                 try
                 {
                     SourcePort = (ushort)IPAddress.NetworkToHostOrder(BitConverter.ToInt16(buffer, 0));

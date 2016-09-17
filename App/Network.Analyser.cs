@@ -9,7 +9,7 @@ namespace App
     partial class Network
     {
         private State state = State.IDLE;
-
+        
         private void AnalyseFFXIVPacket(byte[] payload)
         {
             try {
@@ -36,7 +36,7 @@ namespace App
                             break;
                         }
 
-                        using (MemoryStream messages = new MemoryStream())
+                        using (MemoryStream messages = new MemoryStream(payload.Length))
                         {
                             using (MemoryStream stream = new MemoryStream(payload, 0, length))
                             {
@@ -131,16 +131,21 @@ namespace App
                 mainForm.overlayForm.SetStatus(true);
 
                 var opcode = BitConverter.ToUInt16(message, 18);
-                var data = message.Skip(32).ToArray();
+                if (opcode != 0x0142 &&
+                    opcode != 0x0143 &&
+                    opcode != 0x006C &&
+                    opcode != 0x0074 &&
+                    opcode != 0x02DB &&
+                    opcode != 0x006F &&
+                    opcode != 0x02DE &&
+                    opcode != 0x0339 &&
+                    opcode != 0x005D)
+                    return;
 
-                if (data.Length < 50 &&
-                    opcode != 0x191 &&
-                    opcode != 0x192 &&
-                    opcode != 0x194 &&
-                    opcode != 0x142 &&
-                    opcode != 0x144 &&
-                    opcode != 0x145)
-                    Log.I("{0:X} {1}", opcode, BitConverter.ToString(data));
+                var data = message.Skip(32).ToArray();
+#if DEBUG
+                Log.D("{0:X} {1}", opcode, BitConverter.ToString(data));
+#endif
 
                 if (opcode == 0x0142)
                 {
