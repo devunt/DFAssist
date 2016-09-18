@@ -1063,6 +1063,17 @@
     <Item ZoneId="1FC" Text="보이드의 방주" Duty="보이드의 방주">
         <Duty Tank="3" Healer="6" DPS="15" />
     </Item>
+
+    <!-- 3.1 파티 컨텐츠 -->
+    <Item ZoneId="200" Text="디아뎀 제도" Duty="디아뎀 제도(쉬움)">
+        <Duty Tank="1" Healer="2" DPS="5" />
+    </Item>
+    <Item ZoneId="202" Text="디아뎀 제도" Duty="디아뎀 제도">
+        <Duty Tank="1" Healer="2" DPS="5" />
+    </Item>
+    <Item ZoneId="203" Text="디아뎀 제도" Duty="디아뎀 제도(어려움)">
+        <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
     
   
     <!-- 길드 작전 -->
