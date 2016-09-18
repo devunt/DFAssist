@@ -41,9 +41,8 @@ namespace App
                 {
                     Version = ProtocolFamily.Unknown;
                     HeaderLength = 0;
-                    //TTL = 0;
+
                     Protocol = ProtocolType.Unknown;
-                    //Checksum = 0;
 
                     SourceIPAddress = null;
                     DestinationIPAddress = null;
