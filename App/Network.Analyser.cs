@@ -9,7 +9,8 @@ namespace App
     partial class Network
     {
         private State state = State.IDLE;
-
+        private int lastMember = 0;
+        
         private void AnalyseFFXIVPacket(byte[] payload)
         {
             try {
@@ -36,7 +37,7 @@ namespace App
                             break;
                         }
 
-                        using (MemoryStream messages = new MemoryStream())
+                        using (MemoryStream messages = new MemoryStream(payload.Length))
                         {
                             using (MemoryStream stream = new MemoryStream(payload, 0, length))
                             {
@@ -131,7 +132,31 @@ namespace App
                 mainForm.overlayForm.SetStatus(true);
 
                 var opcode = BitConverter.ToUInt16(message, 18);
+#if !DEBUG
+                if (opcode != 0x0142 &&
+                    opcode != 0x0143 &&
+                    opcode != 0x006C &&
+                    opcode != 0x0074 &&
+                    opcode != 0x02DB &&
+                    opcode != 0x006F &&
+                    opcode != 0x02DE &&
+                    opcode != 0x0339 &&
+                    opcode != 0x005D)
+                    return;
+#endif
+
                 var data = message.Skip(32).ToArray();
+
+#if DEBUG
+                if (data.Length < 50 &&
+                    opcode != 0x191 &&
+                    opcode != 0x192 &&
+                    opcode != 0x194 &&
+                    opcode != 0x142 &&
+                    opcode != 0x144 &&
+                    opcode != 0x145)
+                    Log.I("{0:X} {1}", opcode, BitConverter.ToString(data));
+#endif
 
                 if (opcode == 0x0142)
                 {
@@ -171,15 +196,18 @@ namespace App
 
                     if (type == 0x9B)
                     {
+                        /*
                         var code = BitConverter.ToUInt16(data, 4);
                         var progress = data[8];
 
                         var fate = Data.GetFATE(code);
 
                         //Log.D("\"{0}\" 돌발 진행도 {1}%", fate.Name, progress);
+                        */
                     }
                     else if (type == 0x79)
                     {
+                        /*
                         // 돌발 임무 종료 (지역 이동시 발생할 수 있는 모든 임무에 대해 전부 옴)
 
                         var code = BitConverter.ToUInt16(data, 4);
@@ -188,6 +216,7 @@ namespace App
                         var fate = Data.GetFATE(code);
 
                         //Log.D("\"{0}\" 돌발 종료!", fate.Name);
+                        */
                     }
                     else if (type == 0x74)
                     {
@@ -291,9 +320,16 @@ namespace App
 
                     if (status == 1)
                     {
-                        // 매칭 전 인원 현황 패킷
+                        // 인원 현황 패킷
+                        var member = tank * 10000 + dps * 100 + healer;
 
-                        if (state == State.IDLE)
+                        if (state == State.MATCHED && lastMember != member)
+                        {
+                            // 매칭도중일 때 인원 현황 패킷이 오고 마지막 인원 정보와 다른 경우에 누군가에 의해 큐가 취소된 경우.
+                            state = State.QUEUED;
+                            mainForm.overlayForm.CancelDutyFinder();
+                        }
+                        else if (state == State.IDLE)
                         {
                             // 프로그램이 매칭 중간에 켜짐
                             state = State.QUEUED;
@@ -304,6 +340,8 @@ namespace App
                         {
                             mainForm.overlayForm.SetDutyStatus(instance, tank, dps, healer);
                         }
+
+                        lastMember = member;
                     }
                     else if (status == 4)
                     {
@@ -313,7 +351,7 @@ namespace App
                     Log.I("DFAN: 매칭 상태 업데이트됨 [{0}, {1}, {2}/{3}, {4}/{5}, {6}/{7}]",
                         instance.Name, status, tank, instance.Tank, healer, instance.Healer, dps, instance.DPS);
                 }
-                else if (opcode == 0x0338)
+                else if (opcode == 0x0339)
                 {
                     var code = BitConverter.ToUInt16(data, 4);
 
@@ -334,10 +372,6 @@ namespace App
 
                     Log.S("DFAN: 매칭됨 [{0}]", instance.Name);
                 }
-
-                // TODO: 매칭이 된 뒤에 다른 누군가가 참가 확인을 거부하거나
-                // 제한시간 초과로 참가 확인이 취소됐을 경우 어떤 패킷이 오는지 알아내기
-                // 매칭에서 누군가가 참가 확인을 안 누르는 상황을 재현하기 힘들어 찾아내지 못함...
             }
             catch (Exception ex)
             {

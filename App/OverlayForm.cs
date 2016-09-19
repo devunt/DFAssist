@@ -9,14 +9,17 @@ namespace App
     {
         public delegate void WinEventDelegate(IntPtr hWinEventHook, uint eventType, IntPtr hwnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime);
 
-        [DllImport("user32.dll")]
-        public static extern IntPtr SetWinEventHook(uint eventMin, uint eventMax, IntPtr hmodWinEventProc, WinEventDelegate lpfnWinEventProc, uint idProcess, uint idThread, uint dwFlags);
+        private static class NativeMethods
+        {
+            [DllImport("user32.dll")]
+            public static extern IntPtr SetWinEventHook(uint eventMin, uint eventMax, IntPtr hmodWinEventProc, WinEventDelegate lpfnWinEventProc, uint idProcess, uint idThread, uint dwFlags);
 
-        [DllImport("user32.dll")]
-        public static extern bool UnhookWinEvent(IntPtr hWinEventHook);
+            [DllImport("user32.dll")]
+            public static extern bool UnhookWinEvent(IntPtr hWinEventHook);
 
-        [DllImport("user32.dll")]
-        static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int X, int Y, int cx, int cy, uint uFlags);
+            [DllImport("user32.dll")]
+            public static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int X, int Y, int cx, int cy, uint uFlags);
+        }
 
         const int WS_EX_LAYERED = 0x80000;
         const int WS_EX_TOOLWINDOW = 0x80;
@@ -31,7 +34,7 @@ namespace App
         const int WINEVENT_OUTOFCONTEXT = 0;
         const int WINEVENT_SKIPOWNPROCESS = 2;
         
-        public readonly WinEventDelegate m_hookProc;
+        readonly WinEventDelegate m_hookProc;
         readonly OverlayFormMove m_overlay;
         Color accentColor;
         Timer timer = null;
@@ -85,8 +88,8 @@ namespace App
             if (idObject != 0 || idChild != 0)
                 return;
 
-            SetWindowPos(this.Handle, new IntPtr(HWND_TOPMOST), 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
-            SetWindowPos(this.m_overlay.Handle, new IntPtr(HWND_TOPMOST), 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
+            NativeMethods.SetWindowPos(this.Handle, new IntPtr(HWND_TOPMOST), 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
+            NativeMethods.SetWindowPos(this.m_overlay.Handle, new IntPtr(HWND_TOPMOST), 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
         }
 
         protected override CreateParams CreateParams
@@ -155,11 +158,19 @@ namespace App
 
         internal void SetDutyStatus(Instance instance, byte tank, byte dps, byte healer)
         {
-            this.Invoke(() =>
-            {
-                label_DutyName.Text = string.Format("< {0} >", instance.Name);
-                label_DutyStatus.Text = string.Format("{0}/{3}    {1}/{4}    {2}/{5}", tank, healer, dps, instance.Tank, instance.Healer, instance.DPS);
-            });
+            if (tank == 0 && dps == 0 && healer == 0)
+                this.Invoke(() =>
+                {
+                    label_DutyCount.Text = "무작위 임무";
+                    label_DutyName.Text = "서버 예약";
+                    label_DutyStatus.Text = "";
+                });
+            else
+                this.Invoke(() =>
+                {
+                    label_DutyName.Text = string.Format("< {0} >", instance.Name);
+                    label_DutyStatus.Text = string.Format("{0}/{3}    {1}/{4}    {2}/{5}", tank, healer, dps, instance.Tank, instance.Healer, instance.DPS);
+                });
         }
 
         internal void SetDutyAsMatched(Instance instance)
@@ -230,7 +241,7 @@ namespace App
         protected override void OnFormClosed(FormClosedEventArgs e)
         {
             base.OnFormClosed(e);
-            UnhookWinEvent(this.m_eventHook);
+            NativeMethods.UnhookWinEvent(this.m_eventHook);
         }
 
         protected override void OnVisibleChanged(EventArgs e)
@@ -242,12 +253,12 @@ namespace App
                 this.m_overlay.Show();
                 this.m_overlay.Width  = this.Width - 10;
                 this.m_overlay.Height = this.Height;
-                m_eventHook = SetWinEventHook(EVENT_SYSTEM_FOREGROUND, EVENT_SYSTEM_FOREGROUND, IntPtr.Zero, this.m_hookProc, 0, 0, WINEVENT_OUTOFCONTEXT | WINEVENT_SKIPOWNPROCESS);
+                m_eventHook = NativeMethods.SetWinEventHook(EVENT_SYSTEM_FOREGROUND, EVENT_SYSTEM_FOREGROUND, IntPtr.Zero, this.m_hookProc, 0, 0, WINEVENT_OUTOFCONTEXT | WINEVENT_SKIPOWNPROCESS);
             }
             else
             {
                 this.m_overlay.Hide();
-                UnhookWinEvent(m_eventHook);
+                NativeMethods.UnhookWinEvent(m_eventHook);
             }
         }
     }

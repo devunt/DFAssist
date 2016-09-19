@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -7,10 +6,13 @@ namespace App
 {
     public partial class OverlayFormMove : Form
     {
-        [DllImport("user32.dll")]
-        static extern IntPtr SendMessage(IntPtr hWnd, int Msg, IntPtr wParam, IntPtr lParam);
-        [DllImport("user32.dll")]
-        static extern bool ReleaseCapture();
+        static class NativeMethods
+        {
+            [DllImport("user32.dll")]
+            public static extern IntPtr SendMessage(IntPtr hWnd, int Msg, IntPtr wParam, IntPtr lParam);
+            [DllImport("user32.dll")]
+            public static extern bool ReleaseCapture();
+        }
 
         const int WS_EX_LAYERED = 0x80000;
         const int WS_EX_TOOLWINDOW = 0x80;
@@ -51,8 +53,8 @@ namespace App
 
             if (e.Button == MouseButtons.Left)
             {
-                ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, new IntPtr(HT_CAPTION), IntPtr.Zero);
+                NativeMethods.ReleaseCapture();
+                NativeMethods.SendMessage(Handle, WM_NCLBUTTONDOWN, new IntPtr(HT_CAPTION), IntPtr.Zero);
             }
         }
 
