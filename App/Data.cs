@@ -52,7 +52,11 @@ namespace App
                     Version = version;
                     Initialized = true;
 
-                    Log.I("임무 데이터가 {0} 버전으로 갱신되었습니다.", Version);
+                    Log.S("임무 데이터가 {0} 버전으로 갱신되었습니다.", Version);
+                }
+                else
+                {
+                    Log.S("최신 임무 데이터 (버전 {0})를 이용중입니다.", Version);
                 }
             }
             catch (Exception ex)
