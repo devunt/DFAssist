@@ -318,7 +318,7 @@
             // 
             this.checkBox_AutoOverlayHide.AutoSize = true;
             this.checkBox_AutoOverlayHide.Font = new System.Drawing.Font("Malgun Gothic", 9F);
-            this.checkBox_AutoOverlayHide.Location = new System.Drawing.Point(14, 96);
+            this.checkBox_AutoOverlayHide.Location = new System.Drawing.Point(14, 48);
             this.checkBox_AutoOverlayHide.Name = "checkBox_AutoOverlayHide";
             this.checkBox_AutoOverlayHide.Size = new System.Drawing.Size(222, 19);
             this.checkBox_AutoOverlayHide.TabIndex = 1;
@@ -342,24 +342,26 @@
             // 
             this.checkBox_CheckUpdate.AutoSize = true;
             this.checkBox_CheckUpdate.Font = new System.Drawing.Font("Malgun Gothic", 9F);
-            this.checkBox_CheckUpdate.Location = new System.Drawing.Point(14, 48);
+            this.checkBox_CheckUpdate.Location = new System.Drawing.Point(14, 70);
             this.checkBox_CheckUpdate.Name = "checkBox_CheckUpdate";
             this.checkBox_CheckUpdate.Size = new System.Drawing.Size(284, 19);
             this.checkBox_CheckUpdate.TabIndex = 0;
             this.checkBox_CheckUpdate.Text = "30분 주기로 업데이트 확인하기 (재시작시 반영)";
             this.checkBox_CheckUpdate.UseVisualStyleBackColor = true;
+            this.checkBox_CheckUpdate.Visible = false;
             this.checkBox_CheckUpdate.CheckedChanged += new System.EventHandler(this.checkBox_StartupUpdate_CheckedChanged);
             // 
             // checkBox_AutoUpdate
             // 
             this.checkBox_AutoUpdate.AutoSize = true;
             this.checkBox_AutoUpdate.Font = new System.Drawing.Font("Malgun Gothic", 9F);
-            this.checkBox_AutoUpdate.Location = new System.Drawing.Point(14, 71);
+            this.checkBox_AutoUpdate.Location = new System.Drawing.Point(14, 93);
             this.checkBox_AutoUpdate.Name = "checkBox_AutoUpdate";
             this.checkBox_AutoUpdate.Size = new System.Drawing.Size(266, 19);
             this.checkBox_AutoUpdate.TabIndex = 0;
             this.checkBox_AutoUpdate.Text = "업데이트가 존재하면 자동으로 업데이트하기";
             this.checkBox_AutoUpdate.UseVisualStyleBackColor = true;
+            this.checkBox_AutoUpdate.Visible = false;
             this.checkBox_AutoUpdate.CheckedChanged += new System.EventHandler(this.checkBox_StartupAutoUpdate_CheckedChanged);
             // 
             // linkLabel_NewUpdate
@@ -538,8 +540,8 @@
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.label_AboutTitle);
             this.Controls.Add(this.panel_TopSetting);
-            this.Font = new System.Drawing.Font("Malgun Gothic", 9.75F);
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Malgun Gothic", 9.75F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip_FATETab;
             this.MinimumSize = new System.Drawing.Size(560, 360);
