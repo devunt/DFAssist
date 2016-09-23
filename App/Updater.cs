@@ -26,7 +26,7 @@ namespace App
                 }
                 Directory.CreateDirectory(tempdir);
 
-                var resp = QueryGitHubReleases();
+                var resp = WebApi.Request(string.Format("https://api.github.com/repos/{0}/releases/latest", Global.GITHUB_REPO));
                 if (resp == null)
                 {
                     Log.E("새 업데이트 정보를 받아오지 못했습니다");
@@ -133,32 +133,17 @@ namespace App
                 {
                     Log.Ex(ex, "업데이트 데이터 처리중 에러 발생");
                 }
-            });
-        }
 
-        static string QueryGitHubReleases()
-        {
-            try
-            {
-                var url = string.Format("https://api.github.com/repos/{0}/releases/latest", Global.GITHUB_REPO);
-                var request = (HttpWebRequest)WebRequest.Create(url);
-                request.UserAgent = "DFA";
-                request.Timeout = 10000;
-
-                using (var response = (HttpWebResponse)request.GetResponse())
+                try
                 {
-                    var encoding = Encoding.GetEncoding(response.CharacterSet);
-
-                    using (var responseStream = response.GetResponseStream())
-                    using (var reader = new StreamReader(responseStream, encoding))
-                        return reader.ReadToEnd();
+                    var xml = WebApi.Request(string.Format("https://raw.githubusercontent.com/{0}/master/App/Resources/ZoneList.xml", Global.GITHUB_REPO));
+                    Data.Initializer(xml);
                 }
-            }
-            catch (Exception ex) {
-                Log.Ex(ex, "업데이트 체크중 에러 발생");
-            }
-
-            return null;
+                catch (Exception ex)
+                {
+                    Log.Ex(ex, "임무 데이터 업데이트중 에러 발생");
+                }
+            });
         }
 
         static Stream GetDownloadStreamByUrl(string url)

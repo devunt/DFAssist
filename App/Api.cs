@@ -8,7 +8,7 @@ using System.Web;
 
 namespace App
 {
-    static class Api
+    static class WebApi
     {
         internal static void Tweet(string format, params object[] args)
         {
@@ -34,10 +34,11 @@ namespace App
             });
         }
 
-        private static string Request(string url)
+        internal static string Request(string urlfmt, params object[] args)
         {
             try
             {
+                var url = string.Format(urlfmt, args);
                 var request = (HttpWebRequest)WebRequest.Create(url);
                 request.UserAgent = "DFA";
                 request.Timeout = 10000;

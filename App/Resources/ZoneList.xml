@@ -1,4 +1,6 @@
 ﻿<Data>
+    <Version>20160924.1</Version>
+  
     <!-- 2.x 신생 에오르제아 -->
     <Item ZoneId="80" Text="림사 로민사 상층 갑판" Rest="1" />
     <Item ZoneId="81" Text="림사 로민사 하층 갑판" Rest="1" />

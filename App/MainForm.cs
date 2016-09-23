@@ -37,6 +37,8 @@ namespace App
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            Data.Initializer();
+
             overlayForm.Show();
             networkWorker = new Network(this);
 

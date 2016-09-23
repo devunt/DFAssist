@@ -232,7 +232,7 @@ namespace App
 
                             if (Settings.TwitterEnabled)
                             {
-                                Api.Tweet("< {0} > 돌발 발생!", fate.Name);
+                                WebApi.Tweet("< {0} > 돌발 발생!", fate.Name);
                             }
                         }
                         
@@ -367,7 +367,7 @@ namespace App
 
                     if (Settings.TwitterEnabled)
                     {
-                        Api.Tweet("< {0} > 매칭!", instance.Name);
+                        WebApi.Tweet("< {0} > 매칭!", instance.Name);
                     }
 
                     Log.S("DFAN: 매칭됨 [{0}]", instance.Name);

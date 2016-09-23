@@ -1,4 +1,5 @@
 ﻿using SharpRaven.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
@@ -8,28 +9,56 @@ namespace App
     public static class Data
     {
         public static bool Initialized = false;
-        public static Dictionary<int, Area> Areas { get; set; } = new Dictionary<int, Area>();
-        public static Dictionary<int, FATE> FATEs { get; set; } = new Dictionary<int, FATE>();
+        public static decimal Version { get; set; } = 0;
+        public static Dictionary<int, Area> Areas { get; set; }
+        public static Dictionary<int, FATE> FATEs { get; set; }
 
         public static void Initializer()
         {
-            XmlDocument doc = new XmlDocument();
-            doc.LoadXml(Properties.Resources.ZoneList);
+            Initializer(Properties.Resources.ZoneList);
+        }
 
-            foreach (XmlNode xn in doc.SelectNodes("/Data/Item"))
+        public static void Initializer(string xml)
+        {
+            try
             {
-                Area zone = new Area(xn);
-                if (!Areas.ContainsKey(zone.ZoneId))
+
+                XmlDocument doc = new XmlDocument();
+                doc.LoadXml(xml);
+
+                var vxn = doc.SelectSingleNode("/Data/Version");
+                var version = decimal.Parse(vxn.InnerText);
+
+                if (version > Version)
                 {
-                    Areas.Add(zone.ZoneId, zone);
-                    foreach (KeyValuePair<int, string> fate in zone.FATEList)
+                    var areas = new Dictionary<int, Area>();
+                    var fates = new Dictionary<int, FATE>();
+
+                    foreach (XmlNode xn in doc.SelectNodes("/Data/Item"))
                     {
-                        FATEs.Add(fate.Key, new FATE(zone.ZoneId, fate.Value));
+                        Area zone = new Area(xn);
+                        if (!areas.ContainsKey(zone.ZoneId))
+                        {
+                            areas.Add(zone.ZoneId, zone);
+                            foreach (KeyValuePair<int, string> fate in zone.FATEList)
+                            {
+                                fates.Add(fate.Key, new FATE(zone.ZoneId, fate.Value));
+                            }
+                        }
                     }
+
+                    Areas = areas;
+                    FATEs = fates;
+                    Version = version;
+                    Initialized = true;
+
+                    Log.I("임무 데이터가 {0} 버전으로 갱신되었습니다.", Version);
                 }
             }
-
-            Initialized = true;
+            catch (Exception ex)
+            {
+                Log.Ex(ex, "임무 데이터를 처리하던 중 문제 발생");
+            }
         }
 
         public static string GetAreaName(int key)
