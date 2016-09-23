@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Net;
+using System.Net.Cache;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,6 +43,7 @@ namespace App
                 var request = (HttpWebRequest)WebRequest.Create(url);
                 request.UserAgent = "DFA";
                 request.Timeout = 10000;
+                request.CachePolicy = new RequestCachePolicy(RequestCacheLevel.NoCacheNoStore);
 
                 using (var response = (HttpWebResponse)request.GetResponse())
                 {
