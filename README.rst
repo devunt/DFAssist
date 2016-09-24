@@ -65,7 +65,7 @@
 
 프로그램 UI
 ~~~~~~~~~~~
-.. image:: http://i.imgur.com/IgAD77O.png
+.. image:: http://i.imgur.com/EypVLTo.png
 .. image:: http://i.imgur.com/PU2gb7L.png
 
 알림창 아이콘
