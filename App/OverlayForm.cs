@@ -51,13 +51,16 @@ namespace App
             }
             set
             {
-                this.Invoke(() =>
+                if (Settings.ShowOverlay)
                 {
-                    if (Data.GetIsDuty(value) && Settings.AutoOverlayHide)
-                        Hide();
-                    else
-                        Show();
-                });
+                    this.Invoke(() =>
+                    {
+                        if (Data.GetIsDuty(value) && Settings.AutoOverlayHide)
+                            Hide();
+                        else
+                            Show();
+                    });
+                }
             }
         }
 
