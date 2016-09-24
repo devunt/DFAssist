@@ -58,7 +58,9 @@ namespace App
 
         internal static void D(string format, params object[] args)
         {
+#if DEBUG
             Write(Color.Gray, format, args);
+#endif
         }
 
         internal static void B(byte[] buffer)
