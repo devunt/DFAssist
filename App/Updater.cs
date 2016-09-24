@@ -86,6 +86,10 @@ namespace App
                                 List<ZipStorer.ZipFileEntry> dir = zip.ReadCentralDir();
                                 foreach (ZipStorer.ZipFileEntry entry in dir)
                                 {
+                                    if (entry.FilenameInZip == "README.txt")
+                                    {
+                                        continue;
+                                    }
                                     zip.ExtractFile(entry, Path.Combine(tempdir, entry.FilenameInZip));
                                 }
                             }
