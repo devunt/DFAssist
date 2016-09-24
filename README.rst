@@ -59,6 +59,10 @@
 ~~~~~~~~~~~~
 .. image:: http://i.imgur.com/d2c2nc1.gif
 
+아이콘 깜빡임
+~~~~~~~~~~~~
+.. image:: http://i.imgur.com/ndNAFZ8.gif
+
 매칭된 무작위 임무 미리보기
 ~~~~~~~~~~~~~~~~~~~~
 .. image:: http://i.imgur.com/Up0iXSM.png
