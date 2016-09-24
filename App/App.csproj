@@ -89,7 +89,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Api.cs" />
+    <Compile Include="WebApi.cs" />
     <Compile Include="Area.cs" />
     <Compile Include="FATE.cs" />
     <Compile Include="Instance.cs" />
