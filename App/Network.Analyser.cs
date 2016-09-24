@@ -230,6 +230,11 @@ namespace App
                         {
                             mainForm.overlayForm.SetFATEAsAppeared(fate);
 
+                            if (Settings.FlashWindow)
+                            {
+                                WinApi.FlashWindow(mainForm.FFXIVProcess);
+                            }
+
                             if (Settings.TwitterEnabled)
                             {
                                 WebApi.Tweet("< {0} > 돌발 발생!", fate.Name);
@@ -359,6 +364,11 @@ namespace App
 
                     state = State.MATCHED;
                     mainForm.overlayForm.SetDutyAsMatched(instance);
+
+                    if (Settings.FlashWindow)
+                    {
+                        WinApi.FlashWindow(mainForm.FFXIVProcess);
+                    }
 
                     if (!Settings.ShowOverlay)
                     {

@@ -17,6 +17,7 @@ namespace App
         public static bool AutoUpdate { get; set; } = true;
         public static bool TwitterEnabled { get; set; } = false;
         public static bool AutoOverlayHide { get; set; } = false;
+        public static bool FlashWindow { get; set; } = true;
         public static string TwitterAccount { get; set; } = "";
         public static bool Updated { get; set; } = true;
         public static HashSet<int> FATEs { get; set; } = new HashSet<int>();
@@ -47,6 +48,7 @@ namespace App
                 OverlayY = int.Parse(iniFile.ReadValue("overlay", "y"));
                 TwitterEnabled = iniFile.ReadValue("notification", "twitter") == "1";
                 TwitterAccount = iniFile.ReadValue("notification", "twitteraccount");
+                FlashWindow = iniFile.ReadValue("notification", "flashwindow") != "0";
                 Updated = iniFile.ReadValue("internal", "updated") != "0";
 
                 string fates = iniFile.ReadValue("fate", "fates");
@@ -68,6 +70,7 @@ namespace App
             iniFile.WriteValue("overlay", "y", OverlayY.ToString());
             iniFile.WriteValue("notification", "twitter", TwitterEnabled ? "1" : "0");
             iniFile.WriteValue("notification", "twitteraccount", TwitterAccount);
+            iniFile.WriteValue("notification", "flashwindow", FlashWindow ? "1" : "0");
             iniFile.WriteValue("fate", "fates", string.Join(",", FATEs));
             iniFile.WriteValue("internal", "updated", Updated ? "1" : "0");
         }

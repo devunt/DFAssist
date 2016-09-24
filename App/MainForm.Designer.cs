@@ -51,6 +51,7 @@
             this.label_TwitterAbout = new System.Windows.Forms.Label();
             this.checkBox_Twitter = new System.Windows.Forms.CheckBox();
             this.groupBox_DefaultSet = new System.Windows.Forms.GroupBox();
+            this.checkBox_FlashWindow = new System.Windows.Forms.CheckBox();
             this.checkBox_AutoOverlayHide = new System.Windows.Forms.CheckBox();
             this.checkBox_StartupShow = new System.Windows.Forms.CheckBox();
             this.checkBox_CheckUpdate = new System.Windows.Forms.CheckBox();
@@ -302,6 +303,7 @@
             // 
             // groupBox_DefaultSet
             // 
+            this.groupBox_DefaultSet.Controls.Add(this.checkBox_FlashWindow);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_AutoOverlayHide);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_StartupShow);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_CheckUpdate);
@@ -313,6 +315,18 @@
             this.groupBox_DefaultSet.TabIndex = 0;
             this.groupBox_DefaultSet.TabStop = false;
             this.groupBox_DefaultSet.Text = "기본설정";
+            // 
+            // checkBox_FlashWindow
+            // 
+            this.checkBox_FlashWindow.AutoSize = true;
+            this.checkBox_FlashWindow.Font = new System.Drawing.Font("Malgun Gothic", 9F);
+            this.checkBox_FlashWindow.Location = new System.Drawing.Point(14, 70);
+            this.checkBox_FlashWindow.Name = "checkBox_FlashWindow";
+            this.checkBox_FlashWindow.Size = new System.Drawing.Size(369, 19);
+            this.checkBox_FlashWindow.TabIndex = 2;
+            this.checkBox_FlashWindow.Text = "매칭/돌발 발생시 파이널판타지14 작업 표시줄 아이콘 깜빡이기";
+            this.checkBox_FlashWindow.UseVisualStyleBackColor = true;
+            this.checkBox_FlashWindow.CheckedChanged += new System.EventHandler(this.checkBox_FlashWindow_CheckedChanged);
             // 
             // checkBox_AutoOverlayHide
             // 
@@ -615,6 +629,7 @@
         private System.Windows.Forms.GroupBox groupBox_DefaultSet;
         private System.Windows.Forms.CheckBox checkBox_AutoOverlayHide;
         internal System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.Windows.Forms.CheckBox checkBox_FlashWindow;
     }
 }
 

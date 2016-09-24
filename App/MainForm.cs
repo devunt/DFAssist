@@ -73,6 +73,7 @@ namespace App
 
             checkBox_StartupShow.Checked = Settings.StartupShowMainForm;
             checkBox_AutoOverlayHide.Checked = Settings.AutoOverlayHide;
+            checkBox_FlashWindow.Checked = Settings.FlashWindow;
 
             checkBox_Twitter.Checked = Settings.TwitterEnabled;
             textBox_Twitter.Enabled = Settings.TwitterEnabled;
@@ -243,6 +244,12 @@ namespace App
         private void checkBox_AutoOverlayHide_CheckedChanged(object sender, EventArgs e)
         {
             Settings.AutoOverlayHide = checkBox_AutoOverlayHide.Checked;
+            Settings.Save();
+        }
+
+        private void checkBox_FlashWindow_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.FlashWindow = checkBox_FlashWindow.Checked;
             Settings.Save();
         }
 
