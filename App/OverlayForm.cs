@@ -69,23 +69,13 @@ namespace App
         {
             InitializeComponent();
 
-            this.m_overlay = new OverlayFormMove(this);
             this.m_hookProc = new WinEventDelegate(this.WinEventProc);
+            this.m_overlay = new OverlayFormMove(this);
 
             timer = new Timer();
             timer.Interval = Global.BLINK_INTERVAL;
             timer.Tick += Timer_Tick;
-
-            if (Settings.OverlayX == Global.OVERLAY_XY_UNSET || Settings.OverlayY == Global.OVERLAY_XY_UNSET)
-            {
-                StartPosition = FormStartPosition.CenterScreen;
-            }
-            else
-            {
-                StartPosition = FormStartPosition.Manual;
-                Location = new Point(Settings.OverlayX, Settings.OverlayY);
-            }
-        }
+       }
 
         private void WinEventProc(IntPtr hWinEventHook, uint eventType, IntPtr hwnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime)
         {

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -28,6 +29,18 @@ namespace App
             this.Width = 10;
 
             this.m_parent = parent;
+
+            if (Settings.OverlayX == Global.OVERLAY_XY_UNSET || Settings.OverlayY == Global.OVERLAY_XY_UNSET)
+            {
+                StartPosition = FormStartPosition.CenterScreen;
+            }
+            else
+            {
+                StartPosition = FormStartPosition.Manual;
+                Location = new Point(Settings.OverlayX, Settings.OverlayY);
+                m_parent.Location = new Point(Settings.OverlayX + 10, Settings.OverlayY);
+            }
+
         }
 
         public new void CenterToScreen()
