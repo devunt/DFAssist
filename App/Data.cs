@@ -12,6 +12,7 @@ namespace App
         public static decimal Version { get; set; } = 0;
         public static Dictionary<int, Area> Areas { get; set; }
         public static Dictionary<int, FATE> FATEs { get; set; }
+        public static Dictionary<int, Roulette> Roulettes { get; set; }
 
         public static void Initializer()
         {
@@ -33,6 +34,7 @@ namespace App
                 {
                     var areas = new Dictionary<int, Area>();
                     var fates = new Dictionary<int, FATE>();
+                    var roulettes = new Dictionary<int, Roulette>();
 
                     foreach (XmlNode xn in doc.SelectNodes("/Data/Item"))
                     {
@@ -47,8 +49,17 @@ namespace App
                         }
                     }
 
+                    foreach (XmlNode xn in doc.SelectNodes("/Data/Roulette"))
+                    {
+                        var id = int.Parse(xn.FindAttribute("Id"), System.Globalization.NumberStyles.HexNumber);
+                        var name = xn.FindAttribute("Text");
+
+                        roulettes.Add(id, new Roulette(name));
+                    }
+
                     Areas = areas;
                     FATEs = fates;
+                    Roulettes = roulettes;
                     Version = version;
                     Initialized = true;
 
@@ -179,6 +190,24 @@ namespace App
         internal static List<KeyValuePair<int, FATE>> GetFATEs()
         {
             return FATEs.ToList();
+        }
+
+        internal static Roulette GetRoulette(int code)
+        {
+            if (Roulettes.ContainsKey(code))
+            {
+                return Roulettes[code];
+            }
+
+            if (code != 0)
+            {
+                var @event = new SentryEvent("Missing Roulette code");
+                @event.Level = ErrorLevel.Warning;
+                @event.Tags["code"] = code.ToString();
+                Sentry.ReportAsync(@event);
+            }
+
+            return new Roulette(string.Format("알 수 없는 무작위 임무 ({0})", code));
         }
     }
 }

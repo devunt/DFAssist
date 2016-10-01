@@ -274,6 +274,17 @@ namespace App
 
                     Log.I("DFAN: 매칭 시작됨 (74) [{0}]", string.Join(", ", instances.Select(x => x.Name).ToArray()));
                 }
+                else if (opcode == 0x0076)
+                {
+                    var code = data[184];
+
+                    var roulette = Data.GetRoulette(code);
+
+                    state = State.QUEUED;
+                    mainForm.overlayForm.SetRoulleteDuty(roulette);
+
+                    Log.I("DFAN: 무작위 임무 매칭 시작됨 [{0}]", roulette.Name);
+                }
                 else if (opcode == 0x02DB)
                 {
                     var status = data[4];

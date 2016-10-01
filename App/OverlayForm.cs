@@ -40,6 +40,7 @@ namespace App
         Timer timer = null;
         int blinkCount;
         bool isOkay = false;
+        bool isRoulette = false;
         internal int currentZone = 0;
         IntPtr m_eventHook;
 
@@ -153,6 +154,7 @@ namespace App
 
         internal void SetDutyCount(int dutyCount)
         {
+            isRoulette = false;
             this.Invoke(() =>
             {
                 label_DutyCount.Text = string.Format("총 {0}개 임무 매칭중", dutyCount);
@@ -161,19 +163,25 @@ namespace App
 
         internal void SetDutyStatus(Instance instance, byte tank, byte dps, byte healer)
         {
-            if (tank == 0 && dps == 0 && healer == 0)
-                this.Invoke(() =>
-                {
-                    label_DutyCount.Text = "무작위 임무";
-                    label_DutyName.Text = "서버 예약";
-                    label_DutyStatus.Text = "";
-                });
-            else
+            if (!isRoulette)
+            {
                 this.Invoke(() =>
                 {
                     label_DutyName.Text = string.Format("< {0} >", instance.Name);
                     label_DutyStatus.Text = string.Format("{0}/{3}    {1}/{4}    {2}/{5}", tank, healer, dps, instance.Tank, instance.Healer, instance.DPS);
                 });
+            }
+        }
+
+        internal void SetRoulleteDuty(Roulette roulette)
+        {
+            isRoulette = true;
+            this.Invoke(() =>
+            {
+                label_DutyCount.Text = "무작위 임무";
+                label_DutyName.Text = string.Format("< {0} >", roulette.Name);
+                label_DutyStatus.Text = string.Format("매칭 대기중");
+            });
         }
 
         internal void SetDutyAsMatched(Instance instance)

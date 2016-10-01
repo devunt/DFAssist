@@ -89,6 +89,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Roulette.cs" />
     <Compile Include="WebApi.cs" />
     <Compile Include="Area.cs" />
     <Compile Include="FATE.cs" />
