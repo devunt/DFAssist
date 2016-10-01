@@ -81,6 +81,7 @@
             this.Name = "OverlayForm";
             this.Opacity = 0.6D;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "DFA OverlayForm";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.OverlayForm_Load);
