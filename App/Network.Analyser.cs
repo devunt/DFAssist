@@ -246,7 +246,7 @@ namespace App
                 }
                 else if (opcode == 0x006C)
                 {
-                    var code = BitConverter.ToUInt16(data, 12);
+                    var code = BitConverter.ToUInt16(data, 184);
 
                     var instance = Data.GetInstance(code);
 
@@ -261,7 +261,7 @@ namespace App
 
                     for (int i = 0; i < 5; i++)
                     {
-                        var code = BitConverter.ToUInt16(data, 192 + (i * 2));
+                        var code = BitConverter.ToUInt16(data, 184 + (i * 2));
                         if (code == 0)
                         {
                             break;
