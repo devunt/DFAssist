@@ -16,7 +16,7 @@ namespace App
         public static bool CheckUpdate { get; set; } = true;
         public static bool AutoUpdate { get; set; } = true;
         public static bool TwitterEnabled { get; set; } = false;
-        public static bool AutoOverlayHide { get; set; } = false;
+        public static bool AutoOverlayHide { get; set; } = true;
         public static bool FlashWindow { get; set; } = true;
         public static string TwitterAccount { get; set; } = "";
         public static bool Updated { get; set; } = true;

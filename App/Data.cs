@@ -38,7 +38,7 @@ namespace App
 
                     foreach (XmlNode xn in doc.SelectNodes("/Data/Item"))
                     {
-                        Area zone = new Area(xn);
+                        var zone = new Area(xn);
                         if (!areas.ContainsKey(zone.ZoneId))
                         {
                             areas.Add(zone.ZoneId, zone);
@@ -61,9 +61,13 @@ namespace App
                     FATEs = fates;
                     Roulettes = roulettes;
                     Version = version;
-                    Initialized = true;
 
-                    Log.S("임무 데이터가 {0} 버전으로 갱신되었습니다.", Version);
+                    if (Initialized)
+                    {
+                        Log.S("임무 데이터가 {0} 버전으로 갱신되었습니다.", Version);
+                    }
+
+                    Initialized = true;
                 }
                 else
                 {
@@ -174,7 +178,7 @@ namespace App
                 Sentry.ReportAsync(@event);
             }
 
-            return new FATE(0, string.Format("알 수 없는 돌발임무 ({0})", code));
+            return new FATE(0, string.Format("알 수 없는 돌발 ({0})", code));
         }
 
         internal static Area GetArea(int code)
