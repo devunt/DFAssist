@@ -132,31 +132,18 @@ namespace App
                 mainForm.overlayForm.SetStatus(true);
 
                 var opcode = BitConverter.ToUInt16(message, 18);
-#if !DEBUG
                 if (opcode != 0x0142 &&
                     opcode != 0x0143 &&
                     opcode != 0x006C &&
                     opcode != 0x0074 &&
+                    opcode != 0x0076 &&
                     opcode != 0x02DB &&
                     opcode != 0x006F &&
                     opcode != 0x02DE &&
-                    opcode != 0x0339 &&
-                    opcode != 0x005D)
+                    opcode != 0x0339)
                     return;
-#endif
 
                 var data = message.Skip(32).ToArray();
-
-#if DEBUG
-                if (data.Length < 50 &&
-                    opcode != 0x191 &&
-                    opcode != 0x192 &&
-                    opcode != 0x194 &&
-                    opcode != 0x142 &&
-                    opcode != 0x144 &&
-                    opcode != 0x145)
-                    Log.I("{0:X} {1}", opcode, BitConverter.ToString(data));
-#endif
 
                 if (opcode == 0x0142)
                 {
