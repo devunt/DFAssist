@@ -1,5 +1,5 @@
 ﻿<Data>
-    <Version>20161001.1</Version>
+    <Version>20161208.1</Version>
 
     <!-- 무작위 임무 -->
     <Roulette Id="1" Text="무작위 임무: 레벨링" />
@@ -1086,7 +1086,51 @@
     <Item ZoneId="203" Text="디아뎀 제도" Duty="디아뎀 제도(어려움)">
         <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
-    
+
+  
+    <!-- 3.2 운명의 톱니바퀴 -->
+    <!-- 3.2 던전 -->
+    <Item ZoneId="204" Text="거꾸로 선 탑" Duty="거꾸로 선 탑">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="207" Text="옛 암다포르 시가지" Duty="옛 암다포르 시가지 (어려움)">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+
+    <!-- 3.2 토벌전 -->
+    <Item ZoneId="205" Text="" Duty="마신 세피로트 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="20C" Text="" Duty="극 마신 세피로트 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+
+    <!-- 3.2 레이드 -->
+    <Item ZoneId="208" Text="" Duty="기동성 알렉산더: 율동편 1">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="209" Text="" Duty="기동성 알렉산더: 율동편 2">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="20A" Text="" Duty="기동성 알렉산더: 율동편 3">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="20B" Text="" Duty="기동성 알렉산더: 율동편 4">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="211" Text="" Duty="기동성 알렉산더: 율동편(영웅) 1">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="212" Text="" Duty="기동성 알렉산더: 율동편(영웅) 2">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="213" Text="" Duty="기동성 알렉산더: 율동편(영웅) 3">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="214" Text="" Duty="기동성 알렉산더: 율동편(영웅) 4">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+
   
     <!-- 길드 작전 -->
     <Item ZoneId="BE" Text="검은장막 숲 중부삼림" Duty="방황하는 사령을 쓰러뜨려라!">
@@ -1132,24 +1176,75 @@
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
 
-  
+
+    <!-- 초보자의 집 -->
+    <Item ZoneId="219" Text="" Duty="범위 공격을 피하자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="21A" Text="" Duty="콤보를 이어 적개심을 끌자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="21B" Text="" Duty="실전에서 콤보를 사용해보자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="21C" Text="" Duty="다수의 적에게서 적개심을 끌자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="21D" Text="" Duty="실전에서 다수의 적과 싸워보자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="21E" Text="" Duty="멀리서 적개심을 끌자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="21F" Text="" Duty="적 지원군에 대처하자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="220" Text="" Duty="파티원과 협력하여 적을 물리치자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="221" Text="" Duty="파티원과 같은 적을 공격하자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="222" Text="" Duty="적의 공격을 피하면서 싸우자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="223" Text="" Duty="적 지원군에 대처하자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="224" Text="" Duty="특수 장치를 활용하며 싸우자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="225" Text="" Duty="파티원을 회복시키자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="226" Text="" Duty="다수의 파티원을 회복시키자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="227" Text="" Duty="적의 공격을 피하면서 싸우자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="228" Text="" Duty="마지막 훈련!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+
+
     <!-- PvP -->
-    <Item ZoneId="AF" Text="늑대우리" Duty="늑대우리" PVP="1">
+    <Item ZoneId="AF" Text="늑대우리" Duty="더 폴드" PVP="1">
         <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
-    <Item ZoneId="150" Text="늑대우리" Duty="늑대우리" PVP="1">
+    <Item ZoneId="150" Text="늑대우리" Duty="더 폴드" PVP="1">
         <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
-    <Item ZoneId="151" Text="늑대우리" Duty="늑대우리 (매칭 파티 전용)" PVP="1">
+    <Item ZoneId="151" Text="늑대우리" Duty="더 폴드 (파티 매칭)" PVP="1">
         <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
-    <Item ZoneId="160" Text="늑대우리" Duty="늑대우리 (고정 소규모 파티 전용)" PVP="1">
+    <Item ZoneId="160" Text="늑대우리" Duty="더 폴드 (고정 소규모 파티)" PVP="1">
         <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
-    <Item ZoneId="B8" Text="늑대우리" Duty="늑대우리 (매칭 파티 전용)" PVP="1">
+    <Item ZoneId="B8" Text="늑대우리" Duty="더 폴드 (파티 매칭)" PVP="1">
         <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
-    <Item ZoneId="BA" Text="늑대우리" Duty="늑대우리 (고정 소규모 파티 전용)" PVP="1">
+    <Item ZoneId="BA" Text="늑대우리" Duty="더 폴드 (고정 소규모 파티)" PVP="1">
         <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
     <Item ZoneId="178" Text="카르테노 평원: 외곽 유적지대" Duty="외곽 유적지대 (제압전)" PVP="1">
