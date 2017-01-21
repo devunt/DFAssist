@@ -12,6 +12,7 @@ namespace App
         internal Network networkWorker;
         internal Process FFXIVProcess;
         internal OverlayForm overlayForm;
+        internal List<TreeNode> nodes;
 
         public MainForm()
         {
@@ -21,6 +22,7 @@ namespace App
 
             Log.Form = this;
             overlayForm = new OverlayForm();
+            nodes = new List<TreeNode>();
         }
 
         protected override void OnShown(EventArgs e)
@@ -35,16 +37,19 @@ namespace App
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            Data.Initializer();
+
+            overlayForm.Show();
             networkWorker = new Network(this);
 
             label_AboutTitle.Text = string.Format("DFA {0}", Global.VERSION);
 
             FindFFXIVProcess();
 
-            if (Settings.ShowOverlay)
+            if (!Settings.ShowOverlay)
             {
-                checkBox_Overlay.Checked = true;
-                overlayForm.Show();
+                overlayForm.Hide();
+                checkBox_Overlay.Checked = false;
             }
 
             if (Settings.AutoUpdate)
@@ -61,16 +66,31 @@ namespace App
                     while (true)
                     {
                         Updater.CheckNewVersion(this);
-                        Thread.Sleep(5 * 60 * 1000);
+                        Thread.Sleep(30 * 60 * 1000);
                     }
                 });
             }
 
             checkBox_StartupShow.Checked = Settings.StartupShowMainForm;
+            checkBox_AutoOverlayHide.Checked = Settings.AutoOverlayHide;
+            checkBox_FlashWindow.Checked = Settings.FlashWindow;
 
             checkBox_Twitter.Checked = Settings.TwitterEnabled;
             textBox_Twitter.Enabled = Settings.TwitterEnabled;
             textBox_Twitter.Text = Settings.TwitterAccount;
+
+            foreach (var zone in Data.Areas)
+            {
+                if (!zone.Value.isDuty && zone.Value.FATEList.Count > 0)
+                    triStateTreeView_FATEs.Nodes.Add(zone.Key.ToString(), zone.Value.Name);
+            }
+
+            foreach (var fate in Data.GetFATEs())
+            {
+                var node = triStateTreeView_FATEs.Nodes[fate.Value.Zone.ToString()].Nodes.Add(fate.Key.ToString(), fate.Value.Name);
+                node.Checked = Settings.FATEs.Contains(fate.Key);
+                nodes.Add(node);
+            }
 
             Task.Factory.StartNew(() =>
             {
@@ -82,6 +102,7 @@ namespace App
                     {
                         FFXIVProcess = null;
 
+                        overlayForm.SetStatus(false);
                         this.Invoke(() => FindFFXIVProcess());
                     }
                     else {
@@ -98,6 +119,13 @@ namespace App
                     }
                 }
             });
+
+            if (Settings.Updated)
+            {
+                Settings.Updated = false;
+                Settings.Save();
+                ShowNotification("버전 {0} 업데이트됨", Global.VERSION);
+            }
 
             Sentry.ReportAsync("App started");
         }
@@ -146,7 +174,7 @@ namespace App
 
         private void linkLabel_NewUpdate_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start(string.Format("https://github.com/{0}/releases", Global.GITHUB_REPO));
+            Process.Start(string.Format("https://github.com/{0}/releases/latest", Global.GITHUB_REPO));
         }
 
         private void button_SelectProcess_Click(object sender, EventArgs e)
@@ -213,10 +241,76 @@ namespace App
             Settings.Save();
         }
 
+        private void checkBox_AutoOverlayHide_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.AutoOverlayHide = checkBox_AutoOverlayHide.Checked;
+            Settings.Save();
+        }
+
+        private void checkBox_FlashWindow_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.FlashWindow = checkBox_FlashWindow.Checked;
+            Settings.Save();
+        }
+
         private void textBox_Twitter_TextChanged(object sender, EventArgs e)
         {
             Settings.TwitterAccount = textBox_Twitter.Text;
             Settings.Save();
+        }
+
+        private void toolStripMenuItem_LogCopy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(richTextBox_Log.Text);
+            MessageBox.Show("로그가 클립보드에 복사되었습니다.", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void toolStripMenuItem_LogClear_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("로그를 비우시겠습니까?", "DFA 알림", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+            {
+                richTextBox_Log.Text = "";
+            }
+        }
+
+        private void toolStripMenuItem_SelectAll_Click(object sender, EventArgs e)
+        {
+            foreach (var node in nodes)
+            {
+                node.Checked = true;
+                Settings.FATEs.Add(ushort.Parse(node.Name));
+            }
+
+            Settings.Save();
+        }
+
+        private void toolStripMenuItem_UnSelectAll_Click(object sender, EventArgs e)
+        {
+            foreach (var node in nodes)
+            {
+                node.Checked = false;
+            }
+
+            Settings.FATEs.Clear();
+            Settings.Save();
+        }
+
+        private void toolStripMenuItem_SelectApply_Click(object sender, EventArgs e)
+        {
+            foreach (var node in nodes)
+            {
+                if (node.Checked)
+                {
+                    Settings.FATEs.Add(ushort.Parse(node.Name));
+                }
+                else
+                {
+                    Settings.FATEs.Remove(ushort.Parse(node.Name));
+                }
+            }
+
+            Settings.Save();
+            MessageBox.Show("돌발 알림 설정이 적용되었습니다.", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void FindFFXIVProcess()
@@ -266,6 +360,14 @@ namespace App
             comboBox_Process.SelectedIndex = 0;
 
             networkWorker.StartCapture(FFXIVProcess);
+        }
+
+        internal void ShowNotification(string format, params object[] args)
+        {
+            this.Invoke(() =>
+            {
+                notifyIcon.ShowBalloonTip(10 * 1000, "임무/돌발 찾기 도우미", string.Format(format, args), ToolTipIcon.Info);
+            });
         }
     }
 }

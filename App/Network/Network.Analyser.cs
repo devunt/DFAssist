@@ -9,7 +9,8 @@ namespace App
     partial class Network
     {
         private State state = State.IDLE;
-
+        private int lastMember = 0;
+        
         private void AnalyseFFXIVPacket(byte[] payload)
         {
             try {
@@ -36,7 +37,7 @@ namespace App
                             break;
                         }
 
-                        using (MemoryStream messages = new MemoryStream())
+                        using (MemoryStream messages = new MemoryStream(payload.Length))
                         {
                             using (MemoryStream stream = new MemoryStream(payload, 0, length))
                             {
@@ -67,6 +68,7 @@ namespace App
                                     if (read < 4)
                                     {
                                         Log.E("메시지 처리 요청중 길이 에러 발생함: {0}, {1}/{2}", read, i, messageCount);
+                                        break;
                                     }
                                     var messageLength = BitConverter.ToInt32(buffer, 0);
 
@@ -127,19 +129,113 @@ namespace App
                     return;
                 }
 
-                var opcode = BitConverter.ToInt16(message, 18);
+                mainForm.overlayForm.SetStatus(true);
+
+                var opcode = BitConverter.ToUInt16(message, 18);
+                if (opcode != 0x0142 &&
+                    opcode != 0x0143 &&
+                    opcode != 0x006C &&
+                    opcode != 0x0074 &&
+                    opcode != 0x0076 &&
+                    opcode != 0x02DB &&
+                    opcode != 0x006F &&
+                    opcode != 0x02DE &&
+                    opcode != 0x0339)
+                    return;
+
                 var data = message.Skip(32).ToArray();
 
-                //Log.D("opcode = {0:X}", opcode);
-                if (opcode == 0x0143)
+                if (opcode == 0x0142)
                 {
-                    mainForm.overlayForm.SetStatus(true);
+                    var type = data[0];
+
+                    if (type == 0xCF)
+                    {
+                        var selfkey = BitConverter.ToInt32(message, 8);
+                        var charkey = BitConverter.ToInt32(message, 40);
+
+                        var code = BitConverter.ToUInt16(data, 16);
+                        var zone = Data.GetArea(code);
+
+                        byte teleMeasure = message[36];
+                        
+                        if (selfkey == charkey) // isSelf
+                        {
+                            ushort lastCode = (BitConverter.ToUInt16(System.Text.Encoding.Unicode.GetBytes(new char[] { Data.GetAreaName(code).Last() }), 0));
+                            string lastChar = ((lastCode - 0xAC00U) % 28 == 0 || lastCode - 0xAC00U == 8 ? "로" : "으로");
+
+                            if (teleMeasure != 0x0C)
+                            {
+                                Log.D("{1}{2} 지역을 이동했습니다. ({0})", code, Data.GetAreaName(code), lastChar);
+                            }
+                            else
+                            {
+                                Log.D("임무에서 퇴장했습니다. ({0})", teleMeasure);
+                            }
+
+                            mainForm.overlayForm.currentArea = code;
+                        }
+                    }
+                }
+                else if (opcode == 0x0143)
+                {
+                    var type = data[0];
+
+                    if (type == 0x9B)
+                    {
+                        /*
+                        var code = BitConverter.ToUInt16(data, 4);
+                        var progress = data[8];
+
+                        var fate = Data.GetFATE(code);
+
+                        //Log.D("\"{0}\" 돌발 진행도 {1}%", fate.Name, progress);
+                        */
+                    }
+                    else if (type == 0x79)
+                    {
+                        /*
+                        // 돌발 임무 종료 (지역 이동시 발생할 수 있는 모든 임무에 대해 전부 옴)
+
+                        var code = BitConverter.ToUInt16(data, 4);
+                        var status = BitConverter.ToUInt16(data, 28);
+
+                        var fate = Data.GetFATE(code);
+
+                        //Log.D("\"{0}\" 돌발 종료!", fate.Name);
+                        */
+                    }
+                    else if (type == 0x74)
+                    {
+                        // 돌발 임무 발생 (지역 이동시에도 기존 돌발 목록이 옴)
+
+                        var code = BitConverter.ToUInt16(data, 4);
+
+                        var fate = Data.GetFATE(code);
+
+                        if (Settings.FATEs.Contains(code))
+                        {
+                            mainForm.overlayForm.SetFATEAsAppeared(fate);
+
+                            if (Settings.FlashWindow)
+                            {
+                                WinApi.FlashWindow(mainForm.FFXIVProcess);
+                            }
+
+                            if (Settings.TwitterEnabled)
+                            {
+                                WebApi.Tweet("< {0} > 돌발 발생!", fate.Name);
+                            }
+                        }
+                        
+                        Log.D("\"{0}\" 돌발 발생!", fate.Name);
+                    }
                 }
                 else if (opcode == 0x006C)
                 {
-                    var code = BitConverter.ToUInt16(data, 12);
+                    var code = BitConverter.ToUInt16(data, 184);
 
-                    var instance = InstanceList.GetInstance(code);
+                    var instance = Data.GetInstance(code);
 
                     state = State.QUEUED;
                     mainForm.overlayForm.SetDutyCount(1);
@@ -152,18 +248,29 @@ namespace App
 
                     for (int i = 0; i < 5; i++)
                     {
-                        var code = BitConverter.ToUInt16(data, 192 + (i * 2));
+                        var code = BitConverter.ToUInt16(data, 184 + (i * 2));
                         if (code == 0)
                         {
                             break;
                         }
-                        instances.Add(InstanceList.GetInstance(code));
+                        instances.Add(Data.GetInstance(code));
                     }
 
                     state = State.QUEUED;
                     mainForm.overlayForm.SetDutyCount(instances.Count);
 
                     Log.I("DFAN: 매칭 시작됨 (74) [{0}]", string.Join(", ", instances.Select(x => x.Name).ToArray()));
+                }
+                else if (opcode == 0x0076)
+                {
+                    var code = data[184];
+
+                    var roulette = Data.GetRoulette(code);
+
+                    state = State.QUEUED;
+                    mainForm.overlayForm.SetRoulleteDuty(roulette);
+
+                    Log.I("DFAN: 무작위 임무 매칭 시작됨 [{0}]", roulette.Name);
                 }
                 else if (opcode == 0x02DB)
                 {
@@ -180,7 +287,7 @@ namespace App
                     {
                         var code = BitConverter.ToUInt16(data, 0);
 
-                        var instance = InstanceList.GetInstance(code);
+                        var instance = Data.GetInstance(code);
 
                         state = State.IDLE;
                         mainForm.overlayForm.CancelDutyFinder();
@@ -212,13 +319,20 @@ namespace App
                     var dps = data[6];
                     var healer = data[7];
 
-                    var instance = InstanceList.GetInstance(code);
+                    var instance = Data.GetInstance(code);
 
                     if (status == 1)
                     {
-                        // 매칭 전 인원 현황 패킷
+                        // 인원 현황 패킷
+                        var member = tank * 10000 + dps * 100 + healer;
 
-                        if (state == State.IDLE)
+                        if (state == State.MATCHED && lastMember != member)
+                        {
+                            // 매칭도중일 때 인원 현황 패킷이 오고 마지막 인원 정보와 다른 경우에 누군가에 의해 큐가 취소된 경우.
+                            state = State.QUEUED;
+                            mainForm.overlayForm.CancelDutyFinder();
+                        }
+                        else if (state == State.IDLE)
                         {
                             // 프로그램이 매칭 중간에 켜짐
                             state = State.QUEUED;
@@ -229,6 +343,8 @@ namespace App
                         {
                             mainForm.overlayForm.SetDutyStatus(instance, tank, dps, healer);
                         }
+
+                        lastMember = member;
                     }
                     else if (status == 4)
                     {
@@ -238,26 +354,32 @@ namespace App
                     Log.I("DFAN: 매칭 상태 업데이트됨 [{0}, {1}, {2}/{3}, {4}/{5}, {6}/{7}]",
                         instance.Name, status, tank, instance.Tank, healer, instance.Healer, dps, instance.DPS);
                 }
-                else if (opcode == 0x0338)
+                else if (opcode == 0x0339)
                 {
                     var code = BitConverter.ToUInt16(data, 4);
 
-                    var instance = InstanceList.GetInstance(code);
+                    var instance = Data.GetInstance(code);
 
                     state = State.MATCHED;
                     mainForm.overlayForm.SetDutyAsMatched(instance);
 
+                    if (Settings.FlashWindow)
+                    {
+                        WinApi.FlashWindow(mainForm.FFXIVProcess);
+                    }
+
+                    if (!Settings.ShowOverlay)
+                    {
+                        mainForm.ShowNotification("< {0} > 매칭!", instance.Name);
+                    }
+
                     if (Settings.TwitterEnabled)
                     {
-                        Api.Tweet("< {0} > 매칭!", instance.Name);
+                        WebApi.Tweet("< {0} > 매칭!", instance.Name);
                     }
 
                     Log.S("DFAN: 매칭됨 [{0}]", instance.Name);
                 }
-
-                // TODO: 매칭이 된 뒤에 다른 누군가가 참가 확인을 거부하거나
-                // 제한시간 초과로 참가 확인이 취소됐을 경우 어떤 패킷이 오는지 알아내기
-                // 매칭에서 누군가가 참가 확인을 안 누르는 상황을 재현하기 힘들어 찾아내지 못함...
             }
             catch (Exception ex)
             {

@@ -1,0 +1,1260 @@
+﻿<Data>
+    <Version>20161208.2</Version>
+
+    <!-- 무작위 임무 -->
+    <Roulette Id="1" Text="무작위 임무: 레벨링" />
+    <Roulette Id="2" Text="무작위 임무: 레벨 50 던전" />
+    <Roulette Id="3" Text="무작위 임무: 주요 퀘스트" />
+    <Roulette Id="4" Text="무작위 임무: 길드 작전" />
+    <Roulette Id="5" Text="무작위 임무: 숙련자" />
+    <Roulette Id="6" Text="무작위 임무: 토벌전" />
+    <Roulette Id="7" Text="무작위 임무: 전장" />
+    <Roulette Id="8" Text="무작위 임무: 레벨 60 던전" />
+    <Roulette Id="9" Text="무작위 임무: 멘토" />
+  
+    <!-- 2.x 신생 에오르제아 -->
+    <Item ZoneId="80" Text="림사 로민사 상층 갑판" Rest="1" />
+    <Item ZoneId="81" Text="림사 로민사 하층 갑판" Rest="1" />
+    <Item ZoneId="B2" Text="여관 '뒷돗대'" Rest="1" />
+    
+    <Item ZoneId="82" Text="울다하 날 회랑" Rest="1" />
+    <Item ZoneId="83" Text="울다하 달 회랑" Rest="1" />
+    <Item ZoneId="B2" Text="여관 '모래시계'" Rest="1" />
+    
+    <Item ZoneId="84" Text="그리다니아 신시가지" Rest="1" />
+    <Item ZoneId="85" Text="그리다니아 구시가지" Rest="1" />
+    <Item ZoneId="B3" Text="여관 '둥지나무'" Rest="1" />
+    
+    <Item ZoneId="90" Text="골드 소서" Rest="1" />
+  
+    <!-- 거주구 -->
+    <Item ZoneId="11a" Text="안갯빛 마을: 소형 주택" Rest="1" />
+    <Item ZoneId="11b" Text="안갯빛 마을: 중형 주택" Rest="1" />
+    <Item ZoneId="11c" Text="안갯빛 마을: 대형 주택" Rest="1" />
+  
+    <Item ZoneId="153" Text="안갯빛 마을" Rest="1" />
+    <Item ZoneId="154" Text="라벤더 안식처" Rest="1" />
+    <Item ZoneId="155" Text="하늘잔 마루" Rest="1" />
+    
+    <Item ZoneId="156" Text="라벤더 안식처: 소형 주택" Rest="1" />
+    <Item ZoneId="157" Text="라벤더 안식처: 중형 주택" Rest="1" />
+    <Item ZoneId="158" Text="라벤더 안식처: 대형 주택" Rest="1" />
+  
+    <Item ZoneId="159" Text="하늘잔 마루: 소형 주택" Rest="1" />
+    <Item ZoneId="15a" Text="하늘잔 마루: 중형 주택" Rest="1" />
+    <Item ZoneId="15b" Text="하늘잔 마루: 대형 주택" Rest="1" />
+    
+    <Item ZoneId="180" Text="안갯빛 마을: 개인실" Rest="1" />
+    <Item ZoneId="181" Text="라벤더 안식처: 개인실" Rest="1" />
+    <Item ZoneId="182" Text="하늘잔 마루: 개인실" Rest="1" />
+    
+    <Item ZoneId="1A7" Text="안갯빛 마을: 지하공방" Rest="1" />
+    <Item ZoneId="1A8" Text="하늘잔 마루: 지하공방" Rest="1" />
+    <Item ZoneId="1A9" Text="라벤더 안식처: 지하공방" Rest="1" />
+
+    <!-- 미분류 -->
+    <Item ZoneId="131" Text="카스트룸 센트리에서 탈출하라" />
+    <Item ZoneId="14D" Text="도름 키마이라" />
+    <Item ZoneId="14E" Text="하이드라" />
+    
+    <!-- 2.0 지역 -->
+    <Item ZoneId="86" Text="중부 라노시아">
+        <FATE Parent="86" Id="533" Name="돌아온 거대 화염마수" />
+        <FATE Parent="86" Id="649" Name="그 바다생물을 보라" />
+        <FATE Parent="86" Id="687" Name="검은 악마: 실험 결과" />
+        <FATE Parent="86" Id="688" Name="검은 악마: 과격한 숙녀" />
+        <FATE Parent="86" Id="693" Name="별빛축제: 마법 눈사람" />
+        <FATE Parent="86" Id="717" Name="거대 알 사냥" />
+        <FATE Parent="86" Id="220" Name="거대한 들소" />
+        <FATE Parent="86" Id="221" Name="여름여울의 공포" />
+        <FATE Parent="86" Id="222" Name="대왕땅벌과 노란셔츠" />
+        <FATE Parent="86" Id="223" Name="데네벨 관문 방어 훈련" />
+        <FATE Parent="86" Id="225" Name="끝없는 두더지 잡기" />
+        <FATE Parent="86" Id="226" Name="해군식 통과의례" />
+        <FATE Parent="86" Id="227" Name="양들의 소란" />
+        <FATE Parent="86" Id="229" Name="뛰는 놈 위에 나는 놈" />
+        <FATE Parent="86" Id="231" Name="닥치는 대로 자른다" />
+        <FATE Parent="86" Id="233" Name="쫓는 자와 쫓기는 자" />
+        <FATE Parent="86" Id="235" Name="그 바다생물을 보라" />
+        <FATE Parent="86" Id="237" Name="아젤리스 강의 다리" />
+        <FATE Parent="86" Id="238" Name="피에 젖은 맹견" />
+        <FATE Parent="86" Id="239" Name="아름다운 불량배 강" />
+        <FATE Parent="86" Id="240" Name="해파리가 하늘을 날던 날" />
+    </Item>
+    <Item ZoneId="87" Text="저지 라노시아">
+        <FATE Parent="87" Id="257" Name="날아다니는 위장" />
+        <FATE Parent="87" Id="260" Name="골칫덩어리 밀항자" />
+        <FATE Parent="87" Id="261" Name="우리는 해적이다" />
+        <FATE Parent="87" Id="262" Name="샘터의 싸움" />
+        <FATE Parent="87" Id="264" Name="삼나무 숲의 전투" />
+        <FATE Parent="87" Id="265" Name="강인한 산길잡이" />
+        <FATE Parent="87" Id="534" Name="돌아온 거대 화염마수" />
+        <FATE Parent="87" Id="333" Name="기세등등한 마견" />
+        <FATE Parent="87" Id="666" Name="신비한 마물 '골렘'" />
+        <FATE Parent="87" Id="667" Name="신비한 마물 '벽돌골렘'" />
+        <FATE Parent="87" Id="694" Name="별빛축제: 마법 눈사람" />
+        <FATE Parent="87" Id="718" Name="거대 알 사냥" />
+        <FATE Parent="87" Id="245" Name="불길한 왕자" />
+        <FATE Parent="87" Id="246" Name="위험한 밭일" />
+        <FATE Parent="87" Id="249" Name="새끼 치는 두꺼비" />
+        <FATE Parent="87" Id="250" Name="검은 날개" />
+        <FATE Parent="87" Id="251" Name="밀가루 전쟁" />
+    </Item>
+    <Item ZoneId="89" Text="동부 라노시아">
+        <FATE Parent="89" Id="267" Name="포도주 내놔!" />
+        <FATE Parent="89" Id="268" Name="포도주 마시고 싶어!" />
+        <FATE Parent="89" Id="271" Name="신선한 고기" />
+        <FATE Parent="89" Id="272" Name="달걀귀신" />
+        <FATE Parent="89" Id="274" Name="사마귀 퇴치" />
+        <FATE Parent="89" Id="532" Name="돌아온 거대 화염마수" />
+        <FATE Parent="89" Id="278" Name="하얀 거탑" />
+        <FATE Parent="89" Id="279" Name="콜리브리의 저녁식사" />
+        <FATE Parent="89" Id="280" Name="떠돌이 소매치기" />
+        <FATE Parent="89" Id="282" Name="해변의 싹둑게" />
+        <FATE Parent="89" Id="286" Name="죽은 자의 대변인" />
+        <FATE Parent="89" Id="287" Name="사랑은 운명, 운명은 죽음" />
+        <FATE Parent="89" Id="560" Name="굶주린 용병의 반란" />
+        <FATE Parent="89" Id="561" Name="술꾼 마수" />
+        <FATE Parent="89" Id="562" Name="꿀벌을 꾀는 달콤한 꿀" />
+        <FATE Parent="89" Id="563" Name="심록의 거대 마수" />
+        <FATE Parent="89" Id="564" Name="불길한 알뿌리" />
+        <FATE Parent="89" Id="565" Name="집으로" />
+        <FATE Parent="89" Id="566" Name="알뿌리 으깨기" />
+        <FATE Parent="89" Id="334" Name="여름으로 가는 문" />
+        <FATE Parent="89" Id="335" Name="죽음의 찬탈자" />
+        <FATE Parent="89" Id="913" Name="불꽃축제: 미풍양속의 수호자" />
+        <FATE Parent="89" Id="914" Name="불꽃축제: 한여름의 열광" />
+        <FATE Parent="89" Id="915" Name="불꽃축제: 위험한 불장난" />
+        <FATE Parent="89" Id="916" Name="불꽃축제: 바다야수 조련사" />
+        <FATE Parent="89" Id="917" Name="불꽃축제: 호색한의 말로" />
+        <FATE Parent="89" Id="918" Name="불꽃축제: 해적의 밀주" />
+        <FATE Parent="89" Id="689" Name="검은 악마: 실험 결과" />
+        <FATE Parent="89" Id="690" Name="검은 악마: 과격한 숙녀" />
+        <FATE Parent="89" Id="701" Name="광란의 알 축제" />
+    </Item>
+    <Item ZoneId="8A" Text="서부 라노시아">
+        <FATE Parent="8A" Id="568" Name="북쪽 방파벽 전투: 전력 정찰" />
+        <FATE Parent="8A" Id="569" Name="북쪽 방파벽 전투: 주력 부대 습격" />
+        <FATE Parent="8A" Id="570" Name="남쪽 방파벽 전투: 전력 정찰" />
+        <FATE Parent="8A" Id="571" Name="남쪽 방파벽 전투: 주력 부대 습격" />
+        <FATE Parent="8A" Id="572" Name="냉철한 전략가" />
+        <FATE Parent="8A" Id="574" Name="바다뱀의 말로" />
+        <FATE Parent="8A" Id="575" Name="바다뱀 선장" />
+        <FATE Parent="8A" Id="576" Name="죽음의 행진" />
+        <FATE Parent="8A" Id="577" Name="이국에서 온 괴물곤충" />
+        <FATE Parent="8A" Id="578" Name="수신을 부르는 자" />
+        <FATE Parent="8A" Id="650" Name="폭식하는 괴물새" />
+        <FATE Parent="8A" Id="702" Name="현자의 알" />
+        <FATE Parent="8A" Id="289" Name="보급선을 지켜라" />
+        <FATE Parent="8A" Id="290" Name="폭식하는 괴물새" />
+        <FATE Parent="8A" Id="291" Name="밀밭의 파수꾼" />
+        <FATE Parent="8A" Id="295" Name="노련한 무사" />
+        <FATE Parent="8A" Id="297" Name="세관공사 강제수사" />
+        <FATE Parent="8A" Id="298" Name="공공의 적" />
+        <FATE Parent="8A" Id="303" Name="고향에서 보낸 편지" />
+        <FATE Parent="8A" Id="304" Name="도도 둥지 파괴명령" />
+        <FATE Parent="8A" Id="306" Name="생사를 가르는 덫" />
+        <FATE Parent="8A" Id="308" Name="협상 결렬" />
+        <FATE Parent="8A" Id="309" Name="멍청한 경호원" />
+        <FATE Parent="8A" Id="310" Name="데네벨 가도의 결투" />
+        <FATE Parent="8A" Id="312" Name="곤충군단 출현" />
+        <FATE Parent="8A" Id="336" Name="채소혁명 '만드라즈'" />
+    </Item>
+    <Item ZoneId="8B" Text="고지 라노시아">
+        <FATE Parent="8B" Id="314" Name="맹수 먹는 요괴새" />
+        <FATE Parent="8B" Id="317" Name="수송부대 방어명령" />
+        <FATE Parent="8B" Id="320" Name="어제의 동지는 오늘의 적" />
+        <FATE Parent="8B" Id="321" Name="시원한 온천조개탕" />
+        <FATE Parent="8B" Id="322" Name="청동호수의 터주" />
+        <FATE Parent="8B" Id="323" Name="위험한 식용게" />
+        <FATE Parent="8B" Id="329" Name="온천이 키운 조개" />
+        <FATE Parent="8B" Id="331" Name="비운의 용병" />
+        <FATE Parent="8B" Id="332" Name="호수 위를 누벼라!" />
+        <FATE Parent="8B" Id="668" Name="신비한 마물 '골렘'" />
+        <FATE Parent="8B" Id="669" Name="신비한 마물 '벽돌골렘'" />
+        <FATE Parent="8B" Id="670" Name="신비한 마물 '골렘'" />
+        <FATE Parent="8B" Id="671" Name="신비한 마물 '황금골렘'" />
+        <FATE Parent="8B" Id="703" Name="광란의 달걀 찾기" />
+        <FATE Parent="8B" Id="451" Name="가여운 여인의 제재소 부흥: 식량 방어" />
+        <FATE Parent="8B" Id="452" Name="가여운 여인의 제재소 부흥: 게 브 격퇴" />
+        <FATE Parent="8B" Id="453" Name="가여운 여인의 제재소 부흥: 커얼 처치" />
+        <FATE Parent="8B" Id="454" Name="가여운 여인의 제재소 부흥: 야생 물소 처치" />
+    </Item>
+    <Item ZoneId="B4" Text="외지 라노시아">
+        <FATE Parent="B4" Id="580" Name="내가 가는 길" />
+        <FATE Parent="B4" Id="581" Name="흑와단의 원수" />
+        <FATE Parent="B4" Id="583" Name="커얼아, 커얼아" />
+        <FATE Parent="B4" Id="586" Name="땅굴단의 산길잡이" />
+        <FATE Parent="B4" Id="587" Name="시굴지 강습 작전" />
+        <FATE Parent="B4" Id="588" Name="전방에 폭탄" />
+        <FATE Parent="B4" Id="589" Name="뇌우를 부르는 자" />
+        <FATE Parent="B4" Id="591" Name="전설의 거룡" />
+        <FATE Parent="B4" Id="593" Name="광기의 산맥" />
+        <FATE Parent="B4" Id="594" Name="폐기된 실험체" />
+        <FATE Parent="B4" Id="595" Name="보급부대 구출명령" />
+        <FATE Parent="B4" Id="597" Name="벌레 양식자" />
+        <FATE Parent="B4" Id="598" Name="깨어난 석상" />
+        <FATE Parent="B4" Id="599" Name="바위신을 부르는 자" />
+        <FATE Parent="B4" Id="700" Name="요마 사냥꾼" />
+    </Item>
+
+    <Item ZoneId="8C" Text="서부 다날란">
+        <FATE Parent="8C" Id="342" Name="긴급 점검" />
+        <FATE Parent="8C" Id="343" Name="강제 추방" />
+        <FATE Parent="8C" Id="344" Name="투쟁을 위한 분노의 철퇴" />
+        <FATE Parent="8C" Id="345" Name="대지의 망치" />
+        <FATE Parent="8C" Id="346" Name="땅을 굳게 하는 것" />
+        <FATE Parent="8C" Id="347" Name="수수께끼의 거대 생물" />
+        <FATE Parent="8C" Id="348" Name="사막의 패왕" />
+        <FATE Parent="8C" Id="349" Name="황야의 무법자" />
+        <FATE Parent="8C" Id="350" Name="들개들의 천국" />
+        <FATE Parent="8C" Id="352" Name="악의 없는 아귀" />
+        <FATE Parent="8C" Id="353" Name="식탐 많은 왕게" />
+        <FATE Parent="8C" Id="354" Name="부상자를 호송하라" />
+        <FATE Parent="8C" Id="355" Name="싸움은 계속된다" />
+        <FATE Parent="8C" Id="356" Name="코브란 대이동" />
+        <FATE Parent="8C" Id="357" Name="황금투구를 쓴 거인" />
+        <FATE Parent="8C" Id="361" Name="망치를 두드려라" />
+        <FATE Parent="8C" Id="366" Name="키다리 아저씨" />
+        <FATE Parent="8C" Id="367" Name="고스트 버스터즈" />
+        <FATE Parent="8C" Id="911" Name="버그 잡기" />
+        <FATE Parent="8C" Id="683" Name="검은 악마: 실험 결과" />
+        <FATE Parent="8C" Id="684" Name="검은 악마: 과격한 숙녀" />
+        <FATE Parent="8C" Id="704" Name="광란의 달걀 찾기" />
+    </Item>
+    <Item ZoneId="8D" Text="중부 다날란">
+        <FATE Parent="8D" Id="535" Name="돌아온 거대 화염마수" />
+        <FATE Parent="8D" Id="370" Name="천박한 승부사" />
+        <FATE Parent="8D" Id="373" Name="저녁밥을 사수하라!" />
+        <FATE Parent="8D" Id="374" Name="밑 빠진 독 키키룬" />
+        <FATE Parent="8D" Id="375" Name="궤짝 말고 관짝" />
+        <FATE Parent="8D" Id="376" Name="반숙영웅" />
+        <FATE Parent="8D" Id="377" Name="사람 잡는 아귀" />
+        <FATE Parent="8D" Id="378" Name="선인장 샐러드" />
+        <FATE Parent="8D" Id="379" Name="개미다~!" />
+        <FATE Parent="8D" Id="381" Name="키브론 가의 주인" />
+        <FATE Parent="8D" Id="383" Name="가도를 가다" />
+        <FATE Parent="8D" Id="385" Name="부정한 거대 두꺼비" />
+        <FATE Parent="8D" Id="389" Name="성난 보물수호자" />
+        <FATE Parent="8D" Id="393" Name="모래성의 맹장" />
+        <FATE Parent="8D" Id="912" Name="버그 잡기" />
+        <FATE Parent="8D" Id="660" Name="신비한 마물 '골렘'" />
+        <FATE Parent="8D" Id="661" Name="신비한 마물 '벽돌골렘'" />
+        <FATE Parent="8D" Id="695" Name="별빛축제: 마법 눈사람" />
+        <FATE Parent="8D" Id="719" Name="거대 알 사냥" />
+    </Item>
+    <Item ZoneId="91" Text="동부 다날란">
+        <FATE Parent="91" Id="536" Name="돌아온 거대 화염마수" />
+        <FATE Parent="91" Id="540" Name="꿈틀꿈틀 도브란" />
+        <FATE Parent="91" Id="541" Name="거울의 기사" />
+        <FATE Parent="91" Id="542" Name="금발의 귀공자" />
+        <FATE Parent="91" Id="543" Name="추악한 합성수" />
+        <FATE Parent="91" Id="394" Name="야수를 죽여라" />
+        <FATE Parent="91" Id="395" Name="강철의 구멍술사" />
+        <FATE Parent="91" Id="652" Name="섬광 강림: 거대 마수 요격전" />
+        <FATE Parent="91" Id="397" Name="아말쟈군 요격 작전" />
+        <FATE Parent="91" Id="398" Name="침공 작전을 저지하라" />
+        <FATE Parent="91" Id="400" Name="금 장터 방어전" />
+        <FATE Parent="91" Id="401" Name="연옥의 도굴꾼" />
+        <FATE Parent="91" Id="402" Name="흉내쟁이 혼내주기" />
+        <FATE Parent="91" Id="406" Name="동부전선 이상 없다" />
+        <FATE Parent="91" Id="407" Name="악몽의 모발약탈자" />
+        <FATE Parent="91" Id="409" Name="요괴꽃이 피었습니다" />
+        <FATE Parent="91" Id="412" Name="낙원의 샘" />
+        <FATE Parent="91" Id="413" Name="뿔이 긴 어르신" />
+        <FATE Parent="91" Id="696" Name="별빛축제: 마법 눈사람" />
+        <FATE Parent="91" Id="191" Name="하늘다리 사투: 전초전" />
+        <FATE Parent="91" Id="192" Name="하늘다리 사투: 방어전" />
+        <FATE Parent="91" Id="193" Name="하늘다리 사투: 즈즈룬 격퇴" />
+        <FATE Parent="91" Id="194" Name="하늘다리 사투: 나요크 로 격퇴" />
+        <FATE Parent="91" Id="195" Name="하늘다리 사투: 시민 구출 작전" />
+        <FATE Parent="91" Id="705" Name="현자의 알" />
+        <FATE Parent="91" Id="720" Name="거대 알 사냥" />
+    </Item>
+    <Item ZoneId="92" Text="남부 다날란">
+        <FATE Parent="92" Id="545" Name="황야의 소화전" />
+        <FATE Parent="92" Id="546" Name="비운의 투사" />
+        <FATE Parent="92" Id="548" Name="정의란 무엇인가" />
+        <FATE Parent="92" Id="549" Name="등딱지를 걷어차라!" />
+        <FATE Parent="92" Id="550" Name="정예부대 '선혈군단'" />
+        <FATE Parent="92" Id="551" Name="오늘의 운세" />
+        <FATE Parent="92" Id="552" Name="친구와 가족" />
+        <FATE Parent="92" Id="553" Name="제1관문 공략전" />
+        <FATE Parent="92" Id="554" Name="속사의 달인" />
+        <FATE Parent="92" Id="555" Name="모래 위의 발자국" />
+        <FATE Parent="92" Id="557" Name="아말쟈군 특수부대 '불꽃송곳니회'" />
+        <FATE Parent="92" Id="558" Name="화염신을 부르는 자" />
+        <FATE Parent="92" Id="651" Name="섬광 강림: 거대 마수 요격전" />
+        <FATE Parent="92" Id="685" Name="검은 악마: 실험 결과" />
+        <FATE Parent="92" Id="686" Name="검은 악마: 과격한 숙녀" />
+        <FATE Parent="92" Id="706" Name="광란의 달걀 찾기" />
+        <FATE Parent="92" Id="419" Name="해골 두목" />
+        <FATE Parent="92" Id="420" Name="콩 수프는 질렸어" />
+        <FATE Parent="92" Id="421" Name="리틀 알라미고 방어전" />
+        <FATE Parent="92" Id="422" Name="진리를 밝혀라" />
+        <FATE Parent="92" Id="423" Name="느긋한 압살자" />
+        <FATE Parent="92" Id="424" Name="우리는 제2전투대대" />
+        <FATE Parent="92" Id="427" Name="끓어오르는 괴력" />
+        <FATE Parent="92" Id="429" Name="사막의 아이들" />
+        <FATE Parent="92" Id="430" Name="운명의 대변인" />
+        <FATE Parent="92" Id="431" Name="잡는 자와 잡히는 자" />
+        <FATE Parent="92" Id="432" Name="비레고의 수호자" />
+        <FATE Parent="92" Id="434" Name="정찰병의 임무" />
+        <FATE Parent="92" Id="436" Name="극악무도한 암살자" />
+        <FATE Parent="92" Id="437" Name="메마른 바다" />
+        <FATE Parent="92" Id="441" Name="금쪽같은 내 새끼" />
+        <FATE Parent="92" Id="455" Name="사막의 황제" />
+        <FATE Parent="92" Id="456" Name="가지지 못한 자" />
+    </Item>
+    <Item ZoneId="93" Text="북부 다날란">
+        <FATE Parent="93" Id="556" Name="청린 정제소 일손 돕기" />
+        <FATE Parent="93" Id="637" Name="작열하는 귀족" />
+        <FATE Parent="93" Id="638" Name="꿀꺽꿀꺽 도브란" />
+        <FATE Parent="93" Id="639" Name="감시자의 눈" />
+        <FATE Parent="93" Id="641" Name="매복한 도브란" />
+        <FATE Parent="93" Id="642" Name="무역로 청린수길" />
+        <FATE Parent="93" Id="643" Name="구세신께 바치는 제물: 납치편" />
+        <FATE Parent="93" Id="644" Name="구세신께 바치는 제물: 함정편" />
+        <FATE Parent="93" Id="645" Name="구세신께 바치는 제물: 응징편" />
+        <FATE Parent="93" Id="646" Name="구세신께 바치는 제물: 요마편" />
+        <FATE Parent="93" Id="647" Name="미쳐 날뛰는 거대 마수" />
+        <FATE Parent="93" Id="446" Name="허상의 눈" />
+        <FATE Parent="93" Id="447" Name="발톱깎이" />
+        <FATE Parent="93" Id="449" Name="불조심" />
+        <FATE Parent="93" Id="450" Name="신형 장갑재 시험" />
+        <FATE Parent="93" Id="457" Name="역공학을 통한 분석" />
+    </Item>
+    
+    <Item ZoneId="94" Text="검은장막 숲 중부삼림">
+        <FATE Parent="94" Id="537" Name="돌아온 거대 화염마수" />
+        <FATE Parent="94" Id="600" Name="린드부름의 습격" />
+        <FATE Parent="94" Id="601" Name="무지 즐거운 버섯따기" />
+        <FATE Parent="94" Id="602" Name="굿'바이" />
+        <FATE Parent="94" Id="603" Name="진리를 찾아서" />
+        <FATE Parent="94" Id="604" Name="음험한 마물" />
+        <FATE Parent="94" Id="120" Name="숲속의 질주" />
+        <FATE Parent="94" Id="121" Name="즐거운 버섯따기" />
+        <FATE Parent="94" Id="122" Name="스프리건 이사하는 날" />
+        <FATE Parent="94" Id="123" Name="혼탁함의 결정체" />
+        <FATE Parent="94" Id="124" Name="벌레 조심하세요" />
+        <FATE Parent="94" Id="125" Name="식인 괴물새" />
+        <FATE Parent="94" Id="126" Name="다리가 튼튼한 폭군" />
+        <FATE Parent="94" Id="127" Name="분노한 돼지의 질주" />
+        <FATE Parent="94" Id="128" Name="강력한 소악마 '아르슈'" />
+        <FATE Parent="94" Id="130" Name="영원그늘 수확제" />
+        <FATE Parent="94" Id="131" Name="대지신의 망각을 잊지 말기를" />
+        <FATE Parent="94" Id="136" Name="공포의 교관" />
+        <FATE Parent="94" Id="137" Name="병을 퍼뜨리는 요괴꽃" />
+        <FATE Parent="94" Id="138" Name="초코초코초코초코보" />
+        <FATE Parent="94" Id="139" Name="그대의 영혼에 평안이 있기를" />
+        <FATE Parent="94" Id="140" Name="대탈주" />
+        <FATE Parent="94" Id="141" Name="갈반스 감시초소 지원" />
+        <FATE Parent="94" Id="142" Name="물컹한 대식가" />
+        <FATE Parent="94" Id="672" Name="신비한 마물 '골렘'" />
+        <FATE Parent="94" Id="673" Name="신비한 마물 '벽돌골렘'" />
+        <FATE Parent="94" Id="697" Name="별빛축제: 마법 눈사람" />
+        <FATE Parent="94" Id="707" Name="광란의 달걀 찾기" />
+        <FATE Parent="94" Id="196" Name="고대의 투신" />
+        <FATE Parent="94" Id="197" Name="고대의 투신" />
+        <FATE Parent="94" Id="208" Name="무당벌레의 천적" />
+        <FATE Parent="94" Id="209" Name="연못 파괴자" />
+    </Item>
+    <Item ZoneId="98" Text="검은장막 숲 동부삼림">
+        <FATE Parent="98" Id="607" Name="지나간 날들의 빛" />
+        <FATE Parent="98" Id="608" Name="오츄 수확" />
+        <FATE Parent="98" Id="609" Name="제멋대로인 귀부인" />
+        <FATE Parent="98" Id="610" Name="종달새의 지저귐 조우전" />
+        <FATE Parent="98" Id="611" Name="계속되는 종달새의 지저귐 조우전" />
+        <FATE Parent="98" Id="612" Name="제국군 천인대장" />
+        <FATE Parent="98" Id="615" Name="젖뿌리 뽑기" />
+        <FATE Parent="98" Id="616" Name="유곡의 약사" />
+        <FATE Parent="98" Id="618" Name="두꺼비의 꿈" />
+        <FATE Parent="98" Id="619" Name="유곡의 위병" />
+        <FATE Parent="98" Id="620" Name="무지무지 즐거운 버섯따기" />
+        <FATE Parent="98" Id="622" Name="경건한 양육자" />
+        <FATE Parent="98" Id="143" Name="벌꿀 전쟁" />
+        <FATE Parent="98" Id="144" Name="전염병 살포기" />
+        <FATE Parent="98" Id="145" Name="전장까지 앞으로 몇 말름?" />
+        <FATE Parent="98" Id="148" Name="비밀의 화원" />
+        <FATE Parent="98" Id="149" Name="번식기의 끝" />
+        <FATE Parent="98" Id="150" Name="젊은 두목원숭이" />
+        <FATE Parent="98" Id="151" Name="줄다리 사투" />
+        <FATE Parent="98" Id="152" Name="광기 어린 수호자들" />
+        <FATE Parent="98" Id="679" Name="검은 악마: 실험 결과" />
+        <FATE Parent="98" Id="680" Name="검은 악마: 과격한 숙녀" />
+        <FATE Parent="98" Id="691" Name="기동병사 프로토아머" />
+        <FATE Parent="98" Id="692" Name="광란의 싸움꾼" />
+        <FATE Parent="98" Id="198" Name="고대의 투신" />
+        <FATE Parent="98" Id="199" Name="고대의 투신" />
+        <FATE Parent="98" Id="200" Name="고대의 투신" />
+        <FATE Parent="98" Id="212" Name="아흔 아홉덩굴" />
+        <FATE Parent="98" Id="213" Name="실프와 함께 사라지다" />
+        <FATE Parent="98" Id="214" Name="대머리수리의 만찬" />
+        <FATE Parent="98" Id="217" Name="달콤한 짐꾼" />
+        <FATE Parent="98" Id="218" Name="비정한 수확자" />
+    </Item>
+    <Item ZoneId="99" Text="검은장막 숲 남부삼림">
+        <FATE Parent="99" Id="624" Name="출렁이는 땅" />
+        <FATE Parent="99" Id="626" Name="거북 네 이노오오옴!" />
+        <FATE Parent="99" Id="627" Name="냄새의 근원 차단" />
+        <FATE Parent="99" Id="628" Name="최후의 멧돼지왕" />
+        <FATE Parent="99" Id="153" Name="날쌘 영양" />
+        <FATE Parent="99" Id="154" Name="뿌리를 건너고 늪을 지나서" />
+        <FATE Parent="99" Id="158" Name="밀렵매매 쌍방처벌" />
+        <FATE Parent="99" Id="159" Name="붉은둔덕 요새 전투: 공략전" />
+        <FATE Parent="99" Id="160" Name="붉은둔덕 요새 전투: 점령전" />
+        <FATE Parent="99" Id="161" Name="붉은둔덕 요새 전투: 방어전" />
+        <FATE Parent="99" Id="162" Name="붉은둔덕 요새 전투: 요격전" />
+        <FATE Parent="99" Id="163" Name="마지막 잎새" />
+        <FATE Parent="99" Id="164" Name="수려한 무법자" />
+        <FATE Parent="99" Id="166" Name="술집의 단골손님" />
+        <FATE Parent="99" Id="167" Name="사랑엔 시간이 필요해" />
+        <FATE Parent="99" Id="168" Name="확고한 증거" />
+        <FATE Parent="99" Id="169" Name="암시장 조합장" />
+        <FATE Parent="99" Id="170" Name="통행료는 주먹으로 내겠다" />
+        <FATE Parent="99" Id="171" Name="당장 나가주시죠" />
+        <FATE Parent="99" Id="172" Name="잃어버린 물건을 찾아서" />
+        <FATE Parent="99" Id="681" Name="검은 악마: 실험 결과" />
+        <FATE Parent="99" Id="682" Name="검은 악마: 과격한 숙녀" />
+        <FATE Parent="99" Id="190" Name="고독한 골렘" />
+        <FATE Parent="99" Id="708" Name="광란의 달걀 찾기" />
+        <FATE Parent="99" Id="201" Name="고대의 투신" />
+        <FATE Parent="99" Id="202" Name="고대의 투신" />
+        <FATE Parent="99" Id="203" Name="고대의 투신" />
+        <FATE Parent="99" Id="204" Name="고대의 투신" />
+        <FATE Parent="99" Id="215" Name="불 속으로 뛰어드는 나나니단" />
+    </Item>
+    <Item ZoneId="9A" Text="검은장막 숲 북부삼림">
+        <FATE Parent="9A" Id="538" Name="돌아온 거대 화염마수" />
+        <FATE Parent="9A" Id="631" Name="벌채부대 요격전" />
+        <FATE Parent="9A" Id="632" Name="유적의 망령기사" />
+        <FATE Parent="9A" Id="633" Name="이크살군 벌채장 강습 작전" />
+        <FATE Parent="9A" Id="634" Name="분노한 숲의 수호자" />
+        <FATE Parent="9A" Id="674" Name="신비한 마물 '골렘'" />
+        <FATE Parent="9A" Id="675" Name="신비한 마물 '벽돌골렘'" />
+        <FATE Parent="9A" Id="676" Name="신비한 마물 '골렘'" />
+        <FATE Parent="9A" Id="677" Name="신비한 마물 '황금골렘'" />
+        <FATE Parent="9A" Id="174" Name="오합지졸" />
+        <FATE Parent="9A" Id="178" Name="붉은 왕이 될 유충" />
+        <FATE Parent="9A" Id="180" Name="산길잡이의 부탁" />
+        <FATE Parent="9A" Id="183" Name="혼란탈출" />
+        <FATE Parent="9A" Id="184" Name="너도나도 좋아하는 문투이 콩" />
+        <FATE Parent="9A" Id="185" Name="매혹적인 향기" />
+        <FATE Parent="9A" Id="698" Name="별빛축제: 마법 눈사람" />
+        <FATE Parent="9A" Id="187" Name="이크살족 강습부대 요격" />
+        <FATE Parent="9A" Id="188" Name="굶주린 지즈가 원하는 것" />
+        <FATE Parent="9A" Id="189" Name="오리나무 샘 청소" />
+        <FATE Parent="9A" Id="205" Name="고대의 투신" />
+        <FATE Parent="9A" Id="206" Name="고대의 투신" />
+        <FATE Parent="9A" Id="207" Name="고대의 투신" />
+        <FATE Parent="9A" Id="722" Name="거대 알 사냥" />
+        <FATE Parent="9A" Id="216" Name="달의 반역자" />
+    </Item>
+
+    <Item ZoneId="9B" Text="커르다스 중앙고지">
+        <FATE Parent="9B" Id="653" Name="섬광 강림: 기계 마수 토벌전" />
+        <FATE Parent="9B" Id="654" Name="섬광 강림: 기계 마수 토벌전" />
+        <FATE Parent="9B" Id="699" Name="별빛축제: 마법 눈사람" />
+        <FATE Parent="9B" Id="709" Name="현자의 알" />
+        <FATE Parent="9B" Id="460" Name="늑대들의 전쟁" />
+        <FATE Parent="9B" Id="461" Name="알 수 없음" />
+        <FATE Parent="9B" Id="463" Name="검은 탄환" />
+        <FATE Parent="9B" Id="464" Name="강가의 복수자" />
+        <FATE Parent="9B" Id="465" Name="겨울 이야기" />
+        <FATE Parent="9B" Id="466" Name="별에 소원을" />
+        <FATE Parent="9B" Id="467" Name="야생악어 던디" />
+        <FATE Parent="9B" Id="469" Name="커르다스의 하얀 늑대" />
+        <FATE Parent="9B" Id="470" Name="움직이는 요새" />
+        <FATE Parent="9B" Id="472" Name="흘러라 눈물이여" />
+        <FATE Parent="9B" Id="473" Name="환희, 참회, 거친 눈보라" />
+        <FATE Parent="9B" Id="474" Name="에이비스 킬러" />
+        <FATE Parent="9B" Id="475" Name="입 큰 악귀" />
+        <FATE Parent="9B" Id="479" Name="얼어붙은 파동" />
+        <FATE Parent="9B" Id="480" Name="기병의 천적" />
+        <FATE Parent="9B" Id="482" Name="피 튀는 거리" />
+        <FATE Parent="9B" Id="483" Name="촉발된 전쟁" />
+        <FATE Parent="9B" Id="484" Name="뼈 탐식자" />
+        <FATE Parent="9B" Id="486" Name="아유나르트의 의지" />
+        <FATE Parent="9B" Id="487" Name="따스함을 찾아서" />
+        <FATE Parent="9B" Id="489" Name="순례길" />
+        <FATE Parent="9B" Id="490" Name="어리석은 용사" />
+        <FATE Parent="9B" Id="491" Name="아직은 머나먼 별빛" />
+        <FATE Parent="9B" Id="493" Name="설산의 습격자" />
+        <FATE Parent="9B" Id="494" Name="붉은 날개 '록'" />
+        <FATE Parent="9B" Id="496" Name="용의 뜻에 따라서!" />
+        <FATE Parent="9B" Id="497" Name="얼음땡" />
+        <FATE Parent="9B" Id="498" Name="입식지 확장을 저지하라" />
+        <FATE Parent="9B" Id="499" Name="후엘록 네 자매" />
+        <FATE Parent="9B" Id="500" Name="명장의 기술" />
+        <FATE Parent="9B" Id="501" Name="스바라 요격작전: 공병호송" />
+        <FATE Parent="9B" Id="502" Name="스바라 요격작전: 포격준비" />
+        <FATE Parent="9B" Id="503" Name="스바라 요격작전: 대응사격" />
+        <FATE Parent="9B" Id="504" Name="스바라 요격작전: 인해전술" />
+        <FATE Parent="9B" Id="505" Name="전설의 마수" />
+        <FATE Parent="9B" Id="506" Name="부상당한 마수" />
+        <FATE Parent="9B" Id="507" Name="돌아온 사나이" />
+        <FATE Parent="9B" Id="508" Name="바람신을 부르는 자" />
+    </Item>
+  
+    <Item ZoneId="9C" Text="모르도나">
+        <FATE Parent="9C" Id="512" Name="잃어버린 풍경" />
+        <FATE Parent="9C" Id="514" Name="엉킨덩굴 습지대 대청소" />
+        <FATE Parent="9C" Id="516" Name="늪지대의 원혼" />
+        <FATE Parent="9C" Id="517" Name="몰볼, 분노의 대증식" />
+        <FATE Parent="9C" Id="520" Name="종합정비계획" />
+        <FATE Parent="9C" Id="521" Name="잔인한 악귀" />
+        <FATE Parent="9C" Id="522" Name="성지순례" />
+        <FATE Parent="9C" Id="523" Name="거인의 부동산 확장" />
+        <FATE Parent="9C" Id="524" Name="히포그리프의 만찬" />
+        <FATE Parent="9C" Id="525" Name="흐트러진 은빛 머리칼" />
+        <FATE Parent="9C" Id="526" Name="하팔릿의 남하" />
+        <FATE Parent="9C" Id="527" Name="마수의 야습" />
+        <FATE Parent="9C" Id="529" Name="여행길의 좋은 친구" />
+        <FATE Parent="9C" Id="530" Name="달콤한 유혹" />
+        <FATE Parent="9C" Id="655" Name="섬광 강림: 아누비스 섬멸전" />
+        <FATE Parent="9C" Id="656" Name="섬광 강림: 아누비스 섬멸전" />
+        <FATE Parent="9C" Id="657" Name="섬광 강림: 시룡 토벌전" />
+        <FATE Parent="9C" Id="658" Name="섬광 강림: 시룡 토벌전" />
+    </Item>
+  
+    <!-- 2.0 던전 -->
+    <Item ZoneId="9D" Text="사스타샤 침식 동굴" Duty="사스타샤 침식 동굴">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="9E" Text="브레이플록스의 야영지" Duty="브레이플록스의 야영지">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="9F" Text="방랑자의 궁전" Duty="방랑자의 궁전">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="A1" Text="구리종 광산" Duty="구리종 광산">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="A2" Text="할라탈리 수련장" Duty="할라탈리 수련장">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="A3" Text="카른의 무너진 사원" Duty="카른의 무너진 사원">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="A4" Text="탐타라 묘소" Duty="탐타라 묘소">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="A6" Text="하우케타 별궁" Duty="하우케타 별궁">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="A7" Text="옛 암다포르 성" Duty="옛 암다포르 성">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="A8" Text="돌방패 경계초소" Duty="돌방패 경계초소">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="A9" Text="토토라크 감옥" Duty="토토라크 감옥">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="AA" Text="나무꾼의 비명" Duty="나무꾼의 비명">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="AB" Text="제멜 요새" Duty="제멜 요새">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="AC" Text="금빛 골짜기" Duty="금빛 골짜기">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="D9" Text="카스트룸 메리디아눔" Duty="카스트룸 메리디아눔">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="E0" Text="마도성 프라이토리움" Duty="마도성 프라이토리움">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    
+    <!-- 2.0 토벌전 -->
+    <Item ZoneId="CA" Text="불꽃신의 제단" Duty="이프리트 토벌전">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="CE" Text="오고모로 화산구 신전" Duty="타이탄 토벌전">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="D0" Text="울부짖는 눈 석탑군" Duty="가루다 토벌전">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="124" Text="불꽃신의 제단" Duty="진 이프리트 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="125" Text="오고모로 화산구 신전" Duty="진 타이탄 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="126" Text="울부짖는 눈 석탑군" Duty="진 가루다 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="14C" Text="서부 다날란" Duty="리트아틴 강습전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
+  
+    <!-- 2.1 각성한 자들 -->
+    <!-- 2.1 던전 -->
+    <Item ZoneId="A0" Text="시리우스 대등대" Duty="시리우스 대등대">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="15D" Text="구리종 광산" Duty="구리종 광산 (어려움)">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="15E" Text="하우케타 별궁" Duty="하우케타 별궁 (어려움)">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+  
+    <!-- 2.1 토벌전 -->
+    <Item ZoneId="CF" Text="가시 정원" Duty="선왕 모그루 모그 XII세 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="127" Text="불꽃신의 제단" Duty="극 이프리트 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="128" Text="오고모로 화산구 신전" Duty="극 타이탄 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="129" Text="울부짖는 눈 석탑군" Duty="극 가루다 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="15C" Text="후방 출입구" Duty="알테마 웨폰 파괴작전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <!-- 2.16 토벌전-->
+    <Item ZoneId="170" Text="성 다니펜의 눈물" Duty="도름 키마이라 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
+    <Item ZoneId="171" Text="수투 훈련장" Duty="하이드라 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
+  
+    <!-- 2.1 레이드 -->
+    <Item ZoneId="AE" Text="고대인의 미궁" Duty="크리스탈 타워: 고대인의 미궁">
+        <Duty Tank="6" Healer="6" DPS="12" />
+    </Item>
+    <Item ZoneId="F1" Text="메테오 탐사갱 상부" Duty="대미궁 바하무트: 해후편 1">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="F2" Text="메테오 탐사갱 하부" Duty="대미궁 바하무트: 해후편 2">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="F3" Text="라그나로크급 구속함" Duty="대미궁 바하무트: 해후편 3">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="F4" Text="가동격벽" Duty="대미궁 바하무트: 해후편 4">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="F5" Text="중추구획" Duty="대미궁 바하무트: 해후편 5">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    
+  
+    <!-- 2.2 혼돈의 소용돌이 -->
+    <!-- 2.2 던전 -->
+    <Item ZoneId="16B" Text="옛 암다포르 시가지" Duty="옛 암다포르 시가지">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="168" Text="할라탈리 수련장" Duty="할라탈리 수련장 (어려움)">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="16A" Text="브레이플록스의 야영지" Duty="브레이플록스의 야영지 (어려움)">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    
+    <!-- 2.2 토벌전 -->
+    <Item ZoneId="119" Text="대 리바이어선 쌍동선" Duty="진 리바이어선 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="167" Text="대 리바이어선 쌍동선" Duty="극 리바이어선 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="16C" Text="가시 정원" Duty="극왕 모그루 모그 XII세 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="16E" Text="그리핀 대교" Duty="길가메시 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
+    
+    <!-- 2.2 레이드 -->
+    <Item ZoneId="163" Text="메테오의 그림자" Duty="대미궁 바하무트: 침공편 1">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="164" Text="구속의 고리" Duty="대미궁 바하무트: 침공편 2">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="165" Text="라그나로크급 3번함 함체 중앙부" Duty="대미궁 바하무트: 침공편 3">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="166" Text="라그나로크급 3번함 작전실" Duty="대미궁 바하무트: 침공편 4">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    
+  
+    <!-- 2.3 에오르제아의 수호자 -->
+    <!-- 2.3 던전 -->
+    <Item ZoneId="169" Text="난파선의 섬" Duty="난파선의 섬">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="16D" Text="돌방패 경계초소" Duty="돌방패 경계초소 (어려움)">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="175" Text="탐타라 묘소" Duty="탐타라 묘소 (어려움)">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    
+    <!-- 2.3 토벌전 -->
+    <Item ZoneId="176" Text="심판의 나무" Duty="진 라무 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
+    <Item ZoneId="177" Text="심판의 나무" Duty="극 라무 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
+    
+    <!-- 2.3 레이드 -->
+    <Item ZoneId="174" Text="시르쿠스 탑" Duty="크리스탈 타워: 시르쿠스 탑">
+        <Duty Tank="3" Healer="6" DPS="15" />
+    </Item>
+    <Item ZoneId="17C" Text="메테오의 그림자" Duty="대미궁 바하무트: 침공편 1 (영웅)">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="17D" Text="구속의 고리" Duty="대미궁 바하무트: 침공편 2 (영웅)">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="17E" Text="라그나로크급 3번함 함체 중앙부" Duty="대미궁 바하무트: 침공편 3 (영웅)">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="17F" Text="라그나로크급 3번함 작전실" Duty="대미궁 바하무트: 침공편 4 (영웅)">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+
+  
+    <!-- 2.4 빙결의 환상 -->
+    <!-- 2.4 던전 -->
+    <Item ZoneId="173" Text="얼음외투 대빙벽" Duty="얼음외투 대빙벽">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="16F" Text="카른의 무너진 사원" Duty="카른의 무너진 사원 (어려움)">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="183" Text="사스타샤 침식 동굴" Duty="사스타샤 침식 동굴 (어려움)">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    
+    <!-- 2.4 토벌전 -->
+    <Item ZoneId="179" Text="아크 아파 원형극장" Duty="진 시바 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="17A" Text="아크 아파 원형극장" Duty="극 시바 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="8E" Text="할라탈리 수련장" Duty="아마지나배 투기대회 결승전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
+    
+    <!-- 2.4 레이드 -->
+    <Item ZoneId="C1" Text="라그나로크급 6번함 함체 중앙부" Duty="대미궁 바하무트: 진성편 1">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="C2" Text="라그나로크급 6번함 재생 제어 구역" Duty="대미궁 바하무트: 진성편 2">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="C3" Text="라그나로크급 6번함 제1함교" Duty="대미궁 바하무트: 진성편 3">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="C4" Text="바하무트 핵심부" Duty="대미궁 바하무트: 진성편 4">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    
+  
+    <!-- 2.5 희망의 등불 -->
+    <!-- 2.5 던전 -->
+    <Item ZoneId="96" Text="묵약의 탑" Duty="묵약의 탑">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="BC" Text="방랑자의 궁전" Duty="방랑자의 궁전 (어려움)">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="BD" Text="옛 암다포르 성" Duty="옛 암다포르 성 (어려움)">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    
+    <!-- 2.5 토벌전 -->
+    <Item ZoneId="1AA" Text="계율의 고치" Duty="아씨엔 나브리알레스 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="18A" Text="우르드의 선물" Duty="투신 오딘 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="18C" Text="옛 암다포르 성" Duty="진 길가메시 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <!-- 2.55 토벌전 -->
+    <Item ZoneId="8F" Text="구름길" Duty="성도 이슈가르드 방어전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    
+    <!-- 2.5 레이드 -->
+    <Item ZoneId="97" Text="어둠의 세계" Duty="크리스탈 타워: 어둠의 세계">
+        <Duty Tank="3" Healer="6" DPS="15" />
+    </Item>
+  
+  
+    <!-- 3.0 창천의 이슈가르드 -->
+    <!-- 3.x 지역 -->
+    <Item ZoneId="185" Text="특이점 반응기관" />
+    <Item ZoneId="18D" Text="커르다스 서부고지">
+        <FATE Parent="18D" Id="787" Name="지켜보고 있다" />
+        <FATE Parent="18D" Id="788" Name="순례 기사" />
+        <FATE Parent="18D" Id="789" Name="빙판길 주의!" />
+        <FATE Parent="18D" Id="791" Name="흑철교 전투" />
+        <FATE Parent="18D" Id="792" Name="뻣뻣한 흰털짐승" />
+        <FATE Parent="18D" Id="793" Name="야크를 먹는 거인" />
+        <FATE Parent="18D" Id="794" Name="영광의 성 피네아 연대" />
+        <FATE Parent="18D" Id="795" Name="곰 조심" />
+        <FATE Parent="18D" Id="796" Name="예티의 천적" />
+        <FATE Parent="18D" Id="797" Name="알 수 없음" />
+        <FATE Parent="18D" Id="798" Name="수인 예티" />
+        <FATE Parent="18D" Id="800" Name="용이 잠든 섬 전투" />
+        <FATE Parent="18D" Id="801" Name="얼어붙은 꽃" />
+        <FATE Parent="18D" Id="802" Name="어스름 은빛늑대" />
+        <FATE Parent="18D" Id="805" Name="지휘관님!" />
+        <FATE Parent="18D" Id="807" Name="현혹하는 시선" />
+        <FATE Parent="18D" Id="809" Name="백설공포" />
+        <FATE Parent="18D" Id="810" Name="식인 얼음과자" />
+        <FATE Parent="18D" Id="811" Name="용의 졸개 토벌작전" />
+        <FATE Parent="18D" Id="812" Name="조룡의 왕" />
+        <FATE Parent="18D" Id="813" Name="얼음 위의 늑대" />
+        <FATE Parent="18D" Id="814" Name="주정뱅이 야수" />
+        <FATE Parent="18D" Id="815" Name="젊은 용기사" />
+        <FATE Parent="18D" Id="816" Name="매의 보금자리를 위협하는 자" />
+        <FATE Parent="18D" Id="817" Name="네 공도 내 것" />
+        <FATE Parent="18D" Id="908" Name="아이스크림 두통" />
+        <FATE Parent="18D" Id="909" Name="냉혹한 얼음용" />
+    </Item>
+    <Item ZoneId="18E" Text="고지 드라바니아">
+        <FATE Parent="18E" Id="818" Name="전설의 초코보" />
+        <FATE Parent="18E" Id="819" Name="초코보 숲의 파수꾼" />
+        <FATE Parent="18E" Id="820" Name="교묘한 사냥꾼" />
+        <FATE Parent="18E" Id="821" Name="부러지지 않는 화살" />
+        <FATE Parent="18E" Id="822" Name="고고한 맹수" />
+        <FATE Parent="18E" Id="823" Name="연어 전쟁" />
+        <FATE Parent="18E" Id="824" Name="복잡미묘한 향기" />
+        <FATE Parent="18E" Id="825" Name="추악한 순례자" />
+        <FATE Parent="18E" Id="826" Name="역시 고기가 최고" />
+        <FATE Parent="18E" Id="827" Name="적의 적도 나의 적" />
+        <FATE Parent="18E" Id="828" Name="이단 선동가" />
+        <FATE Parent="18E" Id="829" Name="싸움을 끝내는 것" />
+        <FATE Parent="18E" Id="830" Name="경계를 나누는 강" />
+        <FATE Parent="18E" Id="831" Name="알 사수 전쟁" />
+        <FATE Parent="18E" Id="832" Name="구름안개 거리의 학살자" />
+        <FATE Parent="18E" Id="833" Name="어머니의 분노" />
+        <FATE Parent="18E" Id="834" Name="지하의 발소리" />
+        <FATE Parent="18E" Id="835" Name="용인의 하극상" />
+        <FATE Parent="18E" Id="836" Name="소란스러운 죽음" />
+        <FATE Parent="18E" Id="837" Name="낙원의 샘" />
+        <FATE Parent="18E" Id="838" Name="강습하는 갑룡" />
+        <FATE Parent="18E" Id="902" Name="번개야수의 여왕" />
+        <FATE Parent="18E" Id="903" Name="역습의 여왕" />
+        <FATE Parent="18E" Id="904" Name="역습의 여왕" />
+        <FATE Parent="18E" Id="905" Name="환영의 여왕" />
+        <FATE Parent="18E" Id="906" Name="환영의 여왕" />
+        <FATE Parent="18E" Id="907" Name="환영의 여왕" />
+        <FATE Parent="18E" Id="910" Name="변모한 처녀" />
+    </Item>
+    <Item ZoneId="18F" Text="저지 드라바니아">
+        <FATE Parent="18F" Id="768" Name="꼬리를 세워라!" />
+        <FATE Parent="18F" Id="769" Name="야수의 가장" />
+        <FATE Parent="18F" Id="770" Name="서방 전격전" />
+        <FATE Parent="18F" Id="771" Name="몰볼을 죽여라" />
+        <FATE Parent="18F" Id="772" Name="냄새나는 아가씨" />
+        <FATE Parent="18F" Id="773" Name="이딜샤이어 사냥 협회" />
+        <FATE Parent="18F" Id="774" Name="피에 젖은 폭군" />
+        <FATE Parent="18F" Id="775" Name="곰의 수난" />
+        <FATE Parent="18F" Id="777" Name="사역마는 괴로워" />
+        <FATE Parent="18F" Id="778" Name="개구리를 위하여 종은 울린다" />
+        <FATE Parent="18F" Id="779" Name="샬레이안의 그림자" />
+        <FATE Parent="18F" Id="780" Name="애서가의 우울" />
+        <FATE Parent="18F" Id="781" Name="코카트리스의 추억" />
+        <FATE Parent="18F" Id="782" Name="끝없는 시간의 흐름 끝에서" />
+        <FATE Parent="18F" Id="783" Name="주인을 기다리는 자" />
+        <FATE Parent="18F" Id="784" Name="물고기 포식자" />
+        <FATE Parent="18F" Id="785" Name="누에굴" />
+        <FATE Parent="18F" Id="786" Name="실 뽑는 전문가" />
+        <FATE Parent="18F" Id="756" Name="악마의 기계" />
+        <FATE Parent="18F" Id="757" Name="보복자들" />
+        <FATE Parent="18F" Id="758" Name="전면 개조형 기체" />
+        <FATE Parent="18F" Id="759" Name="왕대모벌의 습격" />
+        <FATE Parent="18F" Id="760" Name="야성의 충돌" />
+        <FATE Parent="18F" Id="761" Name="왕눈이 마물 소" />
+        <FATE Parent="18F" Id="762" Name="도서관 청소" />
+        <FATE Parent="18F" Id="763" Name="꽃가루 전선 이상 있다" />
+        <FATE Parent="18F" Id="764" Name="피 빠는 부유초" />
+        <FATE Parent="18F" Id="766" Name="고브고브 전쟁" />
+        <FATE Parent="18F" Id="767" Name="숙련된 전투 지휘관" />
+    </Item>
+    <Item ZoneId="190" Text="드라바니아 구름바다">
+        <FATE Parent="190" Id="868" Name="검은미늘 토벌전: 백룡 지원" />
+        <FATE Parent="190" Id="869" Name="검은미늘 토벌전: 추격 작전" />
+        <FATE Parent="190" Id="870" Name="검은미늘 토벌전: 총력전" />
+        <FATE Parent="190" Id="871" Name="창천의 백룡" />
+        <FATE Parent="190" Id="872" Name="하얀 궁전 방어전: 아기용 구출" />
+        <FATE Parent="190" Id="873" Name="하얀 궁전 방어전: 맹룡 토벌" />
+        <FATE Parent="190" Id="874" Name="하얀 궁전 방어전: 모그리 구출" />
+        <FATE Parent="190" Id="725" Name="구름 속 수생생물" />
+        <FATE Parent="190" Id="726" Name="안녕 태고의 다이노스" />
+        <FATE Parent="190" Id="727" Name="흑룡의 사도" />
+        <FATE Parent="190" Id="728" Name="저축왕 모그리" />
+        <FATE Parent="190" Id="731" Name="잃어버린 세계" />
+        <FATE Parent="190" Id="732" Name="구름바다에 치는 천둥" />
+        <FATE Parent="190" Id="735" Name="포식하는 공룡" />
+        <FATE Parent="190" Id="736" Name="긴급출동 툴리핸드" />
+        <FATE Parent="190" Id="737" Name="긴급출동 뷔브르" />
+        <FATE Parent="190" Id="738" Name="유적 감시자" />
+        <FATE Parent="190" Id="740" Name="드래곤과 춤을" />
+        <FATE Parent="190" Id="741" Name="드래곤과 또다시 춤을" />
+        <FATE Parent="190" Id="742" Name="사나운 갑주드래곤" />
+        <FATE Parent="190" Id="744" Name="밤과 안개" />
+        <FATE Parent="190" Id="746" Name="용쟁혈투" />
+        <FATE Parent="190" Id="747" Name="황혼의 비룡" />
+        <FATE Parent="190" Id="748" Name="너는 누구냐" />
+        <FATE Parent="190" Id="751" Name="맹염의 불꽃용" />
+        <FATE Parent="190" Id="752" Name="흡입력을 잃지 않는다" />
+        <FATE Parent="190" Id="753" Name="구름바다의 문제아" />
+        <FATE Parent="190" Id="754" Name="신성함과 사악함이 교차하는 균열" />
+        <FATE Parent="190" Id="755" Name="어리석은 문제아" />
+    </Item>
+    <Item ZoneId="191" Text="아발라시아 구름바다">
+        <FATE Parent="191" Id="839" Name="고양이의 돌진" />
+        <FATE Parent="191" Id="840" Name="가스토르니스 둥지 파괴 명령" />
+        <FATE Parent="191" Id="841" Name="화려한 뚱보 새" />
+        <FATE Parent="191" Id="842" Name="구름바다 대난투" />
+        <FATE Parent="191" Id="843" Name="장미의 피를 마시고 싶어" />
+        <FATE Parent="191" Id="844" Name="검은 새" />
+        <FATE Parent="191" Id="845" Name="지나친 혈기" />
+        <FATE Parent="191" Id="846" Name="불법 투기자" />
+        <FATE Parent="191" Id="847" Name="구름바다의 전사" />
+        <FATE Parent="191" Id="848" Name="알 수 없음" />
+        <FATE Parent="191" Id="849" Name="알 수 없음" />
+        <FATE Parent="191" Id="850" Name="알 수 없음" />
+        <FATE Parent="191" Id="851" Name="멋진 신세계" />
+        <FATE Parent="191" Id="852" Name="하늘 위의 구름" />
+        <FATE Parent="191" Id="853" Name="도망자" />
+        <FATE Parent="191" Id="854" Name="추적자" />
+        <FATE Parent="191" Id="855" Name="폭식자 바위인형" />
+        <FATE Parent="191" Id="856" Name="보급로를 끊어라" />
+        <FATE Parent="191" Id="857" Name="초대받지 않은 손님" />
+        <FATE Parent="191" Id="858" Name="알 수 없음" />
+        <FATE Parent="191" Id="859" Name="알 수 없음" />
+        <FATE Parent="191" Id="860" Name="공포의 대명사" />
+        <FATE Parent="191" Id="861" Name="구름신의 사제" />
+        <FATE Parent="191" Id="862" Name="케나바누의 제자들" />
+        <FATE Parent="191" Id="863" Name="복수의 사제" />
+        <FATE Parent="191" Id="864" Name="융단폭격" />
+        <FATE Parent="191" Id="865" Name="광기 어린 노랫소리" />
+        <FATE Parent="191" Id="866" Name="구름바다의 광풍" />
+        <FATE Parent="191" Id="867" Name="흉조는 구름을 넘고" />
+        <FATE Parent="191" Id="875" Name="거대한 부리의 괴조" />
+    </Item>
+    <Item ZoneId="192" Text="아지스 라">
+        <FATE Parent="192" Id="877" Name="태고의 위협: 야광화 격멸전" />
+        <FATE Parent="192" Id="878" Name="태고의 위협: 야광화 격멸전" />
+        <FATE Parent="192" Id="879" Name="태고의 위협: 야광화 격멸전" />
+        <FATE Parent="192" Id="880" Name="제보 번호 199 버그" />
+        <FATE Parent="192" Id="881" Name="윤회의 뱀" />
+        <FATE Parent="192" Id="882" Name="알라그 위협의 메커니즘" />
+        <FATE Parent="192" Id="883" Name="간사한 마수" />
+        <FATE Parent="192" Id="884" Name="마수 사냥" />
+        <FATE Parent="192" Id="885" Name="충의의 요괴왕" />
+        <FATE Parent="192" Id="886" Name="돌연변이 꽃밭" />
+        <FATE Parent="192" Id="887" Name="강철의 도시" />
+        <FATE Parent="192" Id="888" Name="잃어버린 기술" />
+        <FATE Parent="192" Id="889" Name="전자동 수작업" />
+        <FATE Parent="192" Id="890" Name="마도기사장" />
+        <FATE Parent="192" Id="891" Name="감마 전선의 격전: 동부" />
+        <FATE Parent="192" Id="892" Name="감마 전선의 격전: 서부" />
+        <FATE Parent="192" Id="893" Name="감마 전선의 격전: 남부" />
+        <FATE Parent="192" Id="894" Name="지성을 잃은 폭풍" />
+        <FATE Parent="192" Id="895" Name="머리 많은 인조 드래곤" />
+        <FATE Parent="192" Id="897" Name="대량 발주 오류 사건" />
+        <FATE Parent="192" Id="898" Name="불길한 실험체" />
+        <FATE Parent="192" Id="899" Name="영혼 없는 육체" />
+        <FATE Parent="192" Id="900" Name="상급 알라그 사용자" />
+        <FATE Parent="192" Id="901" Name="꿈꾸는 무인기" />
+    </Item>
+     
+    <Item ZoneId="1A2" Text="이슈가르드 하층" Rest="1" />
+    <Item ZoneId="1A3" Text="이슈가르드 상층" Rest="1" />
+    <Item ZoneId="1AD" Text="여인숙 '아홉 구름'" Rest="1" />
+    <Item ZoneId="1B1" Text="포르탕 가 저택" Rest="1" />
+    <Item ZoneId="1DE" Text="이딜샤이어" Rest="1" />
+    
+    <!-- 3.0 던전 -->
+    <Item ZoneId="1B3" Text="용의 둥지" Duty="용의 둥지">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="1A0" Text="구브라 환상도서관" Duty="구브라 환상도서관">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="1A5" Text="이슈가르드 교황청" Duty="이슈가르드 교황청">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="1AE" Text="무한연속 박물함" Duty="무한연속 박물함">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="1B2" Text="어스름 요새" Duty="어스름 요새">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="1B6" Text="마과학 연구소" Duty="마과학 연구소">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="1B9" Text="솜 알" Duty="솜 알">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="1A4" Text="거두지 않는 섬" Duty="거두지 않는 섬">
+      <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    
+    <!-- 3.0 토벌전 -->
+    <Item ZoneId="1B0" Text="무신의 투기장" Duty="진 라바나 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
+    <Item ZoneId="1B4" Text="쪽빛 성역" Duty="진 비스마르크 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
+    <Item ZoneId="1B5" Text="특이점 반응기관" Duty="나이츠 오브 라운드 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
+    <Item ZoneId="1BE" Text="무신의 투기장" Duty="극 라바나 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
+    <Item ZoneId="1BF" Text="쪽빛 성역" Duty="극 비스마르크 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
+    
+    <!-- 3.01 레이드 -->
+    <Item ZoneId="1BA" Text="고르디우스의 주먹" Duty="기공성 알렉산더: 기동편 1">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
+    <Item ZoneId="1BB" Text="고르디우스의 손목" Duty="기공성 알렉산더: 기동편 2">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
+    <Item ZoneId="1BC" Text="고르디우스의 팔" Duty="기공성 알렉산더: 기동편 3">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
+    <Item ZoneId="1BD" Text="고르디우스의 어깨" Duty="기공성 알렉산더: 기동편 4">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="1F9" Text="고르디우스의 매듭" />
+    <!-- 3.05 레이드-->
+    <Item ZoneId="1C1" Text="고르디우스의 주먹" Duty="기공성 알렉산더: 기동편 1 (영웅)">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
+    <Item ZoneId="1C2" Text="고르디우스의 손목" Duty="기공성 알렉산더: 기동편 2 (영웅)">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
+    <Item ZoneId="1C3" Text="고르디우스의 팔" Duty="기공성 알렉산더: 기동편 3 (영웅)">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item> 
+    <Item ZoneId="1C4" Text="고르디우스의 어깨" Duty="기공성 알렉산더: 기동편 4 (영웅)">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    
+  
+    <!-- 3.1 빛과 어둠의 경계 -->
+    <!-- 3.1 던전 -->
+    <Item ZoneId="1FE" Text="시리우스 대등대" Duty="시리우스 대등대 (어려움)">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="1FF" Text="성 모샨 식물원" Duty="성 모샨 식물원">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+  
+    <!-- 3.1 토벌전 -->
+    <Item ZoneId="1C0" Text="특이점 반응기관" Duty="극 나이츠 오브 라운드 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+
+    <!-- 3.1 레이드 -->
+    <Item ZoneId="1FC" Text="보이드의 방주" Duty="보이드의 방주">
+        <Duty Tank="3" Healer="6" DPS="15" />
+    </Item>
+
+    <!-- 3.1 파티 컨텐츠 -->
+    <Item ZoneId="200" Text="디아뎀 제도" Duty="디아뎀 제도(쉬움)">
+        <Duty Tank="1" Healer="2" DPS="5" />
+    </Item>
+    <Item ZoneId="202" Text="디아뎀 제도" Duty="디아뎀 제도">
+        <Duty Tank="1" Healer="2" DPS="5" />
+    </Item>
+    <Item ZoneId="203" Text="디아뎀 제도" Duty="디아뎀 제도(어려움)">
+        <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+
+  
+    <!-- 3.2 운명의 톱니바퀴 -->
+    <!-- 3.2 던전 -->
+    <Item ZoneId="204" Text="거꾸로 선 탑" Duty="거꾸로 선 탑">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="207" Text="옛 암다포르 시가지" Duty="옛 암다포르 시가지 (어려움)">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+
+    <!-- 3.2 토벌전 -->
+    <Item ZoneId="205" Text="" Duty="마신 세피로트 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="20C" Text="" Duty="극 마신 세피로트 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+
+    <!-- 3.2 레이드 -->
+    <Item ZoneId="208" Text="" Duty="기동성 알렉산더: 율동편 1">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="209" Text="" Duty="기동성 알렉산더: 율동편 2">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="20A" Text="" Duty="기동성 알렉산더: 율동편 3">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="20B" Text="" Duty="기동성 알렉산더: 율동편 4">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="211" Text="" Duty="기동성 알렉산더: 율동편(영웅) 1">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="212" Text="" Duty="기동성 알렉산더: 율동편(영웅) 2">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="213" Text="" Duty="기동성 알렉산더: 율동편(영웅) 3">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="214" Text="" Duty="기동성 알렉산더: 율동편(영웅) 4">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+
+  
+    <!-- 길드 작전 -->
+    <Item ZoneId="BE" Text="검은장막 숲 중부삼림" Duty="방황하는 사령을 쓰러뜨려라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="BF" Text="검은장막 숲 동부삼림" Duty="독성 요괴꽃을 제거하라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="C0" Text="검은장막 숲 남부삼림" Duty="무법자 '나나니단'을 섬멸하라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="D6" Text="중부 라노시아" Duty="집단전 훈련을 완수하라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="D7" Text="서부 다날란" Duty="관문을 돌파하고 최심부의 적을 쓰러뜨려라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="D8" Text="중부 다날란" Duty="길거북을 사로잡아라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="DB" Text="검은장막 숲 중부삼림" Duty="폭탄광 고블린 군단을 섬멸하라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="DC" Text="검은장막 숲 남부삼림" Duty="몽환의 브라크시오를 쓰러뜨려라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="DD" Text="고지 라노시아" Duty="오염원 몰볼을 쓰러뜨려라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="DE" Text="저지 라노시아" Duty="갱도에 나타난 요마 부소를 쓰러뜨려라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="DF" Text="커르다스 중앙고지" Duty="무적의 부하를 조종하는 요마를 쓰러뜨려라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="12A" Text="커르다스 중앙고지" Duty="봄을 거느린 '봄 여왕'을 쓰러뜨려라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="12B" Text="모르도나" Duty="불길한 진영을 짜는 요마를 섬멸하라!">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="12C" Text="모르도나" Duty="세 거인족을 제압하여 유물을 지켜내라!">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+
+
+    <!-- 초보자의 집 -->
+    <Item ZoneId="219" Text="" Duty="범위 공격을 피하자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="21A" Text="" Duty="콤보를 이어 적개심을 끌자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="21B" Text="" Duty="실전에서 콤보를 사용해보자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="21C" Text="" Duty="다수의 적에게서 적개심을 끌자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="21D" Text="" Duty="실전에서 다수의 적과 싸워보자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="21E" Text="" Duty="멀리서 적개심을 끌자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="21F" Text="" Duty="적 지원군에 대처하자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="220" Text="" Duty="파티원과 협력하여 적을 물리치자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="221" Text="" Duty="파티원과 같은 적을 공격하자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="222" Text="" Duty="적의 공격을 피하면서 싸우자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="223" Text="" Duty="적 지원군에 대처하자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="224" Text="" Duty="특수 장치를 활용하며 싸우자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="225" Text="" Duty="파티원을 회복시키자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="226" Text="" Duty="다수의 파티원을 회복시키자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="227" Text="" Duty="적의 공격을 피하면서 싸우자!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="228" Text="" Duty="마지막 훈련!">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+
+
+    <!-- PvP -->
+    <Item ZoneId="AF" Text="늑대우리" Duty="더 폴드" PVP="1">
+        <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="150" Text="늑대우리" Duty="더 폴드" PVP="1">
+        <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="151" Text="늑대우리" Duty="더 폴드 (파티 매칭)" PVP="1">
+        <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="160" Text="늑대우리" Duty="더 폴드 (고정 소규모 파티)" PVP="1">
+        <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="B8" Text="늑대우리" Duty="더 폴드 (파티 매칭)" PVP="1">
+        <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="BA" Text="늑대우리" Duty="더 폴드 (고정 소규모 파티)" PVP="1">
+        <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="178" Text="카르테노 평원: 외곽 유적지대" Duty="외곽 유적지대 (제압전)" PVP="1">
+        <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="1A6" Text="카르테노 평원: 외곽 유적지대" Duty="외곽 유적지대 (섬멸전)" PVP="1">
+        <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="1AF" Text="봉인된 바위섬" Duty="봉인된 바위섬 (쟁탈전)" PVP="1">
+        <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+</Data>

@@ -60,10 +60,11 @@
     <StartupObject>App.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>devunt.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
@@ -89,46 +90,66 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Api.cs" />
-    <Compile Include="Global.cs" />
-    <Compile Include="INIFile.cs" />
-    <Compile Include="Instance.cs" />
-    <Compile Include="Invoker.cs" />
-    <Compile Include="Log.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="Struct\Roulette.cs" />
+    <Compile Include="Api\WebApi.cs" />
+    <Compile Include="Struct\Area.cs" />
+    <Compile Include="Struct\FATE.cs" />
+    <Compile Include="Struct\Instance.cs" />
+    <Compile Include="Form\OverlayFormMove.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Form\OverlayFormMove.Designer.cs">
+      <DependentUpon>OverlayFormMove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\TabControlBlack.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="Util\INIFile.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="Util\Invoker.cs" />
+    <Compile Include="Util\Log.cs" />
+    <Compile Include="Form\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Network.cs" />
-    <Compile Include="Network.Analyser.cs" />
-    <Compile Include="Network.Packet.cs" />
-    <Compile Include="Sentry.cs" />
-    <Compile Include="UpdaterForm.cs">
+    <Compile Include="Network\Network.cs" />
+    <Compile Include="Network\Network.Analyser.cs" />
+    <Compile Include="Network\Network.Packet.cs" />
+    <Compile Include="Util\Sentry.cs" />
+    <Compile Include="Component\TriStateTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form\UpdaterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdaterForm.Designer.cs">
+    <Compile Include="Form\UpdaterForm.Designer.cs">
       <DependentUpon>UpdaterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="OverlayForm.cs">
+    <Compile Include="Form\OverlayForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OverlayForm.Designer.cs">
+    <Compile Include="Form\OverlayForm.Designer.cs">
       <DependentUpon>OverlayForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Updater.cs" />
-    <Compile Include="ZipStorer.cs" />
-    <EmbeddedResource Include="MainForm.resx">
+    <Compile Include="Api\WinApi.cs" />
+    <Compile Include="Util\ZipStorer.cs" />
+    <EmbeddedResource Include="Form\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdaterForm.resx">
+    <EmbeddedResource Include="Form\OverlayFormMove.resx">
+      <DependentUpon>OverlayFormMove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\UpdaterForm.resx">
       <DependentUpon>UpdaterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OverlayForm.resx">
+    <EmbeddedResource Include="Form\OverlayForm.resx">
       <DependentUpon>OverlayForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -145,7 +166,6 @@
     <None Include="app.manifest">
       <SubType>Designer</SubType>
     </None>
-    <None Include="devunt.snk" />
     <None Include="ILMerge.props" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -161,6 +181,9 @@
   <ItemGroup>
     <Content Include="App.ico" />
     <Content Include="ILMergeOrder.txt" />
+    <Content Include="Resources\ZoneList.xml">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="NetFwTypeLib">
@@ -180,6 +203,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

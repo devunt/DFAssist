@@ -9,14 +9,16 @@ using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace App
 {
     partial class Network
     {
-        [DllImport("Iphlpapi.dll", SetLastError = true)]
-        public static extern uint GetExtendedTcpTable(IntPtr tcpTable, ref int tcpTableLength, bool sort, AddressFamily ipVersion, int tcpTableType, int reserved);
+        private static class NativeMethods
+        {
+            [DllImport("Iphlpapi.dll", SetLastError = true)]
+            public static extern uint GetExtendedTcpTable(IntPtr tcpTable, ref int tcpTableLength, bool sort, AddressFamily ipVersion, int tcpTableType, int reserved);
+        }
 
         public const int TCP_TABLE_OWNER_PID_CONNECTIONS = 4;
         public readonly byte[] RCVALL_IPLEVEL = new byte[4] { 3, 0, 0, 0 };
@@ -292,7 +294,8 @@ namespace App
             string lobbyHost = null;
             int lobbyPort = 0;
 
-            try {
+            try
+            {
                 using (var searcher = new ManagementObjectSearcher("SELECT CommandLine FROM Win32_Process WHERE ProcessId = " + process.Id))
                 {
                     foreach (var @object in searcher.Get())
@@ -339,12 +342,12 @@ namespace App
             IntPtr tcpTable = IntPtr.Zero;
             int tcpTableLength = 0;
 
-            if (GetExtendedTcpTable(tcpTable, ref tcpTableLength, false, AddressFamily.InterNetwork, TCP_TABLE_OWNER_PID_CONNECTIONS, 0) != 0)
+            if (NativeMethods.GetExtendedTcpTable(tcpTable, ref tcpTableLength, false, AddressFamily.InterNetwork, TCP_TABLE_OWNER_PID_CONNECTIONS, 0) != 0)
             {
                 try
                 {
                     tcpTable = Marshal.AllocHGlobal(tcpTableLength);
-                    if (GetExtendedTcpTable(tcpTable, ref tcpTableLength, false, AddressFamily.InterNetwork, TCP_TABLE_OWNER_PID_CONNECTIONS, 0) == 0)
+                    if (NativeMethods.GetExtendedTcpTable(tcpTable, ref tcpTableLength, false, AddressFamily.InterNetwork, TCP_TABLE_OWNER_PID_CONNECTIONS, 0) == 0)
                     {
                         TcpTable table = (TcpTable)Marshal.PtrToStructure(tcpTable, typeof(TcpTable));
 

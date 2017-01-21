@@ -1,10 +1,8 @@
-﻿using System.Drawing;
-
-namespace App
+﻿namespace App
 {
     class Global
     {
-        public const string VERSION = "v20160628.1";
+        public const string VERSION = "v20161011.1";
 
         public const string APPNAME = "DFAssist";
         public const string SETTINGS_FILEPATH = @"config.ini";
@@ -15,7 +13,6 @@ namespace App
 
         public const string API_ENDPOINT = @"http://df.devunt.kr/";
 
-        public static readonly Color ACCENT_COLOR = Color.Red;
         public const int BLINK_COUNT = 100;
         public const int BLINK_INTERVAL = 200;
 

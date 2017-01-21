@@ -17,7 +17,6 @@ namespace App
 #if !DEBUG
             Sentry.Initialise();
 #endif
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
