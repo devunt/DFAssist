@@ -1,5 +1,5 @@
 ﻿<Data>
-    <Version>20161208.2</Version>
+    <Version>20170201.1</Version>
 
     <!-- 무작위 임무 -->
     <Roulette Id="1" Text="무작위 임무: 레벨링" />
@@ -1255,6 +1255,21 @@
         <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
     <Item ZoneId="1AF" Text="봉인된 바위섬" Duty="봉인된 바위섬 (쟁탈전)" PVP="1">
+        <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneID="206" Text="더 피스트" Duty="더 피스트 (8 대 8 / 파티 매칭)" PVP="1">
+        <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneID="20D" Text="더 피스트" Duty="더 피스트 (4 대 4 / 개인)" PVP="1">
+        <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneID="20E" Text="더 피스트" Duty="더 피스트 (4 대 4 / 고정 소규모 파티)" PVP="1">
+        <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneID="20F" Text="더 피스트" Duty="더 피스트 (4 대 4 / 개인)" PVP="1">
+        <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneID="210" Text="더 피스트" Duty="더 피스트 (4 대 4 / 고정 소규모 파티)" PVP="1">
         <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
 </Data>
