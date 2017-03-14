@@ -136,7 +136,7 @@ namespace App
                     m_overlay.BackColor = Color.FromArgb(64, 0, 0);
 
                     CancelDutyFinderSync();
-                    label_DutyName.Text = "< 클라이언트 통신 대기중... >";
+                    label_DutyName.Text = "클라이언트 통신 대기 중";
                 }
                 this.isOkay = isOkay;
             });
@@ -170,7 +170,7 @@ namespace App
             {
                 label_DutyCount.Text = "무작위 임무";
                 label_DutyName.Text = string.Format("< {0} >", roulette.Name);
-                label_DutyStatus.Text = string.Format("매칭 대기중");
+                label_DutyStatus.Text = string.Format("매칭 대기 중");
             });
         }
 
@@ -178,7 +178,7 @@ namespace App
         {
             this.Invoke(() =>
             {
-                label_DutyCount.Text = "입장 확인 대기중";
+                label_DutyCount.Text = "입장 확인 대기 중";
                 label_DutyName.Text = string.Format("< {0} >", instance.Name);
                 label_DutyStatus.Text = "매칭!";
 
@@ -210,7 +210,7 @@ namespace App
             StopBlink();
 
             label_DutyCount.Text = "";
-            label_DutyName.Text = "< 매칭중인 임무 없음 >";
+            label_DutyName.Text = "매칭 중인 임무 없음";
             label_DutyStatus.Text = "";
         }
 
