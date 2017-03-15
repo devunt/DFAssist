@@ -1099,10 +1099,10 @@
     </Item>
 
     <!-- 3.2 토벌전 -->
-    <Item ZoneId="205" Text="" Duty="마신 세피로트 토벌전">
+    <Item ZoneId="205" Text="봉쇄구역 S1T7" Duty="마신 세피로트 토벌전">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    <Item ZoneId="20C" Text="" Duty="극 마신 세피로트 토벌전">
+    <Item ZoneId="20C" Text="봉쇄구역 S1T7" Duty="극 마신 세피로트 토벌전">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
 
@@ -1142,10 +1142,10 @@
     </Item>
 
     <!-- 3.3 토벌전 -->
-    <Item ZoneId="22F" Text="" Duty="니드호그 토벌전">
+    <Item ZoneId="22F" Text="구름길" Duty="니드호그 토벌전">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    <Item ZoneId="236" Text="" Duty="극 니드호그 토벌전">
+    <Item ZoneId="236" Text="구름길" Duty="극 니드호그 토벌전">
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
 
