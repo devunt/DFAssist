@@ -35,7 +35,7 @@
             // 
             // label_DutyCount
             // 
-            this.label_DutyCount.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_DutyCount.Font = new System.Drawing.Font("맑은 고딕", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label_DutyCount.Location = new System.Drawing.Point(1, 3);
             this.label_DutyCount.Name = "label_DutyCount";
             this.label_DutyCount.Size = new System.Drawing.Size(245, 15);
@@ -46,10 +46,10 @@
             // label_DutyName
             // 
             this.label_DutyName.AutoEllipsis = true;
-            this.label_DutyName.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_DutyName.Location = new System.Drawing.Point(1, 22);
+            this.label_DutyName.Font = new System.Drawing.Font("맑은 고딕", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_DutyName.Location = new System.Drawing.Point(1, 18);
             this.label_DutyName.Name = "label_DutyName";
-            this.label_DutyName.Size = new System.Drawing.Size(245, 15);
+            this.label_DutyName.Size = new System.Drawing.Size(245, 19);
             this.label_DutyName.TabIndex = 2;
             this.label_DutyName.Text = "<대미궁 바하무트: 진성편 4>";
             this.label_DutyName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
