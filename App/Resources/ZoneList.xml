@@ -1,5 +1,5 @@
 ﻿<Data>
-    <Version>20170201.1</Version>
+    <Version>20170315.1</Version>
 
     <!-- 무작위 임무 -->
     <Roulette Id="1" Text="무작위 임무: 레벨링" />
@@ -1085,7 +1085,7 @@
         <Duty Tank="1" Healer="2" DPS="5" />
     </Item>
     <Item ZoneId="203" Text="디아뎀 제도" Duty="디아뎀 제도(어려움)">
-        <Duty Tank="0" Healer="0" DPS="0" />
+        <Duty Tank="1" Healer="2" DPS="5" />
     </Item>
 
   
@@ -1132,7 +1132,33 @@
         <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
 
-  
+    <!-- 3.3 최후의 포효 -->
+    <!-- 3.3 던전 -->
+    <Item ZoneId="22B" Text="소르 카이" Duty="소르 카이">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="22D" Text="난파선의 섬" Duty="난파선의 섬 (어려움)">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+
+    <!-- 3.3 토벌전 -->
+    <Item ZoneId="22F" Text="" Duty="니드호그 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="236" Text="" Duty="극 니드호그 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+
+    <!-- 3.3 레이드 -->
+    <Item ZoneId="22C" Text="" Duty="금기도시 마하">
+        <Duty Tank="3" Healer="6" DPS="15" />
+    </Item>
+
+    <!-- 3.3 파티 컨텐츠 -->
+    <Item ZoneId="22E" Text="" Duty="보물고 아쿠아폴리스">
+        <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+
     <!-- 길드 작전 -->
     <Item ZoneId="BE" Text="검은장막 숲 중부삼림" Duty="방황하는 사령을 쓰러뜨려라!">
         <Duty Tank="1" Healer="1" DPS="2" />
@@ -1270,6 +1296,9 @@
         <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
     <Item ZoneID="210" Text="더 피스트" Duty="더 피스트 (4 대 4 / 고정 소규모 파티)" PVP="1">
+        <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneID="22A" Text="영광의 평원" Duty="영광의 평원 (쇄빙전)" PVP="1">
         <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
 </Data>
