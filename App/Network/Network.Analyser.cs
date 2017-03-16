@@ -166,7 +166,7 @@ namespace App
 
                             if (teleMeasure != 0x0C)
                             {
-                                Log.D("{1}{2} 지역을 이동했습니다. ({0})", code, Data.GetAreaName(code), lastChar);
+                                Log.D("{1}{2} 지역으로 이동했습니다. ({0})", code, Data.GetAreaName(code), lastChar);
                             }
                             else
                             {
