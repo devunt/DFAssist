@@ -169,7 +169,7 @@ namespace App
                 }
                 else
                 {
-                    if (tank == 0 || tank == 255) // 0: 순번 지원되지 않음, 255: 순번 대기
+                    if (tank == 255) // 순번 대기
                     {
                         label_DutyStatus.Text = "매칭 대기 중";
                     }
