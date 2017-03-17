@@ -1,4 +1,4 @@
-using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
@@ -335,7 +335,7 @@ namespace App
                         {
                             // 프로그램이 매칭 중간에 켜짐
                             state = State.QUEUED;
-                            mainForm.overlayForm.SetDutyCount(1); // 임의로 1개로 설정함 (TODO: 알아낼 방법 있으면 정학히 나오게 수정하기)
+                            mainForm.overlayForm.SetDutyCount(-1); // 알 수 없음으로 설정함 (TODO: 알아낼 방법 있으면 정확히 나오게 수정하기)
                             mainForm.overlayForm.SetDutyStatus(instance, tank, dps, healer);
                         }
                         else if (state == State.QUEUED)

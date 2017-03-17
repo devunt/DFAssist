@@ -147,20 +147,38 @@ namespace App
             isRoulette = false;
             this.Invoke(() =>
             {
-                label_DutyCount.Text = string.Format("총 {0}개 임무 매칭중", dutyCount);
+                if(dutyCount < 0)
+                {
+                    label_DutyCount.Text = "임무 매칭 중";
+                }
+                else
+                {
+                    label_DutyCount.Text = string.Format("총 {0}개 임무 매칭 중", dutyCount);
+                }
             });
         }
 
         internal void SetDutyStatus(Instance instance, byte tank, byte dps, byte healer)
         {
-            if (!isRoulette)
+            this.Invoke(() =>
             {
-                this.Invoke(() =>
+                if (!isRoulette)
                 {
                     label_DutyName.Text = string.Format("< {0} >", instance.Name);
                     label_DutyStatus.Text = string.Format("{0}/{3}    {1}/{4}    {2}/{5}", tank, healer, dps, instance.Tank, instance.Healer, instance.DPS);
-                });
-            }
+                }
+                else
+                {
+                    if (tank == 0 || tank == 255) // 0: 순번 지원되지 않음, 255: 순번 대기
+                    {
+                        label_DutyStatus.Text = "매칭 대기 중";
+                    }
+                    else // TODO: 순번이 1번일 때?
+                    {
+                        label_DutyStatus.Text = string.Format("대기 순번: {0}", tank + 1);
+                    }
+                }
+            });
         }
 
         internal void SetRoulleteDuty(Roulette roulette)
