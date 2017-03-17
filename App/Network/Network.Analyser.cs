@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
@@ -263,8 +263,7 @@ namespace App
                 }
                 else if (opcode == 0x0076)
                 {
-                    var code = data[184];
-
+                    var code = data[192];
                     var roulette = Data.GetRoulette(code);
 
                     state = State.QUEUED;
