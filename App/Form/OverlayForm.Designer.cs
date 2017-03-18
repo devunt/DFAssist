@@ -51,7 +51,7 @@
             this.label_DutyName.Name = "label_DutyName";
             this.label_DutyName.Size = new System.Drawing.Size(245, 19);
             this.label_DutyName.TabIndex = 2;
-            this.label_DutyName.Text = "<대미궁 바하무트: 진성편 4>";
+            this.label_DutyName.Text = "대미궁 바하무트: 진성편 4";
             this.label_DutyName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_DutyStatus

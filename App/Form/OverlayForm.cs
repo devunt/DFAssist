@@ -164,7 +164,7 @@ namespace App
             {
                 if (!isRoulette)
                 {
-                    label_DutyName.Text = string.Format("< {0} >", instance.Name);
+                    label_DutyName.Text = instance.Name;
                     label_DutyStatus.Text = string.Format("{0}/{3}    {1}/{4}    {2}/{5}", tank, healer, dps, instance.Tank, instance.Healer, instance.DPS);
                 }
                 else
@@ -187,7 +187,7 @@ namespace App
             this.Invoke(() =>
             {
                 label_DutyCount.Text = "무작위 임무";
-                label_DutyName.Text = string.Format("< {0} >", roulette.Name);
+                label_DutyName.Text = roulette.Name;
                 label_DutyStatus.Text = "매칭 대기 중";
             });
         }
@@ -197,7 +197,7 @@ namespace App
             this.Invoke(() =>
             {
                 label_DutyCount.Text = "입장 확인 대기 중";
-                label_DutyName.Text = string.Format("< {0} >", instance.Name);
+                label_DutyName.Text = instance.Name;
                 label_DutyStatus.Text = "매칭!";
 
                 accentColor = Color.Red;
@@ -226,7 +226,7 @@ namespace App
             this.Invoke(() =>
             {
                 label_DutyCount.Text = Data.GetArea(fate.Zone).Name;
-                label_DutyName.Text = string.Format("< {0} >", fate.Name);
+                label_DutyName.Text = fate.Name;
                 label_DutyStatus.Text = "돌발 임무 발생!";
 
                 accentColor = Color.DarkOrange;
