@@ -273,7 +273,7 @@ namespace App
                 }
                 else if (opcode == 0x02DB)
                 {
-                    var status = data[4];
+                    var status = data[0];
 
                     if (status == 3)
                     {
