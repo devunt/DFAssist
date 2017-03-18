@@ -530,7 +530,7 @@
             this.MinimumSize = new System.Drawing.Size(560, 360);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "임무 찾기 도우미";
+            this.Text = "임무/돌발 찾기 도우미";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.contextMenuStrip.ResumeLayout(false);

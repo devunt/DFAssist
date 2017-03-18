@@ -68,8 +68,8 @@
 
 프로그램 UI
 ~~~~~~~~~~~
-.. image:: http://i.imgur.com/EypVLTo.png
-.. image:: http://i.imgur.com/PU2gb7L.png
+.. image:: http://i.imgur.com/61dtKcW.png
+.. image:: http://i.imgur.com/QtgLB2E.png
 
 알림창 아이콘
 ~~~~~~~~~~~~~
