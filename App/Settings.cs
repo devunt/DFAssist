@@ -13,11 +13,10 @@ namespace App
         public static int OverlayX { get; set; } = Global.OVERLAY_XY_UNSET;
         public static int OverlayY { get; set; } = Global.OVERLAY_XY_UNSET;
         public static bool StartupShowMainForm { get; set; } = true;
-        public static bool CheckUpdate { get; set; } = true;
-        public static bool AutoUpdate { get; set; } = true;
         public static bool TwitterEnabled { get; set; } = false;
         public static bool AutoOverlayHide { get; set; } = true;
         public static bool FlashWindow { get; set; } = true;
+        public static bool CheatRoulette { get; set; } = false;
         public static string TwitterAccount { get; set; } = "";
         public static bool Updated { get; set; } = true;
         public static HashSet<int> FATEs { get; set; } = new HashSet<int>();
@@ -40,8 +39,6 @@ namespace App
             else
             {
                 StartupShowMainForm = iniFile.ReadValue("startup", "show") != "0";
-                // CheckUpdate = iniFile.ReadValue("startup", "update") != "0";
-                // AutoUpdate = iniFile.ReadValue("startup", "autoupdate") != "0";
                 ShowOverlay = iniFile.ReadValue("overlay", "show") != "0";
                 AutoOverlayHide = iniFile.ReadValue("overlay", "autohide") != "0";
                 OverlayX = int.Parse(iniFile.ReadValue("overlay", "x"));
@@ -49,6 +46,7 @@ namespace App
                 TwitterEnabled = iniFile.ReadValue("notification", "twitter") == "1";
                 TwitterAccount = iniFile.ReadValue("notification", "twitteraccount");
                 FlashWindow = iniFile.ReadValue("notification", "flashwindow") != "0";
+                CheatRoulette = iniFile.ReadValue("misc", "cheatroulette") == "1";
                 Updated = iniFile.ReadValue("internal", "updated") != "0";
 
                 string fates = iniFile.ReadValue("fate", "fates");
@@ -62,8 +60,6 @@ namespace App
         public static void Save()
         {
             iniFile.WriteValue("startup", "show", StartupShowMainForm ? "1" : "0");
-            // iniFile.WriteValue("startup", "update", CheckUpdate ? "1" : "0");
-            // iniFile.WriteValue("startup", "autoupdate", AutoUpdate ? "1" : "0");
             iniFile.WriteValue("overlay", "show", ShowOverlay ? "1" : "0");
             iniFile.WriteValue("overlay", "autohide", AutoOverlayHide ? "1" : "0");
             iniFile.WriteValue("overlay", "x", OverlayX.ToString());
@@ -71,6 +67,7 @@ namespace App
             iniFile.WriteValue("notification", "twitter", TwitterEnabled ? "1" : "0");
             iniFile.WriteValue("notification", "twitteraccount", TwitterAccount);
             iniFile.WriteValue("notification", "flashwindow", FlashWindow ? "1" : "0");
+            iniFile.WriteValue("misc", "cheatroulette", CheatRoulette ? "1" : "0");
             iniFile.WriteValue("fate", "fates", string.Join(",", FATEs));
             iniFile.WriteValue("internal", "updated", Updated ? "1" : "0");
         }

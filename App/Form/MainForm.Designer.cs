@@ -51,12 +51,10 @@
             this.label_TwitterAbout = new System.Windows.Forms.Label();
             this.checkBox_Twitter = new System.Windows.Forms.CheckBox();
             this.groupBox_DefaultSet = new System.Windows.Forms.GroupBox();
+            this.checkBox_CheatRoullete = new System.Windows.Forms.CheckBox();
             this.checkBox_FlashWindow = new System.Windows.Forms.CheckBox();
             this.checkBox_AutoOverlayHide = new System.Windows.Forms.CheckBox();
             this.checkBox_StartupShow = new System.Windows.Forms.CheckBox();
-            this.checkBox_CheckUpdate = new System.Windows.Forms.CheckBox();
-            this.checkBox_AutoUpdate = new System.Windows.Forms.CheckBox();
-            this.linkLabel_NewUpdate = new System.Windows.Forms.LinkLabel();
             this.tabPage_FATE = new System.Windows.Forms.TabPage();
             this.triStateTreeView_FATEs = new RikTheVeggie.TriStateTreeView();
             this.menuStrip_FATETab = new System.Windows.Forms.MenuStrip();
@@ -240,7 +238,6 @@
             this.tabPage_Settings.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage_Settings.Controls.Add(this.groupBox_TwitterSet);
             this.tabPage_Settings.Controls.Add(this.groupBox_DefaultSet);
-            this.tabPage_Settings.Controls.Add(this.linkLabel_NewUpdate);
             this.tabPage_Settings.Location = new System.Drawing.Point(114, 4);
             this.tabPage_Settings.Name = "tabPage_Settings";
             this.tabPage_Settings.Size = new System.Drawing.Size(426, 262);
@@ -256,7 +253,7 @@
             this.groupBox_TwitterSet.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox_TwitterSet.Location = new System.Drawing.Point(0, 129);
             this.groupBox_TwitterSet.Name = "groupBox_TwitterSet";
-            this.groupBox_TwitterSet.Size = new System.Drawing.Size(426, 113);
+            this.groupBox_TwitterSet.Size = new System.Drawing.Size(426, 134);
             this.groupBox_TwitterSet.TabIndex = 0;
             this.groupBox_TwitterSet.TabStop = false;
             this.groupBox_TwitterSet.Text = "트위터 알림";
@@ -303,11 +300,10 @@
             // 
             // groupBox_DefaultSet
             // 
+            this.groupBox_DefaultSet.Controls.Add(this.checkBox_CheatRoullete);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_FlashWindow);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_AutoOverlayHide);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_StartupShow);
-            this.groupBox_DefaultSet.Controls.Add(this.checkBox_CheckUpdate);
-            this.groupBox_DefaultSet.Controls.Add(this.checkBox_AutoUpdate);
             this.groupBox_DefaultSet.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox_DefaultSet.Location = new System.Drawing.Point(0, 0);
             this.groupBox_DefaultSet.Name = "groupBox_DefaultSet";
@@ -316,11 +312,23 @@
             this.groupBox_DefaultSet.TabStop = false;
             this.groupBox_DefaultSet.Text = "기본설정";
             // 
+            // checkBox_CheatRoullete
+            // 
+            this.checkBox_CheatRoullete.AutoSize = true;
+            this.checkBox_CheatRoullete.Font = new System.Drawing.Font("Malgun Gothic", 9F);
+            this.checkBox_CheatRoullete.Location = new System.Drawing.Point(14, 85);
+            this.checkBox_CheatRoullete.Name = "checkBox_CheatRoullete";
+            this.checkBox_CheatRoullete.Size = new System.Drawing.Size(302, 19);
+            this.checkBox_CheatRoullete.TabIndex = 3;
+            this.checkBox_CheatRoullete.Text = "무작위 임무일 경우에도 실제 매칭된 임무 보여주기";
+            this.checkBox_CheatRoullete.UseVisualStyleBackColor = true;
+            this.checkBox_CheatRoullete.CheckedChanged += new System.EventHandler(this.checkBox_CheatRoullete_CheckedChanged);
+            // 
             // checkBox_FlashWindow
             // 
             this.checkBox_FlashWindow.AutoSize = true;
             this.checkBox_FlashWindow.Font = new System.Drawing.Font("Malgun Gothic", 9F);
-            this.checkBox_FlashWindow.Location = new System.Drawing.Point(14, 70);
+            this.checkBox_FlashWindow.Location = new System.Drawing.Point(14, 65);
             this.checkBox_FlashWindow.Name = "checkBox_FlashWindow";
             this.checkBox_FlashWindow.Size = new System.Drawing.Size(369, 19);
             this.checkBox_FlashWindow.TabIndex = 2;
@@ -332,7 +340,7 @@
             // 
             this.checkBox_AutoOverlayHide.AutoSize = true;
             this.checkBox_AutoOverlayHide.Font = new System.Drawing.Font("Malgun Gothic", 9F);
-            this.checkBox_AutoOverlayHide.Location = new System.Drawing.Point(14, 48);
+            this.checkBox_AutoOverlayHide.Location = new System.Drawing.Point(14, 45);
             this.checkBox_AutoOverlayHide.Name = "checkBox_AutoOverlayHide";
             this.checkBox_AutoOverlayHide.Size = new System.Drawing.Size(222, 19);
             this.checkBox_AutoOverlayHide.TabIndex = 1;
@@ -351,45 +359,6 @@
             this.checkBox_StartupShow.Text = "프로그램 시작시 이 창 보이기";
             this.checkBox_StartupShow.UseVisualStyleBackColor = true;
             this.checkBox_StartupShow.CheckedChanged += new System.EventHandler(this.checkBox_StartupShow_CheckedChanged);
-            // 
-            // checkBox_CheckUpdate
-            // 
-            this.checkBox_CheckUpdate.AutoSize = true;
-            this.checkBox_CheckUpdate.Font = new System.Drawing.Font("Malgun Gothic", 9F);
-            this.checkBox_CheckUpdate.Location = new System.Drawing.Point(14, 70);
-            this.checkBox_CheckUpdate.Name = "checkBox_CheckUpdate";
-            this.checkBox_CheckUpdate.Size = new System.Drawing.Size(284, 19);
-            this.checkBox_CheckUpdate.TabIndex = 0;
-            this.checkBox_CheckUpdate.Text = "30분 주기로 업데이트 확인하기 (재시작시 반영)";
-            this.checkBox_CheckUpdate.UseVisualStyleBackColor = true;
-            this.checkBox_CheckUpdate.Visible = false;
-            this.checkBox_CheckUpdate.CheckedChanged += new System.EventHandler(this.checkBox_StartupUpdate_CheckedChanged);
-            // 
-            // checkBox_AutoUpdate
-            // 
-            this.checkBox_AutoUpdate.AutoSize = true;
-            this.checkBox_AutoUpdate.Font = new System.Drawing.Font("Malgun Gothic", 9F);
-            this.checkBox_AutoUpdate.Location = new System.Drawing.Point(14, 93);
-            this.checkBox_AutoUpdate.Name = "checkBox_AutoUpdate";
-            this.checkBox_AutoUpdate.Size = new System.Drawing.Size(266, 19);
-            this.checkBox_AutoUpdate.TabIndex = 0;
-            this.checkBox_AutoUpdate.Text = "업데이트가 존재하면 자동으로 업데이트하기";
-            this.checkBox_AutoUpdate.UseVisualStyleBackColor = true;
-            this.checkBox_AutoUpdate.Visible = false;
-            this.checkBox_AutoUpdate.CheckedChanged += new System.EventHandler(this.checkBox_StartupAutoUpdate_CheckedChanged);
-            // 
-            // linkLabel_NewUpdate
-            // 
-            this.linkLabel_NewUpdate.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.linkLabel_NewUpdate.Location = new System.Drawing.Point(0, 245);
-            this.linkLabel_NewUpdate.Name = "linkLabel_NewUpdate";
-            this.linkLabel_NewUpdate.Size = new System.Drawing.Size(426, 17);
-            this.linkLabel_NewUpdate.TabIndex = 0;
-            this.linkLabel_NewUpdate.TabStop = true;
-            this.linkLabel_NewUpdate.Text = "새로운 업데이트가 있습니다!";
-            this.linkLabel_NewUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.linkLabel_NewUpdate.Visible = false;
-            this.linkLabel_NewUpdate.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_NewUpdate_LinkClicked);
             // 
             // tabPage_FATE
             // 
@@ -530,9 +499,9 @@
             this.label_About.Name = "label_About";
             this.label_About.Size = new System.Drawing.Size(426, 210);
             this.label_About.TabIndex = 0;
-            this.label_About.Text = "[제작 및 문의]\r\n유채색 @ 초코보\r\n라그린네 @ 모그리(초코보)\r\n\r\n\r\n[저작권]\r\n기재되어있는 회사명 · 제품명 · 시스템 이름은\r\n해당 소유자의 상표" +
-    " 또는 등록 상표입니다.\r\n(C) 2010 - 2016 SQUARE ENIX CO., LTD All Rights Reserved.\r\nKorea " +
-    "Published by EYEDENTITY MOBILE.";
+            this.label_About.Text = "[제작 및 문의]\r\n유채색\r\n라그린네\r\n\r\n[저작권]\r\n기재되어있는 회사명 · 제품명 · 시스템 이름은\r\n해당 소유자의 상표 또는 등록 상표입니다" +
+    ".\r\n(C) 2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved.\r\nKorea Published by" +
+    " EYEDENTITY MOBILE.";
             this.label_About.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel_GitHub
@@ -561,7 +530,7 @@
             this.MinimumSize = new System.Drawing.Size(560, 360);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "임무 찾기 도우미";
+            this.Text = "임무/돌발 찾기 도우미";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.contextMenuStrip.ResumeLayout(false);
@@ -597,12 +566,9 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Open;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Close;
-        private System.Windows.Forms.CheckBox checkBox_CheckUpdate;
         private System.Windows.Forms.CheckBox checkBox_StartupShow;
         private System.Windows.Forms.ComboBox comboBox_Process;
         private System.Windows.Forms.Button button_ResetProcess;
-        internal System.Windows.Forms.LinkLabel linkLabel_NewUpdate;
-        private System.Windows.Forms.CheckBox checkBox_AutoUpdate;
         private System.Windows.Forms.TextBox textBox_Twitter;
         private System.Windows.Forms.Label label_TwitterAt;
         private System.Windows.Forms.Label label_TwitterAbout;
@@ -630,6 +596,7 @@
         private System.Windows.Forms.CheckBox checkBox_AutoOverlayHide;
         internal System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.CheckBox checkBox_FlashWindow;
+        private System.Windows.Forms.CheckBox checkBox_CheatRoullete;
     }
 }
 

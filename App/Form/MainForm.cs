@@ -52,28 +52,19 @@ namespace App
                 checkBox_Overlay.Checked = false;
             }
 
-            if (Settings.AutoUpdate)
+            Task.Factory.StartNew(() =>
             {
-                checkBox_AutoUpdate.Checked = true;
-            }
-
-            if (Settings.CheckUpdate)
-            {
-                checkBox_CheckUpdate.Checked = true;
-
-                Task.Factory.StartNew(() =>
+                while (true)
                 {
-                    while (true)
-                    {
-                        Updater.CheckNewVersion(this);
-                        Thread.Sleep(30 * 60 * 1000);
-                    }
-                });
-            }
+                    Updater.CheckNewVersion(this);
+                    Thread.Sleep(30 * 60 * 1000);
+                }
+            });
 
             checkBox_StartupShow.Checked = Settings.StartupShowMainForm;
             checkBox_AutoOverlayHide.Checked = Settings.AutoOverlayHide;
             checkBox_FlashWindow.Checked = Settings.FlashWindow;
+            SetCheatRoulleteCheckBox(Settings.CheatRoulette);
 
             checkBox_Twitter.Checked = Settings.TwitterEnabled;
             textBox_Twitter.Enabled = Settings.TwitterEnabled;
@@ -222,18 +213,6 @@ namespace App
             Settings.Save();
         }
 
-        private void checkBox_StartupUpdate_CheckedChanged(object sender, EventArgs e)
-        {
-            Settings.CheckUpdate = checkBox_CheckUpdate.Checked;
-            Settings.Save();
-        }
-
-        private void checkBox_StartupAutoUpdate_CheckedChanged(object sender, EventArgs e)
-        {
-            Settings.AutoUpdate = checkBox_AutoUpdate.Checked;
-            Settings.Save();
-        }
-
         private void checkBox_Twitter_CheckedChanged(object sender, EventArgs e)
         {
             textBox_Twitter.Enabled = checkBox_Twitter.Checked;
@@ -250,6 +229,23 @@ namespace App
         private void checkBox_FlashWindow_CheckedChanged(object sender, EventArgs e)
         {
             Settings.FlashWindow = checkBox_FlashWindow.Checked;
+            Settings.Save();
+        }
+
+        private void checkBox_CheatRoullete_CheckedChanged(object sender, EventArgs e)
+        {
+            var @checked = checkBox_CheatRoullete.Checked;
+            SetCheatRoulleteCheckBox(false);
+            if (@checked)
+            {
+                var respond = MessageBox.Show("악용 방지를 위해 기본적으로 비활성화 되어있는 기능입니다.\n특정 비인기 임무를 고의적으로 입장 거부하는 행위 등은 자제해주세요.\n\n그래도 활성화 하시겠습니까?", "DFA 경고", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                if (respond == DialogResult.Yes)
+                {
+                    SetCheatRoulleteCheckBox(true);
+                }
+            }
+
+            Settings.CheatRoulette = checkBox_CheatRoullete.Checked;
             Settings.Save();
         }
 
@@ -311,6 +307,13 @@ namespace App
 
             Settings.Save();
             MessageBox.Show("돌발 알림 설정이 적용되었습니다.", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void SetCheatRoulleteCheckBox(bool @checked)
+        {
+            checkBox_CheatRoullete.CheckedChanged -= checkBox_CheatRoullete_CheckedChanged;
+            checkBox_CheatRoullete.Checked = @checked;
+            checkBox_CheatRoullete.CheckedChanged += checkBox_CheatRoullete_CheckedChanged;
         }
 
         private void FindFFXIVProcess()
