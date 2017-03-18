@@ -41,6 +41,7 @@ namespace App
         int blinkCount;
         bool isOkay = false;
         bool isRoulette = false;
+        bool isMatched = false;
         internal int currentZone = 0;
         IntPtr m_eventHook;
 
@@ -160,6 +161,7 @@ namespace App
 
         internal void SetDutyStatus(Instance instance, byte tank, byte dps, byte healer)
         {
+            isMatched = false;
             this.Invoke(() =>
             {
                 if (!isRoulette)
@@ -183,6 +185,7 @@ namespace App
 
         internal void SetRoulleteDuty(Roulette roulette)
         {
+            isMatched = false;
             isRoulette = true;
             this.Invoke(() =>
             {
@@ -207,6 +210,8 @@ namespace App
 
         internal void SetConfirmStatus(Instance instance, byte tank, byte dps, byte healer)
         {
+            if (isMatched) return;
+
             this.Invoke(() =>
             {
                 label_DutyCount.Text = "입장 확인 중";
@@ -241,6 +246,7 @@ namespace App
 
         internal void CancelDutyFinderSync()
         {
+            isMatched = true;
             StopBlink();
 
             label_DutyCount.Text = "";
