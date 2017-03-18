@@ -348,6 +348,8 @@ namespace App
                     else if (status == 4)
                     {
                         // 매칭 뒤 참가자 확인 현황 패킷
+                        // TODO: 조율 해제 파티의 최대 인원 수 정확히 알아내기
+                        mainForm.overlayForm.SetConfirmStatus(instance, tank, dps, healer);
                     }
 
                     Log.I("DFAN: 매칭 상태 업데이트됨 [{0}, {1}, {2}/{3}, {4}/{5}, {6}/{7}]",

@@ -205,6 +205,22 @@ namespace App
             });
         }
 
+        internal void SetConfirmStatus(Instance instance, byte tank, byte dps, byte healer)
+        {
+            this.Invoke(() =>
+            {
+                label_DutyCount.Text = "입장 확인 중";
+                if (tank > instance.Tank || healer > instance.Healer || dps > instance.DPS) // 미리 구성된 파티?
+                {
+                    label_DutyStatus.Text = string.Format("{0}/{1}?", tank + healer + dps, instance.Tank + instance.Healer + instance.DPS);
+                }
+                else
+                {
+                    label_DutyStatus.Text = string.Format("{0}/{3}    {1}/{4}    {2}/{5}", tank, healer, dps, instance.Tank, instance.Healer, instance.DPS);
+                }
+            });
+        }
+
         internal void SetFATEAsAppeared(FATE fate)
         {
             this.Invoke(() =>
