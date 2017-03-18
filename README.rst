@@ -10,7 +10,7 @@
 ----
 :최신 버전: v20161011.1 (`다운로드 <https://github.com/devunt/DFAssist/releases/latest>`_)
 :타겟 버전: Microsoft .NET Framework 4.0 (`다운로드 <https://www.microsoft.com/en-us/download/details.aspx?id=17851>`_)
-:게임 버전: 파이널판타지14 한국판, 2016.10.04.0000.0000(2167201, ex1:2016.09.21.0000.0000)
+:게임 버전: 파이널판타지14 한국판, 2017.02.24.0000.0000(2405653, ex1:2017.02.21.0000.0000)
 
 사용법
 ------
@@ -82,7 +82,7 @@
 
   기재되어있는 회사명 · 제품명 · 시스템 이름은 해당 소유자의 상표 또는 등록 상표입니다.
 
-  (C) 2010 - 2016 SQUARE ENIX CO., LTD All Rights Reserved. Korea Published by EYEDENTITY MOBILE.
+  (C) 2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved. Korea Published by EYEDENTITY MOBILE.
 
 상단 회사에 저작권이 없는 코드, 리소스, 데이터 등은 모두
 `퍼블릭 도메인 <https://en.wikipedia.org/wiki/Public_domain>`_ 에 따라 배포됩니다.
