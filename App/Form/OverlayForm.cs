@@ -188,7 +188,7 @@ namespace App
             {
                 label_DutyCount.Text = "무작위 임무";
                 label_DutyName.Text = string.Format("< {0} >", roulette.Name);
-                label_DutyStatus.Text = string.Format("매칭 대기 중");
+                label_DutyStatus.Text = "매칭 대기 중";
             });
         }
 
