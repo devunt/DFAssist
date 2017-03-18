@@ -48,89 +48,77 @@ namespace App
                     {
                         Log.S("새로운 업데이트가 존재합니다");
 
-                        if (Settings.AutoUpdate)
+                        string url = null;
+                        foreach (var asset in api.assets)
                         {
-                            string url = null;
-                            foreach (var asset in api.assets)
+                            if (asset.name == string.Format("DFAssist.{0}.zip", latest))
                             {
-                                if (asset.name == string.Format("DFAssist.{0}.zip", latest))
-                                {
-                                    url = asset.browser_download_url;
-                                }
+                                url = asset.browser_download_url;
                             }
-
-                            if (url == null)
-                            {
-                                Log.E("업데이트 파일을 찾을 수 없습니다");
-                                return;
-                            }
-
-                            mainForm.Invoke(() =>
-                            {
-                                mainForm.Hide();
-                                mainForm.overlayForm.Hide();
-                            });
-
-                            Task.Factory.StartNew(() =>
-                            {
-                                var updaterForm = new UpdaterForm();
-                                updaterForm.SetVersion(latest);
-                                updaterForm.ShowDialog();
-                            });
-
-                            Sentry.Report("Update started");
-
-                            var stream = GetDownloadStreamByUrl(url);
-                            using (ZipStorer zip = ZipStorer.Open(stream, FileAccess.Read))
-                            {
-                                List<ZipStorer.ZipFileEntry> dir = zip.ReadCentralDir();
-                                foreach (ZipStorer.ZipFileEntry entry in dir)
-                                {
-                                    if (entry.FilenameInZip == "README.txt")
-                                    {
-                                        continue;
-                                    }
-                                    zip.ExtractFile(entry, Path.Combine(tempdir, entry.FilenameInZip));
-                                }
-                            }
-
-                            var exepath = Process.GetCurrentProcess().MainModule.FileName;
-                            var currentdir = Path.GetDirectoryName(exepath);
-
-                            File.WriteAllText(batchpath, string.Format(
-                                "@echo off\r\n" +
-                                "title DFAssist Updater\r\n" +
-                                "echo Updating DFAssist...\r\n" +
-                                "ping 127.0.0.1 -n 3 > nul\r\n" +
-                                "move /y \"{0}\\*\" \"{1}\" > nul\r\n" +
-                                "\"{2}\"\r\n" + 
-                                "echo Running DFAssist...\r\n",
-
-                                tempdir,    // 0
-                                currentdir, // 1
-                                exepath     // 2
-                            ), Encoding.Default);
-
-                            ProcessStartInfo si = new ProcessStartInfo();
-                            si.FileName = batchpath;
-                            si.CreateNoWindow = true;
-                            si.UseShellExecute = false;
-                            si.WindowStyle = ProcessWindowStyle.Hidden;
-
-                            Process.Start(si);
-                            Settings.Updated = true;
-                            Settings.Save();
-                            Application.Exit();
                         }
-                        else
+
+                        if (url == null)
                         {
-                            mainForm.Invoke(() =>
-                            {
-                                mainForm.linkLabel_NewUpdate.Visible = true;
-                                mainForm.linkLabel_NewUpdate.Select();
-                                mainForm.Show();
-                            });
+                            Log.E("업데이트 파일을 찾을 수 없습니다");
+                            return;
                         }
+
+                        mainForm.Invoke(() =>
+                        {
+                            mainForm.Hide();
+                            mainForm.overlayForm.Hide();
+                        });
+
+                        Task.Factory.StartNew(() =>
+                        {
+                            var updaterForm = new UpdaterForm();
+                            updaterForm.SetVersion(latest);
+                            updaterForm.ShowDialog();
+                        });
+
+                        Sentry.Report("Update started");
+
+                        var stream = GetDownloadStreamByUrl(url);
+                        using (ZipStorer zip = ZipStorer.Open(stream, FileAccess.Read))
+                        {
+                            List<ZipStorer.ZipFileEntry> dir = zip.ReadCentralDir();
+                            foreach (ZipStorer.ZipFileEntry entry in dir)
+                            {
+                                if (entry.FilenameInZip == "README.txt")
+                                {
+                                    continue;
+                                }
+                                zip.ExtractFile(entry, Path.Combine(tempdir, entry.FilenameInZip));
+                            }
+                        }
+
+                        var exepath = Process.GetCurrentProcess().MainModule.FileName;
+                        var currentdir = Path.GetDirectoryName(exepath);
+
+                        File.WriteAllText(batchpath, string.Format(
+                            "@echo off\r\n" +
+                            "title DFAssist Updater\r\n" +
+                            "echo Updating DFAssist...\r\n" +
+                            "ping 127.0.0.1 -n 3 > nul\r\n" +
+                            "move /y \"{0}\\*\" \"{1}\" > nul\r\n" +
+                            "\"{2}\"\r\n" + 
+                            "echo Running DFAssist...\r\n",
+
+                            tempdir,    // 0
+                            currentdir, // 1
+                            exepath     // 2
+                        ), Encoding.Default);
+
+                        ProcessStartInfo si = new ProcessStartInfo();
+                        si.FileName = batchpath;
+                        si.CreateNoWindow = true;
+                        si.UseShellExecute = false;
+                        si.WindowStyle = ProcessWindowStyle.Hidden;
+
+                        Process.Start(si);
+                        Settings.Updated = true;
+                        Settings.Save();
+                        Application.Exit();
                     }
                 }
                 catch (Exception ex)
