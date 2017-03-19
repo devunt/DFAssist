@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
@@ -166,7 +166,7 @@ namespace App
 
                             if (teleMeasure != 0x0C)
                             {
-                                Log.D("{1}{2} 지역을 이동했습니다. ({0})", code, Data.GetAreaName(code), lastChar);
+                                Log.D("{1}{2} 지역으로 이동했습니다. ({0})", code, Data.GetAreaName(code), lastChar);
                             }
                             else
                             {
@@ -263,8 +263,7 @@ namespace App
                 }
                 else if (opcode == 0x0076)
                 {
-                    var code = data[184];
-
+                    var code = data[192];
                     var roulette = Data.GetRoulette(code);
 
                     state = State.QUEUED;
@@ -274,7 +273,7 @@ namespace App
                 }
                 else if (opcode == 0x02DB)
                 {
-                    var status = data[4];
+                    var status = data[0];
 
                     if (status == 3)
                     {
@@ -336,7 +335,7 @@ namespace App
                         {
                             // 프로그램이 매칭 중간에 켜짐
                             state = State.QUEUED;
-                            mainForm.overlayForm.SetDutyCount(1); // 임의로 1개로 설정함 (TODO: 알아낼 방법 있으면 정학히 나오게 수정하기)
+                            mainForm.overlayForm.SetDutyCount(-1); // 알 수 없음으로 설정함 (TODO: 알아낼 방법 있으면 정확히 나오게 수정하기)
                             mainForm.overlayForm.SetDutyStatus(instance, tank, dps, healer);
                         }
                         else if (state == State.QUEUED)
@@ -349,6 +348,8 @@ namespace App
                     else if (status == 4)
                     {
                         // 매칭 뒤 참가자 확인 현황 패킷
+                        // TODO: 조율 해제 파티의 최대 인원 수 정확히 알아내기
+                        mainForm.overlayForm.SetConfirmStatus(instance, tank, dps, healer);
                     }
 
                     Log.I("DFAN: 매칭 상태 업데이트됨 [{0}, {1}, {2}/{3}, {4}/{5}, {6}/{7}]",
