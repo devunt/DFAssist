@@ -345,6 +345,12 @@ namespace App
 
                         lastMember = member;
                     }
+                    else if (status == 2)
+                    {
+                        // 아마도 매칭 완료시에 하단 0x0339와 동시에 오는 패킷일 것으로 추측되나,
+                        // 0x0339에서도 로깅하는 이상 추가적으로 로깅할 필요는 없을 것 같아 무시하고 ealry return 함
+                        return;
+                    }
                     else if (status == 4)
                     {
                         // 매칭 뒤 참가자 확인 현황 패킷
