@@ -347,14 +347,15 @@ namespace App
                     }
                     else if (status == 2)
                     {
-                        // 아마도 매칭 완료시에 하단 0x0339와 동시에 오는 패킷일 것으로 추측되나,
-                        // 0x0339에서도 로깅하는 이상 추가적으로 로깅할 필요는 없을 것 같아 무시하고 ealry return 함
+                        // 현재 매칭된 파티의 역할별 인원 수 정보로 추측됨
+                        // TODO:
+                        // [v] 조율 해제 파티의 최대 인원 수 정확히 알아내기
+                        // [ ] OverlayForm에게 정보를 넘겨줘서 같이 표시하기?
                         return;
                     }
                     else if (status == 4)
                     {
                         // 매칭 뒤 참가자 확인 현황 패킷
-                        // TODO: 조율 해제 파티의 최대 인원 수 정확히 알아내기
                         mainForm.overlayForm.SetConfirmStatus(instance, tank, dps, healer);
                     }
 
