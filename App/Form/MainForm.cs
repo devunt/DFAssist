@@ -241,6 +241,7 @@ namespace App
                 var respond = MessageBox.Show("악용 방지를 위해 기본적으로 비활성화 되어있는 기능입니다.\n특정 비인기 임무를 고의적으로 입장 거부하는 행위 등은 자제해주세요.\n\n그래도 활성화 하시겠습니까?", "DFA 경고", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
                 if (respond == DialogResult.Yes)
                 {
+                    MessageBox.Show("활성화되었습니다.\n특정 비인기 임무를 고의적으로 입장 거부하는 행위 등은 자제해주세요.\n\n본 기능은 클라이언트가 재시작 될 때 자동으로 비활성화됩니다.", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     SetCheatRoulleteCheckBox(true);
                 }
             }

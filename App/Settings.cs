@@ -46,7 +46,8 @@ namespace App
                 TwitterEnabled = iniFile.ReadValue("notification", "twitter") == "1";
                 TwitterAccount = iniFile.ReadValue("notification", "twitteraccount");
                 FlashWindow = iniFile.ReadValue("notification", "flashwindow") != "0";
-                CheatRoulette = iniFile.ReadValue("misc", "cheatroulette") == "1";
+                // CheatRoulette = iniFile.ReadValue("misc", "cheatroulette") == "1";
+                CheatRoulette = false; // 악용 방지를 위한 강제 비활성화
                 Updated = iniFile.ReadValue("internal", "updated") != "0";
 
                 string fates = iniFile.ReadValue("fate", "fates");
