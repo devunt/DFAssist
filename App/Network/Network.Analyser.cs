@@ -347,11 +347,9 @@ namespace App
                     }
                     else if (status == 2)
                     {
-                        // 현재 매칭된 파티의 역할별 인원 수 정보로 추측됨
-                        // TODO:
-                        // [v] 조율 해제 파티의 최대 인원 수 정확히 알아내기
-                        // [ ] OverlayForm에게 정보를 넘겨줘서 같이 표시하기?
-                        return;
+                        // 현재 매칭된 파티의 역할별 인원 수 정보
+                        // 조율 해제 상태여도 역할별로 정확히 날아옴
+                        mainForm.overlayForm.SetMemberCount(tank, dps, healer);
                     }
                     else if (status == 4)
                     {
