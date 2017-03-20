@@ -163,6 +163,7 @@ namespace App
         internal void SetDutyStatus(Instance instance, byte tank, byte dps, byte healer)
         {
             isMatched = false;
+            memberCount = null;
             this.Invoke(() =>
             {
                 if (!isRoulette)
@@ -188,6 +189,7 @@ namespace App
         {
             isMatched = false;
             isRoulette = true;
+            memberCount = null;
             this.Invoke(() =>
             {
                 label_DutyCount.Text = "무작위 임무";
