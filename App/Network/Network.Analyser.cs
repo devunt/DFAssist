@@ -350,6 +350,7 @@ namespace App
                         // 현재 매칭된 파티의 역할별 인원 수 정보
                         // 조율 해제 상태여도 역할별로 정확히 날아옴
                         mainForm.overlayForm.SetMemberCount(tank, dps, healer);
+                        return;
                     }
                     else if (status == 4)
                     {
