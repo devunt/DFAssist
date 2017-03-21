@@ -256,6 +256,11 @@ namespace App
                         instances.Add(Data.GetInstance(code));
                     }
 
+                    if (!instances.Any())
+                    {
+                        return;
+                    }
+
                     state = State.QUEUED;
                     mainForm.overlayForm.SetDutyCount(instances.Count);
 
