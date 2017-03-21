@@ -284,14 +284,10 @@ namespace App
                     }
                     else if (status == 6)
                     {
-                        var code = BitConverter.ToUInt16(data, 0);
-
-                        var instance = Data.GetInstance(code);
-
                         state = State.IDLE;
                         mainForm.overlayForm.CancelDutyFinder();
 
-                        Log.I("DFAN: 입장함 [{0}]", instance.Name);
+                        Log.I("DFAN: 입장함");
                     }
                 }
                 else if (opcode == 0x006F)
