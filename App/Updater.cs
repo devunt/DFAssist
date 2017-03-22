@@ -54,6 +54,7 @@ namespace App
                             if (asset.name == string.Format("DFAssist.{0}.zip", latest))
                             {
                                 url = asset.browser_download_url;
+                                break;
                             }
                         }
 
