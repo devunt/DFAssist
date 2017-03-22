@@ -2,7 +2,7 @@
 {
     class Global
     {
-        public const string VERSION = "v20161011.1";
+        public const string VERSION = "v20170322.1";
 
         public const string APPNAME = "DFAssist";
         public const string SETTINGS_FILEPATH = @"config.ini";

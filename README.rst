@@ -8,7 +8,7 @@
 
 정보
 ----
-:최신 버전: v20161011.1 (`다운로드 <https://github.com/devunt/DFAssist/releases/latest>`_)
+:최신 버전: v20170322.1 (`다운로드 <https://github.com/devunt/DFAssist/releases/latest>`_)
 :타겟 버전: Microsoft .NET Framework 4.0 (`다운로드 <https://www.microsoft.com/en-us/download/details.aspx?id=17851>`_)
 :게임 버전: 파이널판타지14 한국판, 2017.02.24.0000.0000(2405653, ex1:2017.02.21.0000.0000)
 
