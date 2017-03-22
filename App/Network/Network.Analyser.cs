@@ -233,7 +233,7 @@ namespace App
                 }
                 else if (opcode == 0x006C)
                 {
-                    var code = BitConverter.ToUInt16(data, 184);
+                    var code = BitConverter.ToUInt16(data, 192);
 
                     var instance = Data.GetInstance(code);
 
@@ -248,12 +248,17 @@ namespace App
 
                     for (int i = 0; i < 5; i++)
                     {
-                        var code = BitConverter.ToUInt16(data, 184 + (i * 2));
+                        var code = BitConverter.ToUInt16(data, 192 + (i * 2));
                         if (code == 0)
                         {
                             break;
                         }
                         instances.Add(Data.GetInstance(code));
+                    }
+
+                    if (!instances.Any())
+                    {
+                        return;
                     }
 
                     state = State.QUEUED;
@@ -284,14 +289,10 @@ namespace App
                     }
                     else if (status == 6)
                     {
-                        var code = BitConverter.ToUInt16(data, 0);
-
-                        var instance = Data.GetInstance(code);
-
                         state = State.IDLE;
                         mainForm.overlayForm.CancelDutyFinder();
 
-                        Log.I("DFAN: 입장함 [{0}]", instance.Name);
+                        Log.I("DFAN: 입장함");
                     }
                 }
                 else if (opcode == 0x006F)
@@ -347,14 +348,14 @@ namespace App
                     }
                     else if (status == 2)
                     {
-                        // 아마도 매칭 완료시에 하단 0x0339와 동시에 오는 패킷일 것으로 추측되나,
-                        // 0x0339에서도 로깅하는 이상 추가적으로 로깅할 필요는 없을 것 같아 무시하고 ealry return 함
+                        // 현재 매칭된 파티의 역할별 인원 수 정보
+                        // 조율 해제 상태여도 역할별로 정확히 날아옴
+                        mainForm.overlayForm.SetMemberCount(tank, dps, healer);
                         return;
                     }
                     else if (status == 4)
                     {
                         // 매칭 뒤 참가자 확인 현황 패킷
-                        // TODO: 조율 해제 파티의 최대 인원 수 정확히 알아내기
                         mainForm.overlayForm.SetConfirmStatus(instance, tank, dps, healer);
                     }
 

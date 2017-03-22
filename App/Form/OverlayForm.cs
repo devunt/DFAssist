@@ -42,6 +42,7 @@ namespace App
         bool isOkay = false;
         bool isRoulette = false;
         bool isMatched = false;
+        byte[] memberCount = null;
         internal int currentZone = 0;
         IntPtr m_eventHook;
 
@@ -162,6 +163,7 @@ namespace App
         internal void SetDutyStatus(Instance instance, byte tank, byte dps, byte healer)
         {
             isMatched = false;
+            memberCount = null;
             this.Invoke(() =>
             {
                 if (!isRoulette)
@@ -187,6 +189,7 @@ namespace App
         {
             isMatched = false;
             isRoulette = true;
+            memberCount = null;
             this.Invoke(() =>
             {
                 label_DutyCount.Text = "무작위 임무";
@@ -208,21 +211,23 @@ namespace App
             });
         }
 
+        internal void SetMemberCount(byte tank, byte dps, byte healer)
+        {
+            memberCount = new byte[] { tank, dps, healer };
+        }
+
         internal void SetConfirmStatus(Instance instance, byte tank, byte dps, byte healer)
         {
             if (isMatched) return;
+            if (memberCount == null) // fallback
+            {
+                memberCount = new byte[] { instance.Tank, instance.DPS, instance.Healer };
+            }
 
             this.Invoke(() =>
             {
                 label_DutyCount.Text = "입장 확인 중";
-                if (tank > instance.Tank || healer > instance.Healer || dps > instance.DPS) // 미리 구성된 파티?
-                {
-                    label_DutyStatus.Text = string.Format("{0}/{1}?", tank + healer + dps, instance.Tank + instance.Healer + instance.DPS);
-                }
-                else
-                {
-                    label_DutyStatus.Text = string.Format("{0}/{3}    {1}/{4}    {2}/{5}", tank, healer, dps, instance.Tank, instance.Healer, instance.DPS);
-                }
+                label_DutyStatus.Text = string.Format("{0}/{3}    {1}/{4}    {2}/{5}", tank, healer, dps, memberCount[0], memberCount[2], memberCount[1]);
             });
         }
 
