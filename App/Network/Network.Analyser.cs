@@ -364,10 +364,19 @@ namespace App
                 }
                 else if (opcode == 0x0339)
                 {
-                    var roullete = data[3];
+                    var roulette = data[3];
                     var code = BitConverter.ToUInt16(data, 4);
 
-                    var instance = Settings.CheatRoulette ? Data.GetInstance(code) : new Instance(Data.GetRoulette(roullete).Name, 0, 0, 0);
+                    Instance instance;
+
+                    if (Settings.CheatRoulette && roulette != 0)
+                    {
+                        instance = new Instance(Data.GetRoulette(roulette).Name, 0, 0, 0);
+                    }
+                    else
+                    {
+                        instance = Data.GetInstance(code);
+                    }
 
                     state = State.MATCHED;
                     mainForm.overlayForm.SetDutyAsMatched(instance);
