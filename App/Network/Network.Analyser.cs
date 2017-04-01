@@ -369,7 +369,7 @@ namespace App
 
                     Instance instance;
 
-                    if (Settings.CheatRoulette && roulette != 0)
+                    if (!Settings.CheatRoulette && roulette != 0)
                     {
                         instance = new Instance(Data.GetRoulette(roulette).Name, 0, 0, 0);
                     }
