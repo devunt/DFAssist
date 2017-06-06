@@ -1,5 +1,5 @@
 ﻿<Data>
-    <Version>20170315.1</Version>
+    <Version>20170606.1</Version>
 
     <!-- 무작위 임무 -->
     <Roulette Id="1" Text="무작위 임무: 레벨링" />
@@ -56,6 +56,10 @@
     <Item ZoneId="131" Text="카스트룸 센트리에서 탈출하라" />
     <Item ZoneId="14D" Text="도름 키마이라" />
     <Item ZoneId="14E" Text="하이드라" />
+    <Item ZoneId="215" Text="4개국 합동훈련" />
+    <Item ZoneId="230" Text="레굴라 반 히드루스 추격전" />
+    <Item ZoneId="23B" Text="유령의 집" />
+    <Item ZoneId="250" Text="뒤얽히는 운명" />
     
     <!-- 2.0 지역 -->
     <Item ZoneId="86" Text="중부 라노시아">
@@ -1159,6 +1163,111 @@
         <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
 
+    <!-- 3.4 혼을 계승하는 자 -->
+    <!-- 3.4 던전 -->
+    <Item ZoneId="23C" Text="젤파톨" Duty="젤파톨">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="242" Text="구브라 환상도서관" Duty="구브라 환상도서관 (어려움)">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+
+    <!-- 3.4 토벌전 -->
+    <Item ZoneId="240" Text="" Duty="여신 소피아 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="241" Text="" Duty="극 여신 소피아 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+
+    <!-- 3.4 레이드 -->
+    <Item ZoneId="244" Text="" Duty="기공성 알렉산더: 천동편 1">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="245" Text="" Duty="기공성 알렉산더: 천동편 2">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="246" Text="" Duty="기공성 알렉산더: 천동편 3">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="247" Text="" Duty="기공성 알렉산더: 천동편 4">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="248" Text="" Duty="기공성 알렉산더: 천동편(영웅) 1">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="249" Text="" Duty="기공성 알렉산더: 천동편(영웅) 2">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="24A" Text="" Duty="기공성 알렉산더: 천동편(영웅) 3">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="24B" Text="" Duty="기공성 알렉산더: 천동편(영웅) 4">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+
+    <!-- 딥♂ 다크♂ 던전 -->
+    <Item ZoneId="231" Text="망자의 궁전" Duty="망자의 궁전 B1~B10">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="232" Text="망자의 궁전" Duty="망자의 궁전 B11~B20">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="233" Text="망자의 궁전" Duty="망자의 궁전 B21~B30">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="234" Text="망자의 궁전" Duty="망자의 궁전 B31~B40">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="235" Text="망자의 궁전" Duty="망자의 궁전 B41~B50">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="251" Text="망자의 궁전" Duty="망자의 궁전 B51~B60">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="252" Text="망자의 궁전" Duty="망자의 궁전 B61~B70">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="253" Text="망자의 궁전" Duty="망자의 궁전 B71~B80">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="254" Text="망자의 궁전" Duty="망자의 궁전 B81~B90">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="255" Text="망자의 궁전" Duty="망자의 궁전 B91~B100">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="256" Text="망자의 궁전" Duty="망자의 궁전 B101~B110">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="257" Text="망자의 궁전" Duty="망자의 궁전 B111~B120">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="258" Text="망자의 궁전" Duty="망자의 궁전 B121~B130">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="259" Text="망자의 궁전" Duty="망자의 궁전 B131~B140">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="25A" Text="망자의 궁전" Duty="망자의 궁전 B141~B150">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="25B" Text="망자의 궁전" Duty="망자의 궁전 B151~B160">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="25C" Text="망자의 궁전" Duty="망자의 궁전 B161~B170">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="25D" Text="망자의 궁전" Duty="망자의 궁전 B171~B180">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="25E" Text="망자의 궁전" Duty="망자의 궁전 B181~B190">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneId="25F" Text="망자의 궁전" Duty="망자의 궁전 B191~B200">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+
     <!-- 길드 작전 -->
     <Item ZoneId="BE" Text="검은장막 숲 중부삼림" Duty="방황하는 사령을 쓰러뜨려라!">
         <Duty Tank="1" Healer="1" DPS="2" />
@@ -1283,7 +1392,7 @@
     <Item ZoneId="1AF" Text="봉인된 바위섬" Duty="봉인된 바위섬 (쟁탈전)" PVP="1">
         <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
-    <Item ZoneID="206" Text="더 피스트" Duty="더 피스트 (8 대 8 / 파티 매칭)" PVP="1">
+    <Item ZoneID="206" Text="더 피스트" Duty="더 피스트 (8 대 8 / 매칭 파티)" PVP="1">
         <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
     <Item ZoneID="20D" Text="더 피스트" Duty="더 피스트 (4 대 4 / 개인)" PVP="1">
@@ -1297,6 +1406,12 @@
     </Item>
     <Item ZoneID="210" Text="더 피스트" Duty="더 피스트 (4 대 4 / 고정 소규모 파티)" PVP="1">
         <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneID="26A" Text="더 피스트" Duty="더 피스트 (8 대 8 / 친선 경기)" PVP="1">
+      <Duty Tank="0" Healer="0" DPS="0" />
+    </Item>
+    <Item ZoneID="26B" Text="더 피스트" Duty="더 피스트 (4 대 4 / 친선 경기)" PVP="1">
+      <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
     <Item ZoneID="22A" Text="영광의 평원" Duty="영광의 평원 (쇄빙전)" PVP="1">
         <Duty Tank="0" Healer="0" DPS="0" />
