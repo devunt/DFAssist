@@ -16,6 +16,7 @@ namespace App
         public byte Tank { get; private set; } = 0;
         public byte Healer { get; private set; } = 0;
         public byte DPS { get; private set; } = 0;
+        public bool PvP { get; private set; } = false;
 
         public bool isDuty
         {
@@ -77,12 +78,14 @@ namespace App
                         Tank = byte.Parse(CXE.FindAttribute("Tank"));
                         Healer = byte.Parse(CXE.FindAttribute("Healer"));
                         DPS = byte.Parse(CXE.FindAttribute("DPS"));
+                        PvP = XmlConvert.ToBoolean(XE.FindAttribute("PVP"));
                     }
                     catch
                     {
                         Tank = 0;
                         Healer = 0;
                         DPS = 0;
+                        PvP = false;
                     }
                 }
                 else

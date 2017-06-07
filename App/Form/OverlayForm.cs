@@ -166,12 +166,19 @@ namespace App
             memberCount = null;
             this.Invoke(() =>
             {
-                if (!isRoulette)
+                if (instance.PvP)
                 {
                     label_DutyName.Text = instance.Name;
-                    label_DutyStatus.Text = string.Format("{0}/{3}    {1}/{4}    {2}/{5}", tank, healer, dps, instance.Tank, instance.Healer, instance.DPS);
+                    if (tank != 0 || healer != 0 || dps != 0)
+                    {
+                        label_DutyStatus.Text = string.Format("파티 매칭 중: {0} / {1} / {2}", tank, healer, dps);
+                    }
+                    else
+                    {
+                        label_DutyStatus.Text = "매칭 대기 중";
+                    }
                 }
-                else
+                else if (isRoulette)
                 {
                     if (tank == 255) // 순번 대기
                     {
@@ -181,6 +188,11 @@ namespace App
                     {
                         label_DutyStatus.Text = string.Format("대기 순번: {0}", tank + 1);
                     }
+                }
+                else
+                {
+                    label_DutyName.Text = instance.Name;
+                    label_DutyStatus.Text = string.Format("{0}/{3}    {1}/{4}    {2}/{5}", tank, healer, dps, instance.Tank, instance.Healer, instance.DPS);
                 }
             });
         }
