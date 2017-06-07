@@ -149,7 +149,7 @@ namespace App
             isRoulette = false;
             this.Invoke(() =>
             {
-                if(dutyCount < 0)
+                if (dutyCount < 0)
                 {
                     label_DutyCount.Text = "임무 매칭 중";
                 }
