@@ -364,7 +364,7 @@ namespace App
                 }
                 else if (opcode == 0x0080)
                 {
-                    var roulette = data[3];
+                    var roulette = data[2];
                     var code = BitConverter.ToUInt16(data, 4);
 
                     Instance instance;
