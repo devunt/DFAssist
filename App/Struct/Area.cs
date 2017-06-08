@@ -34,7 +34,7 @@ namespace App
             {
                 if (isDuty)
                 {
-                    return new Instance(Duty, Tank, Healer, DPS);
+                    return new Instance(Duty, Tank, Healer, DPS, PvP);
                 }
                 else
                 {
@@ -79,13 +79,9 @@ namespace App
                         Healer = byte.Parse(CXE.FindAttribute("Healer"));
                         DPS = byte.Parse(CXE.FindAttribute("DPS"));
                         if (XE.Attributes != null && XE.Attributes["PVP"] != null)
-                        {
                             PvP = XmlConvert.ToBoolean(XE.FindAttribute("PVP"));
-                        }
                         else
-                        {
                             PvP = false;
-                        }
                     }
                     catch
                     {
