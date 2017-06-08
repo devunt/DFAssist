@@ -78,7 +78,14 @@ namespace App
                         Tank = byte.Parse(CXE.FindAttribute("Tank"));
                         Healer = byte.Parse(CXE.FindAttribute("Healer"));
                         DPS = byte.Parse(CXE.FindAttribute("DPS"));
-                        PvP = XmlConvert.ToBoolean(XE.FindAttribute("PVP"));
+                        if (XE.Attributes != null && XE.Attributes["PVP"] != null)
+                        {
+                            PvP = XmlConvert.ToBoolean(XE.FindAttribute("PVP"));
+                        }
+                        else
+                        {
+                            PvP = false;
+                        }
                     }
                     catch
                     {
