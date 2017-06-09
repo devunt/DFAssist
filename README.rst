@@ -8,9 +8,9 @@
 
 정보
 ----
-:최신 버전: v20170322.1 (`다운로드 <https://github.com/devunt/DFAssist/releases/latest>`_)
+:최신 버전: v20170609.1 (`다운로드 <https://github.com/devunt/DFAssist/releases/latest>`_)
 :타겟 버전: Microsoft .NET Framework 4.0 (`다운로드 <https://www.microsoft.com/en-us/download/details.aspx?id=17851>`_)
-:게임 버전: 파이널판타지14 한국판, 2017.02.24.0000.0000(2405653, ex1:2017.02.21.0000.0000)
+:게임 버전: 파이널판타지14 한국판, 버전 3.4
 
 사용법
 ------
@@ -31,7 +31,6 @@
 
 구현 예정 (현재 미구현)
 ~~~~
-- 잠시 자리를 비울 경우를 위해 매칭이 됐을 시 핸드폰으로 푸시 알림 (SMS, 텔레그램 등)
 - 오버레이 스킨 변경 기능
 
 문제 해결
