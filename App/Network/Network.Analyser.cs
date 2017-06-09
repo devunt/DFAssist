@@ -132,15 +132,16 @@ namespace App
                 mainForm.overlayForm.SetStatus(true);
 
                 var opcode = BitConverter.ToUInt16(message, 18);
-                if (opcode != 0x0142 &&
-                    opcode != 0x0143 &&
-                    opcode != 0x006C &&
-                    opcode != 0x0074 &&
+
+                if (opcode != 0x0074 &&
                     opcode != 0x0076 &&
-                    opcode != 0x02DB &&
+                    opcode != 0x0078 &&
+                    opcode != 0x0079 &&
+                    opcode != 0x0080 &&
+                    opcode != 0x006C &&
                     opcode != 0x006F &&
-                    opcode != 0x02DE &&
-                    opcode != 0x0339)
+                    opcode != 0x0142 &&
+                    opcode != 0x0143)
                     return;
 
                 var data = message.Skip(32).ToArray();
@@ -166,7 +167,7 @@ namespace App
 
                             if (teleMeasure != 0x0C)
                             {
-                                Log.D("{1}{2} 지역으로 이동했습니다. ({0})", code, Data.GetAreaName(code), lastChar);
+                                Log.D("{1}{2} 이동했습니다. ({0})", code, Data.GetAreaName(code), lastChar);
                             }
                             else
                             {
@@ -248,7 +249,7 @@ namespace App
 
                     for (int i = 0; i < 5; i++)
                     {
-                        var code = BitConverter.ToUInt16(data, 192 + (i * 2));
+                        var code = BitConverter.ToUInt16(data, 194 + (i * 2));
                         if (code == 0)
                         {
                             break;
@@ -276,7 +277,7 @@ namespace App
 
                     Log.I("DFAN: 무작위 임무 매칭 시작됨 [{0}]", roulette.Name);
                 }
-                else if (opcode == 0x02DB)
+                else if (opcode == 0x0078)
                 {
                     var status = data[0];
 
@@ -285,7 +286,7 @@ namespace App
                         state = State.IDLE;
                         mainForm.overlayForm.CancelDutyFinder();
 
-                        Log.E("DFAN: 매칭 중지됨 (2DB)");
+                        Log.E("DFAN: 매칭 중지됨 (78)");
                     }
                     else if (status == 6)
                     {
@@ -311,7 +312,7 @@ namespace App
                         mainForm.overlayForm.StopBlink();
                     }
                 }
-                else if (opcode == 0x02DE)
+                else if (opcode == 0x0079)
                 {
                     var code = BitConverter.ToUInt16(data, 0);
                     var status = data[4];
@@ -358,13 +359,12 @@ namespace App
                         // 매칭 뒤 참가자 확인 현황 패킷
                         mainForm.overlayForm.SetConfirmStatus(instance, tank, dps, healer);
                     }
-
                     Log.I("DFAN: 매칭 상태 업데이트됨 [{0}, {1}, {2}/{3}, {4}/{5}, {6}/{7}]",
                         instance.Name, status, tank, instance.Tank, healer, instance.Healer, dps, instance.DPS);
                 }
-                else if (opcode == 0x0339)
+                else if (opcode == 0x0080)
                 {
-                    var roulette = data[3];
+                    var roulette = data[2];
                     var code = BitConverter.ToUInt16(data, 4);
 
                     Instance instance;
