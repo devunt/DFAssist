@@ -1,5 +1,5 @@
 ﻿<Data>
-    <Version>20170703.1</Version>
+    <Version>20170704   1</Version>
 
     <!-- 무작위 임무 -->
     <Roulette Id="1" Text="무작위 임무: 레벨링" />
@@ -1714,6 +1714,19 @@
       <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
 
+    <!-- 4.01 레이드 -->
+    <Item ZoneId="2B3" Text="Atherial Rift" Duty="차원의 틈새 오메가 델타편 v1.0">
+      <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="2B4" Text="Atherial Rift" Duty="차원의 틈새 오메가 델타편 v2.0">
+      <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="2B5" Text="Atherial Rift" Duty="차원의 틈새 오메가 델타편 v3.0">
+      <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="2B6" Text="Atherial Rift" Duty="차원의 틈새 오메가 델타편 v4.0">
+      <Duty Tank="2" Healer="2" DPS="4" />
+   
     <!-- 길드 작전 -->
     <Item ZoneId="BE" Text="검은장막 숲 중부삼림" Duty="방황하는 사령을 쓰러뜨려라!">
         <Duty Tank="1" Healer="1" DPS="2" />
