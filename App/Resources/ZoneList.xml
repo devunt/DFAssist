@@ -1,5 +1,5 @@
 ﻿<Data>
-    <Version>2017070.1</Version>
+    <Version>20170706.1</Version>
 
     <!-- 무작위 임무 -->
     <Roulette Id="1" Text="무작위 임무: 레벨링" />
@@ -34,7 +34,7 @@
   
     <Item ZoneId="153" Text="안갯빛 마을" Rest="1" />
     <Item ZoneId="154" Text="라벤더 안식처" Rest="1" />
-    <Item ZoneId="155" Text="하늘잔 마루" Rest="1" />
+    <Item ZoneId="155" Text="하늘잔 마  루" Rest="1" />
     
     <Item ZoneId="156" Text="라벤더 안식처: 소형 주택" Rest="1" />
     <Item ZoneId="157" Text="라벤더 안식처: 중형 주택" Rest="1" />
