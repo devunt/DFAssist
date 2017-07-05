@@ -1715,16 +1715,16 @@
     </Item>
 
     <!-- 4.01 레이드 -->
-    <Item ZoneId="2B3" Text="Atherial Rift" Duty="차원의 틈새 오메가 델타편 v1.0">
+    <Item ZoneId="2B3" Text="Atherial Rift" Duty="차원의 틈새 오메가 델타편 1">
       <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    <Item ZoneId="2B4" Text="Atherial Rift" Duty="차원의 틈새 오메가 델타편 v2.0">
+    <Item ZoneId="2B4" Text="Atherial Rift" Duty="차원의 틈새 오메가 델타편 2">
       <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    <Item ZoneId="2B5" Text="Atherial Rift" Duty="차원의 틈새 오메가 델타편 v3.0">
+    <Item ZoneId="2B5" Text="Atherial Rift" Duty="차원의 틈새 오메가 델타편 3">
       <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    <Item ZoneId="2B6" Text="Atherial Rift" Duty="차원의 틈새 오메가 델타편 v4.0">
+    <Item ZoneId="2B6" Text="Atherial Rift" Duty="차원의 틈새 오메가 델타편 4">
       <Duty Tank="2" Healer="2" DPS="4" />
    
     <!-- 길드 작전 -->
