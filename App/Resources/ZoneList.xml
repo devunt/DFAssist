@@ -1,5 +1,5 @@
 ﻿<Data>
-    <Version>20170606.1</Version>
+    <Version>20170706.1</Version>
 
     <!-- 무작위 임무 -->
     <Roulette Id="1" Text="무작위 임무: 레벨링" />
@@ -1267,7 +1267,88 @@
     <Item ZoneId="25F" Text="망자의 궁전" Duty="망자의 궁전 B191~B200">
       <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
+    
+    <!-- 3.5 The Far Edge of Fate -->
+    <!-- 3.5 던전 -->
+    <Item ZoneId="267" Text="" Duty="바일사르 장벽"   >
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="269" Text="솜 알" Duty="솜 알 (어려움)">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
 
+    <!-- 3.5 토벌전 -->
+    <Item ZoneId="27D" Text="" Duty="귀신 주르반 토벌전">
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="27E" Text="" Duty="극 귀신 주르반 토벌전"> 
+        <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>-
+  
+    <!-- 3.5 레이드 -->
+    <Item ZoneId="273" Text="" Duty="그림자 나라 던 스카">
+        <Duty Tank="3" Healer="6" DPS="15" />
+    </Item>
+    
+    <!-- 컨텐츠의 한국어 명칭은 일본어 명칭의 번역이 대부분입니다. -->
+    <!-- 4.0 홍련의 해방자 -->
+    <!-- 4.0 던전 -->
+    <Item ZoneId="272" Text="" Duty="세이렌의 바다">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="268" Text="" Duty="자수궁">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="26F" Text="" Duty="바르뎀의 패도">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="294" Text="" Duty="도마 성">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="295" Text="" Duty="카스트룸 아바니아">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="2B1" Text="" Duty="알라미고">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="296" Text="" Duty="쿠가네 성">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+    <Item ZoneId="297" Text="" Duty="성도 수도원">
+        <Duty Tank="1" Healer="1" DPS="2" />
+    </Item>
+  
+    <!-- 4.0 토벌전 -->
+    <Item ZoneId="2A2" Text="The Pool of Tribute" Duty="스사노 토벌전">
+      <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="2A5" Text="The Pool of Tribute" Duty="극 스사노 토벌전">
+      <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="2CF" Text="Emanation" Duty="락슈미 토벌전">
+      <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="2D0" Text="Emanation" Duty="극 락슈미 토벌전">
+      <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="2A7" Text="The Royal Menagerie" Duty="신룡 토벌전">
+      <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+
+    <!-- 4.01 레이드 -->
+    <Item ZoneId="2B3" Text="Atherial Rift" Duty="차원의 틈새 오메가 델타편 1">
+      <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="2B4" Text="Atherial Rift" Duty="차원의 틈새 오메가 델타편 2">
+      <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="2B5" Text="Atherial Rift" Duty="차원의 틈새 오메가 델타편 3">
+      <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+    <Item ZoneId="2B6" Text="Atherial Rift" Duty="차원의 틈새 오메가 델타편 4">
+      <Duty Tank="2" Healer="2" DPS="4" />
+    </Item>
+   
     <!-- 길드 작전 -->
     <Item ZoneId="BE" Text="검은장막 숲 중부삼림" Duty="방황하는 사령을 쓰러뜨려라!">
         <Duty Tank="1" Healer="1" DPS="2" />
