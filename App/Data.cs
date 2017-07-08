@@ -207,15 +207,18 @@ namespace App
             return FATEs.ToList();
         }   
 
-        internal static Roulette GetRoulette(int code, Boolean isGlobal)
+        internal static Roulette GetRoulette(int code, bool isGlobal = false)
         {
-            if (Roulettes.ContainsKey(code) && isGlobal == false)
+            if (Roulettes.ContainsKey(code))
             {
-                return Roulettes[code];
-            }
-            else if (RoulettesGS.ContainsKey(code) && isGlobal == true)
-            {
-                return RoulettesGS[code];
+                if (isGlobal)
+                {
+                    return RoulettesGS[code];
+                }
+                else
+                {
+                    return Roulettes[code];
+                }
             }
 
             if (code != 0)
