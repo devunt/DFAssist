@@ -267,7 +267,7 @@ namespace App
                     mainForm.overlayForm.SetDutyCount(instances.Count);
 
                     Log.I("DFAN: 매칭 시작됨 (74) [{0}]", string.Join(", ", instances.Select(x => x.Name).ToArray()));
-                }              
+                }
                 else if (opcode == 0x0076)
                 {
                     var code = data[192];
