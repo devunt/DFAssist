@@ -1,5 +1,5 @@
 ﻿<Data>
-    <Version>20170706.1</Version>
+    <Version>20170708.1</Version>
 
     <!-- 무작위 임무 -->
     <Roulette Id="1" Text="무작위 임무: 레벨링" />
