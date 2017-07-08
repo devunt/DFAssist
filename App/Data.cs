@@ -13,6 +13,7 @@ namespace App
         public static Dictionary<int, Area> Areas { get; set; }
         public static Dictionary<int, FATE> FATEs { get; set; }
         public static Dictionary<int, Roulette> Roulettes { get; set; }
+        public static Dictionary<int, Roulette> RoulettesGS { get; set; }
 
         public static void Initializer()
         {
@@ -35,6 +36,7 @@ namespace App
                     var areas = new Dictionary<int, Area>();
                     var fates = new Dictionary<int, FATE>();
                     var roulettes = new Dictionary<int, Roulette>();
+                    var roulettesGS = new Dictionary<int, Roulette>();
 
                     foreach (XmlNode xn in doc.SelectNodes("/Data/Item"))
                     {
@@ -57,9 +59,18 @@ namespace App
                         roulettes.Add(id, new Roulette(name));
                     }
 
+                    foreach (XmlNode xn in doc.SelectNodes("/Data/RouletteGS"))
+                    {
+                        var id = int.Parse(xn.FindAttribute("Id"), System.Globalization.NumberStyles.HexNumber);
+                        var name = xn.FindAttribute("Text");
+
+                        roulettesGS.Add(id, new Roulette(name));
+                    }
+
                     Areas = areas;
                     FATEs = fates;
                     Roulettes = roulettes;
+                    RoulettesGS = roulettesGS;
                     Version = version;
 
                     if (Initialized)
@@ -194,13 +205,17 @@ namespace App
         internal static List<KeyValuePair<int, FATE>> GetFATEs()
         {
             return FATEs.ToList();
-        }
+        }   
 
-        internal static Roulette GetRoulette(int code)
+        internal static Roulette GetRoulette(int code, Boolean isGlobal)
         {
-            if (Roulettes.ContainsKey(code))
+            if (Roulettes.ContainsKey(code) && isGlobal == false)
             {
                 return Roulettes[code];
+            }
+            else if (RoulettesGS.ContainsKey(code) && isGlobal == true)
+            {
+                return RoulettesGS[code];
             }
 
             if (code != 0)
