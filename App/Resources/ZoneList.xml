@@ -1,9 +1,9 @@
 ﻿<Data>
-    <Version>20170706.1</Version>
+    <Version>20170708.1</Version>
 
     <!-- 무작위 임무 -->
     <Roulette Id="1" Text="무작위 임무: 레벨링" />
-    <Roulette Id="2" Text="무작위 임무: 레벨 50 던전" />
+    <Roulette Id="2" Text="무작위 임무: 레벨 50 던전" />
     <Roulette Id="3" Text="무작위 임무: 주요 퀘스트" />
     <Roulette Id="4" Text="무작위 임무: 길드 작전" />
     <Roulette Id="5" Text="무작위 임무: 숙련자" />
@@ -11,6 +11,17 @@
     <Roulette Id="7" Text="무작위 임무: 전장" />
     <Roulette Id="8" Text="무작위 임무: 레벨 60 던전" />
     <Roulette Id="9" Text="무작위 임무: 멘토" />
+
+    <!-- 무작위 임무 (글로벌 서버용) -->
+    <RouletteGS Id="1" Text="무작위 임무: 레벨링" />
+    <RouletteGS Id="2" Text="무작위 임무: 레벨 50/60 던전" />
+    <RouletteGS Id="3" Text="무작위 임무: 주요 퀘스트" />
+    <RouletteGS Id="4" Text="무작위 임무: 길드 작전" />
+    <RouletteGS Id="5" Text="무작위 임무: 숙련자" />
+    <RouletteGS Id="6" Text="무작위 임무: 토벌전" />
+    <RouletteGS Id="7" Text="무작위 임무: 전장" />
+    <RouletteGS Id="8" Text="무작위 임무: 레벨 70 던전" />
+    <RouletteGS Id="9" Text="무작위 임무: 멘토" />
   
     <!-- 2.x 신생 에오르제아 -->
     <Item ZoneId="80" Text="림사 로민사 상층 갑판" Rest="1" />
@@ -1336,18 +1347,18 @@
     </Item>
 
     <!-- 4.01 레이드 -->
-    <Item ZoneId="2B3" Text="Atherial Rift" Duty="차원의 틈새 오메가 델타편 1">
+    <Item ZoneId="2B3" Text="Atherial Rift" Duty="차원의 틈새 오메가: 델타편 1">
       <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    <Item ZoneId="2B4" Text="Atherial Rift" Duty="차원의 틈새 오메가 델타편 2">
+    <Item ZoneId="2B4" Text="Atherial Rift" Duty="차원의 틈새 오메가: 델타편 2">
       <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    <Item ZoneId="2B5" Text="Atherial Rift" Duty="차원의 틈새 오메가 델타편 3">
+    <Item ZoneId="2B5" Text="Atherial Rift" Duty="차원의 틈새 오메가: 델타편 3">
       <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    <Item ZoneId="2B6" Text="Atherial Rift" Duty="차원의 틈새 오메가 델타편 4">
+    <Item ZoneId="2B6" Text="Atherial Rift" Duty="차원의 틈새 오메가: 델타편 4">
       <Duty Tank="2" Healer="2" DPS="4" />
-    </Item>
+    </Item> 
    
     <!-- 길드 작전 -->
     <Item ZoneId="BE" Text="검은장막 숲 중부삼림" Duty="방황하는 사령을 쓰러뜨려라!">
