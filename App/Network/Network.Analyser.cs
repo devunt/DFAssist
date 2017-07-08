@@ -133,7 +133,8 @@ namespace App
 
                 var opcode = BitConverter.ToUInt16(message, 18);
 
-                if (opcode != 0x0074 &&
+                if (opcode != 0x00B0 &&
+                    opcode != 0x0074 &&
                     opcode != 0x0076 &&
                     opcode != 0x0078 &&
                     opcode != 0x0079 &&
@@ -266,6 +267,16 @@ namespace App
                     mainForm.overlayForm.SetDutyCount(instances.Count);
 
                     Log.I("DFAN: 매칭 시작됨 (74) [{0}]", string.Join(", ", instances.Select(x => x.Name).ToArray()));
+                }
+                else if (opcode == 0x00B0) //글로벌 서버 무작위 임무
+                {
+                    var code = data[4];
+                    var roulette = Data.GetRoulette(code);
+
+                    state = State.QUEUED;
+                    mainForm.overlayForm.SetRoulleteDuty(roulette);
+
+                    Log.I("DFAN: 무작위 임무 매칭 시작됨 [{0}]", roulette.Name);
                 }
                 else if (opcode == 0x0076)
                 {
