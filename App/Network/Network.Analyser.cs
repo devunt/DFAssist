@@ -271,13 +271,13 @@ namespace App
                 else if (opcode == 0x0076)
                 {
                     var code = data[192];
-                    var roulette = Data.GetRoulette(code);
+                    var roulette = Data.GetRoulette(code, false);
 
                     state = State.QUEUED;
                     mainForm.overlayForm.SetRoulleteDuty(roulette);
 
                     Log.I("DFAN: 무작위 임무 매칭 시작됨 [{0}]", roulette.Name);
-                }
+                }   
                 else if (opcode == 0x00B0 && data.Length == 8) //글로벌 서버 무작위 임무, 한국서버에서도 opcode 0x00B0이 쓰이지만 data 배열 길이가 다름을 이용하여 서버를 구분함.
                 {
                     var code = data[4];
