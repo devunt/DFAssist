@@ -278,10 +278,10 @@ namespace App
 
                     Log.I("DFAN: 무작위 임무 매칭 시작됨 [{0}]", roulette.Name);
                 }
-                else if (opcode == 0x00B0) //글로벌 서버 무작위 임무
+                else if (opcode == 0x00B0 && data.Length == 8) //글로벌 서버 무작위 임무, 한국서버에서도 opcode 0x00B0이 쓰이지만 data 배열 길이가 다름을 이용하여 서버를 구분함.
                 {
                     var code = data[4];
-                    var roulette = Data.GetRoulette(code);
+                    var roulette = Data.GetRoulette(code, true);
 
                     state = State.QUEUED;
                     mainForm.overlayForm.SetRoulleteDuty(roulette);
