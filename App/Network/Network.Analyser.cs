@@ -244,13 +244,21 @@ namespace App
 
                     Log.I("DFAN: 매칭 시작됨 (6C) [{0}]", instance.Name);
                 }
-                else if (opcode == 0x0074)
+                else if (opcode == 0x0074 || (opcode == 0x0078 && data[0] == 0))
+                //뒷 부분 조건은 글로벌 서버 조건
                 {
                     var instances = new List<Instance>();
 
+                    int startindex;
+                    if (opcode == 0x0074)
+                        startindex = 194;
+                    else
+                        //글로벌 서버 던전 ID 출력 위치
+                        startindex = 22;
+
                     for (int i = 0; i < 5; i++)
                     {
-                        var code = BitConverter.ToUInt16(data, 194 + (i * 2));
+                        var code = BitConverter.ToUInt16(data, startindex + (i * 2));
                         if (code == 0)
                         {
                             break;
@@ -310,6 +318,42 @@ namespace App
                         mainForm.overlayForm.CancelDutyFinder();
 
                         Log.I("DFAN: 입장함");
+                    }
+                    else if (status == 4) //글섭에서 매칭 잡혔을 때
+                    {
+                        var roulette = data[20];
+                        var code = BitConverter.ToUInt16(data, 22);
+
+                        Instance instance;
+
+                        if (!Settings.CheatRoulette && roulette != 0)
+                        {
+                            instance = new Instance(Data.GetRoulette(roulette).Name, 0, 0, 0);
+                        }
+                        else
+                        {
+                            instance = Data.GetInstance(code);
+                        }
+
+                        state = State.MATCHED;
+                        mainForm.overlayForm.SetDutyAsMatched(instance);
+
+                        if (Settings.FlashWindow)
+                        {
+                            WinApi.FlashWindow(mainForm.FFXIVProcess);
+                        }
+
+                        if (!Settings.ShowOverlay)
+                        {
+                            mainForm.ShowNotification("< {0} > 매칭!", instance.Name);
+                        }
+
+                        if (Settings.TwitterEnabled)
+                        {
+                            WebApi.Tweet("< {0} > 매칭!", instance.Name);
+                        }
+
+                        Log.S("DFAN: 매칭됨 [{0}]", instance.Name);
                     }
                 }
                 else if (opcode == 0x006F)
