@@ -141,6 +141,7 @@ namespace App
                     opcode != 0x006C &&
                     opcode != 0x006F &&
                     opcode != 0x00B0 &&
+                    opcode != 0x0121 &&     
                     opcode != 0x0142 &&
                     opcode != 0x0143)
                     return;
@@ -370,6 +371,16 @@ namespace App
                         // 플레이어가 매칭 참가 확인 창에서 확인을 누름
                         // 다른 매칭 인원들도 전부 확인을 눌렀을 경우 입장을 위해 상단 2DB status 6 패킷이 옴
                         mainForm.overlayForm.StopBlink();
+                    }
+                }
+                else if (opcode == 0x0121) //글로벌 서버
+                {
+                    var status = data[5];
+
+                    if (status == 128)
+                    {
+                        // 매칭 참가 신청 확인 창에서 확인을 누름
+                        mainForm.overlayForm.StopBlink()
                     }
                 }
                 else if (opcode == 0x0079)
