@@ -133,14 +133,12 @@ namespace App
 
                 var opcode = BitConverter.ToUInt16(message, 18);
 
-                if (opcode != 0x0074 &&
-                    opcode != 0x0076 &&
+                if (opcode != 0x0074 && 
                     opcode != 0x0078 &&
                     opcode != 0x0079 &&
                     opcode != 0x0080 &&
                     opcode != 0x006C &&
                     opcode != 0x006F &&
-                    opcode != 0x00B0 &&
                     opcode != 0x0121 &&     
                     opcode != 0x0142 &&
                     opcode != 0x0143)
