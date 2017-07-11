@@ -367,7 +367,7 @@ namespace App
                     if (status == 128)
                     {
                         // 매칭 참가 신청 확인 창에서 확인을 누름
-                        mainForm.overlayForm.StopBlink()
+                        mainForm.overlayForm.StopBlink();       
                     }
                 }
                 else if (opcode == 0x0079)
