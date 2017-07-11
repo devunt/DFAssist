@@ -141,6 +141,7 @@ namespace App
                     opcode != 0x006C &&
                     opcode != 0x006F &&
                     opcode != 0x00B0 &&
+                    opcode != 0x0121 &&     
                     opcode != 0x0142 &&
                     opcode != 0x0143)
                     return;
@@ -244,59 +245,55 @@ namespace App
 
                     Log.I("DFAN: 매칭 시작됨 (6C) [{0}]", instance.Name);
                 }
-                else if (opcode == 0x0074)
-                {
-                    var instances = new List<Instance>();
-
-                    for (int i = 0; i < 5; i++)
-                    {
-                        var code = BitConverter.ToUInt16(data, 194 + (i * 2));
-                        if (code == 0)
-                        {
-                            break;
-                        }
-                        instances.Add(Data.GetInstance(code));
-                    }
-
-                    if (!instances.Any())
-                    {
-                        return;
-                    }
-
-                    state = State.QUEUED;
-                    mainForm.overlayForm.SetDutyCount(instances.Count);
-
-                    Log.I("DFAN: 매칭 시작됨 (74) [{0}]", string.Join(", ", instances.Select(x => x.Name).ToArray()));
-                }
-                else if (opcode == 0x0076)
-                {
-                    // 한국 서버 무작위 임무
-
-                    var code = data[192];
-                    var roulette = Data.GetRoulette(code);
-
-                    state = State.QUEUED;
-                    mainForm.overlayForm.SetRoulleteDuty(roulette);
-
-                    Log.I("DFAN: 무작위 임무 매칭 시작됨 [{0}]", roulette.Name);
-                }   
-                else if (opcode == 0x00B0 && data.Length == 8)
-                {
-                    //글로벌 서버 무작위 임무, 한국서버에서도 opcode 0x00B0이 쓰이지만 data 배열 길이가 다름을 이용하여 서버를 구분함.
-
-                    var code = data[4];
-                    var roulette = Data.GetRoulette(code, true);
-
-                    state = State.QUEUED;
-                    mainForm.overlayForm.SetRoulleteDuty(roulette);
-
-                    Log.I("DFAN: 무작위 임무 매칭 시작됨 [{0}]", roulette.Name);
-                }   
                 else if (opcode == 0x0078)
                 {
                     var status = data[0];
 
-                    if (status == 3)
+                    if (status == 0)
+                    {
+                        state = State.QUEUED;
+
+                        var rouletteCode = data[20];
+
+                        if (rouletteCode != 0 && data[15] == 0) //무작위 임무 신청, 한국서버
+                        {
+                            var roulette = Data.GetRoulette(rouletteCode);
+                            mainForm.overlayForm.SetRoulleteDuty(roulette);
+                            Log.I("DFAN: 무작위 임무 매칭 시작됨 [{0}]", roulette.Name);
+                        }
+
+                        else if (rouletteCode != 0 && data[15] == 64) //무작위 임무 신청, 글로벌서버
+                        {
+                            var roulette = Data.GetRoulette(rouletteCode, true);
+                            mainForm.overlayForm.SetRoulleteDuty(roulette);
+                            Log.I("DFAN: 무작위 임무 매칭 시작됨 [{0}]    ", roulette.Name);
+                        }
+
+                        else //특정 임무 신청
+                        {
+                            var instances = new List<Instance>();
+
+                            for (int i = 0; i < 5; i++)
+                            {
+                                var code = BitConverter.ToUInt16(data, 22 + (i * 2));
+                                if (code == 0)
+                                {
+                                    break;
+                                }
+                                instances.Add(Data.GetInstance(code));
+                            }
+
+                            if (!instances.Any())
+                            {
+                                return;
+                            }
+
+                            mainForm.overlayForm.SetDutyCount(instances.Count);
+
+                            Log.I("DFAN: 매칭 시작됨 (78) [{0}]", string.Join(", ", instances.Select(x => x.Name).ToArray()));
+                        }
+                    }
+                    else if (status == 3)
                     {
                         state = State.IDLE;
                         mainForm.overlayForm.CancelDutyFinder();
@@ -309,6 +306,42 @@ namespace App
                         mainForm.overlayForm.CancelDutyFinder();
 
                         Log.I("DFAN: 입장함");
+                    }
+                    else if (status == 4) //글섭에서 매칭 잡혔을 때
+                    {
+                        var roulette = data[20];
+                        var code = BitConverter.ToUInt16(data, 22);
+
+                        Instance instance;
+
+                        if (!Settings.CheatRoulette && roulette != 0)
+                        {
+                            instance = new Instance(Data.GetRoulette(roulette).Name, 0, 0, 0);
+                        }
+                        else
+                        {
+                            instance = Data.GetInstance(code);
+                        }
+
+                        state = State.MATCHED;
+                        mainForm.overlayForm.SetDutyAsMatched(instance);
+
+                        if (Settings.FlashWindow)
+                        {
+                            WinApi.FlashWindow(mainForm.FFXIVProcess);
+                        }
+
+                        if (!Settings.ShowOverlay)
+                        {
+                            mainForm.ShowNotification("< {0} > 매칭!", instance.Name);
+                        }
+
+                        if (Settings.TwitterEnabled)
+                        {
+                            WebApi.Tweet("< {0} > 매칭!", instance.Name);
+                        }
+
+                        Log.S("DFAN: 매칭됨 [{0}]", instance.Name);
                     }
                 }
                 else if (opcode == 0x006F)
@@ -325,6 +358,16 @@ namespace App
                         // 플레이어가 매칭 참가 확인 창에서 확인을 누름
                         // 다른 매칭 인원들도 전부 확인을 눌렀을 경우 입장을 위해 상단 2DB status 6 패킷이 옴
                         mainForm.overlayForm.StopBlink();
+                    }
+                }
+                else if (opcode == 0x0121) //글로벌 서버
+                {
+                    var status = data[5];
+
+                    if (status == 128)
+                    {
+                        // 매칭 참가 신청 확인 창에서 확인을 누름
+                        mainForm.overlayForm.StopBlink();       
                     }
                 }
                 else if (opcode == 0x0079)
