@@ -1370,10 +1370,10 @@
     <Item ZoneId="2B9" Text="Atherial Rift" Duty="오메가: 델타편 3 (영웅)">
       <Duty Tank="2" Healer="2" DPS="4" />
     </Item>
-    <Item ZoneId="2BA" Text="Atherial Rift" Duty="      오메가: 델타편 4 (영웅)">
+    <Item ZoneId="2BA" Text="Atherial Rift" Duty="오메가: 델타편 4 (영웅)">
       <Duty Tank="2" Healer="2" DPS="4" />
-     </Item>    
-   
+    </Item>
+
     <!-- 길드 작전 -->
     <Item ZoneId="BE" Text="검은장막 숲 중부삼림" Duty="방황하는 사령을 쓰러뜨려라!">
         <Duty Tank="1" Healer="1" DPS="2" />
