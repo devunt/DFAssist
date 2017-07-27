@@ -2,7 +2,7 @@
 
 namespace App
 {
-    class GameData
+    internal class GameData
     {
         public decimal Version { get; set; }
         public Dictionary<int, Instance> Instances { get; set; }

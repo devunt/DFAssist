@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-
-namespace App
+﻿namespace App
 {
     public class Roulette
     {

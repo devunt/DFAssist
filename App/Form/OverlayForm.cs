@@ -21,30 +21,30 @@ namespace App
             public static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int X, int Y, int cx, int cy, uint uFlags);
         }
 
-        const int WS_EX_LAYERED = 0x80000;
-        const int WS_EX_TOOLWINDOW = 0x80;
-        const int WS_EX_TRANSPARENT = 0x20;
+        private const int WS_EX_LAYERED = 0x80000;
+        private const int WS_EX_TOOLWINDOW = 0x80;
+        private const int WS_EX_TRANSPARENT = 0x20;
 
-        const int HWND_TOPMOST = -1;
-        const int SWP_NOMOVE = 0x2;
-        const int SWP_NOSIZE = 0x1;
+        private const int HWND_TOPMOST = -1;
+        private const int SWP_NOMOVE = 0x2;
+        private const int SWP_NOSIZE = 0x1;
 
-        const int EVENT_SYSTEM_FOREGROUND = 0x3;
+        private const int EVENT_SYSTEM_FOREGROUND = 0x3;
 
-        const int WINEVENT_OUTOFCONTEXT = 0;
-        const int WINEVENT_SKIPOWNPROCESS = 2;
-        
-        readonly WinEventDelegate m_hookProc;
-        readonly OverlayFormMove m_overlay;
-        Color accentColor;
-        Timer timer = null;
-        int blinkCount;
-        bool isOkay = false;
-        bool isRoulette = false;
-        bool isMatched = false;
-        byte[] memberCount = null;
+        private const int WINEVENT_OUTOFCONTEXT = 0;
+        private const int WINEVENT_SKIPOWNPROCESS = 2;
+
+        private readonly WinEventDelegate m_hookProc;
+        private readonly OverlayFormMove m_overlay;
+        private Color accentColor;
+        private Timer timer = null;
+        private int blinkCount;
+        private bool isOkay = false;
+        private bool isRoulette = false;
+        private bool isMatched = false;
+        private byte[] memberCount = null;
         internal int currentZone = 0;
-        IntPtr m_eventHook;
+        private IntPtr m_eventHook;
 
         public int currentArea
         {
@@ -92,7 +92,7 @@ namespace App
         {
             get
             {
-                CreateParams cp = base.CreateParams;
+                var cp = base.CreateParams;
                 cp.ExStyle |= WS_EX_LAYERED;
                 cp.ExStyle |= WS_EX_TOOLWINDOW;
                 cp.ExStyle |= WS_EX_TRANSPARENT;

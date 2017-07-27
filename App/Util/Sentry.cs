@@ -1,13 +1,12 @@
-﻿using SharpRaven;
-using SharpRaven.Data;
-using System;
+﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using SharpRaven;
+using SharpRaven.Data;
 
 namespace App
 {
-    class Sentry
+    internal class Sentry
     {
         private static RavenClient ravenClient;
 

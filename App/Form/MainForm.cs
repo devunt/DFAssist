@@ -88,7 +88,7 @@ namespace App
                 {
                     Thread.Sleep(30 * 1000);
 
-                    if ((FFXIVProcess == null) || FFXIVProcess.HasExited)
+                    if (FFXIVProcess == null || FFXIVProcess.HasExited)
                     {
                         FFXIVProcess = null;
 

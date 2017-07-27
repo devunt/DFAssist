@@ -9,7 +9,7 @@ using System.Web;
 
 namespace App
 {
-    static class WebApi
+    internal static class WebApi
     {
         internal static void Tweet(string format, params object[] args)
         {
@@ -64,12 +64,12 @@ namespace App
 
         private static string GetMD5Hash(string text)
         {
-            if ((text == null) || (text.Length == 0))
+            if (text == null || text.Length == 0)
             {
                 return null;
             }
 
-            byte[] textToHash = Encoding.UTF8.GetBytes(text);
+            var textToHash = Encoding.UTF8.GetBytes(text);
             byte[] result;
             using (MD5 md5 = new MD5CryptoServiceProvider())
                 result = md5.ComputeHash(textToHash);

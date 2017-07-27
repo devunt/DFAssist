@@ -1,7 +1,8 @@
-﻿using SharpRaven.Data;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using App.Properties;
 using Newtonsoft.Json;
+using SharpRaven.Data;
 
 namespace App
 {
@@ -17,7 +18,7 @@ namespace App
 
         public static void Initializer()
         {
-            Initializer(Properties.Resources.GameData_Korean);
+            Initializer(Resources.GameData_Korean);
         }
 
         public static void Initializer(string json)

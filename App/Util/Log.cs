@@ -71,7 +71,7 @@ namespace App
 
         internal static void B(byte[] buffer)
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.AppendLine();
 
             for (var i = 0; i < buffer.Length; i++)

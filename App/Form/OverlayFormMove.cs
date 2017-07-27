@@ -7,7 +7,7 @@ namespace App
 {
     public partial class OverlayFormMove : Form
     {
-        static class NativeMethods
+        private static class NativeMethods
         {
             [DllImport("user32.dll")]
             public static extern IntPtr SendMessage(IntPtr hWnd, int Msg, IntPtr wParam, IntPtr lParam);
@@ -15,11 +15,11 @@ namespace App
             public static extern bool ReleaseCapture();
         }
 
-        const int WS_EX_LAYERED = 0x80000;
-        const int WS_EX_TOOLWINDOW = 0x80;
+        private const int WS_EX_LAYERED = 0x80000;
+        private const int WS_EX_TOOLWINDOW = 0x80;
 
-        const int WM_NCLBUTTONDOWN = 0xA1;
-        const int HT_CAPTION = 0x2;
+        private const int WM_NCLBUTTONDOWN = 0xA1;
+        private const int HT_CAPTION = 0x2;
         
         private readonly Form m_parent;
         internal OverlayFormMove(Form parent)
@@ -52,7 +52,7 @@ namespace App
         {
             get
             {
-                CreateParams cp = base.CreateParams;
+                var cp = base.CreateParams;
                 cp.ExStyle |= WS_EX_LAYERED;
                 cp.ExStyle |= WS_EX_TOOLWINDOW;
                 return cp;

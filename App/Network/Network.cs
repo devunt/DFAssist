@@ -1,5 +1,4 @@
-﻿using NetFwTypeLib;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -9,10 +8,11 @@ using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
+using NetFwTypeLib;
 
 namespace App
 {
-    partial class Network
+    internal partial class Network
     {
         private static class NativeMethods
         {
@@ -77,7 +77,7 @@ namespace App
                         return;
                     }
 
-                    IPAddress localAddress = connections[0].localEndPoint.Address;
+                    var localAddress = connections[0].localEndPoint.Address;
 
                     RegisterToFirewall();
 
@@ -124,7 +124,7 @@ namespace App
 
         internal void UpdateGameConnections(Process process)
         {
-            bool update = (connections.Count < 2);
+            var update = connections.Count < 2;
             var currentConnections = GetConnections(process);
 
             foreach (var connection in connections)
@@ -178,11 +178,11 @@ namespace App
         private void FilterAndProcessPacket(byte[] buffer)
         {
             try {
-                IPPacket ipPacket = new IPPacket(buffer);
+                var ipPacket = new IPPacket(buffer);
 
-                if (ipPacket.IsValid && (ipPacket.Protocol == ProtocolType.Tcp))
+                if (ipPacket.IsValid && ipPacket.Protocol == ProtocolType.Tcp)
                 {
-                    TCPPacket tcpPacket = new TCPPacket(ipPacket.Data);
+                    var tcpPacket = new TCPPacket(ipPacket.Data);
 
                     if (!tcpPacket.IsValid)
                     {
@@ -190,9 +190,7 @@ namespace App
                         return;
                     }
 
-                    if (!(tcpPacket.Flags.HasFlag(TCPFlags.ACK | TCPFlags.PSH) /* || */
-                          /* tcpPacket.Flags.HasFlag(TCPFlags.RST) ||
-                          tcpPacket.Flags.HasFlag(TCPFlags.FIN) */ ))
+                    if (!tcpPacket.Flags.HasFlag(TCPFlags.ACK | TCPFlags.PSH))
                     {
                         // 파판 서버에서 클라이언트로 보내주는 모든 TCP 패킷에는
                         // ACK와 PSH 플래그가 설정되어 있음을 이용해 필터링 부하를 낮춤
@@ -200,10 +198,10 @@ namespace App
                         return;
                     }
 
-                    IPEndPoint sourceEndPoint = new IPEndPoint(ipPacket.SourceIPAddress, tcpPacket.SourcePort);
-                    IPEndPoint destinationEndPoint = new IPEndPoint(ipPacket.DestinationIPAddress, tcpPacket.DestinationPort);
-                    Connection connection = new Connection() { localEndPoint = sourceEndPoint, remoteEndPoint = destinationEndPoint };
-                    Connection reverseConnection = new Connection() { localEndPoint = destinationEndPoint, remoteEndPoint = sourceEndPoint };
+                    var sourceEndPoint = new IPEndPoint(ipPacket.SourceIPAddress, tcpPacket.SourcePort);
+                    var destinationEndPoint = new IPEndPoint(ipPacket.DestinationIPAddress, tcpPacket.DestinationPort);
+                    var connection = new Connection() { localEndPoint = sourceEndPoint, remoteEndPoint = destinationEndPoint };
+                    var reverseConnection = new Connection() { localEndPoint = destinationEndPoint, remoteEndPoint = sourceEndPoint };
 
                     if (!(connections.Contains(connection) || connections.Contains(reverseConnection)))
                     {
@@ -258,11 +256,11 @@ namespace App
                 var netFwMgr = GetInstance<INetFwMgr>("HNetCfg.FwMgr");
                 var netAuthApps = netFwMgr.LocalPolicy.CurrentProfile.AuthorizedApplications;
 
-                bool isExists = false;
+                var isExists = false;
                 foreach (var netAuthAppObject in netAuthApps)
                 {
                     var netAuthApp = netAuthAppObject as INetFwAuthorizedApplication;
-                    if ((netAuthApp != null) && (netAuthApp.ProcessImageFileName == exePath) && (netAuthApp.Enabled))
+                    if (netAuthApp != null && netAuthApp.ProcessImageFileName == exePath && netAuthApp.Enabled)
                     {
                         isExists = true;
                     }
@@ -292,7 +290,7 @@ namespace App
         {
             IPEndPoint ipep = null;
             string lobbyHost = null;
-            int lobbyPort = 0;
+            var lobbyPort = 0;
 
             try
             {
@@ -321,9 +319,9 @@ namespace App
                     }
                 }
 
-                if ((lobbyHost != null) && (lobbyPort > 0))
+                if (lobbyHost != null && lobbyPort > 0)
                 {
-                    IPAddress address = Dns.GetHostAddresses(lobbyHost)[0];
+                    var address = Dns.GetHostAddresses(lobbyHost)[0];
                     ipep = new IPEndPoint(address, lobbyPort);
                 }
             }
@@ -339,8 +337,8 @@ namespace App
         {
             var connections = new List<Connection>();
 
-            IntPtr tcpTable = IntPtr.Zero;
-            int tcpTableLength = 0;
+            var tcpTable = IntPtr.Zero;
+            var tcpTableLength = 0;
 
             if (NativeMethods.GetExtendedTcpTable(tcpTable, ref tcpTableLength, false, AddressFamily.InterNetwork, TCP_TABLE_OWNER_PID_CONNECTIONS, 0) != 0)
             {
@@ -349,17 +347,17 @@ namespace App
                     tcpTable = Marshal.AllocHGlobal(tcpTableLength);
                     if (NativeMethods.GetExtendedTcpTable(tcpTable, ref tcpTableLength, false, AddressFamily.InterNetwork, TCP_TABLE_OWNER_PID_CONNECTIONS, 0) == 0)
                     {
-                        TcpTable table = (TcpTable)Marshal.PtrToStructure(tcpTable, typeof(TcpTable));
+                        var table = (TcpTable)Marshal.PtrToStructure(tcpTable, typeof(TcpTable));
 
-                        IntPtr rowPtr = new IntPtr(tcpTable.ToInt64() + Marshal.SizeOf(typeof(uint)));
-                        for (int i = 0; i < table.length; i++)
+                        var rowPtr = new IntPtr(tcpTable.ToInt64() + Marshal.SizeOf(typeof(uint)));
+                        for (var i = 0; i < table.length; i++)
                         {
-                            TcpRow row = (TcpRow)Marshal.PtrToStructure(rowPtr, typeof(TcpRow));
+                            var row = (TcpRow)Marshal.PtrToStructure(rowPtr, typeof(TcpRow));
 
                             if (row.owningPid == process.Id)
                             {
-                                IPEndPoint local = new IPEndPoint(row.localAddr, (ushort)IPAddress.NetworkToHostOrder((short)row.localPort));
-                                IPEndPoint remote = new IPEndPoint(row.remoteAddr, (ushort)IPAddress.NetworkToHostOrder((short)row.remotePort));
+                                var local = new IPEndPoint(row.localAddr, (ushort)IPAddress.NetworkToHostOrder((short)row.localPort));
+                                var remote = new IPEndPoint(row.remoteAddr, (ushort)IPAddress.NetworkToHostOrder((short)row.remotePort));
 
                                 connections.Add(new Connection() { localEndPoint = local, remoteEndPoint = remote });
                             }
@@ -392,9 +390,9 @@ namespace App
                     return false;
                 }
 
-                Connection connection = obj as Connection;
+                var connection = obj as Connection;
 
-                return (localEndPoint.Equals(connection.localEndPoint) && remoteEndPoint.Equals(connection.remoteEndPoint));
+                return localEndPoint.Equals(connection.localEndPoint) && remoteEndPoint.Equals(connection.remoteEndPoint);
             }
 
             public override int GetHashCode()

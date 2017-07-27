@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
@@ -8,10 +6,11 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace App
 {
-    class Updater
+    internal class Updater
     {
         internal static void CheckNewVersion(MainForm mainForm)
         {
@@ -80,10 +79,10 @@ namespace App
                         Sentry.Report("Update started");
 
                         var stream = GetDownloadStreamByUrl(url);
-                        using (ZipStorer zip = ZipStorer.Open(stream, FileAccess.Read))
+                        using (var zip = ZipStorer.Open(stream, FileAccess.Read))
                         {
-                            List<ZipStorer.ZipFileEntry> dir = zip.ReadCentralDir();
-                            foreach (ZipStorer.ZipFileEntry entry in dir)
+                            var dir = zip.ReadCentralDir();
+                            foreach (var entry in dir)
                             {
                                 if (entry.FilenameInZip == "README.txt")
                                 {
@@ -106,7 +105,7 @@ namespace App
                             "echo Running DFAssist...\r\n",
                         Encoding.Default);
 
-                        ProcessStartInfo si = new ProcessStartInfo();
+                        var si = new ProcessStartInfo();
                         si.FileName = batchpath;
                         si.CreateNoWindow = true;
                         si.UseShellExecute = false;
@@ -135,7 +134,7 @@ namespace App
             });
         }
 
-        static Stream GetDownloadStreamByUrl(string url)
+        private static Stream GetDownloadStreamByUrl(string url)
         {
             try
             {

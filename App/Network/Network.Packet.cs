@@ -5,9 +5,9 @@ using System.Net.Sockets;
 
 namespace App
 {
-    partial class Network
+    internal partial class Network
     {
-        struct IPPacket
+        private struct IPPacket
         {
             public ProtocolFamily Version;
             public byte HeaderLength;
@@ -24,8 +24,8 @@ namespace App
             {
                 try
                 {
-                    byte versionAndHeaderLength = buffer[0];
-                    Version = (versionAndHeaderLength >> 4) == 4 ? ProtocolFamily.InterNetwork : ProtocolFamily.InterNetworkV6;
+                    var versionAndHeaderLength = buffer[0];
+                    Version = versionAndHeaderLength >> 4 == 4 ? ProtocolFamily.InterNetwork : ProtocolFamily.InterNetworkV6;
                     HeaderLength = (byte)((versionAndHeaderLength & 15) * 4); // 0b1111 = 15
                     
                     Protocol = (ProtocolType)buffer[9];
@@ -55,7 +55,7 @@ namespace App
             }
         }
 
-        struct TCPPacket
+        private struct TCPPacket
         {
             public ushort SourcePort;
             public ushort DestinationPort;
@@ -73,7 +73,7 @@ namespace App
                     SourcePort = (ushort)IPAddress.NetworkToHostOrder(BitConverter.ToInt16(buffer, 0));
                     DestinationPort = (ushort)IPAddress.NetworkToHostOrder(BitConverter.ToInt16(buffer, 2));
 
-                    ushort offsetAndFlags = (ushort)IPAddress.NetworkToHostOrder(BitConverter.ToInt16(buffer, 12));
+                    var offsetAndFlags = (ushort)IPAddress.NetworkToHostOrder(BitConverter.ToInt16(buffer, 12));
                     DataOffset = (byte)((offsetAndFlags >> 12) * 4);
                     Flags = (TCPFlags)(offsetAndFlags & 511); // 0b111111111 = 511
 

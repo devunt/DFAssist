@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace App
 {
-    class Settings
+    internal class Settings
     {
         private static INIFile iniFile;
 
@@ -50,7 +50,7 @@ namespace App
                 CheatRoulette = false; // 악용 방지를 위한 강제 비활성화
                 Updated = iniFile.ReadValue("internal", "updated") != "0";
 
-                string fates = iniFile.ReadValue("fate", "fates");
+                var fates = iniFile.ReadValue("fate", "fates");
                 if (!string.IsNullOrEmpty(fates))
                 {
                     FATEs = new HashSet<int>(from x in fates.Split(',') select int.Parse(x));

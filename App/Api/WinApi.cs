@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 
 namespace App
 {
-    class WinApi
+    internal class WinApi
     {
         [DllImport("user32.dll")]
         [return: MarshalAs(UnmanagedType.Bool)]
@@ -25,7 +25,7 @@ namespace App
 
         internal static void FlashWindow(Process process)
         {
-            FLASHWINFO pwfi = new FLASHWINFO();
+            var pwfi = new FLASHWINFO();
 
             pwfi.cbSize = Convert.ToUInt32(Marshal.SizeOf(pwfi));
             pwfi.hwnd = process.MainWindowHandle;

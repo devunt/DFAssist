@@ -1,12 +1,13 @@
 ﻿﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.IO.Compression;
-using System.Linq;
+ using System.Collections.Generic;
+ using System.IO;
+ using System.IO.Compression;
+ using System.Linq;
+ using System.Text;
 
 namespace App
 {
-    partial class Network
+    internal partial class Network
     {
         private State state = State.IDLE;
         private int lastMember = 0;
@@ -32,14 +33,14 @@ namespace App
 
                         var length = BitConverter.ToInt32(payload, 24);
 
-                        if ((length <= 0) || (payload.Length < length))
+                        if (length <= 0 || payload.Length < length)
                         {
                             break;
                         }
 
-                        using (MemoryStream messages = new MemoryStream(payload.Length))
+                        using (var messages = new MemoryStream(payload.Length))
                         {
-                            using (MemoryStream stream = new MemoryStream(payload, 0, length))
+                            using (var stream = new MemoryStream(payload, 0, length))
                             {
                                 stream.Seek(40, SeekOrigin.Begin);
 
@@ -50,7 +51,7 @@ namespace App
                                 else {
                                     stream.Seek(2, SeekOrigin.Current); // .Net DeflateStream 버그 (앞 2바이트 강제 무시)
 
-                                    using (DeflateStream z = new DeflateStream(stream, CompressionMode.Decompress))
+                                    using (var z = new DeflateStream(stream, CompressionMode.Decompress))
                                     {
                                         z.CopyTo(messages);
                                     }
@@ -59,7 +60,7 @@ namespace App
                             messages.Seek(0, SeekOrigin.Begin);
 
                             var messageCount = BitConverter.ToUInt16(payload, 30);
-                            for (int i = 0; i < messageCount; i++)
+                            for (var i = 0; i < messageCount; i++)
                             {
                                 try
                                 {
@@ -98,7 +99,7 @@ namespace App
                         // 잘린 패킷 1개는 버리고 바로 다음 패킷부터 찾기...
                         // TODO: 버리는 패킷 없게 제대로 수정하기
 
-                        for (var offset = 0; offset < (payload.Length - 2); offset++)
+                        for (var offset = 0; offset < payload.Length - 2; offset++)
                         {
                             var possibleType = BitConverter.ToUInt16(payload, offset);
                             if (possibleType == 0x5252)
@@ -158,12 +159,12 @@ namespace App
 
                         var code = BitConverter.ToUInt16(data, 16);
 
-                        byte teleMeasure = message[36];
+                        var teleMeasure = message[36];
                         
                         if (selfkey == charkey) // isSelf
                         {
-                            var lastCode = (BitConverter.ToUInt16(System.Text.Encoding.Unicode.GetBytes(new[] { Data.GetArea(code).Name.Last() }), 0));
-                            var lastChar = ((lastCode - 0xAC00U) % 28 == 0 || lastCode - 0xAC00U == 8 ? "로" : "으로");
+                            var lastCode = BitConverter.ToUInt16(Encoding.Unicode.GetBytes(new[] { Data.GetArea(code).Name.Last() }), 0);
+                            var lastChar = (lastCode - 0xAC00U) % 28 == 0 || lastCode - 0xAC00U == 8 ? "로" : "으로";
 
                             if (teleMeasure != 0x0C)
                             {
@@ -247,9 +248,9 @@ namespace App
                 {
                     var instances = new List<Instance>();
 
-                    for (int i = 0; i < 5; i++)
+                    for (var i = 0; i < 5; i++)
                     {
-                        var code = BitConverter.ToUInt16(data, 194 + (i * 2));
+                        var code = BitConverter.ToUInt16(data, 194 + i * 2);
                         if (code == 0)
                         {
                             break;
@@ -419,7 +420,7 @@ namespace App
             }
         }
 
-        enum State
+        private enum State
         {
             IDLE,
             QUEUED,
