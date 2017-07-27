@@ -42,7 +42,7 @@ namespace App
             overlayForm.Show();
             networkWorker = new Network(this);
 
-            label_AboutTitle.Text = string.Format("DFA {0}", Global.VERSION);
+            label_AboutTitle.Text = $@"DFA {Global.VERSION}";
 
             FindFFXIVProcess();
 
@@ -94,7 +94,7 @@ namespace App
                         FFXIVProcess = null;
 
                         overlayForm.SetStatus(false);
-                        this.Invoke(() => FindFFXIVProcess());
+                        this.Invoke(FindFFXIVProcess);
                     }
                     else {
                         // FFXIVProcess is alive

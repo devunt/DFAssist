@@ -164,7 +164,7 @@ namespace App
                         if (selfkey == charkey) // isSelf
                         {
                             ushort lastCode = (BitConverter.ToUInt16(System.Text.Encoding.Unicode.GetBytes(new char[] { Data.GetAreaName(code).Last() }), 0));
-                            string lastChar = ((lastCode - 0xAC00U) % 28 == 0 || lastCode - 0xAC00U == 8 ? "로" : "으로");
+                            var lastChar = ((lastCode - 0xAC00U) % 28 == 0 || lastCode - 0xAC00U == 8 ? "로" : "으로");
 
                             if (teleMeasure != 0x0C)
                             {

@@ -1,7 +1,4 @@
-﻿using SharpRaven;
-using SharpRaven.Data;
-using System;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
 namespace App
@@ -20,7 +17,7 @@ namespace App
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            MainForm form = new MainForm();
+            var form = new MainForm();
             Application.Run(form);
         }
     }

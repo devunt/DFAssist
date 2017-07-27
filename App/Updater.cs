@@ -26,7 +26,7 @@ namespace App
                 }
                 Directory.CreateDirectory(tempdir);
 
-                var resp = WebApi.Request(string.Format("https://api.github.com/repos/{0}/releases/latest", Global.GITHUB_REPO));
+                var resp = WebApi.Request($"https://api.github.com/repos/{Global.GITHUB_REPO}/releases/latest");
                 if (resp == null)
                 {
                     Log.E("새 업데이트 정보를 받아오지 못했습니다");
@@ -96,19 +96,15 @@ namespace App
                         var exepath = Process.GetCurrentProcess().MainModule.FileName;
                         var currentdir = Path.GetDirectoryName(exepath);
 
-                        File.WriteAllText(batchpath, string.Format(
+                        File.WriteAllText(batchpath,
                             "@echo off\r\n" +
                             "title DFAssist Updater\r\n" +
                             "echo Updating DFAssist...\r\n" +
                             "ping 127.0.0.1 -n 3 > nul\r\n" +
-                            "move /y \"{0}\\*\" \"{1}\" > nul\r\n" +
-                            "\"{2}\"\r\n" + 
+                            $"move /y \"{tempdir}\\*\" \"{currentdir}\" > nul\r\n" +
+                            $"\"{exepath}\"\r\n" + 
                             "echo Running DFAssist...\r\n",
-
-                            tempdir,    // 0
-                            currentdir, // 1
-                            exepath     // 2
-                        ), Encoding.Default);
+                        Encoding.Default);
 
                         ProcessStartInfo si = new ProcessStartInfo();
                         si.FileName = batchpath;
