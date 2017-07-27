@@ -58,7 +58,7 @@ namespace App
                 {
                     this.Invoke(() =>
                     {
-                        if (Data.GetIsDuty(value) && Settings.AutoOverlayHide)
+                        if (Data.Instances.ContainsKey(value) && Settings.AutoOverlayHide)
                             Hide();
                         else
                             Show();
@@ -247,7 +247,8 @@ namespace App
         {
             this.Invoke(() =>
             {
-                label_DutyCount.Text = Data.GetArea(fate.Zone).Name;
+                // label_DutyCount.Text = Data.GetArea(fate.Zone).Name;
+                label_DutyCount.Text = "";
                 label_DutyName.Text = fate.Name;
                 label_DutyStatus.Text = "돌발 임무 발생!";
 

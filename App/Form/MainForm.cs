@@ -70,17 +70,16 @@ namespace App
             textBox_Twitter.Enabled = Settings.TwitterEnabled;
             textBox_Twitter.Text = Settings.TwitterAccount;
 
-            foreach (var zone in Data.Areas)
+            foreach (var area in Data.Areas)
             {
-                if (!zone.Value.isDuty && zone.Value.FATEList.Count > 0)
-                    triStateTreeView_FATEs.Nodes.Add(zone.Key.ToString(), zone.Value.Name);
-            }
+                triStateTreeView_FATEs.Nodes.Add(area.Key.ToString(), area.Value.Name);
 
-            foreach (var fate in Data.GetFATEs())
-            {
-                var node = triStateTreeView_FATEs.Nodes[fate.Value.Zone.ToString()].Nodes.Add(fate.Key.ToString(), fate.Value.Name);
-                node.Checked = Settings.FATEs.Contains(fate.Key);
-                nodes.Add(node);
+                foreach (var fate in area.Value.FATEs)
+                {
+                    var node = triStateTreeView_FATEs.Nodes[area.Key.ToString()].Nodes.Add(fate.Key.ToString(), fate.Value.Name);
+                    node.Checked = Settings.FATEs.Contains(fate.Key);
+                    nodes.Add(node);
+                }
             }
 
             Task.Factory.StartNew(() =>

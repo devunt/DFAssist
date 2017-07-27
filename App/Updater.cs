@@ -125,8 +125,8 @@ namespace App
 
                 try
                 {
-                    var xml = WebApi.Request(string.Format("https://raw.githubusercontent.com/{0}/master/App/Resources/ZoneList.xml", Global.GITHUB_REPO));
-                    Data.Initializer(xml);
+                    var json = WebApi.Request($"https://raw.githubusercontent.com/{Global.GITHUB_REPO}/master/App/Resources/GameData/ko.json");
+                    Data.Initializer(json);
                 }
                 catch (Exception ex)
                 {

@@ -2,13 +2,11 @@
 {
     public class FATE
     {
-        public int Zone { get; }
-        public string Name { get; }
+        public string Name { get; set; }
 
-        public FATE(int zone, string name)
+        public static explicit operator FATE(string name)
         {
-            Zone = zone;
-            Name = name;
+            return new FATE { Name = name };
         }
     }
 }

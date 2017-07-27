@@ -1,12 +1,14 @@
-﻿namespace App
+﻿using Newtonsoft.Json;
+
+namespace App
 {
     public class Roulette
     {
         public string Name { get; set; }
 
-        public Roulette(string name)
+        public static explicit operator Roulette(string name)
         {
-            Name = name;
+            return new Roulette { Name = name };
         }
     }
 }

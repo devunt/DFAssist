@@ -157,18 +157,17 @@ namespace App
                         var charkey = BitConverter.ToInt32(message, 40);
 
                         var code = BitConverter.ToUInt16(data, 16);
-                        var zone = Data.GetArea(code);
 
                         byte teleMeasure = message[36];
                         
                         if (selfkey == charkey) // isSelf
                         {
-                            ushort lastCode = (BitConverter.ToUInt16(System.Text.Encoding.Unicode.GetBytes(new char[] { Data.GetAreaName(code).Last() }), 0));
+                            var lastCode = (BitConverter.ToUInt16(System.Text.Encoding.Unicode.GetBytes(new[] { Data.GetArea(code).Name.Last() }), 0));
                             var lastChar = ((lastCode - 0xAC00U) % 28 == 0 || lastCode - 0xAC00U == 8 ? "로" : "으로");
 
                             if (teleMeasure != 0x0C)
                             {
-                                Log.D("{1}{2} 이동했습니다. ({0})", code, Data.GetAreaName(code), lastChar);
+                                Log.D("{1}{2} 이동했습니다. ({0})", code, Data.GetArea(code).Name, lastChar);
                             }
                             else
                             {
@@ -285,7 +284,7 @@ namespace App
                     //글로벌 서버 무작위 임무, 한국서버에서도 opcode 0x00B0이 쓰이지만 data 배열 길이가 다름을 이용하여 서버를 구분함.
 
                     var code = data[4];
-                    var roulette = Data.GetRoulette(code, true);
+                    var roulette = Data.GetRoulette(code);
 
                     state = State.QUEUED;
                     mainForm.overlayForm.SetRoulleteDuty(roulette);
@@ -386,7 +385,7 @@ namespace App
 
                     if (!Settings.CheatRoulette && roulette != 0)
                     {
-                        instance = new Instance(Data.GetRoulette(roulette).Name, 0, 0, 0);
+                        instance = new Instance { Name = Data.GetRoulette(roulette).Name };
                     }
                     else
                     {
