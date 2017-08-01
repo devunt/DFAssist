@@ -295,10 +295,11 @@ namespace App
                 else if (opcode == 0x0078)
                 {
                     var status = data[0];
-
+                    var reason = data[4];
+                 
                     if (status == 3)
                     {
-                        state = State.IDLE;
+                        state = reason == 8 ? State.QUEUED : State.IDLE;
                         mainForm.overlayForm.CancelDutyFinder();
 
                         Log.E("DFAN: 매칭 중지됨 (78)");
