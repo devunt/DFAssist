@@ -51,6 +51,8 @@
             this.label_TwitterAbout = new System.Windows.Forms.Label();
             this.checkBox_Twitter = new System.Windows.Forms.CheckBox();
             this.groupBox_DefaultSet = new System.Windows.Forms.GroupBox();
+            this.radioButton_Langko = new System.Windows.Forms.RadioButton();
+            this.radioButton_Langen = new System.Windows.Forms.RadioButton();
             this.checkBox_CheatRoullete = new System.Windows.Forms.CheckBox();
             this.checkBox_FlashWindow = new System.Windows.Forms.CheckBox();
             this.checkBox_AutoOverlayHide = new System.Windows.Forms.CheckBox();
@@ -70,8 +72,6 @@
             this.tabPage_Info = new System.Windows.Forms.TabPage();
             this.label_About = new System.Windows.Forms.Label();
             this.linkLabel_GitHub = new System.Windows.Forms.LinkLabel();
-            this.radioButton_Langko = new System.Windows.Forms.RadioButton();
-            this.radioButton_Langen = new System.Windows.Forms.RadioButton();
             this.contextMenuStrip.SuspendLayout();
             this.panel_TopSetting.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -317,6 +317,30 @@
             this.groupBox_DefaultSet.TabStop = false;
             this.groupBox_DefaultSet.Text = "기본설정";
             // 
+            // radioButton_Langko
+            // 
+            this.radioButton_Langko.AutoSize = true;
+            this.radioButton_Langko.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.radioButton_Langko.Location = new System.Drawing.Point(288, 15);
+            this.radioButton_Langko.Name = "radioButton_Langko";
+            this.radioButton_Langko.Size = new System.Drawing.Size(61, 19);
+            this.radioButton_Langko.TabIndex = 4;
+            this.radioButton_Langko.Text = "한국어";
+            this.radioButton_Langko.UseVisualStyleBackColor = true;
+            this.radioButton_Langko.Click += new System.EventHandler(this.radioButton_Langko_Click);
+            // 
+            // radioButton_Langen
+            // 
+            this.radioButton_Langen.AutoSize = true;
+            this.radioButton_Langen.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.radioButton_Langen.Location = new System.Drawing.Point(355, 15);
+            this.radioButton_Langen.Name = "radioButton_Langen";
+            this.radioButton_Langen.Size = new System.Drawing.Size(63, 19);
+            this.radioButton_Langen.TabIndex = 5;
+            this.radioButton_Langen.Text = "English";
+            this.radioButton_Langen.UseVisualStyleBackColor = true;
+            this.radioButton_Langen.Click += new System.EventHandler(this.radioButton_Langen_Click);
+            // 
             // checkBox_CheatRoullete
             // 
             this.checkBox_CheatRoullete.AutoSize = true;
@@ -504,9 +528,9 @@
             this.label_About.Name = "label_About";
             this.label_About.Size = new System.Drawing.Size(426, 210);
             this.label_About.TabIndex = 0;
-            this.label_About.Text = "[제작 및 문의]\r\n유채색\r\n라그린네\r\n히비야\r\n\r\n[저작권]\r\n기재되어있는 회사명 · 제품명 · 시스템 이름은\r\n해당 소유자의 상표 또는 등록 " +
-    "상표입니다.\r\n(C) 2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved.\r\nKorea Publish" +
-    "ed by EYEDENTITY MOBILE.";
+            this.label_About.Text = "[제작 및 문의]\r\n유채색\r\n라그린네\r\n히비야\r\n윈도ce\r\n\r\n[저작권]\r\n기재되어있는 회사명 · 제품명 · 시스템 이름은\r\n해당 소유자의 상표 " +
+    "또는 등록 상표입니다.\r\n(C) 2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved.\r\nKorea P" +
+    "ublished by EYEDENTITY MOBILE.";
             this.label_About.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel_GitHub
@@ -520,30 +544,6 @@
             this.linkLabel_GitHub.Text = "GitHub";
             this.linkLabel_GitHub.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.linkLabel_GitHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_GitHub_LinkClicked);
-            // 
-            // radioButton_Langko
-            // 
-            this.radioButton_Langko.AutoSize = true;
-            this.radioButton_Langko.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.radioButton_Langko.Location = new System.Drawing.Point(288, 15);
-            this.radioButton_Langko.Name = "radioButton_Langko";
-            this.radioButton_Langko.Size = new System.Drawing.Size(61, 19);
-            this.radioButton_Langko.TabIndex = 4;
-            this.radioButton_Langko.Text = "한국어";
-            this.radioButton_Langko.UseVisualStyleBackColor = true;
-            this.radioButton_Langko.Click += new System.EventHandler(this.radioButton_Langko_Click);
-            // 
-            // radioButton_Langen
-            // 
-            this.radioButton_Langen.AutoSize = true;
-            this.radioButton_Langen.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.radioButton_Langen.Location = new System.Drawing.Point(355, 15);
-            this.radioButton_Langen.Name = "radioButton_Langen";
-            this.radioButton_Langen.Size = new System.Drawing.Size(63, 19);
-            this.radioButton_Langen.TabIndex = 5;
-            this.radioButton_Langen.Text = "English";
-            this.radioButton_Langen.UseVisualStyleBackColor = true;
-            this.radioButton_Langen.Click += new System.EventHandler(this.radioButton_Langen_Click);
             // 
             // MainForm
             // 
