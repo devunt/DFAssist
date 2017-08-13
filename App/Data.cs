@@ -19,7 +19,10 @@ namespace App
 
         public static void Initializer()
         {
-            Initializer(Resources.GameData_Korean);
+            if (Settings.lang == 0)
+                Initializer(Resources.GameData_Korean);
+            else if (Settings.lang == 1)
+                Initializer(Resources.GameData_English);
         }
 
         public static void Initializer(string json)
