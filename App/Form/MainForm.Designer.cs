@@ -70,6 +70,8 @@
             this.tabPage_Info = new System.Windows.Forms.TabPage();
             this.label_About = new System.Windows.Forms.Label();
             this.linkLabel_GitHub = new System.Windows.Forms.LinkLabel();
+            this.radioButton_Langko = new System.Windows.Forms.RadioButton();
+            this.radioButton_Langen = new System.Windows.Forms.RadioButton();
             this.contextMenuStrip.SuspendLayout();
             this.panel_TopSetting.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -88,7 +90,7 @@
             // 
             this.label_AboutTitle.BackColor = System.Drawing.Color.Silver;
             this.label_AboutTitle.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label_AboutTitle.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label_AboutTitle.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold);
             this.label_AboutTitle.ForeColor = System.Drawing.Color.Gray;
             this.label_AboutTitle.Location = new System.Drawing.Point(0, 297);
             this.label_AboutTitle.Name = "label_AboutTitle";
@@ -99,7 +101,7 @@
             // 
             // button_ResetProcess
             // 
-            this.button_ResetProcess.Font = new System.Drawing.Font("Malgun Gothic", 8F);
+            this.button_ResetProcess.Font = new System.Drawing.Font("맑은 고딕", 8F);
             this.button_ResetProcess.Location = new System.Drawing.Point(288, 0);
             this.button_ResetProcess.Name = "button_ResetProcess";
             this.button_ResetProcess.Size = new System.Drawing.Size(60, 27);
@@ -120,7 +122,7 @@
             // 
             // button_SelectProcess
             // 
-            this.button_SelectProcess.Font = new System.Drawing.Font("Malgun Gothic", 8F);
+            this.button_SelectProcess.Font = new System.Drawing.Font("맑은 고딕", 8F);
             this.button_SelectProcess.Location = new System.Drawing.Point(228, 0);
             this.button_SelectProcess.Name = "button_SelectProcess";
             this.button_SelectProcess.Size = new System.Drawing.Size(60, 27);
@@ -132,7 +134,7 @@
             // button_ResetOverlayPosition
             // 
             this.button_ResetOverlayPosition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_ResetOverlayPosition.Font = new System.Drawing.Font("Malgun Gothic", 8F);
+            this.button_ResetOverlayPosition.Font = new System.Drawing.Font("맑은 고딕", 8F);
             this.button_ResetOverlayPosition.Location = new System.Drawing.Point(470, 0);
             this.button_ResetOverlayPosition.Name = "button_ResetOverlayPosition";
             this.button_ResetOverlayPosition.Size = new System.Drawing.Size(74, 27);
@@ -147,7 +149,7 @@
             this.checkBox_Overlay.AutoSize = true;
             this.checkBox_Overlay.Checked = true;
             this.checkBox_Overlay.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_Overlay.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold);
+            this.checkBox_Overlay.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold);
             this.checkBox_Overlay.ForeColor = System.Drawing.Color.Gray;
             this.checkBox_Overlay.Location = new System.Drawing.Point(372, 4);
             this.checkBox_Overlay.Name = "checkBox_Overlay";
@@ -207,8 +209,9 @@
             // label_Process
             // 
             this.label_Process.AutoSize = true;
+            this.label_Process.BackColor = System.Drawing.Color.Silver;
             this.label_Process.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label_Process.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_Process.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label_Process.ForeColor = System.Drawing.Color.Gray;
             this.label_Process.Location = new System.Drawing.Point(5, 5);
             this.label_Process.Name = "label_Process";
@@ -279,7 +282,7 @@
             // 
             // label_TwitterAbout
             // 
-            this.label_TwitterAbout.Font = new System.Drawing.Font("Malgun Gothic", 8F);
+            this.label_TwitterAbout.Font = new System.Drawing.Font("맑은 고딕", 8F);
             this.label_TwitterAbout.Location = new System.Drawing.Point(13, 61);
             this.label_TwitterAbout.Name = "label_TwitterAbout";
             this.label_TwitterAbout.Size = new System.Drawing.Size(379, 41);
@@ -300,6 +303,8 @@
             // 
             // groupBox_DefaultSet
             // 
+            this.groupBox_DefaultSet.Controls.Add(this.radioButton_Langko);
+            this.groupBox_DefaultSet.Controls.Add(this.radioButton_Langen);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_CheatRoullete);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_FlashWindow);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_AutoOverlayHide);
@@ -315,7 +320,7 @@
             // checkBox_CheatRoullete
             // 
             this.checkBox_CheatRoullete.AutoSize = true;
-            this.checkBox_CheatRoullete.Font = new System.Drawing.Font("Malgun Gothic", 9F);
+            this.checkBox_CheatRoullete.Font = new System.Drawing.Font("맑은 고딕", 9F);
             this.checkBox_CheatRoullete.Location = new System.Drawing.Point(14, 85);
             this.checkBox_CheatRoullete.Name = "checkBox_CheatRoullete";
             this.checkBox_CheatRoullete.Size = new System.Drawing.Size(302, 19);
@@ -327,7 +332,7 @@
             // checkBox_FlashWindow
             // 
             this.checkBox_FlashWindow.AutoSize = true;
-            this.checkBox_FlashWindow.Font = new System.Drawing.Font("Malgun Gothic", 9F);
+            this.checkBox_FlashWindow.Font = new System.Drawing.Font("맑은 고딕", 9F);
             this.checkBox_FlashWindow.Location = new System.Drawing.Point(14, 65);
             this.checkBox_FlashWindow.Name = "checkBox_FlashWindow";
             this.checkBox_FlashWindow.Size = new System.Drawing.Size(369, 19);
@@ -339,7 +344,7 @@
             // checkBox_AutoOverlayHide
             // 
             this.checkBox_AutoOverlayHide.AutoSize = true;
-            this.checkBox_AutoOverlayHide.Font = new System.Drawing.Font("Malgun Gothic", 9F);
+            this.checkBox_AutoOverlayHide.Font = new System.Drawing.Font("맑은 고딕", 9F);
             this.checkBox_AutoOverlayHide.Location = new System.Drawing.Point(14, 45);
             this.checkBox_AutoOverlayHide.Name = "checkBox_AutoOverlayHide";
             this.checkBox_AutoOverlayHide.Size = new System.Drawing.Size(222, 19);
@@ -351,7 +356,7 @@
             // checkBox_StartupShow
             // 
             this.checkBox_StartupShow.AutoSize = true;
-            this.checkBox_StartupShow.Font = new System.Drawing.Font("Malgun Gothic", 9F);
+            this.checkBox_StartupShow.Font = new System.Drawing.Font("맑은 고딕", 9F);
             this.checkBox_StartupShow.Location = new System.Drawing.Point(14, 25);
             this.checkBox_StartupShow.Name = "checkBox_StartupShow";
             this.checkBox_StartupShow.Size = new System.Drawing.Size(186, 19);
@@ -399,14 +404,14 @@
             // toolStripMenuItem_SelectAll
             // 
             this.toolStripMenuItem_SelectAll.Name = "toolStripMenuItem_SelectAll";
-            this.toolStripMenuItem_SelectAll.Size = new System.Drawing.Size(70, 20);
+            this.toolStripMenuItem_SelectAll.Size = new System.Drawing.Size(71, 20);
             this.toolStripMenuItem_SelectAll.Text = "모두 선택";
             this.toolStripMenuItem_SelectAll.Click += new System.EventHandler(this.toolStripMenuItem_SelectAll_Click);
             // 
             // toolStripMenuItem_UnSelectAll
             // 
             this.toolStripMenuItem_UnSelectAll.Name = "toolStripMenuItem_UnSelectAll";
-            this.toolStripMenuItem_UnSelectAll.Size = new System.Drawing.Size(70, 20);
+            this.toolStripMenuItem_UnSelectAll.Size = new System.Drawing.Size(71, 20);
             this.toolStripMenuItem_UnSelectAll.Text = "모두 해제";
             this.toolStripMenuItem_UnSelectAll.Click += new System.EventHandler(this.toolStripMenuItem_UnSelectAll_Click);
             // 
@@ -469,14 +474,14 @@
             // toolStripMenuItem_LogCopy
             // 
             this.toolStripMenuItem_LogCopy.Name = "toolStripMenuItem_LogCopy";
-            this.toolStripMenuItem_LogCopy.Size = new System.Drawing.Size(70, 20);
+            this.toolStripMenuItem_LogCopy.Size = new System.Drawing.Size(71, 20);
             this.toolStripMenuItem_LogCopy.Text = "로그 복사";
             this.toolStripMenuItem_LogCopy.Click += new System.EventHandler(this.toolStripMenuItem_LogCopy_Click);
             // 
             // toolStripMenuItem_LogClear
             // 
             this.toolStripMenuItem_LogClear.Name = "toolStripMenuItem_LogClear";
-            this.toolStripMenuItem_LogClear.Size = new System.Drawing.Size(70, 20);
+            this.toolStripMenuItem_LogClear.Size = new System.Drawing.Size(71, 20);
             this.toolStripMenuItem_LogClear.Text = "로그 삭제";
             this.toolStripMenuItem_LogClear.Click += new System.EventHandler(this.toolStripMenuItem_LogClear_Click);
             // 
@@ -494,7 +499,7 @@
             // label_About
             // 
             this.label_About.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_About.Font = new System.Drawing.Font("Malgun Gothic", 10F);
+            this.label_About.Font = new System.Drawing.Font("맑은 고딕", 10F);
             this.label_About.Location = new System.Drawing.Point(0, 0);
             this.label_About.Name = "label_About";
             this.label_About.Size = new System.Drawing.Size(426, 210);
@@ -516,6 +521,28 @@
             this.linkLabel_GitHub.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.linkLabel_GitHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_GitHub_LinkClicked);
             // 
+            // radioButton_Langko
+            // 
+            this.radioButton_Langko.AutoSize = true;
+            this.radioButton_Langko.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.radioButton_Langko.Location = new System.Drawing.Point(288, 15);
+            this.radioButton_Langko.Name = "radioButton_Langko";
+            this.radioButton_Langko.Size = new System.Drawing.Size(61, 19);
+            this.radioButton_Langko.TabIndex = 4;
+            this.radioButton_Langko.Text = "한국어";
+            this.radioButton_Langko.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_Langen
+            // 
+            this.radioButton_Langen.AutoSize = true;
+            this.radioButton_Langen.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.radioButton_Langen.Location = new System.Drawing.Point(355, 15);
+            this.radioButton_Langen.Name = "radioButton_Langen";
+            this.radioButton_Langen.Size = new System.Drawing.Size(63, 19);
+            this.radioButton_Langen.TabIndex = 5;
+            this.radioButton_Langen.Text = "English";
+            this.radioButton_Langen.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -524,7 +551,7 @@
             this.Controls.Add(this.label_AboutTitle);
             this.Controls.Add(this.panel_TopSetting);
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Malgun Gothic", 9.75F);
+            this.Font = new System.Drawing.Font("맑은 고딕", 9.75F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip_FATETab;
             this.MinimumSize = new System.Drawing.Size(560, 360);
@@ -597,6 +624,8 @@
         internal System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.CheckBox checkBox_FlashWindow;
         private System.Windows.Forms.CheckBox checkBox_CheatRoullete;
+        internal System.Windows.Forms.RadioButton radioButton_Langen;
+        internal System.Windows.Forms.RadioButton radioButton_Langko;
     }
 }
 
