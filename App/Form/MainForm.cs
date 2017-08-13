@@ -474,7 +474,7 @@ namespace App
 
         private void radioButton_Langen_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You should Restart Program \nTo change language perfectly.", "DFA Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("You should Restart Program \nTo apply language setting perfectly.", "DFA Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void radioButton_Langko_Click(object sender, EventArgs e)
