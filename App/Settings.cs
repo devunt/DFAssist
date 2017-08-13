@@ -9,7 +9,7 @@ namespace App
     {
         private static INIFile iniFile;
 
-        public static bool lang = true; //true - 한국어, false - English
+        public static int lang = 0; //0 - 한국어, 1 - English
         public static bool ShowOverlay { get; set; } = true;
         public static int OverlayX { get; set; } = Global.OVERLAY_XY_UNSET;
         public static int OverlayY { get; set; } = Global.OVERLAY_XY_UNSET;
@@ -39,7 +39,7 @@ namespace App
             }
             else
             {
-                lang = iniFile.ReadValue("lang", "lang") != "0";
+                lang = int.Parse(iniFile.ReadValue("lang", "lang"));
                 StartupShowMainForm = iniFile.ReadValue("startup", "show") != "0";
                 ShowOverlay = iniFile.ReadValue("overlay", "show") != "0";
                 AutoOverlayHide = iniFile.ReadValue("overlay", "autohide") != "0";
@@ -62,7 +62,7 @@ namespace App
 
         public static void Save()
         {
-            iniFile.WriteValue("lang", "lang", lang ? "1" : "0");
+            iniFile.WriteValue("lang", "lang", lang.ToString());
             iniFile.WriteValue("startup", "show", StartupShowMainForm ? "1" : "0");
             iniFile.WriteValue("overlay", "show", ShowOverlay ? "1" : "0");
             iniFile.WriteValue("overlay", "autohide", AutoOverlayHide ? "1" : "0");
