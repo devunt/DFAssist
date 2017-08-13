@@ -409,6 +409,8 @@ namespace App
                 Settings.lang = 0;
                 Settings.Save();
                 this.Text = "임무/돌발 찾기 도우미";
+                toolStripMenuItem_Open.Text = "열기";
+                toolStripMenuItem_Close.Text = "종료";
                 label_Process.Text = "FFXIV 프로세스";
                 button_SelectProcess.Text = "수동설정";
                 button_ResetProcess.Text = "재설정";
@@ -440,6 +442,8 @@ namespace App
                 Settings.lang = 1;
                 Settings.Save();
                 this.Text = "Duty/FATE Notificator";
+                toolStripMenuItem_Open.Text = "Open";
+                toolStripMenuItem_Close.Text = "Exit";
                 label_Process.Text = "FFXIV Process";
                 button_SelectProcess.Text = "Manual";
                 button_ResetProcess.Text = "Reset";
@@ -470,7 +474,7 @@ namespace App
 
         private void radioButton_Langen_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You should Restart Program \nTo change language perfectly, \n", "DFA Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("You should Restart Program \nTo change language perfectly.", "DFA Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void radioButton_Langko_Click(object sender, EventArgs e)
