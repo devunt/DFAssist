@@ -7,6 +7,7 @@ namespace App
         public decimal Version { get; set; }
         public Dictionary<int, Instance> Instances { get; set; }
         public Dictionary<int, Roulette> Roulettes { get; set; }
+        public Dictionary<int, Roulette> RoulettesGS { get; set; }
         public Dictionary<int, Area> Areas { get; set; }
     }
 }

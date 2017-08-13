@@ -14,11 +14,15 @@ namespace App
         public static Dictionary<int, Area> Areas { get; private set; } = new Dictionary<int, Area>();
         public static Dictionary<int, Instance> Instances { get; private set; } = new Dictionary<int, Instance>();
         public static Dictionary<int, Roulette> Roulettes { get; private set; } = new Dictionary<int, Roulette>();
+        public static Dictionary<int, Roulette> RoulettesGS { get; private set; } = new Dictionary<int, Roulette>();
         public static Dictionary<int, FATE> FATEs { get; private set; } = new Dictionary<int, FATE>();
 
         public static void Initializer()
         {
-            Initializer(Resources.GameData_Korean);
+            if (Settings.lang == 0)
+                Initializer(Resources.GameData_Korean);
+            else if (Settings.lang == 1)
+                Initializer(Resources.GameData_English);
         }
 
         public static void Initializer(string json)
@@ -43,6 +47,7 @@ namespace App
                     Areas = data.Areas;
                     Instances = data.Instances;
                     Roulettes = data.Roulettes;
+                    RoulettesGS = data.RoulettesGS;
                     FATEs = fates;
                     Version = version;
 
@@ -82,11 +87,15 @@ namespace App
             return new Instance { Name = $"알 수 없는 임무 ({code})" };
         }
 
-        internal static Roulette GetRoulette(int code)
+        internal static Roulette GetRoulette(int code, bool isGlobal = false)
         {
-            if (Roulettes.TryGetValue(code, out var roulette))
+            if (Roulettes.TryGetValue(code, out var roulette) && isGlobal == false)
             {
                 return roulette;
+            }
+            else if (RoulettesGS.TryGetValue(code, out var rouletteGS) && isGlobal == true)
+            {
+                return rouletteGS;
             }
 
             if (code != 0)
