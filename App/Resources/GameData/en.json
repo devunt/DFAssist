@@ -1,0 +1,2236 @@
+﻿{
+  // Version
+  "version": "20170813.1",
+
+  // Duty
+  "instances": {
+    // 2.0 A Realm Reborn
+    // 2.0 Dungeons
+    "157": {
+      "name": "Sastasha",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "158": {
+      "name": "Brayflox's Longstop",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "159": {
+      "name": "The Wanderer's Palace",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "161": {
+      "name": "Copperbell Mines",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "162": {
+      "name": "Halatali",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "163": {
+      "name": "Sunken Temple of Qarn",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "164": {
+      "name": "The Tam-Tara Deepcroft",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "166": {
+      "name": "Haukke Manor",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "167": {
+      "name": "Amdapor Keep",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "168": {
+      "name": "The Stone Vigil",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "169": {
+      "name": "The Thousand Maws of Toto-Rak",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "170": {
+      "name": "Cutter's Cry",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "171": {
+      "name": "Dzemael Darkhold",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "172": {
+      "name": "The Aurum Vale",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "217": {
+      "name": "Castrum Meridianum",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "224": {
+      "name": "The Praetorium",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 2.0 Trials
+    "202": {
+      "name": "Ifrit",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "206": {
+      "name": "Titan",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "208": {
+      "name": "Garuda",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "292": {
+      "name": "Ifrit (Hard)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "293": {
+      "name": "Titan (Hard)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "294": {
+      "name": "Garuda (Hard)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "332": {
+      "name": "Rhitahtyn Sas Arvina",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+
+    // 2.1 A Realm Awoken
+    // 2.1 Dungeons
+    "160": {
+      "name": "Pharos Sirius",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "349": {
+      "name": "Copperbell Mines (Hard)",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "350": {
+      "name": "Haukke Manor (Hard)",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 2.1 Trials
+    "207": {
+      "name": "Good King Moggle Mog XII",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "295": {
+      "name": "Ifrit (Extreme)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "296": {
+      "name": "Titan (Extreme)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "297": {
+      "name": "Garuda (Extreme)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "348": {
+      "name": "The Ultima Weapon",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    // 2.16 Trials
+    "368": {
+      "name": "A Relic Reborn: the Chimera",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "369": {
+      "name": "A Relic Reborn: the Hydra",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 2.1 Raids
+    "174": {
+      "name": "The Labyrinth of the Ancients",
+      "tank": "6",
+      "healer": "6",
+      "dps": "12"
+    },
+    "241": {
+      "name": "Binding Coil of Bahamut - T1",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "242": {
+      "name": "Binding Coil of Bahamut - T2",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "243": {
+      "name": "Binding Coil of Bahamut - T3",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "244": {
+      "name": "Binding Coil of Bahamut - T4",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "245": {
+      "name": "Binding Coil of Bahamut - T5",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+
+    // 2.2 Through the Maelstrom
+    // 2.2 Dungeons
+    "363": {
+      "name": "the Lost City of Amdapor",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "360": {
+      "name": "Halatali (Hard)",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "362": {
+      "name": "Brayflox's Longstop (Hard)",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 2.2 Trials
+    "281": {
+      "name": "Leviathan",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "359": {
+      "name": "Leviathan (Extreme)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "364": {
+      "name": "Good King Moggle Mog XII (Extreme)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "366": {
+      "name": "Gilgamesh",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 2.2 Raids
+    "355": {
+      "name": "Second Coil of Bahamut - T1",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "356": {
+      "name": "Second Coil of Bahamut - T2",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "357": {
+      "name": "Second Coil of Bahamut - T3",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "358": {
+      "name": "Second Coil of Bahamut - T4",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+
+    // 2.3 Defenders of Eorzea
+    // 2.3 Dungeons
+    "361": {
+      "name": "Hullbreaker Isle",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "365": {
+      "name": "The Stone Vigil (Hard)",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "373": {
+      "name": "The Tam-Tara Deepcroft (Hard)",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 2.3 Trials
+    "374": {
+      "name": "Ramuh",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "375": {
+      "name": "Ramuh (Extreme)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 2.3 Raids
+    "372": {
+      "name": "Syrcus Tower",
+      "tank": "3",
+      "healer": "6",
+      "dps": "15"
+    },
+    "380": {
+      "name": "Second Coil of Bahamut S - T1",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "381": {
+      "name": "Second Coil of Bahamut S - T2",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "382": {
+      "name": "Second Coil of Bahamut S - T3",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "383": {
+      "name": "Second Coil of Bahamut S - T4",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+
+    // 2.4 Dreams of Ice
+    // 2.4 Dungeons
+    "371": {
+      "name": "Snowcloak",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "367": {
+      "name": "Sunken Temple of Qarn (Hard)",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "387": {
+      "name": "Sastasha (Hard)",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 2.4 Trials
+    "377": {
+      "name": "Shiva",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "378": {
+      "name": "Shiva (Extreme)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "142": {
+      "name": "Typhon, Ultros",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 2.4 Raids
+    "193": {
+      "name": "Final Coil of Bahamut - T1",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "194": {
+      "name": "Final Coil of Bahamut - T2",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "195": {
+      "name": "Final Coil of Bahamut - T3",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "196": {
+      "name": "Final Coil of Bahamut - T4",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+
+    // 2.5 Before the Fall
+    // 2.5 Dungeons
+    "150": {
+      "name": "the Keeper of the Lake",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "188": {
+      "name": "the Wanderer's Palace (Hard)",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "189": {
+      "name": "Amdapor Keep (Hard)",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 2.5 Trials
+    "426": {
+      "name": "The Chrysalis",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "394": {
+      "name": "Odin",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "396": {
+      "name": "Gilgamesh, Enkidu",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    // 2.55 Trials
+    "143": {
+      "name": "Vishap",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 2.5 Raids
+    "151": {
+      "name": "The World of Darkness",
+      "tank": "3",
+      "healer": "6",
+      "dps": "15"
+    },
+
+
+    // 3.0 Heavensward
+    // 3.0 Dungeons
+    "435": {
+      "name": "the Aery",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "416": {
+      "name": "The Great Gubal Library",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "421": {
+      "name": "The Vault",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "430": {
+      "name": "The Fractal Continuum",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "434": {
+      "name": "The Dusk Vigil",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "438": {
+      "name": "Aetherochemical Research Facility",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "441": {
+      "name": "Sohm Al",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "420": {
+      "name": "Neverreap",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 3.0 Trials
+    "432": {
+      "name": "Ravana",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "436": {
+      "name": "Bismarck",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "437": {
+      "name": "Knights of the Round ?",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "446": {
+      "name": "Ravana (Extreme)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "447": {
+      "name": "Bismarck (Extreme)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 3.01 Raids
+    "442": {
+      "name": "A - Fist of the Father",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "443": {
+      "name": "A - Cuff of the Father",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "444": {
+      "name": "A - Arm of the Father",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "445": {
+      "name": "A - Burden of the Father",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    // 3.05 Raids
+    "449": {
+      "name": "A - Fist of the Father (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "450": {
+      "name": "A - Cuff of the Father (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "451": {
+      "name": "A - Arm of the Father (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "452": {
+      "name": "A - Burden of the Father (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+
+    // 3.1 As Goes Light So Goes Darkness
+    // 3.1 Dungeons
+    "510": {
+      "name": "Pharos Sirius (Hard)",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "511": {
+      "name": "Saint Mocianne's Arboretum",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 3.1 Trials
+    "448": {
+      "name": "Knights of the Round (Extreme) ?",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 3.1 Raids
+    "508": {
+      "name": "The Void Ark",
+      "tank": "3",
+      "healer": "6",
+      "dps": "15"
+    },
+
+    // 3.1 Party Contents
+    "512": {
+      "name": "The Diadem(Easy)",
+      "tank": "1",
+      "healer": "2",
+      "dps": "5"
+    },
+    "514": {
+      "name": "The Diadem",
+      "tank": "1",
+      "healer": "2",
+      "dps": "5"
+    },
+    "515": {
+      "name": "The Diadem (Hard)",
+      "tank": "1",
+      "healer": "2",
+      "dps": "5"
+    },
+
+
+    // 3.2 The Gears of Chance
+    // 3.2 Dungeons
+    "516": {
+      "name": "The Antitower",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "519": {
+      "name": "Lost City of Amdapor (Hard)",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 3.2 Trials
+    "517": {
+      "name": "Sephiroth",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "524": {
+      "name": "Sephiroth (Extreme)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 3.2 Raids
+    "520": {
+      "name": "A - Fist of the Son",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "521": {
+      "name": "A - Cuff of the Son",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "522": {
+      "name": "A - Arm of the Son",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "523": {
+      "name": "A - Burden of the Son",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "529": {
+      "name": "A - Fist of the Son (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "530": {
+      "name": "A - Cuff of the Son (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "531": {
+      "name": "A - Arm of the Son (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "532": {
+      "name": "A - Burden of the Son (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+
+    // 3.3 Revenge of the Horde
+    // 3.3 Dungeons
+    "555": {
+      "name": "Sohr Khai",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "557": {
+      "name": "Hullbreaker Isle (Hard)",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 3.3 Trials
+    "559": {
+      "name": "Nidhogg",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "566": {
+      "name": "Nidhogg (Extreme)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 3.3 Raids
+    "556": {
+      "name": "The Weeping City of Mhach",
+      "tank": "3",
+      "healer": "6",
+      "dps": "15"
+    },
+
+    // 3.3 Party Contents
+    "558": {
+      "name": "The Aquapolis",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+
+
+    // 3.4 Soul Surrender
+    // 3.4 Dungeons
+    "572": {
+      "name": "Xelphatol",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "578": {
+      "name": "The Great Gubal Library (Hard)",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 3.4 Trials
+    "576": {
+      "name": "Sophia",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "577": {
+      "name": "Sophia (Extreme)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 3.4 Raids
+    "580": {
+      "name": "A - Eyes of the Creator",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "581": {
+      "name": "A - Breath of the Creator",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "582": {
+      "name": "A - Heart of the Creator",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "583": {
+      "name": "A - Soul of the Creator",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "584": {
+      "name": "A- Eyes of the Creator (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "585": {
+      "name": "A - Breath of the Creator (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "586": {
+      "name": "A - Heart of the Creator (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "587": {
+      "name": "A - Soul of the Creator (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+
+    // 3.5 The Far Edge of Fate
+    // 3.5 Dungeons
+    "615": {
+      "name": "Baelsar's Wall",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "617": {
+      "name": "Sohm Al (Hard)",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 3.5 Trials
+    "637": {
+      "name": "Zurvan",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "638": {
+      "name": "Zurvan (Extreme)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 3.5 Raids
+    "627": {
+      "name": "Dun Scaith",
+      "tank": "3",
+      "healer": "6",
+      "dps": "15"
+    },
+
+
+    // 4.0 Stormblood
+    // 4.0 Dungeons
+    "626": {
+      "name": "The Sirensong Sea",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "616": {
+      "name": "Shisui of the Violet Tides",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "623": {
+      "name": "Bardam's Mettle",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "660": {
+      "name": "Doma Castle",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "661": {
+      "name": "Castrum Abania",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "689": {
+      "name": "Ala Mhigo",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "662": {
+      "name": "Kugane Castle",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "663": {
+      "name": "The Temple of the Fist",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 4.0 Trials
+    "674": {
+      "name": "Susano",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "677": {
+      "name": "Susano (Extreme)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "719": {
+      "name": "Lakshmi",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "720": {
+      "name": "Lakshmi (Extreme)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "679": {
+      "name": "Shinryu",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 4.01 Raids
+    "691": {
+      "name": "Deltascape V1.0",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "692": {
+      "name": "Deltascape V2.0",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "693": {
+      "name": "Deltascape V3.0",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "694": {
+      "name": "Deltascape V4.0",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    // 4.05 Raids
+    "695": {
+      "name": "Deltascape V1.0 (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "696": {
+      "name": "Deltascape V2.0 (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "697": {
+      "name": "Deltascape V3.0 (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "698": {
+      "name": "Deltascape V4.0 (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+
+    // Guildhests
+    "190": {
+      "name": "Under the Armor",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "191": {
+      "name": "Pulling Poison Posies",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "192": {
+      "name": "Stinging Back",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "214": {
+      "name": "Basic Training: Enemy Parties",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "215": {
+      "name": "Basic Training: Enemy Strongholds",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "216": {
+      "name": "Hero on the Halfshell",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "219": {
+      "name": "Flicking Sticks and Taking Names",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "220": {
+      "name": "All's Well that Ends in the Well",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "221": {
+      "name": "More than a Feeler",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "222": {
+      "name": "Annoy the Void",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "223": {
+      "name": "Shadow and Claw",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "298": {
+      "name": "Long Live the Queen",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "299": {
+      "name": "Ward Up",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "300": {
+      "name": "Solemn Trinity",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+
+    // 초보자의 집
+    "537": {
+      "name": "Avoid Area of Effect Attacks",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "538": {
+      "name": "Execute a Combo to Increase Enmity",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "539": {
+      "name": "Execute a Combo in Battle",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "540": {
+      "name": "Accrue Enmity from Multiple Targets",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "541": {
+      "name": "Engage Multiple Targets",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "542": {
+      "name": "Execute a Ranged Attack to Increase Enmity",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "543": {
+      "name": "Engage Enemy Reinforcements",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "544": {
+      "name": "Assist Allies in Defeating a Target",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "545": {
+      "name": "Defeat an Occupied Target",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "546": {
+      "name": "Avoid Engaged Targets",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "547": {
+      "name": "Engage Enemy Reinforcements",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "548": {
+      "name": "Interact with the Battlefield",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "549": {
+      "name": "파티원을 회복시키자!",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "550": {
+      "name": "다수의 파티원을 회복시키자!",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "551": {
+      "name": "Avoid Engaged Targets",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "552": {
+      "name": "Final Exercise",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+
+
+    // PvP
+    "175": {
+      "name": "The Fold",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "336": {
+      "name": "The Fold",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "337": {
+      "name": "The Fold (Matched Party)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "352": {
+      "name": "The Fold (Light Party)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "184": {
+      "name": "The Fold (Matched Party)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "186": {
+      "name": "The Fold (Light Party)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "376": {
+      "name": "The Borderland Ruins (Secure)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "422": {
+      "name": "The Borderland Ruins (Slaughter)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "431": {
+      "name": "Seal Rock (Seize)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "518": {
+      "name": "The Feast (8 on 8 - Matched Party)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "525": {
+      "name": "The Feast (4 on 4 - Solo)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "526": {
+      "name": "The Feast (4 on 4 - Light Party)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "527": {
+      "name": "The Feast (4 on 4 - Solo)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "528": {
+      "name": "The Feast (4 on 4 - Light Party)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "618": {
+      "name": "The Feast (8 on 8 - Custom Match - Feasting Grounds)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "619": {
+      "name": "The Feast (4 on 4 - Custom Match - Feasting Grounds)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "554": {
+      "name": "The Fields of Glory (Shatter)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+
+
+    // The Palace of the Dead
+    "561": {
+      "name": "The Palace of the Dead B1~B10",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "562": {
+      "name": "The Palace of the Dead B11~B20",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "563": {
+      "name": "The Palace of the Dead B21~B30",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "564": {
+      "name": "The Palace of the Dead B31~B40",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "565": {
+      "name": "The Palace of the Dead B41~B50",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "593": {
+      "name": "The Palace of the Dead B51~B60",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "594": {
+      "name": "The Palace of the Dead B61~B70",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "595": {
+      "name": "The Palace of the Dead B71~B80",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "596": {
+      "name": "The Palace of the Dead B81~B90",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "597": {
+      "name": "The Palace of the Dead B91~B100",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "598": {
+      "name": "The Palace of the Dead B101~B110",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "599": {
+      "name": "The Palace of the Dead B111~B120",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "600": {
+      "name": "The Palace of the Dead B121~B130",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "601": {
+      "name": "The Palace of the Dead B131~B140",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "602": {
+      "name": "The Palace of the Dead B141~B150",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "603": {
+      "name": "The Palace of the Dead B151~B160",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "604": {
+      "name": "The Palace of the Dead B161~B170",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "605": {
+      "name": "The Palace of the Dead B171~B180",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "606": {
+      "name": "The Palace of the Dead B181~B190",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "607": {
+      "name": "The Palace of the Dead B191~B200",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    }
+  },
+
+  // Duty Roulette (KR)
+  "roulettes": {
+    "1": "Duty Roulette: Leveling",
+    "2": "Duty Roulette: Level 50 Dungeons",
+    "3": "Duty Roulette: Main Scenario",
+    "4": "Duty Roulette: Guildhests",
+    "5": "Duty Roulette: Expert",
+    "6": "Duty Roulette: Trials",
+    "7": "Duty Roulette: Frontline",
+    "8": "Duty Roulette: Level 60 Dungeons",
+    "9": "Duty Roulette: Mentor"
+  },
+
+  // Duty Roulette (Global)
+  "roulettesGS": {
+    "1": "Duty Roulette: Leveling",
+    "2": "Duty Roulette: Level 50/60 Dungeons",
+    "3": "Duty Roulette: Main Scenario",
+    "4": "Duty Roulette: Guildhests",
+    "5": "Duty Roulette: Expert",
+    "6": "Duty Roulette: Trials",
+    "7": "Duty Roulette: Frontline",
+    "8": "Duty Roulette: Level 70 Dungeons",
+    "9": "Duty Roulette: Mentor",
+	"10": "The Feast (8 on 8) - Training",
+	"13": "The Feast (4 on 4) - Ranked"
+  },
+
+  // 지역별 돌발
+  "areas": {
+    "134": {
+      "name": "Middle La Noscea",
+      "fates": {
+        "533": "돌아온 거대 화염마수",
+        "649": "그 바다생물을 보라",
+        "687": "검은 악마: 실험 결과",
+        "688": "검은 악마: 과격한 숙녀",
+        "693": "별빛축제: 마법 눈사람",
+        "717": "거대 알 사냥",
+        "220": "거대한 들소",
+        "221": "여름여울의 공포",
+        "222": "대왕땅벌과 노란셔츠",
+        "223": "데네벨 관문 방어 훈련",
+        "225": "끝없는 두더지 잡기",
+        "226": "해군식 통과의례",
+        "227": "양들의 소란",
+        "229": "뛰는 놈 위에 나는 놈",
+        "231": "닥치는 대로 자른다",
+        "233": "쫓는 자와 쫓기는 자",
+        "235": "그 바다생물을 보라",
+        "237": "아젤리스 강의 다리",
+        "238": "피에 젖은 맹견",
+        "239": "아름다운 불량배 강",
+        "240": "해파리가 하늘을 날던 날"
+      }
+    },
+    "135": {
+      "name": "Lower La Noscea",
+      "fates": {
+        "257": "날아다니는 위장",
+        "260": "골칫덩어리 밀항자",
+        "261": "우리는 해적이다",
+        "262": "샘터의 싸움",
+        "264": "삼나무 숲의 전투",
+        "265": "강인한 산길잡이",
+        "534": "돌아온 거대 화염마수",
+        "333": "기세등등한 마견",
+        "666": "신비한 마물 '골렘'",
+        "667": "신비한 마물 '벽돌골렘'",
+        "694": "별빛축제: 마법 눈사람",
+        "718": "거대 알 사냥",
+        "245": "불길한 왕자",
+        "246": "위험한 밭일",
+        "249": "새끼 치는 두꺼비",
+        "250": "검은 날개",
+        "251": "밀가루 전쟁"
+      }
+    },
+    "137": {
+      "name": "Eastern La Noscea",
+      "fates": {
+        "267": "포도주 내놔!",
+        "268": "포도주 마시고 싶어!",
+        "271": "신선한 고기",
+        "272": "달걀귀신",
+        "274": "사마귀 퇴치",
+        "532": "돌아온 거대 화염마수",
+        "278": "하얀 거탑",
+        "279": "콜리브리의 저녁식사",
+        "280": "떠돌이 소매치기",
+        "282": "해변의 싹둑게",
+        "286": "죽은 자의 대변인",
+        "287": "사랑은 운명, 운명은 죽음",
+        "560": "굶주린 용병의 반란",
+        "561": "술꾼 마수",
+        "562": "꿀벌을 꾀는 달콤한 꿀",
+        "563": "심록의 거대 마수",
+        "564": "불길한 알뿌리",
+        "565": "집으로",
+        "566": "알뿌리 으깨기",
+        "334": "여름으로 가는 문",
+        "335": "죽음의 찬탈자",
+        "913": "불꽃축제: 미풍양속의 수호자",
+        "914": "불꽃축제: 한여름의 열광",
+        "915": "불꽃축제: 위험한 불장난",
+        "916": "불꽃축제: 바다야수 조련사",
+        "917": "불꽃축제: 호색한의 말로",
+        "918": "불꽃축제: 해적의 밀주",
+        "689": "검은 악마: 실험 결과",
+        "690": "검은 악마: 과격한 숙녀",
+        "701": "광란의 알 축제"
+      }
+    },
+    "138": {
+      "name": "Western La Noscea",
+      "fates": {
+        "568": "북쪽 방파벽 전투: 전력 정찰",
+        "569": "북쪽 방파벽 전투: 주력 부대 습격",
+        "570": "남쪽 방파벽 전투: 전력 정찰",
+        "571": "남쪽 방파벽 전투: 주력 부대 습격",
+        "572": "냉철한 전략가",
+        "574": "바다뱀의 말로",
+        "575": "바다뱀 선장",
+        "576": "죽음의 행진",
+        "577": "이국에서 온 괴물곤충",
+        "578": "수신을 부르는 자",
+        "650": "폭식하는 괴물새",
+        "702": "현자의 알",
+        "289": "보급선을 지켜라",
+        "290": "폭식하는 괴물새",
+        "291": "밀밭의 파수꾼",
+        "295": "노련한 무사",
+        "297": "세관공사 강제수사",
+        "298": "공공의 적",
+        "303": "고향에서 보낸 편지",
+        "304": "도도 둥지 파괴명령",
+        "306": "생사를 가르는 덫",
+        "308": "협상 결렬",
+        "309": "멍청한 경호원",
+        "310": "데네벨 가도의 결투",
+        "312": "곤충군단 출현",
+        "336": "채소혁명 '만드라즈'"
+      }
+    },
+    "139": {
+      "name": "Upper La Noscea",
+      "fates": {
+        "314": "맹수 먹는 요괴새",
+        "317": "수송부대 방어명령",
+        "320": "어제의 동지는 오늘의 적",
+        "321": "시원한 온천조개탕",
+        "322": "청동호수의 터주",
+        "323": "위험한 식용게",
+        "329": "온천이 키운 조개",
+        "331": "비운의 용병",
+        "332": "호수 위를 누벼라!",
+        "668": "신비한 마물 '골렘'",
+        "669": "신비한 마물 '벽돌골렘'",
+        "670": "신비한 마물 '골렘'",
+        "671": "신비한 마물 '황금골렘'",
+        "703": "광란의 달걀 찾기",
+        "451": "가여운 여인의 제재소 부흥: 식량 방어",
+        "452": "가여운 여인의 제재소 부흥: 게 브 격퇴",
+        "453": "가여운 여인의 제재소 부흥: 커얼 처치",
+        "454": "가여운 여인의 제재소 부흥: 야생 물소 처치"
+      }
+    },
+    "180": {
+      "name": "Outer La Noscea",
+      "fates": {
+        "580": "내가 가는 길",
+        "581": "흑와단의 원수",
+        "583": "커얼아, 커얼아",
+        "586": "땅굴단의 산길잡이",
+        "587": "시굴지 강습 작전",
+        "588": "전방에 폭탄",
+        "589": "뇌우를 부르는 자",
+        "591": "전설의 거룡",
+        "593": "광기의 산맥",
+        "594": "폐기된 실험체",
+        "595": "보급부대 구출명령",
+        "597": "벌레 양식자",
+        "598": "깨어난 석상",
+        "599": "바위신을 부르는 자",
+        "700": "요마 사냥꾼"
+      }
+    },
+    "140": {
+      "name": "Western Thanalan",
+      "fates": {
+        "342": "긴급 점검",
+        "343": "강제 추방",
+        "344": "투쟁을 위한 분노의 철퇴",
+        "345": "대지의 망치",
+        "346": "땅을 굳게 하는 것",
+        "347": "수수께끼의 거대 생물",
+        "348": "사막의 패왕",
+        "349": "황야의 무법자",
+        "350": "들개들의 천국",
+        "352": "악의 없는 아귀",
+        "353": "식탐 많은 왕게",
+        "354": "부상자를 호송하라",
+        "355": "싸움은 계속된다",
+        "356": "코브란 대이동",
+        "357": "황금투구를 쓴 거인",
+        "361": "망치를 두드려라",
+        "366": "키다리 아저씨",
+        "367": "고스트 버스터즈",
+        "911": "버그 잡기",
+        "683": "검은 악마: 실험 결과",
+        "684": "검은 악마: 과격한 숙녀",
+        "704": "광란의 달걀 찾기"
+      }
+    },
+    "141": {
+      "name": "Central Thanalan",
+      "fates": {
+        "535": "돌아온 거대 화염마수",
+        "370": "천박한 승부사",
+        "373": "저녁밥을 사수하라!",
+        "374": "밑 빠진 독 키키룬",
+        "375": "궤짝 말고 관짝",
+        "376": "반숙영웅",
+        "377": "사람 잡는 아귀",
+        "378": "선인장 샐러드",
+        "379": "개미다~!",
+        "381": "키브론 가의 주인",
+        "383": "가도를 가다",
+        "385": "부정한 거대 두꺼비",
+        "389": "성난 보물수호자",
+        "393": "모래성의 맹장",
+        "912": "버그 잡기",
+        "660": "신비한 마물 '골렘'",
+        "661": "신비한 마물 '벽돌골렘'",
+        "695": "별빛축제: 마법 눈사람",
+        "719": "거대 알 사냥"
+      }
+    },
+    "145": {
+      "name": "Eastern Thanalan",
+      "fates": {
+        "536": "돌아온 거대 화염마수",
+        "540": "꿈틀꿈틀 도브란",
+        "541": "거울의 기사",
+        "542": "금발의 귀공자",
+        "543": "추악한 합성수",
+        "394": "야수를 죽여라",
+        "395": "강철의 구멍술사",
+        "652": "섬광 강림: 거대 마수 요격전",
+        "397": "아말쟈군 요격 작전",
+        "398": "침공 작전을 저지하라",
+        "400": "금 장터 방어전",
+        "401": "연옥의 도굴꾼",
+        "402": "흉내쟁이 혼내주기",
+        "406": "동부전선 이상 없다",
+        "407": "악몽의 모발약탈자",
+        "409": "요괴꽃이 피었습니다",
+        "412": "낙원의 샘",
+        "413": "뿔이 긴 어르신",
+        "696": "별빛축제: 마법 눈사람",
+        "191": "하늘다리 사투: 전초전",
+        "192": "하늘다리 사투: 방어전",
+        "193": "하늘다리 사투: 즈즈룬 격퇴",
+        "194": "하늘다리 사투: 나요크 로 격퇴",
+        "195": "하늘다리 사투: 시민 구출 작전",
+        "705": "현자의 알",
+        "720": "거대 알 사냥"
+      }
+    },
+    "146": {
+      "name": "Southern Thanalan",
+      "fates": {
+        "545": "황야의 소화전",
+        "546": "비운의 투사",
+        "548": "정의란 무엇인가",
+        "549": "등딱지를 걷어차라!",
+        "550": "정예부대 '선혈군단'",
+        "551": "오늘의 운세",
+        "552": "친구와 가족",
+        "553": "제1관문 공략전",
+        "554": "속사의 달인",
+        "555": "모래 위의 발자국",
+        "557": "아말쟈군 특수부대 '불꽃송곳니회'",
+        "558": "화염신을 부르는 자",
+        "651": "섬광 강림: 거대 마수 요격전",
+        "685": "검은 악마: 실험 결과",
+        "686": "검은 악마: 과격한 숙녀",
+        "706": "광란의 달걀 찾기",
+        "419": "해골 두목",
+        "420": "콩 수프는 질렸어",
+        "421": "리틀 알라미고 방어전",
+        "422": "진리를 밝혀라",
+        "423": "느긋한 압살자",
+        "424": "우리는 제2전투대대",
+        "427": "끓어오르는 괴력",
+        "429": "사막의 아이들",
+        "430": "운명의 대변인",
+        "431": "잡는 자와 잡히는 자",
+        "432": "비레고의 수호자",
+        "434": "정찰병의 임무",
+        "436": "극악무도한 암살자",
+        "437": "메마른 바다",
+        "441": "금쪽같은 내 새끼",
+        "455": "사막의 황제",
+        "456": "가지지 못한 자"
+      }
+    },
+    "147": {
+      "name": "Northern Thanalan",
+      "fates": {
+        "556": "청린 정제소 일손 돕기",
+        "637": "작열하는 귀족",
+        "638": "꿀꺽꿀꺽 도브란",
+        "639": "감시자의 눈",
+        "641": "매복한 도브란",
+        "642": "무역로 청린수길",
+        "643": "구세신께 바치는 제물: 납치편",
+        "644": "구세신께 바치는 제물: 함정편",
+        "645": "구세신께 바치는 제물: 응징편",
+        "646": "구세신께 바치는 제물: 요마편",
+        "647": "미쳐 날뛰는 거대 마수",
+        "446": "허상의 눈",
+        "447": "발톱깎이",
+        "449": "불조심",
+        "450": "신형 장갑재 시험",
+        "457": "역공학을 통한 분석"
+      }
+    },
+    "148": {
+      "name": "Central Shroud",
+      "fates": {
+        "537": "돌아온 거대 화염마수",
+        "600": "린드부름의 습격",
+        "601": "무지 즐거운 버섯따기",
+        "602": "굿'바이",
+        "603": "진리를 찾아서",
+        "604": "음험한 마물",
+        "120": "숲속의 질주",
+        "121": "즐거운 버섯따기",
+        "122": "스프리건 이사하는 날",
+        "123": "혼탁함의 결정체",
+        "124": "벌레 조심하세요",
+        "125": "식인 괴물새",
+        "126": "다리가 튼튼한 폭군",
+        "127": "분노한 돼지의 질주",
+        "128": "강력한 소악마 '아르슈'",
+        "130": "영원그늘 수확제",
+        "131": "대지신의 망각을 잊지 말기를",
+        "136": "공포의 교관",
+        "137": "병을 퍼뜨리는 요괴꽃",
+        "138": "초코초코초코초코보",
+        "139": "그대의 영혼에 평안이 있기를",
+        "140": "대탈주",
+        "141": "갈반스 감시초소 지원",
+        "142": "물컹한 대식가",
+        "672": "신비한 마물 '골렘'",
+        "673": "신비한 마물 '벽돌골렘'",
+        "697": "별빛축제: 마법 눈사람",
+        "707": "광란의 달걀 찾기",
+        "196": "고대의 투신",
+        "197": "고대의 투신",
+        "208": "무당벌레의 천적",
+        "209": "연못 파괴자"
+      }
+    },
+    "152": {
+      "name": "East Shroud",
+      "fates": {
+        "607": "지나간 날들의 빛",
+        "608": "오츄 수확",
+        "609": "제멋대로인 귀부인",
+        "610": "종달새의 지저귐 조우전",
+        "611": "계속되는 종달새의 지저귐 조우전",
+        "612": "제국군 천인대장",
+        "615": "젖뿌리 뽑기",
+        "616": "유곡의 약사",
+        "618": "두꺼비의 꿈",
+        "619": "유곡의 위병",
+        "620": "무지무지 즐거운 버섯따기",
+        "622": "경건한 양육자",
+        "143": "벌꿀 전쟁",
+        "144": "전염병 살포기",
+        "145": "전장까지 앞으로 몇 말름?",
+        "148": "비밀의 화원",
+        "149": "번식기의 끝",
+        "150": "젊은 두목원숭이",
+        "151": "줄다리 사투",
+        "152": "광기 어린 수호자들",
+        "679": "검은 악마: 실험 결과",
+        "680": "검은 악마: 과격한 숙녀",
+        "691": "기동병사 프로토아머",
+        "692": "광란의 싸움꾼",
+        "198": "고대의 투신",
+        "199": "고대의 투신",
+        "200": "고대의 투신",
+        "212": "아흔 아홉덩굴",
+        "213": "실프와 함께 사라지다",
+        "214": "대머리수리의 만찬",
+        "217": "달콤한 짐꾼",
+        "218": "비정한 수확자"
+      }
+    },
+    "153": {
+      "name": "South Shroud",
+      "fates": {
+        "624": "출렁이는 땅",
+        "626": "거북 네 이노오오옴!",
+        "627": "냄새의 근원 차단",
+        "628": "최후의 멧돼지왕",
+        "153": "날쌘 영양",
+        "154": "뿌리를 건너고 늪을 지나서",
+        "158": "밀렵매매 쌍방처벌",
+        "159": "붉은둔덕 요새 전투: 공략전",
+        "160": "붉은둔덕 요새 전투: 점령전",
+        "161": "붉은둔덕 요새 전투: 방어전",
+        "162": "붉은둔덕 요새 전투: 요격전",
+        "163": "마지막 잎새",
+        "164": "수려한 무법자",
+        "166": "술집의 단골손님",
+        "167": "사랑엔 시간이 필요해",
+        "168": "확고한 증거",
+        "169": "암시장 조합장",
+        "170": "통행료는 주먹으로 내겠다",
+        "171": "당장 나가주시죠",
+        "172": "잃어버린 물건을 찾아서",
+        "681": "검은 악마: 실험 결과",
+        "682": "검은 악마: 과격한 숙녀",
+        "190": "고독한 골렘",
+        "708": "광란의 달걀 찾기",
+        "201": "고대의 투신",
+        "202": "고대의 투신",
+        "203": "고대의 투신",
+        "204": "고대의 투신",
+        "215": "불 속으로 뛰어드는 나나니단"
+      }
+    },
+    "154": {
+      "name": "North Shroud",
+      "fates": {
+        "538": "돌아온 거대 화염마수",
+        "631": "벌채부대 요격전",
+        "632": "유적의 망령기사",
+        "633": "이크살군 벌채장 강습 작전",
+        "634": "분노한 숲의 수호자",
+        "674": "신비한 마물 '골렘'",
+        "675": "신비한 마물 '벽돌골렘'",
+        "676": "신비한 마물 '골렘'",
+        "677": "신비한 마물 '황금골렘'",
+        "174": "오합지졸",
+        "178": "붉은 왕이 될 유충",
+        "180": "산길잡이의 부탁",
+        "183": "혼란탈출",
+        "184": "너도나도 좋아하는 문투이 콩",
+        "185": "매혹적인 향기",
+        "698": "별빛축제: 마법 눈사람",
+        "187": "이크살족 강습부대 요격",
+        "188": "굶주린 지즈가 원하는 것",
+        "189": "오리나무 샘 청소",
+        "205": "고대의 투신",
+        "206": "고대의 투신",
+        "207": "고대의 투신",
+        "722": "거대 알 사냥",
+        "216": "달의 반역자"
+      }
+    },
+    "155": {
+      "name": "Coerthas Central Highlands",
+      "fates": {
+        "653": "섬광 강림: 기계 마수 토벌전",
+        "654": "섬광 강림: 기계 마수 토벌전",
+        "699": "별빛축제: 마법 눈사람",
+        "709": "현자의 알",
+        "460": "늑대들의 전쟁",
+        "461": "알 수 없음",
+        "463": "검은 탄환",
+        "464": "강가의 복수자",
+        "465": "겨울 이야기",
+        "466": "별에 소원을",
+        "467": "야생악어 던디",
+        "469": "커르다스의 하얀 늑대",
+        "470": "움직이는 요새",
+        "472": "흘러라 눈물이여",
+        "473": "환희, 참회, 거친 눈보라",
+        "474": "에이비스 킬러",
+        "475": "입 큰 악귀",
+        "479": "얼어붙은 파동",
+        "480": "기병의 천적",
+        "482": "피 튀는 거리",
+        "483": "촉발된 전쟁",
+        "484": "뼈 탐식자",
+        "486": "아유나르트의 의지",
+        "487": "따스함을 찾아서",
+        "489": "순례길",
+        "490": "어리석은 용사",
+        "491": "아직은 머나먼 별빛",
+        "493": "설산의 습격자",
+        "494": "붉은 날개 '록'",
+        "496": "용의 뜻에 따라서!",
+        "497": "얼음땡",
+        "498": "입식지 확장을 저지하라",
+        "499": "후엘록 네 자매",
+        "500": "명장의 기술",
+        "501": "스바라 요격작전: 공병호송",
+        "502": "스바라 요격작전: 포격준비",
+        "503": "스바라 요격작전: 대응사격",
+        "504": "스바라 요격작전: 인해전술",
+        "505": "전설의 마수",
+        "506": "부상당한 마수",
+        "507": "돌아온 사나이",
+        "508": "바람신을 부르는 자"
+      }
+    },
+    "156": {
+      "name": "Mor Dhona",
+      "fates": {
+        "512": "잃어버린 풍경",
+        "514": "엉킨덩굴 습지대 대청소",
+        "516": "늪지대의 원혼",
+        "517": "몰볼, 분노의 대증식",
+        "520": "종합정비계획",
+        "521": "잔인한 악귀",
+        "522": "성지순례",
+        "523": "거인의 부동산 확장",
+        "524": "히포그리프의 만찬",
+        "525": "흐트러진 은빛 머리칼",
+        "526": "하팔릿의 남하",
+        "527": "마수의 야습",
+        "529": "여행길의 좋은 친구",
+        "530": "달콤한 유혹",
+        "655": "섬광 강림: 아누비스 섬멸전",
+        "656": "섬광 강림: 아누비스 섬멸전",
+        "657": "섬광 강림: 시룡 토벌전",
+        "658": "섬광 강림: 시룡 토벌전"
+      }
+    },
+    "397": {
+      "name": "Coerthas Western Highlands",
+      "fates": {
+        "787": "지켜보고 있다",
+        "788": "순례 기사",
+        "789": "빙판길 주의!",
+        "791": "흑철교 전투",
+        "792": "뻣뻣한 흰털짐승",
+        "793": "야크를 먹는 거인",
+        "794": "영광의 성 피네아 연대",
+        "795": "곰 조심",
+        "796": "예티의 천적",
+        "797": "알 수 없음",
+        "798": "수인 예티",
+        "800": "용이 잠든 섬 전투",
+        "801": "얼어붙은 꽃",
+        "802": "어스름 은빛늑대",
+        "805": "지휘관님!",
+        "807": "현혹하는 시선",
+        "809": "백설공포",
+        "810": "식인 얼음과자",
+        "811": "용의 졸개 토벌작전",
+        "812": "조룡의 왕",
+        "813": "얼음 위의 늑대",
+        "814": "주정뱅이 야수",
+        "815": "젊은 용기사",
+        "816": "매의 보금자리를 위협하는 자",
+        "817": "네 공도 내 것",
+        "908": "아이스크림 두통",
+        "909": "냉혹한 얼음용"
+      }
+    },
+    "398": {
+      "name": "The Dravanian Forelands",
+      "fates": {
+        "818": "전설의 초코보",
+        "819": "초코보 숲의 파수꾼",
+        "820": "교묘한 사냥꾼",
+        "821": "부러지지 않는 화살",
+        "822": "고고한 맹수",
+        "823": "연어 전쟁",
+        "824": "복잡미묘한 향기",
+        "825": "추악한 순례자",
+        "826": "역시 고기가 최고",
+        "827": "적의 적도 나의 적",
+        "828": "이단 선동가",
+        "829": "싸움을 끝내는 것",
+        "830": "경계를 나누는 강",
+        "831": "알 사수 전쟁",
+        "832": "구름안개 거리의 학살자",
+        "833": "어머니의 분노",
+        "834": "지하의 발소리",
+        "835": "용인의 하극상",
+        "836": "소란스러운 죽음",
+        "837": "낙원의 샘",
+        "838": "강습하는 갑룡",
+        "902": "번개야수의 여왕",
+        "903": "역습의 여왕",
+        "904": "역습의 여왕",
+        "905": "환영의 여왕",
+        "906": "환영의 여왕",
+        "907": "환영의 여왕",
+        "910": "변모한 처녀"
+      }
+    },
+    "399": {
+      "name": "The Dravanian Hinterlands",
+      "fates": {
+        "768": "꼬리를 세워라!",
+        "769": "야수의 가장",
+        "770": "서방 전격전",
+        "771": "몰볼을 죽여라",
+        "772": "냄새나는 아가씨",
+        "773": "이딜샤이어 사냥 협회",
+        "774": "피에 젖은 폭군",
+        "775": "곰의 수난",
+        "777": "사역마는 괴로워",
+        "778": "개구리를 위하여 종은 울린다",
+        "779": "샬레이안의 그림자",
+        "780": "애서가의 우울",
+        "781": "코카트리스의 추억",
+        "782": "끝없는 시간의 흐름 끝에서",
+        "783": "주인을 기다리는 자",
+        "784": "물고기 포식자",
+        "785": "누에굴",
+        "786": "실 뽑는 전문가",
+        "756": "악마의 기계",
+        "757": "보복자들",
+        "758": "전면 개조형 기체",
+        "759": "왕대모벌의 습격",
+        "760": "야성의 충돌",
+        "761": "왕눈이 마물 소",
+        "762": "도서관 청소",
+        "763": "꽃가루 전선 이상 있다",
+        "764": "피 빠는 부유초",
+        "766": "고브고브 전쟁",
+        "767": "숙련된 전투 지휘관"
+      }
+    },
+    "400": {
+      "name": "The Churning Mists",
+      "fates": {
+        "868": "검은미늘 토벌전: 백룡 지원",
+        "869": "검은미늘 토벌전: 추격 작전",
+        "870": "검은미늘 토벌전: 총력전",
+        "871": "창천의 백룡",
+        "872": "하얀 궁전 방어전: 아기용 구출",
+        "873": "하얀 궁전 방어전: 맹룡 토벌",
+        "874": "하얀 궁전 방어전: 모그리 구출",
+        "725": "구름 속 수생생물",
+        "726": "안녕 태고의 다이노스",
+        "727": "흑룡의 사도",
+        "728": "저축왕 모그리",
+        "731": "잃어버린 세계",
+        "732": "구름바다에 치는 천둥",
+        "735": "포식하는 공룡",
+        "736": "긴급출동 툴리핸드",
+        "737": "긴급출동 뷔브르",
+        "738": "유적 감시자",
+        "740": "드래곤과 춤을",
+        "741": "드래곤과 또다시 춤을",
+        "742": "사나운 갑주드래곤",
+        "744": "밤과 안개",
+        "746": "용쟁혈투",
+        "747": "황혼의 비룡",
+        "748": "너는 누구냐",
+        "751": "맹염의 불꽃용",
+        "752": "흡입력을 잃지 않는다",
+        "753": "구름바다의 문제아",
+        "754": "신성함과 사악함이 교차하는 균열",
+        "755": "어리석은 문제아"
+      }
+    },
+    "401": {
+      "name": "The Sea of Clouds",
+      "fates": {
+        "839": "고양이의 돌진",
+        "840": "가스토르니스 둥지 파괴 명령",
+        "841": "화려한 뚱보 새",
+        "842": "구름바다 대난투",
+        "843": "장미의 피를 마시고 싶어",
+        "844": "검은 새",
+        "845": "지나친 혈기",
+        "846": "불법 투기자",
+        "847": "구름바다의 전사",
+        "848": "알 수 없음",
+        "849": "알 수 없음",
+        "850": "알 수 없음",
+        "851": "멋진 신세계",
+        "852": "하늘 위의 구름",
+        "853": "도망자",
+        "854": "추적자",
+        "855": "폭식자 바위인형",
+        "856": "보급로를 끊어라",
+        "857": "초대받지 않은 손님",
+        "858": "알 수 없음",
+        "859": "알 수 없음",
+        "860": "공포의 대명사",
+        "861": "구름신의 사제",
+        "862": "케나바누의 제자들",
+        "863": "복수의 사제",
+        "864": "융단폭격",
+        "865": "광기 어린 노랫소리",
+        "866": "구름바다의 광풍",
+        "867": "흉조는 구름을 넘고",
+        "875": "거대한 부리의 괴조"
+      }
+    },
+    "402": {
+      "name": "Azys Lla",
+      "fates": {
+        "877": "태고의 위협: 야광화 격멸전",
+        "878": "태고의 위협: 야광화 격멸전",
+        "879": "태고의 위협: 야광화 격멸전",
+        "880": "제보 번호 199 버그",
+        "881": "윤회의 뱀",
+        "882": "알라그 위협의 메커니즘",
+        "883": "간사한 마수",
+        "884": "마수 사냥",
+        "885": "충의의 요괴왕",
+        "886": "돌연변이 꽃밭",
+        "887": "강철의 도시",
+        "888": "잃어버린 기술",
+        "889": "전자동 수작업",
+        "890": "마도기사장",
+        "891": "감마 전선의 격전: 동부",
+        "892": "감마 전선의 격전: 서부",
+        "893": "감마 전선의 격전: 남부",
+        "894": "지성을 잃은 폭풍",
+        "895": "머리 많은 인조 드래곤",
+        "897": "대량 발주 오류 사건",
+        "898": "불길한 실험체",
+        "899": "영혼 없는 육체",
+        "900": "상급 알라그 사용자",
+        "901": "꿈꾸는 무인기"
+      }
+    }
+  }
+}
