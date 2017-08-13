@@ -432,7 +432,7 @@ namespace App
                 toolStripMenuItem_SelectApply.Text = "적용하기";
                 toolStripMenuItem_LogCopy.Text = "로그 복사";
                 toolStripMenuItem_LogClear.Text = "로그 삭제";
-                label_About.Text = "[제작 및 문의]\n유채색\n라그린네\n히비야\n\n[저작권]\n기재되어있는 회사명 · 제품명 · 시스템 이름은\n해당 소유자의 상표 또는 등록 상표입니다.\n(C)2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by EYEDENTITY MOBILE.";
+                label_About.Text = "[제작 및 문의]\n유채색\n라그린네\n히비야\n윈도ce [인벤]\n\n[저작권]\n기재되어있는 회사명 · 제품명 · 시스템 이름은\n해당 소유자의 상표 또는 등록 상표입니다.\n(C)2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by EYEDENTITY MOBILE.";
 
             }
             else if (radioButton_Langen.Checked) // English
@@ -463,19 +463,19 @@ namespace App
                 toolStripMenuItem_SelectApply.Text = "Apply";
                 toolStripMenuItem_LogCopy.Text = "Copy Logs";
                 toolStripMenuItem_LogClear.Text = "Clear";
-                label_About.Text = "[Contributor]\n유채색\n라그린네\n히비야\n\n[Copyright]\nAll company, product, system names are\n registered or unregistered trademarks of their respective owners.\n(C)2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by EYEDENTITY MOBILE.";
+                label_About.Text = "[Contributor]\n유채색\n라그린네\n히비야\nAlex00728 [Reddit]\n\n[Copyright]\nAll company, product, system names are\n registered or unregistered trademarks of their respective owners.\n(C)2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by EYEDENTITY MOBILE.";
             }
             
         }
 
         private void radioButton_Langen_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You should Restart Program or \nMake changes to overlay(Make new/Cancel Matches, etc...)\nTo change language perfectly, \n", "DFA Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("You should Restart Program \nTo change language perfectly, \n", "DFA Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void radioButton_Langko_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("변경된 언어를 완벽하게 적용하기 위해서는 \n오버레이 내용을 변경하는 작업(신규 매칭 신청/취소 등)을 하거나, \n프로그램을 재시작해야 합니다.", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("변경된 언어를 완벽하게 적용하기 위해서는 \n프로그램을 재시작해야 합니다.", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
