@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -138,7 +138,10 @@ namespace App
                     m_overlay.BackColor = Color.FromArgb(64, 0, 0);
 
                     CancelDutyFinderSync();
-                    label_DutyName.Text = "클라이언트 통신 대기 중";
+                    if (Settings.lang == 0)
+                        label_DutyName.Text = "클라이언트 통신 대기 중";
+                    else if (Settings.lang == 1)
+                        label_DutyName.Text = "Waiting for Client Connection";
                 }
                 this.isOkay = isOkay;
             });
@@ -151,11 +154,17 @@ namespace App
             {
                 if (dutyCount < 0)
                 {
-                    label_DutyCount.Text = "임무 매칭 중";
+                    if (Settings.lang == 0)
+                        label_DutyCount.Text = "임무 매칭 중";
+                    else if (Settings.lang == 1)
+                        label_DutyCount.Text = "Matching Duty";
                 }
                 else
                 {
-                    label_DutyCount.Text = string.Format("총 {0}개 임무 매칭 중", dutyCount);
+                    if (Settings.lang == 0)
+                        label_DutyCount.Text = string.Format("총 {0}개 임무 매칭 중", dutyCount);
+                    else if (Settings.lang == 1)
+                        label_DutyCount.Text = string.Format("{0} duty Matching", dutyCount);
                 }
             });
         }
@@ -171,22 +180,34 @@ namespace App
                     label_DutyName.Text = instance.Name;
                     if (tank != 0 || healer != 0 || dps != 0)
                     {
-                        label_DutyStatus.Text = string.Format("파티 매칭 중: {0} / {1} / {2}", tank, healer, dps);
+                        if (Settings.lang == 0)
+                            label_DutyStatus.Text = string.Format("파티 매칭 중: {0} / {1} / {2}", tank, healer, dps);
+                        else if (Settings.lang == 1)
+                            label_DutyStatus.Text = string.Format("Party Matching: {0} / {1} / {2}", tank, healer, dps);
                     }
                     else
                     {
-                        label_DutyStatus.Text = "매칭 대기 중";
+                        if (Settings.lang == 0)
+                            label_DutyStatus.Text = "매칭 대기 중";
+                        else if (Settings.lang == 1)
+                            label_DutyStatus.Text = "Waiting for Match";
                     }
                 }
                 else if (isRoulette)
                 {
                     if (tank == 255) // 순번 대기
                     {
-                        label_DutyStatus.Text = "매칭 대기 중";
+                        if (Settings.lang == 0)
+                            label_DutyStatus.Text = "매칭 대기 중";
+                        else if (Settings.lang == 1)
+                            label_DutyStatus.Text = "Waiting for Match";
                     }
                     else // TODO: 순번이 1번일 때?
                     {
-                        label_DutyStatus.Text = string.Format("대기 순번: {0}", tank + 1);
+                        if (Settings.lang == 0)
+                            label_DutyStatus.Text = string.Format("대기 순번: {0}", tank + 1);
+                        else if (Settings.lang == 1)
+                            label_DutyStatus.Text = string.Format("Waiting List Number: {0}", tank + 1);
                     }
                 }
                 else
@@ -204,9 +225,17 @@ namespace App
             memberCount = null;
             this.Invoke(() =>
             {
-                label_DutyCount.Text = "무작위 임무";
+                if (Settings.lang == 0)
+                {
+                    label_DutyCount.Text = "무작위 임무";
+                    label_DutyStatus.Text = "매칭 대기 중";
+                }
+                else if (Settings.lang == 1)
+                {
+                    label_DutyCount.Text = "Duty Roulette";
+                    label_DutyStatus.Text = "Waiting for Match";
+                }
                 label_DutyName.Text = roulette.Name;
-                label_DutyStatus.Text = "매칭 대기 중";
             });
         }
 
@@ -214,9 +243,17 @@ namespace App
         {
             this.Invoke(() =>
             {
-                label_DutyCount.Text = "입장 확인 대기 중";
+                if (Settings.lang == 0)
+                {
+                    label_DutyCount.Text = "입장 확인 대기 중";
+                    label_DutyStatus.Text = "매칭!";
+                }
+                else if (Settings.lang == 1)
+                {
+                    label_DutyCount.Text = "Waiting for Acception";
+                    label_DutyStatus.Text = "Matched!";
+                }
                 label_DutyName.Text = instance.Name;
-                label_DutyStatus.Text = "매칭!";
 
                 accentColor = Color.Red;
                 StartBlink();
@@ -238,7 +275,10 @@ namespace App
 
             this.Invoke(() =>
             {
-                label_DutyCount.Text = "입장 확인 중";
+                if (Settings.lang == 0)
+                    label_DutyCount.Text = "입장 확인 중";
+                else if (Settings.lang == 1)
+                    label_DutyCount.Text = "Waiting for Acception";
                 label_DutyStatus.Text = string.Format("{0}/{3}    {1}/{4}    {2}/{5}", tank, healer, dps, memberCount[0], memberCount[2], memberCount[1]);
             });
         }
@@ -250,7 +290,10 @@ namespace App
                 // label_DutyCount.Text = Data.GetArea(fate.Zone).Name;
                 label_DutyCount.Text = "";
                 label_DutyName.Text = fate.Name;
-                label_DutyStatus.Text = "돌발 임무 발생!";
+                if (Settings.lang == 0)
+                    label_DutyStatus.Text = "돌발 임무 발생!";
+                else if (Settings.lang == 1)
+                    label_DutyStatus.Text = "FATE Occured!";
 
                 accentColor = Color.DarkOrange;
                 StartBlink();
@@ -268,7 +311,10 @@ namespace App
             StopBlink();
 
             label_DutyCount.Text = "";
-            label_DutyName.Text = "매칭 중인 임무 없음";
+            if (Settings.lang == 0)
+                label_DutyName.Text = "매칭 중인 임무 없음";
+            else if (Settings.lang == 1)
+                label_DutyName.Text = "No Waiting Matches";
             label_DutyStatus.Text = "";
         }
 

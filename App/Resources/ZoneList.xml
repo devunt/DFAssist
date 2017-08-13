@@ -1,5 +1,5 @@
 ﻿<Data>
-    <Version>20170720.1</Version>
+    <Version>20170812.1</Version>
 
     <!-- 무작위 임무 -->
     <Roulette Id="1" Text="무작위 임무: 레벨링" />
@@ -1279,9 +1279,9 @@
       <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
     
-    <!-- 3.5 The Far Edge of Fate -->
+    <!-- 3.5 숙명의 끝 -->
     <!-- 3.5 던전 -->
-    <Item ZoneId="267" Text="" Duty="바일사르 장벽"   >
+    <Item ZoneId="267" Text="" Duty="바일사르 장성">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
     <Item ZoneId="269" Text="솜 알" Duty="솜 알 (어려움)">
@@ -1297,7 +1297,7 @@
     </Item>-
   
     <!-- 3.5 레이드 -->
-    <Item ZoneId="273" Text="" Duty="그림자 나라 던 스카">
+    <Item ZoneId="273" Text="" Duty="둔 스카"> 
         <Duty Tank="3" Healer="6" DPS="15" />
     </Item>
     
