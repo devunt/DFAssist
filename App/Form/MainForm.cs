@@ -65,9 +65,9 @@ namespace App
                 }
             });
 
-            if (Settings.lang)
+            if (Settings.lang == 0)
                 radioButton_Langko.Checked = true;
-            else
+            else if (Settings.lang == 1)
                 radioButton_Langen.Checked = true;
             checkBox_StartupShow.Checked = Settings.StartupShowMainForm;
             checkBox_AutoOverlayHide.Checked = Settings.AutoOverlayHide;
@@ -243,7 +243,7 @@ namespace App
         {
             var @checked = checkBox_CheatRoullete.Checked;
             SetCheatRoulleteCheckBox(false);
-            if (@checked && Settings.lang)
+            if (@checked && Settings.lang == 0)
             {
                 var respond = MessageBox.Show("악용 방지를 위해 기본적으로 비활성화 되어있는 기능입니다.\n특정 비인기 임무를 고의적으로 입장 거부하는 행위 등은 자제해주세요.\n\n그래도 활성화 하시겠습니까?", "DFA 경고", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
                 if (respond == DialogResult.Yes)
@@ -252,7 +252,7 @@ namespace App
                     SetCheatRoulleteCheckBox(true);
                 }
             }
-            else if (@checked && !Settings.lang)
+            else if (@checked && Settings.lang == 1)
             {
                 var respond = MessageBox.Show("This function is disabled by default to prevent abuse.\nPlease refrain from deliberately rejecting a specific dislike duty.\n\nDo you still want to enable it?", "DFA Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
                 if (respond == DialogResult.Yes)
@@ -275,19 +275,19 @@ namespace App
         private void toolStripMenuItem_LogCopy_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(richTextBox_Log.Text);
-            if (Settings.lang)
+            if (Settings.lang == 0)
                 MessageBox.Show("로그가 클립보드에 복사되었습니다.", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else if (!Settings.lang)
+            else if (Settings.lang == 1)
                 MessageBox.Show("Logs have copied to Clipboard.", "DFA Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void toolStripMenuItem_LogClear_Click(object sender, EventArgs e)
         {
-            if (Settings.lang && MessageBox.Show("로그를 비우시겠습니까?", "DFA 알림", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+            if (Settings.lang == 0 && MessageBox.Show("로그를 비우시겠습니까?", "DFA 알림", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
              {
                 richTextBox_Log.Text = " ";
              }
-            else if (!Settings.lang && MessageBox.Show("Clear Logs?", "DFA Notice", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+            else if (Settings.lang == 1 && MessageBox.Show("Clear Logs?", "DFA Notice", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
              {
                 richTextBox_Log.Text = " ";
              }
@@ -330,9 +330,9 @@ namespace App
             }
 
             Settings.Save();
-            if (Settings.lang)
+            if (Settings.lang == 0)
                 MessageBox.Show("돌발 알림 설정이 적용되었습니다.", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else if (!Settings.lang)
+            else if (Settings.lang == 1)
                 MessageBox.Show("FATE Notification Set.", "DFA Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -406,7 +406,7 @@ namespace App
 
             if (radioButton_Langko.Checked) // 한국어
             {
-                Settings.lang = true;
+                Settings.lang = 0;
                 Settings.Save();
                 this.Text = "임무/돌발 찾기 도우미";
                 label_Process.Text = "FFXIV 프로세스";
@@ -437,7 +437,7 @@ namespace App
             }
             else if (radioButton_Langen.Checked) // English
             {
-                Settings.lang = false;
+                Settings.lang = 1;
                 Settings.Save();
                 this.Text = "Duty/FATE Notificator";
                 label_Process.Text = "FFXIV Process";
@@ -465,6 +465,17 @@ namespace App
                 toolStripMenuItem_LogClear.Text = "Clear";
                 label_About.Text = "[Contributor]\n유채색\n라그린네\n히비야\n\n[Copyright]\nAll company, product, system names are\n registered or unregistered trademarks of their respective owners.\n(C)2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by EYEDENTITY MOBILE.";
             }
+            
+        }
+
+        private void radioButton_Langen_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You should Restart Program or \nMake changes to overlay(Make new/Cancel Matches, etc...)\nTo change language perfectly, \n", "DFA Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void radioButton_Langko_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("변경된 언어를 완벽하게 적용하기 위해서는 \n오버레이 내용을 변경하는 작업(신규 매칭 신청/취소 등)을 하거나, \n프로그램을 재시작해야 합니다.", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
