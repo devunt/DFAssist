@@ -243,7 +243,7 @@ namespace App
         {
             var @checked = checkBox_CheatRoullete.Checked;
             SetCheatRoulleteCheckBox(false);
-            if (@checked && radioButton_Langko.Checked)
+            if (@checked && Settings.lang)
             {
                 var respond = MessageBox.Show("악용 방지를 위해 기본적으로 비활성화 되어있는 기능입니다.\n특정 비인기 임무를 고의적으로 입장 거부하는 행위 등은 자제해주세요.\n\n그래도 활성화 하시겠습니까?", "DFA 경고", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
                 if (respond == DialogResult.Yes)
@@ -252,7 +252,7 @@ namespace App
                     SetCheatRoulleteCheckBox(true);
                 }
             }
-            else if (@checked && radioButton_Langen.Checked)
+            else if (@checked && !Settings.lang)
             {
                 var respond = MessageBox.Show("This function is disabled by default to prevent abuse.\nPlease refrain from deliberately rejecting a specific dislike duty.\n\nDo you still want to enable it?", "DFA Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
                 if (respond == DialogResult.Yes)
@@ -275,19 +275,19 @@ namespace App
         private void toolStripMenuItem_LogCopy_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(richTextBox_Log.Text);
-            if (radioButton_Langko.Checked)
+            if (Settings.lang)
                 MessageBox.Show("로그가 클립보드에 복사되었습니다.", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else if (radioButton_Langen.Checked)
+            else if (!Settings.lang)
                 MessageBox.Show("Logs have copied to Clipboard.", "DFA Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void toolStripMenuItem_LogClear_Click(object sender, EventArgs e)
         {
-            if (radioButton_Langko.Checked && MessageBox.Show("로그를 비우시겠습니까?", "DFA 알림", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+            if (Settings.lang && MessageBox.Show("로그를 비우시겠습니까?", "DFA 알림", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
              {
                 richTextBox_Log.Text = " ";
              }
-            else if (radioButton_Langen.Checked && MessageBox.Show("Clear Logs?", "DFA Notice", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+            else if (!Settings.lang && MessageBox.Show("Clear Logs?", "DFA Notice", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
              {
                 richTextBox_Log.Text = " ";
              }
@@ -330,9 +330,9 @@ namespace App
             }
 
             Settings.Save();
-            if (radioButton_Langko.Checked)
+            if (Settings.lang)
                 MessageBox.Show("돌발 알림 설정이 적용되었습니다.", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else if (radioButton_Langko.Checked)
+            else if (!Settings.lang)
                 MessageBox.Show("FATE Notification Set.", "DFA Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
