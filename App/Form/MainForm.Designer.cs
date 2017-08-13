@@ -531,6 +531,7 @@
             this.radioButton_Langko.TabIndex = 4;
             this.radioButton_Langko.Text = "한국어";
             this.radioButton_Langko.UseVisualStyleBackColor = true;
+            this.radioButton_Langko.Click += new System.EventHandler(this.radioButton_Langko_Click);
             // 
             // radioButton_Langen
             // 
@@ -542,6 +543,7 @@
             this.radioButton_Langen.TabIndex = 5;
             this.radioButton_Langen.Text = "English";
             this.radioButton_Langen.UseVisualStyleBackColor = true;
+            this.radioButton_Langen.Click += new System.EventHandler(this.radioButton_Langen_Click);
             // 
             // MainForm
             // 
