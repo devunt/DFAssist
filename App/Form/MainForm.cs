@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -303,76 +304,7 @@ namespace App
             MessageBox.Show("돌발 알림 설정이 적용되었습니다.", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void SetCheatRoulleteCheckBox(bool @checked)
-        {
-            checkBox_CheatRoullete.CheckedChanged -= checkBox_CheatRoullete_CheckedChanged;
-            checkBox_CheatRoullete.Checked = @checked;
-            checkBox_CheatRoullete.CheckedChanged += checkBox_CheatRoullete_CheckedChanged;
-        }
-
-        private void FindFFXIVProcess()
-        {
-            comboBox_Process.Items.Clear();
-            Log.I("파이널판타지14 프로세스를 찾는 중...");
-
-            var processes = new List<Process>();
-            processes.AddRange(Process.GetProcessesByName("ffxiv"));
-            processes.AddRange(Process.GetProcessesByName("ffxiv_dx11"));
-
-            if (processes.Count == 0)
-            {
-                Log.E("파이널판타지14 프로세스를 찾을 수 없습니다");
-                button_SelectProcess.Enabled = false;
-                comboBox_Process.Enabled = false;
-            }
-            else if (processes.Count >= 2)
-            {
-                Log.E("파이널판타지14가 2개 이상 실행중입니다");
-                button_SelectProcess.Enabled = true;
-                comboBox_Process.Enabled = true;
-
-                foreach (var process in processes)
-                {
-                    comboBox_Process.Items.Add(string.Format("{0}:{1}", process.ProcessName, process.Id));
-                }
-                comboBox_Process.SelectedIndex = 0;
-            }
-            else {
-                SetFFXIVProcess(processes[0]);
-            }
-        }
-
-        private void SetFFXIVProcess(Process process)
-        {
-            FFXIVProcess = process;
-
-            var name = string.Format("{0}:{1}", FFXIVProcess.ProcessName, FFXIVProcess.Id);
-            Log.S("파이널판타지14 프로세스가 선택되었습니다: {0}", name);
-
-            comboBox_Process.Enabled = false;
-            button_SelectProcess.Enabled = false;
-
-            comboBox_Process.Items.Clear();
-            comboBox_Process.Items.Add(name);
-            comboBox_Process.SelectedIndex = 0;
-
-            networkWorker.StartCapture(FFXIVProcess);
-        }
-
-        internal void ShowNotification(string format, params object[] args)
-        {
-            this.Invoke(() =>
-            {
-                notifyIcon.ShowBalloonTip(10 * 1000, "임무/돌발 찾기 도우미", string.Format(format, args), ToolTipIcon.Info);
-            });
-        }
-
-        private void FateAllUnset()
-        {
-            FateAllUnset(false);
-        }
-
-        private void FateAllUnset(bool save)
+        private void FateAllUnset(bool save = false)
         {
             foreach (var node in nodes)
             {
@@ -381,7 +313,7 @@ namespace App
 
             Settings.FATEs.Clear();
 
-            if(save)
+            if (save)
                 Settings.Save();
         }
 
@@ -391,23 +323,16 @@ namespace App
 
             foreach (var node in nodes)
             {
-                foreach(var code in arr)
+                var c = ushort.Parse(node.Name);
+                if (arr.Any(code => code == c))
                 {
-                    if(code == ushort.Parse(node.Name))
-                    {
-                        node.Checked = true;
-                        Settings.FATEs.Add(ushort.Parse(node.Name));
-                        break;
-                    }
+                    node.Checked = true;
+                    Settings.FATEs.Add(c);
                 }
             }
 
             Settings.Save();
-        }
-
-        private void presetToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
+            MessageBox.Show("돌발 알림 프리셋이 적용되었습니다.", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void bookOfSkyfireIToolStripMenuItem_Click(object sender, EventArgs e)
@@ -462,6 +387,70 @@ namespace App
         {
             int[] arr = { 543, 493, 587 };
             PresetAccept(arr);
+        }
+
+        private void SetCheatRoulleteCheckBox(bool @checked)
+        {
+            checkBox_CheatRoullete.CheckedChanged -= checkBox_CheatRoullete_CheckedChanged;
+            checkBox_CheatRoullete.Checked = @checked;
+            checkBox_CheatRoullete.CheckedChanged += checkBox_CheatRoullete_CheckedChanged;
+        }
+
+        private void FindFFXIVProcess()
+        {
+            comboBox_Process.Items.Clear();
+            Log.I("파이널판타지14 프로세스를 찾는 중...");
+
+            var processes = new List<Process>();
+            processes.AddRange(Process.GetProcessesByName("ffxiv"));
+            processes.AddRange(Process.GetProcessesByName("ffxiv_dx11"));
+
+            if (processes.Count == 0)
+            {
+                Log.E("파이널판타지14 프로세스를 찾을 수 없습니다");
+                button_SelectProcess.Enabled = false;
+                comboBox_Process.Enabled = false;
+            }
+            else if (processes.Count >= 2)
+            {
+                Log.E("파이널판타지14가 2개 이상 실행중입니다");
+                button_SelectProcess.Enabled = true;
+                comboBox_Process.Enabled = true;
+
+                foreach (var process in processes)
+                {
+                    comboBox_Process.Items.Add($"{process.ProcessName}:{process.Id}");
+                }
+                comboBox_Process.SelectedIndex = 0;
+            }
+            else {
+                SetFFXIVProcess(processes[0]);
+            }
+        }
+
+        private void SetFFXIVProcess(Process process)
+        {
+            FFXIVProcess = process;
+
+            var name = $"{FFXIVProcess.ProcessName}:{FFXIVProcess.Id}";
+            Log.S("파이널판타지14 프로세스가 선택되었습니다: {0}", name);
+
+            comboBox_Process.Enabled = false;
+            button_SelectProcess.Enabled = false;
+
+            comboBox_Process.Items.Clear();
+            comboBox_Process.Items.Add(name);
+            comboBox_Process.SelectedIndex = 0;
+
+            networkWorker.StartCapture(FFXIVProcess);
+        }
+
+        internal void ShowNotification(string format, params object[] args)
+        {
+            this.Invoke(() =>
+            {
+                notifyIcon.ShowBalloonTip(10 * 1000, "임무/돌발 찾기 도우미", string.Format(format, args), ToolTipIcon.Info);
+            });
         }
     }
 }
