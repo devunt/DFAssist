@@ -282,13 +282,7 @@ namespace App
 
         private void toolStripMenuItem_UnSelectAll_Click(object sender, EventArgs e)
         {
-            foreach (var node in nodes)
-            {
-                node.Checked = false;
-            }
-
-            Settings.FATEs.Clear();
-            Settings.Save();
+            FateAllUnset(true);
         }
 
         private void toolStripMenuItem_SelectApply_Click(object sender, EventArgs e)
@@ -371,6 +365,103 @@ namespace App
             {
                 notifyIcon.ShowBalloonTip(10 * 1000, "임무/돌발 찾기 도우미", string.Format(format, args), ToolTipIcon.Info);
             });
+        }
+
+        private void FateAllUnset()
+        {
+            FateAllUnset(false);
+        }
+
+        private void FateAllUnset(bool save)
+        {
+            foreach (var node in nodes)
+            {
+                node.Checked = false;
+            }
+
+            Settings.FATEs.Clear();
+
+            if(save)
+                Settings.Save();
+        }
+
+        private void PresetAccept(int[] arr)
+        {
+            FateAllUnset();
+
+            foreach (var node in nodes)
+            {
+                foreach(var code in arr)
+                {
+                    if(code == ushort.Parse(node.Name))
+                    {
+                        node.Checked = true;
+                        Settings.FATEs.Add(ushort.Parse(node.Name));
+                        break;
+                    }
+                }
+            }
+
+            Settings.Save();
+        }
+
+        private void presetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bookOfSkyfireIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int[] arr = { 611, 480, 589 };
+            PresetAccept(arr);
+        }
+
+        private void bookOfSkyfireIIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int[] arr = { 424, 633, 571 };
+            PresetAccept(arr);
+        }
+
+        private void bookOfNetherfireIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int[] arr = { 521, 620, 430 };
+            PresetAccept(arr);
+        }
+
+        private void bookOfSkyfallIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int[] arr = { 540, 577, 475 };
+            PresetAccept(arr);
+        }
+
+        private void bookOfSkyfallIIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int[] arr = { 569, 616, 516 };
+            PresetAccept(arr);
+        }
+        
+        private void bookOfNetherfireIToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            int[] arr = { 632, 642, 499 };
+            PresetAccept(arr);
+        }
+
+        private void bookOfSkywindIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int[] arr = { 604, 317, 517 };
+            PresetAccept(arr);
+        }
+
+        private void bookOfSkywindIIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int[] arr = { 552, 628, 486 };
+            PresetAccept(arr);
+        }
+
+        private void bookOfSkyearthIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int[] arr = { 543, 493, 587 };
+            PresetAccept(arr);
         }
     }
 }
