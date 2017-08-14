@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace App
 {
-    static class Invoker
+    internal static class Invoker
     {
         internal static void Invoke(this Form form, Action task)
         {

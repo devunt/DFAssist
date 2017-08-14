@@ -12,15 +12,15 @@ namespace App
             e.Graphics.Clear(Parent.BackColor);
             e.Graphics.FillRectangle(Brushes.White, 4, 4, ItemSize.Height - 4, Height - 8);
 
-            int inc = 0;
+            var inc = 0;
 
             foreach(TabPage tp in TabPages)
             {
-                Color fore = Color.Black;
-                Font fontF = Font;
+                var fore = Color.Black;
+                var fontF = Font;
                 Rectangle tabrect = GetTabRect(inc), rect = new Rectangle(tabrect.X + 4, tabrect.Y + 4, tabrect.Width - 8, tabrect.Height - 2), textrect = new Rectangle(tabrect.X + 4, tabrect.Y + 4, tabrect.Width - 8, tabrect.Height - 4);
 
-                StringFormat sf = new StringFormat();
+                var sf = new StringFormat();
                 sf.LineAlignment = StringAlignment.Center;
                 sf.Alignment = StringAlignment.Center;
 

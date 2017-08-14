@@ -1,19 +1,18 @@
-﻿using System;
-using System.Drawing;
-using System.Runtime.InteropServices;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace App
 {
     public partial class UpdaterForm : Form
     {
+        /*
         [DllImport("user32.dll")]
-        static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        public static extern IntPtr SendMessage(IntPtr hWnd, int Msg, IntPtr wParam, IntPtr lParam);
         [DllImport("user32.dll")]
-        static extern bool ReleaseCapture();
+        public static extern bool ReleaseCapture();
+        */
 
-        const int WM_NCLBUTTONDOWN = 0xA1;
-        const int HT_CAPTION = 0x2;
+        private const int WM_NCLBUTTONDOWN = 0xA1;
+        private const int HT_CAPTION = 0x2;
 
         internal UpdaterForm()
         {
@@ -25,7 +24,7 @@ namespace App
             if (e.Button == MouseButtons.Left)
             {
                 //ReleaseCapture();
-                //SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+                //SendMessage(Handle, WM_NCLBUTTONDOWN, new IntPtr(HT_CAPTION), IntPtr.Zero);
             }
         }
 

@@ -8,30 +8,29 @@
 
 정보
 ----
-:최신 버전: v20160726.1 (`다운로드 <https://github.com/devunt/DFAssist/releases/latest>`_)
+:최신 버전: v20170609.1 (`다운로드 <https://github.com/devunt/DFAssist/releases/latest>`_)
 :타겟 버전: Microsoft .NET Framework 4.0 (`다운로드 <https://www.microsoft.com/en-us/download/details.aspx?id=17851>`_)
-:게임 버전: 파이널판타지14 한국판, 2016.07.01.0000.0000(2001960, ex1:2016.06.21.0000.0000)
+:게임 버전: 파이널판타지14 한국판, 버전 3.4
 
 사용법
 ------
 1. 상단 다운로드 링크의 파일 목록에서 ``DFAssist.zip`` 파일을 내려받습니다.
 2. 원하는 경로에 ``DFAssist.zip`` 파일의 압축을 해제합니다.
 3. 해당 경로에서 ``DFAssist.exe`` 파일을 실행합니다.
-4. 실행이 되지 않을 시 상단 ``Microsoft .NET Framework 4.0`` 다운로드 링크에서 파일을 받아 설치합니다.
+4. 파이널판타지14 클라이언트의 패킷을 읽기 위해 관리자 권한이 필요합니다.
+5. 실행이 되지 않을 시 상단 ``Microsoft .NET Framework 4.0`` 다운로드 링크에서 파일을 받아 설치합니다.
 
 기능
 ----
 - 실시간 임무/돌발 찾기 상태를 볼 수 있는 전용 오버레이 UI
 
-  - 파이널판타지14가 최소화되어 있는 상태에서 현재 매칭 상태를 확인 가능
-  - 임무 2개 이상을 큐에 넣을 시 현재 선태된 임무가 어떤 임무인지 확인 가능 (무작위 큐 포함)
-  - 무작위 임무가 매칭됐을 시 매칭된 임무가 어떤 임무인지 입장 전 확인 가능
-  - 미리 설정한 돌발 임무가 현재 위치한 맵에 발생했을 경우 마찬가지로 알림 가능
-  - 미리 설정한 트위터 계정으로 알림 발송 가능
+  - 파이널판타지14가 최소화되어 있는 상태에서 현재 매칭 상태를 실시간으로 확인 가능 (오버레이 & 아이콘 깜빡임)
+  - 무작위 임무가 매칭됐을 시 매칭된 임무가 어떤 임무인지 입장 전 확인 가능 (설정 필요)
+  - 미리 설정한 돌발 임무가 현재 위치한 맵에 발생했을 경우 알림 가능 (이벤트 돌발, 고대무기 돌발 등)
+  - 미리 설정한 트위터 계정으로 임무 매칭시나 돌발 발생시 알림 발송 가능
 
 구현 예정 (현재 미구현)
 ~~~~
-- 잠시 자리를 비울 경우를 위해 매칭이 됐을 시 핸드폰으로 푸시 알림
 - 오버레이 스킨 변경 기능
 
 문제 해결
@@ -59,14 +58,18 @@
 ~~~~~~~~~~~~
 .. image:: http://i.imgur.com/d2c2nc1.gif
 
+아이콘 깜빡임
+~~~~~~~~~~~~
+.. image:: http://i.imgur.com/ndNAFZ8.gif
+
 매칭된 무작위 임무 미리보기
 ~~~~~~~~~~~~~~~~~~~~
 .. image:: http://i.imgur.com/Up0iXSM.png
 
 프로그램 UI
 ~~~~~~~~~~~
-.. image:: http://i.imgur.com/IgAD77O.png
-.. image:: http://i.imgur.com/PU2gb7L.png
+.. image:: http://i.imgur.com/61dtKcW.png
+.. image:: http://i.imgur.com/QtgLB2E.png
 
 알림창 아이콘
 ~~~~~~~~~~~~~
@@ -79,7 +82,7 @@
 
   기재되어있는 회사명 · 제품명 · 시스템 이름은 해당 소유자의 상표 또는 등록 상표입니다.
 
-  (C) 2010 - 2016 SQUARE ENIX CO., LTD All Rights Reserved. Korea Published by EYEDENTITY MOBILE.
+  (C) 2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved. Korea Published by EYEDENTITY MOBILE.
 
 상단 회사에 저작권이 없는 코드, 리소스, 데이터 등은 모두
 `퍼블릭 도메인 <https://en.wikipedia.org/wiki/Public_domain>`_ 에 따라 배포됩니다.

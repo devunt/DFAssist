@@ -2,20 +2,25 @@
 using System.Drawing;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Windows.Forms;
 
 namespace App
 {
-    class Log
+    internal static class Log
     {
-        private static Regex escape = new Regex(@"\{(.+?)\}");
-        internal static MainForm Form { get; set; }
+        private static readonly Regex EscapePattern = new Regex(@"\{(.+?)\}");
+        internal static MainForm Form { private get; set; }
 
-        private static void Write(Color color, string format, params object[] args)
+        private static void Write(Color color, object format, params object[] args)
         {
+            var formatted = format ?? "(null)";
+            try
+            {
+                formatted = string.Format(formatted.ToString(), args);
+            }
+            catch (FormatException) { }
+
             var datetime = DateTime.Now.ToString("HH:mm:ss");
-            var formatted = string.Format(format, args);
-            var message = string.Format("[{0}] {1}{2}", datetime, formatted, Environment.NewLine);
+            var message = $"[{datetime}] {formatted}{Environment.NewLine}";
 
             Form.Invoke(() => 
             {
@@ -28,45 +33,48 @@ namespace App
             });
         }
 
-        internal static void S(string format, params object[] args)
+        internal static void S(object format, params object[] args)
         {
             Write(Color.Green, format, args);
         }
 
-        internal static void I(string format, params object[] args)
+        internal static void I(object format, params object[] args)
         {
             Write(Color.Black, format, args);
         }
 
-        internal static void E(string format, params object[] args)
+        internal static void E(object format, params object[] args)
         {
             Write(Color.Red, format, args);
         }
 
-        internal static void Ex(Exception ex, string format, params object[] args)
+        internal static void Ex(Exception ex, object format, params object[] args)
         {
 #if DEBUG
-            var message = ex.ToString();
+            throw ex;
 #else
             var message = ex.Message;
-#endif
-            message = Escape(message);
-            E(string.Format("{0}: {1}", format, message), args);
 
-            Sentry.ReportAsync(ex, new { LogMessage = string.Format(format, args) });
+            message = Escape(message);
+            E($"{format}: {message}", args);
+
+            Sentry.ReportAsync(ex, new { LogMessage = string.Format(format.ToString(), args) });
+#endif
         }
 
-        internal static void D(string format, params object[] args)
+        internal static void D(object format, params object[] args)
         {
+#if DEBUG
             Write(Color.Gray, format, args);
+#endif
         }
 
         internal static void B(byte[] buffer)
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.AppendLine();
 
-            for (int i = 0; i < buffer.Length; i++)
+            for (var i = 0; i < buffer.Length; i++)
             {
                 if (i != 0)
                 {
@@ -92,7 +100,7 @@ namespace App
 
         private static string Escape(string line)
         {
-            return escape.Replace(line, "{{$1}}");
+            return EscapePattern.Replace(line, "{{$1}}");
         }
     }
 }

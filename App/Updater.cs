@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
@@ -8,10 +6,11 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace App
 {
-    class Updater
+    internal class Updater
     {
         internal static void CheckNewVersion(MainForm mainForm)
         {
@@ -26,7 +25,7 @@ namespace App
                 }
                 Directory.CreateDirectory(tempdir);
 
-                var resp = QueryGitHubReleases();
+                var resp = WebApi.Request($"https://api.github.com/repos/{Global.GITHUB_REPO}/releases/latest");
                 if (resp == null)
                 {
                     Log.E("새 업데이트 정보를 받아오지 못했습니다");
@@ -48,118 +47,94 @@ namespace App
                     {
                         Log.S("새로운 업데이트가 존재합니다");
 
-                        if (Settings.AutoUpdate)
+                        string url = null;
+                        foreach (var asset in api.assets)
                         {
-                            string url = null;
-                            foreach (var asset in api.assets)
+                            if (asset.name == string.Format("DFAssist.{0}.zip", latest))
                             {
-                                if (asset.name == string.Format("DFAssist.{0}.zip", latest))
-                                {
-                                    url = asset.browser_download_url;
-                                }
+                                url = asset.browser_download_url;
+                                break;
                             }
-
-                            if (url == null)
-                            {
-                                Log.E("업데이트 파일을 찾을 수 없습니다");
-                                return;
-                            }
-
-                            mainForm.Invoke(() =>
-                            {
-                                mainForm.Hide();
-                                mainForm.overlayForm.Hide();
-                            });
-
-                            Task.Factory.StartNew(() =>
-                            {
-                                var updaterForm = new UpdaterForm();
-                                updaterForm.SetVersion(latest);
-                                updaterForm.ShowDialog();
-                            });
-
-                            Sentry.Report("Update started");
-
-                            var stream = GetDownloadStreamByUrl(url);
-                            using (ZipStorer zip = ZipStorer.Open(stream, FileAccess.Read))
-                            {
-                                List<ZipStorer.ZipFileEntry> dir = zip.ReadCentralDir();
-                                foreach (ZipStorer.ZipFileEntry entry in dir)
-                                {
-                                    zip.ExtractFile(entry, Path.Combine(tempdir, entry.FilenameInZip));
-                                }
-                            }
-
-                            var exepath = Process.GetCurrentProcess().MainModule.FileName;
-                            var currentdir = Path.GetDirectoryName(exepath);
-
-                            File.WriteAllText(batchpath, string.Format(
-                                "@echo off\r\n" +
-                                "title DFAssist Updater\r\n" +
-                                "echo Updating DFAssist...\r\n" +
-                                "ping 127.0.0.1 -n 3 > nul\r\n" +
-                                "move /y \"{0}\\*\" \"{1}\" > nul\r\n" +
-                                "\"{2}\"\r\n" + 
-                                "echo Running DFAssist...\r\n",
-
-                                tempdir,    // 0
-                                currentdir, // 1
-                                exepath     // 2
-                            ), Encoding.Default);
-
-                            ProcessStartInfo si = new ProcessStartInfo();
-                            si.FileName = batchpath;
-                            si.CreateNoWindow = true;
-                            si.UseShellExecute = false;
-                            si.WindowStyle = ProcessWindowStyle.Hidden;
-
-                            Process.Start(si);
-                            Application.Exit();
                         }
-                        else
+
+                        if (url == null)
                         {
-                            mainForm.Invoke(() =>
-                            {
-                                mainForm.linkLabel_NewUpdate.Visible = true;
-                                mainForm.linkLabel_NewUpdate.Select();
-                                mainForm.Show();
-                            });
+                            Log.E("업데이트 파일을 찾을 수 없습니다");
+                            return;
                         }
+
+                        mainForm.Invoke(() =>
+                        {
+                            mainForm.Hide();
+                            mainForm.overlayForm.Hide();
+                        });
+
+                        Task.Factory.StartNew(() =>
+                        {
+                            var updaterForm = new UpdaterForm();
+                            updaterForm.SetVersion(latest);
+                            updaterForm.ShowDialog();
+                        });
+
+                        Sentry.Report("Update started");
+
+                        var stream = GetDownloadStreamByUrl(url);
+                        using (var zip = ZipStorer.Open(stream, FileAccess.Read))
+                        {
+                            var dir = zip.ReadCentralDir();
+                            foreach (var entry in dir)
+                            {
+                                if (entry.FilenameInZip == "README.txt")
+                                {
+                                    continue;
+                                }
+                                zip.ExtractFile(entry, Path.Combine(tempdir, entry.FilenameInZip));
+                            }
+                        }
+
+                        var exepath = Process.GetCurrentProcess().MainModule.FileName;
+                        var currentdir = Path.GetDirectoryName(exepath);
+
+                        File.WriteAllText(batchpath,
+                            "@echo off\r\n" +
+                            "title DFAssist Updater\r\n" +
+                            "echo Updating DFAssist...\r\n" +
+                            "ping 127.0.0.1 -n 3 > nul\r\n" +
+                            $"move /y \"{tempdir}\\*\" \"{currentdir}\" > nul\r\n" +
+                            $"\"{exepath}\"\r\n" + 
+                            "echo Running DFAssist...\r\n",
+                        Encoding.Default);
+
+                        var si = new ProcessStartInfo();
+                        si.FileName = batchpath;
+                        si.CreateNoWindow = true;
+                        si.UseShellExecute = false;
+                        si.WindowStyle = ProcessWindowStyle.Hidden;
+
+                        Process.Start(si);
+                        Settings.Updated = true;
+                        Settings.Save();
+                        Application.Exit();
                     }
                 }
                 catch (Exception ex)
                 {
                     Log.Ex(ex, "업데이트 데이터 처리중 에러 발생");
                 }
+
+                try
+                {
+                    var json = WebApi.Request($"https://raw.githubusercontent.com/{Global.GITHUB_REPO}/master/App/Resources/GameData/ko.json");
+                    Data.Initializer(json);
+                }
+                catch (Exception ex)
+                {
+                    Log.Ex(ex, "임무 데이터 업데이트중 에러 발생");
+                }
             });
         }
 
-        static string QueryGitHubReleases()
-        {
-            try
-            {
-                var url = string.Format("https://api.github.com/repos/{0}/releases/latest", Global.GITHUB_REPO);
-                var request = (HttpWebRequest)WebRequest.Create(url);
-                request.UserAgent = "DFA";
-                request.Timeout = 10000;
-
-                using (var response = (HttpWebResponse)request.GetResponse())
-                {
-                    var encoding = Encoding.GetEncoding(response.CharacterSet);
-
-                    using (var responseStream = response.GetResponseStream())
-                    using (var reader = new StreamReader(responseStream, encoding))
-                        return reader.ReadToEnd();
-                }
-            }
-            catch (Exception ex) {
-                Log.Ex(ex, "업데이트 체크중 에러 발생");
-            }
-
-            return null;
-        }
-
-        static Stream GetDownloadStreamByUrl(string url)
+        private static Stream GetDownloadStreamByUrl(string url)
         {
             try
             {

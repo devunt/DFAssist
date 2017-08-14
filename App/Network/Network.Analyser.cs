@@ -1,15 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.IO.Compression;
-using System.Linq;
+﻿﻿using System;
+ using System.Collections.Generic;
+ using System.IO;
+ using System.IO.Compression;
+ using System.Linq;
+ using System.Text;
 
 namespace App
 {
-    partial class Network
+    internal partial class Network
     {
         private State state = State.IDLE;
-
+        private int lastMember = 0;
+        
         private void AnalyseFFXIVPacket(byte[] payload)
         {
             try {
@@ -31,14 +33,14 @@ namespace App
 
                         var length = BitConverter.ToInt32(payload, 24);
 
-                        if ((length <= 0) || (payload.Length < length))
+                        if (length <= 0 || payload.Length < length)
                         {
                             break;
                         }
 
-                        using (MemoryStream messages = new MemoryStream())
+                        using (var messages = new MemoryStream(payload.Length))
                         {
-                            using (MemoryStream stream = new MemoryStream(payload, 0, length))
+                            using (var stream = new MemoryStream(payload, 0, length))
                             {
                                 stream.Seek(40, SeekOrigin.Begin);
 
@@ -49,7 +51,7 @@ namespace App
                                 else {
                                     stream.Seek(2, SeekOrigin.Current); // .Net DeflateStream 버그 (앞 2바이트 강제 무시)
 
-                                    using (DeflateStream z = new DeflateStream(stream, CompressionMode.Decompress))
+                                    using (var z = new DeflateStream(stream, CompressionMode.Decompress))
                                     {
                                         z.CopyTo(messages);
                                     }
@@ -58,7 +60,7 @@ namespace App
                             messages.Seek(0, SeekOrigin.Begin);
 
                             var messageCount = BitConverter.ToUInt16(payload, 30);
-                            for (int i = 0; i < messageCount; i++)
+                            for (var i = 0; i < messageCount; i++)
                             {
                                 try
                                 {
@@ -97,7 +99,7 @@ namespace App
                         // 잘린 패킷 1개는 버리고 바로 다음 패킷부터 찾기...
                         // TODO: 버리는 패킷 없게 제대로 수정하기
 
-                        for (var offset = 0; offset < (payload.Length - 2); offset++)
+                        for (var offset = 0; offset < payload.Length - 2; offset++)
                         {
                             var possibleType = BitConverter.ToUInt16(payload, offset);
                             if (possibleType == 0x5252)
@@ -127,7 +129,23 @@ namespace App
                     // type == 0x0000 이였던 메시지는 여기서 걸러짐
                     return;
                 }
+
+                mainForm.overlayForm.SetStatus(true);
+
                 var opcode = BitConverter.ToUInt16(message, 18);
+
+                if (opcode != 0x0074 &&
+                    opcode != 0x0076 &&
+                    opcode != 0x0078 &&
+                    opcode != 0x0079 &&
+                    opcode != 0x0080 &&
+                    opcode != 0x006C &&
+                    opcode != 0x006F &&
+                    opcode != 0x00B0 &&
+                    opcode != 0x0142 &&
+                    opcode != 0x0143)
+                    return;
+
                 var data = message.Skip(32).ToArray();
 
                 if (opcode == 0x0142)
@@ -140,18 +158,17 @@ namespace App
                         var charkey = BitConverter.ToInt32(message, 40);
 
                         var code = BitConverter.ToUInt16(data, 16);
-                        var zone = Data.GetArea(code);
 
-                        byte teleMeasure = message[36];
+                        var teleMeasure = message[36];
                         
                         if (selfkey == charkey) // isSelf
                         {
-                            ushort lastCode = (BitConverter.ToUInt16(System.Text.Encoding.Unicode.GetBytes(new char[] { Data.GetAreaName(code).Last() }), 0));
-                            string lastChar = ((lastCode - 0xAC00U) % 28 == 0 || lastCode - 0xAC00U == 8 ? "로" : "으로");
+                            var lastCode = BitConverter.ToUInt16(Encoding.Unicode.GetBytes(new[] { Data.GetArea(code).Name.Last() }), 0);
+                            var lastChar = (lastCode - 0xAC00U) % 28 == 0 || lastCode - 0xAC00U == 8 ? "로" : "으로";
 
                             if (teleMeasure != 0x0C)
                             {
-                                Log.D("{1}{2} 지역을 이동했습니다. ({0})", code, Data.GetAreaName(code), lastChar);
+                                Log.D("{1}{2} 이동했습니다. ({0})", code, Data.GetArea(code).Name, lastChar);
                             }
                             else
                             {
@@ -166,21 +183,20 @@ namespace App
                 {
                     var type = data[0];
 
-                    if (type == 0x18)
+                    if (type == 0x9B)
                     {
-                        mainForm.overlayForm.SetStatus(true);
-                    }
-                    else if (type == 0x9B)
-                    {
+                        /*
                         var code = BitConverter.ToUInt16(data, 4);
                         var progress = data[8];
 
                         var fate = Data.GetFATE(code);
 
                         //Log.D("\"{0}\" 돌발 진행도 {1}%", fate.Name, progress);
+                        */
                     }
                     else if (type == 0x79)
                     {
+                        /*
                         // 돌발 임무 종료 (지역 이동시 발생할 수 있는 모든 임무에 대해 전부 옴)
 
                         var code = BitConverter.ToUInt16(data, 4);
@@ -189,6 +205,7 @@ namespace App
                         var fate = Data.GetFATE(code);
 
                         //Log.D("\"{0}\" 돌발 종료!", fate.Name);
+                        */
                     }
                     else if (type == 0x74)
                     {
@@ -202,9 +219,14 @@ namespace App
                         {
                             mainForm.overlayForm.SetFATEAsAppeared(fate);
 
+                            if (Settings.FlashWindow)
+                            {
+                                WinApi.FlashWindow(mainForm.FFXIVProcess);
+                            }
+
                             if (Settings.TwitterEnabled)
                             {
-                                Api.Tweet("< {0} > 돌발 발생!", fate.Name);
+                                WebApi.Tweet("< {0} > 돌발 발생!", fate.Name);
                             }
                         }
                         
@@ -213,7 +235,7 @@ namespace App
                 }
                 else if (opcode == 0x006C)
                 {
-                    var code = BitConverter.ToUInt16(data, 12);
+                    var code = BitConverter.ToUInt16(data, 192);
 
                     var instance = Data.GetInstance(code);
 
@@ -226,9 +248,9 @@ namespace App
                 {
                     var instances = new List<Instance>();
 
-                    for (int i = 0; i < 5; i++)
+                    for (var i = 0; i < 5; i++)
                     {
-                        var code = BitConverter.ToUInt16(data, 192 + (i * 2));
+                        var code = BitConverter.ToUInt16(data, 194 + i * 2);
                         if (code == 0)
                         {
                             break;
@@ -236,32 +258,58 @@ namespace App
                         instances.Add(Data.GetInstance(code));
                     }
 
+                    if (!instances.Any())
+                    {
+                        return;
+                    }
+
                     state = State.QUEUED;
                     mainForm.overlayForm.SetDutyCount(instances.Count);
 
                     Log.I("DFAN: 매칭 시작됨 (74) [{0}]", string.Join(", ", instances.Select(x => x.Name).ToArray()));
                 }
-                else if (opcode == 0x02DB)
+                else if (opcode == 0x0076)
                 {
-                    var status = data[4];
+                    // 한국 서버 무작위 임무
 
+                    var code = data[192];
+                    var roulette = Data.GetRoulette(code);
+
+                    state = State.QUEUED;
+                    mainForm.overlayForm.SetRoulleteDuty(roulette);
+
+                    Log.I("DFAN: 무작위 임무 매칭 시작됨 [{0}]", roulette.Name);
+                }   
+                else if (opcode == 0x00B0 && data.Length == 8)
+                {
+                    //글로벌 서버 무작위 임무, 한국서버에서도 opcode 0x00B0이 쓰이지만 data 배열 길이가 다름을 이용하여 서버를 구분함.
+
+                    var code = data[4];
+                    var roulette = Data.GetRoulette(code);
+
+                    state = State.QUEUED;
+                    mainForm.overlayForm.SetRoulleteDuty(roulette);
+
+                    Log.I("DFAN: 무작위 임무 매칭 시작됨 [{0}]", roulette.Name);
+                }   
+                else if (opcode == 0x0078)
+                {
+                    var status = data[0];
+                    var reason = data[4];
+                 
                     if (status == 3)
                     {
-                        state = State.IDLE;
+                        state = reason == 8 ? State.QUEUED : State.IDLE;
                         mainForm.overlayForm.CancelDutyFinder();
 
-                        Log.E("DFAN: 매칭 중지됨 (2DB)");
+                        Log.E("DFAN: 매칭 중지됨 (78)");
                     }
                     else if (status == 6)
                     {
-                        var code = BitConverter.ToUInt16(data, 0);
-
-                        var instance = Data.GetInstance(code);
-
                         state = State.IDLE;
                         mainForm.overlayForm.CancelDutyFinder();
 
-                        Log.I("DFAN: 입장함 [{0}]", instance.Name);
+                        Log.I("DFAN: 입장함");
                     }
                 }
                 else if (opcode == 0x006F)
@@ -280,7 +328,7 @@ namespace App
                         mainForm.overlayForm.StopBlink();
                     }
                 }
-                else if (opcode == 0x02DE)
+                else if (opcode == 0x0079)
                 {
                     var code = BitConverter.ToUInt16(data, 0);
                     var status = data[4];
@@ -292,48 +340,80 @@ namespace App
 
                     if (status == 1)
                     {
-                        // 매칭 전 인원 현황 패킷
+                        // 인원 현황 패킷
+                        var member = tank * 10000 + dps * 100 + healer;
 
-                        if (state == State.IDLE)
+                        if (state == State.MATCHED && lastMember != member)
+                        {
+                            // 매칭도중일 때 인원 현황 패킷이 오고 마지막 인원 정보와 다른 경우에 누군가에 의해 큐가 취소된 경우.
+                            state = State.QUEUED;
+                            mainForm.overlayForm.CancelDutyFinder();
+                        }
+                        else if (state == State.IDLE)
                         {
                             // 프로그램이 매칭 중간에 켜짐
                             state = State.QUEUED;
-                            mainForm.overlayForm.SetDutyCount(1); // 임의로 1개로 설정함 (TODO: 알아낼 방법 있으면 정학히 나오게 수정하기)
+                            mainForm.overlayForm.SetDutyCount(-1); // 알 수 없음으로 설정함 (TODO: 알아낼 방법 있으면 정확히 나오게 수정하기)
                             mainForm.overlayForm.SetDutyStatus(instance, tank, dps, healer);
                         }
                         else if (state == State.QUEUED)
                         {
                             mainForm.overlayForm.SetDutyStatus(instance, tank, dps, healer);
                         }
+
+                        lastMember = member;
+                    }
+                    else if (status == 2)
+                    {
+                        // 현재 매칭된 파티의 역할별 인원 수 정보
+                        // 조율 해제 상태여도 역할별로 정확히 날아옴
+                        mainForm.overlayForm.SetMemberCount(tank, dps, healer);
+                        return;
                     }
                     else if (status == 4)
                     {
                         // 매칭 뒤 참가자 확인 현황 패킷
+                        mainForm.overlayForm.SetConfirmStatus(instance, tank, dps, healer);
                     }
-
                     Log.I("DFAN: 매칭 상태 업데이트됨 [{0}, {1}, {2}/{3}, {4}/{5}, {6}/{7}]",
                         instance.Name, status, tank, instance.Tank, healer, instance.Healer, dps, instance.DPS);
                 }
-                else if (opcode == 0x0338)
+                else if (opcode == 0x0080)
                 {
+                    var roulette = data[2];
                     var code = BitConverter.ToUInt16(data, 4);
 
-                    var instance = Data.GetInstance(code);
+                    Instance instance;
+
+                    if (!Settings.CheatRoulette && roulette != 0)
+                    {
+                        instance = new Instance { Name = Data.GetRoulette(roulette).Name };
+                    }
+                    else
+                    {
+                        instance = Data.GetInstance(code);
+                    }
 
                     state = State.MATCHED;
                     mainForm.overlayForm.SetDutyAsMatched(instance);
 
+                    if (Settings.FlashWindow)
+                    {
+                        WinApi.FlashWindow(mainForm.FFXIVProcess);
+                    }
+
+                    if (!Settings.ShowOverlay)
+                    {
+                        mainForm.ShowNotification("< {0} > 매칭!", instance.Name);
+                    }
+
                     if (Settings.TwitterEnabled)
                     {
-                        Api.Tweet("< {0} > 매칭!", instance.Name);
+                        WebApi.Tweet("< {0} > 매칭!", instance.Name);
                     }
 
                     Log.S("DFAN: 매칭됨 [{0}]", instance.Name);
                 }
-
-                // TODO: 매칭이 된 뒤에 다른 누군가가 참가 확인을 거부하거나
-                // 제한시간 초과로 참가 확인이 취소됐을 경우 어떤 패킷이 오는지 알아내기
-                // 매칭에서 누군가가 참가 확인을 안 누르는 상황을 재현하기 힘들어 찾아내지 못함...
             }
             catch (Exception ex)
             {
@@ -341,7 +421,7 @@ namespace App
             }
         }
 
-        enum State
+        private enum State
         {
             IDLE,
             QUEUED,

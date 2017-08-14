@@ -37,10 +37,12 @@ namespace App
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            Data.Initializer();
+
             overlayForm.Show();
             networkWorker = new Network(this);
 
-            label_AboutTitle.Text = string.Format("DFA {0}", Global.VERSION);
+            label_AboutTitle.Text = $@"DFA {Global.VERSION}";
 
             FindFFXIVProcess();
 
@@ -50,43 +52,34 @@ namespace App
                 checkBox_Overlay.Checked = false;
             }
 
-            if (Settings.AutoUpdate)
+            Task.Factory.StartNew(() =>
             {
-                checkBox_AutoUpdate.Checked = true;
-            }
-
-            if (Settings.CheckUpdate)
-            {
-                checkBox_CheckUpdate.Checked = true;
-
-                Task.Factory.StartNew(() =>
+                while (true)
                 {
-                    while (true)
-                    {
-                        Updater.CheckNewVersion(this);
-                        Thread.Sleep(30 * 60 * 1000);
-                    }
-                });
-            }
+                    Updater.CheckNewVersion(this);
+                    Thread.Sleep(30 * 60 * 1000);
+                }
+            });
 
             checkBox_StartupShow.Checked = Settings.StartupShowMainForm;
             checkBox_AutoOverlayHide.Checked = Settings.AutoOverlayHide;
+            checkBox_FlashWindow.Checked = Settings.FlashWindow;
+            SetCheatRoulleteCheckBox(Settings.CheatRoulette);
 
             checkBox_Twitter.Checked = Settings.TwitterEnabled;
             textBox_Twitter.Enabled = Settings.TwitterEnabled;
             textBox_Twitter.Text = Settings.TwitterAccount;
 
-            foreach (var zone in Data.Areas)
+            foreach (var area in Data.Areas)
             {
-                if (!zone.Value.isDuty && zone.Value.FATEList.Count > 0)
-                    triStateTreeView_FATEs.Nodes.Add(zone.Key.ToString(), zone.Value.Name);
-            }
+                triStateTreeView_FATEs.Nodes.Add(area.Key.ToString(), area.Value.Name);
 
-            foreach (var fate in Data.GetFATEs())
-            {
-                var node = triStateTreeView_FATEs.Nodes[fate.Value.Zone.ToString()].Nodes.Add(fate.Key.ToString(), fate.Value.Name);
-                node.Checked = Settings.FATEs.Contains(fate.Key);
-                nodes.Add(node);
+                foreach (var fate in area.Value.FATEs)
+                {
+                    var node = triStateTreeView_FATEs.Nodes[area.Key.ToString()].Nodes.Add(fate.Key.ToString(), fate.Value.Name);
+                    node.Checked = Settings.FATEs.Contains(fate.Key);
+                    nodes.Add(node);
+                }
             }
 
             Task.Factory.StartNew(() =>
@@ -95,12 +88,12 @@ namespace App
                 {
                     Thread.Sleep(30 * 1000);
 
-                    if ((FFXIVProcess == null) || FFXIVProcess.HasExited)
+                    if (FFXIVProcess == null || FFXIVProcess.HasExited)
                     {
                         FFXIVProcess = null;
 
                         overlayForm.SetStatus(false);
-                        this.Invoke(() => FindFFXIVProcess());
+                        this.Invoke(FindFFXIVProcess);
                     }
                     else {
                         // FFXIVProcess is alive
@@ -116,6 +109,13 @@ namespace App
                     }
                 }
             });
+
+            if (Settings.Updated)
+            {
+                Settings.Updated = false;
+                Settings.Save();
+                ShowNotification("버전 {0} 업데이트됨", Global.VERSION);
+            }
 
             Sentry.ReportAsync("App started");
         }
@@ -212,18 +212,6 @@ namespace App
             Settings.Save();
         }
 
-        private void checkBox_StartupUpdate_CheckedChanged(object sender, EventArgs e)
-        {
-            Settings.CheckUpdate = checkBox_CheckUpdate.Checked;
-            Settings.Save();
-        }
-
-        private void checkBox_StartupAutoUpdate_CheckedChanged(object sender, EventArgs e)
-        {
-            Settings.AutoUpdate = checkBox_AutoUpdate.Checked;
-            Settings.Save();
-        }
-
         private void checkBox_Twitter_CheckedChanged(object sender, EventArgs e)
         {
             textBox_Twitter.Enabled = checkBox_Twitter.Checked;
@@ -234,6 +222,30 @@ namespace App
         private void checkBox_AutoOverlayHide_CheckedChanged(object sender, EventArgs e)
         {
             Settings.AutoOverlayHide = checkBox_AutoOverlayHide.Checked;
+            Settings.Save();
+        }
+
+        private void checkBox_FlashWindow_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.FlashWindow = checkBox_FlashWindow.Checked;
+            Settings.Save();
+        }
+
+        private void checkBox_CheatRoullete_CheckedChanged(object sender, EventArgs e)
+        {
+            var @checked = checkBox_CheatRoullete.Checked;
+            SetCheatRoulleteCheckBox(false);
+            if (@checked)
+            {
+                var respond = MessageBox.Show("악용 방지를 위해 기본적으로 비활성화 되어있는 기능입니다.\n특정 비인기 임무를 고의적으로 입장 거부하는 행위 등은 자제해주세요.\n\n그래도 활성화 하시겠습니까?", "DFA 경고", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                if (respond == DialogResult.Yes)
+                {
+                    MessageBox.Show("활성화되었습니다.\n특정 비인기 임무를 고의적으로 입장 거부하는 행위 등은 자제해주세요.\n\n본 기능은 클라이언트가 재시작 될 때 자동으로 비활성화됩니다.", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SetCheatRoulleteCheckBox(true);
+                }
+            }
+
+            Settings.CheatRoulette = checkBox_CheatRoullete.Checked;
             Settings.Save();
         }
 
@@ -297,6 +309,13 @@ namespace App
             MessageBox.Show("돌발 알림 설정이 적용되었습니다.", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void SetCheatRoulleteCheckBox(bool @checked)
+        {
+            checkBox_CheatRoullete.CheckedChanged -= checkBox_CheatRoullete_CheckedChanged;
+            checkBox_CheatRoullete.Checked = @checked;
+            checkBox_CheatRoullete.CheckedChanged += checkBox_CheatRoullete_CheckedChanged;
+        }
+
         private void FindFFXIVProcess()
         {
             comboBox_Process.Items.Clear();
@@ -344,6 +363,14 @@ namespace App
             comboBox_Process.SelectedIndex = 0;
 
             networkWorker.StartCapture(FFXIVProcess);
+        }
+
+        internal void ShowNotification(string format, params object[] args)
+        {
+            this.Invoke(() =>
+            {
+                notifyIcon.ShowBalloonTip(10 * 1000, "임무/돌발 찾기 도우미", string.Format(format, args), ToolTipIcon.Info);
+            });
         }
     }
 }

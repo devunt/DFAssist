@@ -10,14 +10,17 @@ namespace App
     {
         public string path;
 
-        [DllImport("kernel32")]
-        private static extern long WritePrivateProfileString(string section,
-            string key, string val, string filePath);
+        private static class NativeMethods
+        {
+            [DllImport("kernel32", CharSet = CharSet.Unicode)]
+            public static extern uint WritePrivateProfileString(string section,
+                string key, string val, string filePath);
 
-        [DllImport("kernel32")]
-        private static extern int GetPrivateProfileString(string section,
-                 string key, string def, StringBuilder retVal,
-            int size, string filePath);
+            [DllImport("kernel32", CharSet = CharSet.Unicode)]
+            public static extern int GetPrivateProfileString(string section,
+                     string key, string def, StringBuilder retVal,
+                int size, string filePath);
+        }
 
         /// <summary>
         /// INIFile Constructor.
@@ -38,7 +41,7 @@ namespace App
         /// Value Name
         public void WriteValue(string Section, string Key, string Value)
         {
-            WritePrivateProfileString(Section, Key, Value, this.path);
+            NativeMethods.WritePrivateProfileString(Section, Key, Value, this.path);
         }
 
         /// <summary>
@@ -50,8 +53,8 @@ namespace App
         /// <returns></returns>
         public string ReadValue(string Section, string Key)
         {
-            StringBuilder temp = new StringBuilder(4096);
-            int i = GetPrivateProfileString(Section, Key, "", temp,
+            var temp = new StringBuilder(4096);
+            var i = NativeMethods.GetPrivateProfileString(Section, Key, "", temp,
                                             4096, this.path);
             return temp.ToString();
 

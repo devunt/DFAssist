@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\MSBuild.ILMerge.Task.1.0.2\build\MSBuild.ILMerge.Task.props" Condition="Exists('..\packages\MSBuild.ILMerge.Task.1.0.2\build\MSBuild.ILMerge.Task.props')" />
+  <Import Project="..\packages\MSBuild.ILMerge.Task.1.0.5\build\MSBuild.ILMerge.Task.props" Condition="Exists('..\packages\MSBuild.ILMerge.Task.1.0.5\build\MSBuild.ILMerge.Task.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -60,10 +60,11 @@
     <StartupObject>App.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>devunt.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
@@ -71,12 +72,10 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net40\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="SharpRaven, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SharpRaven.2.1.0\lib\net40\SharpRaven.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="SharpRaven, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpRaven.2.2.0\lib\net40\SharpRaven.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -89,55 +88,67 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Api.cs" />
-    <Compile Include="Area.cs" />
-    <Compile Include="FATE.cs" />
-    <Compile Include="Instance.cs" />
-    <Compile Include="TabControlBlack.cs">
+    <Compile Include="Struct\GameData.cs" />
+    <Compile Include="Struct\Roulette.cs" />
+    <Compile Include="Api\WebApi.cs" />
+    <Compile Include="Struct\Area.cs" />
+    <Compile Include="Struct\FATE.cs" />
+    <Compile Include="Struct\Instance.cs" />
+    <Compile Include="Form\OverlayFormMove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\OverlayFormMove.Designer.cs">
+      <DependentUpon>OverlayFormMove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\TabControlBlack.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Global.cs" />
-    <Compile Include="INIFile.cs" />
+    <Compile Include="Util\INIFile.cs" />
     <Compile Include="Data.cs" />
-    <Compile Include="Invoker.cs" />
-    <Compile Include="Log.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="Util\Invoker.cs" />
+    <Compile Include="Util\Log.cs" />
+    <Compile Include="Form\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Form\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Network.cs" />
-    <Compile Include="Network.Analyser.cs" />
-    <Compile Include="Network.Packet.cs" />
-    <Compile Include="Sentry.cs" />
-    <Compile Include="TriStateTreeView.cs">
+    <Compile Include="Network\Network.cs" />
+    <Compile Include="Network\Network.Analyser.cs" />
+    <Compile Include="Network\Network.Packet.cs" />
+    <Compile Include="Util\Sentry.cs" />
+    <Compile Include="Component\TriStateTreeView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UpdaterForm.cs">
+    <Compile Include="Form\UpdaterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdaterForm.Designer.cs">
+    <Compile Include="Form\UpdaterForm.Designer.cs">
       <DependentUpon>UpdaterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="OverlayForm.cs">
+    <Compile Include="Form\OverlayForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OverlayForm.Designer.cs">
+    <Compile Include="Form\OverlayForm.Designer.cs">
       <DependentUpon>OverlayForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Updater.cs" />
-    <Compile Include="ZipStorer.cs" />
-    <EmbeddedResource Include="MainForm.resx">
+    <Compile Include="Api\WinApi.cs" />
+    <Compile Include="Util\ZipStorer.cs" />
+    <EmbeddedResource Include="Form\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdaterForm.resx">
+    <EmbeddedResource Include="Form\OverlayFormMove.resx">
+      <DependentUpon>OverlayFormMove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\UpdaterForm.resx">
       <DependentUpon>UpdaterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OverlayForm.resx">
+    <EmbeddedResource Include="Form\OverlayForm.resx">
       <DependentUpon>OverlayForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -150,12 +161,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="app.manifest">
       <SubType>Designer</SubType>
     </None>
-    <None Include="devunt.snk" />
-    <None Include="ILMerge.props" />
+    <None Include="Resources\GameData\ko.json" />
+    <None Include="ILMerge.props">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -194,14 +209,6 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\MSBuild.ILMerge.Task.1.0.2\build\MSBuild.ILMerge.Task.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSBuild.ILMerge.Task.1.0.2\build\MSBuild.ILMerge.Task.props'))" />
-    <Error Condition="!Exists('..\packages\MSBuild.ILMerge.Task.1.0.2\build\MSBuild.ILMerge.Task.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSBuild.ILMerge.Task.1.0.2\build\MSBuild.ILMerge.Task.targets'))" />
-  </Target>
-  <Import Project="..\packages\MSBuild.ILMerge.Task.1.0.2\build\MSBuild.ILMerge.Task.targets" Condition="Exists('..\packages\MSBuild.ILMerge.Task.1.0.2\build\MSBuild.ILMerge.Task.targets')" />
   <PropertyGroup>
     <PostBuildEvent>set DeployPath=$(TargetDir)Deploy
 set ZipPath=$(SolutionDir)$(TargetName).zip
@@ -216,6 +223,14 @@ if $(ConfigurationName) == Release (
  echo Output: %25ZipPath%25
 )</PostBuildEvent>
   </PropertyGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSBuild.ILMerge.Task.1.0.5\build\MSBuild.ILMerge.Task.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSBuild.ILMerge.Task.1.0.5\build\MSBuild.ILMerge.Task.props'))" />
+    <Error Condition="!Exists('..\packages\MSBuild.ILMerge.Task.1.0.5\build\MSBuild.ILMerge.Task.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSBuild.ILMerge.Task.1.0.5\build\MSBuild.ILMerge.Task.targets'))" />
+  </Target>
+  <Import Project="..\packages\MSBuild.ILMerge.Task.1.0.5\build\MSBuild.ILMerge.Task.targets" Condition="Exists('..\packages\MSBuild.ILMerge.Task.1.0.5\build\MSBuild.ILMerge.Task.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

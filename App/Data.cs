@@ -1,112 +1,121 @@
-﻿using SharpRaven.Data;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Xml;
+using App.Properties;
+using Newtonsoft.Json;
+using SharpRaven.Data;
 
 namespace App
 {
     public static class Data
     {
-        public static bool Initialized = false;
-        public static Dictionary<int, Area> Areas { get; set; } = new Dictionary<int, Area>();
-        public static Dictionary<int, FATE> FATEs { get; set; } = new Dictionary<int, FATE>();
+        public static bool Initialized { get; private set; } = false;
+        public static decimal Version { get; private set; } = 0;
+
+        public static Dictionary<int, Area> Areas { get; private set; } = new Dictionary<int, Area>();
+        public static Dictionary<int, Instance> Instances { get; private set; } = new Dictionary<int, Instance>();
+        public static Dictionary<int, Roulette> Roulettes { get; private set; } = new Dictionary<int, Roulette>();
+        public static Dictionary<int, FATE> FATEs { get; private set; } = new Dictionary<int, FATE>();
 
         public static void Initializer()
         {
-            XmlDocument doc = new XmlDocument();
-            doc.LoadXml(Properties.Resources.ZoneList);
-
-            foreach (XmlNode xn in doc.SelectNodes("/Data/Item"))
-            {
-                Area zone = new Area(xn);
-                if (!Areas.ContainsKey(zone.ZoneId))
-                {
-                    Areas.Add(zone.ZoneId, zone);
-                    foreach (KeyValuePair<int, string> fate in zone.FATEList)
-                    {
-                        FATEs.Add(fate.Key, new FATE(zone.ZoneId, fate.Value));
-                    }
-                }
-            }
-
-            Initialized = true;
+            Initializer(Resources.GameData_Korean);
         }
 
-        public static string GetAreaName(int key)
-        {
-            if (Areas.ContainsKey(key))
-            {
-                return Areas[key].Name;
-            }
-            else
-            {
-                var @event = new SentryEvent("Missing area code");
-                @event.Level = ErrorLevel.Warning;
-                @event.Extra = key;
-                Sentry.ReportAsync(@event);
-                return string.Format("알 수 없는 지역 ({0})", key);
-            }
-        }
-
-        public static bool GetIsDuty(int key)
-        {
-            if (Areas.ContainsKey(key))
-            {
-                return Areas[key].isDuty;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public static string FindAttribute(this XmlNode xn, string findAttr, bool IgnoreCase = true)
+        public static void Initializer(string json)
         {
             try
             {
-                string FindKey = findAttr;
+                var data = JsonConvert.DeserializeObject<GameData>(json);
 
-                if (IgnoreCase)
+                var version = data.Version;
+
+                if (version > Version)
                 {
-                    FindKey = findAttr.ToLower();
+                    var fates = new Dictionary<int, FATE>();
+                    foreach (var area in data.Areas)
+                    {
+                        foreach (var fate in area.Value.FATEs)
+                        {
+                            fates.Add(fate.Key, fate.Value);
+                        }
+                    }
+
+                    Areas = data.Areas;
+                    Instances = data.Instances;
+                    Roulettes = data.Roulettes;
+                    FATEs = fates;
+                    Version = version;
+
+                    if (Initialized)
+                    {
+                        Log.S("임무 데이터가 {0} 버전으로 갱신되었습니다.", Version);
+                    }
+
+                    Initialized = true;
                 }
-
-                foreach (XmlAttribute xa in xn.Attributes)
+                else
                 {
-                    string attr = xa.Name;
-
-                    if (IgnoreCase)
-                    {
-                        attr = attr.ToLower();
-                    }
-
-                    if (attr == FindKey)
-                    {
-                        return xa.Value;
-                    }
+                    Log.S("최신 임무 데이터 (버전 {0})를 이용중입니다.", Version);
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                Log.E("요소 찾기 오류");
+                Log.Ex(ex, "임무 데이터를 처리하던 중 문제 발생");
             }
-
-            return string.Empty;
         }
 
         internal static Instance GetInstance(int code)
         {
-            if (Areas.ContainsKey(code))
+            if (Instances.TryGetValue(code, out var instance))
             {
-                return Areas[code].Instance;
+                return instance;
             }
 
-            var @event = new SentryEvent("Missing instance code");
-            @event.Level = ErrorLevel.Warning;
-            @event.Extra = code;
-            Sentry.ReportAsync(@event);
+            if (code != 0)
+            {
+                var @event = new SentryEvent("Missing instance code");
+                @event.Level = ErrorLevel.Warning;
+                @event.Tags["code"] = code.ToString();
+                Sentry.ReportAsync(@event);
+            }
 
-            return new Instance(string.Format("알 수 없는 임무 ({0})", code), 0, 0, 0);
+            return new Instance { Name = $"알 수 없는 임무 ({code})" };
+        }
+
+        internal static Roulette GetRoulette(int code)
+        {
+            if (Roulettes.TryGetValue(code, out var roulette))
+            {
+                return roulette;
+            }
+
+            if (code != 0)
+            {
+                var @event = new SentryEvent("Missing Roulette code");
+                @event.Level = ErrorLevel.Warning;
+                @event.Tags["code"] = code.ToString();
+                Sentry.ReportAsync(@event);
+            }
+
+            return new Roulette { Name = $"알 수 없는 무작위 임무 ({code})" };
+        }
+
+        internal static Area GetArea(int code)
+        {
+            if (Areas.TryGetValue(code, out var area))
+            {
+                return area;
+            }
+
+            if (code != 0)
+            {
+                var @event = new SentryEvent("Missing area code");
+                @event.Level = ErrorLevel.Warning;
+                @event.Tags["code"] = code.ToString();
+                Sentry.ReportAsync(@event);
+            }
+
+            return new Area { Name = $"알 수 없는 지역 ({code})" };
         }
 
         internal static FATE GetFATE(int code)
@@ -116,27 +125,15 @@ namespace App
                 return FATEs[code];
             }
 
-            var @event = new SentryEvent("Missing FATE code");
-            @event.Level = ErrorLevel.Warning;
-            @event.Extra = code;
-            Sentry.ReportAsync(@event);
-
-            return new FATE(0, string.Format("알 수 없는 돌발임무 ({0})", code));
-        }
-
-        internal static Area GetArea(int code)
-        {
-            if (Areas.ContainsKey(code))
+            if (code != 0)
             {
-                return Areas[code];
+                var @event = new SentryEvent("Missing FATE code");
+                @event.Level = ErrorLevel.Warning;
+                @event.Tags["code"] = code.ToString();
+                Sentry.ReportAsync(@event);
             }
 
-            return new Area();
-        }
-
-        internal static List<KeyValuePair<int, FATE>> GetFATEs()
-        {
-            return FATEs.ToList();
+            return new FATE { Name = $"알 수 없는 돌발 ({code})" };
         }
     }
 }

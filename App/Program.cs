@@ -1,27 +1,23 @@
-﻿using SharpRaven;
-using SharpRaven.Data;
-using System;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
 namespace App
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
 #if !DEBUG
             Sentry.Initialise();
 #endif
-            Data.Initializer();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            MainForm form = new MainForm();
+            var form = new MainForm();
             Application.Run(form);
         }
     }
