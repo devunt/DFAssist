@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.IO.Compression;
-using System.Linq;
-using System.Text;
+﻿﻿using System;
+ using System.Collections.Generic;
+ using System.IO;
+ using System.IO.Compression;
+ using System.Linq;
+ using System.Text;
 
 namespace App
 {
@@ -11,11 +11,10 @@ namespace App
     {
         private State state = State.IDLE;
         private int lastMember = 0;
-
+        
         private void AnalyseFFXIVPacket(byte[] payload)
         {
-            try
-            {
+            try {
                 while (true)
                 {
                     if (payload.Length < 4)
@@ -49,8 +48,7 @@ namespace App
                                 {
                                     stream.CopyTo(messages);
                                 }
-                                else
-                                {
+                                else {
                                     stream.Seek(2, SeekOrigin.Current); // .Net DeflateStream 버그 (앞 2바이트 강제 무시)
 
                                     using (var z = new DeflateStream(stream, CompressionMode.Decompress))
@@ -160,7 +158,7 @@ namespace App
                         var code = BitConverter.ToUInt16(data, 16);
 
                         var teleMeasure = message[36];
-
+                        
                         if (selfkey == charkey) // isSelf
                         {
                             var lastCode = BitConverter.ToUInt16(Encoding.Unicode.GetBytes(new[] { Data.GetArea(code).Name.Last() }), 0);
@@ -229,7 +227,7 @@ namespace App
                                 WebApi.Tweet("< {0} > 돌발 발생!", fate.Name);
                             }
                         }
-
+                        
                         Log.D("\"{0}\" 돌발 발생!", fate.Name);
                     }
                 }
@@ -248,6 +246,7 @@ namespace App
                 {
                     var status = data[0];
                     var reason = data[4];
+
                     if (status == 0)
                     {
                         state = State.QUEUED;
@@ -263,7 +262,6 @@ namespace App
 
                         else //특정 임무 신청
                         {
-
                             var instances = new List<Instance>();
 
                             for (int i = 0; i < 5; i++)
