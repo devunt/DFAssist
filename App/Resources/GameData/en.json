@@ -1,1271 +1,1271 @@
 ﻿{
-  // 버전
+  // Version
   "version": "20170816.1",
 
-  // 임무
+  // Duty
   "instances": {
-    // 2.0 신생 에오르제아
-    // 2.0 던전
+    // 2.0 A Realm Reborn
+    // 2.0 Dungeons
     "157": {
-      "name": "사스타샤 침식 동굴",
+      "name": "Sastasha",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "158": {
-      "name": "브레이플록스의 야영지",
+      "name": "Brayflox's Longstop",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "159": {
-      "name": "방랑자의 궁전",
+      "name": "The Wanderer's Palace",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "161": {
-      "name": "구리종 광산",
+      "name": "Copperbell Mines",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "162": {
-      "name": "할라탈리 수련장",
+      "name": "Halatali",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "163": {
-      "name": "카른의 무너진 사원",
+      "name": "Sunken Temple of Qarn",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "164": {
-      "name": "탐타라 묘소",
+      "name": "The Tam-Tara Deepcroft",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "166": {
-      "name": "하우케타 별궁",
+      "name": "Haukke Manor",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "167": {
-      "name": "옛 암다포르 성",
+      "name": "Amdapor Keep",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "168": {
-      "name": "돌방패 경계초소",
+      "name": "The Stone Vigil",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "169": {
-      "name": "토토라크 감옥",
+      "name": "The Thousand Maws of Toto-Rak",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "170": {
-      "name": "나무꾼의 비명",
+      "name": "Cutter's Cry",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "171": {
-      "name": "제멜 요새",
+      "name": "Dzemael Darkhold",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "172": {
-      "name": "금빛 골짜기",
+      "name": "The Aurum Vale",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "217": {
-      "name": "카스트룸 메리디아눔",
+      "name": "Castrum Meridianum",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "224": {
-      "name": "마도성 프라이토리움",
+      "name": "The Praetorium",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
-    // 2.0 토벌전
+    // 2.0 Trials
     "202": {
-      "name": "이프리트 토벌전",
+      "name": "Ifrit",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "206": {
-      "name": "타이탄 토벌전",
+      "name": "Titan",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "208": {
-      "name": "가루다 토벌전",
+      "name": "Garuda",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "292": {
-      "name": "진 이프리트 토벌전",
+      "name": "Ifrit (Hard)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "293": {
-      "name": "진 타이탄 토벌전",
+      "name": "Titan (Hard)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "294": {
-      "name": "진 가루다 토벌전",
+      "name": "Garuda (Hard)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "332": {
-      "name": "리트아틴 강습전",
+      "name": "Rhitahtyn Sas Arvina",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
 
-    // 2.1 각성한 자들
-    // 2.1 던전
+    // 2.1 A Realm Awoken
+    // 2.1 Dungeons
     "160": {
-      "name": "시리우스 대등대",
+      "name": "Pharos Sirius",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "349": {
-      "name": "구리종 광산 (어려움)",
+      "name": "Copperbell Mines (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "350": {
-      "name": "하우케타 별궁 (어려움)",
+      "name": "Haukke Manor (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
 
-    // 2.1 토벌전
+    // 2.1 Trials
     "207": {
-      "name": "선왕 모그루 모그 XII세 토벌전",
+      "name": "Good King Moggle Mog XII",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "295": {
-      "name": "극 이프리트 토벌전",
+      "name": "Ifrit (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "296": {
-      "name": "극 타이탄 토벌전",
+      "name": "Titan (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "297": {
-      "name": "극 가루다 토벌전",
+      "name": "Garuda (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "348": {
-      "name": "알테마 웨폰 파괴작전",
+      "name": "The Ultima Weapon",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    // 2.16 토벌전
+    // 2.16 Trials
     "368": {
-      "name": "도름 키마이라 토벌전",
+      "name": "A Relic Reborn: the Chimera",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "369": {
-      "name": "하이드라 토벌전",
+      "name": "A Relic Reborn: the Hydra",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
-    // 2.1 레이드
+    // 2.1 Raids
     "174": {
-      "name": "크리스탈 타워: 고대인의 미궁",
+      "name": "The Labyrinth of the Ancients",
       "tank": "6",
       "healer": "6",
       "dps": "12"
     },
     "241": {
-      "name": "대미궁 바하무트: 해후편 1",
+      "name": "Binding Coil of Bahamut - T1",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "242": {
-      "name": "대미궁 바하무트: 해후편 2",
+      "name": "Binding Coil of Bahamut - T2",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "243": {
-      "name": "대미궁 바하무트: 해후편 3",
+      "name": "Binding Coil of Bahamut - T3",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "244": {
-      "name": "대미궁 바하무트: 해후편 4",
+      "name": "Binding Coil of Bahamut - T4",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "245": {
-      "name": "대미궁 바하무트: 해후편 5",
+      "name": "Binding Coil of Bahamut - T5",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
 
-    // 2.2 혼돈의 소용돌이
-    // 2.2 던전
+    // 2.2 Through the Maelstrom
+    // 2.2 Dungeons
     "363": {
-      "name": "옛 암다포르 시가지",
+      "name": "the Lost City of Amdapor",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "360": {
-      "name": "할라탈리 수련장 (어려움)",
+      "name": "Halatali (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "362": {
-      "name": "브레이플록스의 야영지 (어려움)",
+      "name": "Brayflox's Longstop (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
 
-    // 2.2 토벌전
+    // 2.2 Trials
     "281": {
-      "name": "진 리바이어선 토벌전",
+      "name": "Leviathan",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "359": {
-      "name": "극 리바이어선 토벌전",
+      "name": "Leviathan (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "364": {
-      "name": "극왕 모그루 모그 XII세 토벌전",
+      "name": "Good King Moggle Mog XII (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "366": {
-      "name": "길가메시 토벌전",
+      "name": "Gilgamesh",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
-    // 2.2 레이드
+    // 2.2 Raids
     "355": {
-      "name": "대미궁 바하무트: 침공편 1",
+      "name": "Second Coil of Bahamut - T1",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "356": {
-      "name": "대미궁 바하무트: 침공편 2",
+      "name": "Second Coil of Bahamut - T2",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "357": {
-      "name": "대미궁 바하무트: 침공편 3",
+      "name": "Second Coil of Bahamut - T3",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "358": {
-      "name": "대미궁 바하무트: 침공편 4",
+      "name": "Second Coil of Bahamut - T4",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
 
-    // 2.3 에오르제아의 수호자
-    // 2.3 던전
+    // 2.3 Defenders of Eorzea
+    // 2.3 Dungeons
     "361": {
-      "name": "난파선의 섬",
+      "name": "Hullbreaker Isle",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "365": {
-      "name": "돌방패 경계초소 (어려움)",
+      "name": "The Stone Vigil (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "373": {
-      "name": "탐타라 묘소 (어려움)",
+      "name": "The Tam-Tara Deepcroft (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
 
-    // 2.3 토벌전
+    // 2.3 Trials
     "374": {
-      "name": "진 라무 토벌전",
+      "name": "Ramuh",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "375": {
-      "name": "극 라무 토벌전",
+      "name": "Ramuh (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
-    // 2.3 레이드
+    // 2.3 Raids
     "372": {
-      "name": "크리스탈 타워: 시르쿠스 탑",
+      "name": "Syrcus Tower",
       "tank": "3",
       "healer": "6",
       "dps": "15"
     },
     "380": {
-      "name": "대미궁 바하무트: 침공편 1 (영웅)",
+      "name": "Second Coil of Bahamut S - T1",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "381": {
-      "name": "대미궁 바하무트: 침공편 2 (영웅)",
+      "name": "Second Coil of Bahamut S - T2",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "382": {
-      "name": "대미궁 바하무트: 침공편 3 (영웅)",
+      "name": "Second Coil of Bahamut S - T3",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "383": {
-      "name": "대미궁 바하무트: 침공편 4 (영웅)",
+      "name": "Second Coil of Bahamut S - T4",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
 
-    // 2.4 빙결의 환상
-    // 2.4 던전
+    // 2.4 Dreams of Ice
+    // 2.4 Dungeons
     "371": {
-      "name": "얼음외투 대빙벽",
+      "name": "Snowcloak",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "367": {
-      "name": "카른의 무너진 사원 (어려움)",
+      "name": "Sunken Temple of Qarn (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "387": {
-      "name": "사스타샤 침식 동굴 (어려움)",
+      "name": "Sastasha (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
 
-    // 2.4 토벌전
+    // 2.4 Trials
     "377": {
-      "name": "진 시바 토벌전",
+      "name": "Shiva",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "378": {
-      "name": "극 시바 토벌전",
+      "name": "Shiva (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "142": {
-      "name": "아마지나배 투기대회 결승전",
+      "name": "Typhon, Ultros",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
-    // 2.4 레이드
+    // 2.4 Raids
     "193": {
-      "name": "대미궁 바하무트: 진성편 1",
+      "name": "Final Coil of Bahamut - T1",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "194": {
-      "name": "대미궁 바하무트: 진성편 2",
+      "name": "Final Coil of Bahamut - T2",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "195": {
-      "name": "대미궁 바하무트: 진성편 3",
+      "name": "Final Coil of Bahamut - T3",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "196": {
-      "name": "대미궁 바하무트: 진성편 4",
+      "name": "Final Coil of Bahamut - T4",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
 
-    // 2.5 희망의 등불
-    // 2.5 던전
+    // 2.5 Before the Fall
+    // 2.5 Dungeons
     "150": {
-      "name": "묵약의 탑",
+      "name": "the Keeper of the Lake",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "188": {
-      "name": "방랑자의 궁전 (어려움)",
+      "name": "the Wanderer's Palace (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "189": {
-      "name": "옛 암다포르 성 (어려움)",
+      "name": "Amdapor Keep (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
 
-    // 2.5 토벌전
+    // 2.5 Trials
     "426": {
-      "name": "아씨엔 나브리알레스 토벌전",
+      "name": "The Chrysalis",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "394": {
-      "name": "투신 오딘 토벌전",
+      "name": "Odin",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "396": {
-      "name": "진 길가메시 토벌전",
+      "name": "Gilgamesh, Enkidu",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    // 2.55 토벌전
+    // 2.55 Trials
     "143": {
-      "name": "성도 이슈가르드 방어전",
+      "name": "Vishap",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
-    // 2.5 레이드
+    // 2.5 Raids
     "151": {
-      "name": "크리스탈 타워: 어둠의 세계",
+      "name": "The World of Darkness",
       "tank": "3",
       "healer": "6",
       "dps": "15"
     },
 
 
-    // 3.0 창천의 이슈가르드
-    // 3.0 던전
+    // 3.0 Heavensward
+    // 3.0 Dungeons
     "435": {
-      "name": "용의 둥지",
+      "name": "the Aery",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "416": {
-      "name": "구브라 환상도서관",
+      "name": "The Great Gubal Library",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "421": {
-      "name": "이슈가르드 교황청",
+      "name": "The Vault",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "430": {
-      "name": "무한연속 박물함",
+      "name": "The Fractal Continuum",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "434": {
-      "name": "어스름 요새",
+      "name": "The Dusk Vigil",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "438": {
-      "name": "마과학 연구소",
+      "name": "Aetherochemical Research Facility",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "441": {
-      "name": "솜 알",
+      "name": "Sohm Al",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "420": {
-      "name": "거두지 않는 섬",
+      "name": "Neverreap",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
 
-    // 3.0 토벌전
+    // 3.0 Trials
     "432": {
-      "name": "진 라바나 토벌전",
+      "name": "Ravana",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "436": {
-      "name": "진 비스마르크 토벌전",
+      "name": "Bismarck",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "437": {
-      "name": "나이츠 오브 라운드 토벌전",
+      "name": "Knights of the Round ?",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "446": {
-      "name": "극 라바나 토벌전",
+      "name": "Ravana (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "447": {
-      "name": "극 비스마르크 토벌전",
+      "name": "Bismarck (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
-    // 3.01 레이드
+    // 3.01 Raids
     "442": {
-      "name": "기공성 알렉산더: 기동편 1",
+      "name": "A - Fist of the Father",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "443": {
-      "name": "기공성 알렉산더: 기동편 2",
+      "name": "A - Cuff of the Father",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "444": {
-      "name": "기공성 알렉산더: 기동편 3",
+      "name": "A - Arm of the Father",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "445": {
-      "name": "기공성 알렉산더: 기동편 4",
+      "name": "A - Burden of the Father",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    // 3.05 레이드
+    // 3.05 Raids
     "449": {
-      "name": "기공성 알렉산더: 기동편 1 (영웅)",
+      "name": "A - Fist of the Father (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "450": {
-      "name": "기공성 알렉산더: 기동편 2 (영웅)",
+      "name": "A - Cuff of the Father (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "451": {
-      "name": "기공성 알렉산더: 기동편 3 (영웅)",
+      "name": "A - Arm of the Father (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "452": {
-      "name": "기공성 알렉산더: 기동편 4 (영웅)",
+      "name": "A - Burden of the Father (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
 
-    // 3.1 빛과 어둠의 경계
-    // 3.1 던전
+    // 3.1 As Goes Light So Goes Darkness
+    // 3.1 Dungeons
     "510": {
-      "name": "시리우스 대등대 (어려움)",
+      "name": "Pharos Sirius (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "511": {
-      "name": "성 모샨 식물원",
+      "name": "Saint Mocianne's Arboretum",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
 
-    // 3.1 토벌전
+    // 3.1 Trials
     "448": {
-      "name": "극 나이츠 오브 라운드 토벌전",
+      "name": "Knights of the Round (Extreme) ?",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
-    // 3.1 레이드
+    // 3.1 Raids
     "508": {
-      "name": "보이드의 방주",
+      "name": "The Void Ark",
       "tank": "3",
       "healer": "6",
       "dps": "15"
     },
 
-    // 3.1 파티 컨텐츠
+    // 3.1 Party Contents
     "512": {
-      "name": "디아뎀 제도(쉬움)",
+      "name": "The Diadem(Easy)",
       "tank": "1",
       "healer": "2",
       "dps": "5"
     },
     "514": {
-      "name": "디아뎀 제도",
+      "name": "The Diadem",
       "tank": "1",
       "healer": "2",
       "dps": "5"
     },
     "515": {
-      "name": "디아뎀 제도(어려움)",
+      "name": "The Diadem (Hard)",
       "tank": "1",
       "healer": "2",
       "dps": "5"
     },
 
 
-    // 3.2 운명의 톱니바퀴
-    // 3.2 던전
+    // 3.2 The Gears of Chance
+    // 3.2 Dungeons
     "516": {
-      "name": "거꾸로 선 탑",
+      "name": "The Antitower",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "519": {
-      "name": "옛 암다포르 시가지 (어려움)",
+      "name": "Lost City of Amdapor (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
 
-    // 3.2 토벌전
+    // 3.2 Trials
     "517": {
-      "name": "마신 세피로트 토벌전",
+      "name": "Sephiroth",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "524": {
-      "name": "극 마신 세피로트 토벌전",
+      "name": "Sephiroth (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
-    // 3.2 레이드
+    // 3.2 Raids
     "520": {
-      "name": "기동성 알렉산더: 율동편 1",
+      "name": "A - Fist of the Son",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "521": {
-      "name": "기동성 알렉산더: 율동편 2",
+      "name": "A - Cuff of the Son",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "522": {
-      "name": "기동성 알렉산더: 율동편 3",
+      "name": "A - Arm of the Son",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "523": {
-      "name": "기동성 알렉산더: 율동편 4",
+      "name": "A - Burden of the Son",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "529": {
-      "name": "기동성 알렉산더: 율동편(영웅) 1",
+      "name": "A - Fist of the Son (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "530": {
-      "name": "기동성 알렉산더: 율동편(영웅) 2",
+      "name": "A - Cuff of the Son (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "531": {
-      "name": "기동성 알렉산더: 율동편(영웅) 3",
+      "name": "A - Arm of the Son (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "532": {
-      "name": "기동성 알렉산더: 율동편(영웅) 4",
+      "name": "A - Burden of the Son (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
 
-    // 3.3 최후의 표효
-    // 3.3 던전
+    // 3.3 Revenge of the Horde
+    // 3.3 Dungeons
     "555": {
-      "name": "소르 카이",
+      "name": "Sohr Khai",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "557": {
-      "name": "난파선의 섬 (어려움)",
+      "name": "Hullbreaker Isle (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
 
-    // 3.3 토벌전
+    // 3.3 Trials
     "559": {
-      "name": "니드호그 토벌전",
+      "name": "Nidhogg",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "566": {
-      "name": "극 니드호그 토벌전",
+      "name": "Nidhogg (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
-    // 3.3 레이드
+    // 3.3 Raids
     "556": {
-      "name": "금기도시 마하",
+      "name": "The Weeping City of Mhach",
       "tank": "3",
       "healer": "6",
       "dps": "15"
     },
 
-    // 3.3 파티 컨텐츠
+    // 3.3 Party Contents
     "558": {
-      "name": "보물고 아쿠아폴리스",
+      "name": "The Aquapolis",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
 
 
-    // 3.4 혼을 계승하는 자
-    // 3.4 던전
+    // 3.4 Soul Surrender
+    // 3.4 Dungeons
     "572": {
-      "name": "젤파톨",
+      "name": "Xelphatol",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "578": {
-      "name": "구브라 환상도서관 (어려움)",
+      "name": "The Great Gubal Library (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
 
-    // 3.4 토벌전
+    // 3.4 Trials
     "576": {
-      "name": "여신 소피아 토벌전",
+      "name": "Sophia",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "577": {
-      "name": "극 여신 소피아 토벌전",
+      "name": "Sophia (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
-    // 3.4 레이드
+    // 3.4 Raids
     "580": {
-      "name": "기공성 알렉산더: 천동편 1",
+      "name": "A - Eyes of the Creator",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "581": {
-      "name": "기공성 알렉산더: 천동편 2",
+      "name": "A - Breath of the Creator",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "582": {
-      "name": "기공성 알렉산더: 천동편 3",
+      "name": "A - Heart of the Creator",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "583": {
-      "name": "기공성 알렉산더: 천동편 4",
+      "name": "A - Soul of the Creator",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "584": {
-      "name": "기공성 알렉산더: 천동편(영웅) 1",
+      "name": "A- Eyes of the Creator (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "585": {
-      "name": "기공성 알렉산더: 천동편(영웅) 2",
+      "name": "A - Breath of the Creator (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "586": {
-      "name": "기공성 알렉산더: 천동편(영웅) 3",
+      "name": "A - Heart of the Creator (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "587": {
-      "name": "기공성 알렉산더: 천동편(영웅) 4",
+      "name": "A - Soul of the Creator (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
 
-    // 3.5 숙명의 끝
-    // 3.5 던전
+    // 3.5 The Far Edge of Fate
+    // 3.5 Dungeons
     "615": {
-      "name": "바일사르 장성",
+      "name": "Baelsar's Wall",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "617": {
-      "name": "솜 알 (어려움)",
+      "name": "Sohm Al (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
 
-    // 3.5 토벌전
+    // 3.5 Trials
     "637": {
-      "name": "귀신 주르반 토벌전",
+      "name": "Zurvan",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "638": {
-      "name": "극 귀신 주르반 토벌전",
+      "name": "Zurvan (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
-    // 3.5 레이드
+    // 3.5 Raids
     "627": {
-      "name": "둔 스카",
+      "name": "Dun Scaith",
       "tank": "3",
       "healer": "6",
       "dps": "15"
     },
 
 
-    // 4.0 홍련의 해방자
-    // 4.0 던전
+    // 4.0 Stormblood
+    // 4.0 Dungeons
     "626": {
-      "name": "세이렌의 바다",
+      "name": "The Sirensong Sea",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "616": {
-      "name": "자수궁",
+      "name": "Shisui of the Violet Tides",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "623": {
-      "name": "바르뎀의 패도",
+      "name": "Bardam's Mettle",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "660": {
-      "name": "도마 성",
+      "name": "Doma Castle",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "661": {
-      "name": "카스트룸 아바니아",
+      "name": "Castrum Abania",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "689": {
-      "name": "알라미고",
+      "name": "Ala Mhigo",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "662": {
-      "name": "쿠가네 성",
+      "name": "Kugane Castle",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "663": {
-      "name": "성도 수도원",
+      "name": "The Temple of the Fist",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
 
-    // 4.0 토벌전
+    // 4.0 Trials
     "674": {
-      "name": "스사노 토벌전",
+      "name": "Susano",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "677": {
-      "name": "극 스사노 토벌전",
+      "name": "Susano (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "719": {
-      "name": "락슈미 토벌전",
+      "name": "Lakshmi",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "720": {
-      "name": "극 락슈미 토벌전",
+      "name": "Lakshmi (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "679": {
-      "name": "신룡 토벌전",
+      "name": "Shinryu",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
-    // 4.01 레이드
+    // 4.01 Raids
     "691": {
-      "name": "차원의 틈새 오메가: 델타편 1",
+      "name": "Deltascape V1.0",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "692": {
-      "name": "차원의 틈새 오메가: 델타편 2",
+      "name": "Deltascape V2.0",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "693": {
-      "name": "차원의 틈새 오메가: 델타편 3",
+      "name": "Deltascape V3.0",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "694": {
-      "name": "차원의 틈새 오메가: 델타편 4",
+      "name": "Deltascape V4.0",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    // 4.05 레이드
+    // 4.05 Raids
     "695": {
-      "name": "오메가: 델타편 1 (영웅)",
+      "name": "Deltascape V1.0 (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "696": {
-      "name": "오메가: 델타편 2 (영웅)",
+      "name": "Deltascape V2.0 (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "697": {
-      "name": "오메가: 델타편 3 (영웅)",
+      "name": "Deltascape V3.0 (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "698": {
-      "name": "오메가: 델타편 4 (영웅)",
+      "name": "Deltascape V4.0 (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
 
-    // 길드 작전
+    // Guildhests
     "190": {
-      "name": "방황하는 사령을 쓰러뜨려라!",
+      "name": "Under the Armor",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "191": {
-      "name": "독성 요괴꽃을 제거하라!",
+      "name": "Pulling Poison Posies",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "192": {
-      "name": "무법자 '나나니단'을 섬멸하라!",
+      "name": "Stinging Back",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "214": {
-      "name": "집단전 훈련을 완수하라!",
+      "name": "Basic Training: Enemy Parties",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "215": {
-      "name": "관문을 돌파하고 최심부의 적을 쓰러뜨려라!",
+      "name": "Basic Training: Enemy Strongholds",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "216": {
-      "name": "길거북을 사로잡아라!",
+      "name": "Hero on the Halfshell",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "219": {
-      "name": "폭탄광 고블린 군단을 섬멸하라!",
+      "name": "Flicking Sticks and Taking Names",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "220": {
-      "name": "몽환의 브라크시오를 쓰러뜨려라!",
+      "name": "All's Well that Ends in the Well",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "221": {
-      "name": "오염원 몰볼을 쓰러뜨려라!",
+      "name": "More than a Feeler",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "222": {
-      "name": "갱도에 나타난 요마 부소를 쓰러뜨려라!",
+      "name": "Annoy the Void",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "223": {
-      "name": "무적의 부하를 조종하는 요마를 쓰러뜨려라!",
+      "name": "Shadow and Claw",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "298": {
-      "name": "봄을 거느린 '봄 여왕'을 쓰러뜨려라!",
+      "name": "Long Live the Queen",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "299": {
-      "name": "불길한 진영을 짜는 요마를 섬멸하라!",
+      "name": "Ward Up",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "300": {
-      "name": "세 거인족을 제압하여 유물을 지켜내라!",
+      "name": "Solemn Trinity",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
 
-    // 초보자의 집
+    // Novice Training
     "537": {
-      "name": "범위 공격을 피하자!",
+      "name": "Avoid Area of Effect Attacks",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "538": {
-      "name": "콤보를 이어 적개심을 끌자!",
+      "name": "Execute a Combo to Increase Enmity",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "539": {
-      "name": "실전에서 콤보를 사용해보자!",
+      "name": "Execute a Combo in Battle",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "540": {
-      "name": "다수의 적에게서 적개심을 끌자!",
+      "name": "Accrue Enmity from Multiple Targets",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "541": {
-      "name": "실전에서 다수의 적과 싸워보자!",
+      "name": "Engage Multiple Targets",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "542": {
-      "name": "멀리서 적개심을 끌자!",
+      "name": "Execute a Ranged Attack to Increase Enmity",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "543": {
-      "name": "적 지원군에 대처하자!",
+      "name": "Engage Enemy Reinforcements",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "544": {
-      "name": "파티원과 협력하여 적을 물리치자!",
+      "name": "Assist Allies in Defeating a Target",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "545": {
-      "name": "파티원과 같은 적을 공격하자!",
+      "name": "Defeat an Occupied Target",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "546": {
-      "name": "적의 공격을 피하면서 싸우자!",
+      "name": "Avoid Engaged Targets",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "547": {
-      "name": "적 지원군에 대처하자!",
+      "name": "Engage Enemy Reinforcements",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "548": {
-      "name": "특수 장치를 활용하며 싸우자!",
+      "name": "Interact with the Battlefield",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "549": {
-      "name": "파티원을 회복시키자!",
+      "name": "Heal an Ally",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "550": {
-      "name": "다수의 파티원을 회복시키자!",
+      "name": "Heal Multiple Allies",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "551": {
-      "name": "적의 공격을 피하면서 싸우자!",
+      "name": "Avoid Engaged Targets",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "552": {
-      "name": "마지막 훈련!",
+      "name": "Final Exercise",
       "tank": "0",
       "healer": "0",
       "dps": "0"
@@ -1274,251 +1274,251 @@
 
     // PvP
     "175": {
-      "name": "더 폴드",
+      "name": "The Fold",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "336": {
-      "name": "더 폴드",
+      "name": "The Fold",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "337": {
-      "name": "더 폴드 (파티 매칭)",
+      "name": "The Fold (Matched Party)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "352": {
-      "name": "더 폴드 (고정 소규모 파티)",
+      "name": "The Fold (Light Party)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "184": {
-      "name": "더 폴드 (파티 매칭)",
+      "name": "The Fold (Matched Party)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "186": {
-      "name": "더 폴드 (고정 소규모 파티)",
+      "name": "The Fold (Light Party)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "376": {
-      "name": "외곽 유적지대 (제압전)",
+      "name": "The Borderland Ruins (Secure)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "422": {
-      "name": "외곽 유적지대 (섬멸전)",
+      "name": "The Borderland Ruins (Slaughter)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "431": {
-      "name": "봉인된 바위섬 (쟁탈전)",
+      "name": "Seal Rock (Seize)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "518": {
-      "name": "더 피스트 (8 대 8 / 매칭 파티)",
+      "name": "The Feast (8 on 8 - Matched Party)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "525": {
-      "name": "더 피스트 (4 대 4 / 개인)",
+      "name": "The Feast (4 on 4 - Solo)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "526": {
-      "name": "더 피스트 (4 대 4 / 고정 소규모 파티)",
+      "name": "The Feast (4 on 4 - Light Party)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "527": {
-      "name": "더 피스트 (4 대 4 / 개인)",
+      "name": "The Feast (4 on 4 - Solo)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "528": {
-      "name": "더 피스트 (4 대 4 / 고정 소규모 파티)",
+      "name": "The Feast (4 on 4 - Light Party)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "618": {
-      "name": "더 피스트 (8 대 8 / 친선 경기)",
+      "name": "The Feast (8 on 8 - Custom Match - Feasting Grounds)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "619": {
-      "name": "더 피스트 (4 대 4 / 친선 경기)",
+      "name": "The Feast (4 on 4 - Custom Match - Feasting Grounds)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "554": {
-      "name": "영광의 평원 (쇄빙전)",
+      "name": "The Fields of Glory (Shatter)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
 
 
-    // 딥♂ 다크♂ 던전
+    // The Palace of the Dead
     "561": {
-      "name": "망자의 궁전 B1~B10",
+      "name": "The Palace of the Dead B1~B10",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "562": {
-      "name": "망자의 궁전 B11~B20",
+      "name": "The Palace of the Dead B11~B20",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "563": {
-      "name": "망자의 궁전 B21~B30",
+      "name": "The Palace of the Dead B21~B30",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "564": {
-      "name": "망자의 궁전 B31~B40",
+      "name": "The Palace of the Dead B31~B40",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "565": {
-      "name": "망자의 궁전 B41~B50",
+      "name": "The Palace of the Dead B41~B50",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "593": {
-      "name": "망자의 궁전 B51~B60",
+      "name": "The Palace of the Dead B51~B60",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "594": {
-      "name": "망자의 궁전 B61~B70",
+      "name": "The Palace of the Dead B61~B70",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "595": {
-      "name": "망자의 궁전 B71~B80",
+      "name": "The Palace of the Dead B71~B80",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "596": {
-      "name": "망자의 궁전 B81~B90",
+      "name": "The Palace of the Dead B81~B90",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "597": {
-      "name": "망자의 궁전 B91~B100",
+      "name": "The Palace of the Dead B91~B100",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "598": {
-      "name": "망자의 궁전 B101~B110",
+      "name": "The Palace of the Dead B101~B110",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "599": {
-      "name": "망자의 궁전 B111~B120",
+      "name": "The Palace of the Dead B111~B120",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "600": {
-      "name": "망자의 궁전 B121~B130",
+      "name": "The Palace of the Dead B121~B130",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "601": {
-      "name": "망자의 궁전 B131~B140",
+      "name": "The Palace of the Dead B131~B140",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "602": {
-      "name": "망자의 궁전 B141~B150",
+      "name": "The Palace of the Dead B141~B150",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "603": {
-      "name": "망자의 궁전 B151~B160",
+      "name": "The Palace of the Dead B151~B160",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "604": {
-      "name": "망자의 궁전 B161~B170",
+      "name": "The Palace of the Dead B161~B170",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "605": {
-      "name": "망자의 궁전 B171~B180",
+      "name": "The Palace of the Dead B171~B180",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "606": {
-      "name": "망자의 궁전 B181~B190",
+      "name": "The Palace of the Dead B181~B190",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "607": {
-      "name": "망자의 궁전 B191~B200",
+      "name": "The Palace of the Dead B191~B200",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     }
   },
 
-  // 무작위 임무
+  // Duty Roulette
   "roulettes": {
-    "1": "무작위 임무: 레벨링",
-    "2": "무작위 임무: 레벨 50 던전",
-    "3": "무작위 임무: 주요 퀘스트",
-    "4": "무작위 임무: 길드 작전",
-    "5": "무작위 임무: 숙련자",
-    "6": "무작위 임무: 토벌전",
-    "7": "무작위 임무: 전장",
-    "8": "무작위 임무: 레벨 60 던전",
-    "9": "무작위 임무: 멘토",
-    "10": "더 피스트 (8 대 8) - 친선 경기",
-    "13": "더 피스트 (4 대 4) - 개인"
+    "1": "Duty Roulette: Leveling",
+    "2": "Duty Roulette: Level 50/60 Dungeons",
+    "3": "Duty Roulette: Main Scenario",
+    "4": "Duty Roulette: Guildhests",
+    "5": "Duty Roulette: Expert",
+    "6": "Duty Roulette: Trials",
+    "7": "Duty Roulette: Frontline",
+    "8": "Duty Roulette: Level 70 Dungeons",
+    "9": "Duty Roulette: Mentor",
+    "10": "The Feast (8 on 8) - Training",
+    "13": "The Feast (4 on 4) - Ranked"
   },
 
-  // 지역별 돌발
+  // FATEs
   "areas": {
     "134": {
-      "name": "중부 라노시아",
+      "name": "Middle La Noscea",
       "fates": {
         "533": "돌아온 거대 화염마수",
         "649": "그 바다생물을 보라",
@@ -1544,7 +1544,7 @@
       }
     },
     "135": {
-      "name": "저지 라노시아",
+      "name": "Lower La Noscea",
       "fates": {
         "257": "날아다니는 위장",
         "260": "골칫덩어리 밀항자",
@@ -1566,7 +1566,7 @@
       }
     },
     "137": {
-      "name": "동부 라노시아",
+      "name": "Eastern La Noscea",
       "fates": {
         "267": "포도주 내놔!",
         "268": "포도주 마시고 싶어!",
@@ -1601,7 +1601,7 @@
       }
     },
     "138": {
-      "name": "서부 라노시아",
+      "name": "Western La Noscea",
       "fates": {
         "568": "북쪽 방파벽 전투: 전력 정찰",
         "569": "북쪽 방파벽 전투: 주력 부대 습격",
@@ -1632,7 +1632,7 @@
       }
     },
     "139": {
-      "name": "고지 라노시아",
+      "name": "Upper La Noscea",
       "fates": {
         "314": "맹수 먹는 요괴새",
         "317": "수송부대 방어명령",
@@ -1655,7 +1655,7 @@
       }
     },
     "180": {
-      "name": "외지 라노시아",
+      "name": "Outer La Noscea",
       "fates": {
         "580": "내가 가는 길",
         "581": "흑와단의 원수",
@@ -1675,7 +1675,7 @@
       }
     },
     "140": {
-      "name": "서부 다날란",
+      "name": "Western Thanalan",
       "fates": {
         "342": "긴급 점검",
         "343": "강제 추방",
@@ -1702,7 +1702,7 @@
       }
     },
     "141": {
-      "name": "중부 다날란",
+      "name": "Central Thanalan",
       "fates": {
         "535": "돌아온 거대 화염마수",
         "370": "천박한 승부사",
@@ -1726,7 +1726,7 @@
       }
     },
     "145": {
-      "name": "동부 다날란",
+      "name": "Eastern Thanalan",
       "fates": {
         "536": "돌아온 거대 화염마수",
         "540": "꿈틀꿈틀 도브란",
@@ -1757,7 +1757,7 @@
       }
     },
     "146": {
-      "name": "남부 다날란",
+      "name": "Southern Thanalan",
       "fates": {
         "545": "황야의 소화전",
         "546": "비운의 투사",
@@ -1795,7 +1795,7 @@
       }
     },
     "147": {
-      "name": "북부 다날란",
+      "name": "Northern Thanalan",
       "fates": {
         "556": "청린 정제소 일손 돕기",
         "637": "작열하는 귀족",
@@ -1816,7 +1816,7 @@
       }
     },
     "148": {
-      "name": "검은장막 숲 중부삼림",
+      "name": "Central Shroud",
       "fates": {
         "537": "돌아온 거대 화염마수",
         "600": "린드부름의 습격",
@@ -1853,7 +1853,7 @@
       }
     },
     "152": {
-      "name": "검은장막 숲 동부삼림",
+      "name": "East Shroud",
       "fates": {
         "607": "지나간 날들의 빛",
         "608": "오츄 수확",
@@ -1890,7 +1890,7 @@
       }
     },
     "153": {
-      "name": "검은장막 숲 남부삼림",
+      "name": "South Shroud",
       "fates": {
         "624": "출렁이는 땅",
         "626": "거북 네 이노오오옴!",
@@ -1924,7 +1924,7 @@
       }
     },
     "154": {
-      "name": "검은장막 숲 북부삼림",
+      "name": "North Shroud",
       "fates": {
         "538": "돌아온 거대 화염마수",
         "631": "벌채부대 요격전",
@@ -1953,7 +1953,7 @@
       }
     },
     "155": {
-      "name": "커르다스 중앙고지",
+      "name": "Coerthas Central Highlands",
       "fates": {
         "653": "섬광 강림: 기계 마수 토벌전",
         "654": "섬광 강림: 기계 마수 토벌전",
@@ -2000,7 +2000,7 @@
       }
     },
     "156": {
-      "name": "모르도나",
+      "name": "Mor Dhona",
       "fates": {
         "512": "잃어버린 풍경",
         "514": "엉킨덩굴 습지대 대청소",
@@ -2023,7 +2023,7 @@
       }
     },
     "397": {
-      "name": "커르다스 서부고지",
+      "name": "Coerthas Western Highlands",
       "fates": {
         "787": "지켜보고 있다",
         "788": "순례 기사",
@@ -2055,7 +2055,7 @@
       }
     },
     "398": {
-      "name": "고지 드라바니아",
+      "name": "The Dravanian Forelands",
       "fates": {
         "818": "전설의 초코보",
         "819": "초코보 숲의 파수꾼",
@@ -2088,7 +2088,7 @@
       }
     },
     "399": {
-      "name": "저지 드라바니아",
+      "name": "The Dravanian Hinterlands",
       "fates": {
         "768": "꼬리를 세워라!",
         "769": "야수의 가장",
@@ -2122,7 +2122,7 @@
       }
     },
     "400": {
-      "name": "드라바니아 구름바다",
+      "name": "The Churning Mists",
       "fates": {
         "868": "검은미늘 토벌전: 백룡 지원",
         "869": "검은미늘 토벌전: 추격 작전",
@@ -2156,7 +2156,7 @@
       }
     },
     "401": {
-      "name": "아발라시아 구름바다",
+      "name": "The Sea of Clouds",
       "fates": {
         "839": "고양이의 돌진",
         "840": "가스토르니스 둥지 파괴 명령",
@@ -2191,7 +2191,7 @@
       }
     },
     "402": {
-      "name": "아지스 라",
+      "name": "Azys Lla",
       "fates": {
         "877": "태고의 위협: 야광화 격멸전",
         "878": "태고의 위협: 야광화 격멸전",
