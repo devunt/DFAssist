@@ -124,7 +124,10 @@ namespace App
 
                 try
                 {
-                    var json = WebApi.Request($"https://raw.githubusercontent.com/{Global.GITHUB_REPO}/master/App/Resources/GameData/ko.json");
+                    String webJsonLocation = $"https://raw.githubusercontent.com/{Global.GITHUB_REPO}/master/App/Resources/GameData/ko.json";
+                    if (Settings.Lang == 1)
+                        webJsonLocation = $"https://raw.githubusercontent.com/{Global.GITHUB_REPO}/master/App/Resources/GameData/en.json";
+                    var json = WebApi.Request(webJsonLocation);
                     Data.Initializer(json);
                 }
                 catch (Exception ex)
