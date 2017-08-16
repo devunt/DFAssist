@@ -41,7 +41,7 @@ namespace App
             Localization.Initialize(Settings.Language);
             Data.Initialize(Settings.Language);
 
-            ApplyLanguage();
+            Apply_Language();
 
             overlayForm.Show();
             networkWorker = new Network(this);
@@ -477,12 +477,12 @@ namespace App
             Localization.Initialize(Settings.Language);
             Data.Initialize(Settings.Language);
 
-            ApplyLanguage();
+            Apply_Language();
 
             LMessageBox.I("ui-language-changed");
         }
 
-        private void ApplyLanguage()
+        private void Apply_Language()
         {
             this.Text = Localization.GetText("app-name");
             notifyIcon.Text = Localization.GetText("app-name");
