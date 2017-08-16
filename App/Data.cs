@@ -16,12 +16,23 @@ namespace App
         public static Dictionary<int, Roulette> Roulettes { get; private set; } = new Dictionary<int, Roulette>();
         public static Dictionary<int, FATE> FATEs { get; private set; } = new Dictionary<int, FATE>();
 
-        public static void Initializer()
+        internal static void Initialize(string language)
         {
-            Initializer(Resources.GameData_Korean);
+            string json;
+
+            switch (language)
+            {
+                case "ko-kr":
+                    json = Resources.Data_KO_KR;
+                    break;
+                default:
+                    return;
+            }
+
+            Fill(json);
         }
 
-        public static void Initializer(string json)
+        public static void Fill(string json)
         {
             try
             {
@@ -36,6 +47,7 @@ namespace App
                     {
                         foreach (var fate in area.Value.FATEs)
                         {
+                            fate.Value.Area = area.Value;
                             fates.Add(fate.Key, fate.Value);
                         }
                     }

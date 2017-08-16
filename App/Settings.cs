@@ -9,6 +9,7 @@ namespace App
     {
         private static INIFile iniFile;
 
+        public static string Language { get; set; } = "ko-kr";
         public static bool ShowOverlay { get; set; } = true;
         public static int OverlayX { get; set; } = Global.OVERLAY_XY_UNSET;
         public static int OverlayY { get; set; } = Global.OVERLAY_XY_UNSET;
@@ -41,13 +42,14 @@ namespace App
                 StartupShowMainForm = iniFile.ReadValue("startup", "show") != "0";
                 ShowOverlay = iniFile.ReadValue("overlay", "show") != "0";
                 AutoOverlayHide = iniFile.ReadValue("overlay", "autohide") != "0";
-                OverlayX = int.Parse(iniFile.ReadValue("overlay", "x"));
-                OverlayY = int.Parse(iniFile.ReadValue("overlay", "y"));
+                OverlayX = int.Parse(iniFile.ReadValue("overlay", "x") ?? "0");
+                OverlayY = int.Parse(iniFile.ReadValue("overlay", "y") ?? "0");
                 TwitterEnabled = iniFile.ReadValue("notification", "twitter") == "1";
-                TwitterAccount = iniFile.ReadValue("notification", "twitteraccount");
+                TwitterAccount = iniFile.ReadValue("notification", "twitteraccount") ?? "";
                 FlashWindow = iniFile.ReadValue("notification", "flashwindow") != "0";
                 // CheatRoulette = iniFile.ReadValue("misc", "cheatroulette") == "1";
                 CheatRoulette = false; // 악용 방지를 위한 강제 비활성화
+                Language = iniFile.ReadValue("misc", "language2") ?? "ko-kr";
                 Updated = iniFile.ReadValue("internal", "updated") != "0";
 
                 var fates = iniFile.ReadValue("fate", "fates");
@@ -69,6 +71,7 @@ namespace App
             iniFile.WriteValue("notification", "twitteraccount", TwitterAccount);
             iniFile.WriteValue("notification", "flashwindow", FlashWindow ? "1" : "0");
             iniFile.WriteValue("misc", "cheatroulette", CheatRoulette ? "1" : "0");
+            iniFile.WriteValue("misc", "language", Language);
             iniFile.WriteValue("fate", "fates", string.Join(",", FATEs));
             iniFile.WriteValue("internal", "updated", Updated ? "1" : "0");
         }

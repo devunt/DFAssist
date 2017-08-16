@@ -17,6 +17,7 @@ namespace App
                 case "ko-kr":
                     json = Resources.Localization_KO_KR;
                     break;
+
                 default:
                     return;
             }

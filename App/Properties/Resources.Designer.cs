@@ -63,7 +63,7 @@ namespace App.Properties {
         /// <summary>
         ///   Looks up a localized string similar to {
         ///  // 버전
-        ///  &quot;version&quot;: &quot;20170728.1&quot;,
+        ///  &quot;version&quot;: &quot;20170816.1&quot;,
         ///
         ///  // 임무
         ///  &quot;instances&quot;: {
@@ -92,45 +92,35 @@ namespace App.Properties {
         ///      &quot;tank&quot;: &quot;1&quot;,
         ///      &quot;healer&quot;: &quot; [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string GameData_Korean {
+        internal static string Data_KO_KR {
             get {
-                return ResourceManager.GetString("GameData_Korean", resourceCulture);
+                return ResourceManager.GetString("Data_KO_KR", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;notification-updated&quot;: &quot;버전 {0} 업데이트됨&quot;,
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot;, 
-        ///  &quot;&quot;: &quot;&quot....
+        ///  &quot;app-name&quot;: &quot;임무/돌발 찾기 도우미&quot;,
+        ///
+        ///
+        ///  &quot;unknown-instance&quot;: &quot;알 수 없는 임무 ({0})&quot;, 
+        ///  &quot;unknown-roulette&quot;: &quot;알 수 없는 무작위 임무 ({0})&quot;, 
+        ///  &quot;unknown-area&quot;: &quot;알 수 없는 지역 ({0})&quot;, 
+        ///  &quot;unknown-fate&quot;: &quot;알 수 없는 돌발 ({0})&quot;, 
+        ///
+        ///
+        ///  &quot;notification-app-updated&quot;: &quot;버전 {0} 업데이트됨&quot;,
+        ///  &quot;notification-queue-matched&quot;: &quot;&lt; {0} &gt; 매칭!&quot;,
+        ///
+        ///
+        ///  &quot;tweet-fate-occured&quot;: &quot;&lt; {0} &gt; 돌발 발생!&quot;,
+        ///  &quot;tweet-queue-matched&quot;: &quot;&lt; {0} &gt; 매칭!&quot;,
+        ///
+        ///
+        ///  &quot;ui-msgbox-title-info&quot;: &quot;DFA 알림&quot;,
+        ///  &quot;ui-msgbox-title-warning&quot;: &quot;DFA 경고&quot;,
+        ///  &quot;ui-msgbox-title-error&quot;: &quot;DFA 오류&quot;,
+        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Localization_KO_KR {
             get {

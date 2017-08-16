@@ -56,8 +56,12 @@ namespace App
             var temp = new StringBuilder(4096);
             var i = NativeMethods.GetPrivateProfileString(Section, Key, "", temp,
                                             4096, this.path);
-            return temp.ToString();
+            if (i == 0)
+            {
+                return null;
+            }
 
+            return temp.ToString();
         }
     }
 }

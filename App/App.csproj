@@ -172,7 +172,7 @@
     <None Include="app.manifest">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Resources\GameData\ko.json" />
+    <None Include="Resources\Data\ko-kr.json" />
     <None Include="ILMerge.props">
       <SubType>Designer</SubType>
     </None>

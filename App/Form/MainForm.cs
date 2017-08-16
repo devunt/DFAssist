@@ -38,8 +38,8 @@ namespace App
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            Localization.Initialize("ko-kr");
-            Data.Initializer();
+            Localization.Initialize(Settings.Language);
+            Data.Initialize(Settings.Language);
 
             overlayForm.Show();
             networkWorker = new Network(this);
