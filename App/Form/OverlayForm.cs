@@ -247,8 +247,7 @@ namespace App
         {
             this.Invoke(() =>
             {
-                // label_DutyCount.Text = Data.GetArea(fate.Zone).Name;
-                label_DutyCount.Text = "";
+                label_DutyCount.Text = fate.Area.Name;
                 label_DutyName.Text = fate.Name;
                 label_DutyStatus.SetLocalizedText("overlay-fate-occured");
 
