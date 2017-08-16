@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.label_AboutTitle = new LocalizableLabel();
+            this.label_AboutTitle = new App.LocalizableLabel();
             this.button_ResetProcess = new System.Windows.Forms.Button();
             this.comboBox_Process = new System.Windows.Forms.ComboBox();
             this.button_SelectProcess = new System.Windows.Forms.Button();
@@ -41,14 +41,15 @@
             this.toolStripMenuItem_Open = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_Close = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_TopSetting = new System.Windows.Forms.Panel();
-            this.label_Process = new LocalizableLabel();
+            this.label_Process = new App.LocalizableLabel();
+            this.comboBox_Language = new System.Windows.Forms.ComboBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl = new App.TabControlBlack();
             this.tabPage_Settings = new System.Windows.Forms.TabPage();
             this.groupBox_TwitterSet = new System.Windows.Forms.GroupBox();
             this.textBox_Twitter = new System.Windows.Forms.TextBox();
-            this.label_TwitterAt = new LocalizableLabel();
-            this.label_TwitterAbout = new LocalizableLabel();
+            this.label_TwitterAt = new App.LocalizableLabel();
+            this.label_TwitterAbout = new App.LocalizableLabel();
             this.checkBox_Twitter = new System.Windows.Forms.CheckBox();
             this.groupBox_DefaultSet = new System.Windows.Forms.GroupBox();
             this.checkBox_CheatRoullete = new System.Windows.Forms.CheckBox();
@@ -56,6 +57,7 @@
             this.checkBox_AutoOverlayHide = new System.Windows.Forms.CheckBox();
             this.checkBox_StartupShow = new System.Windows.Forms.CheckBox();
             this.tabPage_FATE = new System.Windows.Forms.TabPage();
+            this.label_FATEAbout = new App.LocalizableLabel();
             this.triStateTreeView_FATEs = new RikTheVeggie.TriStateTreeView();
             this.menuStrip_FATETab = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem_SelectAll = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,9 +83,8 @@
             this.toolStripMenuItem_LogCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_LogClear = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage_Info = new System.Windows.Forms.TabPage();
-            this.label_About = new LocalizableLabel();
+            this.label_About = new App.LocalizableLabel();
             this.linkLabel_GitHub = new System.Windows.Forms.LinkLabel();
-            this.label_FATEAbout = new LocalizableLabel();
             this.contextMenuStrip.SuspendLayout();
             this.panel_TopSetting.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -125,10 +126,11 @@
             // comboBox_Process
             // 
             this.comboBox_Process.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Process.Font = new System.Drawing.Font("Malgun Gothic", 9F);
             this.comboBox_Process.FormattingEnabled = true;
-            this.comboBox_Process.Location = new System.Drawing.Point(107, 1);
+            this.comboBox_Process.Location = new System.Drawing.Point(107, 2);
             this.comboBox_Process.Name = "comboBox_Process";
-            this.comboBox_Process.Size = new System.Drawing.Size(120, 25);
+            this.comboBox_Process.Size = new System.Drawing.Size(120, 23);
             this.comboBox_Process.Sorted = true;
             this.comboBox_Process.TabIndex = 0;
             // 
@@ -145,11 +147,10 @@
             // 
             // button_ResetOverlayPosition
             // 
-            this.button_ResetOverlayPosition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_ResetOverlayPosition.Font = new System.Drawing.Font("Malgun Gothic", 8F);
-            this.button_ResetOverlayPosition.Location = new System.Drawing.Point(470, 0);
+            this.button_ResetOverlayPosition.Location = new System.Drawing.Point(104, 22);
             this.button_ResetOverlayPosition.Name = "button_ResetOverlayPosition";
-            this.button_ResetOverlayPosition.Size = new System.Drawing.Size(74, 27);
+            this.button_ResetOverlayPosition.Size = new System.Drawing.Size(74, 20);
             this.button_ResetOverlayPosition.TabIndex = 0;
             this.button_ResetOverlayPosition.Text = "위치 초기화";
             this.button_ResetOverlayPosition.UseVisualStyleBackColor = true;
@@ -157,13 +158,11 @@
             // 
             // checkBox_Overlay
             // 
-            this.checkBox_Overlay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox_Overlay.AutoSize = true;
             this.checkBox_Overlay.Checked = true;
             this.checkBox_Overlay.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_Overlay.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold);
-            this.checkBox_Overlay.ForeColor = System.Drawing.Color.Gray;
-            this.checkBox_Overlay.Location = new System.Drawing.Point(372, 4);
+            this.checkBox_Overlay.Font = new System.Drawing.Font("Malgun Gothic", 9F);
+            this.checkBox_Overlay.Location = new System.Drawing.Point(6, 23);
             this.checkBox_Overlay.Name = "checkBox_Overlay";
             this.checkBox_Overlay.Size = new System.Drawing.Size(102, 19);
             this.checkBox_Overlay.TabIndex = 0;
@@ -205,12 +204,11 @@
             // panel_TopSetting
             // 
             this.panel_TopSetting.BackColor = System.Drawing.Color.Silver;
-            this.panel_TopSetting.Controls.Add(this.button_ResetOverlayPosition);
             this.panel_TopSetting.Controls.Add(this.label_Process);
+            this.panel_TopSetting.Controls.Add(this.comboBox_Language);
             this.panel_TopSetting.Controls.Add(this.comboBox_Process);
             this.panel_TopSetting.Controls.Add(this.button_SelectProcess);
             this.panel_TopSetting.Controls.Add(this.button_ResetProcess);
-            this.panel_TopSetting.Controls.Add(this.checkBox_Overlay);
             this.panel_TopSetting.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_TopSetting.Location = new System.Drawing.Point(0, 0);
             this.panel_TopSetting.Name = "panel_TopSetting";
@@ -229,6 +227,20 @@
             this.label_Process.Size = new System.Drawing.Size(100, 17);
             this.label_Process.TabIndex = 0;
             this.label_Process.Text = "FFXIV 프로세스";
+            // 
+            // comboBox_Language
+            // 
+            this.comboBox_Language.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox_Language.BackColor = System.Drawing.SystemColors.Window;
+            this.comboBox_Language.DisplayMember = "Code";
+            this.comboBox_Language.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Language.Font = new System.Drawing.Font("Malgun Gothic", 9F);
+            this.comboBox_Language.FormattingEnabled = true;
+            this.comboBox_Language.Location = new System.Drawing.Point(480, 2);
+            this.comboBox_Language.Name = "comboBox_Language";
+            this.comboBox_Language.Size = new System.Drawing.Size(62, 23);
+            this.comboBox_Language.TabIndex = 4;
+            this.comboBox_Language.ValueMember = "Code";
             // 
             // tabControl
             // 
@@ -265,9 +277,9 @@
             this.groupBox_TwitterSet.Controls.Add(this.label_TwitterAbout);
             this.groupBox_TwitterSet.Controls.Add(this.checkBox_Twitter);
             this.groupBox_TwitterSet.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox_TwitterSet.Location = new System.Drawing.Point(0, 129);
+            this.groupBox_TwitterSet.Location = new System.Drawing.Point(0, 151);
             this.groupBox_TwitterSet.Name = "groupBox_TwitterSet";
-            this.groupBox_TwitterSet.Size = new System.Drawing.Size(426, 134);
+            this.groupBox_TwitterSet.Size = new System.Drawing.Size(426, 111);
             this.groupBox_TwitterSet.TabIndex = 0;
             this.groupBox_TwitterSet.TabStop = false;
             this.groupBox_TwitterSet.Text = "트위터 알림";
@@ -314,14 +326,16 @@
             // 
             // groupBox_DefaultSet
             // 
+            this.groupBox_DefaultSet.Controls.Add(this.button_ResetOverlayPosition);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_CheatRoullete);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_FlashWindow);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_AutoOverlayHide);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_StartupShow);
+            this.groupBox_DefaultSet.Controls.Add(this.checkBox_Overlay);
             this.groupBox_DefaultSet.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox_DefaultSet.Location = new System.Drawing.Point(0, 0);
             this.groupBox_DefaultSet.Name = "groupBox_DefaultSet";
-            this.groupBox_DefaultSet.Size = new System.Drawing.Size(426, 129);
+            this.groupBox_DefaultSet.Size = new System.Drawing.Size(426, 151);
             this.groupBox_DefaultSet.TabIndex = 0;
             this.groupBox_DefaultSet.TabStop = false;
             this.groupBox_DefaultSet.Text = "기본설정";
@@ -330,7 +344,7 @@
             // 
             this.checkBox_CheatRoullete.AutoSize = true;
             this.checkBox_CheatRoullete.Font = new System.Drawing.Font("Malgun Gothic", 9F);
-            this.checkBox_CheatRoullete.Location = new System.Drawing.Point(14, 85);
+            this.checkBox_CheatRoullete.Location = new System.Drawing.Point(6, 103);
             this.checkBox_CheatRoullete.Name = "checkBox_CheatRoullete";
             this.checkBox_CheatRoullete.Size = new System.Drawing.Size(302, 19);
             this.checkBox_CheatRoullete.TabIndex = 3;
@@ -342,7 +356,7 @@
             // 
             this.checkBox_FlashWindow.AutoSize = true;
             this.checkBox_FlashWindow.Font = new System.Drawing.Font("Malgun Gothic", 9F);
-            this.checkBox_FlashWindow.Location = new System.Drawing.Point(14, 65);
+            this.checkBox_FlashWindow.Location = new System.Drawing.Point(6, 83);
             this.checkBox_FlashWindow.Name = "checkBox_FlashWindow";
             this.checkBox_FlashWindow.Size = new System.Drawing.Size(369, 19);
             this.checkBox_FlashWindow.TabIndex = 2;
@@ -354,7 +368,7 @@
             // 
             this.checkBox_AutoOverlayHide.AutoSize = true;
             this.checkBox_AutoOverlayHide.Font = new System.Drawing.Font("Malgun Gothic", 9F);
-            this.checkBox_AutoOverlayHide.Location = new System.Drawing.Point(14, 45);
+            this.checkBox_AutoOverlayHide.Location = new System.Drawing.Point(6, 63);
             this.checkBox_AutoOverlayHide.Name = "checkBox_AutoOverlayHide";
             this.checkBox_AutoOverlayHide.Size = new System.Drawing.Size(222, 19);
             this.checkBox_AutoOverlayHide.TabIndex = 1;
@@ -366,7 +380,7 @@
             // 
             this.checkBox_StartupShow.AutoSize = true;
             this.checkBox_StartupShow.Font = new System.Drawing.Font("Malgun Gothic", 9F);
-            this.checkBox_StartupShow.Location = new System.Drawing.Point(14, 25);
+            this.checkBox_StartupShow.Location = new System.Drawing.Point(6, 43);
             this.checkBox_StartupShow.Name = "checkBox_StartupShow";
             this.checkBox_StartupShow.Size = new System.Drawing.Size(186, 19);
             this.checkBox_StartupShow.TabIndex = 0;
@@ -385,6 +399,16 @@
             this.tabPage_FATE.Size = new System.Drawing.Size(426, 262);
             this.tabPage_FATE.TabIndex = 0;
             this.tabPage_FATE.Text = "돌발";
+            // 
+            // label_FATEAbout
+            // 
+            this.label_FATEAbout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label_FATEAbout.Font = new System.Drawing.Font("Malgun Gothic", 8F);
+            this.label_FATEAbout.Location = new System.Drawing.Point(0, 230);
+            this.label_FATEAbout.Name = "label_FATEAbout";
+            this.label_FATEAbout.Size = new System.Drawing.Size(426, 32);
+            this.label_FATEAbout.TabIndex = 2;
+            this.label_FATEAbout.Text = "알림을 받고자 하는 돌발을 선택하신 뒤 상단 적용하기 버튼을 눌러주세요.\r\n돌발 알림은 캐릭터가 해당 지역에 있을 때에만 동작합니다.";
             // 
             // triStateTreeView_FATEs
             // 
@@ -629,16 +653,6 @@
             this.linkLabel_GitHub.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.linkLabel_GitHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_GitHub_LinkClicked);
             // 
-            // label_FATEAbout
-            // 
-            this.label_FATEAbout.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label_FATEAbout.Font = new System.Drawing.Font("Malgun Gothic", 8F);
-            this.label_FATEAbout.Location = new System.Drawing.Point(0, 230);
-            this.label_FATEAbout.Name = "label_FATEAbout";
-            this.label_FATEAbout.Size = new System.Drawing.Size(426, 32);
-            this.label_FATEAbout.TabIndex = 2;
-            this.label_FATEAbout.Text = "알림을 받고자 하는 돌발을 선택하신 뒤 상단 적용하기 버튼을 눌러주세요.\r\n돌발 알림은 캐릭터가 해당 지역에 있을 때에만 동작합니다.";
-            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -648,8 +662,9 @@
             this.Controls.Add(this.panel_TopSetting);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Malgun Gothic", 9.75F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip_FATETab;
+            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(560, 360);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -734,6 +749,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem bookOfSkyearthIToolStripMenuItem;
         private LocalizableLabel label_FATEAbout;
+        private System.Windows.Forms.ComboBox comboBox_Language;
     }
 }
 

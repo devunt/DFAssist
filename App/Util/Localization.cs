@@ -18,6 +18,10 @@ namespace App
                     json = Resources.Localization_KO_KR;
                     break;
 
+                case "en-us":
+                    json = Resources.Localization_EN_US;
+                    break;
+
                 default:
                     return;
             }

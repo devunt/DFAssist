@@ -63,6 +63,19 @@ namespace App
                 }
             });
 
+            comboBox_Language.DataSource = new[]
+            {
+                new Language { Name = "한국어", Code = "ko-kr" },
+                new Language { Name = "English", Code = "en-us" },
+            };
+
+            comboBox_Language.DisplayMember = "Name";
+            comboBox_Language.ValueMember = "Code";
+
+            comboBox_Language.SelectedValue = Settings.Language;
+
+            comboBox_Language.SelectedValueChanged += comboBox_Language_SelectedValueChanged;
+
             checkBox_StartupShow.Checked = Settings.StartupShowMainForm;
             checkBox_AutoOverlayHide.Checked = Settings.AutoOverlayHide;
             checkBox_FlashWindow.Checked = Settings.FlashWindow;
@@ -446,6 +459,23 @@ namespace App
             {
                 notifyIcon.ShowBalloonTip(10 * 1000, Localization.GetText("app-name"), Localization.GetText(key, args), ToolTipIcon.Info);
             });
+        }
+
+        private void comboBox_Language_SelectedValueChanged(object sender, EventArgs e)
+        {
+            var language = comboBox_Language.SelectedValue.ToString();
+            if (Settings.Language == language)
+            {
+                return;
+            }
+
+            Settings.Language = language;
+            Settings.Save();
+
+            Localization.Initialize(Settings.Language);
+            Data.Initialize(Settings.Language);
+
+            LMessageBox.I("ui-language-changed");
         }
     }
 }

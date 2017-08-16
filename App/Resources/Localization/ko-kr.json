@@ -20,6 +20,8 @@
   "ui-msgbox-title-warning": "DFA 경고",
   "ui-msgbox-title-error": "DFA 오류",
 
+  "ui-language-changed": "언어가 한국어로 변경되었습니다.\n일부 부분은 프로그램 재시작을 해야 반영됩니다.\n프로그램을 재시작해주세요.",
+
   "ui-clipboard-copied": "클립보드에 복사되었습니다.",
 
   "ui-cheat-roulette-confirm": "악용 방지를 위해 기본적으로 비활성화 되어있는 기능입니다.\\n특정 비인기 임무를 고의적으로 입장 거부하는 행위 등은 자제해주세요.\\n\\n그래도 활성화 하시겠습니까?",

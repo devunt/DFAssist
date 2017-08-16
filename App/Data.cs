@@ -25,6 +25,11 @@ namespace App
                 case "ko-kr":
                     json = Resources.Data_KO_KR;
                     break;
+
+                case "en-us":
+                    json = Resources.Data_EN_US;
+                    break;
+
                 default:
                     return;
             }

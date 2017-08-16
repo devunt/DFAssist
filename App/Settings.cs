@@ -49,7 +49,7 @@ namespace App
                 FlashWindow = iniFile.ReadValue("notification", "flashwindow") != "0";
                 // CheatRoulette = iniFile.ReadValue("misc", "cheatroulette") == "1";
                 CheatRoulette = false; // 악용 방지를 위한 강제 비활성화
-                Language = iniFile.ReadValue("misc", "language2") ?? "ko-kr";
+                Language = iniFile.ReadValue("misc", "language") ?? "ko-kr";
                 Updated = iniFile.ReadValue("internal", "updated") != "0";
 
                 var fates = iniFile.ReadValue("fate", "fates");

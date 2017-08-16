@@ -62,6 +62,42 @@ namespace App.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to {
+        ///  // Version
+        ///  &quot;version&quot;: &quot;20170816.1&quot;,
+        ///
+        ///  // Duty
+        ///  &quot;instances&quot;: {
+        ///    // 2.0 A Realm Reborn
+        ///    // 2.0 Dungeons
+        ///    &quot;157&quot;: {
+        ///      &quot;name&quot;: &quot;Sastasha&quot;,
+        ///      &quot;tank&quot;: &quot;1&quot;,
+        ///      &quot;healer&quot;: &quot;1&quot;,
+        ///      &quot;dps&quot;: &quot;2&quot;
+        ///    },
+        ///    &quot;158&quot;: {
+        ///      &quot;name&quot;: &quot;Brayflox&apos;s Longstop&quot;,
+        ///      &quot;tank&quot;: &quot;1&quot;,
+        ///      &quot;healer&quot;: &quot;1&quot;,
+        ///      &quot;dps&quot;: &quot;2&quot;
+        ///    },
+        ///    &quot;159&quot;: {
+        ///      &quot;name&quot;: &quot;The Wanderer&apos;s Palace&quot;,
+        ///      &quot;tank&quot;: &quot;1&quot;,
+        ///      &quot;healer&quot;: &quot;1&quot;,
+        ///      &quot;dps&quot;: &quot;2&quot;
+        ///    },
+        ///    &quot;161&quot;: {
+        ///      &quot;name&quot;: &quot;Copperbe [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Data_EN_US {
+            get {
+                return ResourceManager.GetString("Data_EN_US", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
         ///  // 버전
         ///  &quot;version&quot;: &quot;20170816.1&quot;,
         ///
@@ -95,6 +131,16 @@ namespace App.Properties {
         internal static string Data_KO_KR {
             get {
                 return ResourceManager.GetString("Data_KO_KR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///}.
+        /// </summary>
+        internal static string Localization_EN_US {
+            get {
+                return ResourceManager.GetString("Localization_EN_US", resourceCulture);
             }
         }
         

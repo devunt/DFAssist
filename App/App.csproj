@@ -97,6 +97,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Struct\GameData.cs" />
+    <Compile Include="Struct\Language.cs" />
     <Compile Include="Struct\Roulette.cs" />
     <Compile Include="Api\WebApi.cs" />
     <Compile Include="Struct\Area.cs" />
@@ -172,6 +173,7 @@
     <None Include="app.manifest">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Resources\Data\en-us.json" />
     <None Include="Resources\Data\ko-kr.json" />
     <None Include="ILMerge.props">
       <SubType>Designer</SubType>
@@ -186,6 +188,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\Localization\en-us.json" />
     <None Include="Resources\Localization\ko-kr.json" />
   </ItemGroup>
   <ItemGroup>
