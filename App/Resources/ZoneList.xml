@@ -1,5 +1,5 @@
 ﻿<Data>
-    <Version>20170720.1</Version>
+    <Version>20170812.1</Version>
 
     <!-- 무작위 임무 -->
     <Roulette Id="1" Text="무작위 임무: 레벨링" />
@@ -451,6 +451,7 @@
         <FATE Parent="9A" Id="677" Name="신비한 마물 '황금골렘'" />
         <FATE Parent="9A" Id="174" Name="오합지졸" />
         <FATE Parent="9A" Id="178" Name="붉은 왕이 될 유충" />
+        <FATE Parent="9A" Id="179" Name="가을박 마을 지킴이" />
         <FATE Parent="9A" Id="180" Name="산길잡이의 부탁" />
         <FATE Parent="9A" Id="183" Name="혼란탈출" />
         <FATE Parent="9A" Id="184" Name="너도나도 좋아하는 문투이 콩" />
@@ -472,7 +473,6 @@
         <FATE Parent="9B" Id="699" Name="별빛축제: 마법 눈사람" />
         <FATE Parent="9B" Id="709" Name="현자의 알" />
         <FATE Parent="9B" Id="460" Name="늑대들의 전쟁" />
-        <FATE Parent="9B" Id="461" Name="알 수 없음" />
         <FATE Parent="9B" Id="463" Name="검은 탄환" />
         <FATE Parent="9B" Id="464" Name="강가의 복수자" />
         <FATE Parent="9B" Id="465" Name="겨울 이야기" />
@@ -825,7 +825,6 @@
         <FATE Parent="18D" Id="794" Name="영광의 성 피네아 연대" />
         <FATE Parent="18D" Id="795" Name="곰 조심" />
         <FATE Parent="18D" Id="796" Name="예티의 천적" />
-        <FATE Parent="18D" Id="797" Name="알 수 없음" />
         <FATE Parent="18D" Id="798" Name="수인 예티" />
         <FATE Parent="18D" Id="800" Name="용이 잠든 섬 전투" />
         <FATE Parent="18D" Id="801" Name="얼어붙은 꽃" />
@@ -914,12 +913,12 @@
         <FATE Parent="190" Id="873" Name="하얀 궁전 방어전: 맹룡 토벌" />
         <FATE Parent="190" Id="874" Name="하얀 궁전 방어전: 모그리 구출" />
         <FATE Parent="190" Id="725" Name="구름 속 수생생물" />
-        <FATE Parent="190" Id="726" Name="안녕 태고의 다이노스" />
+        <FATE Parent="190" Id="726" Name="원시공룡이여, 안녕히" />
         <FATE Parent="190" Id="727" Name="흑룡의 사도" />
         <FATE Parent="190" Id="728" Name="저축왕 모그리" />
         <FATE Parent="190" Id="731" Name="잃어버린 세계" />
         <FATE Parent="190" Id="732" Name="구름바다에 치는 천둥" />
-        <FATE Parent="190" Id="735" Name="포식하는 공룡" />
+        <FATE Parent="190" Id="735" Name="배부른 공룡" />
         <FATE Parent="190" Id="736" Name="긴급출동 툴리핸드" />
         <FATE Parent="190" Id="737" Name="긴급출동 뷔브르" />
         <FATE Parent="190" Id="738" Name="유적 감시자" />
@@ -946,9 +945,6 @@
         <FATE Parent="191" Id="845" Name="지나친 혈기" />
         <FATE Parent="191" Id="846" Name="불법 투기자" />
         <FATE Parent="191" Id="847" Name="구름바다의 전사" />
-        <FATE Parent="191" Id="848" Name="알 수 없음" />
-        <FATE Parent="191" Id="849" Name="알 수 없음" />
-        <FATE Parent="191" Id="850" Name="알 수 없음" />
         <FATE Parent="191" Id="851" Name="멋진 신세계" />
         <FATE Parent="191" Id="852" Name="하늘 위의 구름" />
         <FATE Parent="191" Id="853" Name="도망자" />
@@ -956,8 +952,6 @@
         <FATE Parent="191" Id="855" Name="폭식자 바위인형" />
         <FATE Parent="191" Id="856" Name="보급로를 끊어라" />
         <FATE Parent="191" Id="857" Name="초대받지 않은 손님" />
-        <FATE Parent="191" Id="858" Name="알 수 없음" />
-        <FATE Parent="191" Id="859" Name="알 수 없음" />
         <FATE Parent="191" Id="860" Name="공포의 대명사" />
         <FATE Parent="191" Id="861" Name="구름신의 사제" />
         <FATE Parent="191" Id="862" Name="케나바누의 제자들" />
@@ -1279,9 +1273,9 @@
       <Duty Tank="0" Healer="0" DPS="0" />
     </Item>
     
-    <!-- 3.5 The Far Edge of Fate -->
+    <!-- 3.5 숙명의 끝 -->
     <!-- 3.5 던전 -->
-    <Item ZoneId="267" Text="" Duty="바일사르 장벽"   >
+    <Item ZoneId="267" Text="" Duty="바일사르 장성">
         <Duty Tank="1" Healer="1" DPS="2" />
     </Item>
     <Item ZoneId="269" Text="솜 알" Duty="솜 알 (어려움)">
@@ -1297,7 +1291,7 @@
     </Item>-
   
     <!-- 3.5 레이드 -->
-    <Item ZoneId="273" Text="" Duty="그림자 나라 던 스카">
+    <Item ZoneId="273" Text="" Duty="둔 스카"> 
         <Duty Tank="3" Healer="6" DPS="15" />
     </Item>
     
