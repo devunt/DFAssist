@@ -2,10 +2,10 @@
   "app-name": "임무/돌발 찾기 도우미",
 
 
-  "unknown-instance": "알 수 없는 임무 ({0})", 
-  "unknown-roulette": "알 수 없는 무작위 임무 ({0})", 
-  "unknown-area": "알 수 없는 지역 ({0})", 
-  "unknown-fate": "알 수 없는 돌발 ({0})", 
+  "unknown-instance": "알 수 없는 임무 ({0})",
+  "unknown-roulette": "알 수 없는 무작위 임무 ({0})",
+  "unknown-area": "알 수 없는 지역 ({0})",
+  "unknown-fate": "알 수 없는 돌발 ({0})",
 
 
   "notification-app-updated": "버전 {0} 업데이트됨",
@@ -16,6 +16,52 @@
   "tweet-queue-matched": "< {0} > 매칭!",
 
 
+  "fate-preset-animus-SkyfireI": "불의 서 1권",
+  "fate-preset-animus-SkyfireII": "불의 서 2권",
+  "fate-preset-animus-NetherfireI": "불의 서 3권",
+  "fate-preset-animus-SkyfallI": "물의 서 1권",
+  "fate-preset-animus-SkyfallII": "물의 서 2권",
+  "fate-preset-animus-NetherfallI": "물의 서 3권",
+  "fate-preset-animus-SkywindI": "바람의 서 1권",
+  "fate-preset-animus-SkywindII": "바람의 서 2권",
+  "fate-preset-animus-SkyearthI": "땅의 서 1권",
+
+
+  "ui-notifymenustrip-open": "열기",
+  "ui-notifymenustrip-close": "종료",
+
+  "ui-topsetting-process": "FFXIV 프로세스",
+  "ui-topsetting-select": "수동설정",
+  "ui-topsetting-reset": "재설정",
+
+  "ui-tabcontrol-settings": "설정",
+  "ui-tabcontrol-fate": "돌발",
+  "ui-tabcontrol-logs": "로그",
+  "ui-tabcontrol-info": "정보",
+
+  "ui-settings-title": "기본설정",
+  "ui-settings-overlay-use": "오버레이 사용",
+  "ui-settings-overlay-tooltip": "오버레이 UI의 좌측 막대를 이용해 드래그 할 수 있습니다.",
+  "ui-settings-overlay-reset": "위치 초기화",
+  "ui-settings-startupshow": "프로그램 시작시 이 창 보이기",
+  "ui-settings-autohide": "임무 입장시 자동으로 오버레이 숨김",
+  "ui-settings-iconflash": "매칭/돌발 발생시 파이널판타지14 작업 표시줄 아이콘 깜빡이기",
+  "ui-settings-cheatroulette": "무작위 임무일 경우에도 실제 매칭된 임무 보여주기",
+  "ui-settings-tweet-title": "트위터 알림",
+  "ui-settings-tweet-activate": "활성화",
+  "ui-settings-tweet-about": "매칭이 됐을 시 입력된 트위터 계정으로 멘션을 보내 해당 사실을 알립니다.\n원하는 돌발이 발생했을 시에도 멘션을 보내 해당 사실을 알립니다.\n계정명 입력시 앞의 @ 표시는 제외하고 순수 계정명만 입력해주세요.",
+
+  "ui-fate-selectall": "모두 선택",
+  "ui-fate-unselectall": "모두 해제",
+  "ui-fate-preset": "프리셋",
+  "ui-fate-apply": "적용하기",
+  "ui-fate-about": "알림을 받고자 하는 돌발을 선택하신 뒤 상단 적용하기 버튼을 눌러주세요.\n돌발 알림은 캐릭터가 해당 지역에 있을 때에만 동작합니다.",
+
+  "ui-logs-copy": "로그 복사",
+  "ui-logs-clear": "로그 삭제",
+
+  "ui-info-about": "[제작 및 문의]\n유채색\n라그린네\n히비야\n윈도ce\n\n[저작권]\n기재되어있는 회사명 · 제품명 · 시스템 이름은\n해당 소유자의 상표 또는 등록 상표입니다.\n(C) 2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by EYEDENTITY Entertainment.",
+
   "ui-msgbox-title-info": "DFA 알림",
   "ui-msgbox-title-warning": "DFA 경고",
   "ui-msgbox-title-error": "DFA 오류",
@@ -24,36 +70,36 @@
 
   "ui-clipboard-copied": "클립보드에 복사되었습니다.",
 
-  "ui-cheat-roulette-confirm": "악용 방지를 위해 기본적으로 비활성화 되어있는 기능입니다.\\n특정 비인기 임무를 고의적으로 입장 거부하는 행위 등은 자제해주세요.\\n\\n그래도 활성화 하시겠습니까?",
+  "ui-cheat-roulette-confirm": "악용 방지를 위해 기본적으로 비활성화 되어있는 기능입니다.\n특정 비인기 임무를 고의적으로 입장 거부하는 행위 등은 자제해주세요.\n\n그래도 활성화 하시겠습니까?",
   "ui-cheat-roulette-enabled": "활성화되었습니다.\n특정 비인기 임무를 고의적으로 입장 거부하는 행위 등은 자제해주세요.\n\n본 기능은 클라이언트가 재시작 될 때 자동으로 비활성화됩니다.",
 
-  "ui-clear-log-confirm":  "로그를 지우시겠습니까?",
+  "ui-clear-log-confirm": "로그를 지우시겠습니까?",
 
   "ui-fate-selection-saved": "돌발 알림 설정이 적용되었습니다.",
   "ui-fate-preset-applied": "돌발 알림 프리셋이 적용되었습니다.",
 
-  "ui-updating": "업데이트 진행중...\n{0}", 
+  "ui-updating": "업데이트 진행중...\n{0}",
 
   "ui-app-crashed": "알 수 없는 오류가 발생해 프로그램을 종료합니다.\n\n에러: {0}",
 
 
   "overlay-waiting-connection": "클라이언트 통신 대기 중",
   "overlay-not-queuing": "매칭중인 임무 없음",
-  "overlay-duty-count-unknown": "임무 매칭 중", 
+  "overlay-duty-count-unknown": "임무 매칭 중",
   "overlay-duty-count": "총 {0}개 임무 매칭 중",
   "overlay-queue-waiting-party": "파티 매칭 중: {0} / {1} / {2}",
   "overlay-queue-waiting": "매칭 대기 중",
   "overlay-queue-order": "대기 순번: {0}",
-  "overlay-roulette": "무작위 임무", 
-  "overlay-queue-waiting-confirm": "입장 확인 대기 중", 
-  "overlay-queue-matched": "매칭!", 
-  "overlay-queue-confirming": "입장 확인 중", 
+  "overlay-roulette": "무작위 임무",
+  "overlay-queue-waiting-confirm": "입장 확인 대기 중",
+  "overlay-queue-matched": "매칭!",
+  "overlay-queue-confirming": "입장 확인 중",
   "overlay-fate-occured": "돌발 임무 발생!",
 
 
   "l-process-set-success": "P: 파이널판타지14 프로세스가 선택되었습니다: {0}",
   "l-process-set-failed": "P: 파이널판타지14 프로세스 설정에 실패했습니다.",
-  "l-process-finding": "P: 파이널판타지14 프로세스를 찾는 중...", 
+  "l-process-finding": "P: 파이널판타지14 프로세스를 찾는 중...",
   "l-process-found-nothing": "P: 파이널판타지14 프로세스를 찾을 수 없습니다.",
   "l-process-found-multiple": "P: 파이널판타지14가 2개 이상 실행중입니다.",
 
@@ -66,12 +112,12 @@
   "l-updater-current-version": "U: 현재 버전: {0}",
   "l-updater-latest-version": "U: 최신 버전: {0}",
   "l-updater-is-latest": "U: 최신 버전을 이용중입니다.",
-  "l-updater-new-version": "U: 새로운 업데이트가 존재합니다." ,
-  "l-updater-error-general": "U: 업데이트 데이터 처리중 에러 발생", 
+  "l-updater-new-version": "U: 새로운 업데이트가 존재합니다.",
+  "l-updater-error-general": "U: 업데이트 데이터 처리중 에러 발생",
   "l-updater-error-data": "U: 임무 데이터 업데이트중 에러 발생",
   "l-updater-error-check": "U: 새 업데이트 정보를 받아오지 못했습니다.",
-  "l-updater-error-no-url": "U: 업데이트 파일을 찾을 수 없습니다.", 
-  "l-updater-error-downloading": "U: 업데이트 데이터 받는 중 에러 발생", 
+  "l-updater-error-no-url": "U: 업데이트 파일을 찾을 수 없습니다.",
+  "l-updater-error-downloading": "U: 업데이트 데이터 받는 중 에러 발생",
 
   "l-data-updated": "D: 임무 데이터가 {0} 버전으로 갱신되었습니다.",
   "l-data-is-latest": "D: 최신 임무 데이터(버전 {0})를 이용중입니다.",
@@ -91,21 +137,21 @@
   "l-network-error-no-connection": "N: 게임서버 연결을 찾지 못함",
   "l-network-error-receiving-packet": "N: 패킷을 받는 중 에러 발생",
   "l-network-error-filtering-packet": "N: 패킷 필터링 중 에러 발생",
-  "l-network-error-finding-lobby": "N: 로비 서버 정보를 받아오는 중 에러 발생함", 
-  "l-network-detected-connection-closing": "N: 게임서버와의 연결 종료 감지됨", 
-  "l-network-detected-connection": "N: 게임서버 연결 감지: {0}", 
+  "l-network-error-finding-lobby": "N: 로비 서버 정보를 받아오는 중 에러 발생함",
+  "l-network-detected-connection-closing": "N: 게임서버와의 연결 종료 감지됨",
+  "l-network-detected-connection": "N: 게임서버 연결 감지: {0}",
 
   "l-firewall-registered": "FW: 추가됨",
   "l-firewall-error": "FW: 추가중 에러 발생",
 
   "l-analyze-error-length": "A: 메시지 분석중 길이 에러 발생함: {0}, {1}/{2}",
   "l-analyze-error-general": "A: 메시지 분석중 에러 발생함",
-  "l-analyze-error": "A: 메시지 처리중 에러 발생함", 
+  "l-analyze-error": "A: 메시지 처리중 에러 발생함",
 
   "l-queue-started-general": "Q: 매칭 시작됨 [{0}]",
   "l-queue-started-roulette": "Q: 무작위 임무 매칭 시작됨 [{0}]",
-  "l-queue-stopped": "Q: 매칭 중지됨", 
-  "l-queue-entered": "Q: 임무 입장함", 
+  "l-queue-stopped": "Q: 매칭 중지됨",
+  "l-queue-entered": "Q: 임무 입장함",
   "l-queue-matched": "Q: 매칭됨 [{0}]",
   "l-queue-updated": "Q: 매칭 상태 업데이트됨 [{0}, {1}, {2}/{3}, {4}/{5}, {6}/{7}]"
 }
