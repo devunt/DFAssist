@@ -50,7 +50,7 @@ namespace App
                     Data = null;
 
                     IsValid = false;
-                    Log.Ex(ex, "IP 패킷 파싱 에러");
+                    Log.Ex(ex, "l-packet-error-ip");
                 }
             }
         }
@@ -92,7 +92,7 @@ namespace App
 
                     IsValid = false;
 
-                    Log.Ex(ex, "TCP 패킷 파싱 에러");
+                    Log.Ex(ex, "l-packet-error-tcp");
                 }
             }
         }

@@ -28,7 +28,7 @@ namespace App
                 var resp = WebApi.Request($"https://api.github.com/repos/{Global.GITHUB_REPO}/releases/latest");
                 if (resp == null)
                 {
-                    Log.E("새 업데이트 정보를 받아오지 못했습니다");
+                    Log.E("l-updater-error-check");
                     return;
                 }
 
@@ -36,16 +36,16 @@ namespace App
                     var api = JsonConvert.DeserializeObject<dynamic>(resp);
 
                     var latest = api.tag_name.ToObject<string>();
-                    Log.I("현재 버전: {0}", Global.VERSION);
-                    Log.I("최신 버전: {0}", latest);
+                    Log.I("l-updater-current-version", Global.VERSION);
+                    Log.I("l-updater-latest-version", latest);
 
                     if (decimal.Parse(Global.VERSION.Substring(1)) >= decimal.Parse(latest.Substring(1)))
                     {
-                        Log.S("최신 버전을 이용중입니다");
+                        Log.S("l-updater-is-latest");
                     }
                     else
                     {
-                        Log.S("새로운 업데이트가 존재합니다");
+                        Log.S("l-updater-new-version");
 
                         string url = null;
                         foreach (var asset in api.assets)
@@ -59,7 +59,7 @@ namespace App
 
                         if (url == null)
                         {
-                            Log.E("업데이트 파일을 찾을 수 없습니다");
+                            Log.E("l-updater-error-no-url");
                             return;
                         }
 
@@ -119,7 +119,7 @@ namespace App
                 }
                 catch (Exception ex)
                 {
-                    Log.Ex(ex, "업데이트 데이터 처리중 에러 발생");
+                    Log.Ex(ex, "l-updater-error-general");
                 }
 
                 try
@@ -129,7 +129,7 @@ namespace App
                 }
                 catch (Exception ex)
                 {
-                    Log.Ex(ex, "임무 데이터 업데이트중 에러 발생");
+                    Log.Ex(ex, "l-updater-error-data");
                 }
             });
         }
@@ -150,7 +150,7 @@ namespace App
             }
             catch (Exception ex)
             {
-                Log.Ex(ex, "업데이트 데이터 받는 중 에러 발생");
+                Log.Ex(ex, "l-updater-error-downloading");
             }
 
             return null;

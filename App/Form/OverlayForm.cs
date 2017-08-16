@@ -138,7 +138,7 @@ namespace App
                     m_overlay.BackColor = Color.FromArgb(64, 0, 0);
 
                     CancelDutyFinderSync();
-                    label_DutyName.Text = "클라이언트 통신 대기 중";
+                    label_DutyName.SetLocalizedText("overlay-waiting-connection");
                 }
                 this.isOkay = isOkay;
             });
@@ -151,11 +151,11 @@ namespace App
             {
                 if (dutyCount < 0)
                 {
-                    label_DutyCount.Text = "임무 매칭 중";
+                    label_DutyCount.SetLocalizedText("overlay-duty-count-unknown");
                 }
                 else
                 {
-                    label_DutyCount.Text = string.Format("총 {0}개 임무 매칭 중", dutyCount);
+                    label_DutyCount.SetLocalizedText("overlay-duty-count", dutyCount);
                 }
             });
         }
@@ -171,28 +171,28 @@ namespace App
                     label_DutyName.Text = instance.Name;
                     if (tank != 0 || healer != 0 || dps != 0)
                     {
-                        label_DutyStatus.Text = string.Format("파티 매칭 중: {0} / {1} / {2}", tank, healer, dps);
+                        label_DutyStatus.SetLocalizedText("overlay-queue-waiting-party", tank, healer, dps);
                     }
                     else
                     {
-                        label_DutyStatus.Text = "매칭 대기 중";
+                        label_DutyStatus.SetLocalizedText("overlay-queue-waiting");
                     }
                 }
                 else if (isRoulette)
                 {
                     if (tank == 255) // 순번 대기
                     {
-                        label_DutyStatus.Text = "매칭 대기 중";
+                        label_DutyStatus.SetLocalizedText("overlay-queue-waiting");
                     }
                     else // TODO: 순번이 1번일 때?
                     {
-                        label_DutyStatus.Text = string.Format("대기 순번: {0}", tank + 1);
+                        label_DutyStatus.SetLocalizedText("overlay-queue-order", tank + 1);
                     }
                 }
                 else
                 {
                     label_DutyName.Text = instance.Name;
-                    label_DutyStatus.Text = string.Format("{0}/{3}    {1}/{4}    {2}/{5}", tank, healer, dps, instance.Tank, instance.Healer, instance.DPS);
+                    label_DutyStatus.Text = $@"{tank}/{instance.Tank}    {healer}/{instance.Healer}    {dps}/{instance.DPS}";
                 }
             });
         }
@@ -204,9 +204,9 @@ namespace App
             memberCount = null;
             this.Invoke(() =>
             {
-                label_DutyCount.Text = "무작위 임무";
+                label_DutyCount.SetLocalizedText("overlay-roulette");
                 label_DutyName.Text = roulette.Name;
-                label_DutyStatus.Text = "매칭 대기 중";
+                label_DutyStatus.SetLocalizedText("overlay-queue-waiting");
             });
         }
 
@@ -214,9 +214,9 @@ namespace App
         {
             this.Invoke(() =>
             {
-                label_DutyCount.Text = "입장 확인 대기 중";
+                label_DutyCount.SetLocalizedText("overlay-queue-waiting-confirm");
                 label_DutyName.Text = instance.Name;
-                label_DutyStatus.Text = "매칭!";
+                label_DutyStatus.SetLocalizedText("overlay-queue-matched");
 
                 accentColor = Color.Red;
                 StartBlink();
@@ -238,19 +238,19 @@ namespace App
 
             this.Invoke(() =>
             {
-                label_DutyCount.Text = "입장 확인 중";
-                label_DutyStatus.Text = string.Format("{0}/{3}    {1}/{4}    {2}/{5}", tank, healer, dps, memberCount[0], memberCount[2], memberCount[1]);
+                label_DutyCount.SetLocalizedText("overlay-queue-confirming");
+                label_DutyStatus.Text = $@"{tank}/{memberCount[0]}    {healer}/{memberCount[2]}    {dps}/{memberCount[1]}";
             });
         }
 
-        internal void SetFATEAsAppeared(FATE fate)
+        internal void SetFATEAsOccured(FATE fate)
         {
             this.Invoke(() =>
             {
                 // label_DutyCount.Text = Data.GetArea(fate.Zone).Name;
                 label_DutyCount.Text = "";
                 label_DutyName.Text = fate.Name;
-                label_DutyStatus.Text = "돌발 임무 발생!";
+                label_DutyStatus.SetLocalizedText("overlay-fate-occured");
 
                 accentColor = Color.DarkOrange;
                 StartBlink();
@@ -268,7 +268,7 @@ namespace App
             StopBlink();
 
             label_DutyCount.Text = "";
-            label_DutyName.Text = "매칭 중인 임무 없음";
+            label_DutyName.SetLocalizedText("overlay-not-queuing");
             label_DutyStatus.Text = "";
         }
 

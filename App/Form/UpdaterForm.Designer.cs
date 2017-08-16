@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdaterForm));
-            this.label_Updating = new System.Windows.Forms.Label();
+            this.label_Updating = new LocalizableLabel();
             this.SuspendLayout();
             // 
             // label_Updating
@@ -70,6 +70,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label_Updating;
+        private LocalizableLabel label_Updating;
     }
 }

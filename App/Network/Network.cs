@@ -61,11 +61,11 @@ namespace App
             {
                 try
                 {
-                    Log.I("N: 시작중...");
+                    Log.I("l-network-starting");
 
                     if (IsRunning)
                     {
-                        Log.E("N: 이미 시작되어 있음");
+                        Log.E("l-network-error-already-started");
                         return;
                     }
 
@@ -73,7 +73,7 @@ namespace App
 
                     if (connections.Count < 2)
                     {
-                        Log.E("N: 게임 서버 연결을 찾지 못했습니다");
+                        Log.E("l-network-error-no-connection");
                         return;
                     }
 
@@ -91,11 +91,11 @@ namespace App
                     socket.BeginReceive(recvBuffer, 0, recvBuffer.Length, 0, new AsyncCallback(OnReceive), null);
                     IsRunning = true;
 
-                    Log.S("N: 시작됨");
+                    Log.S("l-network-started");
                 }
                 catch (Exception ex)
                 {
-                    Log.Ex(ex, "N: 시작하지 못함");
+                    Log.Ex(ex, "l-network-error-starting");
                 }
             });
         }
@@ -105,7 +105,7 @@ namespace App
             try {
                 if (!IsRunning)
                 {
-                    Log.E("N: 이미 중지되어 있음");
+                    Log.E("l-network-error-already-stopped");
                     return;
                 }
 
@@ -114,11 +114,11 @@ namespace App
 
                 mainForm.overlayForm.SetStatus(false);
 
-                Log.I("N: 중지 요청중...");
+                Log.I("l-network-stopping");
             }
             catch (Exception ex)
             {
-                Log.Ex(ex, "N: 중지하지 못함");
+                Log.Ex(ex, "l-network-error-stopping");
             }
         }
 
@@ -133,7 +133,7 @@ namespace App
                 {
                     // 기존에 있던 연결이 끊겨 있음. 새롭게 갱신 필요
                     update = true;
-                    Log.E("N: 게임서버와의 연결 종료 감지됨");
+                    Log.E("l-network-detected-connection-closing");
                     break;
                 }
             }
@@ -148,7 +148,7 @@ namespace App
 
                 foreach (var connection in connections)
                 {
-                    Log.I("N: 게임서버 연결 감지: {0}", connection.ToString());
+                    Log.I("l-network-detected-connection", connection.ToString());
                 }
             }
         }
@@ -167,11 +167,11 @@ namespace App
             {
                 IsRunning = false;
                 socket = null;
-                Log.S("N: 중지됨");
+                Log.S("l-network-stopped");
             }
             catch (Exception ex)
             {
-                Log.Ex(ex, "N: 패킷을 받는 중 에러 발생");
+                Log.Ex(ex, "l-network-error-receiving-packet");
             }
         }
 
@@ -240,7 +240,7 @@ namespace App
             }
             catch (Exception ex)
             {
-                Log.Ex(ex, "패킷 필터링 중 에러 발생함");
+                Log.Ex(ex, "l-network-error-filtering-packet");
             }
         }
 
@@ -277,12 +277,12 @@ namespace App
 
                     netAuthApps.Add(netAuthApp);
 
-                    Log.S("FW: 추가됨");
+                    Log.S("l-firewall-registered");
                 }
             }
             catch (Exception ex)
             {
-                Log.Ex(ex, "FW: 추가중 오류 발생함");
+                Log.Ex(ex, "l-firewall-error");
             }
         }
 
@@ -327,7 +327,7 @@ namespace App
             }
             catch (Exception ex)
             {
-                Log.Ex(ex, "N: 로비 서버 정보를 받아오는 중 에러 발생함");
+                Log.Ex(ex, "l-network-error-finding-lobby");
             }
 
             return ipep;
@@ -402,7 +402,7 @@ namespace App
 
             public override string ToString()
             {
-                return string.Format("{0} -> {1}", localEndPoint.ToString(), remoteEndPoint.ToString());
+                return $"{localEndPoint.ToString()} -> {remoteEndPoint.ToString()}";
             }
         }
 

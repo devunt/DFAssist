@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.label_AboutTitle = new System.Windows.Forms.Label();
+            this.label_AboutTitle = new LocalizableLabel();
             this.button_ResetProcess = new System.Windows.Forms.Button();
             this.comboBox_Process = new System.Windows.Forms.ComboBox();
             this.button_SelectProcess = new System.Windows.Forms.Button();
@@ -41,14 +41,14 @@
             this.toolStripMenuItem_Open = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_Close = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_TopSetting = new System.Windows.Forms.Panel();
-            this.label_Process = new System.Windows.Forms.Label();
+            this.label_Process = new LocalizableLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl = new App.TabControlBlack();
             this.tabPage_Settings = new System.Windows.Forms.TabPage();
             this.groupBox_TwitterSet = new System.Windows.Forms.GroupBox();
             this.textBox_Twitter = new System.Windows.Forms.TextBox();
-            this.label_TwitterAt = new System.Windows.Forms.Label();
-            this.label_TwitterAbout = new System.Windows.Forms.Label();
+            this.label_TwitterAt = new LocalizableLabel();
+            this.label_TwitterAbout = new LocalizableLabel();
             this.checkBox_Twitter = new System.Windows.Forms.CheckBox();
             this.groupBox_DefaultSet = new System.Windows.Forms.GroupBox();
             this.checkBox_CheatRoullete = new System.Windows.Forms.CheckBox();
@@ -81,9 +81,9 @@
             this.toolStripMenuItem_LogCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_LogClear = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage_Info = new System.Windows.Forms.TabPage();
-            this.label_About = new System.Windows.Forms.Label();
+            this.label_About = new LocalizableLabel();
             this.linkLabel_GitHub = new System.Windows.Forms.LinkLabel();
-            this.label_FATEAbout = new System.Windows.Forms.Label();
+            this.label_FATEAbout = new LocalizableLabel();
             this.contextMenuStrip.SuspendLayout();
             this.panel_TopSetting.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -683,7 +683,7 @@
         internal System.Windows.Forms.RichTextBox richTextBox_Log;
         private System.Windows.Forms.LinkLabel linkLabel_GitHub;
         private System.Windows.Forms.CheckBox checkBox_Overlay;
-        private System.Windows.Forms.Label label_AboutTitle;
+        private LocalizableLabel label_AboutTitle;
         private System.Windows.Forms.Button button_ResetOverlayPosition;
         private System.Windows.Forms.Button button_SelectProcess;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
@@ -693,12 +693,12 @@
         private System.Windows.Forms.ComboBox comboBox_Process;
         private System.Windows.Forms.Button button_ResetProcess;
         private System.Windows.Forms.TextBox textBox_Twitter;
-        private System.Windows.Forms.Label label_TwitterAt;
-        private System.Windows.Forms.Label label_TwitterAbout;
+        private LocalizableLabel label_TwitterAt;
+        private LocalizableLabel label_TwitterAbout;
         private System.Windows.Forms.CheckBox checkBox_Twitter;
         internal RikTheVeggie.TriStateTreeView triStateTreeView_FATEs;
         private System.Windows.Forms.Panel panel_TopSetting;
-        private System.Windows.Forms.Label label_Process;
+        private LocalizableLabel label_Process;
         private TabControlBlack tabControl;
         private System.Windows.Forms.TabPage tabPage_FATE;
         private System.Windows.Forms.TabPage tabPage_Settings;
@@ -713,7 +713,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_LogClear;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.TabPage tabPage_Info;
-        private System.Windows.Forms.Label label_About;
+        private LocalizableLabel label_About;
         private System.Windows.Forms.GroupBox groupBox_TwitterSet;
         private System.Windows.Forms.GroupBox groupBox_DefaultSet;
         private System.Windows.Forms.CheckBox checkBox_AutoOverlayHide;
@@ -733,7 +733,7 @@
         private System.Windows.Forms.ToolStripMenuItem bookOfSkywindIIToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem bookOfSkyearthIToolStripMenuItem;
-        private System.Windows.Forms.Label label_FATEAbout;
+        private LocalizableLabel label_FATEAbout;
     }
 }
 

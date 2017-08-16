@@ -30,7 +30,7 @@ namespace App
 
         internal void SetVersion(string version)
         {
-            label_Updating.Text = string.Format("업데이트 진행중...\n{0}", version);
+            label_Updating.Text = Localization.GetText("ui-updating", version);
         }
     }
 }

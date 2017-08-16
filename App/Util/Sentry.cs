@@ -80,7 +80,12 @@ namespace App
             try
             {
                 var exception = e.ExceptionObject as Exception;
-                MessageBox.Show(string.Format("알 수 없는 오류가 발생해 프로그램을 종료합니다.\n\n에러: {0}", exception.Message), "에러 발생", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (exception == null)
+                {
+                    return;
+                }
+
+                MessageBox.Show(Localization.GetText("app-crashed", exception.Message), Localization.GetText("msgbox-title-error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 var @event = new SentryEvent(exception);
                 @event.Level = ErrorLevel.Fatal;

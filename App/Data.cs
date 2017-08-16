@@ -48,19 +48,19 @@ namespace App
 
                     if (Initialized)
                     {
-                        Log.S("임무 데이터가 {0} 버전으로 갱신되었습니다.", Version);
+                        Log.S("l-data-updated", Version);
                     }
 
                     Initialized = true;
                 }
                 else
                 {
-                    Log.S("최신 임무 데이터 (버전 {0})를 이용중입니다.", Version);
+                    Log.S("l-data-is-latest", Version);
                 }
             }
             catch (Exception ex)
             {
-                Log.Ex(ex, "임무 데이터를 처리하던 중 문제 발생");
+                Log.Ex(ex, "l-data-error");
             }
         }
 
@@ -79,7 +79,7 @@ namespace App
                 Sentry.ReportAsync(@event);
             }
 
-            return new Instance { Name = $"알 수 없는 임무 ({code})" };
+            return new Instance { Name = Localization.GetText("unknown-instance", code) };
         }
 
         internal static Roulette GetRoulette(int code)
@@ -97,7 +97,7 @@ namespace App
                 Sentry.ReportAsync(@event);
             }
 
-            return new Roulette { Name = $"알 수 없는 무작위 임무 ({code})" };
+            return new Roulette { Name = Localization.GetText("unknown-roulette", code) };
         }
 
         internal static Area GetArea(int code)
@@ -115,7 +115,7 @@ namespace App
                 Sentry.ReportAsync(@event);
             }
 
-            return new Area { Name = $"알 수 없는 지역 ({code})" };
+            return new Area { Name = Localization.GetText("unknown-area", code) };
         }
 
         internal static FATE GetFATE(int code)
@@ -133,7 +133,7 @@ namespace App
                 Sentry.ReportAsync(@event);
             }
 
-            return new FATE { Name = $"알 수 없는 돌발 ({code})" };
+            return new FATE { Name = Localization.GetText("unknown-fate", code) };
         }
     }
 }

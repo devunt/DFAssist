@@ -38,6 +38,7 @@ namespace App
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            Localization.Initialize("ko-kr");
             Data.Initializer();
 
             overlayForm.Show();
@@ -115,7 +116,7 @@ namespace App
             {
                 Settings.Updated = false;
                 Settings.Save();
-                ShowNotification("버전 {0} 업데이트됨", Global.VERSION);
+                ShowNotification("notification-app-updated", Global.VERSION);
             }
 
             Sentry.ReportAsync("App started");
@@ -152,20 +153,14 @@ namespace App
             richTextBox_Log.ScrollToCaret();
         }
 
-        private void button_CopyLog_Click(object sender, EventArgs e)
-        {
-            Clipboard.SetText(richTextBox_Log.Text);
-            MessageBox.Show("로그가 클립보드에 복사되었습니다.", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
         private void linkLabel_GitHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start(string.Format("https://github.com/{0}", Global.GITHUB_REPO));
+            Process.Start($"https://github.com/{Global.GITHUB_REPO}");
         }
 
         private void linkLabel_NewUpdate_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start(string.Format("https://github.com/{0}/releases/latest", Global.GITHUB_REPO));
+            Process.Start($"https://github.com/{Global.GITHUB_REPO}/releases/latest");
         }
 
         private void button_SelectProcess_Click(object sender, EventArgs e)
@@ -176,7 +171,7 @@ namespace App
             }
             catch
             {
-                Log.E("파이널판타지14 프로세스 설정에 실패했습니다");
+                Log.E("l-process-set-failed");
             }
         }
 
@@ -238,10 +233,10 @@ namespace App
             SetCheatRoulleteCheckBox(false);
             if (@checked)
             {
-                var respond = MessageBox.Show("악용 방지를 위해 기본적으로 비활성화 되어있는 기능입니다.\n특정 비인기 임무를 고의적으로 입장 거부하는 행위 등은 자제해주세요.\n\n그래도 활성화 하시겠습니까?", "DFA 경고", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                var respond = LMessageBox.W("ui-cheat-roulette-confirm", MessageBoxButtons.YesNo, MessageBoxDefaultButton.Button2);
                 if (respond == DialogResult.Yes)
                 {
-                    MessageBox.Show("활성화되었습니다.\n특정 비인기 임무를 고의적으로 입장 거부하는 행위 등은 자제해주세요.\n\n본 기능은 클라이언트가 재시작 될 때 자동으로 비활성화됩니다.", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LMessageBox.I("ui-cheat-roulette-enabled");
                     SetCheatRoulleteCheckBox(true);
                 }
             }
@@ -259,12 +254,12 @@ namespace App
         private void toolStripMenuItem_LogCopy_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(richTextBox_Log.Text);
-            MessageBox.Show("로그가 클립보드에 복사되었습니다.", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LMessageBox.I("ui-clipboard-copied");
         }
 
         private void toolStripMenuItem_LogClear_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("로그를 비우시겠습니까?", "DFA 알림", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+            if (LMessageBox.I("ui-clear-log-confirm", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 richTextBox_Log.Text = "";
             }
@@ -301,7 +296,7 @@ namespace App
             }
 
             Settings.Save();
-            MessageBox.Show("돌발 알림 설정이 적용되었습니다.", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LMessageBox.I("ui-fate-selection-saved");
         }
 
         private void FateAllUnset(bool save = false)
@@ -332,7 +327,7 @@ namespace App
             }
 
             Settings.Save();
-            MessageBox.Show("돌발 알림 프리셋이 적용되었습니다.", "DFA 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LMessageBox.I("ui-fate-preset-applied");
         }
 
         private void bookOfSkyfireIToolStripMenuItem_Click(object sender, EventArgs e)
@@ -399,7 +394,7 @@ namespace App
         private void FindFFXIVProcess()
         {
             comboBox_Process.Items.Clear();
-            Log.I("파이널판타지14 프로세스를 찾는 중...");
+            Log.I("l-process-finding");
 
             var processes = new List<Process>();
             processes.AddRange(Process.GetProcessesByName("ffxiv"));
@@ -407,13 +402,13 @@ namespace App
 
             if (processes.Count == 0)
             {
-                Log.E("파이널판타지14 프로세스를 찾을 수 없습니다");
+                Log.E("l-process-found-nothing");
                 button_SelectProcess.Enabled = false;
                 comboBox_Process.Enabled = false;
             }
             else if (processes.Count >= 2)
             {
-                Log.E("파이널판타지14가 2개 이상 실행중입니다");
+                Log.E("l-process-found-multiuple");
                 button_SelectProcess.Enabled = true;
                 comboBox_Process.Enabled = true;
 
@@ -433,7 +428,7 @@ namespace App
             FFXIVProcess = process;
 
             var name = $"{FFXIVProcess.ProcessName}:{FFXIVProcess.Id}";
-            Log.S("파이널판타지14 프로세스가 선택되었습니다: {0}", name);
+            Log.S("l-process-set-success", name);
 
             comboBox_Process.Enabled = false;
             button_SelectProcess.Enabled = false;
@@ -445,11 +440,11 @@ namespace App
             networkWorker.StartCapture(FFXIVProcess);
         }
 
-        internal void ShowNotification(string format, params object[] args)
+        internal void ShowNotification(string key, params object[] args)
         {
             this.Invoke(() =>
             {
-                notifyIcon.ShowBalloonTip(10 * 1000, "임무/돌발 찾기 도우미", string.Format(format, args), ToolTipIcon.Info);
+                notifyIcon.ShowBalloonTip(10 * 1000, Localization.GetText("app-name"), Localization.GetText(key, args), ToolTipIcon.Info);
             });
         }
     }

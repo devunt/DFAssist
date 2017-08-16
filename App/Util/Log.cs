@@ -33,26 +33,28 @@ namespace App
             });
         }
 
-        internal static void S(object format, params object[] args)
+        internal static void S(string key, params object[] args)
         {
-            Write(Color.Green, format, args);
+            Write(Color.Green, Localization.GetText(key, args));
         }
 
-        internal static void I(object format, params object[] args)
+        internal static void I(string key, params object[] args)
         {
-            Write(Color.Black, format, args);
+            Write(Color.Black, Localization.GetText(key, args));
         }
 
-        internal static void E(object format, params object[] args)
+        internal static void E(string key, params object[] args)
         {
-            Write(Color.Red, format, args);
+            Write(Color.Red, Localization.GetText(key, args));
         }
 
-        internal static void Ex(Exception ex, object format, params object[] args)
+        internal static void Ex(Exception ex, string key, params object[] args)
         {
 #if DEBUG
             throw ex;
 #else
+            var format = Localization.GetText(key);
+
             var message = ex.Message;
 
             message = Escape(message);

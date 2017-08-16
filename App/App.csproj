@@ -88,6 +88,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Component\LocalizableLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Struct\GameData.cs" />
     <Compile Include="Struct\Roulette.cs" />
     <Compile Include="Api\WebApi.cs" />
@@ -107,6 +115,8 @@
     <Compile Include="Util\INIFile.cs" />
     <Compile Include="Data.cs" />
     <Compile Include="Util\Invoker.cs" />
+    <Compile Include="Util\LMessageBox.cs" />
+    <Compile Include="Util\Localization.cs" />
     <Compile Include="Util\Log.cs" />
     <Compile Include="Form\MainForm.cs">
       <SubType>Form</SubType>
@@ -153,14 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
@@ -181,6 +186,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\Localization\ko-kr.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.ico" />

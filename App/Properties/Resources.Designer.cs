@@ -62,7 +62,8 @@ namespace App.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;version&quot;:  &quot;20170727.1&quot;,
+        ///  // 버전
+        ///  &quot;version&quot;: &quot;20170728.1&quot;,
         ///
         ///  // 임무
         ///  &quot;instances&quot;: {
@@ -89,12 +90,51 @@ namespace App.Properties {
         ///    &quot;161&quot;: {
         ///      &quot;name&quot;: &quot;구리종 광산&quot;,
         ///      &quot;tank&quot;: &quot;1&quot;,
-        ///      &quot;healer&quot;: &quot;1&quot;,
-        ///    [rest of string was truncated]&quot;;.
+        ///      &quot;healer&quot;: &quot; [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string GameData_Korean {
             get {
                 return ResourceManager.GetString("GameData_Korean", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;notification-updated&quot;: &quot;버전 {0} 업데이트됨&quot;,
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot;, 
+        ///  &quot;&quot;: &quot;&quot....
+        /// </summary>
+        internal static string Localization_KO_KR {
+            get {
+                return ResourceManager.GetString("Localization_KO_KR", resourceCulture);
             }
         }
     }

@@ -1,9 +1,9 @@
 ﻿﻿using System;
- using System.Collections.Generic;
- using System.IO;
- using System.IO.Compression;
- using System.Linq;
- using System.Text;
+using System.Collections.Generic;
+using System.IO;
+using System.IO.Compression;
+using System.Linq;
+using System.Text;
 
 namespace App
 {
@@ -68,7 +68,7 @@ namespace App
                                     var read = messages.Read(buffer, 0, 4);
                                     if (read < 4)
                                     {
-                                        Log.E("메시지 처리 요청중 길이 에러 발생함: {0}, {1}/{2}", read, i, messageCount);
+                                        Log.E("l-analyze-error-length", read, i, messageCount);
                                         break;
                                     }
                                     var messageLength = BitConverter.ToInt32(buffer, 0);
@@ -81,7 +81,7 @@ namespace App
                                 }
                                 catch (Exception ex)
                                 {
-                                    Log.Ex(ex, "메시지 처리 요청중 에러 발생함");
+                                    Log.Ex(ex, "l-analyze-error-general");
                                 }
                             }
                         }
@@ -116,7 +116,7 @@ namespace App
             }
             catch (Exception ex)
             {
-                Log.Ex(ex, "패킷 처리중 에러 발생함");
+                Log.Ex(ex, "l-analyze-error");
             }
         }
 
@@ -215,7 +215,7 @@ namespace App
 
                         if (Settings.FATEs.Contains(code))
                         {
-                            mainForm.overlayForm.SetFATEAsAppeared(fate);
+                            mainForm.overlayForm.SetFATEAsOccured(fate);
 
                             if (Settings.FlashWindow)
                             {
@@ -224,7 +224,7 @@ namespace App
 
                             if (Settings.TwitterEnabled)
                             {
-                                WebApi.Tweet("< {0} > 돌발 발생!", fate.Name);
+                                WebApi.Tweet("tweet-fate-occured", fate.Name);
                             }
                         }
                         
@@ -240,7 +240,7 @@ namespace App
                     state = State.QUEUED;
                     mainForm.overlayForm.SetDutyCount(1);
 
-                    Log.I("DFAN: 매칭 시작됨 (6C) [{0}]", instance.Name);
+                    Log.I("l-queue-started", instance.Name);
                 }
                 else if (opcode == 0x0078)
                 {
@@ -257,7 +257,7 @@ namespace App
                         {
                             var roulette = Data.GetRoulette(rouletteCode);
                             mainForm.overlayForm.SetRoulleteDuty(roulette);
-                            Log.I("DFAN: 무작위 임무 매칭 시작됨 [{0}]", roulette.Name);
+                            Log.I("l-queue-started-roulette", roulette.Name);
                         }
 
                         else //특정 임무 신청
@@ -281,7 +281,7 @@ namespace App
 
                             mainForm.overlayForm.SetDutyCount(instances.Count);
 
-                            Log.I("DFAN: 매칭 시작됨 (78) [{0}]", string.Join(", ", instances.Select(x => x.Name).ToArray()));
+                            Log.I("l-queue-started", string.Join(", ", instances.Select(x => x.Name).ToArray()));
                         }
                     }
                     else if (status == 3)
@@ -289,14 +289,14 @@ namespace App
                         state = reason == 8 ? State.QUEUED : State.IDLE;
                         mainForm.overlayForm.CancelDutyFinder();
 
-                        Log.E("DFAN: 매칭 중지됨 (78)");
+                        Log.E("l-queue-stopped");
                     }
                     else if (status == 6)
                     {
                         state = State.IDLE;
                         mainForm.overlayForm.CancelDutyFinder();
 
-                        Log.I("DFAN: 입장함");
+                        Log.I("l-queue-entered");
                     }
                     else if (status == 4) //글섭에서 매칭 잡혔을 때 출력
                     {
@@ -324,15 +324,15 @@ namespace App
 
                         if (!Settings.ShowOverlay)
                         {
-                            mainForm.ShowNotification("< {0} > 매칭!", instance.Name);
+                            mainForm.ShowNotification("notification-queue-matched", instance.Name);
                         }
 
                         if (Settings.TwitterEnabled)
                         {
-                            WebApi.Tweet("< {0} > 매칭!", instance.Name);
+                            WebApi.Tweet("tweet-queue-matched", instance.Name);
                         }
 
-                        Log.S("DFAN: 매칭됨 [{0}]", instance.Name);
+                        Log.S("l-queue-matched", instance.Name);
                     }
                 }
                 else if (opcode == 0x006F)
@@ -408,8 +408,7 @@ namespace App
                         // 매칭 뒤 참가자 확인 현황 패킷
                         mainForm.overlayForm.SetConfirmStatus(instance, tank, dps, healer);
                     }
-                    Log.I("DFAN: 매칭 상태 업데이트됨 [{0}, {1}, {2}/{3}, {4}/{5}, {6}/{7}]",
-                        instance.Name, status, tank, instance.Tank, healer, instance.Healer, dps, instance.DPS);
+                    Log.I("l-queue-updated", instance.Name, status, tank, instance.Tank, healer, instance.Healer, dps, instance.DPS);
                 }
                 else if (opcode == 0x0080)
                 {
@@ -437,20 +436,20 @@ namespace App
 
                     if (!Settings.ShowOverlay)
                     {
-                        mainForm.ShowNotification("< {0} > 매칭!", instance.Name);
+                        mainForm.ShowNotification("notification-queue-matched", instance.Name);
                     }
 
                     if (Settings.TwitterEnabled)
                     {
-                        WebApi.Tweet("< {0} > 매칭!", instance.Name);
+                        WebApi.Tweet("tweet-queue-matched", instance.Name);
                     }
 
-                    Log.S("DFAN: 매칭됨 [{0}]", instance.Name);
+                    Log.S("l-queue-matched", instance.Name);
                 }
             }
             catch (Exception ex)
             {
-                Log.Ex(ex, "메시지 처리중 에러 발생함");
+                Log.Ex(ex, "l-analyze-error-general");
             }
         }
 

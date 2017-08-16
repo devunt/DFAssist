@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label_DutyCount = new System.Windows.Forms.Label();
-            this.label_DutyName = new System.Windows.Forms.Label();
-            this.label_DutyStatus = new System.Windows.Forms.Label();
+            this.label_DutyCount = new LocalizableLabel();
+            this.label_DutyName = new LocalizableLabel();
+            this.label_DutyStatus = new LocalizableLabel();
             this.SuspendLayout();
             // 
             // label_DutyCount
@@ -90,8 +90,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label_DutyCount;
-        private System.Windows.Forms.Label label_DutyName;
-        private System.Windows.Forms.Label label_DutyStatus;
+        private LocalizableLabel label_DutyCount;
+        private LocalizableLabel label_DutyName;
+        private LocalizableLabel label_DutyStatus;
     }
 }
