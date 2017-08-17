@@ -162,17 +162,17 @@ namespace App
                         if (selfkey == charkey) // isSelf
                         {
                             var lastCode = BitConverter.ToUInt16(Encoding.Unicode.GetBytes(new[] { Data.GetArea(code).Name.Last() }), 0);
-                            var lastChar = (lastCode - 0xAC00U) % 28 == 0 || lastCode - 0xAC00U == 8 ? "로" : "으로";
+                            var lastChar = (lastCode - 0xAC00U) % 28 == 0 || lastCode - 0xAC00U == 8 ? true : false;
 
-                            if (teleMeasure != 0x0C && String.Equals(lastChar, "로")) //한글 '로'
+                            if (teleMeasure != 0x0C && lastChar) //한글 '로'
                             {
                                 Log.D("l-duty-enter", code, Data.GetArea(code).Name + "로");
                             }
-                            else if(teleMeasure != 0x0C && String.Equals(lastChar, "으로")) //한글 '으로'
+                            else if(teleMeasure != 0x0C && lastChar) //한글 '으로'
                             {
                                 Log.D("l-duty-enter", code, Data.GetArea(code).Name + "으로");
                             }
-                            else if(teleMeasure != 0x0C) //영어
+                            else if(teleMeasure != 0x0C) //다른 언어
                             {
                                 Log.D("l-duty-enter", code, Data.GetArea(code).Name);
                             }
