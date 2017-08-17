@@ -168,7 +168,7 @@ namespace App
                             {
                                 Log.D("l-duty-enter", code, Data.GetArea(code).Name + "로");
                             }
-                            else if(teleMeasure != 0x0C && lastChar) //한글 '으로'
+                            else if(teleMeasure != 0x0C && !lastChar) //한글 '으로'
                             {
                                 Log.D("l-duty-enter", code, Data.GetArea(code).Name + "으로");
                             }
