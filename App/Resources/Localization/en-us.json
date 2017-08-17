@@ -9,7 +9,7 @@
 
 
   "notification-app-updated": "Version {0} Updated",
-  "notification-queue-matched": "< {0} > 매칭!",
+  "notification-queue-matched": "< {0} > Matched!",
 
 
   "tweet-fate-occured": "< {0} > FATE Occured!",
