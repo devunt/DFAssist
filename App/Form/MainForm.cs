@@ -41,6 +41,8 @@ namespace App
             Localization.Initialize(Settings.Language);
             Data.Initialize(Settings.Language);
 
+            ApplyLanguage();
+
             overlayForm.Show();
             networkWorker = new Network(this);
 
@@ -475,7 +477,53 @@ namespace App
             Localization.Initialize(Settings.Language);
             Data.Initialize(Settings.Language);
 
+            ApplyLanguage();
+
             LMessageBox.I("ui-language-changed");
+        }
+
+        private void ApplyLanguage()
+        {
+            this.Text = Localization.GetText("app-name");
+            notifyIcon.Text = Localization.GetText("app-name");
+            toolStripMenuItem_Open.Text = Localization.GetText("ui-notifymenustrip-open");
+            toolStripMenuItem_Close.Text = Localization.GetText("ui-notifymenustrip-close");
+            label_Process.Text = Localization.GetText("ui-topsetting-process");
+            button_SelectProcess.Text = Localization.GetText("ui-topsetting-select");
+            button_ResetProcess.Text = Localization.GetText("ui-topsetting-reset");
+            tabControl.TabPages[0].Text = Localization.GetText("ui-tabcontrol-settings");
+            tabControl.TabPages[1].Text = Localization.GetText("ui-tabcontrol-fate");
+            tabControl.TabPages[2].Text = Localization.GetText("ui-tabcontrol-logs");
+            tabControl.TabPages[3].Text = Localization.GetText("ui-tabcontrol-info");
+            groupBox_DefaultSet.Text = Localization.GetText("ui-settings-title");
+            checkBox_Overlay.Text = Localization.GetText("ui-settings-overlay-use");
+            toolTip.SetToolTip(checkBox_Overlay, Localization.GetText("ui-settings-overlay-tooltip"));
+            button_ResetOverlayPosition.Text = Localization.GetText("ui-settings-overlay-reset");
+            checkBox_StartupShow.Text = Localization.GetText("ui-settings-startupshow");
+            checkBox_AutoOverlayHide.Text = Localization.GetText("ui-settings-autohide");
+            checkBox_FlashWindow.Text = Localization.GetText("ui-settings-iconflash");
+            checkBox_CheatRoullete.Text = Localization.GetText("ui-settings-cheatroulette");
+            groupBox_TwitterSet.Text = Localization.GetText("ui-settings-tweet-title");
+            checkBox_Twitter.Text = Localization.GetText("ui-settings-tweet-activate");
+            label_TwitterAbout.Text = Localization.GetText("ui-settings-tweet-about");
+            toolStripMenuItem_SelectAll.Text = Localization.GetText("ui-fate-selectall");
+            toolStripMenuItem_UnSelectAll.Text = Localization.GetText("ui-fate-unselectall");
+            presetToolStripMenuItem.Text = Localization.GetText("ui-fate-preset");
+            bookOfSkyfireIToolStripMenuItem.Text = Localization.GetText("fate-preset-animus-SkyfireI");
+            bookOfSkyfireIIToolStripMenuItem.Text = Localization.GetText("fate-preset-animus-SkyfireII");
+            bookOfNetherfireIToolStripMenuItem.Text = Localization.GetText("fate-preset-animus-NetherfireI");
+            bookOfSkyfallIToolStripMenuItem.Text = Localization.GetText("fate-preset-animus-SkyfallI");
+            bookOfSkyfallIIToolStripMenuItem.Text = Localization.GetText("fate-preset-animus-SkyfallII");
+            bookOfNetherfireIToolStripMenuItem1.Text = Localization.GetText("fate-preset-animus-NetherfallI");
+            bookOfSkywindIToolStripMenuItem.Text = Localization.GetText("fate-preset-animus-SkywindI");
+            bookOfSkywindIIToolStripMenuItem.Text = Localization.GetText("fate-preset-animus-SkywindII");
+            bookOfSkyearthIToolStripMenuItem.Text = Localization.GetText("fate-preset-animus-SkyearthI");
+            toolStripMenuItem_SelectApply.Text = Localization.GetText("ui-fate-apply");
+            label_FATEAbout.Text = Localization.GetText("ui-fate-about");
+            toolStripMenuItem_LogCopy.Text = Localization.GetText("ui-logs-copy");
+            toolStripMenuItem_LogClear.Text = Localization.GetText("ui-logs-clear");
+            label_About.Text = Localization.GetText("ui-info-about");
+
         }
     }
 }
