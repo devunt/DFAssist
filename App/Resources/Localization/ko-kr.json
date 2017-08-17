@@ -96,6 +96,7 @@
   "overlay-queue-confirming": "입장 확인 중",
   "overlay-fate-occured": "돌발 임무 발생!",
 
+   
   "l-process-set-success": "P: 파이널판타지14 프로세스가 선택되었습니다: {0}",
   "l-process-set-failed": "P: 파이널판타지14 프로세스 설정에 실패했습니다.",
   "l-process-finding": "P: 파이널판타지14 프로세스를 찾는 중...",
