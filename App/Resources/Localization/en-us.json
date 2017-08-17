@@ -1,2 +1,163 @@
 ﻿{
+  "app-name": "Duty/FATE Notificator",
+
+
+  "unknown-instance": "Unknown Duty ({0})",
+  "unknown-roulette": "Unknown Roulette ({0})",
+  "unknown-area": "Unknown Area ({0})",
+  "unknown-fate": "Unknown FATE ({0})",
+
+
+  "notification-app-updated": "Version {0} Updated",
+  "notification-queue-matched": "< {0} > Matched!",
+
+
+  "tweet-fate-occured": "< {0} > FATE Occured!",
+  "tweet-queue-matched": "< {0} > Matched!",
+
+
+  "fate-preset-animus-SkyfireI": "Book of Skyfire I",
+  "fate-preset-animus-SkyfireII": "Book of Skyfire II",
+  "fate-preset-animus-NetherfireI": "Book of Netherfire I",
+  "fate-preset-animus-SkyfallI": "Book of Skyfall I",
+  "fate-preset-animus-SkyfallII": "Book of Skyfall II",
+  "fate-preset-animus-NetherfallI": "Book of Netherfall I",
+  "fate-preset-animus-SkywindI": "Book of Skywind I",
+  "fate-preset-animus-SkywindII": "Book of Skywind II",
+  "fate-preset-animus-SkyearthI": "Book of Skyearth I",
+
+
+  "ui-notifymenustrip-open": "Open",
+  "ui-notifymenustrip-close": "Exit",
+
+  "ui-topsetting-process": "FFXIV Process",
+  "ui-topsetting-select": "Manual",
+  "ui-topsetting-reset": "Reset",
+
+  "ui-tabcontrol-settings": "Setting",
+  "ui-tabcontrol-fate": "FATE",
+  "ui-tabcontrol-logs": "Logs",
+  "ui-tabcontrol-info": "Info",
+
+  "ui-settings-title": "Basic Setting",
+  "ui-settings-overlay-use": "Use Overlay",
+  "ui-settings-overlay-tooltip": "Move Overlay by Draging Left bar.",
+  "ui-settings-overlay-reset": "Reset",
+  "ui-settings-startupshow": "Show MainForm when Program Starts",
+  "ui-settings-autohide": "Auto Hide Overlay while in Duty",
+  "ui-settings-iconflash": "FFXIV Icon Blinks when Duty Matched/FATE occur",
+  "ui-settings-cheatroulette": "Show Actual Matched Duty when using Duty Roulette",
+  "ui-settings-tweet-title": "Twitter Alarm",
+  "ui-settings-tweet-activate": "Activate",
+  "ui-settings-tweet-about": "When matched or FATE occurs, \nsend a Tweet with mention to the entered Twitter account.\nEnter the Twitter Account except the preceding symbol @.",
+
+  "ui-fate-selectall": "Select All",
+  "ui-fate-unselectall": "Unselect All",
+  "ui-fate-preset": "Preset",
+  "ui-fate-apply": "Apply",
+  "ui-fate-about": "Select to receive notification, then press the Top Apply button.\nAlert operates only when the character is in the FATE area.",
+
+  "ui-logs-copy": "Copy Logs",
+  "ui-logs-clear": "Clear",
+
+  "ui-info-about": "[Contributor]\n유채색\nLaiglinne\nHibiyasleep\nAlex00728\n\n[Copyright]\nAll company, product, system names are\n registered or unregistered trademarks of their respective owners.\n(C)2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by EYEDENTITY Entertainment.",
+
+
+  "ui-msgbox-title-info": "DFA Notice",
+  "ui-msgbox-title-warning": "DFA Warning",
+  "ui-msgbox-title-error": "DFA Error",
+
+  "ui-language-changed": "Language changed to English.\nSome parts needs Application restart to be applied.\nPlease Restart the application.",
+
+  "ui-clipboard-copied": "Copied to Clipboard.",
+
+  "ui-cheat-roulette-confirm": "This function is disabled by default to prevent abuse.\nPlease refrain from deliberately rejecting a specific dislike duty.\n\nDo you still want to enable it?",
+  "ui-cheat-roulette-enabled": "Enabled.\nPlease DON'T deliberately reject a specific dislike duty.\n\nThis feature is automatically disabled when the program restarts.",
+
+  "ui-clear-log-confirm": "Clear Logs?",
+
+  "ui-fate-selection-saved": "FATE Notification set.",
+  "ui-fate-preset-applied": "FATE Preset applied.",
+
+  "ui-updating": "Updating Program...\n{0}",
+
+  "ui-app-crashed": "Application exit due to Unknown Issue.\n\nError: {0}",
+
+
+  "overlay-waiting-connection": "Waiting for Client Connection",
+  "overlay-not-queuing": "No Waiting Matches",
+  "overlay-duty-count-unknown": "Matching Duty",
+  "overlay-duty-count": "{0} Duty Matching",
+  "overlay-queue-waiting-party": "Party Matching: {0} / {1} / {2}",
+  "overlay-queue-waiting": "Retreving Information...",
+  "overlay-queue-order": "Waiting List Number: {0}",
+  "overlay-roulette": "Duty Roulette",
+  "overlay-queue-waiting-confirm": "Waiting for your Acception",
+  "overlay-queue-matched": "Matched!",
+  "overlay-queue-confirming": "Waiting for Acception",
+  "overlay-fate-occured": "FATE Occured!",
+
+
+  "l-process-set-success": "P: FFXIV Process Selected: {0}",
+  "l-process-set-failed": "P: Failed to set FFXIV Process.",
+  "l-process-finding": "P: Finding FFXIV Process...",
+  "l-process-found-nothing": "P: Could not find FFXIV Process.",
+  "l-process-found-multiple": "P: 2 or more FFXIV Processes are running.",
+
+  "l-tweet-failed-request": "T: Error occured while requesting tweet",
+  "l-tweet-failed-general": "T: Failed to send tweet",
+  "l-tweet-success": "T: Tweet sent!",
+
+  "l-web-request-failed": "W: Error requesting Web service",
+
+  "l-updater-current-version": "U: Current Version: {0}",
+  "l-updater-latest-version": "U: Up-to-date Version: {0}",
+  "l-updater-is-latest": "U: Using latest Version.",
+  "l-updater-new-version": "U: Update Version Exists.",
+  "l-updater-error-general": "U: Error while updating data",
+  "l-updater-error-data": "U: Error while updating D/F Data",
+  "l-updater-error-check": "U: Could not find Update Information.",
+  "l-updater-error-no-url": "U: Could not find Update File.",
+  "l-updater-error-downloading": "U: Error while getting update data",
+
+  "l-data-updated": "D: D/F Data updated to Version {0}.",
+  "l-data-is-latest": "D: Using Lastest D/F Data(Version {0}).",
+  "l-data-error": "D: Error occured while processing D/F Data",
+
+  "l-packet-error-ip": "P: IP Packet Parsing Error",
+  "l-packet-error-tcp": "P: TCP Packet Parsing Error",
+
+  "l-network-started": "N: Started Reading Network Packet",
+  "l-network-starting": "N: Starting Network Reading...",
+  "l-network-stopped": "N: Stopped Reading Network",
+  "l-network-stopping": "N: Requesting for Stop Network Reading...",
+  "l-network-error-starting": "N: Failed to Start",
+  "l-network-error-stopping": "N: Failed to Stop",
+  "l-network-error-already-started": "N: Already Started",
+  "l-network-error-already-stopped": "N: Already Stopped",
+  "l-network-error-no-connection": "N: Could not find Game Server Connection",
+  "l-network-error-receiving-packet": "N: Error while Receiving Packet",
+  "l-network-error-filtering-packet": "N: Error while Packet Filtering",
+  "l-network-error-finding-lobby": "N: Error while receeving lobby server information",
+  "l-network-detected-connection-closing": "N: Detected Game Server Disconnection",
+  "l-network-detected-connection": "N: Detected Game Server Connection: {0}",
+
+  "l-firewall-registered": "FW: Registered",
+  "l-firewall-error": "FW: Error while registering",
+
+  "l-analyze-error-length": "A: Length Error while analyzing Message: {0}, {1}/{2}",
+  "l-analyze-error-general": "A: Error while analyzing Message",
+  "l-analyze-error": "A: Error while handling Message",
+
+  "l-queue-started-general": "Q: Matching started [{0}]",
+  "l-queue-started-roulette": "Q: Duty Roulette Matching Started [{0}]",
+  "l-queue-stopped": "Q: Matching Stopped",
+  "l-queue-entered": "Q: Entered Instance Area",
+  "l-queue-matched": "Q: Matched [{0}]",
+  "l-queue-updated": "Q: Matching State Updated [{0}, {1}, {2}/{3}, {4}/{5}, {6}/{7}]",
+
+  "l-duty-enter": "{1} Entered Duty. ({0})",
+  "l-duty-exit": "{1} Exit Duty ({0})",
+
+  "l-fate-occured-info": "{0} FATE Occured!"
 }
