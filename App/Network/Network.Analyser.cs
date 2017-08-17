@@ -216,6 +216,7 @@ namespace App
                         if (Settings.FATEs.Contains(code))
                         {
                             mainForm.overlayForm.SetFATEAsOccured(fate);
+                            Log.I("l-fate-occured-info", fate.Name);
 
                             if (Settings.FlashWindow)
                             {
@@ -228,7 +229,6 @@ namespace App
                             }
                         }
                         
-                        Log.D("\"{0}\" 돌발 발생!", fate.Name);
                     }
                 }
                 else if (opcode == 0x006C)
