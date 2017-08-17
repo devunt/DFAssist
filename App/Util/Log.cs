@@ -64,10 +64,10 @@ namespace App
 #endif
         }
 
-        internal static void D(object format, params object[] args)
+        internal static void D(string key, params object[] args)
         {
 #if DEBUG
-            Write(Color.Gray, format, args);
+            Write(Color.Gray, Localization.GetText(key, args));
 #endif
         }
 
