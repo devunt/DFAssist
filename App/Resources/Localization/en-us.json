@@ -156,5 +156,5 @@
   "l-queue-matched": "Q: Matched [{0}]",
   "l-queue-updated": "Q: Matching State Updated [{0}, {1}, {2}/{3}, {4}/{5}, {6}/{7}]",
 
-  "l-fate-occured-info": "{0} FATE Occured!"
+  "l-fate-occured-info": "F: {0} FATE Occured!"
 }
