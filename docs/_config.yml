@@ -1,1 +1,17 @@
-theme: jekyll-theme-cayman
+# Setup
+title: DF Assist
+tagline: FFXIV Duty Finder & F.A.T.E. Assist
+baseurl: ""
+paginate: 1
+
+# About/contact
+author:
+  name: devunt
+  url: https://github.com/devunt
+
+# Gems
+gems:
+  - jekyll-paginate
+
+#Others
+markdown: kramdown
