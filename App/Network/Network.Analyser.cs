@@ -240,7 +240,7 @@ namespace App
                     state = State.QUEUED;
                     mainForm.overlayForm.SetDutyCount(1);
 
-                    Log.I("l-queue-started", instance.Name);
+                    Log.I("l-queue-started-general", instance.Name);
                 }
                 else if (opcode == 0x0078)
                 {
