@@ -30,7 +30,7 @@ title: {{ site.name }}
 - 오버레이 스킨 변경 기능
 
 ## 문제 해결
-문제 발생시 [이슈 트래커](https://github.com/devunt/DFAssist/issues>)에 발생 상황과 결과를 남겨주세요.
+문제 발생시 [이슈 트래커](https://github.com/devunt/DFAssist/issues)에 발생 상황과 결과를 남겨주세요.
 
 프로그램 창의 로그 기록도 문제 해결에 큰 도움이 됩니다.
 
