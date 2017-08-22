@@ -1,5 +1,5 @@
 ﻿<Data>
-    <Version>20170812.1</Version>
+    <Version>20170822.1</Version>
 
     <!-- 무작위 임무 -->
     <Roulette Id="1" Text="무작위 임무: 레벨링" />
@@ -146,6 +146,8 @@
         <FATE Parent="89" Id="689" Name="검은 악마: 실험 결과" />
         <FATE Parent="89" Id="690" Name="검은 악마: 과격한 숙녀" />
         <FATE Parent="89" Id="701" Name="광란의 알 축제" />
+        <FATE Parent="89" Id="945" Name="봄바드 습격 경보!" />
+        <FATE Parent="89" Id="946" Name="소방 전사 출동!" />
     </Item>
     <Item ZoneId="8A" Text="서부 라노시아">
         <FATE Parent="8A" Id="568" Name="북쪽 방파벽 전투: 전력 정찰" />
