@@ -281,7 +281,7 @@ namespace App
 
                             mainForm.overlayForm.SetDutyCount(instances.Count);
 
-                            Log.I("l-queue-started", string.Join(", ", instances.Select(x => x.Name).ToArray()));
+                            Log.I("l-queue-started-general", string.Join(", ", instances.Select(x => x.Name).ToArray()));
                         }
                     }
                     else if (status == 3)
