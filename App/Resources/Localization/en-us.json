@@ -120,7 +120,7 @@
   "l-updater-error-downloading": "U: Error while getting update data",
 
   "l-data-updated": "D: D/F Data updated to Version {0}.",
-  "l-data-is-latest": "D: Using Lastest D/F Data(Version {0}).",
+  "l-data-is-latest": "D: Using Latest D/F Data(Version {0}).",
   "l-data-error": "D: Error occured while processing D/F Data",
 
   "l-packet-error-ip": "P: IP Packet Parsing Error",
