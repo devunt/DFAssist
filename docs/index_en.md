@@ -53,7 +53,7 @@ Logs on application window helps a lot with problem solving. Attaching logs is h
 ![](https://i.imgur.com/ndNAFZ8.gif)
 
 ### Preview exact Roulette Matched Duty
-![](http://i.imgur.com/TaCEMuF.jpg)
+![](https://i.imgur.com/4ztaLkR.jpg)
 
 ### Application UI
 ![](https://i.imgur.com/w7hlYQ3.jpg)
