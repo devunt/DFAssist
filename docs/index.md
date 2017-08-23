@@ -66,7 +66,7 @@ title: {{ site.name }}
 ```
   기재되어있는 회사명 · 제품명 · 시스템 이름은 해당 소유자의 상표 또는 등록 상표입니다.
 
-  (C) 2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved. Korea Published by EYEDENTITY MOBILE.
+  (C) 2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved. Korea Published by EYEDENTITY ENTERTAINMENT.
 ```
 상단 회사에 저작권이 없는 코드, 리소스, 데이터 등은 모두
-[퍼블릭 도메인](https://en.wikipedia.org/wiki/Public_domain)에 따라 배포됩니다.
+[퍼블릭 도메인](https://ko.wikipedia.org/wiki/%ED%8D%BC%EB%B8%94%EB%A6%AD_%EB%8F%84%EB%A9%94%EC%9D%B8)에 따라 배포됩니다.
