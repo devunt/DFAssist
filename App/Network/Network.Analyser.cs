@@ -260,7 +260,7 @@ namespace App
                             Log.I("l-queue-started-roulette", roulette.Name);
                         }
 
-                        else //특정 임무 신청
+                        else if(data[22] != 0) //특정 임무 신청
                         {
                             var instances = new List<Instance>();
 
