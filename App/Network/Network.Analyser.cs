@@ -231,7 +231,7 @@ namespace App
                         
                     }
                 }
-                else if (opcode == 0x006C)
+                /*else if (opcode == 0x006C) // 3.5 cross-world 파티 참가하면 문제가 발생하는 부분.
                 {
                     var code = BitConverter.ToUInt16(data, 192);
 
@@ -241,7 +241,7 @@ namespace App
                     mainForm.overlayForm.SetDutyCount(1);
 
                     Log.I("l-queue-started-general", instance.Name);
-                }
+                }*/
                 else if (opcode == 0x0078)
                 {
                     var status = data[0];
@@ -260,7 +260,7 @@ namespace App
                             Log.I("l-queue-started-roulette", roulette.Name);
                         }
 
-                        else if(data[22] != 0) //특정 임무 신청
+                        else //특정 임무 신청
                         {
                             var instances = new List<Instance>();
 
