@@ -308,7 +308,7 @@
             this.label_TwitterAbout.Font = new System.Drawing.Font("Malgun Gothic", 8F);
             this.label_TwitterAbout.Location = new System.Drawing.Point(13, 61);
             this.label_TwitterAbout.Name = "label_TwitterAbout";
-            this.label_TwitterAbout.Size = new System.Drawing.Size(379, 41);
+            this.label_TwitterAbout.Size = new System.Drawing.Size(407, 50);
             this.label_TwitterAbout.TabIndex = 0;
             this.label_TwitterAbout.Text = "매칭이 됐을 시 입력된 트위터 계정으로 멘션을 보내 해당 사실을 알립니다.\r\n원하는 돌발이 발생했을 시에도 멘션을 보내 해당 사실을 알립니다.\r\n" +
     "계정명 입력시 앞의 @ 표시는 제외하고 순수 계정명만 입력해주세요.";
