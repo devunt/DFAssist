@@ -258,7 +258,6 @@ namespace App
                             mainForm.overlayForm.SetRoulleteDuty(roulette);
                             Log.I("l-queue-started-roulette", roulette.Name);
                         }
-
                         else //특정 임무 신청
                         {
                             var instances = new List<Instance>();
