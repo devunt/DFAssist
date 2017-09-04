@@ -134,47 +134,47 @@ namespace App
 
                 var opcode = BitConverter.ToUInt16(message, 18);
 
+#if !DEBUG
                 if (opcode != 0x0078 &&
                     opcode != 0x0079 &&
                     opcode != 0x0080 &&
                     opcode != 0x006C &&
                     opcode != 0x006F &&
                     opcode != 0x0121 &&
-                    opcode != 0x0142 &&
-                    opcode != 0x0143)
+                    opcode != 0x0143 &&
+                    opcode != 0x0216)
                     return;
+#endif
 
                 var data = message.Skip(32).ToArray();
 
-                if (opcode == 0x0142)
+                if (opcode == 0x0216)
                 {
-                    var type = data[0];
+                    var code = BitConverter.ToInt16(data, 4);
+                    var type = data[8];
 
-                    if (type == 0xCF)
+                    if (type == 0x0B)
                     {
-                        var selfkey = BitConverter.ToInt32(message, 8);
-                        var charkey = BitConverter.ToInt32(message, 40);
+                        Log.I("l-field-instance-entered", Data.GetInstance(code).Name);
+                    }
+                    else if (type == 0x0C)
+                    {
+                        Log.I("l-field-instance-left");
+                    }
 
-                        var code = BitConverter.ToUInt16(data, 16);
-
-                        var teleMeasure = message[36];
-                        
-                        if (selfkey == charkey) // isSelf
+                    if (Settings.ShowOverlay && Settings.AutoOverlayHide)
+                    {
+                        mainForm.overlayForm.Invoke(() =>
                         {
-                            var lastCode = BitConverter.ToUInt16(Encoding.Unicode.GetBytes(new[] { Data.GetArea(code).Name.Last() }), 0);
-                            var lastChar = (lastCode - 0xAC00U) % 28 == 0 || lastCode - 0xAC00U == 8 ? "로" : "으로";
-
-                            if (teleMeasure != 0x0C)
+                            if (type == 0x0B)
                             {
-                                Log.D("{1}{2} 이동했습니다. ({0})", code, Data.GetArea(code).Name, lastChar);
+                                mainForm.overlayForm.Hide();
                             }
-                            else
+                            else if (type == 0x0C)
                             {
-                                Log.D("임무에서 퇴장했습니다. ({0})", teleMeasure);
+                                mainForm.overlayForm.Show();
                             }
-
-                            mainForm.overlayForm.currentArea = code;
-                        }
+                        });
                     }
                 }
                 else if (opcode == 0x0143)
@@ -228,7 +228,6 @@ namespace App
                                 WebApi.Tweet("tweet-fate-occured", fate.Name);
                             }
                         }
-                        
                     }
                 }
                 /*else if (opcode == 0x006C) // 3.5 cross-world 파티 참가하면 문제가 발생하는 부분.
@@ -281,7 +280,8 @@ namespace App
 
                             mainForm.overlayForm.SetDutyCount(instances.Count);
 
-                            Log.I("l-queue-started-general", string.Join(", ", instances.Select(x => x.Name).ToArray()));
+                            Log.I("l-queue-started-general",
+                                string.Join(", ", instances.Select(x => x.Name).ToArray()));
                         }
                     }
                     else if (status == 3)
@@ -408,7 +408,8 @@ namespace App
                         // 매칭 뒤 참가자 확인 현황 패킷
                         mainForm.overlayForm.SetConfirmStatus(instance, tank, dps, healer);
                     }
-                    Log.I("l-queue-updated", instance.Name, status, tank, instance.Tank, healer, instance.Healer, dps, instance.DPS);
+                    Log.I("l-queue-updated", instance.Name, status, tank, instance.Tank, healer, instance.Healer, dps,
+                        instance.DPS);
                 }
                 else if (opcode == 0x0080)
                 {

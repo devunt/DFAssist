@@ -46,27 +46,6 @@ namespace App
         internal int currentZone = 0;
         private IntPtr m_eventHook;
 
-        public int currentArea
-        {
-            get
-            {
-                return currentZone;
-            }
-            set
-            {
-                if (Settings.ShowOverlay)
-                {
-                    this.Invoke(() =>
-                    {
-                        if (Data.Instances.ContainsKey(value) && Settings.AutoOverlayHide)
-                            Hide();
-                        else
-                            Show();
-                    });
-                }
-            }
-        }
-
         internal OverlayForm()
         {
             InitializeComponent();

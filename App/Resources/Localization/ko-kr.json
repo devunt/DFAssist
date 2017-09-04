@@ -155,5 +155,8 @@
   "l-queue-matched": "Q: 매칭됨 [{0}]",
   "l-queue-updated": "Q: 매칭 상태 업데이트됨 [{0}, {1}, {2}/{3}, {4}/{5}, {6}/{7}]",
 
-  "l-fate-occured-info": "F: {0} 돌발 발생!"
+  "l-fate-occured-info": "F: {0} 돌발 발생!",
+
+  "l-field-instance-entered": "I: 인스턴스 필드 입장함 [{0}]",
+  "l-field-instance-left": "I: 인스턴스 필드 퇴장함"
 }

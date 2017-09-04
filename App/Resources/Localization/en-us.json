@@ -155,5 +155,8 @@
   "l-queue-matched": "Q: Matched [{0}]",
   "l-queue-updated": "Q: Matching State Updated [{0}, {1}, {2}/{3}, {4}/{5}, {6}/{7}]",
 
-  "l-fate-occured-info": "F: {0} FATE Occured!"
+  "l-fate-occured-info": "F: {0} FATE Occured!",
+
+  "l-field-instance-entered": "I: Entered Instance Area [{0}]",
+  "l-field-instance-left": "I: Left Instance Area"
 }
