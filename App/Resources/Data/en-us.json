@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20170816.2",
+  "version": "20170904.1",
 
   // Duty
   "instances": {
@@ -1494,6 +1494,15 @@
     },
     "607": {
       "name": "The Palace of the Dead B191~B200",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+
+
+    // Other things...
+    "579": {
+      "name": "Triple Triad",
       "tank": "0",
       "healer": "0",
       "dps": "0"
