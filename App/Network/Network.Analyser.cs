@@ -168,11 +168,11 @@ namespace App
                         {
                             if (type == 0x0B)
                             {
-                                mainForm.overlayForm.Hide();
+                                // mainForm.overlayForm.Hide();
                             }
                             else if (type == 0x0C)
                             {
-                                mainForm.overlayForm.Show();
+                                // mainForm.overlayForm.Show();
                             }
                         });
                     }
