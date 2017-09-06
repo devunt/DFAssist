@@ -88,7 +88,7 @@
   "overlay-duty-count-unknown": "Mission trouvée",
   "overlay-duty-count": "{0} Mission trouvée",
   "overlay-queue-waiting-party": "Mission en équipe: {0} / {1} / {2}",
-  "overlay-queue-waiting": "Recherche d'informations...",
+  "overlay-queue-waiting": "Obtention des informations...",
   "overlay-queue-order": "Ordre d'attente: {0}",
   "overlay-roulette": "Mission aléatoire",
   "overlay-queue-waiting-confirm": "En attente d'acceptation",

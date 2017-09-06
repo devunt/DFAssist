@@ -148,7 +148,7 @@
             // button_ResetOverlayPosition
             // 
             this.button_ResetOverlayPosition.Font = new System.Drawing.Font("Malgun Gothic", 8F);
-            this.button_ResetOverlayPosition.Location = new System.Drawing.Point(104, 22);
+            this.button_ResetOverlayPosition.Location = new System.Drawing.Point(110, 22);
             this.button_ResetOverlayPosition.Name = "button_ResetOverlayPosition";
             this.button_ResetOverlayPosition.Size = new System.Drawing.Size(74, 20);
             this.button_ResetOverlayPosition.TabIndex = 0;

@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20170904.1",
+  "version": "20170905.1",
 
   // Duty
   "instances": {
@@ -1059,6 +1059,7 @@
       "healer": "2",
       "dps": "4"
     },
+	
     // 4.05 Raids
     "695": {
       "name": "Deltascape V1.0 (Savage)",
@@ -1083,6 +1084,14 @@
       "tank": "2",
       "healer": "2",
       "dps": "4"
+    },
+	
+	//4.05 Party Contents
+    "712": {
+      "name": "the Lost Canals of Uznair",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
     },
 
 
