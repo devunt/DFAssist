@@ -423,7 +423,7 @@ namespace App
             }
             else if (processes.Count >= 2)
             {
-                Log.E("l-process-found-multiuple");
+                Log.E("l-process-found-multiple");
                 button_SelectProcess.Enabled = true;
                 comboBox_Process.Enabled = true;
 
