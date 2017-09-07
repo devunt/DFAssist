@@ -142,13 +142,13 @@ namespace App
                     opcode != 0x006F &&
                     opcode != 0x0121 &&
                     opcode != 0x0143 &&
-                    opcode != 0x0216)
+                    opcode != 0x022F)
                     return;
 #endif
 
                 var data = message.Skip(32).ToArray();
 
-                if (opcode == 0x0216)
+                if (opcode == 0x022F)
                 {
                     var code = BitConverter.ToInt16(data, 4);
                     var type = data[8];
@@ -168,11 +168,11 @@ namespace App
                         {
                             if (type == 0x0B)
                             {
-                                // mainForm.overlayForm.Hide();
+                                mainForm.overlayForm.Hide();
                             }
                             else if (type == 0x0C)
                             {
-                                // mainForm.overlayForm.Show();
+                                mainForm.overlayForm.Show();
                             }
                         });
                     }
