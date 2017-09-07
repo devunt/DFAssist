@@ -69,6 +69,7 @@ namespace App
             {
                 new Language { Name = "한국어", Code = "ko-kr" },
                 new Language { Name = "English", Code = "en-us" },
+                new Language { Name = "Français", Code = "fr-fr" },
             };
 
             comboBox_Language.DisplayMember = "Name";

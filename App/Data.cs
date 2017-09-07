@@ -30,6 +30,10 @@ namespace App
                     json = Resources.Data_EN_US;
                     break;
 
+                case "fr-fr":
+                    json = Resources.Data_FR_FR;
+                    break;
+
                 default:
                     return;
             }
