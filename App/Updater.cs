@@ -78,6 +78,8 @@ namespace App
 
                         Sentry.Report("Update started");
 
+                        var exepath = Process.GetCurrentProcess().MainModule.FileName;
+
                         var stream = GetDownloadStreamByUrl(url);
                         using (var zip = ZipStorer.Open(stream, FileAccess.Read))
                         {
@@ -90,11 +92,17 @@ namespace App
                                     continue;
                                 }
                                 */
-                                zip.ExtractFile(entry, Path.Combine(tempdir, entry.FilenameInZip));
+
+                                var filename = entry.FilenameInZip;
+                                if (filename == "DFAssist.exe")
+                                {
+                                    filename = Path.GetFileName(exepath);
+                                }
+
+                                zip.ExtractFile(entry, Path.Combine(tempdir, filename));
                             }
                         }
 
-                        var exepath = Process.GetCurrentProcess().MainModule.FileName;
                         var currentdir = Path.GetDirectoryName(exepath);
 
                         File.WriteAllText(batchpath,
