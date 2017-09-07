@@ -84,10 +84,12 @@ namespace App
                             var dir = zip.ReadCentralDir();
                             foreach (var entry in dir)
                             {
+                                /*
                                 if (entry.FilenameInZip == "README.txt")
                                 {
                                     continue;
                                 }
+                                */
                                 zip.ExtractFile(entry, Path.Combine(tempdir, entry.FilenameInZip));
                             }
                         }

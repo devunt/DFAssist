@@ -228,7 +228,6 @@ if $(ConfigurationName) == Release (
  del "%25ZipPath%25" 1&gt;NULL
  mkdir "%25DeployPath%25"
  copy "$(TargetPath)" "%25DeployPath%25\$(TargetFileName)" 1&gt;NUL
- copy "$(SolutionDir)README.rst" "%25DeployPath%25\README.txt" 1&gt;NUL
  powershell.exe -nologo -noprofile -command "&amp; { Add-Type -A 'System.IO.Compression.FileSystem'; [IO.Compression.ZipFile]::CreateFromDirectory('%25DeployPath%25', '%25ZipPath%25'); }"
  rmdir "%25DeployPath%25" /s /q
  echo Output: %25ZipPath%25
