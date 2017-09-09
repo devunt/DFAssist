@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.IO.Compression;
 using System.Net;
@@ -39,7 +40,8 @@ namespace App
                     Log.I("l-updater-current-version", Global.VERSION);
                     Log.I("l-updater-latest-version", latest);
 
-                    if (decimal.Parse(Global.VERSION.Substring(1)) >= decimal.Parse(latest.Substring(1)))
+                    var ci = new CultureInfo("en-us");
+                    if (decimal.Parse(Global.VERSION.Substring(1), ci) >= decimal.Parse(latest.Substring(1), ci))
                     {
                         Log.S("l-updater-is-latest");
                     }
