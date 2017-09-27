@@ -83,6 +83,7 @@
   "ui-app-crashed": "Application exit due to Unknown Issue.\n\nError: {0}",
 
 
+  "overlay-announcement": "", 
   "overlay-waiting-connection": "Waiting for Client Connection",
   "overlay-not-queuing": "No Waiting Matches",
   "overlay-duty-count-unknown": "Matching Duty",

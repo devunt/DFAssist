@@ -83,6 +83,7 @@
   "ui-app-crashed": "L'application a été fermée suite à une erreur inconnue.\n\nErreur: {0}",
 
 
+  "overlay-announcement": "",
   "overlay-waiting-connection": "En attente de connection au client",
   "overlay-not-queuing": "Aucune file d'attente",
   "overlay-duty-count-unknown": "Mission trouvée",
