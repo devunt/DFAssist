@@ -52,7 +52,7 @@
             this.label_TwitterAbout = new App.LocalizableLabel();
             this.checkBox_Twitter = new System.Windows.Forms.CheckBox();
             this.groupBox_DefaultSet = new System.Windows.Forms.GroupBox();
-            this.checkBox_CheatRoullete = new System.Windows.Forms.CheckBox();
+            this.checkBox_ShowAnnouncement = new System.Windows.Forms.CheckBox();
             this.checkBox_FlashWindow = new System.Windows.Forms.CheckBox();
             this.checkBox_AutoOverlayHide = new System.Windows.Forms.CheckBox();
             this.checkBox_StartupShow = new System.Windows.Forms.CheckBox();
@@ -327,7 +327,7 @@
             // groupBox_DefaultSet
             // 
             this.groupBox_DefaultSet.Controls.Add(this.button_ResetOverlayPosition);
-            this.groupBox_DefaultSet.Controls.Add(this.checkBox_CheatRoullete);
+            this.groupBox_DefaultSet.Controls.Add(this.checkBox_ShowAnnouncement);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_FlashWindow);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_AutoOverlayHide);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_StartupShow);
@@ -340,17 +340,17 @@
             this.groupBox_DefaultSet.TabStop = false;
             this.groupBox_DefaultSet.Text = "기본설정";
             // 
-            // checkBox_CheatRoullete
+            // checkBox_ShowAnnouncement
             // 
-            this.checkBox_CheatRoullete.AutoSize = true;
-            this.checkBox_CheatRoullete.Font = new System.Drawing.Font("Malgun Gothic", 9F);
-            this.checkBox_CheatRoullete.Location = new System.Drawing.Point(6, 103);
-            this.checkBox_CheatRoullete.Name = "checkBox_CheatRoullete";
-            this.checkBox_CheatRoullete.Size = new System.Drawing.Size(302, 19);
-            this.checkBox_CheatRoullete.TabIndex = 3;
-            this.checkBox_CheatRoullete.Text = "무작위 임무일 경우에도 실제 매칭된 임무 보여주기";
-            this.checkBox_CheatRoullete.UseVisualStyleBackColor = true;
-            this.checkBox_CheatRoullete.CheckedChanged += new System.EventHandler(this.checkBox_CheatRoullete_CheckedChanged);
+            this.checkBox_ShowAnnouncement.AutoSize = true;
+            this.checkBox_ShowAnnouncement.Font = new System.Drawing.Font("Malgun Gothic", 9F);
+            this.checkBox_ShowAnnouncement.Location = new System.Drawing.Point(6, 103);
+            this.checkBox_ShowAnnouncement.Name = "checkBox_ShowAnnouncement";
+            this.checkBox_ShowAnnouncement.Size = new System.Drawing.Size(190, 19);
+            this.checkBox_ShowAnnouncement.TabIndex = 3;
+            this.checkBox_ShowAnnouncement.Text = "오버레이에 공지사항 보여주기";
+            this.checkBox_ShowAnnouncement.UseVisualStyleBackColor = true;
+            this.checkBox_ShowAnnouncement.CheckedChanged += new System.EventHandler(this.checkBox_ShowAnnouncement_CheckedChanged);
             // 
             // checkBox_FlashWindow
             // 
@@ -737,7 +737,6 @@
         private System.Windows.Forms.CheckBox checkBox_AutoOverlayHide;
         internal System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.CheckBox checkBox_FlashWindow;
-        private System.Windows.Forms.CheckBox checkBox_CheatRoullete;
         private System.Windows.Forms.ToolStripMenuItem presetToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bookOfSkyfireIToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bookOfSkyfireIIToolStripMenuItem;
@@ -753,6 +752,7 @@
         private System.Windows.Forms.ToolStripMenuItem bookOfSkyearthIToolStripMenuItem;
         private LocalizableLabel label_FATEAbout;
         private System.Windows.Forms.ComboBox comboBox_Language;
+        private System.Windows.Forms.CheckBox checkBox_ShowAnnouncement;
     }
 }
 

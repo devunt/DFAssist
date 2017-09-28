@@ -43,10 +43,10 @@
   "ui-settings-overlay-use": "Use Overlay",
   "ui-settings-overlay-tooltip": "Move Overlay by Draging Left bar.",
   "ui-settings-overlay-reset": "Reset",
+  "ui-settings-overlay-announcement": "Show announcement on Overlay",
   "ui-settings-startupshow": "Show MainForm when Program Starts",
   "ui-settings-autohide": "Auto Hide Overlay while in Duty",
   "ui-settings-iconflash": "FFXIV Icon Blinks when Duty Matched/FATE occur",
-  "ui-settings-cheatroulette": "Show Actual Matched Duty when using Duty Roulette",
   "ui-settings-tweet-title": "Twitter Alarm",
   "ui-settings-tweet-activate": "Activate",
   "ui-settings-tweet-about": "When matched or FATE occurs, \nsend a Tweet with mention to the entered Twitter account.\nEnter the Twitter Account except the preceding symbol @.",
@@ -69,9 +69,6 @@
   "ui-language-changed": "Language changed to English.\nSome parts needs Application restart to be applied.\nPlease Restart the application.",
 
   "ui-clipboard-copied": "Copied to Clipboard.",
-
-  "ui-cheat-roulette-confirm": "This function is disabled by default to prevent abuse.\nPlease refrain from deliberately rejecting a specific dislike duty.\n\nDo you still want to enable it?",
-  "ui-cheat-roulette-enabled": "Enabled.\nPlease DON'T deliberately reject a specific dislike duty.\n\nThis feature is automatically disabled when the program restarts.",
 
   "ui-clear-log-confirm": "Clear Logs?",
 

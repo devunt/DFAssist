@@ -245,7 +245,7 @@ namespace App
             isMatched = true;
             StopBlink();
 
-            label_DutyCount.SetLocalizedText("overlay-announcement");
+            label_DutyCount.Text = Settings.ShowAnnouncement ? Localization.GetText("overlay-announcement") : "";
             label_DutyName.SetLocalizedText("overlay-not-queuing");
             label_DutyStatus.Text = "";
         }

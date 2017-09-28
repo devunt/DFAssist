@@ -153,6 +153,8 @@ namespace App
                     var code = BitConverter.ToInt16(data, 4);
                     var type = data[8];
 
+                    Log.B(data);
+
                     if (type == 0x0B)
                     {
                         Log.I("l-field-instance-entered", Data.GetInstance(code).Name);

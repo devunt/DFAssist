@@ -43,10 +43,10 @@
   "ui-settings-overlay-use": "Utiliser l'overlay",
   "ui-settings-overlay-tooltip": "Bouger l'overlay avec la barre gauche",
   "ui-settings-overlay-reset": "Rétablir",
+  "ui-settings-overlay-announcement": "Show announcement on Overlay",
   "ui-settings-startupshow": "Afficher la fenêtre principale au démarrage",
   "ui-settings-autohide": "Cacher automatiquement l'overlay pendant les missions",
   "ui-settings-iconflash": "Faire clignorer l'icône de FFXIV en cas d'ALEA/Mission",
-  "ui-settings-cheatroulette": "Montrer la mission en cours d'attente lors des missions aléatoires",
   "ui-settings-tweet-title": "Rappel Twiter",
   "ui-settings-tweet-activate": "Activer",
   "ui-settings-tweet-about": "Lorsqu'un ALEA choisi se produir, \nenvoyer un tweet avec mention au compte sélectionné.\nEntrez le nom du compte Twitter sans @.",
@@ -69,9 +69,6 @@
   "ui-language-changed": "Langue changée en Français.\nUn redémarrage est nécessaire.\nVeuillez redémarrer l'application.",
 
   "ui-clipboard-copied": "Copié dans le presse-papiers.",
-
-  "ui-cheat-roulette-confirm": "This function is disabled by default to prevent abuse.\nPlease refrain from deliberately rejecting a specific dislike duty.\n\nDo you still want to enable it?",
-  "ui-cheat-roulette-enabled": "Enabled.\nPlease DON'T deliberately reject a specific dislike duty.\n\nThis feature is automatically disabled when the program restarts.",
 
   "ui-clear-log-confirm": "Vider les logs?",
 

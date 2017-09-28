@@ -82,7 +82,7 @@ namespace App
             checkBox_StartupShow.Checked = Settings.StartupShowMainForm;
             checkBox_AutoOverlayHide.Checked = Settings.AutoOverlayHide;
             checkBox_FlashWindow.Checked = Settings.FlashWindow;
-            SetCheatRoulleteCheckBox(Settings.CheatRoulette);
+            checkBox_ShowAnnouncement.Checked = Settings.ShowAnnouncement;
 
             checkBox_Twitter.Checked = Settings.TwitterEnabled;
             textBox_Twitter.Enabled = Settings.TwitterEnabled;
@@ -243,21 +243,9 @@ namespace App
             Settings.Save();
         }
 
-        private void checkBox_CheatRoullete_CheckedChanged(object sender, EventArgs e)
+        private void checkBox_ShowAnnouncement_CheckedChanged(object sender, EventArgs e)
         {
-            var @checked = checkBox_CheatRoullete.Checked;
-            SetCheatRoulleteCheckBox(false);
-            if (@checked)
-            {
-                var respond = LMessageBox.W("ui-cheat-roulette-confirm", MessageBoxButtons.YesNo, MessageBoxDefaultButton.Button2);
-                if (respond == DialogResult.Yes)
-                {
-                    LMessageBox.I("ui-cheat-roulette-enabled");
-                    SetCheatRoulleteCheckBox(true);
-                }
-            }
-
-            Settings.CheatRoulette = checkBox_CheatRoullete.Checked;
+            Settings.ShowAnnouncement = checkBox_ShowAnnouncement.Checked;
             Settings.Save();
         }
 
@@ -400,13 +388,6 @@ namespace App
             PresetAccept(arr);
         }
 
-        private void SetCheatRoulleteCheckBox(bool @checked)
-        {
-            checkBox_CheatRoullete.CheckedChanged -= checkBox_CheatRoullete_CheckedChanged;
-            checkBox_CheatRoullete.Checked = @checked;
-            checkBox_CheatRoullete.CheckedChanged += checkBox_CheatRoullete_CheckedChanged;
-        }
-
         private void FindFFXIVProcess()
         {
             comboBox_Process.Items.Clear();
@@ -503,7 +484,7 @@ namespace App
             checkBox_StartupShow.Text = Localization.GetText("ui-settings-startupshow");
             checkBox_AutoOverlayHide.Text = Localization.GetText("ui-settings-autohide");
             checkBox_FlashWindow.Text = Localization.GetText("ui-settings-iconflash");
-            checkBox_CheatRoullete.Text = Localization.GetText("ui-settings-cheatroulette");
+            checkBox_ShowAnnouncement.Text = Localization.GetText("ui-settings-overlay-announcement");
             groupBox_TwitterSet.Text = Localization.GetText("ui-settings-tweet-title");
             checkBox_Twitter.Text = Localization.GetText("ui-settings-tweet-activate");
             label_TwitterAbout.Text = Localization.GetText("ui-settings-tweet-about");
