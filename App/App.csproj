@@ -175,6 +175,7 @@
     </None>
     <None Include="Resources\Data\en-us.json" />
     <None Include="Resources\Data\fr-fr.json" />
+    <None Include="Resources\Data\ja-jp.json" />
     <None Include="Resources\Data\ko-kr.json" />
     <None Include="ILMerge.props">
       <SubType>Designer</SubType>
@@ -191,6 +192,7 @@
     </Compile>
     <None Include="Resources\Localization\en-us.json" />
     <None Include="Resources\Localization\fr-fr.json" />
+    <None Include="Resources\Localization\ja-jp.json" />
     <None Include="Resources\Localization\ko-kr.json" />
   </ItemGroup>
   <ItemGroup>

@@ -133,7 +133,43 @@ namespace App.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {
+        ///   {
+        ///  // Version
+        ///  &quot;version&quot;: &quot;20170905.1&quot;,
+        ///
+        ///  // Duty
+        ///  &quot;instances&quot;: {
+        ///    // 2.0 A Realm Reborn
+        ///    // 2.0 Dungeons
+        ///    &quot;157&quot;: {
+        ///      &quot;name&quot;: &quot;Sastasha&quot;,
+        ///      &quot;tank&quot;: &quot;1&quot;,
+        ///      &quot;healer&quot;: &quot;1&quot;,
+        ///      &quot;dps&quot;: &quot;2&quot;
+        ///    },
+        ///    &quot;158&quot;: {
+        ///      &quot;name&quot;: &quot;Brayflox&apos;s Longstop&quot;,
+        ///      &quot;tank&quot;: &quot;1&quot;,
+        ///      &quot;healer&quot;: &quot;1&quot;,
+        ///      &quot;dps&quot;: &quot;2&quot;
+        ///    },
+        ///    &quot;159&quot;: {
+        ///      &quot;name&quot;: &quot;The Wanderer&apos;s Palace&quot;,
+        ///      &quot;tank&quot;: &quot;1&quot;,
+        ///      &quot;healer&quot;: &quot;1&quot;,
+        ///      &quot;dps&quot;: &quot;2&quot;
+        ///    },
+        ///    &quot;161&quot;: {
+        ///      &quot;name&quot;: &quot;Copperbe [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string Data_JA_JP {
+            get {
+                return ResourceManager.GetString("Data_JA_JP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   {
         ///  // 버전
         ///  &quot;version&quot;: &quot;20170905.1&quot;,
         ///
@@ -226,7 +262,36 @@ namespace App.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {
+        ///   {
+        ///	&quot;app-name&quot;: &quot;Duty/FATE Notificator&quot;,
+        ///
+        ///
+        ///	&quot;unknown-instance&quot;: &quot;不明なコンテンツ ({0})&quot;,
+        ///	&quot;unknown-roulette&quot;: &quot;不明なルーレット ({0})&quot;,
+        ///	&quot;unknown-area&quot;: &quot;不明なエリア ({0})&quot;,
+        ///	&quot;unknown-fate&quot;: &quot;不明なFATE ({0})&quot;,
+        ///
+        ///
+        ///	&quot;notification-app-updated&quot;: &quot;バージョン {0} に更新されました&quot;,
+        ///	&quot;notification-queue-matched&quot;: &quot;&lt; {0} &gt; 突入準備完了!&quot;,
+        ///
+        ///
+        ///	&quot;tweet-fate-occured&quot;: &quot;&lt; {0} &gt; FATE 発生!&quot;,
+        ///	&quot;tweet-queue-matched&quot;: &quot;&lt; {0} &gt; 突入準備完了!&quot;,
+        ///
+        ///
+        ///	&quot;fate-preset-animus-SkyfireI&quot;: &quot;Book of Skyfire I&quot;,
+        ///	&quot;fate-preset-animus-SkyfireII&quot;: &quot;Book of Skyfire II&quot;,
+        ///	&quot;fa [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string Localization_JA_JP {
+            get {
+                return ResourceManager.GetString("Localization_JA_JP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   {
         ///  &quot;app-name&quot;: &quot;임무/돌발 찾기 도우미&quot;,
         ///
         ///
