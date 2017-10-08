@@ -40,7 +40,7 @@
 	"ui-tabcontrol-info": "情報",
 
 	"ui-settings-title": "基本設定",
-	"ui-settings-overlay-use": "オーバーレイを使用する",
+	"ui-settings-overlay-use": "オーバーレイ",
 	"ui-settings-overlay-tooltip": "オーバーレイ左側のバーをドラッグすると移動できます。",
 	"ui-settings-overlay-reset": "初期化",
 	"ui-settings-overlay-announcement": "オーバーレイにアナウンスを表示する",
@@ -49,7 +49,7 @@
 	"ui-settings-iconflash": "突入準備完了時FFXIVのアイコンを点滅させる",
 	"ui-settings-tweet-title": "Twitterアラーム",
 	"ui-settings-tweet-activate": "有効化",
-	"ui-settings-tweet-about": "突入準備完了時、FATEが発生した際指定したアカウントにツイートを送信します。\nTwitterアカウント名の@以降を入力してください。",
+	"ui-settings-tweet-about": "突入準備完了時、FATEが発生した際指定したアカウントに\nツイートを送信します。\nTwitterアカウント名の@以降を入力してください。",
 
 	"ui-fate-selectall": "すべて選択",
 	"ui-fate-unselectall": "すべて選択解除",
