@@ -12,7 +12,7 @@
   "notification-queue-matched": "< {0} > 突入準備完了!",
 
 
-  "tweet-fate-occured": "< {0} > FATE 発生!",
+  "tweet-fate-occured": "< {0} > FATE発生!",
   "tweet-queue-matched": "< {0} > 突入準備完了!",
 
 
@@ -153,7 +153,7 @@
   "l-queue-matched": "Q: 突入準備完了 [{0}]",
   "l-queue-updated": "Q: 申請状態が更新されました [{0}, {1}, {2}/{3}, {4}/{5}, {6}/{7}]",
 
-  "l-fate-occured-info": "F: {0} FATE Occured!",
+  "l-fate-occured-info": "F: {0} FATE発生!",
 
   "l-field-instance-entered": "I: インスタンスエリアに入りました [{0}]",
   "l-field-instance-left": "I: インスタンスエリアから離れました"
