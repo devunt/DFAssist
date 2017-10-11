@@ -1,6 +1,6 @@
 ﻿{
   // 버전
-  "version": "20170905.1",
+  "version": "20171011.1",
 
   // 임무
   "instances": {
@@ -1088,7 +1088,41 @@
 	
 	//4.05 파티 컨텐츠
     "712": {
-      "name": "the Lost Canals of Uznair",
+      "name": "The Lost Canals of Uznair",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+
+
+    // 4.1 영웅의 귀환
+    // 4.1 던전
+    "731": {
+      "name": "The Drowned City of Skalla",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 4.1 토벌전
+    "730": {
+      "name": "극 신룡 토벌전",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 4.1 레이드
+    "734": {
+      "name": "The Royal City of Rabanastre",
+      "tank": "3",
+      "healer": "6",
+      "dps": "15"
+    },
+	
+	//4.1 파티 컨텐츠
+    "725": {
+      "name": "The Hidden Canals of Uznair",
       "tank": "0",
       "healer": "0",
       "dps": "0"
@@ -1530,7 +1564,8 @@
     "8": "무작위 임무: 레벨 60 던전",
     "9": "무작위 임무: 멘토",
     "10": "더 피스트 (8 대 8) - 친선 경기",
-    "13": "더 피스트 (4 대 4) - 개인"
+    "13": "더 피스트 (4 대 4) - 개인",
+    "15": "무작위 임무: 24인 레이드"
   },
 
   // 지역별 돌발
