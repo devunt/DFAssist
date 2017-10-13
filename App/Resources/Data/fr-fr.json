@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20170906.1",
+  "version": "20171011.1",
 
   // Duty
   "instances": {
@@ -1095,6 +1095,40 @@
     },
 
 
+    // 4.1 The Legend Returns
+    // 4.1 Dungeon
+    "731": {
+      "name": "la Cité engloutie de Skalla",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 4.1 Trials
+    "730": {
+      "name": "Le domaine de Shinryu",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 4.1 Raids
+    "734": {
+      "name": "la Cité royale de Rabanastre",
+      "tank": "3",
+      "healer": "6",
+      "dps": "15"
+    },
+	
+	//4.1 Party Contents
+    "725": {
+      "name": "les Canaux cachés d'Uznair",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+
+
     // Guildhests
     "190": {
       "name": "Chasse au fantôme fantoche",
@@ -1530,7 +1564,8 @@
     "8": "Mission aléatorie: donjons nv 70",
     "9": "Mission aléatorie: Mentor",
     "10": "The Feast (8x8/entraînement)",
-    "13": "The Feast (4x4/classé)"
+    "13": "The Feast (4x4/classé)",
+    "15": "Mission aléatorie: raids en alliance"
   },
 
   // FATEs

@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20170905.1",
+  "version": "20171011.1",
 
   // Duty
   "instances": {
@@ -1088,7 +1088,41 @@
 	
 	//4.05 Party Contents
     "712": {
-      "name": "the Lost Canals of Uznair",
+      "name": "The Lost Canals of Uznair",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+
+
+    // 4.1 The Legend Returns
+    // 4.1 Dungeon
+    "731": {
+      "name": "The Drowned City of Skalla",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 4.1 Trials
+    "730": {
+      "name": "Shinryu (Extreme)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 4.1 Raids
+    "734": {
+      "name": "The Royal City of Rabanastre",
+      "tank": "3",
+      "healer": "6",
+      "dps": "15"
+    },
+	
+	//4.1 Party Contents
+    "725": {
+      "name": "The Hidden Canals of Uznair",
       "tank": "0",
       "healer": "0",
       "dps": "0"
@@ -1530,7 +1564,8 @@
     "8": "Duty Roulette: Level 70 Dungeons",
     "9": "Duty Roulette: Mentor",
     "10": "The Feast (8 on 8) - Training",
-    "13": "The Feast (4 on 4) - Ranked"
+    "13": "The Feast (4 on 4) - Ranked",
+    "15": "Duty Roulette: Alliance Raids"
   },
 
   // FATEs
