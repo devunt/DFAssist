@@ -1,0 +1,160 @@
+﻿{
+  "app-name": "Duty/FATE Notificator",
+
+
+  "unknown-instance": "不明なコンテンツ ({0})",
+  "unknown-roulette": "不明なルーレット ({0})",
+  "unknown-area": "不明なエリア ({0})",
+  "unknown-fate": "不明なFATE ({0})",
+
+
+  "notification-app-updated": "バージョン {0} に更新されました",
+  "notification-queue-matched": "< {0} > 突入準備完了!",
+
+
+  "tweet-fate-occured": "< {0} > FATE発生!",
+  "tweet-queue-matched": "< {0} > 突入準備完了!",
+
+
+  "fate-preset-animus-SkyfireI": "炎天一巻",
+  "fate-preset-animus-SkyfireII": "炎天二巻",
+  "fate-preset-animus-NetherfireI": "炎獄一巻",
+  "fate-preset-animus-SkyfallI": "水天一巻",
+  "fate-preset-animus-SkyfallII": "水天二巻",
+  "fate-preset-animus-NetherfallI": "水獄一巻",
+  "fate-preset-animus-SkywindI": "風天一巻",
+  "fate-preset-animus-SkywindII": "風天二巻",
+  "fate-preset-animus-SkyearthI": "土天一巻",
+
+
+  "ui-notifymenustrip-open": "開く",
+  "ui-notifymenustrip-close": "終了",
+
+  "ui-topsetting-process": "FFXIVプロセス",
+  "ui-topsetting-select": "説明書",
+  "ui-topsetting-reset": "初期化",
+
+  "ui-tabcontrol-settings": "設定",
+  "ui-tabcontrol-fate": "FATE",
+  "ui-tabcontrol-logs": "ログ",
+  "ui-tabcontrol-info": "情報",
+
+  "ui-settings-title": "基本設定",
+  "ui-settings-overlay-use": "オーバーレイ",
+  "ui-settings-overlay-tooltip": "オーバーレイ左側のバーをドラッグすると移動できます。",
+  "ui-settings-overlay-reset": "初期化",
+  "ui-settings-overlay-announcement": "オーバーレイにアナウンスを表示する",
+  "ui-settings-startupshow": "起動時にこのウィンドウを表示する",
+  "ui-settings-autohide": "コンテンツ中オーバーレイを非表示にする",
+  "ui-settings-iconflash": "突入準備完了時FFXIVのアイコンを点滅させる",
+  "ui-settings-tweet-title": "Twitterアラーム",
+  "ui-settings-tweet-activate": "有効化",
+  "ui-settings-tweet-about": "突入準備完了時、FATEが発生した際指定したアカウントに\nツイートを送信します。\nTwitterアカウント名の@以降を入力してください。",
+
+  "ui-fate-selectall": "すべて選択",
+  "ui-fate-unselectall": "すべて選択解除",
+  "ui-fate-preset": "プリセット",
+  "ui-fate-apply": "適用",
+  "ui-fate-about": "通知を受け取りたい物を選んで上の適用ボタンを押してください。\nアラートはキャラクターがFATEエリア内にいる場合のみ動作します。",
+
+  "ui-logs-copy": "ログをコピー",
+  "ui-logs-clear": "消去",
+
+  "ui-info-about": "[貢献者]\n유채색\nLaiglinne\nHibiyasleep\nAlex00728\n\n[Copyright]\n記載されている会社名・製品名・システム名などは、各社の商標、または登録商標です。\n(C)2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by EYEDENTITY Entertainment.",
+
+  "ui-msgbox-title-info": "DFA通知",
+  "ui-msgbox-title-warning": "DFA警告",
+  "ui-msgbox-title-error": "DFAエラー",
+
+  "ui-language-changed": "言語が日本語に変更されました。\nいくつかの部分は再起動するまで変更されません。\nアプリケーションを再起動してください。",
+
+  "ui-clipboard-copied": "コピーしましした。",
+
+  "ui-clear-log-confirm": "ログを消しますか?",
+
+  "ui-fate-selection-saved": "FATE通知がセットされました。",
+  "ui-fate-preset-applied": "FATEプリセットが適用されました。",
+
+  "ui-updating": "プログラムをアップデート中...\n{0}",
+
+  "ui-app-crashed": "不明な問題によりアプリケーションが終了しました\n\nエラー: {0}",
+
+
+  "overlay-announcement": "",
+  "overlay-waiting-connection": "クライアントとの接続を待機しています",
+  "overlay-not-queuing": "参加申請していません",
+  "overlay-duty-count-unknown": "コンテンツ参加申請中",
+  "overlay-duty-count": "{0} コンテンツ参加申請中",
+  "overlay-queue-waiting-party": "パーティ構築中: {0} / {1} / {2}",
+  "overlay-queue-waiting": "情報を取得中...",
+  "overlay-queue-order": "待機順番: {0}",
+  "overlay-roulette": "コンテンツルーレット",
+  "overlay-queue-waiting-confirm": "突入待機中",
+  "overlay-queue-matched": "突入準備完了!",
+  "overlay-queue-confirming": "突入待機中",
+  "overlay-fate-occured": "FATE発生!",
+
+
+  "l-process-set-success": "P: FFXIVプロセスを選択しました: {0}",
+  "l-process-set-failed": "P: FFXIVプロセスを選択できませんでした。",
+  "l-process-finding": "P: FFXIVプロセスを検索中...",
+  "l-process-found-nothing": "P: FFXIVプロセスが見つかりませんでした。",
+  "l-process-found-multiple": "P: 2つ以上のFFXIVプロセスが見つかりました。",
+
+  "l-tweet-failed-request": "T: ツイート送信時にエラーが発生しました。",
+  "l-tweet-failed-general": "T: ツイート送信に失敗しました。",
+  "l-tweet-success": "T: ツイート成功!",
+
+  "l-web-request-failed": "W: Webサービスでエラーが発生しました。",
+
+  "l-updater-current-version": "U: 現在のバージョン: {0}",
+  "l-updater-latest-version": "U: 最新のバージョン: {0}",
+  "l-updater-is-latest": "U: 最新版を利用しています。",
+  "l-updater-new-version": "U: アップデートが見つかりました。",
+  "l-updater-error-general": "U: アップデート中にエラーが発生しました。",
+  "l-updater-error-data": "U: コンテンツデータのアップデート中にエラーが発生しました。",
+  "l-updater-error-check": "U: アップデート情報が見つかりませんでした。",
+  "l-updater-error-no-url": "U: アップデートファイルが見つかりませんでした。",
+  "l-updater-error-downloading": "U: アップデートデータのダウンロード中にエラーが発生しました。",
+
+  "l-data-updated": "D: コンテンツデータはバージョン {0} へアップデートされました。",
+  "l-data-is-latest": "D: 最深のコンテンツデートを利用しています(バージョン {0})。",
+  "l-data-error": "D: コンテンツデータを処理中にエラーが発生しました。",
+
+  "l-packet-error-ip": "P: IPパケット解析エラー",
+  "l-packet-error-tcp": "P: TCPパケット解析エラー",
+
+  "l-network-started": "N: ネットワークパケットの監視を開始",
+  "l-network-starting": "N: ネットワークの監視を開始中...",
+  "l-network-stopped": "N: ネットワークの監視を停止しました。",
+  "l-network-stopping": "N: ネットワークの監視を停止中...",
+  "l-network-error-starting": "N: 開始に失敗",
+  "l-network-error-stopping": "N: 停止に失敗",
+  "l-network-error-already-started": "N: 既に開始しています",
+  "l-network-error-already-stopped": "N: 既に停止しています",
+  "l-network-error-no-connection": "N: ゲームサーバーとの接続を見つけられませんでした",
+  "l-network-error-receiving-packet": "N: パケット受信中にエラーが発生しました",
+  "l-network-error-filtering-packet": "N: パケットフィルタ中にエラーが発生しました",
+  "l-network-error-finding-lobby": "N: ロビーサーバーの情報を取得中にエラーが発生しました",
+  "l-network-detected-connection-closing": "N: ゲームサーバーとの切断を検知しました",
+  "l-network-detected-connection": "N: ゲームサーバーとの接続を検知しました: {0}",
+
+  "l-firewall-registered": "FW: 登録済み",
+  "l-firewall-error": "FW: 登録中にエラーが発生しました",
+
+  "l-analyze-error-length": "A: メッセージ解析中に長さエラーが発生しました: {0}, {1}/{2}",
+  "l-analyze-error-general": "A: メッセージ解析中にエラーが発生しました",
+  "l-analyze-error": "A: メッセージ処理中にエラーが発生しました",
+
+  "l-queue-started-general": "Q: コンテンツ参加申請開始 [{0}]",
+  "l-queue-started-roulette": "Q: コンテンツルーレット参加申請開始 [{0}]",
+  "l-queue-stopped": "Q: 参加申請停止",
+  "l-queue-entered": "Q: インスタンスエリアに入りました",
+  "l-queue-matched": "Q: 突入準備完了 [{0}]",
+  "l-queue-updated": "Q: 申請状態が更新されました [{0}, {1}, {2}/{3}, {4}/{5}, {6}/{7}]",
+
+  "l-fate-occured-info": "F: {0} FATE発生!",
+
+  "l-field-instance-entered": "I: インスタンスエリアに入りました [{0}]",
+  "l-field-instance-left": "I: インスタンスエリアから離れました"
+}
