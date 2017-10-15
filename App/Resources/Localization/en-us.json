@@ -49,6 +49,8 @@
   "ui-settings-iconflash": "Blink FFXIV Icon when a Duty matches/FATE occurs",
   "ui-settings-tweet-title": "Twitter Alarm",
   "ui-settings-tweet-activate": "Enable",
+  "ui-settings-playsound": "Play sound",
+  "ui-settings-soundlocation": "Select sound",
   "ui-settings-tweet-about": "When a queue pops or FATE occurs, \nsend a Tweet with a mention to the this Twitter account.\nEnter the Twitter Account except the preceding symbol @.",
 
   "ui-fate-selectall": "Select All",
@@ -80,7 +82,7 @@
   "ui-app-crashed": "Application exiting due to an unknown issue.\n\nError: {0}",
 
 
-  "overlay-announcement": "", 
+  "overlay-announcement": "",
   "overlay-waiting-connection": "Waiting for game connection",
   "overlay-not-queuing": "No matching in progress",
   "overlay-duty-count-unknown": "Matching Duty",

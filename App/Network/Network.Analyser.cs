@@ -322,7 +322,11 @@ namespace App
                         {
                             WinApi.FlashWindow(mainForm.FFXIVProcess);
                         }
-
+                        if (Settings.PlaySound && Settings.SoundLocation != "" && System.IO.File.Exists(Settings.SoundLocation))
+                        {
+                            System.Media.SoundPlayer player = new System.Media.SoundPlayer(Settings.SoundLocation);
+                            player.Play();
+                        }
                         if (!Settings.ShowOverlay)
                         {
                             mainForm.ShowNotification("notification-queue-matched", instance.Name);
