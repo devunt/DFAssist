@@ -634,7 +634,7 @@
             this.label_About.Font = new System.Drawing.Font("Malgun Gothic", 10F);
             this.label_About.Location = new System.Drawing.Point(0, 0);
             this.label_About.Name = "label_About";
-            this.label_About.Size = new System.Drawing.Size(426, 210);
+            this.label_About.Size = new System.Drawing.Size(426, 237);
             this.label_About.TabIndex = 0;
             this.label_About.Text = "[제작 및 문의]\r\n유채색\r\n라그린네\r\n히비야\r\n\r\n[저작권]\r\n기재되어있는 회사명 · 제품명 · 시스템 이름은\r\n해당 소유자의 상표 또는 등록 " +
     "상표입니다.\r\n(C) 2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved.\r\nKorea Publish" +
@@ -644,9 +644,9 @@
             // linkLabel_GitHub
             // 
             this.linkLabel_GitHub.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.linkLabel_GitHub.Location = new System.Drawing.Point(0, 210);
+            this.linkLabel_GitHub.Location = new System.Drawing.Point(0, 237);
             this.linkLabel_GitHub.Name = "linkLabel_GitHub";
-            this.linkLabel_GitHub.Size = new System.Drawing.Size(426, 52);
+            this.linkLabel_GitHub.Size = new System.Drawing.Size(426, 25);
             this.linkLabel_GitHub.TabIndex = 0;
             this.linkLabel_GitHub.TabStop = true;
             this.linkLabel_GitHub.Text = "GitHub";
