@@ -1,6 +1,6 @@
-﻿{
+{
   // Version
-  "version": "20171011.1",
+  "version": "20171016.3",
 
   // Duty
   "instances": {
@@ -105,43 +105,43 @@
 
     // 2.0 Trials
     "202": {
-      "name": "Ifrit",
+      "name": "The Bowl of Embers",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "206": {
-      "name": "Titan",
+      "name": "The Navel",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "208": {
-      "name": "Garuda",
+      "name": "The Howling Eye",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "292": {
-      "name": "Ifrit (Hard)",
+      "name": "The Bowl of Embers (Hard)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "293": {
-      "name": "Titan (Hard)",
+      "name": "The Navel (Hard)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "294": {
-      "name": "Garuda (Hard)",
+      "name": "The Howling Eye (Hard)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "332": {
-      "name": "Rhitahtyn Sas Arvina",
+      "name": "Cape Westwind",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -171,31 +171,31 @@
 
     // 2.1 Trials
     "207": {
-      "name": "Good King Moggle Mog XII",
+      "name": "Thornmarch",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "295": {
-      "name": "Ifrit (Extreme)",
+      "name": "The Bowl of Embers (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "296": {
-      "name": "Titan (Extreme)",
+      "name": "The Navel (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "297": {
-      "name": "Garuda (Extreme)",
+      "name": "The Howling Eye (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "348": {
-      "name": "The Ultima Weapon",
+      "name": "The Minstrel's Ballad: Ultima's Bane",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -256,7 +256,7 @@
     // 2.2 Through the Maelstrom
     // 2.2 Dungeons
     "363": {
-      "name": "the Lost City of Amdapor",
+      "name": "The Lost City of Amdapor",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -276,25 +276,25 @@
 
     // 2.2 Trials
     "281": {
-      "name": "Leviathan",
+      "name": "The Whorleater",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "359": {
-      "name": "Leviathan (Extreme)",
+      "name": "The Whorleater (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "364": {
-      "name": "Good King Moggle Mog XII (Extreme)",
+      "name": "Thornmarch (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "366": {
-      "name": "Gilgamesh",
+      "name": "Battle on the Big Bridge",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -350,13 +350,13 @@
 
     // 2.3 Trials
     "374": {
-      "name": "Ramuh",
+      "name": "The Striking Tree",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "375": {
-      "name": "Ramuh (Extreme)",
+      "name": "The Striking Tree (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -418,19 +418,19 @@
 
     // 2.4 Trials
     "377": {
-      "name": "Shiva",
+      "name": "Akh Afah Amphitheatre",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "378": {
-      "name": "Shiva (Extreme)",
+      "name": "Akh Afah Amphitheatre (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "142": {
-      "name": "Typhon, Ultros",
+      "name": "The Dragon's Neck",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -466,13 +466,13 @@
     // 2.5 Before the Fall
     // 2.5 Dungeons
     "150": {
-      "name": "the Keeper of the Lake",
+      "name": "The Keeper of the Lake",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "188": {
-      "name": "the Wanderer's Palace (Hard)",
+      "name": "The Wanderer's Palace (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -492,20 +492,20 @@
       "dps": "4"
     },
     "394": {
-      "name": "Odin",
+      "name": "Urth's Fount",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "396": {
-      "name": "Gilgamesh, Enkidu",
+      "name": "Battle in the Big Keep",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     // 2.55 Trials
     "143": {
-      "name": "Vishap",
+      "name": "The Steps of Faith",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -523,7 +523,7 @@
     // 3.0 Heavensward
     // 3.0 Dungeons
     "435": {
-      "name": "the Aery",
+      "name": "The Aery",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -573,31 +573,31 @@
 
     // 3.0 Trials
     "432": {
-      "name": "Ravana",
+      "name": "Thok ast Thok",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "436": {
-      "name": "Bismarck",
+      "name": "The Limitless Blue",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "437": {
-      "name": "Knights of the Round ?",
+      "name": "The Singularity Reactor",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "446": {
-      "name": "Ravana (Extreme)",
+      "name": "Thok ast Thok (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "447": {
-      "name": "Bismarck (Extreme)",
+      "name": "The Limitless Blue (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -672,7 +672,7 @@
 
     // 3.1 Trials
     "448": {
-      "name": "Knights of the Round (Extreme) ?",
+      "name": "The Minstrel's Ballad: Thordan's Reign",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -688,7 +688,7 @@
 
     // 3.1 Party Contents
     "512": {
-      "name": "The Diadem(Easy)",
+      "name": "The Diadem (Easy)",
       "tank": "1",
       "healer": "2",
       "dps": "5"
@@ -724,13 +724,13 @@
 
     // 3.2 Trials
     "517": {
-      "name": "Sephiroth",
+      "name": "Containment Bay S1T7",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "524": {
-      "name": "Sephiroth (Extreme)",
+      "name": "Containment Bay S1T7 (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -804,13 +804,13 @@
 
     // 3.3 Trials
     "559": {
-      "name": "Nidhogg",
+      "name": "The Final Steps of Faith",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "566": {
-      "name": "Nidhogg (Extreme)",
+      "name": "The Minstrel's Ballad: Nidhogg's Rage",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -850,13 +850,13 @@
 
     // 3.4 Trials
     "576": {
-      "name": "Sophia",
+      "name": "Containment Bay P1T6",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "577": {
-      "name": "Sophia (Extreme)",
+      "name": "Containment Bay P1T6 (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -930,13 +930,13 @@
 
     // 3.5 Trials
     "637": {
-      "name": "Zurvan",
+      "name": "Containment Bay Z1T9",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "638": {
-      "name": "Zurvan (Extreme)",
+      "name": "Containment Bay Z1T9 (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -1004,31 +1004,31 @@
 
     // 4.0 Trials
     "674": {
-      "name": "Susano",
+      "name": "The Pool of Tribute",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "677": {
-      "name": "Susano (Extreme)",
+      "name": "The Pool of Tribute (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "719": {
-      "name": "Lakshmi",
+      "name": "Emanation",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "720": {
-      "name": "Lakshmi (Extreme)",
+      "name": "Emanation (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "679": {
-      "name": "Shinryu",
+      "name": "The Royal Menagerie",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -1106,7 +1106,7 @@
 
     // 4.1 Trials
     "730": {
-      "name": "Shinryu (Extreme)",
+      "name": "The Minstel's Ballad: Shinryu's Domain",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -2227,7 +2227,7 @@
         "856": "Leather and Mace",
         "857": "Hearts Like Steel, Fists Like Thunder",
         "860": "Bones",
-        "861": "Bismarcking Time",
+        "861": "The Limitless Blueing Time",
         "862": "Let There Be Acolytes",
         "863": "A Disturbing Lack of Faith",
         "864": "Guano a Mano",
