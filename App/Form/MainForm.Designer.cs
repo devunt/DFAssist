@@ -52,6 +52,9 @@
             this.label_TwitterAbout = new App.LocalizableLabel();
             this.checkBox_Twitter = new System.Windows.Forms.CheckBox();
             this.groupBox_DefaultSet = new System.Windows.Forms.GroupBox();
+            this.label_SoundLocation = new App.LocalizableLabel();
+            this.button_SoundLocation = new System.Windows.Forms.Button();
+            this.checkBox_PlaySound = new System.Windows.Forms.CheckBox();
             this.checkBox_ShowAnnouncement = new System.Windows.Forms.CheckBox();
             this.checkBox_FlashWindow = new System.Windows.Forms.CheckBox();
             this.checkBox_AutoOverlayHide = new System.Windows.Forms.CheckBox();
@@ -85,6 +88,7 @@
             this.tabPage_Info = new System.Windows.Forms.TabPage();
             this.label_About = new App.LocalizableLabel();
             this.linkLabel_GitHub = new System.Windows.Forms.LinkLabel();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.contextMenuStrip.SuspendLayout();
             this.panel_TopSetting.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -326,6 +330,9 @@
             // 
             // groupBox_DefaultSet
             // 
+            this.groupBox_DefaultSet.Controls.Add(this.label_SoundLocation);
+            this.groupBox_DefaultSet.Controls.Add(this.button_SoundLocation);
+            this.groupBox_DefaultSet.Controls.Add(this.checkBox_PlaySound);
             this.groupBox_DefaultSet.Controls.Add(this.button_ResetOverlayPosition);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_ShowAnnouncement);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_FlashWindow);
@@ -339,6 +346,38 @@
             this.groupBox_DefaultSet.TabIndex = 0;
             this.groupBox_DefaultSet.TabStop = false;
             this.groupBox_DefaultSet.Text = "기본설정";
+            this.groupBox_DefaultSet.Enter += new System.EventHandler(this.groupBox_DefaultSet_Enter);
+            // 
+            // label_SoundLocation
+            // 
+            this.label_SoundLocation.Font = new System.Drawing.Font("Malgun Gothic", 8F);
+            this.label_SoundLocation.Location = new System.Drawing.Point(198, 126);
+            this.label_SoundLocation.Name = "label_SoundLocation";
+            this.label_SoundLocation.Size = new System.Drawing.Size(225, 13);
+            this.label_SoundLocation.TabIndex = 1;
+            // 
+            // button_SoundLocation
+            // 
+            this.button_SoundLocation.Font = new System.Drawing.Font("Malgun Gothic", 8F);
+            this.button_SoundLocation.Location = new System.Drawing.Point(110, 122);
+            this.button_SoundLocation.Name = "button_SoundLocation";
+            this.button_SoundLocation.Size = new System.Drawing.Size(82, 20);
+            this.button_SoundLocation.TabIndex = 5;
+            this.button_SoundLocation.Text = "사운드 선택";
+            this.button_SoundLocation.UseVisualStyleBackColor = true;
+            this.button_SoundLocation.Click += new System.EventHandler(this.button_SoundLocation_Click);
+            // 
+            // checkBox_PlaySound
+            // 
+            this.checkBox_PlaySound.AutoSize = true;
+            this.checkBox_PlaySound.Font = new System.Drawing.Font("Malgun Gothic", 9F);
+            this.checkBox_PlaySound.Location = new System.Drawing.Point(6, 123);
+            this.checkBox_PlaySound.Name = "checkBox_PlaySound";
+            this.checkBox_PlaySound.Size = new System.Drawing.Size(90, 19);
+            this.checkBox_PlaySound.TabIndex = 4;
+            this.checkBox_PlaySound.Text = "사운드 재생";
+            this.checkBox_PlaySound.UseVisualStyleBackColor = true;
+            this.checkBox_PlaySound.CheckedChanged += new System.EventHandler(this.checkBox_PlaySound_CheckedChanged);
             // 
             // checkBox_ShowAnnouncement
             // 
@@ -634,7 +673,7 @@
             this.label_About.Font = new System.Drawing.Font("Malgun Gothic", 10F);
             this.label_About.Location = new System.Drawing.Point(0, 0);
             this.label_About.Name = "label_About";
-            this.label_About.Size = new System.Drawing.Size(426, 210);
+            this.label_About.Size = new System.Drawing.Size(426, 237);
             this.label_About.TabIndex = 0;
             this.label_About.Text = "[제작 및 문의]\r\n유채색\r\n라그린네\r\n히비야\r\n\r\n[저작권]\r\n기재되어있는 회사명 · 제품명 · 시스템 이름은\r\n해당 소유자의 상표 또는 등록 " +
     "상표입니다.\r\n(C) 2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved.\r\nKorea Publish" +
@@ -644,14 +683,18 @@
             // linkLabel_GitHub
             // 
             this.linkLabel_GitHub.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.linkLabel_GitHub.Location = new System.Drawing.Point(0, 210);
+            this.linkLabel_GitHub.Location = new System.Drawing.Point(0, 237);
             this.linkLabel_GitHub.Name = "linkLabel_GitHub";
-            this.linkLabel_GitHub.Size = new System.Drawing.Size(426, 52);
+            this.linkLabel_GitHub.Size = new System.Drawing.Size(426, 25);
             this.linkLabel_GitHub.TabIndex = 0;
             this.linkLabel_GitHub.TabStop = true;
             this.linkLabel_GitHub.Text = "GitHub";
             this.linkLabel_GitHub.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.linkLabel_GitHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_GitHub_LinkClicked);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // MainForm
             // 
@@ -753,6 +796,10 @@
         private LocalizableLabel label_FATEAbout;
         private System.Windows.Forms.ComboBox comboBox_Language;
         private System.Windows.Forms.CheckBox checkBox_ShowAnnouncement;
+        private System.Windows.Forms.CheckBox checkBox_PlaySound;
+        private System.Windows.Forms.Button button_SoundLocation;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private LocalizableLabel label_SoundLocation;
     }
 }
 

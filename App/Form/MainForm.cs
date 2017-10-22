@@ -83,6 +83,17 @@ namespace App
             checkBox_StartupShow.Checked = Settings.StartupShowMainForm;
             checkBox_AutoOverlayHide.Checked = Settings.AutoOverlayHide;
             checkBox_FlashWindow.Checked = Settings.FlashWindow;
+            checkBox_PlaySound.Checked = Settings.PlaySound;
+            if (System.IO.File.Exists(Settings.SoundLocation) == false)
+            {
+                checkBox_PlaySound.Checked = false;
+                label_SoundLocation.Text = "";
+            }
+            else
+            {
+                label_SoundLocation.Text = System.IO.Path.GetFileName(Settings.SoundLocation);
+            }
+            if (checkBox_PlaySound.Checked == false) { button_SoundLocation.Enabled = false; }
             checkBox_ShowAnnouncement.Checked = Settings.ShowAnnouncement;
 
             checkBox_Twitter.Checked = Settings.TwitterEnabled;
@@ -485,6 +496,8 @@ namespace App
             checkBox_StartupShow.Text = Localization.GetText("ui-settings-startupshow");
             checkBox_AutoOverlayHide.Text = Localization.GetText("ui-settings-autohide");
             checkBox_FlashWindow.Text = Localization.GetText("ui-settings-iconflash");
+            checkBox_PlaySound.Text = Localization.GetText("ui-settings-playsound");
+            button_SoundLocation.Text = Localization.GetText("ui-settings-soundlocation");
             checkBox_ShowAnnouncement.Text = Localization.GetText("ui-settings-overlay-announcement");
             groupBox_TwitterSet.Text = Localization.GetText("ui-settings-tweet-title");
             checkBox_Twitter.Text = Localization.GetText("ui-settings-tweet-activate");
@@ -506,6 +519,35 @@ namespace App
             toolStripMenuItem_LogCopy.Text = Localization.GetText("ui-logs-copy");
             toolStripMenuItem_LogClear.Text = Localization.GetText("ui-logs-clear");
             label_About.Text = Localization.GetText("ui-info-about");
+
+        }
+
+        private void checkBox_PlaySound_CheckedChanged(object sender, EventArgs e)
+        {
+            button_SoundLocation.Enabled = checkBox_PlaySound.Checked;
+            if (button_SoundLocation.Enabled == false)
+            {
+                label_SoundLocation.Text = "";
+                Settings.SoundLocation = "";
+            }
+            Settings.PlaySound = checkBox_PlaySound.Checked;
+            Settings.Save();
+        }
+
+        private void button_SoundLocation_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "WAVE Files|*.wav";
+            DialogResult result = openFileDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                label_SoundLocation.Text = System.IO.Path.GetFileName(openFileDialog1.FileName);
+                Settings.SoundLocation = openFileDialog1.FileName;
+                Settings.Save();
+            }
+        }
+
+        private void groupBox_DefaultSet_Enter(object sender, EventArgs e)
+        {
 
         }
     }

@@ -21,6 +21,8 @@ namespace App
         public static bool CheatRoulette { get; set; } = false;
         public static string TwitterAccount { get; set; } = "";
         public static bool Updated { get; set; } = true;
+        public static bool PlaySound { get; set; } = false;
+        public static string SoundLocation { get; set; } = "";
         public static HashSet<int> FATEs { get; set; } = new HashSet<int>();
 
         private static void Init()
@@ -53,6 +55,8 @@ namespace App
                 CheatRoulette = false; // 악용 방지를 위한 강제 비활성화
                 Language = iniFile.ReadValue("misc", "language") ?? "ko-kr";
                 Updated = iniFile.ReadValue("internal", "updated") != "0";
+                PlaySound = iniFile.ReadValue("notification","playsound") != "0";
+                SoundLocation = iniFile.ReadValue("notification", "soundlocation") ?? "";
 
                 var fates = iniFile.ReadValue("fate", "fates");
                 if (!string.IsNullOrEmpty(fates))
@@ -77,6 +81,8 @@ namespace App
             iniFile.WriteValue("misc", "language", Language);
             iniFile.WriteValue("fate", "fates", string.Join(",", FATEs));
             iniFile.WriteValue("internal", "updated", Updated ? "1" : "0");
+            iniFile.WriteValue("notification", "playsound", PlaySound ? "1" : "0");
+            iniFile.WriteValue("notification", "soundlocation", SoundLocation);
         }
     }
 }
