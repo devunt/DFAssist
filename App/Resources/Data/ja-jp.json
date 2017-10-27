@@ -1,103 +1,103 @@
 ﻿{
   // Version
-  "version": "20170905.1",
+  "version": "20171016.3", 
 
   // Duty
   "instances": {
     // 2.0 A Realm Reborn
     // 2.0 Dungeons
     "157": {
-      "name": "Sastasha",
+      "name": "天然要害 サスタシャ浸食洞",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "158": {
-      "name": "Brayflox's Longstop",
+      "name": "奪還支援 ブレイフロクスの野営地",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "159": {
-      "name": "The Wanderer's Palace",
+      "name": "旅神聖域 ワンダラーパレス",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "161": {
-      "name": "Copperbell Mines",
+      "name": "封鎖坑道 カッパーベル銅山",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "162": {
-      "name": "Halatali",
+      "name": "魔獣領域 ハラタリ修練所",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "163": {
-      "name": "Sunken Temple of Qarn",
+      "name": "遺跡探索 カルン埋没寺院",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "164": {
-      "name": "The Tam-Tara Deepcroft",
+      "name": "地下霊殿 タムタラの墓所",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "166": {
-      "name": "Haukke Manor",
+      "name": "名門屋敷 ハウケタ御用邸",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "167": {
-      "name": "Amdapor Keep",
+      "name": "邪教排撃 古城アムダプール",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "168": {
-      "name": "The Stone Vigil",
+      "name": "城塞攻略 ストーンヴィジル",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "169": {
-      "name": "The Thousand Maws of Toto-Rak",
+      "name": "監獄廃墟 トトラクの千獄",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "170": {
-      "name": "Cutter's Cry",
+      "name": "流砂迷宮 カッターズクライ",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "171": {
-      "name": "Dzemael Darkhold",
+      "name": "掃討作戦 ゼーメル要塞",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "172": {
-      "name": "The Aurum Vale",
+      "name": "霧中行軍 オーラムヴェイル",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "217": {
-      "name": "Castrum Meridianum",
+      "name": "外郭攻略 カストルム・メリディアヌム",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "224": {
-      "name": "The Praetorium",
+      "name": "最終決戦 魔導城プラエトリウム",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -105,43 +105,43 @@
 
     // 2.0 Trials
     "202": {
-      "name": "Ifrit",
+      "name": "イフリート討伐戦",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "206": {
-      "name": "Titan",
+      "name": "タイタン討伐戦",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "208": {
-      "name": "Garuda",
+      "name": "ガルーダ討伐戦",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "292": {
-      "name": "Ifrit (Hard)",
+      "name": "真イフリート討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "293": {
-      "name": "Titan (Hard)",
+      "name": "真タイタン討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "294": {
-      "name": "Garuda (Hard)",
+      "name": "真ガルーダ討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "332": {
-      "name": "Rhitahtyn Sas Arvina",
+      "name": "リットアティン強襲戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -151,19 +151,19 @@
     // 2.1 A Realm Awoken
     // 2.1 Dungeons
     "160": {
-      "name": "Pharos Sirius",
+      "name": "怪鳥巨塔 シリウス大灯台",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "349": {
-      "name": "Copperbell Mines (Hard)",
+      "name": "封鎖坑道 カッパーベル銅山 (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "350": {
-      "name": "Haukke Manor (Hard)",
+      "name": "名門屋敷 ハウケタ御用邸 (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -171,44 +171,44 @@
 
     // 2.1 Trials
     "207": {
-      "name": "Good King Moggle Mog XII",
+      "name": "善王モグル・モグXII世討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "295": {
-      "name": "Ifrit (Extreme)",
+      "name": "極イフリート討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "296": {
-      "name": "Titan (Extreme)",
+      "name": "極タイタン討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "297": {
-      "name": "Garuda (Extreme)",
+      "name": "極ガルーダ討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "348": {
-      "name": "The Ultima Weapon",
+      "name": "究極幻想 アルテマウェポン破壊作戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     // 2.16 Trials
     "368": {
-      "name": "A Relic Reborn: the Chimera",
+      "name": "ドルムキマイラ討伐戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "369": {
-      "name": "A Relic Reborn: the Hydra",
+      "name": "ハイドラ討伐戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -216,37 +216,37 @@
 
     // 2.1 Raids
     "174": {
-      "name": "The Labyrinth of the Ancients",
+      "name": "クリスタルタワー：古代の民の迷宮",
       "tank": "6",
       "healer": "6",
       "dps": "12"
     },
     "241": {
-      "name": "Binding Coil of Bahamut - T1",
+      "name": "大迷宮バハムート：邂逅編1",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "242": {
-      "name": "Binding Coil of Bahamut - T2",
+      "name": "大迷宮バハムート：邂逅編2",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "243": {
-      "name": "Binding Coil of Bahamut - T3",
+      "name": "大迷宮バハムート：邂逅編3",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "244": {
-      "name": "Binding Coil of Bahamut - T4",
+      "name": "大迷宮バハムート：邂逅編4",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "245": {
-      "name": "Binding Coil of Bahamut - T5",
+      "name": "大迷宮バハムート：邂逅編5",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -256,19 +256,19 @@
     // 2.2 Through the Maelstrom
     // 2.2 Dungeons
     "363": {
-      "name": "the Lost City of Amdapor",
+      "name": "腐敗遺跡 古アムダプール市街",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "360": {
-      "name": "Halatali (Hard)",
+      "name": "魔獣領域 ハラタリ修練所 (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "362": {
-      "name": "Brayflox's Longstop (Hard)",
+      "name": "奪還支援 ブレイフロクスの野営地 (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -276,25 +276,25 @@
 
     // 2.2 Trials
     "281": {
-      "name": "Leviathan",
+      "name": "真リヴァイアサン討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "359": {
-      "name": "Leviathan (Extreme)",
+      "name": "真リヴァイアサン討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "364": {
-      "name": "Good King Moggle Mog XII (Extreme)",
+      "name": "極王モグル・モグXII世討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "366": {
-      "name": "Gilgamesh",
+      "name": "ギルガメッシュ討伐戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -302,25 +302,25 @@
 
     // 2.2 Raids
     "355": {
-      "name": "Second Coil of Bahamut - T1",
+      "name": "大迷宮バハムート：侵攻編1",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "356": {
-      "name": "Second Coil of Bahamut - T2",
+      "name": "大迷宮バハムート：侵攻編2",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "357": {
-      "name": "Second Coil of Bahamut - T3",
+      "name": "大迷宮バハムート：侵攻編3",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "358": {
-      "name": "Second Coil of Bahamut - T4",
+      "name": "大迷宮バハムート：侵攻編4",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -330,19 +330,19 @@
     // 2.3 Defenders of Eorzea
     // 2.3 Dungeons
     "361": {
-      "name": "Hullbreaker Isle",
+      "name": "財宝伝説 ハルブレーカー・アイル",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "365": {
-      "name": "The Stone Vigil (Hard)",
+      "name": "城塞攻略 ストーンヴィジル (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "373": {
-      "name": "The Tam-Tara Deepcroft (Hard)",
+      "name": "地下霊殿 タムタラの墓所 (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -350,13 +350,13 @@
 
     // 2.3 Trials
     "374": {
-      "name": "Ramuh",
+      "name": "真ラムウ討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "375": {
-      "name": "Ramuh (Extreme)",
+      "name": "極ラムウ討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -364,31 +364,31 @@
 
     // 2.3 Raids
     "372": {
-      "name": "Syrcus Tower",
+      "name": "クリスタルタワー：シルクスの塔",
       "tank": "3",
       "healer": "6",
       "dps": "15"
     },
     "380": {
-      "name": "Second Coil of Bahamut S - T1",
+      "name": "大迷宮バハムート零式：侵攻編1",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "381": {
-      "name": "Second Coil of Bahamut S - T2",
+      "name": "大迷宮バハムート零式：侵攻編2",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "382": {
-      "name": "Second Coil of Bahamut S - T3",
+      "name": "大迷宮バハムート零式：侵攻編3",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "383": {
-      "name": "Second Coil of Bahamut S - T4",
+      "name": "大迷宮バハムート零式：侵攻編4",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -398,19 +398,19 @@
     // 2.4 Dreams of Ice
     // 2.4 Dungeons
     "371": {
-      "name": "Snowcloak",
+      "name": "氷結潜窟 スノークローク大氷壁",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "367": {
-      "name": "Sunken Temple of Qarn (Hard)",
+      "name": "遺跡救援 カルン埋没寺院 (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "387": {
-      "name": "Sastasha (Hard)",
+      "name": "天然要害 サスタシャ浸食洞 (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -418,19 +418,19 @@
 
     // 2.4 Trials
     "377": {
-      "name": "Shiva",
+      "name": "真シヴァ討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "378": {
-      "name": "Shiva (Extreme)",
+      "name": "極シヴァ討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "142": {
-      "name": "Typhon, Ultros",
+      "name": "アマジナ杯闘技会決勝戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -438,25 +438,25 @@
 
     // 2.4 Raids
     "193": {
-      "name": "Final Coil of Bahamut - T1",
+      "name": "大迷宮バハムート：真成編1",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "194": {
-      "name": "Final Coil of Bahamut - T2",
+      "name": "大迷宮バハムート：真成編2",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "195": {
-      "name": "Final Coil of Bahamut - T3",
+      "name": "大迷宮バハムート：真成編3",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "196": {
-      "name": "Final Coil of Bahamut - T4",
+      "name": "大迷宮バハムート：真成編4",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -466,19 +466,19 @@
     // 2.5 Before the Fall
     // 2.5 Dungeons
     "150": {
-      "name": "the Keeper of the Lake",
+      "name": "幻龍残骸 黙約の塔",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "188": {
-      "name": "the Wanderer's Palace (Hard)",
+      "name": "旅神聖域 ワンダラーパレス (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "189": {
-      "name": "Amdapor Keep (Hard)",
+      "name": "邪教排撃 古城アムダプール (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -486,26 +486,26 @@
 
     // 2.5 Trials
     "426": {
-      "name": "The Chrysalis",
+      "name": "アシエン・ナプリアレス討伐戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "394": {
-      "name": "Odin",
+      "name": "闘神オーディン討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "396": {
-      "name": "Gilgamesh, Enkidu",
+      "name": "真ギルガメッシュ討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     // 2.55 Trials
     "143": {
-      "name": "Vishap",
+      "name": "皇都イシュガルド防衛戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -513,7 +513,7 @@
 
     // 2.5 Raids
     "151": {
-      "name": "The World of Darkness",
+      "name": "クリスタルタワー：闇の世界",
       "tank": "3",
       "healer": "6",
       "dps": "15"
@@ -523,49 +523,49 @@
     // 3.0 Heavensward
     // 3.0 Dungeons
     "435": {
-      "name": "the Aery",
+      "name": "邪竜血戦 ドラゴンズエアリー",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "416": {
-      "name": "The Great Gubal Library",
+      "name": "禁書回収 グブラ幻想図書館",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "421": {
-      "name": "The Vault",
+      "name": "強硬突入 イシュガルド教皇庁",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "430": {
-      "name": "The Fractal Continuum",
+      "name": "博物戦艦 フラクタル・コンティニアム",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "434": {
-      "name": "The Dusk Vigil",
+      "name": "廃砦捜索 ダスクヴィジル",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "438": {
-      "name": "Aetherochemical Research Facility",
+      "name": "蒼天聖戦 魔科学研究所",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "441": {
-      "name": "Sohm Al",
+      "name": "霊峰踏破 ソーム・アル",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "420": {
-      "name": "Neverreap",
+      "name": "神域浮島 ネバーリープ",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -573,31 +573,31 @@
 
     // 3.0 Trials
     "432": {
-      "name": "Ravana",
+      "name": "真ラーヴァナ討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "436": {
-      "name": "Bismarck",
+      "name": "真ビスマルク討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "437": {
-      "name": "Knights of the Round ?",
+      "name": "ナイツ・オブ・ラウンド討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "446": {
-      "name": "Ravana (Extreme)",
+      "name": "極ラーヴァナ討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "447": {
-      "name": "Bismarck (Extreme)",
+      "name": "極ビスマルク討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -605,50 +605,50 @@
 
     // 3.01 Raids
     "442": {
-      "name": "A - Fist of the Father",
+      "name": "機工城アレキサンダー：起動編1",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "443": {
-      "name": "A - Cuff of the Father",
+      "name": "機工城アレキサンダー：起動編2",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "444": {
-      "name": "A - Arm of the Father",
+      "name": "機工城アレキサンダー：起動編3",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "445": {
-      "name": "A - Burden of the Father",
+      "name": "機工城アレキサンダー：起動編4",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     // 3.05 Raids
     "449": {
-      "name": "A - Fist of the Father (Savage)",
+      "name": "機工城アレキサンダー零式：起動編1",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "450": {
-      "name": "A - Cuff of the Father (Savage)",
+      "name": "機工城アレキサンダー零式：起動編2",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "451": {
-      "name": "A - Arm of the Father (Savage)",
+      "name": "機工城アレキサンダー零式：起動編3",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "452": {
-      "name": "A - Burden of the Father (Savage)",
+      "name": "機工城アレキサンダー零式：起動編4",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -658,13 +658,13 @@
     // 3.1 As Goes Light So Goes Darkness
     // 3.1 Dungeons
     "510": {
-      "name": "Pharos Sirius (Hard)",
+      "name": "怪鳥巨塔 シリウス大灯台 (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "511": {
-      "name": "Saint Mocianne's Arboretum",
+      "name": "草木庭園 聖モシャーヌ植物園",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -672,7 +672,7 @@
 
     // 3.1 Trials
     "448": {
-      "name": "Knights of the Round (Extreme) ?",
+      "name": "蒼天幻想 ナイツ・オブ・ラウンド討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -680,7 +680,7 @@
 
     // 3.1 Raids
     "508": {
-      "name": "The Void Ark",
+      "name": "魔航船ヴォイドアーク",
       "tank": "3",
       "healer": "6",
       "dps": "15"
@@ -710,13 +710,13 @@
     // 3.2 The Gears of Chance
     // 3.2 Dungeons
     "516": {
-      "name": "The Antitower",
+      "name": "星海観測 逆さの塔",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "519": {
-      "name": "Lost City of Amdapor (Hard)",
+      "name": "神聖遺跡 古アムダプール市街 (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -724,13 +724,13 @@
 
     // 3.2 Trials
     "517": {
-      "name": "Sephiroth",
+      "name": "魔神セフィロト討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "524": {
-      "name": "Sephiroth (Extreme)",
+      "name": "極魔神セフィロト討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -738,49 +738,49 @@
 
     // 3.2 Raids
     "520": {
-      "name": "A - Fist of the Son",
+      "name": "機工城アレキサンダー：律動編1",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "521": {
-      "name": "A - Cuff of the Son",
+      "name": "機工城アレキサンダー：律動編2",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "522": {
-      "name": "A - Arm of the Son",
+      "name": "機工城アレキサンダー：律動編3",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "523": {
-      "name": "A - Burden of the Son",
+      "name": "機工城アレキサンダー：律動編4",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "529": {
-      "name": "A - Fist of the Son (Savage)",
+      "name": "機工城アレキサンダー零式：律動編1",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "530": {
-      "name": "A - Cuff of the Son (Savage)",
+      "name": "機工城アレキサンダー零式：律動編2",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "531": {
-      "name": "A - Arm of the Son (Savage)",
+      "name": "機工城アレキサンダー零式：律動編3",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "532": {
-      "name": "A - Burden of the Son (Savage)",
+      "name": "機工城アレキサンダー零式：律動編4",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -790,13 +790,13 @@
     // 3.3 Revenge of the Horde
     // 3.3 Dungeons
     "555": {
-      "name": "Sohr Khai",
+      "name": "天竜宮殿 ソール・カイ",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "557": {
-      "name": "Hullbreaker Isle (Hard)",
+      "name": "財宝伝説 ハルブレーカー・アイル (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -804,13 +804,13 @@
 
     // 3.3 Trials
     "559": {
-      "name": "Nidhogg",
+      "name": "ニーズヘッグ征竜戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "566": {
-      "name": "Nidhogg (Extreme)",
+      "name": "極ニーズヘッグ征竜戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -818,7 +818,7 @@
 
     // 3.3 Raids
     "556": {
-      "name": "The Weeping City of Mhach",
+      "name": "禁忌都市マハ",
       "tank": "3",
       "healer": "6",
       "dps": "15"
@@ -826,7 +826,7 @@
 
     // 3.3 Party Contents
     "558": {
-      "name": "The Aquapolis",
+      "name": "宝物庫 アクアポリス",
       "tank": "0",
       "healer": "0",
       "dps": "0"
@@ -836,13 +836,13 @@
     // 3.4 Soul Surrender
     // 3.4 Dungeons
     "572": {
-      "name": "Xelphatol",
+      "name": "峻厳渓谷 ゼルファトル",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "578": {
-      "name": "The Great Gubal Library (Hard)",
+      "name": "禁書回収 グブラ幻想図書館 (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -850,13 +850,13 @@
 
     // 3.4 Trials
     "576": {
-      "name": "Sophia",
+      "name": "女神ソフィア討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "577": {
-      "name": "Sophia (Extreme)",
+      "name": "極女神ソフィア討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -864,49 +864,49 @@
 
     // 3.4 Raids
     "580": {
-      "name": "A - Eyes of the Creator",
+      "name": "機工城アレキサンダー：天動編1",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "581": {
-      "name": "A - Breath of the Creator",
+      "name": "機工城アレキサンダー：天動編2",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "582": {
-      "name": "A - Heart of the Creator",
+      "name": "機工城アレキサンダー：天動編3",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "583": {
-      "name": "A - Soul of the Creator",
+      "name": "機工城アレキサンダー：天動編4",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "584": {
-      "name": "A- Eyes of the Creator (Savage)",
+      "name": "機工城アレキサンダー零式：天動編1",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "585": {
-      "name": "A - Breath of the Creator (Savage)",
+      "name": "機工城アレキサンダー零式：天動編2",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "586": {
-      "name": "A - Heart of the Creator (Savage)",
+      "name": "機工城アレキサンダー零式：天動編3",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "587": {
-      "name": "A - Soul of the Creator (Savage)",
+      "name": "機工城アレキサンダー零式：天動編4",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -916,13 +916,13 @@
     // 3.5 The Far Edge of Fate
     // 3.5 Dungeons
     "615": {
-      "name": "Baelsar's Wall",
+      "name": "巨大防壁 バエサルの長城",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "617": {
-      "name": "Sohm Al (Hard)",
+      "name": "霊峰踏破 ソーム・アル (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -930,13 +930,13 @@
 
     // 3.5 Trials
     "637": {
-      "name": "Zurvan",
+      "name": "鬼神ズルワーン討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "638": {
-      "name": "Zurvan (Extreme)",
+      "name": "極鬼神ズルワーン討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -944,7 +944,7 @@
 
     // 3.5 Raids
     "627": {
-      "name": "Dun Scaith",
+      "name": "影の国ダン・スカー",
       "tank": "3",
       "healer": "6",
       "dps": "15"
@@ -954,49 +954,49 @@
     // 4.0 Stormblood
     // 4.0 Dungeons
     "626": {
-      "name": "The Sirensong Sea",
+      "name": "漂流海域 セイレーン海",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "616": {
-      "name": "Shisui of the Violet Tides",
+      "name": "海底宮殿 紫水宮",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "623": {
-      "name": "Bardam's Mettle",
+      "name": "伝統試練 バルダム覇道",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "660": {
-      "name": "Doma Castle",
+      "name": "解放決戦 ドマ城",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "661": {
-      "name": "Castrum Abania",
+      "name": "巨砲要塞 カストルム・アバニア",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "689": {
-      "name": "Ala Mhigo",
+      "name": "紅蓮決戦 アラミゴ",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "662": {
-      "name": "Kugane Castle",
+      "name": "悪党成敗 クガネ城",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "663": {
-      "name": "The Temple of the Fist",
+      "name": "壊神修行 星導山寺院",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -1004,31 +1004,31 @@
 
     // 4.0 Trials
     "674": {
-      "name": "Susano",
+      "name": "スサノオ討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "677": {
-      "name": "Susano (Extreme)",
+      "name": "極スサノオ討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "719": {
-      "name": "Lakshmi",
+      "name": "ラクシュミ討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "720": {
-      "name": "Lakshmi (Extreme)",
+      "name": "極ラクシュミ討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "679": {
-      "name": "Shinryu",
+      "name": "神龍討滅戦",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -1036,25 +1036,25 @@
 
     // 4.01 Raids
     "691": {
-      "name": "Deltascape V1.0",
+      "name": "次元の狭間オメガ：デルタ編1",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "692": {
-      "name": "Deltascape V2.0",
+      "name": "次元の狭間オメガ：デルタ編2",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "693": {
-      "name": "Deltascape V3.0",
+      "name": "次元の狭間オメガ：デルタ編3",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "694": {
-      "name": "Deltascape V4.0",
+      "name": "次元の狭間オメガ：デルタ編4",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -1062,120 +1062,152 @@
 	
     // 4.05 Raids
     "695": {
-      "name": "Deltascape V1.0 (Savage)",
+      "name": "次元の狭間オメガ：デルタ編1 (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "696": {
-      "name": "Deltascape V2.0 (Savage)",
+      "name": "次元の狭間オメガ：デルタ編2 (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "697": {
-      "name": "Deltascape V3.0 (Savage)",
+      "name": "次元の狭間オメガ：デルタ編3 (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "698": {
-      "name": "Deltascape V4.0 (Savage)",
+      "name": "次元の狭間オメガ：デルタ編4 (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-	
-	//4.05 Party Contents
+
+  //4.05 Party Contents
     "712": {
-      "name": "the Lost Canals of Uznair",
+      "name": "宝物庫 ウズネアカナル",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
 
 
+    // 4.1 The Legend Returns
+    // 4.1 Dungeon
+    "731": {
+      "name": "水没遺構 スカラ",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 4.1 Trials
+    "730": {
+      "name": "極神龍討滅戦",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 4.1 Raids
+    "734": {
+      "name": "失われた都 ラバナスタ",
+      "tank": "3",
+      "healer": "6",
+      "dps": "15"
+    },
+
+    //4.1 Party Contents
+    "725": {
+      "name": "宝物庫 ウズネアカナル深層",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+
     // Guildhests
     "190": {
-      "name": "Under the Armor",
+      "name": "彷徨う死霊を討て！",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "191": {
-      "name": "Pulling Poison Posies",
+      "name": "有毒妖花を駆除せよ！",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "192": {
-      "name": "Stinging Back",
+      "name": "無法者「似我蜂団」を撃滅せよ！",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "214": {
-      "name": "Basic Training: Enemy Parties",
+      "name": "集団戦訓練をくぐり抜けろ！",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "215": {
-      "name": "Basic Training: Enemy Strongholds",
+      "name": "全関門を突破し、最深部の敵を討て！",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "216": {
-      "name": "Hero on the Halfshell",
+      "name": "ギルガメを捕獲せよ！",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "219": {
-      "name": "Flicking Sticks and Taking Names",
+      "name": "爆弾魔ゴブリン軍団を撃滅せよ！",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "220": {
-      "name": "All's Well that Ends in the Well",
+      "name": "夢幻のブラキシオを討て！",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "221": {
-      "name": "More than a Feeler",
+      "name": "汚染源モルボルを討て！",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "222": {
-      "name": "Annoy the Void",
+      "name": "坑道に現れた妖異ブソを討て！",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "223": {
-      "name": "Shadow and Claw",
+      "name": "無敵の眷属を従えし、大型妖異を討て！",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "298": {
-      "name": "Long Live the Queen",
+      "name": "ボムを率いる「ボムクイーン」を討て！",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "299": {
-      "name": "Ward Up",
+      "name": "不気味な陣形を組む妖異をせん滅せよ！",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "300": {
-      "name": "Solemn Trinity",
+      "name": "三つ巴の巨人族を制し、遺物を守れ！",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -1184,97 +1216,97 @@
 
     // Novice Training
     "537": {
-      "name": "Avoid Area of Effect Attacks",
+      "name": "範囲攻撃を避けよう！",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "538": {
-      "name": "Execute a Combo to Increase Enmity",
+      "name": "コンボで敵視を集めよう！",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "539": {
-      "name": "Execute a Combo in Battle",
+      "name": "実戦でコンボに挑戦しよう！",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "540": {
-      "name": "Accrue Enmity from Multiple Targets",
+      "name": "複数の敵から敵視を集めよう！",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "541": {
-      "name": "Engage Multiple Targets",
+      "name": "実戦で複数の敵と戦ってみよう！",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "542": {
-      "name": "Execute a Ranged Attack to Increase Enmity",
+      "name": "遠距離から敵視を集めよう！",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "543": {
-      "name": "Engage Enemy Reinforcements",
+      "name": "敵の増援に対応しよう！",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "544": {
-      "name": "Assist Allies in Defeating a Target",
+      "name": "味方と協力して敵を倒そう！",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "545": {
-      "name": "Defeat an Occupied Target",
+      "name": "味方が引きつけている敵を倒そう！",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "546": {
-      "name": "Avoid Engaged Targets",
+      "name": "敵の攻撃を避けながら戦おう！",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "547": {
-      "name": "Engage Enemy Reinforcements",
+      "name": "敵の増援に対応しよう！",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "548": {
-      "name": "Interact with the Battlefield",
+      "name": "ギミックを活用して戦おう！",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "549": {
-      "name": "Heal an Ally",
+      "name": "味方を回復しよう！",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "550": {
-      "name": "Heal Multiple Allies",
+      "name": "複数の味方を回復しよう！",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "551": {
-      "name": "Avoid Engaged Targets",
+      "name": "敵の攻撃を避けながら戦おう！",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "552": {
-      "name": "Final Exercise",
+      "name": "最終訓練！",
       "tank": "0",
       "healer": "0",
       "dps": "0"
@@ -1319,19 +1351,19 @@
       "dps": "0"
     },
     "376": {
-      "name": "The Borderland Ruins (Secure)",
+      "name": "外縁遺跡群 (制圧戦)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "422": {
-      "name": "The Borderland Ruins (Slaughter)",
+      "name": "外縁遺跡群 (殲滅戦)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "431": {
-      "name": "Seal Rock (Seize)",
+      "name": "シールロック (争奪戦),
       "tank": "0",
       "healer": "0",
       "dps": "0"
@@ -1367,19 +1399,19 @@
       "dps": "0"
     },
     "618": {
-      "name": "The Feast (8 on 8 - Custom Match - Feasting Grounds)",
+      "name": "ザ・フィースト (8対8 / カスタムマッチ専用 / ウルヴズジェイル演習場)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "619": {
-      "name": "The Feast (4 on 4 - Custom Match - Feasting Grounds)",
+      "name": "ザ・フィースト (4対4 / カスタムマッチ専用 / ウルヴズジェイル演習場)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "554": {
-      "name": "The Fields of Glory (Shatter)",
+      "name": "フィールド・オブ・グローリー (砕氷戦)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
@@ -1388,121 +1420,121 @@
 
     // Deep Dungeons
     "561": {
-      "name": "The Palace of the Dead B1~B10",
+      "name": "死者の宮殿 B1~B10",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "562": {
-      "name": "The Palace of the Dead B11~B20",
+      "name": "死者の宮殿 B11~B20",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "563": {
-      "name": "The Palace of the Dead B21~B30",
+      "name": "死者の宮殿 B21~B30",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "564": {
-      "name": "The Palace of the Dead B31~B40",
+      "name": "死者の宮殿 B31~B40",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "565": {
-      "name": "The Palace of the Dead B41~B50",
+      "name": "死者の宮殿 B41~B50",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "593": {
-      "name": "The Palace of the Dead B51~B60",
+      "name": "死者の宮殿 B51~B60",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "594": {
-      "name": "The Palace of the Dead B61~B70",
+      "name": "死者の宮殿 B61~B70",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "595": {
-      "name": "The Palace of the Dead B71~B80",
+      "name": "死者の宮殿 B71~B80",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "596": {
-      "name": "The Palace of the Dead B81~B90",
+      "name": "死者の宮殿 B81~B90",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "597": {
-      "name": "The Palace of the Dead B91~B100",
+      "name": "死者の宮殿 B91~B100",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "598": {
-      "name": "The Palace of the Dead B101~B110",
+      "name": "死者の宮殿 B101~B110",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "599": {
-      "name": "The Palace of the Dead B111~B120",
+      "name": "死者の宮殿 B111~B120",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "600": {
-      "name": "The Palace of the Dead B121~B130",
+      "name": "死者の宮殿 B121~B130",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "601": {
-      "name": "The Palace of the Dead B131~B140",
+      "name": "死者の宮殿 B131~B140",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "602": {
-      "name": "The Palace of the Dead B141~B150",
+      "name": "死者の宮殿 B141~B150",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "603": {
-      "name": "The Palace of the Dead B151~B160",
+      "name": "死者の宮殿 B151~B160",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "604": {
-      "name": "The Palace of the Dead B161~B170",
+      "name": "死者の宮殿 B161~B170",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "605": {
-      "name": "The Palace of the Dead B171~B180",
+      "name": "死者の宮殿 B171~B180",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "606": {
-      "name": "The Palace of the Dead B181~B190",
+      "name": "死者の宮殿 B181~B190",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "607": {
-      "name": "The Palace of the Dead B191~B200",
+      "name": "死者の宮殿 B191~B200",
       "tank": "0",
       "healer": "0",
       "dps": "0"
@@ -1511,7 +1543,7 @@
 
     // Other things...
     "579": {
-      "name": "Triple Triad",
+      "name": "トリプルトライアド",
       "tank": "0",
       "healer": "0",
       "dps": "0"
@@ -1520,17 +1552,18 @@
 
   // Duty Roulette
   "roulettes": {
-    "1": "Duty Roulette: Leveling",
-    "2": "Duty Roulette: Level 50/60 Dungeons",
-    "3": "Duty Roulette: Main Scenario",
-    "4": "Duty Roulette: Guildhests",
-    "5": "Duty Roulette: Expert",
-    "6": "Duty Roulette: Trials",
-    "7": "Duty Roulette: Frontline",
-    "8": "Duty Roulette: Level 70 Dungeons",
-    "9": "Duty Roulette: Mentor",
-    "10": "The Feast (8 on 8) - Training",
-    "13": "The Feast (4 on 4) - Ranked"
+    "1": "コンテンツルーレット: レベリング",
+    "2": "コンテンツルーレット: レベル50・60ダンジョン",
+    "3": "コンテンツルーレット: メインクエスト",
+    "4": "コンテンツルーレット: ギルドオーダー",
+    "5": "コンテンツルーレット: エキスパート",
+    "6": "コンテンツルーレット: 討伐・討滅戦",
+    "7": "コンテンツルーレット: フロントライン",
+    "8": "コンテンツルーレット: レベル70ダンジョン",
+    "9": "コンテンツルーレット: メンター",
+    "10": "ザ・フィースト (8対8 / カジュアルマッチ)",
+    "13": "ザ・フィースト (4対4 / ランクマッチ)",
+    "15": "コンテンツルーレット: アライアンスレイド"
   },
 
   // FATEs
@@ -2192,7 +2225,7 @@
         "856": "Leather and Mace",
         "857": "Hearts Like Steel, Fists Like Thunder",
         "860": "Bones",
-        "861": "Bismarcking Time",
+        "861": "The Limitless Blueing Time",
         "862": "Let There Be Acolytes",
         "863": "A Disturbing Lack of Faith",
         "864": "Guano a Mano",
