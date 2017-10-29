@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20171016.3", 
+  "version": "20171029.1", 
 
   // Duty
   "instances": {
@@ -1126,6 +1126,16 @@
       "tank": "0",
       "healer": "0",
       "dps": "0"
+    },
+	
+	//4.11 Raids
+    "733": {
+      "name": "絶バハムート討滅戦",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
 
     // Guildhests
     "190": {
@@ -1544,6 +1554,15 @@
     // Other things...
     "579": {
       "name": "トリプルトライアド",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    }
+  },
+  
+	//Event Instance
+    "571": {
+      "name": "亡霊屋敷 ホーンテッドマナー",
       "tank": "0",
       "healer": "0",
       "dps": "0"
