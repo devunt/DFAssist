@@ -1634,6 +1634,14 @@
       "healer": "0",
       "dps": "0"
     },
+	
+	// etc
+    "283": {
+      "name": "The Forbidden Land, Eureka Anemos",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
 
 
     // Other things...

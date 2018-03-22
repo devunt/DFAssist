@@ -1509,6 +1509,14 @@
       "name": "Astragalos (machinerie)",
       "tank": "0",
       "healer": "0",
+      "dps": "0L"
+    },
+	
+	// etc
+    "283": {
+      "name": "a terre interdite d'Eurêka",
+      "tank": "0",
+      "healer": "0",
       "dps": "0"
     },
 
