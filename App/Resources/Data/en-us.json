@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20180316.1",
+  "version": "20180322.1",
 
   // Duty
   "instances": {
@@ -2362,7 +2362,7 @@
       }
     },
     "612": {
-      "name": "Stormblood",
+      "name": "Stormblood and Events",
       "fates": {
         "932": "Our Favorite Pastime",
         "933": "The Way of the Samurai",
