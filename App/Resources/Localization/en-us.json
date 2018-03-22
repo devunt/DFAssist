@@ -1,5 +1,5 @@
 ﻿{
-  "app-name": "Duty/FATE Assist",
+  "app-name": "Duty/FATE Notificator",
 
 
   "unknown-instance": "Unknown Duty ({0})",
@@ -8,12 +8,12 @@
   "unknown-fate": "Unknown FATE ({0})",
 
 
-  "notification-app-updated": "Updated to version {0}",
-  "notification-queue-matched": "< {0} > matched!",
+  "notification-app-updated": "Version {0} Updated",
+  "notification-queue-matched": "< {0} > Matched!",
 
 
-  "tweet-fate-occured": "< {0} > FATE spawned!",
-  "tweet-queue-matched": "< {0} > Duty matched!",
+  "tweet-fate-occured": "< {0} > FATE Occured!",
+  "tweet-queue-matched": "< {0} > Matched!",
 
 
   "fate-preset-animus-SkyfireI": "Book of Skyfire I",
@@ -39,62 +39,62 @@
   "ui-tabcontrol-logs": "Logs",
   "ui-tabcontrol-info": "Info",
 
-  "ui-settings-title": "Basic Settings",
-  "ui-settings-overlay-use": "Use overlay",
-  "ui-settings-overlay-tooltip": "Move the overlay by dragging the green bar on the left.",
+  "ui-settings-title": "Basic Setting",
+  "ui-settings-overlay-use": "Use Overlay",
+  "ui-settings-overlay-tooltip": "Move Overlay by Draging Left bar.",
   "ui-settings-overlay-reset": "Reset",
-  "ui-settings-overlay-announcement": "Show announcement on overlay",
-  "ui-settings-startupshow": "Show main window when program starts",
-  "ui-settings-autohide": "Auto-hide overlay while in Duty",
-  "ui-settings-iconflash": "Blink FFXIV Icon when a Duty matches/FATE occurs",
+  "ui-settings-startupshow": "Show MainForm when Program Starts",
+  "ui-settings-autohide": "Auto Hide Overlay while in Duty",
+  "ui-settings-iconflash": "FFXIV Icon Blinks when Duty Matched/FATE occur",
+  "ui-settings-cheatroulette": "Show Actual Matched Duty when using Duty Roulette",
   "ui-settings-tweet-title": "Twitter Alarm",
-  "ui-settings-tweet-activate": "Enable",
-  "ui-settings-playsound": "Play sound",
-  "ui-settings-soundlocation": "Select sound",
-  "ui-settings-tweet-about": "When a queue pops or FATE occurs, \nsend a Tweet with a mention to the this Twitter account.\nEnter the Twitter Account except the preceding symbol @.",
+  "ui-settings-tweet-activate": "Activate",
+  "ui-settings-tweet-about": "When matched or FATE occurs, \nsend a Tweet with mention to the entered Twitter account.\nEnter the Twitter Account except the preceding symbol @.",
 
   "ui-fate-selectall": "Select All",
   "ui-fate-unselectall": "Unselect All",
   "ui-fate-preset": "Preset",
   "ui-fate-apply": "Apply",
-  "ui-fate-about": "Select an area to receive notifications for, then press the Apply button at the top.\nPlease note: The alert will only work if you are in the selected area.",
+  "ui-fate-about": "Select to receive notification, then press the Top Apply button.\nAlert operates only when the character is in the FATE area.",
 
   "ui-logs-copy": "Copy Logs",
   "ui-logs-clear": "Clear",
 
-  "ui-info-about": "[Contributor]\n유채색\nLaiglinne\nHibiyasleep\nAlex00728\nAida Enna\n\n[Copyright]\nAll company, product, system names are\n registered or unregistered trademarks of their respective owners.\n(C)2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by EYEDENTITY Entertainment.",
+  "ui-info-about": "[Contributor]\n유채색\nLaiglinne\nHibiyasleep\nAlex00728\n\n[Copyright]\nAll company, product, system names are\n registered or unregistered trademarks of their respective owners.\n(C)2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by EYEDENTITY Entertainment.",
 
   "ui-msgbox-title-info": "DFA Notice",
   "ui-msgbox-title-warning": "DFA Warning",
   "ui-msgbox-title-error": "DFA Error",
 
-  "ui-language-changed": "Language changed to English.\nYou will need to restart the application\nfor certain changes to take effect.\nPlease do so now.",
+  "ui-language-changed": "Language changed to English.\nSome parts needs Application restart to be applied.\nPlease Restart the application.",
 
   "ui-clipboard-copied": "Copied to Clipboard.",
 
-  "ui-clear-log-confirm": "This will clear all the logging done so far.\nContinue?",
+  "ui-cheat-roulette-confirm": "This function is disabled by default to prevent abuse.\nPlease refrain from deliberately rejecting a specific dislike duty.\n\nDo you still want to enable it?",
+  "ui-cheat-roulette-enabled": "Enabled.\nPlease DON'T deliberately reject a specific dislike duty.",
 
-  "ui-fate-selection-saved": "FATE notification set.",
-  "ui-fate-preset-applied": "FATE preset applied.",
+  "ui-clear-log-confirm": "Clear Logs?",
+
+  "ui-fate-selection-saved": "FATE Notification set.",
+  "ui-fate-preset-applied": "FATE Preset applied.",
 
   "ui-updating": "Updating Program...\n{0}",
 
-  "ui-app-crashed": "Application exiting due to an unknown issue.\n\nError: {0}",
+  "ui-app-crashed": "Application exit due to Unknown Issue.\n\nError: {0}",
 
 
-  "overlay-announcement": "",
-  "overlay-waiting-connection": "Waiting for game connection",
-  "overlay-not-queuing": "No matching in progress",
+  "overlay-waiting-connection": "Waiting for Client Connection",
+  "overlay-not-queuing": "No Waiting Matches",
   "overlay-duty-count-unknown": "Matching Duty",
   "overlay-duty-count": "{0} Duty Matching",
   "overlay-queue-waiting-party": "Party Matching: {0} / {1} / {2}",
-  "overlay-queue-waiting": "Retreving information...",
+  "overlay-queue-waiting": "Retreving Information...",
   "overlay-queue-order": "Waiting List Number: {0}",
   "overlay-roulette": "Duty Roulette",
-  "overlay-queue-waiting-confirm": "Waiting for you to confirm...",
-  "overlay-queue-matched": "Match found!",
-  "overlay-queue-confirming": "Checking member status...",
-  "overlay-fate-occured": "FATE spawned!",
+  "overlay-queue-waiting-confirm": "Waiting for your Acception",
+  "overlay-queue-matched": "Matched!",
+  "overlay-queue-confirming": "Waiting for Acception",
+  "overlay-fate-occured": "FATE Occured!",
 
 
   "l-process-set-success": "P: FFXIV Process Selected: {0}",
@@ -111,16 +111,16 @@
 
   "l-updater-current-version": "U: Current Version: {0}",
   "l-updater-latest-version": "U: Up-to-date Version: {0}",
-  "l-updater-is-latest": "U: Using latest version.",
-  "l-updater-new-version": "U: Updated version found.",
+  "l-updater-is-latest": "U: Using latest Version.",
+  "l-updater-new-version": "U: Update Version Exists.",
   "l-updater-error-general": "U: Error while updating data",
   "l-updater-error-data": "U: Error while updating D/F Data",
-  "l-updater-error-check": "U: Could not find update information.",
-  "l-updater-error-no-url": "U: Could not find update file.",
+  "l-updater-error-check": "U: Could not find Update Information.",
+  "l-updater-error-no-url": "U: Could not find Update File.",
   "l-updater-error-downloading": "U: Error while getting update data",
 
   "l-data-updated": "D: D/F Data updated to Version {0}.",
-  "l-data-is-latest": "D: Using Latest D/F Data (Version {0}).",
+  "l-data-is-latest": "D: Using Latest D/F Data(Version {0}).",
   "l-data-error": "D: Error occured while processing D/F Data",
 
   "l-packet-error-ip": "P: IP Packet Parsing Error",
@@ -155,7 +155,7 @@
   "l-queue-matched": "Q: Matched [{0}]",
   "l-queue-updated": "Q: Matching State Updated [{0}, {1}, {2}/{3}, {4}/{5}, {6}/{7}]",
 
-  "l-fate-occured-info": "F: {0} FATE spawned!",
+  "l-fate-occured-info": "F: {0} FATE Occured!",
 
   "l-field-instance-entered": "I: Entered Instance Area [{0}]",
   "l-field-instance-left": "I: Left Instance Area"

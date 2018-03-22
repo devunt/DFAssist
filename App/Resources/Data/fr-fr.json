@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20171029.1",
+  "version": "20180316.1",
 
   // Duty
   "instances": {
@@ -1136,6 +1136,85 @@
       "dps": "4"
     },
 
+    // 4.2 Rise of a New Sun
+    // 4.2 Dungeon
+    "742": {
+      "name": "Le Couvercle des enfers",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "743": {
+      "name": "Le Continuum fractal (brutal)",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 4.2 Trials
+    "746": {
+      "name": "La Clairière de Jade",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "758": {
+      "name": "La Clairière de Jade (extrême)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 4.2 Raids
+    "748": {
+      "name": "Sigmastice v1.0",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "749": {
+      "name": "Sigmastice v2.0",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "750": {
+      "name": "Sigmastice v3.0",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "751": {
+      "name": "Sigmastice v4.0",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "752": {
+      "name": "Sigmastice v1.0 (sadique)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "753": {
+      "name": "Sigmastice v2.0 (sadique)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "754": {
+      "name": "Sigmastice v3.0 (sadique)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "755": {
+      "name": "Sigmastice v4.0 (sadique)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
 
     // Guildhests
     "190": {
@@ -1557,8 +1636,7 @@
       "tank": "0",
       "healer": "0",
       "dps": "0"
-    }
-  },
+    },
   
 	//Event Instance
     "571": {

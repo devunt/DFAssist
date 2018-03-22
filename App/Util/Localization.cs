@@ -26,10 +26,6 @@ namespace App
                     json = Resources.Localization_FR_FR;
                     break;
 
-                case "ja-jp":
-                    json = Resources.Localization_JA_JP;
-                    break;
-
                 default:
                     return;
             }

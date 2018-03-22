@@ -153,8 +153,6 @@ namespace App
                     var code = BitConverter.ToInt16(data, 4);
                     var type = data[8];
 
-                    Log.B(data);
-
                     if (type == 0x0B)
                     {
                         Log.I("l-field-instance-entered", Data.GetInstance(code).Name);
@@ -322,11 +320,7 @@ namespace App
                         {
                             WinApi.FlashWindow(mainForm.FFXIVProcess);
                         }
-                        if (Settings.PlaySound && Settings.SoundLocation != "" && System.IO.File.Exists(Settings.SoundLocation))
-                        {
-                            System.Media.SoundPlayer player = new System.Media.SoundPlayer(Settings.SoundLocation);
-                            player.Play();
-                        }
+
                         if (!Settings.ShowOverlay)
                         {
                             mainForm.ShowNotification("notification-queue-matched", instance.Name);

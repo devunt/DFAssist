@@ -43,10 +43,10 @@
   "ui-settings-overlay-use": "오버레이 사용",
   "ui-settings-overlay-tooltip": "오버레이 UI의 좌측 막대를 이용해 드래그 할 수 있습니다.",
   "ui-settings-overlay-reset": "위치 초기화",
-  "ui-settings-overlay-announcement": "오버레이에 공지사항 보여주기",
   "ui-settings-startupshow": "프로그램 시작시 이 창 보이기",
   "ui-settings-autohide": "임무 입장시 자동으로 오버레이 숨김",
   "ui-settings-iconflash": "매칭/돌발 발생시 파이널판타지14 작업 표시줄 아이콘 깜빡이기",
+  "ui-settings-cheatroulette": "무작위 임무일 경우에도 실제 매칭된 임무 보여주기",
   "ui-settings-tweet-title": "트위터 알림",
   "ui-settings-tweet-activate": "활성화",
   "ui-settings-tweet-about": "매칭이 됐을 시 입력된 트위터 계정으로 멘션을 보내 해당 사실을 알립니다.\n원하는 돌발이 발생했을 시에도 멘션을 보내 해당 사실을 알립니다.\n계정명 입력시 앞의 @ 표시는 제외하고 순수 계정명만 입력해주세요.",
@@ -70,6 +70,9 @@
 
   "ui-clipboard-copied": "클립보드에 복사되었습니다.",
 
+  "ui-cheat-roulette-confirm": "악용 방지를 위해 기본적으로 비활성화 되어있는 기능입니다.\n특정 비인기 임무를 고의적으로 입장 거부하는 행위 등은 자제해주세요.\n\n그래도 활성화 하시겠습니까?",
+  "ui-cheat-roulette-enabled": "활성화되었습니다.\n특정 비인기 임무를 고의적으로 입장 거부하는 행위 등은 자제해주세요.",
+
   "ui-clear-log-confirm": "로그를 지우시겠습니까?",
 
   "ui-fate-selection-saved": "돌발 알림 설정이 적용되었습니다.",
@@ -80,7 +83,6 @@
   "ui-app-crashed": "알 수 없는 오류가 발생해 프로그램을 종료합니다.\n\n에러: {0}",
 
 
-  "overlay-announcement": "페미니즘을 지지하고 연대합니다", 
   "overlay-waiting-connection": "클라이언트 통신 대기 중",
   "overlay-not-queuing": "매칭중인 임무 없음",
   "overlay-duty-count-unknown": "임무 매칭 중",

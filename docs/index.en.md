@@ -8,9 +8,9 @@ title: {{ site.name }}
 Do other things while in waiting list! DFAssist will give you match notification.
 
 ## Information
-- Latest Version ```v20170928.2``` ([Download](https://github.com/devunt/DFAssist/releases/latest))
+- Latest Version ```v20180322.1``` ([Download](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
 - Target Version ```Microsoft .NET Framework 4.0``` ([Download](https://www.microsoft.com/en-us/download/details.aspx?id=17851))
-- Game Version ```Final Fantasy XIV, Version 4.0```
+- Game Version ```Final Fantasy XIV, Version 4.2```
 
 ## Instructions
 1. Download ``DFAssist.v********.*.zip`` file from the upper download link's file list.
@@ -26,11 +26,8 @@ Do other things while in waiting list! DFAssist will give you match notification
   - Notifies when checked F.A.T.E occurs. (Character Need to be in FATE area)
   - Tweet notification support. (with Mention)
 
-### In Development
-- Overlay skin customize feature.
-
 ## Problem Solving
-Post problems on [Issue Tracker](https://github.com/devunt/DFAssist/issues).
+Post problems on [Issue Tracker](https://github.com/jaehyuk-lee/DFAssist/issues).
 
 Logs on application window helps a lot with problem solving. Attaching logs is highly recommanded.
 
@@ -66,7 +63,7 @@ Logs on application window helps a lot with problem solving. Attaching logs is h
 ```
   All company, product, system names are registered or unregistered trademarks of their respective owners.
 
-  (C) 2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved. Korea Published by EYEDENTITY ENTERTAINMENT.
+  (C) 2010 - 2018 SQUARE ENIX CO., LTD All Rights Reserved. Korea Published by EYEDENTITY ENTERTAINMENT.
 ```
 All codes, resources, data, not copyrighted by company above, are
 destributed with [Public Domain](https://en.wikipedia.org/wiki/Public_domain).
