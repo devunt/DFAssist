@@ -401,6 +401,18 @@ namespace App
             PresetAccept(arr);
         }
 
+        private void IxionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int[] arr = { 1103, 1104, 1105 };
+            PresetAccept(arr);
+        }
+
+        private void TamamoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int[] arr = { 1106, 1107, 1108, 1109, 1110, 1111 };
+            PresetAccept(arr);
+        }
+
         private void SetCheatRoulleteCheckBox(bool @checked)
         {
             checkBox_CheatRoullete.CheckedChanged -= checkBox_CheatRoullete_CheckedChanged;
@@ -520,6 +532,8 @@ namespace App
             bookOfSkywindIToolStripMenuItem.Text = Localization.GetText("fate-preset-animus-SkywindI");
             bookOfSkywindIIToolStripMenuItem.Text = Localization.GetText("fate-preset-animus-SkywindII");
             bookOfSkyearthIToolStripMenuItem.Text = Localization.GetText("fate-preset-animus-SkyearthI");
+            IxionToolStripMenuItem.Text = Localization.GetText("fate-preset-Ixion");
+            TamamoToolStripMenuItem.Text = Localization.GetText("fate-preset-Tamamo");
             toolStripMenuItem_SelectApply.Text = Localization.GetText("ui-fate-apply");
             label_FATEAbout.Text = Localization.GetText("ui-fate-about");
             toolStripMenuItem_LogCopy.Text = Localization.GetText("ui-logs-copy");
