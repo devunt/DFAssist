@@ -8,7 +8,7 @@ title: {{ site.name }}
 매칭을 돌려놓고 다른 일을 하다가 매칭 된 줄도 모르고 계속 다른 일을 하느라 확인을 못 누르는 사태를 방지하기 위해 만들었습니다.
 
 ## 정보
-- 최신 버전 ```v20180327.1``` ([다운로드](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
+- 최신 버전 ```v20180415.1``` ([다운로드](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
 - 타겟 버전 ```Microsoft .NET Framework 4.0``` ([다운로드](https://www.microsoft.com/ko-kr/download/details.aspx?id=17851))
 - 게임 버전 ```파이널 판타지 14 한국판, 버전 4.1``` 또는 ```글로벌판, 버전 4.2```
 
@@ -33,7 +33,7 @@ title: {{ site.name }}
 
 ## json 파일 변환 도구
 [FFXIV_DATA_Conversion_Tool](https://github.com/Jaehyuk-Lee/FFXIV_DATA_Conversion_Tool/releases)
-사용하기 쉽게 만들지는 않았습니다. 이건 쓰실 분만 쓰세요...
+사용하기 쉽게 만들지는 않았습니다. 이건 쓰실 분만 쓰세요... 파판 데이터 csv파일을 DFAssist용 json 파일로 변환해주는 프로그램입니다.
 
 ## 스크린샷
 
