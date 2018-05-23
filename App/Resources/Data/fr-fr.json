@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20180415.1",
+  "version": "20180524.1",
 
   // Duty
   "instances": {
@@ -1217,6 +1217,42 @@
 
     // 4.3 Under the MoonLight
     // 4.3 Dungeon
+    "768": {
+      "name": "le Compas de l'Hirondelle",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    }
+
+    // 4.3 Trials
+    "778": {
+      "name": "Castrum Fluminis",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "779": {
+      "name": "Castrum Fluminis (extrême)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 4.3 Raids
+    "776": {
+      "name": "le Phare de Ridorana",
+      "tank": "3",
+      "healer": "6",
+      "dps": "15"
+    },
+
+    // 4.31 Raids
+    "800": {
+      "name": "La Fantasmagorie d'Ultima (fatal)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
 
 
     // Guildhests
@@ -1517,7 +1553,13 @@
 	
 	// etc
     "283": {
-      "name": "a terre interdite d'Eurêka",
+      "name": "a terre interdite d'Eurêka: Anemos",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "801": {
+      "name": "a terre interdite d'Eurêka: Pagos",
       "tank": "0",
       "healer": "0",
       "dps": "0"

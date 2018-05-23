@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20180415.1",
+  "version": "20180524.1",
 
   // Duty
   "instances": {
@@ -1217,6 +1217,42 @@
 
     // 4.3 Under the MoonLight
     // 4.3 Dungeon
+    "768": {
+      "name": "The Swallow's Compass",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    }
+
+    // 4.3 Trials
+    "778": {
+      "name": "Castrum Fluminis",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "779": {
+      "name": "the Minstrel's Ballad: Tsukuyomi's Pain",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 4.3 Raids
+    "776": {
+      "name": "The Ridorana Lighthouse",
+      "tank": "3",
+      "healer": "6",
+      "dps": "12"
+    },
+
+    // 4.31 Raids
+    "800": {
+      "name": "The Weapon's Refrain (Ultimate)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
 
 
     // Guildhests
@@ -1641,6 +1677,12 @@
 	// etc
     "283": {
       "name": "The Forbidden Land, Eureka Anemos",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "801": {
+      "name": "The Forbidden Land, Eureka Pagos",
       "tank": "0",
       "healer": "0",
       "dps": "0"
