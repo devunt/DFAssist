@@ -55,7 +55,7 @@ namespace App
             }
             catch (Exception ex)
             {
-                Log.Ex(ex, "web-failed");
+                Log.Ex(ex, "l-web-request-failed");
             }
 
             return null;

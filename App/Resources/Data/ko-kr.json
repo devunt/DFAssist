@@ -1,6 +1,6 @@
 ﻿{
   // 버전
-  "version": "20180923.2",
+  "version": "20180922.1",
 
   // 임무
   "instances": {
@@ -157,13 +157,13 @@
       "dps": "2"
     },
     "18": {
-      "name": "구리종 광산(어려움)",
+      "name": "구리종 광산 (어려움)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "19": {
-      "name": "하우케타 별궁(어려움)",
+      "name": "하우케타 별궁 (어려움)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -262,13 +262,13 @@
       "dps": "2"
     },
     "21": {
-      "name": "할라탈리 수련장(어려움)",
+      "name": "할라탈리 수련장 (어려움)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "20": {
-      "name": "브레이플록스의 야영지(어려움)",
+      "name": "브레이플록스의 야영지 (어려움)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -336,13 +336,13 @@
       "dps": "2"
     },
     "25": {
-      "name": "돌방패 경계초소(어려움)",
+      "name": "돌방패 경계초소 (어려움)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "24": {
-      "name": "탐타라 묘소(어려움)",
+      "name": "탐타라 묘소 (어려움)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -363,7 +363,7 @@
     },
 
     // 2.3 레이드
-    "1474": {
+    "102": {
       "name": "크리스탈 타워: 시르쿠스 탑",
       "tank": "3",
       "healer": "6",
@@ -404,13 +404,13 @@
       "dps": "2"
     },
     "26": {
-      "name": "카른의 무너진 사원(어려움)",
+      "name": "카른의 무너진 사원 (어려움)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "28": {
-      "name": "사스타샤 침식 동굴(어려움)",
+      "name": "사스타샤 침식 동굴 (어려움)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -472,13 +472,13 @@
       "dps": "2"
     },
     "30": {
-      "name": "방랑자의 궁전(어려움)",
+      "name": "방랑자의 궁전 (어려움)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "29": {
-      "name": "옛 암다포르 성(어려움)",
+      "name": "옛 암다포르 성 (어려움)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -504,7 +504,7 @@
       "dps": "4"
     },
     // 2.55 토벌전
-    "83": {
+    "419": {
       "name": "성도 이슈가르드 방어전",
       "tank": "2",
       "healer": "2",
@@ -658,7 +658,7 @@
     // 3.1 빛과 어둠의 경계
     // 3.1 던전
     "40": {
-      "name": "시리우스 대등대(어려움)",
+      "name": "시리우스 대등대 (어려움)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -700,7 +700,7 @@
       "dps": "5"
     },
     "133": {
-      "name": "디아뎀 제도(어려움)",
+      "name": "디아뎀 제도 (어려움)",
       "tank": "1",
       "healer": "2",
       "dps": "5"
@@ -716,7 +716,7 @@
       "dps": "2"
     },
     "140": {
-      "name": "옛 암다포르 시가지(어려움)",
+      "name": "옛 암다포르 시가지 (어려움)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -796,7 +796,7 @@
       "dps": "2"
     },
     "172": {
-      "name": "난파선의 섬(어려움)",
+      "name": "난파선의 섬 (어려움)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -834,6 +834,7 @@
 
 
     // 3.4 혼을 계승하는 자
+    // 3.4 던전
     "182": {
       "name": "젤파톨",
       "tank": "1",
@@ -841,7 +842,7 @@
       "dps": "2"
     },
     "196": {
-      "name": "구브라 환상도서관(어려움)",
+      "name": "구브라 환상도서관 (어려움)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -921,7 +922,7 @@
       "dps": "2"
     },
     "221": {
-      "name": "솜 알(어려움)",
+      "name": "솜 알 (어려움)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -1058,7 +1059,7 @@
       "healer": "2",
       "dps": "4"
     },
-
+	
     // 4.05 레이드
     "256": {
       "name": "오메가: 델타편 1 (영웅)",
@@ -1084,8 +1085,8 @@
       "healer": "2",
       "dps": "4"
     },
-
-    //4.05 파티 컨텐츠
+	
+	//4.05 파티 컨텐츠
     "268": {
       "name": "보물고 우즈네어 운하",
       "tank": "0",
@@ -1118,16 +1119,16 @@
       "healer": "6",
       "dps": "15"
     },
-
-    //4.1 파티 컨텐츠
+	
+	//4.1 파티 컨텐츠
     "276": {
       "name": "보물고 우즈네어 운하 심층",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-
-    //4.11 레이드
+	
+	//4.11 레이드
     "280": {
       "name": "절 바하무트 토벌전",
       "tank": "2",
@@ -1144,7 +1145,7 @@
       "dps": "2"
     },
     "285": {
-      "name": "무한연속 박물함(어려움)",
+      "name": "무한연속 박물함 (어려움)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -1242,7 +1243,7 @@
       "name": "성탑 리도르아나",
       "tank": "3",
       "healer": "6",
-      "dps": "12"
+      "dps": "15"
     },
 
     // 4.31 레이드
@@ -1252,18 +1253,21 @@
       "healer": "2",
       "dps": "4"
     },
+
+    //4.36 토벌전
     "474": {
-      "name": "몬스터헌터",
+      "name": "리오레우스 토벌전",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "475": {
-      "name": "극 몬스터헌터",
-      "tank": "1",
-      "healer": "1",
-      "dps": "2"
+      "name": "극 리오레우스 토벌전",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
     },
+
 
     // 4.4 광란의 전주곡
     // 4.4 던전
@@ -1274,7 +1278,7 @@
       "dps": "2"
     },
     "584": {
-      "name": "성 모샨 식물원(어려움)",
+      "name": "성 모샨 식물원 (어려움)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -1295,27 +1299,27 @@
     },
 
     // 4.4 레이드
-
+    
     "587": {
-      "name": "오메가: 알파편 1",
+      "name": "차원의 틈 오메가: 알파편 1",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "588": {
-      "name": "오메가: 알파편 2",
+      "name": "차원의 틈 오메가: 알파편 2",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "589": {
-      "name": "오메가: 알파편 3",
+      "name": "차원의 틈 오메가: 알파편 3",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "590": {
-      "name": "오메가: 알파편 4",
+      "name": "차원의 틈 오메가: 알파편 4",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -1539,12 +1543,6 @@
       "healer": "0",
       "dps": "0"
     },
-    "422": {
-      "name": "외곽 유적지대 (섬멸전)", //없어졌나??
-      "tank": "0",
-      "healer": "0",
-      "dps": "0"
-    },
     "130": {
       "name": "봉인된 바위섬 (쟁탈전)",
       "tank": "0",
@@ -1553,72 +1551,66 @@
     },
     "145": {
       "name": "더 피스트 (4 대 4 / 일반전)",
-      "tank": "2",
-      "healer": "2",
-      "dps": "4"
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
     },
     "228": {
       "name": "더 피스트 (4 대 4 / 등급전)",
-      "tank": "2",
-      "healer": "2",
-      "dps": "4"
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
     },
     "230": {
       "name": "더 피스트 (4 대 4 / 일반전)",
-      "tank": "2",
-      "healer": "2",
-      "dps": "4"
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
     },
     "143": {
       "name": "더 피스트 (4 대 4 / 등급전)",
-      "tank": "2",
-      "healer": "2",
-      "dps": "4"
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
     },
     "201": {
       "name": "더 피스트 (늑대우리 훈련장: 친선 경기)",
-      "tank": "2",
-      "healer": "2",
-      "dps": "4"
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
     },
     "233": {
       "name": "더 피스트 (잡초 훈련장: 친선 경기)",
-      "tank": "2",
-      "healer": "2",
-      "dps": "4"
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
     },
     "476": {
       "name": "더 피스트 (팀 등급전)",
-      "tank": "2",
-      "healer": "2",
-      "dps": "4"
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
     },
     "478": {
       "name": "더 피스트 (등급전)",
-      "tank": "2",
-      "healer": "2",
-      "dps": "4"
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
     },
     "479": {
       "name": "더 피스트 (일반전)",
-      "tank": "2",
-      "healer": "2",
-      "dps": "4"
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
     },
     "480": {
       "name": "더 피스트 (크리스탈 타워 훈련장: 친선 경기)",
-      "tank": "2",
-      "healer": "2",
-      "dps": "4"
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
     },
     "580": {
       "name": "★더 피스트 (4 대 4 / 고정 소규모 파티)",
-      "tank": "2",
-      "healer": "2",
-      "dps": "4"
-    },
-    "518": {
-      "name": "더 피스트 (8 대 8 / 매칭 파티)", //없어졌나?
       "tank": "0",
       "healer": "0",
       "dps": "0"
@@ -1638,125 +1630,123 @@
 
 
     // 딥♂ 던전
-    // 창천의 이슈가르드
-    // Deep Dungeons
-    // The Palace of the Dead
+	// 창천의 이슈가르드
     "174": {
-      "name": "망자의 궁전B1~B10",
+      "name": "망자의 궁전 B1~B10",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "175": {
-      "name": "망자의 궁전B11~B20",
+      "name": "망자의 궁전 B11~B20",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "176": {
-      "name": "망자의 궁전B21~B30",
+      "name": "망자의 궁전 B21~B30",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "177": {
-      "name": "망자의 궁전B31~B40",
+      "name": "망자의 궁전 B31~B40",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "178": {
-      "name": "망자의 궁전B41~B50",
+      "name": "망자의 궁전 B41~B50",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "204": {
-      "name": "망자의 궁전B51~B60",
+      "name": "망자의 궁전 B51~B60",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "205": {
-      "name": "망자의 궁전B61~B70",
+      "name": "망자의 궁전 B61~B70",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "206": {
-      "name": "망자의 궁전B71~B80",
+      "name": "망자의 궁전 B71~B80",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "207": {
-      "name": "망자의 궁전B81~B90",
+      "name": "망자의 궁전 B81~B90",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "208": {
-      "name": "망자의 궁전B91~B100",
+      "name": "망자의 궁전 B91~B100",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "209": {
-      "name": "망자의 궁전B101~B110",
+      "name": "망자의 궁전 B101~B110",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "210": {
-      "name": "망자의 궁전B111~B120",
+      "name": "망자의 궁전 B111~B120",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "211": {
-      "name": "망자의 궁전B121~B130",
+      "name": "망자의 궁전 B121~B130",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "212": {
-      "name": "망자의 궁전B131~B140",
+      "name": "망자의 궁전 B131~B140",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "213": {
-      "name": "망자의 궁전B141~B150",
+      "name": "망자의 궁전 B141~B150",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "214": {
-      "name": "망자의 궁전B151~B160",
+      "name": "망자의 궁전 B151~B160",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "215": {
-      "name": "망자의 궁전B161~B170",
+      "name": "망자의 궁전 B161~B170",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "216": {
-      "name": "망자의 궁전B171~B180",
+      "name": "망자의 궁전 B171~B180",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "217": {
-      "name": "망자의 궁전B181~B190",
+      "name": "망자의 궁전 B181~B190",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "218": {
-      "name": "망자의 궁전B191~B200",
+      "name": "망자의 궁전 B191~B200",
       "tank": "0",
       "healer": "0",
       "dps": "0"
@@ -1764,92 +1754,93 @@
 
     // 천궁탑
     "540": {
-      "name": "천궁탑  (Floors 1-10)",
-      "tank": "2",
-      "healer": "2",
-      "dps": "4"
+      "name": "천궁탑 (1-10)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
     },
     "541": {
-      "name": "천궁탑  (Floors 11-20)",
-      "tank": "2",
-      "healer": "2",
-      "dps": "4"
+      "name": "천궁탑 (11-20)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
     },
     "542": {
-      "name": "천궁탑  (Floors 21-30)",
-      "tank": "2",
-      "healer": "2",
-      "dps": "4"
+      "name": "천궁탑 (21-30)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
     },
     "543": {
-      "name": "천궁탑  (Floors 31-40)",
-      "tank": "2",
-      "healer": "2",
-      "dps": "4"
+      "name": "천궁탑 (31-40)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
     },
     "544": {
-      "name": "천궁탑  (Floors 41-50)",
-      "tank": "2",
-      "healer": "2",
-      "dps": "4"
+      "name": "천궁탑 (41-50)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
     },
     "545": {
-      "name": "천궁탑  (Floors 51-60)",
-      "tank": "2",
-      "healer": "2",
-      "dps": "4"
+      "name": "천궁탑 (51-60)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
     },
     "546": {
-      "name": "천궁탑  (Floors 61-70)",
-      "tank": "2",
-      "healer": "2",
-      "dps": "4"
+      "name": "천궁탑 (61-70)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
     },
     "547": {
-      "name": "천궁탑  (Floors 71-80)",
-      "tank": "2",
-      "healer": "2",
-      "dps": "4"
+      "name": "천궁탑 (71-80)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
     },
     "548": {
-      "name": "천궁탑  (Floors 81-90)",
-      "tank": "2",
-      "healer": "2",
-      "dps": "4"
+      "name": "천궁탑 (81-90)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
     },
     "549": {
-      "name": "천궁탑  (Floors 91-100)",
-      "tank": "2",
-      "healer": "2",
-      "dps": "4"
+      "name": "천궁탑 (91-100)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
     },
-
-    // The Forbidden Land, Eureka
+	
+	// 홍련의 해방자
+	
+	// 에우레카
     "283": {
-      "name": "The Forbidden Land, Eureka Anemos",
+      "name": "에우레카: 아네모스",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "581": {
-      "name": "The Forbidden Land, Eureka Pagos",
+      "name": "에우레카: 파고스",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
 
-
-    // Other things...
+    // 기타 이상한 것들...
     "437": {
-      "name": "Triple Triad",
+      "name": "도전! 트리플 트라이어드",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-
-    //Event Instance
+  
+	//이벤트 인스턴스
     "181": {
-      "name": "Haunted Manor",
+      "name": "유령의 집",
       "tank": "0",
       "healer": "0",
       "dps": "0"
@@ -2573,58 +2564,6 @@
         "901": "꿈꾸는 무인기"
       }
     },
-    "999": {
-      "name": "에우레카 아네모스",
-      "fates": {
-        "1328": "질풍의 황제",
-        "1329": "폭풍의 마왕",
-        "1331": "광란의 암룡",
-        "1332": "춤추는 선인장",
-        "1333": "마지막 미성",
-        "1334": "탐식하는 자",
-        "1335": "수각류 괴인",
-        "1336": "썩은내 현자",
-        "1337": "이름 높은 거인",
-        "1338": "마의 왕비",
-        "1339": "환상의 전갈 마물",
-        "1340": "이계의 마견",
-        "1341": "불타는 대왕",
-        "1342": "분노한 괴조",
-        "1343": "승리의 기사",
-        "1344": "꿈틀거리는 사체",
-        "1345": "강풍의 요정",
-        "1346": "씨뿌리기",
-        "1347": "주인 잃은 인형",
-        "1348": "거대 문어의 왕"
-      }
-    },
-
-    //4.3X에서 업데이트
-
-    "998": {
-      "name": "에우레카 파고스",
-      "fates": {
-        "1351": "Eternity",
-        "1352": "Cows for Concern",
-        "1353": "Ash the Magic Dragon",
-        "1354": "Conqueror Worm",
-        "1355": "Melting Point",
-        "1356": "Disorder in the Court",
-        "1357": "Does It Have to Be a Snowman",
-        "1358": "Brothers",
-        "1359": "Eye of Horus",
-        "1360": "Morte Arthro",
-        "1361": "Apocalypse Cow",
-        "1362": "Third Impact",
-        "1363": "Eye Scream for Ice Cream",
-        "1364": "Louhi on Ice",
-        "1365": "Cassie and the Copycats",
-        "1366": "The Wobbler in Darkness",
-        "1367": "Down the Rabbit Hole",
-        "1368": "Curiouser and Curiouser",
-        "1369": "Cairn Blight 451"
-      }
-    },
     "612": {
       "name": "홍련의 해방자 및 이벤트",
       "fates": {
@@ -2647,8 +2586,6 @@
         "956": "다시 나타난 신발 훔치는 귀신",
         "957": "다시 나타난 신발 훔치는 귀신",
         "958": "다시 나타난 신발 훔치는 귀신",
-        "959": "찰진 떡을 가지고 도망가라!",
-        "960": "찰진 떡을 가지고 도망가라!",
         "963": "방사성 샤드의 악영향",
         "964": "무모한 탐사",
         "965": "방사성 샤드의 악영향",
@@ -3001,16 +2938,18 @@
         "1321": "불꽃축제 '오르트로스 습격!'",
         "1322": "불꽃축제 '터무니없는 미끼'",
         "1323": "불꽃축제 '생선을 노리는 게 퇴치'",
-        "1324": "불꽃축제 '늘여름의 대청소'",
-        "1325": "별빛축제 '숲의 도둑'",
-
-        //추후 961 962같은 경우는	찰진 떡을 가지고 도망가라! 에서 >  Who Let the Hounds Out 로 변경됨
-
-        "961": "찰진 떡을 가지고 도망가라!",
-        "962": "찰진 떡을 가지고 도망가라!",
-        "1330": "세 가희의 길거리 공연",
-        "1349": "세 가희의 길거리 공연",
-        "1350": "세 가희의 길거리 공연",
+        "1324": "불꽃축제 '늘여름의 대청소'"
+      }
+    },
+    "988": {
+      "name": "홍련의 해방자 v4.1~",
+      "fates": {
+        "1325": "Bad Luck Comes in Trees",
+        "961": "Who Let the Hounds Out",
+        "962": "Who Let the Hounds Out",
+        "1330": "Color My World",
+        "1349": "Color My World",
+        "1350": "Color My World",
         "1370": "Counter-void Training: A Giant Undertaking",
         "1372": "Counter-void Training: Toothsome Terrors",
         "1375": "Counter-imperial Training: A Pinch of Assault",
@@ -3022,6 +2961,54 @@
         "1386": "Counter-fiend Training: Less Is Morbol",
         "1405": "Counter-imperial Training: A Pinch of Assault",
         "1406": "Counter-fiend Training: Less Is Morbol"
+      }
+    },
+    "990": {"name": "아네모스",
+      "fates": {
+        "1328": "EL4 The Swarm Never Sets",
+        "1329": "EL20 Wall in the Willows",
+        "1331": "EL17 Wine and Honey",
+        "1332": "EL1 Unsafety Dance",
+        "1333": "EL3 Teles House",
+        "1334": "EL8 Prove Your Amemettle",
+        "1335": "EL9 Caym What May",
+        "1336": "EL10 The Killing of a Sacred Bombardier",
+        "1337": "EL14 Sing, Muse",
+        "1338": "EL19 Drama Lamashtu",
+        "1339": "EL11 Short Serket 2",
+        "1340": "EL18 I Amarok",
+        "1341": "EL16 To the Mat",
+        "1342": "EL15 Simurghasbord",
+        "1343": "EL13 When You Ride Alone",
+        "1344": "EL5 One Missed Callisto",
+        "1345": "EL7 Disinherit the Wind",
+        "1346": "EL12 Don't Judge Me, Morbol",
+        "1347": "EL6 By Numbers",
+        "1348": "EL2 The Shadow over Anemos"
+      }
+    },
+    "991": {
+      "name": "파고스",
+      "fates": {
+        "1351": "Eternity",
+        "1352": "Cows for Concern",
+        "1353": "Ash the Magic Dragon",
+        "1354": "Conqueror Worm",
+        "1355": "Melting Point",
+        "1356": "Disorder in the Court",
+        "1357": "Does It Have to Be a Snowman",
+        "1358": "Brothers",
+        "1359": "Eye of Horus",
+        "1360": "Morte Arthro",
+        "1361": "Apocalypse Cow",
+        "1362": "Third Impact",
+        "1363": "Eye Scream for Ice Cream",
+        "1364": "Louhi on Ice",
+        "1365": "Cassie and the Copycats",
+        "1366": "The Wobbler in Darkness",
+        "1367": "Down the Rabbit Hole",
+        "1368": "Curiouser and Curiouser",
+        "1369": "Cairn Blight 451"
       }
     }
   }
