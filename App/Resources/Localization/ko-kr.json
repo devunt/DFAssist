@@ -15,7 +15,6 @@
   "tweet-fate-occured": "< {0} > 돌발 발생!",
   "tweet-queue-matched": "< {0} > 매칭!",
 
-
   "fate-preset-animus-SkyfireI": "불의 서 1권",
   "fate-preset-animus-SkyfireII": "불의 서 2권",
   "fate-preset-animus-NetherfireI": "불의 서 3권",
@@ -27,6 +26,8 @@
   "fate-preset-animus-SkyearthI": "땅의 서 1권",
   "fate-preset-Ixion": "익시온",
   "fate-preset-Tamamo": "타마모",
+  "fate-preset-anemos": "에우레카 - 아네모스",
+  "fate-preset-pagos": "에우레카 - 파고스",
 
 
   "ui-notifymenustrip-open": "열기",
@@ -46,10 +47,11 @@
   "ui-settings-overlay-tooltip": "오버레이 UI의 좌측 막대를 이용해 드래그 할 수 있습니다.",
   "ui-settings-overlay-reset": "위치 초기화",
   "ui-settings-startupshow": "프로그램 시작시 이 창 보이기",
-  "ui-settings-autohide": "임무 입장시 자동으로 오버레이 숨김",
+  // 현재 사용 안함
+  //  "ui-settings-autohide": "임무 입장시 자동으로 오버레이 숨김",
   "ui-settings-iconflash": "매칭/돌발 발생시 파이널판타지14 작업 표시줄 아이콘 깜빡이기",
   "ui-settings-cheatroulette": "무작위 임무일 경우에도 실제 매칭된 임무 보여주기",
-  "ui-settings-tweet-title": "트위터 알림",
+  "ui-settings-tweet-title": "트위터 알림 (사용불가)",
   "ui-settings-tweet-activate": "활성화",
   "ui-settings-tweet-about": "매칭이 됐을 시 입력된 트위터 계정으로 멘션을 보내 해당 사실을 알립니다.\n원하는 돌발이 발생했을 시에도 멘션을 보내 해당 사실을 알립니다.\n계정명 입력시 앞의 @ 표시는 제외하고 순수 계정명만 입력해주세요.",
 
@@ -98,7 +100,7 @@
   "overlay-queue-confirming": "입장 확인 중",
   "overlay-fate-occured": "돌발 임무 발생!",
 
-  
+
   "l-process-set-success": "P: 파이널판타지14 프로세스가 선택되었습니다: {0}",
   "l-process-set-failed": "P: 파이널판타지14 프로세스 설정에 실패했습니다.",
   "l-process-finding": "P: 파이널판타지14 프로세스를 찾는 중...",
