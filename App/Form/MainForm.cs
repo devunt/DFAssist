@@ -70,7 +70,7 @@ namespace App
                 new Language { Name = "한국어", Code = "ko-kr" },
                 new Language { Name = "English", Code = "en-us" },
                 new Language { Name = "Français", Code = "fr-fr" },
-                //new Language { Name = "日本語", Code = "ja-jp" },
+                new Language { Name = "日本語", Code = "ja-jp" },
             };
 
             comboBox_Language.DisplayMember = "Name";
@@ -81,7 +81,7 @@ namespace App
             comboBox_Language.SelectedValueChanged += comboBox_Language_SelectedValueChanged;
 
             checkBox_StartupShow.Checked = Settings.StartupShowMainForm;
-            checkBox_AutoOverlayHide.Checked = Settings.AutoOverlayHide;
+//            checkBox_AutoOverlayHide.Checked = Settings.AutoOverlayHide;
             checkBox_FlashWindow.Checked = Settings.FlashWindow;
             SetCheatRoulleteCheckBox(Settings.CheatRoulette);
 
@@ -232,12 +232,12 @@ namespace App
             Settings.Save();
         }
 
-        private void checkBox_AutoOverlayHide_CheckedChanged(object sender, EventArgs e)
-        {
-            Settings.AutoOverlayHide = checkBox_AutoOverlayHide.Checked;
-            Settings.Save();
-        }
-
+        /*        private void checkBox_AutoOverlayHide_CheckedChanged(object sender, EventArgs e)
+                {
+                    Settings.AutoOverlayHide = checkBox_AutoOverlayHide.Checked;
+                    Settings.Save();
+                }
+        */
         private void checkBox_FlashWindow_CheckedChanged(object sender, EventArgs e)
         {
             Settings.FlashWindow = checkBox_FlashWindow.Checked;
@@ -413,6 +413,18 @@ namespace App
             PresetAccept(arr);
         }
 
+        private void anemosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int[] arr = { 1328, 1329, 1331, 1332, 1333, 1334, 1335, 1336, 1337, 1338, 1339, 1340, 1341, 1342, 1343, 1344, 1345, 1346, 1347, 1348 };
+            PresetAccept(arr);
+        }
+
+        private void pagosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int[] arr = { 1351, 1352, 1353, 1354, 1355, 1356, 1357, 1358, 1359, 1360, 1361, 1362, 1363, 1364, 1365, 1366, 1367, 1368, 1369 };
+            PresetAccept(arr);
+        }
+
         private void SetCheatRoulleteCheckBox(bool @checked)
         {
             checkBox_CheatRoullete.CheckedChanged -= checkBox_CheatRoullete_CheckedChanged;
@@ -514,7 +526,7 @@ namespace App
             toolTip.SetToolTip(checkBox_Overlay, Localization.GetText("ui-settings-overlay-tooltip"));
             button_ResetOverlayPosition.Text = Localization.GetText("ui-settings-overlay-reset");
             checkBox_StartupShow.Text = Localization.GetText("ui-settings-startupshow");
-            checkBox_AutoOverlayHide.Text = Localization.GetText("ui-settings-autohide");
+ //           checkBox_AutoOverlayHide.Text = Localization.GetText("ui-settings-autohide");
             checkBox_FlashWindow.Text = Localization.GetText("ui-settings-iconflash");
             checkBox_CheatRoullete.Text = Localization.GetText("ui-settings-cheatroulette");
             groupBox_TwitterSet.Text = Localization.GetText("ui-settings-tweet-title");
@@ -534,11 +546,18 @@ namespace App
             bookOfSkyearthIToolStripMenuItem.Text = Localization.GetText("fate-preset-animus-SkyearthI");
             IxionToolStripMenuItem.Text = Localization.GetText("fate-preset-Ixion");
             TamamoToolStripMenuItem.Text = Localization.GetText("fate-preset-Tamamo");
+            anemosToolStripMenuItem.Text = Localization.GetText("fate-preset-anemos");
+            pagosToolStripMenuItem.Text = Localization.GetText("fate-preset-pagos");
             toolStripMenuItem_SelectApply.Text = Localization.GetText("ui-fate-apply");
             label_FATEAbout.Text = Localization.GetText("ui-fate-about");
             toolStripMenuItem_LogCopy.Text = Localization.GetText("ui-logs-copy");
             toolStripMenuItem_LogClear.Text = Localization.GetText("ui-logs-clear");
             label_About.Text = Localization.GetText("ui-info-about");
+
+        }
+
+        private void comboBox_Language_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
