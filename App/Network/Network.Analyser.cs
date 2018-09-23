@@ -161,7 +161,7 @@ namespace App
                     {
                         Log.I("l-field-instance-left");
                     }
-
+/*
                     if (Settings.ShowOverlay && Settings.AutoOverlayHide)
                     {
                         mainForm.overlayForm.Invoke(() =>
@@ -176,6 +176,7 @@ namespace App
                             }
                         });
                     }
+                    */
                 }
                 else if (opcode == 0x0143)
                 {
