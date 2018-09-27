@@ -53,8 +53,8 @@ title: {{ site.name }}
 ![](https://i.imgur.com/4ztaLkR.jpg)
 
 ### アプリケーションUI
-![](https://i.imgur.com/w7hlYQ3.jpg)
-![](https://i.imgur.com/NwuAdyH.jpg)
+![](https://i.imgur.com/uoYRaif.png)
+![](https://i.imgur.com/XbOSVVr.png)
 
 ### トレイアイコン
 ![](https://i.imgur.com/zecDrdh.jpg)

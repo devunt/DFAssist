@@ -27,6 +27,8 @@
   "fate-preset-animus-SkyearthI": "土天一巻",
   "fate-preset-Ixion": "イクシオン",
   "fate-preset-Tamamo": "タマモ",
+  "fate-preset-anemos": "エウレカ - アネモス",
+  "fate-preset-pagos": "エウレカ - パゴス",
 
 
   "ui-notifymenustrip-open": "開く",
@@ -46,10 +48,14 @@
   "ui-settings-overlay-tooltip": "オーバーレイ左側のバーをドラッグすると移動できます。",
   "ui-settings-overlay-reset": "初期化",
   "ui-settings-startupshow": "起動時にこのウィンドウを表示する",
-  "ui-settings-autohide": "コンテンツ中オーバーレイを非表示にする",
+
+  //使用しない
+  // "ui-settings-autohide": "コンテンツ中オーバーレイを非表示にする",
+
+
   "ui-settings-iconflash": "突入準備完了時FFXIVのアイコンを点滅させる",
-  "ui-settings-cheatroulette": "Show Actual Matched Duty when using Duty Roulette(翻訳が必要)",
-  "ui-settings-tweet-title": "Twitterアラーム",
+  "ui-settings-cheatroulette": "デュティルレット。実際に入場するダンジョンを確認。",
+  "ui-settings-tweet-title": "Twitterアラーム(使用不可)",
   "ui-settings-tweet-activate": "有効化",
   "ui-settings-tweet-about": "突入準備完了時、FATEが発生した際指定したアカウントに\nツイートを送信します。\nTwitterアカウント名の@以降を入力してください。",
 
@@ -71,7 +77,7 @@
   "ui-language-changed": "言語が日本語に変更されました。\nいくつかの部分は再起動するまで変更されません。\nアプリケーションを再起動してください。",
 
   "ui-clipboard-copied": "コピーしましした。",
-  
+
   "ui-cheat-roulette-confirm": "This function is disabled by default to prevent abuse.\nPlease refrain from deliberately rejecting a specific dislike duty.\n\nDo you still want to enable it?(翻訳が必要)",
   "ui-cheat-roulette-enabled": "Enabled.\nPlease DON'T deliberately reject a specific dislike duty.(翻訳が必要)",
 

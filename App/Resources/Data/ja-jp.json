@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20180922.1", 
+  "version": "20180924.1", 
 
   // Duty
   "instances": {
@@ -2937,7 +2937,7 @@
       }
     },
     "988": {
-      "name": "StormBlood v4.1~",
+      "name": "StormBlood After v4.1~",
       "fates": {
         "1325": "Bad Luck Comes in Trees",
         "961": "Who Let the Hounds Out",
@@ -2958,7 +2958,8 @@
         "1406": "Counter-fiend Training: Less Is Morbol"
       }
     },
-    "990": {"name": "アネモス",
+    "990": {
+      "name": "アネモス",
       "fates": {
         "1328": "The Swarm Never Sets",
         "1329": "Wall in the Willows",
