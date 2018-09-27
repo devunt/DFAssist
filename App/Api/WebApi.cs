@@ -44,6 +44,9 @@ namespace App
                 request.Timeout = 10000;
                 request.CachePolicy = new RequestCachePolicy(RequestCacheLevel.NoCacheNoStore);
 
+                ServicePointManager.Expect100Continue = true;
+                ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
+                ServicePointManager.DefaultConnectionLimit = 9999;
                 using (var response = (HttpWebResponse)request.GetResponse())
                 {
                     var encoding = Encoding.GetEncoding(response.CharacterSet);
@@ -55,7 +58,7 @@ namespace App
             }
             catch (Exception ex)
             {
-                Log.Ex(ex, "web-failed");
+                Log.Ex(ex, "l-web-request-failed");
             }
 
             return null;

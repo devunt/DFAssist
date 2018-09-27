@@ -8,9 +8,9 @@ title: {{ site.name }}
 Do other things while in waiting list! DFAssist will give you match notification.
 
 ## Information
-- Latest Version ```v20180415.1``` ([Download](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
+- Latest Version ```v20180923.2``` ([Download](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
 - Target Version ```Microsoft .NET Framework 4.0``` ([Download](https://www.microsoft.com/en-us/download/details.aspx?id=17851))
-- Game Version ```Final Fantasy XIV, Version 4.2```
+- Game Version ```Final Fantasy XIV, Version 4.4```
 
 ## Instructions
 1. Download ``DFAssist.v********.*.zip`` file from the upper download link's file list.
