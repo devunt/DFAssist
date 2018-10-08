@@ -10,6 +10,7 @@
 
   "notification-app-updated": "Version {0} Updated",
   "notification-queue-matched": "< {0} > Matched!",
+  "notification-fate-occured": "< {0} > Occured!",
 
 
   "tweet-fate-occured": "< {0} > FATE Occured!",
@@ -48,10 +49,7 @@
   "ui-settings-overlay-tooltip": "Move Overlay by Draging Left bar.",
   "ui-settings-overlay-reset": "Reset",
   "ui-settings-startupshow": "Show MainForm when Program Starts",
-
-  // Not Use now
-  //"ui-settings-autohide": "Auto Hide Overlay while in Duty",
-
+  "ui-settings-autohide": "Auto Hide Overlay while in Duty",
   "ui-settings-iconflash": "FFXIV Icon Blinks when Duty Matched/FATE occur",
   "ui-settings-cheatroulette": "Show Actual Matched Duty when using Duty Roulette",
   "ui-settings-tweet-title": "Twitter Alarm(Inoperative)",

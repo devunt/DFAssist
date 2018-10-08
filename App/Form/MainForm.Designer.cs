@@ -41,7 +41,6 @@
             this.toolStripMenuItem_Open = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_Close = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_TopSetting = new System.Windows.Forms.Panel();
-            this.localizableLabel1 = new App.LocalizableLabel();
             this.label_Process = new App.LocalizableLabel();
             this.comboBox_Language = new System.Windows.Forms.ComboBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
@@ -55,6 +54,7 @@
             this.groupBox_DefaultSet = new System.Windows.Forms.GroupBox();
             this.checkBox_CheatRoullete = new System.Windows.Forms.CheckBox();
             this.checkBox_FlashWindow = new System.Windows.Forms.CheckBox();
+            this.checkBox_AutoOverlayHide = new System.Windows.Forms.CheckBox();
             this.checkBox_StartupShow = new System.Windows.Forms.CheckBox();
             this.tabPage_FATE = new System.Windows.Forms.TabPage();
             this.label_FATEAbout = new App.LocalizableLabel();
@@ -78,6 +78,7 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.IxionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TamamoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.anemosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pagosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_SelectApply = new System.Windows.Forms.ToolStripMenuItem();
@@ -90,6 +91,7 @@
             this.tabPage_Info = new System.Windows.Forms.TabPage();
             this.label_About = new App.LocalizableLabel();
             this.linkLabel_GitHub = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip.SuspendLayout();
             this.panel_TopSetting.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -102,6 +104,7 @@
             this.panel_LogCover.SuspendLayout();
             this.menuStrip_LogTab.SuspendLayout();
             this.tabPage_Info.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label_AboutTitle
@@ -209,9 +212,9 @@
             // panel_TopSetting
             // 
             this.panel_TopSetting.BackColor = System.Drawing.Color.Silver;
-            this.panel_TopSetting.Controls.Add(this.localizableLabel1);
-            this.panel_TopSetting.Controls.Add(this.label_Process);
             this.panel_TopSetting.Controls.Add(this.comboBox_Language);
+            this.panel_TopSetting.Controls.Add(this.pictureBox1);
+            this.panel_TopSetting.Controls.Add(this.label_Process);
             this.panel_TopSetting.Controls.Add(this.comboBox_Process);
             this.panel_TopSetting.Controls.Add(this.button_SelectProcess);
             this.panel_TopSetting.Controls.Add(this.button_ResetProcess);
@@ -221,15 +224,6 @@
             this.panel_TopSetting.Padding = new System.Windows.Forms.Padding(5);
             this.panel_TopSetting.Size = new System.Drawing.Size(544, 27);
             this.panel_TopSetting.TabIndex = 1;
-            // 
-            // localizableLabel1
-            // 
-            this.localizableLabel1.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.localizableLabel1.Location = new System.Drawing.Point(396, 5);
-            this.localizableLabel1.Name = "localizableLabel1";
-            this.localizableLabel1.Size = new System.Drawing.Size(78, 17);
-            this.localizableLabel1.TabIndex = 4;
-            this.localizableLabel1.Text = "Language :";
             // 
             // label_Process
             // 
@@ -256,7 +250,6 @@
             this.comboBox_Language.Size = new System.Drawing.Size(62, 23);
             this.comboBox_Language.TabIndex = 4;
             this.comboBox_Language.ValueMember = "Code";
-            this.comboBox_Language.SelectedIndexChanged += new System.EventHandler(this.comboBox_Language_SelectedIndexChanged);
             // 
             // tabControl
             // 
@@ -293,7 +286,7 @@
             this.groupBox_TwitterSet.Controls.Add(this.label_TwitterAbout);
             this.groupBox_TwitterSet.Controls.Add(this.checkBox_Twitter);
             this.groupBox_TwitterSet.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox_TwitterSet.Location = new System.Drawing.Point(0, 131);
+            this.groupBox_TwitterSet.Location = new System.Drawing.Point(0, 151);
             this.groupBox_TwitterSet.Name = "groupBox_TwitterSet";
             this.groupBox_TwitterSet.Size = new System.Drawing.Size(426, 111);
             this.groupBox_TwitterSet.TabIndex = 0;
@@ -308,7 +301,6 @@
             this.textBox_Twitter.Name = "textBox_Twitter";
             this.textBox_Twitter.Size = new System.Drawing.Size(156, 25);
             this.textBox_Twitter.TabIndex = 0;
-            this.textBox_Twitter.TextChanged += new System.EventHandler(this.textBox_Twitter_TextChanged);
             // 
             // label_TwitterAt
             // 
@@ -338,19 +330,19 @@
             this.checkBox_Twitter.TabIndex = 0;
             this.checkBox_Twitter.Text = "활성화";
             this.checkBox_Twitter.UseVisualStyleBackColor = true;
-            this.checkBox_Twitter.CheckedChanged += new System.EventHandler(this.checkBox_Twitter_CheckedChanged);
             // 
             // groupBox_DefaultSet
             // 
             this.groupBox_DefaultSet.Controls.Add(this.button_ResetOverlayPosition);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_CheatRoullete);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_FlashWindow);
+            this.groupBox_DefaultSet.Controls.Add(this.checkBox_AutoOverlayHide);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_StartupShow);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_Overlay);
             this.groupBox_DefaultSet.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox_DefaultSet.Location = new System.Drawing.Point(0, 0);
             this.groupBox_DefaultSet.Name = "groupBox_DefaultSet";
-            this.groupBox_DefaultSet.Size = new System.Drawing.Size(426, 131);
+            this.groupBox_DefaultSet.Size = new System.Drawing.Size(426, 151);
             this.groupBox_DefaultSet.TabIndex = 0;
             this.groupBox_DefaultSet.TabStop = false;
             this.groupBox_DefaultSet.Text = "기본설정";
@@ -359,7 +351,7 @@
             // 
             this.checkBox_CheatRoullete.AutoSize = true;
             this.checkBox_CheatRoullete.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.checkBox_CheatRoullete.Location = new System.Drawing.Point(6, 98);
+            this.checkBox_CheatRoullete.Location = new System.Drawing.Point(6, 90);
             this.checkBox_CheatRoullete.Name = "checkBox_CheatRoullete";
             this.checkBox_CheatRoullete.Size = new System.Drawing.Size(302, 19);
             this.checkBox_CheatRoullete.TabIndex = 3;
@@ -371,7 +363,7 @@
             // 
             this.checkBox_FlashWindow.AutoSize = true;
             this.checkBox_FlashWindow.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.checkBox_FlashWindow.Location = new System.Drawing.Point(6, 73);
+            this.checkBox_FlashWindow.Location = new System.Drawing.Point(6, 67);
             this.checkBox_FlashWindow.Name = "checkBox_FlashWindow";
             this.checkBox_FlashWindow.Size = new System.Drawing.Size(369, 19);
             this.checkBox_FlashWindow.TabIndex = 2;
@@ -379,11 +371,23 @@
             this.checkBox_FlashWindow.UseVisualStyleBackColor = true;
             this.checkBox_FlashWindow.CheckedChanged += new System.EventHandler(this.checkBox_FlashWindow_CheckedChanged);
             // 
+            // checkBox_AutoOverlayHide
+            // 
+            this.checkBox_AutoOverlayHide.AutoSize = true;
+            this.checkBox_AutoOverlayHide.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.checkBox_AutoOverlayHide.Location = new System.Drawing.Point(6, 113);
+            this.checkBox_AutoOverlayHide.Name = "checkBox_AutoOverlayHide";
+            this.checkBox_AutoOverlayHide.Size = new System.Drawing.Size(222, 19);
+            this.checkBox_AutoOverlayHide.TabIndex = 1;
+            this.checkBox_AutoOverlayHide.Text = "임무 입장시 자동으로 오버레이 숨김";
+            this.checkBox_AutoOverlayHide.UseVisualStyleBackColor = true;
+            this.checkBox_AutoOverlayHide.Visible = false;
+            // 
             // checkBox_StartupShow
             // 
             this.checkBox_StartupShow.AutoSize = true;
             this.checkBox_StartupShow.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.checkBox_StartupShow.Location = new System.Drawing.Point(6, 48);
+            this.checkBox_StartupShow.Location = new System.Drawing.Point(6, 46);
             this.checkBox_StartupShow.Name = "checkBox_StartupShow";
             this.checkBox_StartupShow.Size = new System.Drawing.Size(186, 19);
             this.checkBox_StartupShow.TabIndex = 0;
@@ -471,6 +475,7 @@
             this.toolStripSeparator1,
             this.IxionToolStripMenuItem,
             this.TamamoToolStripMenuItem,
+            this.toolStripSeparator2,
             this.anemosToolStripMenuItem,
             this.pagosToolStripMenuItem});
             this.presetToolStripMenuItem.Name = "presetToolStripMenuItem";
@@ -480,111 +485,116 @@
             // bookOfSkyfireIToolStripMenuItem
             // 
             this.bookOfSkyfireIToolStripMenuItem.Name = "bookOfSkyfireIToolStripMenuItem";
-            this.bookOfSkyfireIToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.bookOfSkyfireIToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bookOfSkyfireIToolStripMenuItem.Text = "불의 서 1권";
             this.bookOfSkyfireIToolStripMenuItem.Click += new System.EventHandler(this.bookOfSkyfireIToolStripMenuItem_Click);
             // 
             // bookOfSkyfireIIToolStripMenuItem
             // 
             this.bookOfSkyfireIIToolStripMenuItem.Name = "bookOfSkyfireIIToolStripMenuItem";
-            this.bookOfSkyfireIIToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.bookOfSkyfireIIToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bookOfSkyfireIIToolStripMenuItem.Text = "불의 서 2권";
             this.bookOfSkyfireIIToolStripMenuItem.Click += new System.EventHandler(this.bookOfSkyfireIIToolStripMenuItem_Click);
             // 
             // bookOfNetherfireIToolStripMenuItem
             // 
             this.bookOfNetherfireIToolStripMenuItem.Name = "bookOfNetherfireIToolStripMenuItem";
-            this.bookOfNetherfireIToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.bookOfNetherfireIToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bookOfNetherfireIToolStripMenuItem.Text = "불의 서 3권";
             this.bookOfNetherfireIToolStripMenuItem.Click += new System.EventHandler(this.bookOfNetherfireIToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(146, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
             // 
             // bookOfSkyfallIToolStripMenuItem
             // 
             this.bookOfSkyfallIToolStripMenuItem.Name = "bookOfSkyfallIToolStripMenuItem";
-            this.bookOfSkyfallIToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.bookOfSkyfallIToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bookOfSkyfallIToolStripMenuItem.Text = "물의 서 1권";
             this.bookOfSkyfallIToolStripMenuItem.Click += new System.EventHandler(this.bookOfSkyfallIToolStripMenuItem_Click);
             // 
             // bookOfSkyfallIIToolStripMenuItem
             // 
             this.bookOfSkyfallIIToolStripMenuItem.Name = "bookOfSkyfallIIToolStripMenuItem";
-            this.bookOfSkyfallIIToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.bookOfSkyfallIIToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bookOfSkyfallIIToolStripMenuItem.Text = "물의 서 2권";
             this.bookOfSkyfallIIToolStripMenuItem.Click += new System.EventHandler(this.bookOfSkyfallIIToolStripMenuItem_Click);
             // 
             // bookOfNetherfireIToolStripMenuItem1
             // 
             this.bookOfNetherfireIToolStripMenuItem1.Name = "bookOfNetherfireIToolStripMenuItem1";
-            this.bookOfNetherfireIToolStripMenuItem1.Size = new System.Drawing.Size(149, 22);
+            this.bookOfNetherfireIToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.bookOfNetherfireIToolStripMenuItem1.Text = "물의 서 3권";
             this.bookOfNetherfireIToolStripMenuItem1.Click += new System.EventHandler(this.bookOfNetherfireIToolStripMenuItem1_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(146, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
             // 
             // bookOfSkywindIToolStripMenuItem
             // 
             this.bookOfSkywindIToolStripMenuItem.Name = "bookOfSkywindIToolStripMenuItem";
-            this.bookOfSkywindIToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.bookOfSkywindIToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bookOfSkywindIToolStripMenuItem.Text = "바람의 서 1권";
             this.bookOfSkywindIToolStripMenuItem.Click += new System.EventHandler(this.bookOfSkywindIToolStripMenuItem_Click);
             // 
             // bookOfSkywindIIToolStripMenuItem
             // 
             this.bookOfSkywindIIToolStripMenuItem.Name = "bookOfSkywindIIToolStripMenuItem";
-            this.bookOfSkywindIIToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.bookOfSkywindIIToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bookOfSkywindIIToolStripMenuItem.Text = "바람의 서 2권";
             this.bookOfSkywindIIToolStripMenuItem.Click += new System.EventHandler(this.bookOfSkywindIIToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(146, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(177, 6);
             // 
             // bookOfSkyearthIToolStripMenuItem
             // 
             this.bookOfSkyearthIToolStripMenuItem.Name = "bookOfSkyearthIToolStripMenuItem";
-            this.bookOfSkyearthIToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.bookOfSkyearthIToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bookOfSkyearthIToolStripMenuItem.Text = "땅의 서 1권";
             this.bookOfSkyearthIToolStripMenuItem.Click += new System.EventHandler(this.bookOfSkyearthIToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(146, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // IxionToolStripMenuItem
             // 
             this.IxionToolStripMenuItem.Name = "IxionToolStripMenuItem";
-            this.IxionToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.IxionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.IxionToolStripMenuItem.Text = "익시온";
             this.IxionToolStripMenuItem.Click += new System.EventHandler(this.IxionToolStripMenuItem_Click);
             // 
             // TamamoToolStripMenuItem
             // 
             this.TamamoToolStripMenuItem.Name = "TamamoToolStripMenuItem";
-            this.TamamoToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.TamamoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.TamamoToolStripMenuItem.Text = "타마모";
             this.TamamoToolStripMenuItem.Click += new System.EventHandler(this.TamamoToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             // 
             // anemosToolStripMenuItem
             // 
             this.anemosToolStripMenuItem.Name = "anemosToolStripMenuItem";
-            this.anemosToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.anemosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.anemosToolStripMenuItem.Text = "아네모스";
             this.anemosToolStripMenuItem.Click += new System.EventHandler(this.anemosToolStripMenuItem_Click);
             // 
             // pagosToolStripMenuItem
             // 
             this.pagosToolStripMenuItem.Name = "pagosToolStripMenuItem";
-            this.pagosToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.pagosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pagosToolStripMenuItem.Text = "파고스";
             this.pagosToolStripMenuItem.Click += new System.EventHandler(this.pagosToolStripMenuItem_Click);
             // 
@@ -694,6 +704,15 @@
             this.linkLabel_GitHub.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.linkLabel_GitHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_GitHub_LinkClicked);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::App.Properties.Resources.language2;
+            this.pictureBox1.Location = new System.Drawing.Point(464, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(22, 22);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -734,6 +753,7 @@
             this.menuStrip_LogTab.ResumeLayout(false);
             this.menuStrip_LogTab.PerformLayout();
             this.tabPage_Info.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -775,6 +795,7 @@
         private LocalizableLabel label_About;
         private System.Windows.Forms.GroupBox groupBox_TwitterSet;
         private System.Windows.Forms.GroupBox groupBox_DefaultSet;
+        private System.Windows.Forms.CheckBox checkBox_AutoOverlayHide;
         internal System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.CheckBox checkBox_FlashWindow;
         private System.Windows.Forms.CheckBox checkBox_CheatRoullete;
@@ -796,9 +817,10 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem IxionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem TamamoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem anemosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pagosToolStripMenuItem;
-        private LocalizableLabel localizableLabel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20180924.1", 
+  "version": "20181008.1", 
 
   // Duty
   "instances": {
@@ -1263,9 +1263,9 @@
     },
     "475": {
       "name": "極リオレウス狩猟戦",
-      "tank": "2",
-      "healer": "2",
-      "dps": "4"
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
     },
 
     // 4.4 狂亂の前奏曲
@@ -2958,8 +2958,7 @@
         "1406": "Counter-fiend Training: Less Is Morbol"
       }
     },
-    "990": {
-      "name": "アネモス",
+    "990": {"name": "アネモス",
       "fates": {
         "1328": "The Swarm Never Sets",
         "1329": "Wall in the Willows",

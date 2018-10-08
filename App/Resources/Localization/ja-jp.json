@@ -10,6 +10,7 @@
 
   "notification-app-updated": "バージョン {0} に更新されました",
   "notification-queue-matched": "< {0} > 突入準備完了!",
+  "notification-fate-occured": "< {0} > 発生!",
 
 
   "tweet-fate-occured": "< {0} > FATE発生!",
@@ -48,13 +49,9 @@
   "ui-settings-overlay-tooltip": "オーバーレイ左側のバーをドラッグすると移動できます。",
   "ui-settings-overlay-reset": "初期化",
   "ui-settings-startupshow": "起動時にこのウィンドウを表示する",
-
-  //使用しない
-  // "ui-settings-autohide": "コンテンツ中オーバーレイを非表示にする",
-
-
+  "ui-settings-autohide": "コンテンツ中オーバーレイを非表示にする",
   "ui-settings-iconflash": "突入準備完了時FFXIVのアイコンを点滅させる",
-  "ui-settings-cheatroulette": "デュティルレット。実際に入場するダンジョンを確認。",
+  "ui-settings-cheatroulette": "デュティルレット。実際に入場するダンジョンを確認",
   "ui-settings-tweet-title": "Twitterアラーム(使用不可)",
   "ui-settings-tweet-activate": "有効化",
   "ui-settings-tweet-about": "突入準備完了時、FATEが発生した際指定したアカウントに\nツイートを送信します。\nTwitterアカウント名の@以降を入力してください。",

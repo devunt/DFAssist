@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20180924.1",
+  "version": "20181008.1",
 
   // Duty
   "instances": {
@@ -1263,9 +1263,9 @@
     },
     "475": {
       "name": "Chasse au Rathalos (extrême)",
-      "tank": "2",
-      "healer": "2",
-      "dps": "4"
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
     },
 
     // 4.4 Prelude in Violet

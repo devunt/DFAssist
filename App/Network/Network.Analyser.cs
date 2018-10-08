@@ -161,8 +161,8 @@ namespace App
                     {
                         Log.I("l-field-instance-left");
                     }
-/*
-                    if (Settings.ShowOverlay && Settings.AutoOverlayHide)
+
+                    /*if (Settings.ShowOverlay && Settings.AutoOverlayHide)
                     {
                         mainForm.overlayForm.Invoke(() =>
                         {
@@ -175,8 +175,7 @@ namespace App
                                 mainForm.overlayForm.Show();
                             }
                         });
-                    }
-                    */
+                    }*/
                 }
                 else if (opcode == 0x0143)
                 {
@@ -218,6 +217,11 @@ namespace App
                         {
                             mainForm.overlayForm.SetFATEAsOccured(fate);
                             Log.I("l-fate-occured-info", fate.Name);
+
+                            if (!Settings.ShowOverlay)
+                            {
+                                mainForm.ShowNotification("notification-fate-occured", fate.Name);
+                            }
 
                             if (Settings.FlashWindow)
                             {

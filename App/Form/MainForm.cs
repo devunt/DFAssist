@@ -81,13 +81,13 @@ namespace App
             comboBox_Language.SelectedValueChanged += comboBox_Language_SelectedValueChanged;
 
             checkBox_StartupShow.Checked = Settings.StartupShowMainForm;
-//            checkBox_AutoOverlayHide.Checked = Settings.AutoOverlayHide;
+            // checkBox_AutoOverlayHide.Checked = Settings.AutoOverlayHide;
             checkBox_FlashWindow.Checked = Settings.FlashWindow;
             SetCheatRoulleteCheckBox(Settings.CheatRoulette);
 
-            checkBox_Twitter.Checked = Settings.TwitterEnabled;
-            textBox_Twitter.Enabled = Settings.TwitterEnabled;
-            textBox_Twitter.Text = Settings.TwitterAccount;
+            // checkBox_Twitter.Checked = Settings.TwitterEnabled;
+            // textBox_Twitter.Enabled = Settings.TwitterEnabled;
+            // textBox_Twitter.Text = Settings.TwitterAccount;
 
             foreach (var area in Data.Areas)
             {
@@ -225,19 +225,19 @@ namespace App
             Settings.Save();
         }
 
-        private void checkBox_Twitter_CheckedChanged(object sender, EventArgs e)
+        /*private void checkBox_Twitter_CheckedChanged(object sender, EventArgs e)
         {
             textBox_Twitter.Enabled = checkBox_Twitter.Checked;
             Settings.TwitterEnabled = checkBox_Twitter.Checked;
             Settings.Save();
         }
 
-        /*        private void checkBox_AutoOverlayHide_CheckedChanged(object sender, EventArgs e)
-                {
-                    Settings.AutoOverlayHide = checkBox_AutoOverlayHide.Checked;
-                    Settings.Save();
-                }
-        */
+        private void checkBox_AutoOverlayHide_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.AutoOverlayHide = checkBox_AutoOverlayHide.Checked;
+            Settings.Save();
+        }*/
+
         private void checkBox_FlashWindow_CheckedChanged(object sender, EventArgs e)
         {
             Settings.FlashWindow = checkBox_FlashWindow.Checked;
@@ -262,11 +262,11 @@ namespace App
             Settings.Save();
         }
 
-        private void textBox_Twitter_TextChanged(object sender, EventArgs e)
+        /*private void textBox_Twitter_TextChanged(object sender, EventArgs e)
         {
             Settings.TwitterAccount = textBox_Twitter.Text;
             Settings.Save();
-        }
+        }*/
 
         private void toolStripMenuItem_LogCopy_Click(object sender, EventArgs e)
         {
@@ -526,7 +526,7 @@ namespace App
             toolTip.SetToolTip(checkBox_Overlay, Localization.GetText("ui-settings-overlay-tooltip"));
             button_ResetOverlayPosition.Text = Localization.GetText("ui-settings-overlay-reset");
             checkBox_StartupShow.Text = Localization.GetText("ui-settings-startupshow");
- //           checkBox_AutoOverlayHide.Text = Localization.GetText("ui-settings-autohide");
+            checkBox_AutoOverlayHide.Text = Localization.GetText("ui-settings-autohide");
             checkBox_FlashWindow.Text = Localization.GetText("ui-settings-iconflash");
             checkBox_CheatRoullete.Text = Localization.GetText("ui-settings-cheatroulette");
             groupBox_TwitterSet.Text = Localization.GetText("ui-settings-tweet-title");
@@ -545,19 +545,14 @@ namespace App
             bookOfSkywindIIToolStripMenuItem.Text = Localization.GetText("fate-preset-animus-SkywindII");
             bookOfSkyearthIToolStripMenuItem.Text = Localization.GetText("fate-preset-animus-SkyearthI");
             IxionToolStripMenuItem.Text = Localization.GetText("fate-preset-Ixion");
-            TamamoToolStripMenuItem.Text = Localization.GetText("fate-preset-Tamamo");
             anemosToolStripMenuItem.Text = Localization.GetText("fate-preset-anemos");
             pagosToolStripMenuItem.Text = Localization.GetText("fate-preset-pagos");
+            TamamoToolStripMenuItem.Text = Localization.GetText("fate-preset-Tamamo");
             toolStripMenuItem_SelectApply.Text = Localization.GetText("ui-fate-apply");
             label_FATEAbout.Text = Localization.GetText("ui-fate-about");
             toolStripMenuItem_LogCopy.Text = Localization.GetText("ui-logs-copy");
             toolStripMenuItem_LogClear.Text = Localization.GetText("ui-logs-clear");
             label_About.Text = Localization.GetText("ui-info-about");
-
-        }
-
-        private void comboBox_Language_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
     }

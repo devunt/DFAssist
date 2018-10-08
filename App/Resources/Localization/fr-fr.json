@@ -10,6 +10,7 @@
 
   "notification-app-updated": "Mise à jour version {0}",
   "notification-queue-matched": "< {0} > disponible!",
+  "notification-fate-occured": "< {0} > en cours!",
 
 
   "tweet-fate-occured": "ALEA < {0} > en cours!",
@@ -48,11 +49,7 @@
   "ui-settings-overlay-tooltip": "Bouger l'overlay avec la barre gauche",
   "ui-settings-overlay-reset": "Rétablir",
   "ui-settings-startupshow": "Afficher la fenêtre principale au démarrage",
-
-  // Not use now
-  // "ui-settings-autohide": "Cacher automatiquement l'overlay pendant les missions",
-
-
+  "ui-settings-autohide": "Cacher automatiquement l'overlay pendant les missions",
   "ui-settings-iconflash": "Faire clignorer l'icône de FFXIV en cas d'ALEA/Mission",
   "ui-settings-cheatroulette": "Montrer la mission en cours d'attente lors des missions aléatoires",
   "ui-settings-tweet-title": "Rappel Twiter(Inopérant)",

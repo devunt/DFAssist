@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20180924.1",
+  "version": "20181008.1",
 
   // Duty
   "instances": {
@@ -1263,9 +1263,9 @@
     },
     "475": {
       "name": "The Great Hunt (Extreme)",
-      "tank": "2",
-      "healer": "2",
-      "dps": "4"
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
     },
 
     // 4.4 Prelude in Violet
@@ -2560,6 +2560,55 @@
         "901": "Do Spinners Dream of Electric Rooks"
       }
     },
+    "999": {
+      "name": "Eureka - Anemos",
+      "fates": {
+        "1328": "The Swarm Never Sets",
+        "1329": "Wall in the Willows",
+        "1331": "Wine and Honey",
+        "1332": "Unsafety Dance",
+        "1333": "Teles House",
+        "1334": "Prove Your Amemettle",
+        "1335": "Caym What May",
+        "1336": "The Killing of a Sacred Bombardier",
+        "1337": "Sing, Muse",
+        "1338": "Drama Lamashtu",
+        "1339": "Short Serket 2",
+        "1340": "I Amarok",
+        "1341": "To the Mat",
+        "1342": "Simurghasbord",
+        "1343": "When You Ride Alone",
+        "1344": "One Missed Callisto",
+        "1345": "Disinherit the Wind",
+        "1346": "Don't Judge Me, Morbol",
+        "1347": "By Numbers",
+        "1348": "The Shadow over Anemos"
+      }
+    },
+    "998": {
+      "name": "Eureka - Pagos",
+      "fates": {
+        "1351": "Eternity",
+        "1352": "Cows for Concern",
+        "1353": "Ash the Magic Dragon",
+        "1354": "Conqueror Worm",
+        "1355": "Melting Point",
+        "1356": "Disorder in the Court",
+        "1357": "Does It Have to Be a Snowman",
+        "1358": "Brothers",
+        "1359": "Eye of Horus",
+        "1360": "Morte Arthro",
+        "1361": "Apocalypse Cow",
+        "1362": "Third Impact",
+        "1363": "Eye Scream for Ice Cream",
+        "1364": "Louhi on Ice",
+        "1365": "Cassie and the Copycats",
+        "1366": "The Wobbler in Darkness",
+        "1367": "Down the Rabbit Hole",
+        "1368": "Curiouser and Curiouser",
+        "1369": "Cairn Blight 451"
+      }
+    },
     "612": {
       "name": "Stormblood and Events",
       "fates": {
@@ -2932,12 +2981,7 @@
         "1321": "The Summer of Ultros",
         "1322": "To Bait a Baiter",
         "1323": "Snippers Gonna Snip",
-        "1324": "Adopt a Beach"
-      }
-    },
-    "988": {
-      "name": "StormBlood After v4.1~",
-      "fates": {
+        "1324": "Adopt a Beach",
         "1325": "Bad Luck Comes in Trees",
         "961": "Who Let the Hounds Out",
         "962": "Who Let the Hounds Out",
@@ -2955,55 +2999,6 @@
         "1386": "Counter-fiend Training: Less Is Morbol",
         "1405": "Counter-imperial Training: A Pinch of Assault",
         "1406": "Counter-fiend Training: Less Is Morbol"
-      }
-    },
-    "999": {
-      "name": "Eureka - Anemos",
-      "fates": {
-        "1328": "The Swarm Never Sets",
-        "1329": "Wall in the Willows",
-        "1331": "Wine and Honey",
-        "1332": "Unsafety Dance",
-        "1333": "Teles House",
-        "1334": "Prove Your Amemettle",
-        "1335": "Caym What May",
-        "1336": "The Killing of a Sacred Bombardier",
-        "1337": "Sing, Muse",
-        "1338": "Drama Lamashtu",
-        "1339": "Short Serket 2",
-        "1340": "I Amarok",
-        "1341": "To the Mat",
-        "1342": "Simurghasbord",
-        "1343": "When You Ride Alone",
-        "1344": "One Missed Callisto",
-        "1345": "Disinherit the Wind",
-        "1346": "Don't Judge Me, Morbol",
-        "1347": "By Numbers",
-        "1348": "The Shadow over Anemos"
-      }
-    },
-    "998": {
-      "name": "Eureka - Pagos",
-      "fates": {
-        "1351": "Eternity",
-        "1352": "Cows for Concern",
-        "1353": "Ash the Magic Dragon",
-        "1354": "Conqueror Worm",
-        "1355": "Melting Point",
-        "1356": "Disorder in the Court",
-        "1357": "Does It Have to Be a Snowman",
-        "1358": "Brothers",
-        "1359": "Eye of Horus",
-        "1360": "Morte Arthro",
-        "1361": "Apocalypse Cow",
-        "1362": "Third Impact",
-        "1363": "Eye Scream for Ice Cream",
-        "1364": "Louhi on Ice",
-        "1365": "Cassie and the Copycats",
-        "1366": "The Wobbler in Darkness",
-        "1367": "Down the Rabbit Hole",
-        "1368": "Curiouser and Curiouser",
-        "1369": "Cairn Blight 451"
       }
     }
   }
