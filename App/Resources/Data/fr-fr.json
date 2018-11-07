@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20181008.1",
+  "version": "20181106.1",
 
   // Duty
   "instances": {
@@ -1059,7 +1059,7 @@
       "healer": "2",
       "dps": "4"
     },
-	
+
     // 4.05 Raids
     "256": {
       "name": "Deltastice v1.0 (sadique)",
@@ -1085,8 +1085,8 @@
       "healer": "2",
       "dps": "4"
     },
-	
-	//4.05 Party Contents
+
+    //4.05 Party Contents
     "268": {
       "name": "les Canaux perdus d'Uznair",
       "tank": "0",
@@ -1119,16 +1119,16 @@
       "healer": "6",
       "dps": "15"
     },
-	
-	//4.1 Party Contents
+
+    //4.1 Party Contents
     "276": {
       "name": "les Canaux cachés d'Uznair",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-	
-	//4.11 Raids
+
+    //4.11 Raids
     "280": {
       "name": "l'Abîme infini de Bahamut (fatal)",
       "tank": "2",
@@ -1298,7 +1298,7 @@
     },
 
     // 4.4 Raids
-    
+
     "587": {
       "name": "Alphastice V1.0",
       "tank": "2",
@@ -1812,20 +1812,26 @@
       "healer": "0",
       "dps": "0"
     },
-	
-	// The Forbidden Land, Eureka
-  "283": {
-    "name": "a terre interdite d'Eurêka: Anemos",
-    "tank": "0",
-    "healer": "0",
-    "dps": "0"
-  },
-  "581": {
-    "name": "a terre interdite d'Eurêka: Pagos",
-    "tank": "0",
-    "healer": "0",
-    "dps": "0"
-  },
+
+    // The Forbidden Land, Eureka
+    "283": {
+      "name": "a terre interdite d'Eurêka: Anemos",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "581": {
+      "name": "a terre interdite d'Eurêka: Pagos",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "598": {
+      "name": "a terre interdite d'Eurêka: Pyros",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
 
 
     // Other things...
@@ -1835,8 +1841,8 @@
       "healer": "0",
       "dps": "0"
     },
-  
-	//Event Instance
+
+    //Event Instance
     "181": {
       "name": "le Manoir hanté",
       "tank": "0",
@@ -3005,6 +3011,30 @@
         "1368": "Curiouser and Curiouser",
         "1369": "Cairn Blight 451"
       }
+    },
+      "992": {
+        "name": "Eureka - Pyros",
+        "fates": {
+          "1388": "Défi : la blanche créature",
+          "1389": "Défi : les foudres de Flauros",
+          "1390": "Défi : monstres sophistiqués",
+          "1391": "Défi : une méchante griffe",
+          "1392": "Défi : livrez les irrévérents !",
+          "1393": "Défi : les cousins de Machin",
+          "1394": "Défi : les éclairs de génie d'Aetolos",
+          "1395": "Défi : chaud comme la braise",
+          "1396": "Défi : un peu gluantes, mais ap pé tis san tes !",
+          "1397": "Défi : ses larmes n'y pourront rien changer",
+          "1398": "Défi : la détresse des mots qu'ils envoient",
+          "1399": "Défi : coup de foudre à Eurêka Pyros",
+          "1400": "Défi : rencontre de deux sales types",
+          "1401": "Défi : les yeux qui brillent",
+          "1402": "Défi : frères ennemis",
+          "1403": "Défi : Sköll, offenses-tu ?",
+          "1404": "Défi : papillons de la reine",
+          "1407": "Défi : les coraux de la colère",
+          "1408": "Défi : roches porte-bonheur"
+        }
+      }
     }
   }
-}
