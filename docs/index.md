@@ -10,7 +10,7 @@ title: {{ site.name }}
 ## 정보
 - 최신 버전 ```v20181008.1``` ([다운로드](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
 - 타겟 버전 ```Microsoft .NET Framework 4.0``` ([다운로드](https://www.microsoft.com/ko-kr/download/details.aspx?id=17851))
-- 게임 버전 ```파이널 판타지 14 한국판, 버전 4.2```(대부분 지원) 또는 ```글로벌판, 버전 4.4```
+- 게임 버전 ```파이널 판타지 14 한국판, 버전 4.3```또는 ```글로벌판, 버전 4.4```
 
 ## 사용법
 1. 상단 다운로드 링크의 파일 목록에서 ``DFAssist.v********.*.zip`` 파일을 내려받습니다.
