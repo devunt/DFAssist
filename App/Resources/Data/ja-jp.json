@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20181106.1",
+  "version": "20181118.1",
 
   // Duty
   "instances": {
@@ -1348,6 +1348,15 @@
       "dps": "4"
     },
 
+    // 4.45
+    // Read the KR Script.
+
+    "595": {
+      "name": "真ヨウジンボウ討滅戦",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
 
 
     // Guildhests
