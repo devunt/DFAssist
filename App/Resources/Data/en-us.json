@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20181118.1",
+  "version": "20181229.1",
 
   // Duty
   "instances": {
@@ -504,7 +504,7 @@
       "dps": "4"
     },
     // 2.55 Trials
-    "419": {
+    "83": {
       "name": "The Steps of Faith",
       "tank": "2",
       "healer": "2",
@@ -512,7 +512,7 @@
     },
 
     // 2.5 Raids
-    "494": {
+    "111": {
       "name": "The World of Darkness",
       "tank": "3",
       "healer": "6",
