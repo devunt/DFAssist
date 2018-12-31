@@ -81,7 +81,6 @@ namespace App
             comboBox_Language.SelectedValueChanged += comboBox_Language_SelectedValueChanged;
 
             checkBox_StartupShow.Checked = Settings.StartupShowMainForm;
-            // checkBox_AutoOverlayHide.Checked = Settings.AutoOverlayHide;
             checkBox_FlashWindow.Checked = Settings.FlashWindow;
             SetCheatRoulleteCheckBox(Settings.CheatRoulette);
 
@@ -229,12 +228,6 @@ namespace App
         {
             textBox_Twitter.Enabled = checkBox_Twitter.Checked;
             Settings.TwitterEnabled = checkBox_Twitter.Checked;
-            Settings.Save();
-        }
-
-        private void checkBox_AutoOverlayHide_CheckedChanged(object sender, EventArgs e)
-        {
-            Settings.AutoOverlayHide = checkBox_AutoOverlayHide.Checked;
             Settings.Save();
         }*/
 
@@ -526,7 +519,7 @@ namespace App
             toolTip.SetToolTip(checkBox_Overlay, Localization.GetText("ui-settings-overlay-tooltip"));
             button_ResetOverlayPosition.Text = Localization.GetText("ui-settings-overlay-reset");
             checkBox_StartupShow.Text = Localization.GetText("ui-settings-startupshow");
-            checkBox_AutoOverlayHide.Text = Localization.GetText("ui-settings-autohide");
+            checkBox_fateNotificationSound.Text = Localization.GetText("ui-settings-fatesound");
             checkBox_FlashWindow.Text = Localization.GetText("ui-settings-iconflash");
             checkBox_CheatRoullete.Text = Localization.GetText("ui-settings-cheatroulette");
             groupBox_TwitterSet.Text = Localization.GetText("ui-settings-tweet-title");

@@ -198,6 +198,7 @@
   <ItemGroup>
     <Content Include="App.ico" />
     <Content Include="ILMergeOrder.txt" />
+    <None Include="Resources\FFXIV_FATE_Start.wav" />
     <None Include="Resources\language2.png" />
   </ItemGroup>
   <ItemGroup>

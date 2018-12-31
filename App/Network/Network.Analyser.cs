@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
-using System.Text;
 
 namespace App
 {
@@ -12,6 +11,8 @@ namespace App
         private State state = State.IDLE;
         private int lastMember = 0;
         
+
+
         private void AnalyseFFXIVPacket(byte[] payload)
         {
             try {
@@ -217,6 +218,8 @@ namespace App
                         {
                             mainForm.overlayForm.SetFATEAsOccured(fate);
                             Log.I("l-fate-occured-info", fate.Name);
+
+
 
                             if (!Settings.ShowOverlay)
                             {

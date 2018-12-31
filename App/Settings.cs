@@ -15,7 +15,6 @@ namespace App
         public static int OverlayY { get; set; } = Global.OVERLAY_XY_UNSET;
         public static bool StartupShowMainForm { get; set; } = true;
         public static bool TwitterEnabled { get; set; } = false;
-        public static bool AutoOverlayHide { get; set; } = false;
         public static bool FlashWindow { get; set; } = true;
         public static bool CheatRoulette { get; set; } = false;
         public static string TwitterAccount { get; set; } = "";
@@ -41,7 +40,6 @@ namespace App
             {
                 StartupShowMainForm = iniFile.ReadValue("startup", "show") != "0";
                 ShowOverlay = iniFile.ReadValue("overlay", "show") != "0";
-                // AutoOverlayHide = iniFile.ReadValue("overlay", "autohide") != "0";
                 OverlayX = int.Parse(iniFile.ReadValue("overlay", "x") ?? "0");
                 OverlayY = int.Parse(iniFile.ReadValue("overlay", "y") ?? "0");
                 TwitterEnabled = iniFile.ReadValue("notification", "twitter") == "1";
@@ -63,7 +61,6 @@ namespace App
         {
             iniFile.WriteValue("startup", "show", StartupShowMainForm ? "1" : "0");
             iniFile.WriteValue("overlay", "show", ShowOverlay ? "1" : "0");
-            // iniFile.WriteValue("overlay", "autohide", AutoOverlayHide ? "1" : "0");
             iniFile.WriteValue("overlay", "x", OverlayX.ToString());
             iniFile.WriteValue("overlay", "y", OverlayY.ToString());
             iniFile.WriteValue("notification", "twitter", TwitterEnabled ? "1" : "0");

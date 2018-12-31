@@ -19,7 +19,7 @@ namespace App.Properties {
     // 클래스에서 자동으로 생성되었습니다.
     // 멤버를 추가하거나 제거하려면 .ResX 파일을 편집한 다음 /str 옵션을 사용하여 ResGen을
     // 다시 실행하거나 VS 프로젝트를 다시 빌드하십시오.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -63,7 +63,7 @@ namespace App.Properties {
         /// <summary>
         ///   {
         ///  // Version
-        ///  &quot;version&quot;: &quot;20181008.1&quot;,
+        ///  &quot;version&quot;: &quot;20181229.1&quot;,
         ///
         ///  // Duty
         ///  &quot;instances&quot;: {
@@ -88,9 +88,7 @@ namespace App.Properties {
         ///      &quot;dps&quot;: &quot;2&quot;
         ///    },
         ///    &quot;3&quot;: {
-        ///      &quot;name&quot;: &quot;Copperbell Mines&quot;,
-        ///      &quot;tank&quot;: &quot;1&quot;,
-        ///    [나머지 문자열은 잘림]&quot;;과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///      &quot;name&quot;: &quot;Copperbell Mine[나머지 문자열은 잘림]&quot;;과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Data_EN_US {
             get {
@@ -101,7 +99,7 @@ namespace App.Properties {
         /// <summary>
         ///   {
         ///  // Version
-        ///  &quot;version&quot;: &quot;20181008.1&quot;,
+        ///  &quot;version&quot;: &quot;20181229.1&quot;,
         ///
         ///  // Duty
         ///  &quot;instances&quot;: {
@@ -126,8 +124,7 @@ namespace App.Properties {
         ///      &quot;dps&quot;: &quot;2&quot;
         ///    },
         ///    &quot;3&quot;: {
-        ///      &quot;name&quot;: &quot;les Mines de Clochecuivre&quot;,
-        ///      &quot;tank[나머지 문자열은 잘림]&quot;;과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///      &quot;name&quot;: &quot;les Mines de[나머지 문자열은 잘림]&quot;;과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Data_FR_FR {
             get {
@@ -138,7 +135,7 @@ namespace App.Properties {
         /// <summary>
         ///   {
         ///  // Version
-        ///  &quot;version&quot;: &quot;20181008.1&quot;, 
+        ///  &quot;version&quot;: &quot;20181229.1&quot;,
         ///
         ///  // Duty
         ///  &quot;instances&quot;: {
@@ -164,8 +161,7 @@ namespace App.Properties {
         ///    },
         ///    &quot;3&quot;: {
         ///      &quot;name&quot;: &quot;封鎖坑道 カッパーベル銅山&quot;,
-        ///      &quot;tank&quot;: &quot;1&quot;,
-        ///      &quot;heale[나머지 문자열은 잘림]&quot;;과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///    [나머지 문자열은 잘림]&quot;;과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Data_JA_JP {
             get {
@@ -176,7 +172,7 @@ namespace App.Properties {
         /// <summary>
         ///   {
         ///  // 버전
-        ///  &quot;version&quot;: &quot;20181008.1&quot;,
+        ///  &quot;version&quot;: &quot;20181229.1&quot;,
         ///
         ///  // 임무
         ///  &quot;instances&quot;: {
@@ -204,13 +200,20 @@ namespace App.Properties {
         ///      &quot;name&quot;: &quot;구리종 광산&quot;,
         ///      &quot;tank&quot;: &quot;1&quot;,
         ///      &quot;healer&quot;: &quot;1&quot;,
-        ///      &quot;dps&quot;: &quot;2&quot;
-        ///    },
-        ///    &quot;7&quot;:[나머지 문자열은 잘림]&quot;;과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///  [나머지 문자열은 잘림]&quot;;과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Data_KO_KR {
             get {
                 return ResourceManager.GetString("Data_KO_KR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   System.IO.MemoryStream과(와) 유사한 System.IO.UnmanagedMemoryStream 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream FFXIV_FATE_Start {
+            get {
+                return ResourceManager.GetStream("FFXIV_FATE_Start", resourceCulture);
             }
         }
         
@@ -244,7 +247,7 @@ namespace App.Properties {
         ///  &quot;tweet-queue-matched&quot;: &quot;&lt; {0} &gt; Matched!&quot;,
         ///
         ///
-        ///  &quot;fate-preset-animus-SkyfireI&quot;: &quot;Book of[나머지 문자열은 잘림]&quot;;과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///  &quot;fate-preset-animus-[나머지 문자열은 잘림]&quot;;과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Localization_EN_US {
             get {
@@ -269,10 +272,7 @@ namespace App.Properties {
         ///
         ///
         ///  &quot;tweet-fate-occured&quot;: &quot;ALEA &lt; {0} &gt; en cours!&quot;,
-        ///  &quot;tweet-queue-matched&quot;: &quot;&lt; {0} &gt; disponible!&quot;,
-        ///
-        ///
-        ///  &quot;fate-pr[나머지 문자열은 잘림]&quot;;과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///  &quot;tweet-queue-matched&quot;: &quot;&lt; {0} &gt; disponible[나머지 문자열은 잘림]&quot;;과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Localization_FR_FR {
             get {
@@ -301,7 +301,7 @@ namespace App.Properties {
         ///
         ///
         ///  &quot;fate-preset-animus-SkyfireI&quot;: &quot;炎天一巻&quot;,
-        ///  &quot;fate-preset-animus-SkyfireII&quot;: &quot;炎天[나머지 문자열은 잘림]&quot;;과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///  &quot;fate-preset-an[나머지 문자열은 잘림]&quot;;과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Localization_JA_JP {
             get {
@@ -329,8 +329,7 @@ namespace App.Properties {
         ///  &quot;tweet-queue-matched&quot;: &quot;&lt; {0} &gt; 매칭!&quot;,
         ///
         ///  &quot;fate-preset-animus-SkyfireI&quot;: &quot;불의 서 1권&quot;,
-        ///  &quot;fate-preset-animus-SkyfireII&quot;: &quot;불의 서 2권&quot;,
-        ///  &quot;[나머지 문자열은 잘림]&quot;;과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///  &quot;fate-preset-animus-Skyfire[나머지 문자열은 잘림]&quot;;과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Localization_KO_KR {
             get {
