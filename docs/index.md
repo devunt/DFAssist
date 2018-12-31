@@ -8,7 +8,7 @@ title: {{ site.name }}
 매칭을 돌려놓고 다른 일을 하다가 매칭 된 줄도 모르고 계속 다른 일을 하느라 확인을 못 누르는 사태를 방지하기 위해 만들었습니다.
 
 ## 정보
-- 최신 버전 ```v20181008.1``` ([다운로드](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
+- 최신 버전 ```v20190101.1``` ([다운로드](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
 - 타겟 버전 ```Microsoft .NET Framework 4.0``` ([다운로드](https://www.microsoft.com/ko-kr/download/details.aspx?id=17851))
 - 게임 버전 ```파이널 판타지 14 한국판, 버전 4.3```또는 ```글로벌판, 버전 4.4```
 
@@ -25,6 +25,7 @@ title: {{ site.name }}
   - 무작위 임무가 매칭됐을 시 매칭된 임무가 어떤 임무인지 입장 전 확인 가능 (설정 필요)
   - 미리 설정한 돌발 임무가 현재 위치한 맵에 발생했을 경우 알림 가능 (이벤트 돌발, 고대무기 돌발 등)
   - 미리 설정한 트위터 계정으로 임무 매칭시나 돌발 발생시 알림 발송 가능 (현재 트위터 기능은 작동하지 않습니다.)
+  - 알림음 사용자 지정 가능
 
 ## 문제 해결
 자주 발생하는 문제들은 [FAQ](https://jaehyuk-lee.github.io/DFAssist/faq)에서 확인해볼 수 있습니다.
