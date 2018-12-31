@@ -27,7 +27,7 @@ title: {{ site.name }}
   - 미리 설정한 트위터 계정으로 임무 매칭시나 돌발 발생시 알림 발송 가능 (현재 트위터 기능은 작동하지 않습니다.)
 
 ## 문제 해결
-자주 발생하는 문제들은 [FAQ](https://jaehyuk-lee.github.io/DFAssist/)에서 확인해볼 수 있습니다.
+자주 발생하는 문제들은 [FAQ](https://jaehyuk-lee.github.io/DFAssist/faq)에서 확인해볼 수 있습니다.
 
 그 외에 다른 문제 발생시 [이슈 트래커](https://github.com/jaehyuk-lee/DFAssist/issues)에 발생 상황과 결과를 남겨주세요.
 
