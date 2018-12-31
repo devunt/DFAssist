@@ -51,7 +51,11 @@
   "ui-settings-startupshow": "Afficher la fenêtre principale au démarrage",
   "ui-settings-iconflash": "Faire clignorer l'icône de FFXIV en cas d'ALEA/Mission",
   "ui-settings-cheatroulette": "Montrer la mission en cours d'attente lors des missions aléatoires",
-  "ui-settings-fatesound": "Enable FATE Notification Sound",
+  "ui-settings-fatesound": "Enable FATE Notification Sound (Disable Custom Sound on FATE)",
+  "ui-settings-customsound": "Customize Notification Sound",
+  "ui-settings-getsoundfile": "Select File",
+  "ui-settings-getfilewav": "WAV files (*.wav)|*.wav",
+  "ui-notification-customsound-selectfile": "Select Sound File First",
   "ui-settings-tweet-title": "Rappel Twiter(Inopérant)",
   "ui-settings-tweet-activate": "Activer",
   "ui-settings-tweet-about": "Lorsqu'un ALEA choisi se produir, \nenvoyer un tweet avec mention au compte sélectionné.\nEntrez le nom du compte Twitter sans @.",
@@ -148,6 +152,8 @@
 
   "l-firewall-registered": "Pare-feu: enregistré",
   "l-firewall-error": "Pare-feu: erreur d'enregistrement",
+  
+  "l-wav-error": "S: Play custom sound error: invalid wav file.",
 
   "l-analyze-error-length": "A: Erreur de longueur lors de l'analyse du message: {0}, {1}/{2}",
   "l-analyze-error-general": "A: Erreur d'analyse du message",

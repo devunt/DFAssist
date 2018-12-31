@@ -51,7 +51,11 @@
   "ui-settings-startupshow": "起動時にこのウィンドウを表示する",
   "ui-settings-iconflash": "突入準備完了時FFXIVのアイコンを点滅させる",
   "ui-settings-cheatroulette": "デュティルレット。実際に入場するダンジョンを確認",
-  "ui-settings-fatesound": "Enable FATE Notification Sound",
+  "ui-settings-fatesound": "Enable FATE Notification Sound (Disable Custom Sound on FATE)",
+  "ui-settings-customsound": "Customize Notification Sound",
+  "ui-settings-getsoundfile": "Select File",
+  "ui-settings-getfilewav": "WAV files (*.wav)|*.wav",
+  "ui-notification-customsound-selectfile": "Select Sound File First",
   "ui-settings-tweet-title": "Twitterアラーム(使用不可)",
   "ui-settings-tweet-activate": "有効化",
   "ui-settings-tweet-about": "突入準備完了時、FATEが発生した際指定したアカウントに\nツイートを送信します。\nTwitterアカウント名の@以降を入力してください。",
@@ -148,6 +152,8 @@
 
   "l-firewall-registered": "FW: 登録済み",
   "l-firewall-error": "FW: 登録中にエラーが発生しました",
+  
+  "l-wav-error": "S: Play custom sound error: invalid wav file.",
 
   "l-analyze-error-length": "A: メッセージ解析中に長さエラーが発生しました: {0}, {1}/{2}",
   "l-analyze-error-general": "A: メッセージ解析中にエラーが発生しました",

@@ -11,10 +11,9 @@ namespace App
     {
         private State state = State.IDLE;
         private int lastMember = 0;
-        public SoundPlayer player;
+        internal SoundPlayer notificationPlayer;
+        private SoundPlayer fatePlayer;
         private System.IO.Stream str = Properties.Resources.FFXIV_FATE_Start;
-
-
 
         private void AnalyseFFXIVPacket(byte[] payload)
         {
@@ -224,8 +223,13 @@ namespace App
 
                             if(Settings.FateSound)
                             {
-                                player = new SoundPlayer(str);
-                                player.Play();
+                                fatePlayer = new SoundPlayer(str);
+                                fatePlayer.Stream.Position = 0; // fatePlayer가 Play()를 끝내기 전에 다시 Play()를 할 때 (한 번에 여러 돌발이 나타날 때) 버그 방지를 위해 필요한 코드
+                                fatePlayer.Play();
+                            }
+                            else if (Settings.CustomSound)
+                            {
+                                notificationPlayer.Play();
                             }
                             if (!Settings.ShowOverlay)
                             {
@@ -317,7 +321,10 @@ namespace App
                         var code = BitConverter.ToUInt16(data, 22);
 
                         Instance instance;
-
+                        if (Settings.CustomSound)
+                        {
+                            notificationPlayer.Play();
+                        }
                         if (!Settings.CheatRoulette && roulette != 0)
                         {
                             instance = new Instance { Name = Data.GetRoulette(roulette).Name };
@@ -430,7 +437,10 @@ namespace App
                     var code = BitConverter.ToUInt16(data, 4);
 
                     Instance instance;
-
+                    if (Settings.CustomSound)
+                    {
+                        notificationPlayer.Play();
+                    }
                     if (!Settings.CheatRoulette && roulette != 0)
                     {
                         instance = new Instance { Name = Data.GetRoulette(roulette).Name };

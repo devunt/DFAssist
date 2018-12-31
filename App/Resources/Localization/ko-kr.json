@@ -50,7 +50,11 @@
   "ui-settings-startupshow": "프로그램 시작시 이 창 보이기",
   "ui-settings-iconflash": "매칭/돌발 발생시 파이널판타지14 작업 표시줄 아이콘 깜빡이기",
   "ui-settings-cheatroulette": "무작위 임무일 경우에도 실제 매칭된 임무 보여주기",
-  "ui-settings-fatesound": "돌발임무 알림음 활성화",
+  "ui-settings-fatesound": "돌발임무 알림음 활성화 (돌발임무 알림에서 사용자 알림음 사용 안함)",
+  "ui-settings-customsound": "알림음 사용자 설정",
+  "ui-settings-getsoundfile": "파일 선택",
+  "ui-settings-getfilewav": "WAV 파일 (*.wav)|*.wav",
+  "ui-notification-customsound-selectfile": "음악 파일을 먼저 선택해주세요.",
   "ui-settings-tweet-title": "트위터 알림 (서비스 중지)",
   "ui-settings-tweet-activate": "활성화",
   "ui-settings-tweet-about": "매칭이 됐을 시 입력된 트위터 계정으로 멘션을 보내 해당 사실을 알립니다.\n원하는 돌발이 발생했을 시에도 멘션을 보내 해당 사실을 알립니다.\n계정명 입력시 앞의 @ 표시는 제외하고 순수 계정명만 입력해주세요.",
@@ -147,6 +151,8 @@
 
   "l-firewall-registered": "FW: 추가됨",
   "l-firewall-error": "FW: 추가중 에러 발생",
+
+  "l-wav-error": "S: 음악 파일 재생 에러: 옳바르지 않은 wav 파일입니다.",
 
   "l-analyze-error-length": "A: 메시지 분석중 길이 에러 발생함: {0}, {1}/{2}",
   "l-analyze-error-general": "A: 메시지 분석중 에러 발생함",

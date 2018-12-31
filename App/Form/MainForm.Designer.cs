@@ -49,8 +49,10 @@
             this.label_TwitterAbout = new App.LocalizableLabel();
             this.checkBox_Twitter = new System.Windows.Forms.CheckBox();
             this.groupBox_DefaultSet = new System.Windows.Forms.GroupBox();
-            this.checkBox_alertSoundCustomize = new System.Windows.Forms.CheckBox();
-            this.checkBox_fateNotificationSound = new System.Windows.Forms.CheckBox();
+            this.label_CustomSoundFileName = new System.Windows.Forms.Label();
+            this.button_getSoundFile = new System.Windows.Forms.Button();
+            this.checkBox_CustomSound = new System.Windows.Forms.CheckBox();
+            this.checkBox_FateSound = new System.Windows.Forms.CheckBox();
             this.button_ResetOverlayPosition = new System.Windows.Forms.Button();
             this.checkBox_CheatRoullete = new System.Windows.Forms.CheckBox();
             this.checkBox_FlashWindow = new System.Windows.Forms.CheckBox();
@@ -293,8 +295,10 @@
             // 
             // groupBox_DefaultSet
             // 
-            this.groupBox_DefaultSet.Controls.Add(this.checkBox_alertSoundCustomize);
-            this.groupBox_DefaultSet.Controls.Add(this.checkBox_fateNotificationSound);
+            this.groupBox_DefaultSet.Controls.Add(this.label_CustomSoundFileName);
+            this.groupBox_DefaultSet.Controls.Add(this.button_getSoundFile);
+            this.groupBox_DefaultSet.Controls.Add(this.checkBox_CustomSound);
+            this.groupBox_DefaultSet.Controls.Add(this.checkBox_FateSound);
             this.groupBox_DefaultSet.Controls.Add(this.button_ResetOverlayPosition);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_CheatRoullete);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_FlashWindow);
@@ -308,29 +312,50 @@
             this.groupBox_DefaultSet.TabStop = false;
             this.groupBox_DefaultSet.Text = "기본설정";
             // 
-            // checkBox_alertSoundCustomize
+            // label_CustomSoundFileName
             // 
-            this.checkBox_alertSoundCustomize.AutoSize = true;
-            this.checkBox_alertSoundCustomize.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.checkBox_alertSoundCustomize.Location = new System.Drawing.Point(6, 118);
-            this.checkBox_alertSoundCustomize.Name = "checkBox_alertSoundCustomize";
-            this.checkBox_alertSoundCustomize.Size = new System.Drawing.Size(130, 19);
-            this.checkBox_alertSoundCustomize.TabIndex = 5;
-            this.checkBox_alertSoundCustomize.Text = "알림음 사용자 설정";
-            this.checkBox_alertSoundCustomize.UseVisualStyleBackColor = true;
-            this.checkBox_alertSoundCustomize.Visible = false;
+            this.label_CustomSoundFileName.AutoSize = true;
+            this.label_CustomSoundFileName.Location = new System.Drawing.Point(213, 118);
+            this.label_CustomSoundFileName.Name = "label_CustomSoundFileName";
+            this.label_CustomSoundFileName.Size = new System.Drawing.Size(115, 17);
+            this.label_CustomSoundFileName.TabIndex = 7;
+            this.label_CustomSoundFileName.Text = "(기본값: 비워두기)";
             // 
-            // checkBox_fateNotificationSound
+            // button_getSoundFile
             // 
-            this.checkBox_fateNotificationSound.AutoSize = true;
-            this.checkBox_fateNotificationSound.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.checkBox_fateNotificationSound.Location = new System.Drawing.Point(6, 99);
-            this.checkBox_fateNotificationSound.Name = "checkBox_fateNotificationSound";
-            this.checkBox_fateNotificationSound.Size = new System.Drawing.Size(154, 19);
-            this.checkBox_fateNotificationSound.TabIndex = 4;
-            this.checkBox_fateNotificationSound.Text = "돌발임무 알림음 활성화";
-            this.checkBox_fateNotificationSound.UseVisualStyleBackColor = true;
-            this.checkBox_fateNotificationSound.CheckedChanged += new System.EventHandler(this.checkBox_fateNotificationSound_CheckedChanged);
+            this.button_getSoundFile.Font = new System.Drawing.Font("맑은 고딕", 8F);
+            this.button_getSoundFile.Location = new System.Drawing.Point(142, 117);
+            this.button_getSoundFile.Name = "button_getSoundFile";
+            this.button_getSoundFile.Size = new System.Drawing.Size(65, 20);
+            this.button_getSoundFile.TabIndex = 6;
+            this.button_getSoundFile.Text = "파일 선택";
+            this.button_getSoundFile.UseVisualStyleBackColor = true;
+            this.button_getSoundFile.Click += new System.EventHandler(this.button_getSoundFile_Click);
+            // 
+            // checkBox_CustomSound
+            // 
+            this.checkBox_CustomSound.AutoSize = true;
+            this.checkBox_CustomSound.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.checkBox_CustomSound.Location = new System.Drawing.Point(6, 118);
+            this.checkBox_CustomSound.Name = "checkBox_CustomSound";
+            this.checkBox_CustomSound.Size = new System.Drawing.Size(130, 19);
+            this.checkBox_CustomSound.TabIndex = 5;
+            this.checkBox_CustomSound.Text = "알림음 사용자 설정";
+            this.checkBox_CustomSound.UseVisualStyleBackColor = true;
+            this.checkBox_CustomSound.CheckedChanged += new System.EventHandler(this.checkBox_CustomSound_CheckedChanged);
+            this.checkBox_CustomSound.MouseDown += new System.Windows.Forms.MouseEventHandler(this.checkBox_CustomSound_MouseDown);
+            // 
+            // checkBox_FateSound
+            // 
+            this.checkBox_FateSound.AutoSize = true;
+            this.checkBox_FateSound.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.checkBox_FateSound.Location = new System.Drawing.Point(6, 99);
+            this.checkBox_FateSound.Name = "checkBox_FateSound";
+            this.checkBox_FateSound.Size = new System.Drawing.Size(402, 19);
+            this.checkBox_FateSound.TabIndex = 4;
+            this.checkBox_FateSound.Text = "돌발임무 알림음 활성화 (돌발임무 알림에서 사용자 알림음 사용 안함)";
+            this.checkBox_FateSound.UseVisualStyleBackColor = true;
+            this.checkBox_FateSound.CheckedChanged += new System.EventHandler(this.checkBox_FateSound_CheckedChanged);
             // 
             // button_ResetOverlayPosition
             // 
@@ -835,8 +860,10 @@
         private System.Windows.Forms.ToolStripMenuItem anemosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pagosToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.CheckBox checkBox_fateNotificationSound;
-        private System.Windows.Forms.CheckBox checkBox_alertSoundCustomize;
+        private System.Windows.Forms.CheckBox checkBox_FateSound;
+        private System.Windows.Forms.CheckBox checkBox_CustomSound;
+        private System.Windows.Forms.Button button_getSoundFile;
+        private System.Windows.Forms.Label label_CustomSoundFileName;
     }
 }
 

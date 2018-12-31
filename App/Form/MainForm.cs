@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace App
 {
@@ -55,6 +56,7 @@ namespace App
                 overlayForm.Hide();
                 checkBox_Overlay.Checked = false;
             }
+            networkWorker.notificationPlayer = new System.Media.SoundPlayer();
 
             Task.Factory.StartNew(() =>
             {
@@ -82,6 +84,22 @@ namespace App
 
             checkBox_StartupShow.Checked = Settings.StartupShowMainForm;
             checkBox_FlashWindow.Checked = Settings.FlashWindow;
+            checkBox_FateSound.Checked = Settings.FateSound;
+            // Check if Custom Sound File Exists
+            if (File.Exists(Settings.CustomSoundPath))
+            {
+                Log.I("Custom Sound File Exists!");
+                label_CustomSoundFileName.Text = Path.GetFileName(Settings.CustomSoundPath);
+                checkBox_CustomSound.Checked = Settings.CustomSound;
+                networkWorker.notificationPlayer.SoundLocation = Settings.CustomSoundPath;
+            }
+            else
+            {
+                label_CustomSoundFileName.Text = "";
+                checkBox_CustomSound.Checked = false;
+                Settings.CustomSound = false;
+                Settings.Save();
+            }
             SetCheatRoulleteCheckBox(Settings.CheatRoulette);
 
             // checkBox_Twitter.Checked = Settings.TwitterEnabled;
@@ -224,24 +242,64 @@ namespace App
             Settings.Save();
         }
 
+        private void checkBox_FlashWindow_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.FlashWindow = checkBox_FlashWindow.Checked;
+            Settings.Save();
+        }
+
+        private void checkBox_FateSound_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.FateSound = checkBox_FateSound.Checked;
+            Settings.Save();
+        }
+
+        private void checkBox_CustomSound_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.CustomSound = checkBox_CustomSound.Checked;
+            Settings.Save();
+        }
+
+        private void checkBox_CustomSound_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (label_CustomSoundFileName.Text == "")
+            {
+                LMessageBox.I("ui-notification-customsound-selectfile");
+                checkBox_CustomSound.Checked = false;
+            }
+        }
+
+        private void button_getSoundFile_Click(object sender, EventArgs e)
+        {
+            // Create a new OpenFileDialog.
+            OpenFileDialog dlg = new OpenFileDialog();
+
+            // Make sure the dialog checks for existence of the 
+            // selected file.
+            dlg.CheckFileExists = true;
+            
+            dlg.Filter = "WAV files (*.wav)|*.wav";
+            dlg.DefaultExt = ".wav";
+
+            // Activate the file selection dialog.
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                // Get the selected file's path from the dialog.
+                this.label_CustomSoundFileName.Text = Path.GetFileName(dlg.FileName);
+
+                Settings.CustomSoundPath = dlg.FileName;
+                Settings.Save();
+                
+                networkWorker.notificationPlayer.SoundLocation = dlg.FileName;
+            }
+        }
+
         /*private void checkBox_Twitter_CheckedChanged(object sender, EventArgs e)
         {
             textBox_Twitter.Enabled = checkBox_Twitter.Checked;
             Settings.TwitterEnabled = checkBox_Twitter.Checked;
             Settings.Save();
         }*/
-
-        private void checkBox_fateNotificationSound_CheckedChanged(object sender, EventArgs e)
-        {
-            Settings.FateSound = checkBox_fateNotificationSound.Checked;
-            Settings.Save();
-        }
-
-        private void checkBox_FlashWindow_CheckedChanged(object sender, EventArgs e)
-        {
-            Settings.FlashWindow = checkBox_FlashWindow.Checked;
-            Settings.Save();
-        }
 
         private void checkBox_CheatRoullete_CheckedChanged(object sender, EventArgs e)
         {
@@ -525,8 +583,10 @@ namespace App
             toolTip.SetToolTip(checkBox_Overlay, Localization.GetText("ui-settings-overlay-tooltip"));
             button_ResetOverlayPosition.Text = Localization.GetText("ui-settings-overlay-reset");
             checkBox_StartupShow.Text = Localization.GetText("ui-settings-startupshow");
-            checkBox_fateNotificationSound.Text = Localization.GetText("ui-settings-fatesound");
             checkBox_FlashWindow.Text = Localization.GetText("ui-settings-iconflash");
+            checkBox_FateSound.Text = Localization.GetText("ui-settings-fatesound");
+            checkBox_CustomSound.Text = Localization.GetText("ui-settings-customsound");
+            button_getSoundFile.Text = Localization.GetText("ui-settings-getsoundfile");
             checkBox_CheatRoullete.Text = Localization.GetText("ui-settings-cheatroulette");
             groupBox_TwitterSet.Text = Localization.GetText("ui-settings-tweet-title");
             checkBox_Twitter.Text = Localization.GetText("ui-settings-tweet-activate");
@@ -553,6 +613,10 @@ namespace App
             toolStripMenuItem_LogClear.Text = Localization.GetText("ui-logs-clear");
             label_About.Text = Localization.GetText("ui-info-about");
 
+
+            button_ResetOverlayPosition.Left = checkBox_Overlay.Location.X + checkBox_Overlay.Size.Width;
+            button_getSoundFile.Left = checkBox_CustomSound.Location.X + checkBox_CustomSound.Size.Width;
+            label_CustomSoundFileName.Left = button_getSoundFile.Location.X + button_getSoundFile.Size.Width;
         }
     }
 }

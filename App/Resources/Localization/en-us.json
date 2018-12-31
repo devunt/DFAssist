@@ -51,7 +51,11 @@
   "ui-settings-startupshow": "Show MainForm when Program Starts",
   "ui-settings-iconflash": "FFXIV Icon Blinks when Duty Matched/FATE occur",
   "ui-settings-cheatroulette": "Show Actual Matched Duty when using Duty Roulette",
-  "ui-settings-fatesound": "Enable FATE Notification Sound",
+  "ui-settings-fatesound": "Enable FATE Notification Sound (Disable Custom Sound on FATE)",
+  "ui-settings-customsound": "Customize Notification Sound",
+  "ui-settings-getsoundfile": "Select File",
+  "ui-settings-getfilewav": "WAV files (*.wav)|*.wav",
+  "ui-notification-customsound-selectfile": "Select Sound File First",
   "ui-settings-tweet-title": "Twitter Alarm(Inoperative)",
   "ui-settings-tweet-activate": "Activate",
   "ui-settings-tweet-about": "When matched or FATE occurs, \nsend a Tweet with mention to the entered Twitter account.\nEnter the Twitter Account except the preceding symbol @.",
@@ -148,6 +152,8 @@
 
   "l-firewall-registered": "FW: Registered",
   "l-firewall-error": "FW: Error while registering",
+  
+  "l-wav-error": "S: Play custom sound error: invalid wav file.",
 
   "l-analyze-error-length": "A: Length Error while analyzing Message: {0}, {1}/{2}",
   "l-analyze-error-general": "A: Error while analyzing Message",
