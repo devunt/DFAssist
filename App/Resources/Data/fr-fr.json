@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20181118.1",
+  "version": "20181229.1",
 
   // Duty
   "instances": {
@@ -504,7 +504,7 @@
       "dps": "4"
     },
     // 2.55 Trials
-    "419": {
+    "83": {
       "name": "le Siège de la sainte Cité d'Ishgard",
       "tank": "2",
       "healer": "2",
@@ -512,7 +512,7 @@
     },
 
     // 2.5 Raids
-    "494": {
+    "111": {
       "name": "la Tour de Cristal - Monde des Ténèbres",
       "tank": "3",
       "healer": "6",
@@ -3021,29 +3021,29 @@
         "1369": "Cairn Blight 451"
       }
     },
-      "992": {
-        "name": "Eureka - Pyros",
-        "fates": {
-          "1388": "Défi : la blanche créature",
-          "1389": "Défi : les foudres de Flauros",
-          "1390": "Défi : monstres sophistiqués",
-          "1391": "Défi : une méchante griffe",
-          "1392": "Défi : livrez les irrévérents !",
-          "1393": "Défi : les cousins de Machin",
-          "1394": "Défi : les éclairs de génie d'Aetolos",
-          "1395": "Défi : chaud comme la braise",
-          "1396": "Défi : un peu gluantes, mais ap pé tis san tes !",
-          "1397": "Défi : ses larmes n'y pourront rien changer",
-          "1398": "Défi : la détresse des mots qu'ils envoient",
-          "1399": "Défi : coup de foudre à Eurêka Pyros",
-          "1400": "Défi : rencontre de deux sales types",
-          "1401": "Défi : les yeux qui brillent",
-          "1402": "Défi : frères ennemis",
-          "1403": "Défi : Sköll, offenses-tu ?",
-          "1404": "Défi : papillons de la reine",
-          "1407": "Défi : les coraux de la colère",
-          "1408": "Défi : roches porte-bonheur"
-        }
+    "992": {
+      "name": "Eureka - Pyros",
+      "fates": {
+        "1388": "Défi : la blanche créature",
+        "1389": "Défi : les foudres de Flauros",
+        "1390": "Défi : monstres sophistiqués",
+        "1391": "Défi : une méchante griffe",
+        "1392": "Défi : livrez les irrévérents !",
+        "1393": "Défi : les cousins de Machin",
+        "1394": "Défi : les éclairs de génie d'Aetolos",
+        "1395": "Défi : chaud comme la braise",
+        "1396": "Défi : un peu gluantes, mais ap pé tis san tes !",
+        "1397": "Défi : ses larmes n'y pourront rien changer",
+        "1398": "Défi : la détresse des mots qu'ils envoient",
+        "1399": "Défi : coup de foudre à Eurêka Pyros",
+        "1400": "Défi : rencontre de deux sales types",
+        "1401": "Défi : les yeux qui brillent",
+        "1402": "Défi : frères ennemis",
+        "1403": "Défi : Sköll, offenses-tu ?",
+        "1404": "Défi : papillons de la reine",
+        "1407": "Défi : les coraux de la colère",
+        "1408": "Défi : roches porte-bonheur"
       }
     }
   }
+}
