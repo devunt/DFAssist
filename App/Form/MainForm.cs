@@ -231,6 +231,12 @@ namespace App
             Settings.Save();
         }*/
 
+        private void checkBox_fateNotificationSound_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.FateSound = checkBox_fateNotificationSound.Checked;
+            Settings.Save();
+        }
+
         private void checkBox_FlashWindow_CheckedChanged(object sender, EventArgs e)
         {
             Settings.FlashWindow = checkBox_FlashWindow.Checked;

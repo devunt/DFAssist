@@ -17,6 +17,7 @@ namespace App
         public static bool TwitterEnabled { get; set; } = false;
         public static bool FlashWindow { get; set; } = true;
         public static bool CheatRoulette { get; set; } = false;
+        public static bool FateSound { get; set; } = false;
         public static string TwitterAccount { get; set; } = "";
         public static bool Updated { get; set; } = true;
         public static HashSet<int> FATEs { get; set; } = new HashSet<int>();
@@ -46,6 +47,7 @@ namespace App
                 TwitterAccount = iniFile.ReadValue("notification", "twitteraccount") ?? "";
                 FlashWindow = iniFile.ReadValue("notification", "flashwindow") != "0";
                 CheatRoulette = iniFile.ReadValue("misc", "cheatroulette") == "1";
+                FateSound = iniFile.ReadValue("misc", "fatesound") == "0";
                 Language = iniFile.ReadValue("misc", "language") ?? "ko-kr";
                 Updated = iniFile.ReadValue("internal", "updated") != "0";
 
@@ -67,6 +69,7 @@ namespace App
             iniFile.WriteValue("notification", "twitteraccount", TwitterAccount);
             iniFile.WriteValue("notification", "flashwindow", FlashWindow ? "1" : "0");
             iniFile.WriteValue("misc", "cheatroulette", CheatRoulette ? "1" : "0");
+            iniFile.WriteValue("misc", "fatesound", FateSound ? "1" : "0");
             iniFile.WriteValue("misc", "language", Language);
             iniFile.WriteValue("fate", "fates", string.Join(",", FATEs));
             iniFile.WriteValue("internal", "updated", Updated ? "1" : "0");

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
+using System.Media;
 
 namespace App
 {
@@ -10,7 +11,9 @@ namespace App
     {
         private State state = State.IDLE;
         private int lastMember = 0;
-        
+        public SoundPlayer player;
+        private System.IO.Stream str = Properties.Resources.FFXIV_FATE_Start;
+
 
 
         private void AnalyseFFXIVPacket(byte[] payload)
@@ -219,8 +222,11 @@ namespace App
                             mainForm.overlayForm.SetFATEAsOccured(fate);
                             Log.I("l-fate-occured-info", fate.Name);
 
-
-
+                            if(Settings.FateSound)
+                            {
+                                player = new SoundPlayer(str);
+                                player.Play();
+                            }
                             if (!Settings.ShowOverlay)
                             {
                                 mainForm.ShowNotification("notification-fate-occured", fate.Name);
