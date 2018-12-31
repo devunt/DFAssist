@@ -88,7 +88,6 @@ namespace App
             // Check if Custom Sound File Exists
             if (File.Exists(Settings.CustomSoundPath))
             {
-                Log.I("Custom Sound File Exists!");
                 label_CustomSoundFileName.Text = Path.GetFileName(Settings.CustomSoundPath);
                 checkBox_CustomSound.Checked = Settings.CustomSound;
                 networkWorker.notificationPlayer.SoundLocation = Settings.CustomSoundPath;
