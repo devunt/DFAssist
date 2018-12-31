@@ -326,7 +326,7 @@
             this.button_getSoundFile.Font = new System.Drawing.Font("맑은 고딕", 8F);
             this.button_getSoundFile.Location = new System.Drawing.Point(142, 117);
             this.button_getSoundFile.Name = "button_getSoundFile";
-            this.button_getSoundFile.Size = new System.Drawing.Size(65, 20);
+            this.button_getSoundFile.Size = new System.Drawing.Size(70, 20);
             this.button_getSoundFile.TabIndex = 6;
             this.button_getSoundFile.Text = "파일 선택";
             this.button_getSoundFile.UseVisualStyleBackColor = true;
