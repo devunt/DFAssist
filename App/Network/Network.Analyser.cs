@@ -240,11 +240,6 @@ namespace App
                             {
                                 WinApi.FlashWindow(mainForm.FFXIVProcess);
                             }
-
-                            if (Settings.TwitterEnabled)
-                            {
-                                WebApi.Tweet("tweet-fate-occured", fate.Name);
-                            }
                         }
                     }
                 }
@@ -345,11 +340,6 @@ namespace App
                         if (!Settings.ShowOverlay)
                         {
                             mainForm.ShowNotification("notification-queue-matched", instance.Name);
-                        }
-
-                        if (Settings.TwitterEnabled)
-                        {
-                            WebApi.Tweet("tweet-queue-matched", instance.Name);
                         }
 
                         Log.S("l-queue-matched", instance.Name);
@@ -461,11 +451,6 @@ namespace App
                     if (!Settings.ShowOverlay)
                     {
                         mainForm.ShowNotification("notification-queue-matched", instance.Name);
-                    }
-
-                    if (Settings.TwitterEnabled)
-                    {
-                        WebApi.Tweet("tweet-queue-matched", instance.Name);
                     }
 
                     Log.S("l-queue-matched", instance.Name);

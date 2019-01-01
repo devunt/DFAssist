@@ -13,9 +13,6 @@
   "notification-fate-occured": "< {0} > 発生!",
 
 
-  "tweet-fate-occured": "< {0} > FATE発生!",
-  "tweet-queue-matched": "< {0} > 突入準備完了!",
-
 
   "fate-preset-animus-SkyfireI": "炎天一巻",
   "fate-preset-animus-SkyfireII": "炎天二巻",
@@ -56,9 +53,6 @@
   "ui-settings-getsoundfile": "ファイル",
   "ui-settings-getfilewav": "WAV files (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "Select Sound File First",
-  "ui-settings-tweet-title": "Twitterアラーム(使用不可)",
-  "ui-settings-tweet-activate": "有効化",
-  "ui-settings-tweet-about": "突入準備完了時、FATEが発生した際指定したアカウントに\nツイートを送信します。\nTwitterアカウント名の@以降を入力してください。",
 
   "ui-fate-selectall": "すべて選択",
   "ui-fate-unselectall": "すべて選択解除",
@@ -69,7 +63,7 @@
   "ui-logs-copy": "ログをコピー",
   "ui-logs-clear": "消去",
 
-  "ui-info-about": "[貢献者]\n유채색\nLaiglinne\nHibiyasleep\nAlex00728\n\n[Copyright]\n記載されている会社名・製品名・システム名などは、各社の商標、または登録商標です。\n(C)2010 - 2018 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by EYEDENTITY Entertainment.",
+  "ui-info-about": "[貢献者]\n유채색\nLaiglinne\nHibiyasleep\nAlex00728\n\n[Copyright]\n記載されている会社名・製品名・システム名などは、各社の商標、または登録商標です。\n(C)2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by EYEDENTITY Entertainment.",
 
   "ui-msgbox-title-info": "DFA通知",
   "ui-msgbox-title-warning": "DFA警告",
@@ -111,10 +105,6 @@
   "l-process-finding": "P: FFXIVプロセスを検索中...",
   "l-process-found-nothing": "P: FFXIVプロセスが見つかりませんでした。",
   "l-process-found-multiple": "P: 2つ以上のFFXIVプロセスが見つかりました。",
-
-  "l-tweet-failed-request": "T: ツイート送信時にエラーが発生しました。",
-  "l-tweet-failed-general": "T: ツイート送信に失敗しました。",
-  "l-tweet-success": "T: ツイート成功!",
 
   "l-web-request-failed": "W: Webサービスでエラーが発生しました。",
 

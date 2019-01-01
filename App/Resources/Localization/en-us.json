@@ -13,9 +13,6 @@
   "notification-fate-occured": "< {0} > Occured!",
 
 
-  "tweet-fate-occured": "< {0} > FATE Occured!",
-  "tweet-queue-matched": "< {0} > Matched!",
-
 
   "fate-preset-animus-SkyfireI": "Book of Skyfire I",
   "fate-preset-animus-SkyfireII": "Book of Skyfire II",
@@ -56,9 +53,6 @@
   "ui-settings-getsoundfile": "Select File",
   "ui-settings-getfilewav": "WAV files (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "Select Sound File First",
-  "ui-settings-tweet-title": "Twitter Alarm(Inoperative)",
-  "ui-settings-tweet-activate": "Activate",
-  "ui-settings-tweet-about": "When matched or FATE occurs, \nsend a Tweet with mention to the entered Twitter account.\nEnter the Twitter Account except the preceding symbol @.",
 
   "ui-fate-selectall": "Select All",
   "ui-fate-unselectall": "Unselect All",
@@ -69,7 +63,7 @@
   "ui-logs-copy": "Copy Logs",
   "ui-logs-clear": "Clear",
 
-  "ui-info-about": "[Contributor]\n유채색\nLaiglinne\nHibiyasleep\nAlex00728\n[Support] : fpdhs698\n[Copyright]\nAll company, product, system names are\n registered or unregistered trademarks of their respective owners.\n(C)2010 - 2018 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by EYEDENTITY Entertainment.",
+  "ui-info-about": "[Contributor]\n유채색\nLaiglinne\nHibiyasleep\nAlex00728\n[Support] : fpdhs698\n[Copyright]\nAll company, product, system names are\n registered or unregistered trademarks of their respective owners.\n(C)2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by EYEDENTITY Entertainment.",
 
   "ui-msgbox-title-info": "DFA Notice",
   "ui-msgbox-title-warning": "DFA Warning",
@@ -111,10 +105,6 @@
   "l-process-finding": "P: Finding FFXIV Process...",
   "l-process-found-nothing": "P: Could not find FFXIV Process.",
   "l-process-found-multiple": "P: 2 or more FFXIV Processes are running.",
-
-  "l-tweet-failed-request": "T: Error occured while requesting tweet",
-  "l-tweet-failed-general": "T: Failed to send tweet",
-  "l-tweet-success": "T: Tweet sent!",
 
   "l-web-request-failed": "W: Error requesting Web service",
 

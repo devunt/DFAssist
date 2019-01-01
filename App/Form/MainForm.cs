@@ -101,10 +101,6 @@ namespace App
             }
             SetCheatRoulleteCheckBox(Settings.CheatRoulette);
 
-            // checkBox_Twitter.Checked = Settings.TwitterEnabled;
-            // textBox_Twitter.Enabled = Settings.TwitterEnabled;
-            // textBox_Twitter.Text = Settings.TwitterAccount;
-
             refresh_Fates();
 
             Task.Factory.StartNew(() =>
@@ -297,13 +293,6 @@ namespace App
                 networkWorker.notificationPlayer.SoundLocation = dlg.FileName;
             }
         }
-
-        /*private void checkBox_Twitter_CheckedChanged(object sender, EventArgs e)
-        {
-            textBox_Twitter.Enabled = checkBox_Twitter.Checked;
-            Settings.TwitterEnabled = checkBox_Twitter.Checked;
-            Settings.Save();
-        }*/
 
         private void checkBox_CheatRoullete_CheckedChanged(object sender, EventArgs e)
         {
@@ -592,9 +581,6 @@ namespace App
             checkBox_CustomSound.Text = Localization.GetText("ui-settings-customsound");
             button_getSoundFile.Text = Localization.GetText("ui-settings-getsoundfile");
             checkBox_CheatRoullete.Text = Localization.GetText("ui-settings-cheatroulette");
-            groupBox_TwitterSet.Text = Localization.GetText("ui-settings-tweet-title");
-            checkBox_Twitter.Text = Localization.GetText("ui-settings-tweet-activate");
-            label_TwitterAbout.Text = Localization.GetText("ui-settings-tweet-about");
             toolStripMenuItem_SelectAll.Text = Localization.GetText("ui-fate-selectall");
             toolStripMenuItem_UnSelectAll.Text = Localization.GetText("ui-fate-unselectall");
             presetToolStripMenuItem.Text = Localization.GetText("ui-fate-preset");

@@ -13,8 +13,6 @@
   "notification-fate-occured": "< {0} > 발생!",
 
 
-  "tweet-fate-occured": "< {0} > 돌발 발생!",
-  "tweet-queue-matched": "< {0} > 매칭!",
 
   "fate-preset-animus-SkyfireI": "불의 서 1권",
   "fate-preset-animus-SkyfireII": "불의 서 2권",
@@ -55,9 +53,6 @@
   "ui-settings-getsoundfile": "파일 선택",
   "ui-settings-getfilewav": "WAV 파일 (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "음악 파일을 먼저 선택해주세요.",
-  "ui-settings-tweet-title": "트위터 알림 (서비스 중지)",
-  "ui-settings-tweet-activate": "활성화",
-  "ui-settings-tweet-about": "매칭이 됐을 시 입력된 트위터 계정으로 멘션을 보내 해당 사실을 알립니다.\n원하는 돌발이 발생했을 시에도 멘션을 보내 해당 사실을 알립니다.\n계정명 입력시 앞의 @ 표시는 제외하고 순수 계정명만 입력해주세요.",
 
   "ui-fate-selectall": "모두 선택",
   "ui-fate-unselectall": "모두 해제",
@@ -68,7 +63,7 @@
   "ui-logs-copy": "로그 복사",
   "ui-logs-clear": "로그 삭제",
 
-  "ui-info-about": "[제작 및 문의]\n유채색\n라그린네\n히비야\n윈도ce\n[도움] : 고먐미\n[저작권]\n기재되어있는 회사명 · 제품명 · 시스템 이름은\n해당 소유자의 상표 또는 등록 상표입니다.\n(C) 2010 - 2018 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by EYEDENTITY Entertainment.",
+  "ui-info-about": "[제작 및 문의]\n유채색\n라그린네\n히비야\n윈도ce\n[도움] : 고먐미\n[저작권]\n기재되어있는 회사명 · 제품명 · 시스템 이름은\n해당 소유자의 상표 또는 등록 상표입니다.\n(C) 2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by EYEDENTITY Entertainment.",
 
   "ui-msgbox-title-info": "DFA 알림",
   "ui-msgbox-title-warning": "DFA 경고",
@@ -110,10 +105,6 @@
   "l-process-finding": "P: 파이널판타지14 프로세스를 찾는 중...",
   "l-process-found-nothing": "P: 파이널판타지14 프로세스를 찾을 수 없습니다.",
   "l-process-found-multiple": "P: 파이널판타지14가 2개 이상 실행중입니다.",
-
-  "l-tweet-failed-request": "T: 트윗 발송 요청중 에러 발생",
-  "l-tweet-failed-general": "T: 트윗 발송 실패",
-  "l-tweet-success": "T: 트윗을 발송했습니다!",
 
   "l-web-request-failed": "W: 웹 요청중 에러 발생",
 

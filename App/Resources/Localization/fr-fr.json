@@ -13,9 +13,6 @@
   "notification-fate-occured": "< {0} > en cours!",
 
 
-  "tweet-fate-occured": "ALEA < {0} > en cours!",
-  "tweet-queue-matched": "< {0} > disponible!",
-
 
   "fate-preset-animus-SkyfireI": "Book of Skyfire I",
   "fate-preset-animus-SkyfireII": "Book of Skyfire II",
@@ -56,9 +53,6 @@
   "ui-settings-getsoundfile": "Choisir",
   "ui-settings-getfilewav": "WAV files (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "Select Sound File First",
-  "ui-settings-tweet-title": "Rappel Twiter(Inopérant)",
-  "ui-settings-tweet-activate": "Activer",
-  "ui-settings-tweet-about": "Lorsqu'un ALEA choisi se produir, \nenvoyer un tweet avec mention au compte sélectionné.\nEntrez le nom du compte Twitter sans @.",
 
   "ui-fate-selectall": "Selectionner tout",
   "ui-fate-unselectall": "Déselectionner tout",
@@ -69,7 +63,7 @@
   "ui-logs-copy": "Copier logs",
   "ui-logs-clear": "Vider",
 
-  "ui-info-about": "[Contributor]\n유채색\nLaiglinne\nHibiyasleep\nAlex00728\n\n[Copyright]\nAll company, product, system names are\n registered or unregistered trademarks of their respective owners.\n(C)2010 - 2018 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by EYEDENTITY Entertainment.",
+  "ui-info-about": "[Contributor]\n유채색\nLaiglinne\nHibiyasleep\nAlex00728\n\n[Copyright]\nAll company, product, system names are\n registered or unregistered trademarks of their respective owners.\n(C)2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by EYEDENTITY Entertainment.",
 
   "ui-msgbox-title-info": "DFA Notice",
   "ui-msgbox-title-warning": "DFA Warning",
@@ -111,10 +105,6 @@
   "l-process-finding": "P: Recherche du processus FFXIV...",
   "l-process-found-nothing": "P: Impossible de trouver le processus FFXIV.",
   "l-process-found-multiple": "P: 2 ou plus processus FFXIV sont en cours.",
-
-  "l-tweet-failed-request": "T: Une erreur s'est produite lors de la requête du tweet",
-  "l-tweet-failed-general": "T: Impossible d'envoyer le tweet",
-  "l-tweet-success": "T: Tweet envoyé!",
 
   "l-web-request-failed": "W: Erreur de requête web",
 
