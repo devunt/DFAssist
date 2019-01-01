@@ -14,13 +14,11 @@ namespace App
         public static int OverlayX { get; set; } = Global.OVERLAY_XY_UNSET;
         public static int OverlayY { get; set; } = Global.OVERLAY_XY_UNSET;
         public static bool StartupShowMainForm { get; set; } = true;
-        public static bool TwitterEnabled { get; set; } = false;
         public static bool FlashWindow { get; set; } = true;
         public static bool FateSound { get; set; } = false;
         public static bool CustomSound { get; set; } = false;
         public static string CustomSoundPath { get; set; } = "";
         public static bool CheatRoulette { get; set; } = false;
-        public static string TwitterAccount { get; set; } = "";
         public static bool Updated { get; set; } = true;
         public static HashSet<int> FATEs { get; set; } = new HashSet<int>();
 
@@ -45,8 +43,6 @@ namespace App
                 ShowOverlay = iniFile.ReadValue("overlay", "show") != "0";
                 OverlayX = int.Parse(iniFile.ReadValue("overlay", "x") ?? "0");
                 OverlayY = int.Parse(iniFile.ReadValue("overlay", "y") ?? "0");
-                TwitterEnabled = iniFile.ReadValue("notification", "twitter") == "1";
-                TwitterAccount = iniFile.ReadValue("notification", "twitteraccount") ?? "";
                 FlashWindow = iniFile.ReadValue("notification", "flashwindow") == "1";
                 FateSound = iniFile.ReadValue("notification", "fatesound") == "1";
                 CustomSound = iniFile.ReadValue("notification", "customsound") == "1";
@@ -69,8 +65,6 @@ namespace App
             iniFile.WriteValue("overlay", "show", ShowOverlay ? "1" : "0");
             iniFile.WriteValue("overlay", "x", OverlayX.ToString());
             iniFile.WriteValue("overlay", "y", OverlayY.ToString());
-            iniFile.WriteValue("notification", "twitter", TwitterEnabled ? "1" : "0");
-            iniFile.WriteValue("notification", "twitteraccount", TwitterAccount);
             iniFile.WriteValue("notification", "flashwindow", FlashWindow ? "1" : "0");
             iniFile.WriteValue("notification", "fatesound", FateSound ? "1" : "0");
             iniFile.WriteValue("notification", "customsound", CustomSound ? "1" : "0");

@@ -312,12 +312,6 @@ namespace App
             Settings.Save();
         }
 
-        /*private void textBox_Twitter_TextChanged(object sender, EventArgs e)
-        {
-            Settings.TwitterAccount = textBox_Twitter.Text;
-            Settings.Save();
-        }*/
-
         private void toolStripMenuItem_LogCopy_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(richTextBox_Log.Text);
