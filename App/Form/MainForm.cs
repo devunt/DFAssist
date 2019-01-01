@@ -105,17 +105,7 @@ namespace App
             // textBox_Twitter.Enabled = Settings.TwitterEnabled;
             // textBox_Twitter.Text = Settings.TwitterAccount;
 
-            foreach (var area in Data.Areas)
-            {
-                triStateTreeView_FATEs.Nodes.Add(area.Key.ToString(), area.Value.Name);
-
-                foreach (var fate in area.Value.FATEs)
-                {
-                    var node = triStateTreeView_FATEs.Nodes[area.Key.ToString()].Nodes.Add(fate.Key.ToString(), fate.Value.Name);
-                    node.Checked = Settings.FATEs.Contains(fate.Key);
-                    nodes.Add(node);
-                }
-            }
+            refresh_Fates();
 
             Task.Factory.StartNew(() =>
             {
@@ -153,6 +143,21 @@ namespace App
             }
 
             Sentry.ReportAsync("App started");
+        }
+
+        internal void refresh_Fates()
+        {
+            foreach (var area in Data.Areas)
+            {
+                triStateTreeView_FATEs.Nodes.Add(area.Key.ToString(), area.Value.Name);
+
+                foreach (var fate in area.Value.FATEs)
+                {
+                    var node = triStateTreeView_FATEs.Nodes[area.Key.ToString()].Nodes.Add(fate.Key.ToString(), fate.Value.Name);
+                    node.Checked = Settings.FATEs.Contains(fate.Key);
+                    nodes.Add(node);
+                }
+            }
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
