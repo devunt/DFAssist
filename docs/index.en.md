@@ -63,7 +63,7 @@ Logs on application window helps a lot with problem solving. Attaching logs is h
 ```
   All company, product, system names are registered or unregistered trademarks of their respective owners.
 
-  (C) 2010 - 2018 SQUARE ENIX CO., LTD All Rights Reserved. Korea Published by EYEDENTITY ENTERTAINMENT.
+  (C) 2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved. Korea Published by EYEDENTITY ENTERTAINMENT.
 ```
 All codes, resources, data, not copyrighted by company above, are
 destributed with [Public Domain](https://en.wikipedia.org/wiki/Public_domain).
