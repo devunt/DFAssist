@@ -59,7 +59,7 @@ title: {{ site.name }}
 ![](https://i.imgur.com/Up0iXSM.png)
 
 ### 프로그램 UI
-![](https://i.imgur.com/o4plU9u.png)
+![](https://i.imgur.com/4pPVjxm.png)
 ![](https://i.imgur.com/D6opRwI.png)
 
 ### 알림창 아이콘

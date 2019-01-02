@@ -53,7 +53,7 @@ title: {{ site.name }}
 ![](https://i.imgur.com/4ztaLkR.jpg)
 
 ### アプリケーションUI
-![](https://i.imgur.com/uoYRaif.png)
+![](https://i.imgur.com/qCTl6pA.png)
 ![](https://i.imgur.com/XbOSVVr.png)
 
 ### トレイアイコン
