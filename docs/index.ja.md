@@ -35,20 +35,19 @@ title: {{ site.name }}
 
 ### オーバーレイUI
 ![オーバーレイUI](https://i.imgur.com/nkFCAIO.png)
-
 ![](https://i.imgur.com/NfWBN2j.png)
 
 ### コンテンツ参加申請中情報
-![](https://i.imgur.com/kVfTFyD.jpg)
-
-### コンテンツ突入準備完了
 ![](https://i.imgur.com/FIi97xf.png)
 
+### コンテンツ突入準備完了
+![](https://i.imgur.com/51DEZkJ.gif)
+
 ### FATE発生
-![](https://i.imgur.com/gJ6BnWs.gif)
+![](https://i.imgur.com/AwRA9Ac.gif)
 
 ### FFXIVアイコンの点滅
-![](https://i.imgur.com/51DEZkJ.gif)
+![](https://i.imgur.com/ndNAFZ8.gif)
 
 ### コンテンツルーレットで選ばれたコンテンツの表示
 ![](https://i.imgur.com/4ztaLkR.jpg)
@@ -64,7 +63,7 @@ title: {{ site.name }}
 ```
   記載されている会社名・製品名・システム名などは、各社の商標、または登録商標です。
 
-  (C) 2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved. Korea Published by EYEDENTITY ENTERTAINMENT.
+  (C) 2010 - 2018 SQUARE ENIX CO., LTD All Rights Reserved. Korea Published by EYEDENTITY ENTERTAINMENT.
 ```
 すべてのコード、リソース、データは著作権で保護されていません。
 これらは[パブリックドメイン](https://ja.wikipedia.org/wiki/%E3%83%91%E3%83%96%E3%83%AA%E3%83%83%E3%82%AF%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3).で配布されています。
