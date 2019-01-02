@@ -59,8 +59,6 @@ namespace App
 
             message = Escape(message);
             E($"{format}: {message}", args);
-
-            Sentry.ReportAsync(ex, new { LogMessage = string.Format(format.ToString(), args) });
 #endif
         }
 
