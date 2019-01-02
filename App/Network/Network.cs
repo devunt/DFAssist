@@ -358,8 +358,8 @@ namespace App
                             {
                                 var local = new IPEndPoint(row.localAddr, (ushort)IPAddress.NetworkToHostOrder((short)row.localPort));
                                 var remote = new IPEndPoint(row.remoteAddr, (ushort)IPAddress.NetworkToHostOrder((short)row.remotePort));
-
-                                connections.Add(new Connection() { localEndPoint = local, remoteEndPoint = remote });
+                                if(!remote.Port.Equals("9010"))
+                                    connections.Add(new Connection() { localEndPoint = local, remoteEndPoint = remote });
                             }
 
                             rowPtr = new IntPtr(rowPtr.ToInt64() + Marshal.SizeOf(typeof(TcpRow)));
