@@ -16,14 +16,15 @@ namespace App
             try
             {
                 var url = string.Format(urlfmt, args);
-                var request = (HttpWebRequest)WebRequest.Create(url);
-                request.UserAgent = "DFA";
-                request.Timeout = 10000;
-                request.CachePolicy = new RequestCachePolicy(RequestCacheLevel.NoCacheNoStore);
 
                 ServicePointManager.Expect100Continue = true;
                 ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
                 ServicePointManager.DefaultConnectionLimit = 9999;
+
+                var request = (HttpWebRequest)WebRequest.Create(url);
+                request.UserAgent = "DFA";
+                request.Timeout = 10000;
+                request.CachePolicy = new RequestCachePolicy(RequestCacheLevel.NoCacheNoStore);
                 using (var response = (HttpWebResponse)request.GetResponse())
                 {
                     var encoding = Encoding.GetEncoding(response.CharacterSet);
