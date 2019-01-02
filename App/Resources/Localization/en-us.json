@@ -48,7 +48,7 @@
   "ui-settings-startupshow": "Show MainForm when Program Starts",
   "ui-settings-iconflash": "FFXIV Icon Blinks when Duty Matched/FATE occur",
   "ui-settings-cheatroulette": "Show Actual Matched Duty when using Duty Roulette",
-  "ui-settings-fatesound": "Enable FATE Notification Sound (Disable Custom Sound on FATE)",
+  "ui-settings-fatesound": "Enable FATE Notification Sound\n(Disable Custom Sound on FATE)",
   "ui-settings-customsound": "Customize Notification Sound",
   "ui-settings-getsoundfile": "Select File",
   "ui-settings-getfilewav": "WAV files (*.wav)|*.wav",

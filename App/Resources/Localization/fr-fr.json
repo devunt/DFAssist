@@ -48,7 +48,7 @@
   "ui-settings-startupshow": "Afficher la fenêtre principale au démarrage",
   "ui-settings-iconflash": "Faire clignorer l'icône de FFXIV en cas d'ALEA/Mission",
   "ui-settings-cheatroulette": "Montrer la mission en cours d'attente lors des missions aléatoires",
-  "ui-settings-fatesound": "Enable FATE Notification Sound (Disable Custom Sound on FATE)",
+  "ui-settings-fatesound": "Enable FATE Notification Sound\n(Disable Custom Sound on FATE)",
   "ui-settings-customsound": "Customize Notification Sound",
   "ui-settings-getsoundfile": "Choisir",
   "ui-settings-getfilewav": "WAV files (*.wav)|*.wav",
