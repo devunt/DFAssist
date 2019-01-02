@@ -44,7 +44,7 @@ title: {{ site.name }}
 ![](https://i.imgur.com/51DEZkJ.gif)
 
 ### FATE発生
-![](https://i.imgur.com/AwRA9Ac.gif)
+![](https://i.imgur.com/gJ6BnWs.gif)
 
 ### FFXIVアイコンの点滅
 ![](https://i.imgur.com/ndNAFZ8.gif)
