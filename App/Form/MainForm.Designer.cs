@@ -43,7 +43,8 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl = new App.TabControlBlack();
             this.tabPage_Settings = new System.Windows.Forms.TabPage();
-            this.groupBox_TwitterSet = new System.Windows.Forms.GroupBox();
+            this.groupBox_UpdateNote = new System.Windows.Forms.GroupBox();
+            this.label_UpdateNote = new System.Windows.Forms.Label();
             this.groupBox_DefaultSet = new System.Windows.Forms.GroupBox();
             this.label_CustomSoundFileName = new System.Windows.Forms.Label();
             this.button_getSoundFile = new System.Windows.Forms.Button();
@@ -96,6 +97,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl.SuspendLayout();
             this.tabPage_Settings.SuspendLayout();
+            this.groupBox_UpdateNote.SuspendLayout();
             this.groupBox_DefaultSet.SuspendLayout();
             this.tabPage_FATE.SuspendLayout();
             this.menuStrip_FATETab.SuspendLayout();
@@ -227,7 +229,7 @@
             // tabPage_Settings
             // 
             this.tabPage_Settings.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_Settings.Controls.Add(this.groupBox_TwitterSet);
+            this.tabPage_Settings.Controls.Add(this.groupBox_UpdateNote);
             this.tabPage_Settings.Controls.Add(this.groupBox_DefaultSet);
             this.tabPage_Settings.Location = new System.Drawing.Point(114, 4);
             this.tabPage_Settings.Name = "tabPage_Settings";
@@ -235,14 +237,26 @@
             this.tabPage_Settings.TabIndex = 1;
             this.tabPage_Settings.Text = "설정";
             // 
-            // groupBox_TwitterSet
+            // groupBox_UpdateNote
             // 
-            this.groupBox_TwitterSet.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox_TwitterSet.Location = new System.Drawing.Point(0, 178);
-            this.groupBox_TwitterSet.Name = "groupBox_TwitterSet";
-            this.groupBox_TwitterSet.Size = new System.Drawing.Size(426, 108);
-            this.groupBox_TwitterSet.TabIndex = 0;
-            this.groupBox_TwitterSet.TabStop = false;
+            this.groupBox_UpdateNote.Controls.Add(this.label_UpdateNote);
+            this.groupBox_UpdateNote.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox_UpdateNote.Location = new System.Drawing.Point(0, 172);
+            this.groupBox_UpdateNote.Name = "groupBox_UpdateNote";
+            this.groupBox_UpdateNote.Size = new System.Drawing.Size(426, 101);
+            this.groupBox_UpdateNote.TabIndex = 0;
+            this.groupBox_UpdateNote.TabStop = false;
+            this.groupBox_UpdateNote.Text = "업데이트 노트";
+            // 
+            // label_UpdateNote
+            // 
+            this.label_UpdateNote.AutoSize = true;
+            this.label_UpdateNote.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_UpdateNote.Location = new System.Drawing.Point(6, 19);
+            this.label_UpdateNote.Name = "label_UpdateNote";
+            this.label_UpdateNote.Size = new System.Drawing.Size(102, 26);
+            this.label_UpdateNote.TabIndex = 9;
+            this.label_UpdateNote.Text = "최대 6줄 작성 가능\r\n(6 line limit)";
             // 
             // groupBox_DefaultSet
             // 
@@ -258,7 +272,7 @@
             this.groupBox_DefaultSet.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox_DefaultSet.Location = new System.Drawing.Point(0, 0);
             this.groupBox_DefaultSet.Name = "groupBox_DefaultSet";
-            this.groupBox_DefaultSet.Size = new System.Drawing.Size(426, 178);
+            this.groupBox_DefaultSet.Size = new System.Drawing.Size(426, 172);
             this.groupBox_DefaultSet.TabIndex = 0;
             this.groupBox_DefaultSet.TabStop = false;
             this.groupBox_DefaultSet.Text = "기본설정";
@@ -304,7 +318,7 @@
             this.checkBox_FateSound.Name = "checkBox_FateSound";
             this.checkBox_FateSound.Size = new System.Drawing.Size(270, 34);
             this.checkBox_FateSound.TabIndex = 6;
-            this.checkBox_FateSound.Text = " 돌발임무 알림음 활성화\r\n(돌발임무 알림에서 사용자 알림음 사용 안함)";
+            this.checkBox_FateSound.Text = "돌발임무 알림음 활성화\r\n(돌발임무 알림에서 사용자 알림음 사용 안함)";
             this.checkBox_FateSound.UseVisualStyleBackColor = true;
             this.checkBox_FateSound.CheckedChanged += new System.EventHandler(this.checkBox_FateSound_CheckedChanged);
             // 
@@ -731,6 +745,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl.ResumeLayout(false);
             this.tabPage_Settings.ResumeLayout(false);
+            this.groupBox_UpdateNote.ResumeLayout(false);
+            this.groupBox_UpdateNote.PerformLayout();
             this.groupBox_DefaultSet.ResumeLayout(false);
             this.groupBox_DefaultSet.PerformLayout();
             this.tabPage_FATE.ResumeLayout(false);
@@ -808,7 +824,8 @@
         private System.Windows.Forms.CheckBox checkBox_CustomSound;
         private System.Windows.Forms.Button button_getSoundFile;
         private System.Windows.Forms.Label label_CustomSoundFileName;
-        private System.Windows.Forms.GroupBox groupBox_TwitterSet;
+        private System.Windows.Forms.GroupBox groupBox_UpdateNote;
+        private System.Windows.Forms.Label label_UpdateNote;
     }
 }
 

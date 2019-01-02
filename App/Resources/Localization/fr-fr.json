@@ -41,6 +41,9 @@
   "ui-tabcontrol-logs": "Logs",
   "ui-tabcontrol-info": "Infos",
 
+  "ui-updatenote-title": "Note de mise à jour",
+  "ui-updatenote-text": "1. Pyros FATE applied.\n2. Added FATE notification sound option. (Uses FFXIV FATE Start Sound)\n3. Added Customize notification sound feature. (only *.wav file accepted.)\n4. Bug while first-time requesting update information solved.\n5. Tweet Notify Service completely removed. (Functioning Server went down)\n6. Refresh FATE list after DF data updates.",
+
   "ui-settings-title": "Paramètres de base",
   "ui-settings-overlay-use": "Utiliser l'overlay",
   "ui-settings-overlay-tooltip": "Bouger l'overlay avec la barre gauche",
@@ -52,7 +55,7 @@
   "ui-settings-customsound": "Customize Notification Sound",
   "ui-settings-getsoundfile": "Choisir",
   "ui-settings-getfilewav": "WAV files (*.wav)|*.wav",
-  "ui-notification-customsound-selectfile": "Select Sound File First",
+  "ui-notification-customsound-selectfile": "D'abord, Choisissez un fichier musical.",
 
   "ui-fate-selectall": "Selectionner tout",
   "ui-fate-unselectall": "Déselectionner tout",

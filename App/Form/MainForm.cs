@@ -573,6 +573,8 @@ namespace App
             checkBox_CustomSound.Text = Localization.GetText("ui-settings-customsound");
             button_getSoundFile.Text = Localization.GetText("ui-settings-getsoundfile");
             checkBox_CheatRoullete.Text = Localization.GetText("ui-settings-cheatroulette");
+            groupBox_UpdateNote.Text = Localization.GetText("ui-updatenote-title");
+            label_UpdateNote.Text = Localization.GetText("ui-updatenote-text");
             toolStripMenuItem_SelectAll.Text = Localization.GetText("ui-fate-selectall");
             toolStripMenuItem_UnSelectAll.Text = Localization.GetText("ui-fate-unselectall");
             presetToolStripMenuItem.Text = Localization.GetText("ui-fate-preset");

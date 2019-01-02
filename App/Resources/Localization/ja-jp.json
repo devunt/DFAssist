@@ -48,11 +48,14 @@
   "ui-settings-startupshow": "起動時にこのウィンドウを表示する",
   "ui-settings-iconflash": "突入準備完了時FFXIVのアイコンを点滅させる",
   "ui-settings-cheatroulette": "デュティルレット。実際に入場するダンジョンを確認",
-  "ui-settings-fatesound": "Enable FATE Notification Sound\n(Disable Custom Sound on FATE)",
-  "ui-settings-customsound": "通知音のカスタマイズ",
+  "ui-settings-fatesound": "FATEを知らせる音の活性化\n(FATEについてカスタム通知サウンド非活性化)",
+  "ui-settings-customsound": "カスタム通知サウンド",
   "ui-settings-getsoundfile": "ファイル",
   "ui-settings-getfilewav": "WAV files (*.wav)|*.wav",
-  "ui-notification-customsound-selectfile": "Select Sound File First",
+  "ui-notification-customsound-selectfile": "まず,音楽ファイルを選択してください。",
+
+  "ui-updatenote-title": "アップデート·ノート",
+  "ui-updatenote-text": "1. ピューロスFATE適用.\n2. Added FATE notification sound option. (Uses FFXIV FATE Start Sound)\n3. Added Customize notification sound feature. (only *.wav file accepted.)\n4. Bug while first-time requesting update information solved.\n5. Tweet Notify Service completely removed. (Functioning Server went down)\n6. Refresh FATE list after DF data updates.",
 
   "ui-fate-selectall": "すべて選択",
   "ui-fate-unselectall": "すべて選択解除",

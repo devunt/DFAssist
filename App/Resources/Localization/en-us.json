@@ -41,6 +41,9 @@
   "ui-tabcontrol-logs": "Logs",
   "ui-tabcontrol-info": "Info",
 
+  "ui-updatenote-title": "Update Note",
+  "ui-updatenote-text": "1. Pyros FATE applied.\n2. Added FATE notification sound option. (Uses FFXIV FATE Start Sound)\n3. Added Customize notification sound feature. (only *.wav file accepted.)\n4. Bug while first-time requesting update information solved.\n5. Tweet Notify Service completely removed. (Functioning Server went down)\n6. Refresh FATE list after DF data updates.",
+
   "ui-settings-title": "Basic Setting",
   "ui-settings-overlay-use": "Use Overlay",
   "ui-settings-overlay-tooltip": "Move Overlay by Draging Left bar.",

@@ -48,11 +48,14 @@
   "ui-settings-startupshow": "프로그램 시작시 이 창 보이기",
   "ui-settings-iconflash": "매칭/돌발 발생시 파이널판타지14 작업 표시줄 아이콘 깜빡이기",
   "ui-settings-cheatroulette": "무작위 임무일 경우에도 실제 매칭된 임무 보여주기",
-  "ui-settings-fatesound": " 돌발임무 알림음 활성화\n(돌발임무 알림에서 사용자 알림음 사용 안함)",
+  "ui-settings-fatesound": "돌발임무 알림음 활성화\n(돌발임무 알림에서 사용자 알림음 사용 안함)",
   "ui-settings-customsound": "알림음 사용자 설정",
   "ui-settings-getsoundfile": "파일 선택",
   "ui-settings-getfilewav": "WAV 파일 (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "음악 파일을 먼저 선택해주세요.",
+
+  "ui-updatenote-title": "업데이트 노트",
+  "ui-updatenote-text": "1. 파이로스 돌발 추가\n2. 돌발임무 알림음 기능 추가 (파판 14 자체 돌발임무 시작 소리로 설정)\n3. 사용자 지정 알림음 설정 기능 추가 (*.wav 파일만 허용)\n4. 첫번째 업데이트 시도가 실패하는 버그 수정\n5. 트위터 알림 서비스 완전 제거 (기능을 하던 서버가 작동을 중지함)\n6. 돌발임무 데이터가 업데이트 되었음에도 프로그램에 반영되지 않던 문제 해결",
 
   "ui-fate-selectall": "모두 선택",
   "ui-fate-unselectall": "모두 해제",
