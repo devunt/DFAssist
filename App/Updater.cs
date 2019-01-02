@@ -78,8 +78,6 @@ namespace App
                             updaterForm.ShowDialog();
                         });
 
-                        Sentry.Report("Update started");
-
                         var exepath = Process.GetCurrentProcess().MainModule.FileName;
 
                         var stream = GetDownloadStreamByUrl(url);

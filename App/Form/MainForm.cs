@@ -137,8 +137,6 @@ namespace App
                 Settings.Save();
                 ShowNotification("notification-app-updated", Global.VERSION);
             }
-
-            Sentry.ReportAsync("App started");
         }
 
         internal void refresh_Fates()

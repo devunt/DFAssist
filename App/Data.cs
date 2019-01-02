@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using App.Properties;
 using Newtonsoft.Json;
-using SharpRaven.Data;
 
 namespace App
 {
@@ -98,10 +97,7 @@ namespace App
 
             if (code != 0)
             {
-                var @event = new SentryEvent("Missing instance code");
-                @event.Level = ErrorLevel.Warning;
-                @event.Tags["code"] = code.ToString();
-                Sentry.ReportAsync(@event);
+                // "Missing instance code"
             }
 
             return new Instance { Name = Localization.GetText("unknown-instance", code) };
@@ -116,10 +112,7 @@ namespace App
 
             if (code != 0)
             {
-                var @event = new SentryEvent("Missing Roulette code");
-                @event.Level = ErrorLevel.Warning;
-                @event.Tags["code"] = code.ToString();
-                Sentry.ReportAsync(@event);
+                // "Missing Roulette code"
             }
 
             return new Roulette { Name = Localization.GetText("unknown-roulette", code) };
@@ -134,10 +127,7 @@ namespace App
 
             if (code != 0)
             {
-                var @event = new SentryEvent("Missing area code");
-                @event.Level = ErrorLevel.Warning;
-                @event.Tags["code"] = code.ToString();
-                Sentry.ReportAsync(@event);
+                // "Missing area code"
             }
 
             return new Area { Name = Localization.GetText("unknown-area", code) };
@@ -152,10 +142,7 @@ namespace App
 
             if (code != 0)
             {
-                var @event = new SentryEvent("Missing FATE code");
-                @event.Level = ErrorLevel.Warning;
-                @event.Tags["code"] = code.ToString();
-                Sentry.ReportAsync(@event);
+                // "Missing FATE code"
             }
 
             return new FATE { Name = Localization.GetText("unknown-fate", code) };
