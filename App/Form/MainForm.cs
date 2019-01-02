@@ -40,7 +40,7 @@ namespace App
         private void MainForm_Load(object sender, EventArgs e)
         {
             Localization.Initialize(Settings.Language);
-            Data.Initialize(Settings.Language);
+            Data.Initialize(Settings.Language, this);
 
             ApplyLanguage();
 
@@ -141,6 +141,7 @@ namespace App
 
         internal void refresh_Fates()
         {
+            triStateTreeView_FATEs.Nodes.Clear();
             foreach (var area in Data.Areas)
             {
                 triStateTreeView_FATEs.Nodes.Add(area.Key.ToString(), area.Value.Name);
@@ -543,7 +544,7 @@ namespace App
             Settings.Save();
 
             Localization.Initialize(Settings.Language);
-            Data.Initialize(Settings.Language);
+            Data.Initialize(Settings.Language, this);
 
             ApplyLanguage();
 

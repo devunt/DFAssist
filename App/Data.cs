@@ -15,7 +15,7 @@ namespace App
         public static Dictionary<int, Roulette> Roulettes { get; private set; } = new Dictionary<int, Roulette>();
         public static Dictionary<int, FATE> FATEs { get; private set; } = new Dictionary<int, FATE>();
 
-        internal static void Initialize(string language)
+        internal static void Initialize(string language, MainForm mainForm)
         {
             string json;
 
@@ -41,10 +41,10 @@ namespace App
                     return;
             }
 
-            Fill(json);
+            Fill(json, mainForm);
         }
 
-        public static void Fill(string json)
+        public static void Fill(string json, MainForm mainForm)
         {
             try
             {
@@ -72,6 +72,7 @@ namespace App
 
                     if (Initialized)
                     {
+                        mainForm.refresh_Fates();
                         Log.S("l-data-updated", Version);
                     }
 

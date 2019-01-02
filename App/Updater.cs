@@ -135,8 +135,7 @@ namespace App
                 try
                 {
                     var json = WebApi.Request($"https://raw.githubusercontent.com/{Global.GITHUB_REPO}/master/App/Resources/Data/{Settings.Language}.json");
-                    Data.Fill(json);
-                    mainForm.refresh_Fates();
+                    Data.Fill(json, mainForm);
                 }
                 catch (Exception ex)
                 {
