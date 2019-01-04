@@ -358,7 +358,7 @@ namespace App
                             {
                                 var local = new IPEndPoint(row.localAddr, (ushort)IPAddress.NetworkToHostOrder((short)row.localPort));
                                 var remote = new IPEndPoint(row.remoteAddr, (ushort)IPAddress.NetworkToHostOrder((short)row.remotePort));
-                                if(!remote.Port.Equals("9010"))
+                                if(!remote.Address.Equals(IPAddress.Parse("127.0.0.1")))
                                     connections.Add(new Connection() { localEndPoint = local, remoteEndPoint = remote });
                             }
 
