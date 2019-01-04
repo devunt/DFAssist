@@ -358,7 +358,7 @@ namespace App
                             {
                                 var local = new IPEndPoint(row.localAddr, (ushort)IPAddress.NetworkToHostOrder((short)row.localPort));
                                 var remote = new IPEndPoint(row.remoteAddr, (ushort)IPAddress.NetworkToHostOrder((short)row.remotePort));
-                                if(!remote.Address.Equals(IPAddress.Parse("127.0.0.1")))
+                                if(!remote.Address.Equals(IPAddress.Parse("127.0.0.1"))) // 원격 IP가 127.0.0.1(자기 컴퓨터)이면 커넥션 목록에 추가하지 않음
                                     connections.Add(new Connection() { localEndPoint = local, remoteEndPoint = remote });
                             }
 
