@@ -52,7 +52,7 @@
   "ui-settings-iconflash": "Faire clignorer l'icône de FFXIV en cas d'ALEA/Mission",
   "ui-settings-cheatroulette": "Montrer la mission en cours d'attente lors des missions aléatoires",
   "ui-settings-fatesound": "Activer le son de notification FATE \n (Désactiver le son personnalisé sur FATE)",
-  "ui-settings-customsound": "Customize Notification Sound",
+  "ui-settings-customsound": "Customize the notification sound",
   "ui-settings-getsoundfile": "Choisir",
   "ui-settings-getfilewav": "WAV files (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "D'abord, Choisissez un fichier musical.",
