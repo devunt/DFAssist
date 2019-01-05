@@ -1,4 +1,4 @@
-﻿{
+{
   "app-name": "임무/돌발 찾기 도우미",
 
 
@@ -146,7 +146,7 @@
   "l-firewall-registered": "FW: 추가됨",
   "l-firewall-error": "FW: 추가중 에러 발생",
 
-  "l-wav-error": "S: 음악 파일 재생 에러: 옳바르지 않은 wav 파일입니다.",
+  "l-wav-error": "S: 음악 파일 재생 에러: 잘못된 wav 파일입니다.",
 
   "l-analyze-error-length": "A: 메시지 분석중 길이 에러 발생함: {0}, {1}/{2}",
   "l-analyze-error-general": "A: 메시지 분석중 에러 발생함",
