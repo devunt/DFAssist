@@ -1,4 +1,4 @@
-﻿{
+{
   "app-name": "Duty/FATE Notificator",
 
 
@@ -55,7 +55,7 @@
   "ui-notification-customsound-selectfile": "まず,音楽ファイルを選択してください。",
 
   "ui-updatenote-title": "アップデート·ノート",
-  "ui-updatenote-text": "1. ピューロスFATE適用.\n2. Added FATE notification sound option. (Uses FFXIV FATE Start Sound)\n3. Added Customize notification sound feature. (only *.wav file accepted.)\n4. Bug while first-time requesting update information solved.\n5. Tweet Notify Service completely removed. (Functioning Server went down)\n6. Refresh FATE list after DF data updates.",
+  "ui-updatenote-text": "1. ピューロスFATE適用.\n2. FATE通知音機能を追加（FF14自体FATE開始音に設定）\ n3. カスタム通知音設定機能を追加（* .wavファイルのみ）\ n4. 最初の更新の試行が失敗したバグ修正\ n5. ツイッター通知サービス完全除去（機能をしていたサーバーが動作を停止する）\ n6. DFデータが更新さドゥェオトウムエドプログラムに反映されなかった問題を解決",
 
   "ui-fate-selectall": "すべて選択",
   "ui-fate-unselectall": "すべて選択解除",
@@ -76,8 +76,8 @@
 
   "ui-clipboard-copied": "コピーしましした。",
 
-  "ui-cheat-roulette-confirm": "This function is disabled by default to prevent abuse.\nPlease refrain from deliberately rejecting a specific dislike duty.\n\nDo you still want to enable it?(翻訳が必要)",
-  "ui-cheat-roulette-enabled": "Enabled.\nPlease DON'T deliberately reject a specific dislike duty.(翻訳が必要)",
+  "ui-cheat-roulette-confirm": "悪用防止のため、基本的に無効になっている機能です。\n特定の嫌なコンテンツを意図的に拒絶することはお控えください。\n\nまだ有効にしますか？",
+  "ui-cheat-roulette-enabled": "有になって.\n故意に特定の嫌いなコンテンツを拒否しないでください。",
 
   "ui-clear-log-confirm": "ログを消しますか?",
 
@@ -146,7 +146,7 @@
   "l-firewall-registered": "FW: 登録済み",
   "l-firewall-error": "FW: 登録中にエラーが発生しました",
   
-  "l-wav-error": "S: Play custom sound error: invalid wav file.",
+  "l-wav-error": "S: 音楽ファイルの再生エラー：正しくないwavファイルです。",
 
   "l-analyze-error-length": "A: メッセージ解析中に長さエラーが発生しました: {0}, {1}/{2}",
   "l-analyze-error-general": "A: メッセージ解析中にエラーが発生しました",
