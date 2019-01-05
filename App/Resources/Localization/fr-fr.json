@@ -1,4 +1,4 @@
-﻿{
+{
   "app-name": "Notificateur Mission/ALEA",
 
 
@@ -42,7 +42,7 @@
   "ui-tabcontrol-info": "Infos",
 
   "ui-updatenote-title": "Note de mise à jour",
-  "ui-updatenote-text": "1. Pyros FATE applied.\n2. Added FATE notification sound option. (Uses FFXIV FATE Start Sound)\n3. Added Customize notification sound feature. (only *.wav file accepted.)\n4. Bug while first-time requesting update information solved.\n5. Tweet Notify Service completely removed. (Functioning Server went down)\n6. Refresh FATE list after DF data updates.",
+  "ui-updatenote-text": "1. Pyros FATE appliqué. \n2. Ajout de l’option sonore de notification FATE. (Utilise le son de démarrage FFXIV FATE) \n3. Ajout de la fonction de personnalisation du son de notification. (Seul le fichier * .wav est accepté.) \n4. Bug résolu lors de la première demande d'informations de mise à jour. \n5. Tweet Notify Service complètement supprimé. (Le serveur fonctionnant est tombé en panne) \n6. Actualisez la liste FATE après les mises à jour des données DF.",
 
   "ui-settings-title": "Paramètres de base",
   "ui-settings-overlay-use": "Utiliser l'overlay",
@@ -51,7 +51,7 @@
   "ui-settings-startupshow": "Afficher la fenêtre principale au démarrage",
   "ui-settings-iconflash": "Faire clignorer l'icône de FFXIV en cas d'ALEA/Mission",
   "ui-settings-cheatroulette": "Montrer la mission en cours d'attente lors des missions aléatoires",
-  "ui-settings-fatesound": "Enable FATE Notification Sound\n(Disable Custom Sound on FATE)",
+  "ui-settings-fatesound": "Activer le son de notification FATE \n (Désactiver le son personnalisé sur FATE)",
   "ui-settings-customsound": "Customize Notification Sound",
   "ui-settings-getsoundfile": "Choisir",
   "ui-settings-getfilewav": "WAV files (*.wav)|*.wav",
@@ -76,8 +76,8 @@
 
   "ui-clipboard-copied": "Copié dans le presse-papiers.",
 
-  "ui-cheat-roulette-confirm": "This function is disabled by default to prevent abuse.\nPlease refrain from deliberately rejecting a specific dislike duty.\n\nDo you still want to enable it?",
-  "ui-cheat-roulette-enabled": "Enabled.\nPlease DON'T deliberately reject a specific dislike duty.",
+  "ui-cheat-roulette-confirm": "Cette fonction est désactivée par défaut pour éviter les abus.\nVeuillez vous abstenir de rejeter délibérément un devoir spécifique mission.\n\nVoulez-vous toujours l'activer?",
+  "ui-cheat-roulette-enabled": "Activée.\nS'il vous plaît, ne rejetez pas délibérément un devoir spécifique mission.",
 
   "ui-clear-log-confirm": "Vider les logs?",
 
@@ -146,7 +146,7 @@
   "l-firewall-registered": "Pare-feu: enregistré",
   "l-firewall-error": "Pare-feu: erreur d'enregistrement",
   
-  "l-wav-error": "S: Play custom sound error: invalid wav file.",
+  "l-wav-error": "S: Erreur de lecture du son personnalisé: fichier wav invalide. ",
 
   "l-analyze-error-length": "A: Erreur de longueur lors de l'analyse du message: {0}, {1}/{2}",
   "l-analyze-error-general": "A: Erreur d'analyse du message",
