@@ -1,5 +1,5 @@
 {
-  "app-name": "Duty/FATE Notificator",
+  "app-name": "Duty/FATE Notifier",
 
 
   "unknown-instance": "不明なコンテンツ ({0})",
@@ -23,8 +23,8 @@
   "fate-preset-animus-SkywindI": "風天一巻",
   "fate-preset-animus-SkywindII": "風天二巻",
   "fate-preset-animus-SkyearthI": "土天一巻",
-  "fate-preset-Ixion": "イクシオン",
-  "fate-preset-Tamamo": "タマモ",
+  "fate-preset-Ixion": "伝説の雷馬「イクシオン」",
+  "fate-preset-Tamamo": "九尾の妖狐「玉藻御前」",
   "fate-preset-anemos": "エウレカ - アネモス",
   "fate-preset-pagos": "エウレカ - パゴス",
 
@@ -55,7 +55,7 @@
   "ui-notification-customsound-selectfile": "まず,音楽ファイルを選択してください。",
 
   "ui-updatenote-title": "アップデート·ノート",
-  "ui-updatenote-text": "1. ピューロスFATE適用.\n2. FATE通知音機能を追加（FF14自体FATE開始音に設定）\ n3. カスタム通知音設定機能を追加（* .wavファイルのみ）\ n4. 最初の更新の試行が失敗したバグ修正\ n5. ツイッター通知サービス完全除去（機能をしていたサーバーが動作を停止する）\ n6. DFデータが更新さドゥェオトウムエドプログラムに反映されなかった問題を解決",
+  "ui-updatenote-text": "1. ピューロスFATE適用.\n2. FATE通知音機能を追加（FF14自体FATE開始音に設定）\n3. カスタム通知音設定機能を追加（* .wavファイルのみ）\n4. 最初の更新の試行が失敗したバグ修正\n5. ツイッター通知サービス完全除去（機能をしていたサーバーが動作を停止する）\n6. DFデータが更新さドゥェオトウムエドプログラムに反映されなかった問題を解決",
 
   "ui-fate-selectall": "すべて選択",
   "ui-fate-unselectall": "すべて選択解除",
