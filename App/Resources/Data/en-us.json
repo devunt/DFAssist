@@ -1,6 +1,6 @@
-﻿{
+{
   // Version
-  "version": "20181229.1",
+  "version": "20190108.1",
 
   // Duty
   "instances": {
@@ -1356,6 +1356,37 @@
       "tank": "2",
       "healer": "2",
       "dps": "4"
+    },
+
+    // 4.5 A Requiem for Heroes
+    // 4.5 Dungeon
+    "611": {
+      "name": "The Ghimlyt Dark",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 4.5 Trials
+    "637": {
+      "name": "The Wreath of Snakes",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "638": {
+      "name": "The Wreath of Snakes (Extreme)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 4.5 Raids
+    "636": {
+      "name": "The Orbonne Monastery",
+      "tank": "3",
+      "healer": "6",
+      "dps": "15"
     },
 
     // Guildhests
