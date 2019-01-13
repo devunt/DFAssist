@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20181229.1",
+  "version": "20190113.1",
 
   // Duty
   "instances": {
@@ -1358,6 +1358,39 @@
       "dps": "4"
     },
 
+
+    // 4.5 A Requiem for Heroes
+    // 4.5 Dungeon
+    "611": {
+      "name": "The Ghimlyt Dark",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 4.5 Trials
+    "637": {
+      "name": "The Wreath of Snakes",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "638": {
+      "name": "The Wreath of Snakes (Extreme)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 4.5 Raids
+    "636": {
+      "name": "The Orbonne Monastery",
+      "tank": "3",
+      "healer": "6",
+      "dps": "15"
+    },
+
+
     // Guildhests
     "43": {
       "name": "Chasse au fantôme fantoche",
@@ -1443,6 +1476,162 @@
       "healer": "2",
       "dps": "4"
     },
+
+
+    // Blue Mage 4.5
+    "610": {
+      "name": "All's Well That Starts Well",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "612": {
+      "name": "Much Ado About Pudding",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "613": {
+      "name": "Waiting for Golem",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "614": {
+      "name": "Gentlemen Prefer Swords",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "615": {
+      "name": "The Threepenny Turtles",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "616": {
+      "name": "Eye Society",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "617": {
+      "name": "A Chorus Slime",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "618": {
+      "name": "Bomb-edy of Errors",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "619": {
+      "name": "To Kill a Mockingslime",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "620": {
+      "name": "A Little Knight Music",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "621": {
+      "name": "Some Like It Excruciatingly Hot",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "622": {
+      "name": "The Plant-om of the Opera",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "623": {
+      "name": "Beauty and a Beast",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "624": {
+      "name": "Blobs in the Woods",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "625": {
+      "name": "The Me Nobody Nodes",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "626": {
+      "name": "Sunset Bull-evard",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "627": {
+      "name": "The Sword of Music",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "628": {
+      "name": "Midsummer Night's Explosion",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "629": {
+      "name": "On a Clear Day You Can Smell Forever",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "630": {
+      "name": "Miss Typhon",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "631": {
+      "name": "Chimera on a Hot Tin Roof",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "632": {
+      "name": "Here Comes the Boom",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "633": {
+      "name": "Behemoths and Broomsticks",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "634": {
+      "name": "Amazing Technicolor Pit Fiends",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "635": {
+      "name": "Dirty Rotten Azulmagia",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+
+
+    // Blue Mage 4.5x
 
 
     // Novice Training
@@ -1850,6 +2039,49 @@
       "healer": "0",
       "dps": "0"
     },
+    "643": {
+      "name": "Novice Mahjong (Ranked)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "644": {
+      "name": "Advanced Mahjong (Ranked)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "645": {
+      "name": "Four-player Mahjong (Kuitan Enabled)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "650": {
+      "name": "Four-player Mahjong (Kuitan Disabled)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "640": {
+      "name": "Air Force One",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "641": {
+      "name": "Air Force One",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "642": {
+      "name": "Air Force One",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+
 
     //Event Instance
     "181": {
