@@ -27,10 +27,8 @@ title: {{ site.name }}
   - 알림음 사용자 지정 가능
 
 ## 문제 해결
-자주 발생하는 문제들은 [FAQ](https://jaehyuk-lee.github.io/DFAssist/faq)에서 확인해볼 수 있습니다.
-
-그 외에 다른 문제 발생시 [이슈 트래커](https://github.com/jaehyuk-lee/DFAssist/issues)에 발생 상황과 결과를 남겨주세요.
-
+자주 발생하는 문제들은 [FAQ](https://jaehyuk-lee.github.io/DFAssist/faq)에서 확인해볼 수 있습니다.  
+그 외에 다른 문제 발생시 [이슈 트래커](https://github.com/jaehyuk-lee/DFAssist/issues)에 발생 상황과 결과를 남겨주세요.  
 프로그램 창의 로그 기록도 문제 해결에 큰 도움이 됩니다.
 
 ## json 파일 변환 도구
