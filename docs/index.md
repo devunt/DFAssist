@@ -32,8 +32,9 @@ title: {{ site.name }}
 프로그램 창의 로그 기록도 문제 해결에 큰 도움이 됩니다.
 
 ## json 파일 변환 도구
-[FFXIV_DATA_Conversion_Tool](https://github.com/Jaehyuk-Lee/FFXIV_DATA_Conversion_Tool/releases)
-사용하기 쉽게 만들지는 않았습니다. 이건 쓰실 분만 쓰세요... 파판 데이터 csv파일을 DFAssist용 json 파일로 변환해주는 프로그램입니다.
+- [FFXIV_DATA_Conversion_Tool](https://github.com/Jaehyuk-Lee/FFXIV_DATA_Conversion_Tool/releases)  
+사용하기 쉽게 만들지는 않았습니다. 이건 쓰실 분만 쓰세요...  
+파판 데이터 csv파일을 DFAssist용 json 파일로 변환해주는 프로그램입니다.
 
 ## 스크린샷
 
