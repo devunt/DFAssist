@@ -34,7 +34,7 @@ title: {{ site.name }}
 ## スクリーンショット
 
 ### オーバーレイUI
-![オーバーレイUI](https://i.imgur.com/nkFCAIO.png)
+![オーバーレイUI](https://i.imgur.com/nkFCAIO.png)  
 ![](https://i.imgur.com/NfWBN2j.png)
 
 ### コンテンツ参加申請中情報
@@ -53,7 +53,7 @@ title: {{ site.name }}
 ![](https://i.imgur.com/4ztaLkR.jpg)
 
 ### アプリケーションUI
-![](https://i.imgur.com/qCTl6pA.png)
+![](https://i.imgur.com/qCTl6pA.png)  
 ![](https://i.imgur.com/XbOSVVr.png)
 
 ### トレイアイコン
