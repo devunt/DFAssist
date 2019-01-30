@@ -4,15 +4,18 @@ title: {{ site.name }}
 ---
 
 # Duty Finder / F.A.T.E Assist (DFAssist)
+
 **DFAssist** is FFXIV Duty Finder / F.A.T.E assist software.
 Do other things while in waiting list! DFAssist will give you match notification.
 
 ## Information
+
 - Latest Version ```v20190104.1``` ([Download](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
 - Target Version ```Microsoft .NET Framework 4.0``` ([Download](https://www.microsoft.com/en-us/download/details.aspx?id=17851))
 - Game Version ```Final Fantasy XIV, Version 4.4```
 
 ## Instructions
+
 1. Download ``DFAssist.v********.*.zip`` file from the upper download link's file list.
 2. Extract archieve file wherever you want.
 3. Execute ``DFAssist.exe`` in the extracted folder.
@@ -20,6 +23,7 @@ Do other things while in waiting list! DFAssist will give you match notification
 5. If application doesn't execute, download and install ``Microsoft .NET Framework 4.0`` from the upper download link.
 
 ## Features
+
 - Set up an overlay which shows Duty Finder/F.A.T.E.
   - Realtime Duty matching information while Final Fantasy XIV is minimized. Also gives notification when matched.
   - Preview exact matched duty when using duty roulette. (Needs Setting)
@@ -27,6 +31,7 @@ Do other things while in waiting list! DFAssist will give you match notification
   - Custom notification sound support.
 
 ## Problem Solving
+
 Post problems on [Issue Tracker](https://github.com/jaehyuk-lee/DFAssist/issues).
 
 Logs on application window helps a lot with problem solving. Attaching logs is highly recommanded.
@@ -34,36 +39,46 @@ Logs on application window helps a lot with problem solving. Attaching logs is h
 ## ScreenShots
 
 ### Overlay UI
-![Overlay UI](https://i.imgur.com/W904lHM.jpg)  
-![](https://i.imgur.com/r1KmWb3.jpg)
+
+![Overlay UI 1](https://i.imgur.com/W904lHM.jpg)  
+![Overlay UI 2](https://i.imgur.com/r1KmWb3.jpg)
 
 ### Duty Finding Information
-![](https://i.imgur.com/kVfTFyD.jpg)
+
+![Duty Finding Information](https://i.imgur.com/kVfTFyD.jpg)
 
 ### Duty Matched
-![](https://i.imgur.com/JgBA1F3.gif)
+
+![Duty Matched](https://i.imgur.com/JgBA1F3.gif)
 
 ### FATE Occured
-![](https://i.imgur.com/AwRA9Ac.gif)
+
+![FATE Occured](https://i.imgur.com/AwRA9Ac.gif)
 
 ### FFXIV Icon Blinks
-![](https://i.imgur.com/ndNAFZ8.gif)
+
+![FFXIV Icon Blinks](https://i.imgur.com/ndNAFZ8.gif)
 
 ### Preview exact Roulette Matched Duty
-![](https://i.imgur.com/4ztaLkR.jpg)
+
+![Preview exact Roulette Matched Duty](https://i.imgur.com/4ztaLkR.jpg)
 
 ### Application UI
-![](https://i.imgur.com/sc7kCVO.png)  
-![](https://i.imgur.com/NwuAdyH.jpg)
+
+![Application UI 1](https://i.imgur.com/sc7kCVO.png)  
+![Application UI 2](https://i.imgur.com/NwuAdyH.jpg)
 
 ### Tray Icon
-![](https://i.imgur.com/zecDrdh.jpg)
+
+![Tray Icon](https://i.imgur.com/zecDrdh.jpg)
 
 ## Copyright
+
 ```
   All company, product, system names are registered or unregistered trademarks of their respective owners.
 
   (C) 2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved. Korea Published by EYEDENTITY ENTERTAINMENT.
 ```
+
 All codes, resources, data, not copyrighted by company above, are
 destributed with [Public Domain](https://en.wikipedia.org/wiki/Public_domain).
