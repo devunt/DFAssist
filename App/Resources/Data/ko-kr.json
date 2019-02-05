@@ -1,6 +1,6 @@
 ﻿{
   // 버전
-  "version": "20190202.1",
+  "version": "20190205.1",
 
   // 임무
   "instances": {
@@ -2846,25 +2846,25 @@
     "998": {
       "name": "에우레카 파고스",
       "fates": {
-        "1351": "Eternity",
-        "1352": "Cows for Concern",
-        "1353": "Ash the Magic Dragon",
-        "1354": "Conqueror Worm",
-        "1355": "Melting Point",
-        "1356": "Disorder in the Court",
-        "1357": "Does It Have to Be a Snowman",
-        "1358": "Brothers",
-        "1359": "Eye of Horus",
-        "1360": "Morte Arthro",
-        "1361": "Apocalypse Cow",
-        "1362": "Third Impact",
-        "1363": "Eye Scream for Ice Cream",
-        "1364": "Louhi on Ice",
-        "1365": "Cassie and the Copycats",
-        "1366": "The Wobbler in Darkness",
-        "1367": "Down the Rabbit Hole",
-        "1368": "Curiouser and Curiouser",
-        "1369": "Cairn Blight 451"
+        "1351": "하얀 지배자",
+        "1352": "가축의 어머니",
+        "1353": "잿빛 비늘왕",
+        "1354": "지각 변동의 수수께끼",
+        "1355": "해빙의 화신",
+        "1356": "단단한 병마",
+        "1357": "움직이는 눈 동굴",
+        "1358": "순망치한",
+        "1359": "태양의 사자",
+        "1360": "원탁의 안개왕",
+        "1361": "야생 소의 구세주",
+        "1362": "번개구름의 마수",
+        "1363": "암안왕",
+        "1364": "푸른 얼음 칼날",
+        "1365": "모방범",
+        "1366": "오행안의 주인",
+        "1367": "눈 위의 행운토끼",
+        "1368": "보석을 노리는 행운토끼",
+        "1369": "부패한 독서가"
       }
     },
 
@@ -3280,17 +3280,25 @@
         "1330": "세 가희의 길거리 공연",
         "1349": "세 가희의 길거리 공연",
         "1350": "세 가희의 길거리 공연",
-        "1370": "Counter-void Training: A Giant Undertaking",
-        "1372": "Counter-void Training: Toothsome Terrors",
-        "1375": "Counter-imperial Training: A Pinch of Assault",
-        "1376": "Counter-imperial Training: Strike Out",
-        "1378": "Counter-void Training: Free-for-Ul'dah",
-        "1381": "Counter-void Training: Blood from Stone",
-        "1382": "Counter-void Training: Undead Ahead",
-        "1384": "Counter-void Training: Soul of Destruction",
-        "1386": "Counter-fiend Training: Less Is Morbol",
-        "1405": "Counter-imperial Training: A Pinch of Assault",
-        "1406": "Counter-fiend Training: Less Is Morbol"
+        "1370": "요마 퇴치 훈련 베난도너 출현",
+        "1371": "요마 퇴치 훈련 오거 강습",
+        "1372": "요마 퇴치 훈련 달다구리 삼인분",
+        "1373": "시가전 훈련 총력 결전",
+        "1374": "제국군 퇴치 훈련 뱅가드 섬멸",
+        "1375": "제국군 퇴치 훈련 강습부대 요격",
+        "1376": "제국군 퇴치 훈련 타격부대 요격",
+        "1377": "제국군 퇴치 훈련 타격부대 요격",
+        "1378": "시가전 훈련 울다하 소동",
+        "1379": "요마 퇴치 훈련 우울한 눈 출현",
+        "1380": "요마 퇴치 훈련 학살자의 공격",
+        "1381": "요마 퇴치 훈련 바르카얄 처치",
+        "1382": "요마 퇴치 훈련 언데드 소탕",
+        "1383": "합동 훈련 언데드 요격",
+        "1384": "요마 퇴치 훈련 영혼 정화",
+        "1385": "요마 퇴치 훈련 깊은 보이드 총력전",
+        "1386": "마물 퇴치 훈련 크리스텔 침입",
+        "1405": "제국군 퇴치 훈련 강습 부대 요격",
+        "1406": "마물 퇴치 훈련 크리스텔 침입"
       }
     }
   }
