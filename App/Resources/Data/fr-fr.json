@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190113.1",
+  "version": "20190205.1",
 
   // Duty
   "instances": {
@@ -3182,6 +3182,8 @@
         "1324": "Ah, ces touristes..."
       }
     },
+    // Some Fate. use the ENG Fate NAME.
+    // Need Change. ENG > FR
     "988": {
       "name": "StormBlood After v4.1~",
       "fates": {
@@ -3201,7 +3203,15 @@
         "1384": "Counter-void Training: Soul of Destruction",
         "1386": "Counter-fiend Training: Less Is Morbol",
         "1405": "Counter-imperial Training: A Pinch of Assault",
-        "1406": "Counter-fiend Training: Less Is Morbol"
+        "1406": "Counter-fiend Training: Less Is Morbol",
+        "1371": "Counter-void Training: All Ogre It",
+        "1373": "Comprehensive Training: Double Trouble",
+        "1374": "Counter-imperial Training: No Van's Land",
+        "1377": "Counter-imperial Training: Strike Out",
+        "1379": "Counter-void Training: Doom and Gloom",
+        "1380": "Counter-void Training: Premium Cuts",
+        "1383": "Joint Training: The Quick and the Undead",
+        "1385": "Counter-void Training: A Void at All Costs"
       }
     },
     "990": {
