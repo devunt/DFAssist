@@ -12,7 +12,7 @@ Do other things while in waiting list! DFAssist will give you match notification
 
 - Latest Version ```v20190202.1``` ([Download](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
 - Target Version ```Microsoft .NET Framework 4.0``` ([Download](https://www.microsoft.com/en-us/download/details.aspx?id=17851))
-- Game Version ```Final Fantasy XIV, Version 4.4```
+- Game Version ```Final Fantasy XIV, Version 4.5```
 
 ## Instructions
 
