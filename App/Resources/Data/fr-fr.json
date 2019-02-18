@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190205.1",
+  "version": "20190218.1",
 
   // Duty
   "instances": {
@@ -2030,6 +2030,12 @@
       "healer": "0",
       "dps": "0"
     },
+    "639": {
+      "name": "a terre interdite d'Eurêka: Hydatos",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
 
 
     // Other things...
@@ -3264,7 +3270,7 @@
       }
     },
     "992": {
-      "name": "Eureka - Pyros",
+      "name": "Pyros",
       "fates": {
         "1388": "Défi : la blanche créature",
         "1389": "Défi : les foudres de Flauros",
@@ -3285,6 +3291,25 @@
         "1404": "Défi : papillons de la reine",
         "1407": "Défi : les coraux de la colère",
         "1408": "Défi : roches porte-bonheur"
+      }
+    },
+    "1004": {
+      "name": "Hydatos",
+      "fates": {
+        "1412": "I Ink, Therefore I Am",
+        "1413": "From Tusk till Dawn",
+        "1414": "Bullheaded Berserker",
+        "1415": "Mad, Bad, and Fabulous to Know",
+        "1416": "Fearful Symmetry",
+        "1417": "Crawling Chaos",
+        "1418": "Duty-free",
+        "1419": "Leukewarm Reception",
+        "1420": "Robber Barong",
+        "1421": "Stone-cold Killer",
+        "1423": "Crystalline Provenance",
+        "1422": "The Baldesion Arsenal: Expedition Support",
+        "1424": "I Don't Want to Believe",
+        "1425": "Drink Me"
       }
     }
   }

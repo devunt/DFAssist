@@ -1,6 +1,6 @@
 ﻿{
   // 버전
-  "version": "20190206.1",
+  "version": "20190218.1",
 
   // 임무
   "instances": {
@@ -2033,6 +2033,12 @@
       "healer": "0",
       "dps": "0"
     },
+    "639": {
+      "name": "금단의 땅 에우레카 : 히다토스",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
 
 
     // 기타 이상한 것들...
@@ -2890,6 +2896,25 @@
         "1404": "Lost Epic",
         "1407": "We're All Mad Here",
         "1408": "Uncommon Nonsense"
+      }
+    },
+    "1004": {
+      "name": "에우레카 히다토스",
+      "fates": {
+        "1412": "I Ink, Therefore I Am",
+        "1413": "From Tusk till Dawn",
+        "1414": "Bullheaded Berserker",
+        "1415": "Mad, Bad, and Fabulous to Know",
+        "1416": "Fearful Symmetry",
+        "1417": "Crawling Chaos",
+        "1418": "Duty-free",
+        "1419": "Leukewarm Reception",
+        "1420": "Robber Barong",
+        "1421": "Stone-cold Killer",
+        "1423": "Crystalline Provenance",
+        "1422": "The Baldesion Arsenal: Expedition Support",
+        "1424": "I Don't Want to Believe",
+        "1425": "Drink Me"
       }
     },
 
