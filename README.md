@@ -1,1 +1,3 @@
+[![Cotributors](https://img.shields.io/github/contributors/Jaehyuk-Lee/DFAssist.svg)](https://github.com/Jaehyuk-Lee/DFAssist/releases) [![Github All Releases](https://img.shields.io/github/downloads/Jaehyuk-Lee/DFAssist/total.svg)](https://github.com/Jaehyuk-Lee/DFAssist/releases) [![Latest Version](https://img.shields.io/github/release/Jaehyuk-Lee/DFAssist.svg)](https://github.com/Jaehyuk-Lee/DFAssist/releases/latest) [![chat on Discord](https://img.shields.io/discord/556485781787770911.svg?logo=discord)](https://discord.gg/fntXMRr) [![follow on Twitter](https://img.shields.io/twitter/follow/DFAssistkr.svg?style=social&logo=twitter)](https://twitter.com/intent/follow?screen_name=DFAssistkr)
+
 Homepage: https://jaehyuk-lee.github.io/DFAssist
