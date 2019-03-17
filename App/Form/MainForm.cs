@@ -595,10 +595,13 @@ namespace App
             toolStripMenuItem_LogClear.Text = Localization.GetText("ui-logs-clear");
             label_About.Text = Localization.GetText("ui-info-about");
 
-
+            // Move items as String length change with languages.
             button_ResetOverlayPosition.Left = checkBox_Overlay.Location.X + checkBox_Overlay.Size.Width;
             button_getSoundFile.Left = checkBox_CustomSound.Location.X + checkBox_CustomSound.Size.Width;
             label_CustomSoundFileName.Left = button_getSoundFile.Location.X + button_getSoundFile.Size.Width;
+            comboBox_Process.Left = label_Process.Location.X + label_Process.Size.Width;
+            button_SelectProcess.Left = comboBox_Process.Location.X + comboBox_Process.Size.Width;
+            button_ResetProcess.Left = button_SelectProcess.Location.X + button_SelectProcess.Size.Width;
         }
     }
 }
