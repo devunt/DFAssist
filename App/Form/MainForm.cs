@@ -85,6 +85,7 @@ namespace App
             checkBox_StartupShow.Checked = Settings.StartupShowMainForm;
             checkBox_FlashWindow.Checked = Settings.FlashWindow;
             checkBox_FateSound.Checked = Settings.FateSound;
+            checkBox_useVPN.Checked = Settings.useVPN;
             // Check if Custom Sound File Exists
             if (File.Exists(Settings.CustomSoundPath))
             {
