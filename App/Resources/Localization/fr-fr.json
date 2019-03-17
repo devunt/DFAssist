@@ -40,7 +40,7 @@
   "ui-tabcontrol-info": "Infos",
 
   "ui-updatenote-title": "Note de mise à jour",
-  "ui-updatenote-text": "1. Pyros FATE appliqué. \n2. Ajout de l’option sonore de notification FATE. (Utilise le son de démarrage FFXIV FATE) \n3. Ajout de la fonction de personnalisation du son de notification. (Seul le fichier * .wav est accepté.) \n4. Bug résolu lors de la première demande d'informations de mise à jour. \n5. Tweet Notify Service complètement supprimé. (Le serveur fonctionnant est tombé en panne) \n6. Actualisez la liste FATE après les mises à jour des données DF.",
+  "ui-updatenote-text": "1. Ajout de l’option sonore de notification FATE. \n(Utilise le son de démarrage FFXIV FATE) \n2. Ajout de la fonction de personnalisation du son de notification. (*.wav est accepté.) \n3. Tweet Notify Service complètement supprimé. (Le serveur fonctionnant est tombé en panne)\n4. Problem using with some VPN services resolved.",
 
   "ui-settings-title": "Paramètres de base",
   "ui-settings-overlay-use": "Utiliser l'overlay",
@@ -49,6 +49,7 @@
   "ui-settings-startupshow": "Afficher la fenêtre principale au démarrage",
   "ui-settings-iconflash": "Faire clignorer l'icône de FFXIV en cas d'ALEA/Mission",
   "ui-settings-cheatroulette": "Montrer la mission en cours d'attente lors des missions aléatoires",
+  "ui-settings-usevpn": "I use VPN, DFAssist is not catching Game Connection.",
   "ui-settings-fatesound": "Activer le son de notification FATE \n (Désactiver le son personnalisé sur FATE)",
   "ui-settings-customsound": "Customize the notification sound",
   "ui-settings-getsoundfile": "Choisir",

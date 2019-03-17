@@ -18,6 +18,7 @@ namespace App
         public static bool FateSound { get; set; } = false;
         public static bool CustomSound { get; set; } = false;
         public static string CustomSoundPath { get; set; } = "";
+        public static bool useVPN { get; set; } = true;
         public static bool CheatRoulette { get; set; } = false;
         public static bool Updated { get; set; } = true;
         public static HashSet<int> FATEs { get; set; } = new HashSet<int>();
@@ -47,6 +48,7 @@ namespace App
                 FateSound = iniFile.ReadValue("notification", "fatesound") == "1";
                 CustomSound = iniFile.ReadValue("notification", "customsound") == "1";
                 CustomSoundPath = iniFile.ReadValue("notification", "customsoundpath") ?? "";
+                useVPN = iniFile.ReadValue("misc", "useVPN") == "1";
                 CheatRoulette = iniFile.ReadValue("misc", "cheatroulette") == "1";
                 Language = iniFile.ReadValue("misc", "language") ?? "ko-kr";
                 Updated = iniFile.ReadValue("internal", "updated") == "1";
@@ -69,6 +71,7 @@ namespace App
             iniFile.WriteValue("notification", "fatesound", FateSound ? "1" : "0");
             iniFile.WriteValue("notification", "customsound", CustomSound ? "1" : "0");
             iniFile.WriteValue("notification", "customsoundpath", CustomSoundPath);
+            iniFile.WriteValue("misc", "useVPN", useVPN ? "1" : "0");
             iniFile.WriteValue("misc", "cheatroulette", CheatRoulette ? "1" : "0");
             iniFile.WriteValue("misc", "language", Language);
             iniFile.WriteValue("fate", "fates", string.Join(",", FATEs));

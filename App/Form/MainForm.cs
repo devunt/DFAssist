@@ -311,6 +311,15 @@ namespace App
             Settings.Save();
         }
 
+        private void checkBox_useVPN_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.useVPN = checkBox_useVPN.Checked;
+            Settings.Save();
+            networkWorker.StopCapture();
+            FFXIVProcess = null;
+            FindFFXIVProcess();
+        }
+
         private void toolStripMenuItem_LogCopy_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(richTextBox_Log.Text);
@@ -562,6 +571,7 @@ namespace App
             checkBox_CustomSound.Text = Localization.GetText("ui-settings-customsound");
             button_getSoundFile.Text = Localization.GetText("ui-settings-getsoundfile");
             checkBox_CheatRoullete.Text = Localization.GetText("ui-settings-cheatroulette");
+            checkBox_useVPN.Text = Localization.GetText("ui-settings-usevpn");
             groupBox_UpdateNote.Text = Localization.GetText("ui-updatenote-title");
             label_UpdateNote.Text = Localization.GetText("ui-updatenote-text");
             toolStripMenuItem_SelectAll.Text = Localization.GetText("ui-fate-selectall");

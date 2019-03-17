@@ -47,13 +47,14 @@
   "ui-settings-iconflash": "突入準備完了時FFXIVのアイコンを点滅させる",
   "ui-settings-cheatroulette": "デュティルレット。実際に入場するダンジョンを確認",
   "ui-settings-fatesound": "FATEを知らせる音の活性化\n(FATEについてカスタム通知サウンド非活性化)",
+  "ui-settings-usevpn": "I use VPN, DFAssist is not catching Game Connection.",
   "ui-settings-customsound": "カスタム通知サウンド",
   "ui-settings-getsoundfile": "ファイル",
   "ui-settings-getfilewav": "WAV files (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "まず,音楽ファイルを選択してください。",
 
   "ui-updatenote-title": "アップデート·ノート",
-  "ui-updatenote-text": "1. ピューロスFATE適用.\n2. FATE通知音機能を追加（FF14自体FATE開始音に設定）\n3. カスタム通知音設定機能を追加（* .wavファイルのみ）\n4. 最初の更新の試行が失敗したバグ修正\n5. ツイッター通知サービス完全除去（機能をしていたサーバーが動作を停止する）\n6. DFデータが更新さドゥェオトウムエドプログラムに反映されなかった問題を解決",
+  "ui-updatenote-text": "1. FATE通知音機能を追加（FF14自体FATE開始音に設定）\n2. カスタム通知音設定機能を追加（* .wavファイルのみ）\n3. ツイッター通知サービス完全除去（機能をしていたサーバーが動作を停止する\n4. Problem using with some VPN services resolved.",
 
   "ui-fate-selectall": "すべて選択",
   "ui-fate-unselectall": "すべて選択解除",
