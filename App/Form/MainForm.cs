@@ -321,6 +321,14 @@ namespace App
             FindFFXIVProcess();
         }
 
+        private void checkBox_useVPN_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (checkBox_useVPN.Checked)
+            {
+                LMessageBox.I("ui-settings-usevpn-alert");
+            }
+        }
+
         private void toolStripMenuItem_LogCopy_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(richTextBox_Log.Text);

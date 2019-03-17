@@ -47,6 +47,7 @@
   "ui-settings-iconflash": "매칭/돌발 발생시 파이널판타지14 작업 표시줄 아이콘 깜빡이기",
   "ui-settings-cheatroulette": "무작위 임무일 경우에도 실제 매칭된 임무 보여주기",
   "ui-settings-usevpn": "VPN을 사용하는데, FFXIV 프로세스를 찾지 못하네요.",
+  "ui-settings-usevpn-alert": "VPN을 사용하지 않을 때는 꺼주셔야 프로그램이 잘 작동합니다.",
   "ui-settings-fatesound": "돌발임무 알림음 활성화\n(돌발임무 알림에서 사용자 알림음 사용 안함)",
   "ui-settings-customsound": "알림음 사용자 설정",
   "ui-settings-getsoundfile": "파일 선택",
