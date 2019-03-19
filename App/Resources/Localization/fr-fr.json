@@ -54,7 +54,7 @@
   "ui-settings-fatesound": "Activer le son de notification FATE \n (Désactiver le son personnalisé sur FATE)",
   "ui-settings-customsound": "Customize the notification sound",
   "ui-settings-getsoundfile": "Choisir",
-  "ui-settings-getfilewav": "WAV files (*.wav)|*.wav",
+  "ui-settings-getfilewav": "WAV fichier (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "D'abord, Choisissez un fichier musical.",
 
   "ui-fate-selectall": "Selectionner tout",
