@@ -278,7 +278,7 @@ namespace App
             // selected file.
             dlg.CheckFileExists = true;
             
-            dlg.Filter = "WAV files (*.wav)|*.wav";
+            dlg.Filter = Localization.GetText("ui-settings-getfilewav");
             dlg.DefaultExt = ".wav";
 
             // Activate the file selection dialog.

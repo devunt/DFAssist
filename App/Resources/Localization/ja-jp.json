@@ -51,7 +51,7 @@
   "ui-settings-usevpn-alert": "VPNを使用しないときは,消して頂くとプログラムが作動します。",
   "ui-settings-customsound": "カスタム通知サウンド",
   "ui-settings-getsoundfile": "ファイル",
-  "ui-settings-getfilewav": "WAV files (*.wav)|*.wav",
+  "ui-settings-getfilewav": "WAV ファイル (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "まず,音楽ファイルを選択してください。",
 
   "ui-updatenote-title": "アップデート·ノート",

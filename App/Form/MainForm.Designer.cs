@@ -309,9 +309,9 @@
             this.checkBox_useVPN.Font = new System.Drawing.Font("맑은 고딕", 9F);
             this.checkBox_useVPN.Location = new System.Drawing.Point(6, 107);
             this.checkBox_useVPN.Name = "checkBox_useVPN";
-            this.checkBox_useVPN.Size = new System.Drawing.Size(285, 19);
+            this.checkBox_useVPN.Size = new System.Drawing.Size(310, 19);
             this.checkBox_useVPN.TabIndex = 6;
-            this.checkBox_useVPN.Text = "VPN을 사용하는데, DFAssist가 작동하지 않아요.";
+            this.checkBox_useVPN.Text = "VPN을 사용하는데, FFXIV 프로세스를 찾지 못하네요.";
             this.checkBox_useVPN.UseVisualStyleBackColor = true;
             this.checkBox_useVPN.CheckedChanged += new System.EventHandler(this.checkBox_useVPN_CheckedChanged);
             this.checkBox_useVPN.MouseUp += new System.Windows.Forms.MouseEventHandler(this.checkBox_useVPN_MouseUp);
