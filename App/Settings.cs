@@ -20,7 +20,7 @@ namespace App
         public static string CustomSoundPath { get; set; } = "";
         public static bool useVPN { get; set; } = false;
         public static bool CheatRoulette { get; set; } = false;
-        public static bool Updated { get; set; } = true;
+        public static bool Updated { get; set; } = false;
         public static HashSet<int> FATEs { get; set; } = new HashSet<int>();
 
         private static void Init()
