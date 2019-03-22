@@ -595,6 +595,7 @@ namespace App
             button_SelectProcess.Text = Localization.GetText("ui-topsetting-select");
             button_ResetProcess.Text = Localization.GetText("ui-topsetting-reset");
             tabControl.TabPages[0].Text = Localization.GetText("ui-tabcontrol-settings");
+            tabControl.TabPages[1].Text = Localization.GetText("ui-tabcontrol-advanced");
             tabControl.TabPages[2].Text = Localization.GetText("ui-tabcontrol-fate");
             tabControl.TabPages[3].Text = Localization.GetText("ui-tabcontrol-logs");
             tabControl.TabPages[4].Text = Localization.GetText("ui-tabcontrol-info");
@@ -611,6 +612,11 @@ namespace App
             checkBox_useVPN.Text = Localization.GetText("ui-settings-usevpn");
             groupBox_UpdateNote.Text = Localization.GetText("ui-updatenote-title");
             label_UpdateNote.Text = Localization.GetText("ui-updatenote-text");
+            groupBox_CustomHttpRequest.Text = Localization.GetText("ui-advanced-http");
+            checkBox_EnableHttpRequest.Text = Localization.GetText("ui-advanced-http-enable");
+            checkBox_RequestOnDutyMatched.Text = Localization.GetText("ui-advanced-http-duty-matched");
+            checkBox_RequestOnFateOccur.Text = Localization.GetText("ui-advanced-http-fate-occured");
+            label_HttpRequestReadme.Text = Localization.GetText("ui-advanced-http-readme");
             toolStripMenuItem_SelectAll.Text = Localization.GetText("ui-fate-selectall");
             toolStripMenuItem_UnSelectAll.Text = Localization.GetText("ui-fate-unselectall");
             presetToolStripMenuItem.Text = Localization.GetText("ui-fate-preset");

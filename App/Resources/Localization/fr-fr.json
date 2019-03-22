@@ -35,12 +35,19 @@
   "ui-topsetting-reset": "Rétablir",
 
   "ui-tabcontrol-settings": "Paramètres",
+  "ui-tabcontrol-advanced": "Advanced",
   "ui-tabcontrol-fate": "ALEA",
   "ui-tabcontrol-logs": "Logs",
   "ui-tabcontrol-info": "Infos",
 
   "ui-updatenote-title": "Note de mise à jour",
   "ui-updatenote-text": "1. Ajout de l’option sonore de notification FATE. \n(Utilise le son de démarrage FFXIV FATE) \n2. Ajout de la fonction de personnalisation du son de notification. (*.wav est accepté.) \n3. Tweet Notify Service complètement supprimé. (Le serveur fonctionnant est tombé en panne)\n4. Problem using with some VPN services resolved.",
+    
+  "ui-advanced-http": "Custom HTTP Request",
+  "ui-advanced-http-enable": "Enable",
+  "ui-advanced-http-duty-matched": "Send when Duty Matched",
+  "ui-advanced-http-fate-occured": "Send when Fate Occured",
+  "ui-advanced-http-readme": "이 기능을 활성화하면 임무/돌발 찾기 도우미는 지정한 URL로 \n\"status\"와 \"info\"를 포함한 POST HTTP Request를 보냅니다.\n\"status\"에는 \"duty-matched\" 또는 \"fate-occured\"라는 String이 포함되어 보내집니다.\n\"info\"에는 매칭된 임무나 발생한 돌발임무 이름이 포함되어 보내집니다.",
 
   "ui-settings-title": "Paramètres de base",
   "ui-settings-overlay-use": "Utiliser l'overlay",

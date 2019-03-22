@@ -40,7 +40,9 @@
             this.panel_TopSetting = new System.Windows.Forms.Panel();
             this.comboBox_Language = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label_Process = new App.LocalizableLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.checkBox_Overlay = new System.Windows.Forms.CheckBox();
             this.tabControl = new App.TabControlBlack();
             this.tabPage_Settings = new System.Windows.Forms.TabPage();
             this.groupBox_UpdateNote = new System.Windows.Forms.GroupBox();
@@ -55,9 +57,8 @@
             this.checkBox_CheatRoullete = new System.Windows.Forms.CheckBox();
             this.checkBox_FlashWindow = new System.Windows.Forms.CheckBox();
             this.checkBox_StartupShow = new System.Windows.Forms.CheckBox();
-            this.checkBox_Overlay = new System.Windows.Forms.CheckBox();
             this.tabPage_Advanced = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox_CustomHttpRequest = new System.Windows.Forms.GroupBox();
             this.label_HttpRequestReadme = new System.Windows.Forms.Label();
             this.textBox_CustomHttpUrl = new System.Windows.Forms.TextBox();
             this.label_HttpRequestUrl = new System.Windows.Forms.Label();
@@ -97,7 +98,6 @@
             this.label_About = new App.LocalizableLabel();
             this.linkLabel_GitHub = new System.Windows.Forms.LinkLabel();
             this.label_AboutTitle = new App.LocalizableLabel();
-            this.label_Process = new App.LocalizableLabel();
             this.contextMenuStrip.SuspendLayout();
             this.panel_TopSetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -106,7 +106,7 @@
             this.groupBox_UpdateNote.SuspendLayout();
             this.groupBox_DefaultSet.SuspendLayout();
             this.tabPage_Advanced.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.groupBox_CustomHttpRequest.SuspendLayout();
             this.tabPage_FATE.SuspendLayout();
             this.menuStrip_FATETab.SuspendLayout();
             this.tabPage_Log.SuspendLayout();
@@ -216,6 +216,33 @@
             this.pictureBox1.Size = new System.Drawing.Size(22, 22);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            // 
+            // label_Process
+            // 
+            this.label_Process.AutoSize = true;
+            this.label_Process.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label_Process.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_Process.ForeColor = System.Drawing.Color.Gray;
+            this.label_Process.Location = new System.Drawing.Point(5, 5);
+            this.label_Process.Name = "label_Process";
+            this.label_Process.Size = new System.Drawing.Size(101, 17);
+            this.label_Process.TabIndex = 0;
+            this.label_Process.Text = "FFXIV 프로세스";
+            // 
+            // checkBox_Overlay
+            // 
+            this.checkBox_Overlay.AutoSize = true;
+            this.checkBox_Overlay.Checked = true;
+            this.checkBox_Overlay.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_Overlay.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.checkBox_Overlay.Location = new System.Drawing.Point(6, 23);
+            this.checkBox_Overlay.Name = "checkBox_Overlay";
+            this.checkBox_Overlay.Size = new System.Drawing.Size(102, 19);
+            this.checkBox_Overlay.TabIndex = 1;
+            this.checkBox_Overlay.Text = "오버레이 사용";
+            this.toolTip.SetToolTip(this.checkBox_Overlay, "오버레이 UI의 좌측 막대를 이용해 드래그 할 수 있습니다.");
+            this.checkBox_Overlay.UseVisualStyleBackColor = true;
+            this.checkBox_Overlay.CheckedChanged += new System.EventHandler(this.checkBox_Overlay_CheckedChanged);
             // 
             // tabControl
             // 
@@ -392,45 +419,30 @@
             this.checkBox_StartupShow.UseVisualStyleBackColor = true;
             this.checkBox_StartupShow.CheckedChanged += new System.EventHandler(this.checkBox_StartupShow_CheckedChanged);
             // 
-            // checkBox_Overlay
-            // 
-            this.checkBox_Overlay.AutoSize = true;
-            this.checkBox_Overlay.Checked = true;
-            this.checkBox_Overlay.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_Overlay.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.checkBox_Overlay.Location = new System.Drawing.Point(6, 23);
-            this.checkBox_Overlay.Name = "checkBox_Overlay";
-            this.checkBox_Overlay.Size = new System.Drawing.Size(102, 19);
-            this.checkBox_Overlay.TabIndex = 1;
-            this.checkBox_Overlay.Text = "오버레이 사용";
-            this.toolTip.SetToolTip(this.checkBox_Overlay, "오버레이 UI의 좌측 막대를 이용해 드래그 할 수 있습니다.");
-            this.checkBox_Overlay.UseVisualStyleBackColor = true;
-            this.checkBox_Overlay.CheckedChanged += new System.EventHandler(this.checkBox_Overlay_CheckedChanged);
-            // 
             // tabPage_Advanced
             // 
             this.tabPage_Advanced.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_Advanced.Controls.Add(this.groupBox1);
+            this.tabPage_Advanced.Controls.Add(this.groupBox_CustomHttpRequest);
             this.tabPage_Advanced.Location = new System.Drawing.Point(114, 4);
             this.tabPage_Advanced.Name = "tabPage_Advanced";
             this.tabPage_Advanced.Size = new System.Drawing.Size(426, 263);
             this.tabPage_Advanced.TabIndex = 4;
             this.tabPage_Advanced.Text = "고급";
             // 
-            // groupBox1
+            // groupBox_CustomHttpRequest
             // 
-            this.groupBox1.Controls.Add(this.label_HttpRequestReadme);
-            this.groupBox1.Controls.Add(this.textBox_CustomHttpUrl);
-            this.groupBox1.Controls.Add(this.label_HttpRequestUrl);
-            this.groupBox1.Controls.Add(this.checkBox_RequestOnDutyMatched);
-            this.groupBox1.Controls.Add(this.checkBox_RequestOnFateOccur);
-            this.groupBox1.Controls.Add(this.checkBox_EnableHttpRequest);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(423, 257);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "사용자 지정 HTTP 요청";
+            this.groupBox_CustomHttpRequest.Controls.Add(this.label_HttpRequestReadme);
+            this.groupBox_CustomHttpRequest.Controls.Add(this.textBox_CustomHttpUrl);
+            this.groupBox_CustomHttpRequest.Controls.Add(this.label_HttpRequestUrl);
+            this.groupBox_CustomHttpRequest.Controls.Add(this.checkBox_RequestOnDutyMatched);
+            this.groupBox_CustomHttpRequest.Controls.Add(this.checkBox_RequestOnFateOccur);
+            this.groupBox_CustomHttpRequest.Controls.Add(this.checkBox_EnableHttpRequest);
+            this.groupBox_CustomHttpRequest.Location = new System.Drawing.Point(3, 3);
+            this.groupBox_CustomHttpRequest.Name = "groupBox_CustomHttpRequest";
+            this.groupBox_CustomHttpRequest.Size = new System.Drawing.Size(423, 257);
+            this.groupBox_CustomHttpRequest.TabIndex = 5;
+            this.groupBox_CustomHttpRequest.TabStop = false;
+            this.groupBox_CustomHttpRequest.Text = "사용자 지정 HTTP 요청";
             // 
             // label_HttpRequestReadme
             // 
@@ -800,18 +812,6 @@
             this.label_AboutTitle.Text = "VERSION STRING";
             this.label_AboutTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label_Process
-            // 
-            this.label_Process.AutoSize = true;
-            this.label_Process.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label_Process.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_Process.ForeColor = System.Drawing.Color.Gray;
-            this.label_Process.Location = new System.Drawing.Point(5, 5);
-            this.label_Process.Name = "label_Process";
-            this.label_Process.Size = new System.Drawing.Size(101, 17);
-            this.label_Process.TabIndex = 0;
-            this.label_Process.Text = "FFXIV 프로세스";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -844,8 +844,8 @@
             this.groupBox_DefaultSet.ResumeLayout(false);
             this.groupBox_DefaultSet.PerformLayout();
             this.tabPage_Advanced.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox_CustomHttpRequest.ResumeLayout(false);
+            this.groupBox_CustomHttpRequest.PerformLayout();
             this.tabPage_FATE.ResumeLayout(false);
             this.tabPage_FATE.PerformLayout();
             this.menuStrip_FATETab.ResumeLayout(false);
@@ -922,7 +922,7 @@
         private System.Windows.Forms.Label label_UpdateNote;
         private System.Windows.Forms.CheckBox checkBox_useVPN;
         private System.Windows.Forms.TabPage tabPage_Advanced;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox_CustomHttpRequest;
         private System.Windows.Forms.CheckBox checkBox_EnableHttpRequest;
         private System.Windows.Forms.CheckBox checkBox_RequestOnDutyMatched;
         private System.Windows.Forms.CheckBox checkBox_RequestOnFateOccur;

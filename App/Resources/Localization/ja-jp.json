@@ -35,6 +35,7 @@
   "ui-topsetting-reset": "初期化",
 
   "ui-tabcontrol-settings": "設定",
+  "ui-tabcontrol-advanced": "고급",
   "ui-tabcontrol-fate": "FATE",
   "ui-tabcontrol-logs": "ログ",
   "ui-tabcontrol-info": "情報",
@@ -56,6 +57,12 @@
 
   "ui-updatenote-title": "アップデート·ノート",
   "ui-updatenote-text": "1. FATE通知音機能を追加（FF14自体FATE開始音に設定）\n2. カスタム通知音設定機能を追加（* .wavファイルのみ）\n3. ツイッター通知サービス完全除去（機能をしていたサーバーが動作を停止する\n4. Problem using with some VPN services resolved.",
+
+  "ui-advanced-http": "사용자 지정 HTTP 요청",
+  "ui-advanced-http-enable": "활성화",
+  "ui-advanced-http-duty-matched": "던전 매칭 완료시 보내기",
+  "ui-advanced-http-fate-occured": "돌발 임무 발생시 보내기",
+  "ui-advanced-http-readme": "이 기능을 활성화하면 임무/돌발 찾기 도우미는 지정한 URL로 \n\"status\"와 \"info\"를 포함한 POST HTTP Request를 보냅니다.\n\"status\"에는 \"duty-matched\" 또는 \"fate-occured\"라는 String이 포함되어 보내집니다.\n\"info\"에는 매칭된 임무나 발생한 돌발임무 이름이 포함되어 보내집니다.",
 
   "ui-fate-selectall": "すべて選択",
   "ui-fate-unselectall": "すべて選択解除",
