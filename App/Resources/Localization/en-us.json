@@ -47,7 +47,7 @@
   "ui-advanced-http-enable": "Enable",
   "ui-advanced-http-duty-matched": "Send when Duty Matched",
   "ui-advanced-http-fate-occured": "Send when Fate Occured",
-  "ui-advanced-http-readme": "이 기능을 활성화하면 임무/돌발 찾기 도우미는 지정한 URL로 \n\"status\"와 \"info\"를 포함한 POST HTTP Request를 보냅니다.\n\"status\"에는 \"duty-matched\" 또는 \"fate-occured\"라는 String이 포함되어 보내집니다.\n\"info\"에는 매칭된 임무나 발생한 돌발임무 이름이 포함되어 보내집니다.",
+  "ui-advanced-http-readme": "When enabled, DFAssistwill send a POST HTTP Request with \n\"status\" and \"info\" to the specified URL.\n\"status\"is sent with a string called \"duty-match\" or \"fate-occured\".\n\"info\" is sent with the Matched Duty Name or Occured FATE Name.",
 
   "ui-settings-title": "Basic setting",
   "ui-settings-overlay-use": "Use overlay",
@@ -154,6 +154,11 @@
   "l-firewall-error": "FW: Error while registering",
   
   "l-wav-error": "S: invalid wav file.",
+
+  "l-POST-send": "N: Request URL: {0}, Data: {1}",
+  "l-POST-no-response": "S: POST no response!",
+  "l-POST-failed": "S: POST Request failed!",
+  "l-POST-response": "S: POST Response: {0}",
 
   "l-analyze-error-length": "A: Length error while analyzing message: {0}, {1}/{2}",
   "l-analyze-error-general": "A: Error while analyzing message",

@@ -240,6 +240,11 @@ namespace App
                             {
                                 WinApi.FlashWindow(mainForm.FFXIVProcess);
                             }
+
+                            if (Settings.customHttpRequest && Settings.requestOnFateOccured)
+                            {
+                                WebApi.customHttpRequest("fate-occured", fate.Name);
+                            }
                         }
                     }
                 }
@@ -340,6 +345,11 @@ namespace App
                         if (!Settings.ShowOverlay)
                         {
                             mainForm.ShowNotification("notification-queue-matched", instance.Name);
+                        }
+
+                        if (Settings.customHttpRequest && Settings.requestOnDutyMatched)
+                        {
+                            WebApi.customHttpRequest("duty-matched", instance.Name);
                         }
 
                         Log.S("l-queue-matched", instance.Name);
@@ -451,6 +461,11 @@ namespace App
                     if (!Settings.ShowOverlay)
                     {
                         mainForm.ShowNotification("notification-queue-matched", instance.Name);
+                    }
+
+                    if (Settings.customHttpRequest && Settings.requestOnDutyMatched)
+                    {
+                        WebApi.customHttpRequest("duty-matched", instance.Name);
                     }
 
                     Log.S("l-queue-matched", instance.Name);

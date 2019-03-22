@@ -10,7 +10,7 @@ title: {{ site.name }}
 
 ## 정보
 
-- 최신 버전 ```v20190317.1``` ([다운로드](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
+- 최신 버전 ```v20190322.1``` ([다운로드](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
 - 타겟 버전 ```Microsoft .NET Framework 4.0``` ([다운로드](https://www.microsoft.com/ko-kr/download/details.aspx?id=17851))
 - 게임 버전 ```파이널 판타지 14 한국판, 버전 4.4```또는 ```글로벌판, 버전 4.5```
 
