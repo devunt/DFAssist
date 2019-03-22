@@ -155,7 +155,7 @@
   
   "l-wav-error": "S: 音楽ファイルの再生エラー：正しくないwavファイルです。",
 
-  "l-POST-send": "N: 要請 URL: {0}, データ: {1}",
+  "l-POST-send": "N: POST 要請 URL: {0}, データ: {1}",
   "l-POST-no-response": "S: POST 応答なし!",
   "l-POST-failed": "S: POST 要請失敗!",
   "l-POST-response": "S: POST 応答: {0}",

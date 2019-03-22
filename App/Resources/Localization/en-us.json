@@ -155,7 +155,7 @@
   
   "l-wav-error": "S: invalid wav file.",
 
-  "l-POST-send": "N: Request URL: {0}, Data: {1}",
+  "l-POST-send": "N: POST Request URL: {0}, Data: {1}",
   "l-POST-no-response": "S: POST no response!",
   "l-POST-failed": "S: POST Request failed!",
   "l-POST-response": "S: POST Response: {0}",

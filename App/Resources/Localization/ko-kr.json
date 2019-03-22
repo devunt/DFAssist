@@ -155,7 +155,7 @@
 
   "l-wav-error": "S: 음악 파일 재생 에러: 잘못된 wav 파일입니다.",
 
-  "l-POST-send": "N: 요청 URL: {0}, 데이터: {1}",
+  "l-POST-send": "N: POST 요청 URL: {0}, 데이터: {1}",
   "l-POST-no-response": "S: POST 요청에 대한 응답이 없습니다.",
   "l-POST-failed": "S: POST 요청에 실패했습니다!",
   "l-POST-response": "S: POST 응답: {0}",

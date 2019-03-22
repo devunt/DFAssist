@@ -155,7 +155,7 @@
   
   "l-wav-error": "S: Erreur de lecture du son personnalisé: fichier wav invalide. ",
   
-  "l-POST-send": "N: demande URL: {0}, Données: {1}",
+  "l-POST-send": "N: POST demande URL: {0}, Données: {1}",
   "l-POST-no-response": "S: POST no response!",
   "l-POST-failed": "S: POST Demande rejetée!",
   "l-POST-response": "S: POST répondre: {0}",
