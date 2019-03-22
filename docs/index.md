@@ -10,7 +10,7 @@ title: {{ site.name }}
 
 ## 정보
 
-- 최신 버전 ```v20190317.1``` ([다운로드](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
+- 최신 버전 ```v20190323.1``` ([다운로드](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
 - 타겟 버전 ```Microsoft .NET Framework 4.0``` ([다운로드](https://www.microsoft.com/ko-kr/download/details.aspx?id=17851))
 - 게임 버전 ```파이널 판타지 14 한국판, 버전 4.4```또는 ```글로벌판, 버전 4.5```
 
@@ -29,6 +29,7 @@ title: {{ site.name }}
   - 무작위 임무가 매칭됐을 시 매칭된 임무가 어떤 임무인지 입장 전 확인 가능 (설정 필요)
   - 미리 설정한 돌발 임무가 현재 위치한 맵에 발생했을 경우 알림 가능 (이벤트 돌발, 고대무기 돌발 등)
   - 알림음 사용자 지정 가능
+- 사용자가 원하는 서버로 임무 매칭 완료 또는 돌발임무 발생 POST 요청 가능 (추가적인 업데이트가 계획되어 있습니다.)
 
 ## 문제 해결
 

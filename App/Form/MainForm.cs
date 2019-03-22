@@ -102,6 +102,11 @@ namespace App
             }
             SetCheatRoulleteCheckBox(Settings.CheatRoulette);
 
+            checkBox_EnableHttpRequest.Checked = Settings.customHttpRequest;
+            textBox_CustomHttpUrl.Text = Settings.customHttpUrl;
+            checkBox_RequestOnDutyMatched.Checked = Settings.requestOnDutyMatched;
+            checkBox_RequestOnFateOccur.Checked = Settings.requestOnFateOccured;
+
             refresh_Fates();
 
             Task.Factory.StartNew(() =>
@@ -322,6 +327,34 @@ namespace App
             {
                 LMessageBox.I("ui-settings-usevpn-alert");
             }
+        }
+
+        private void checkBox_EnableHttpRequest_CheckedChanged(object sender, EventArgs e)
+        {
+            var @checked = checkBox_EnableHttpRequest.Checked;
+            Settings.customHttpRequest = @checked;
+            textBox_CustomHttpUrl.Enabled = @checked;
+            checkBox_RequestOnDutyMatched.Enabled = @checked;
+            checkBox_RequestOnFateOccur.Enabled = @checked;
+            Settings.Save();
+        }
+
+        private void textBox_CustomHttpUrl_TextChanged(object sender, EventArgs e)
+        {
+            Settings.customHttpUrl = textBox_CustomHttpUrl.Text;
+            Settings.Save();
+        }
+
+        private void checkBox_RequestOnDutyMatched_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.requestOnDutyMatched = checkBox_RequestOnDutyMatched.Checked;
+            Settings.Save();
+        }
+
+        private void checkBox_RequestOnFateOccur_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.requestOnFateOccured = checkBox_RequestOnFateOccur.Checked;
+            Settings.Save();
         }
 
         private void toolStripMenuItem_LogCopy_Click(object sender, EventArgs e)
@@ -562,9 +595,10 @@ namespace App
             button_SelectProcess.Text = Localization.GetText("ui-topsetting-select");
             button_ResetProcess.Text = Localization.GetText("ui-topsetting-reset");
             tabControl.TabPages[0].Text = Localization.GetText("ui-tabcontrol-settings");
-            tabControl.TabPages[1].Text = Localization.GetText("ui-tabcontrol-fate");
-            tabControl.TabPages[2].Text = Localization.GetText("ui-tabcontrol-logs");
-            tabControl.TabPages[3].Text = Localization.GetText("ui-tabcontrol-info");
+            tabControl.TabPages[1].Text = Localization.GetText("ui-tabcontrol-advanced");
+            tabControl.TabPages[2].Text = Localization.GetText("ui-tabcontrol-fate");
+            tabControl.TabPages[3].Text = Localization.GetText("ui-tabcontrol-logs");
+            tabControl.TabPages[4].Text = Localization.GetText("ui-tabcontrol-info");
             groupBox_DefaultSet.Text = Localization.GetText("ui-settings-title");
             checkBox_Overlay.Text = Localization.GetText("ui-settings-overlay-use");
             toolTip.SetToolTip(checkBox_Overlay, Localization.GetText("ui-settings-overlay-tooltip"));
@@ -578,6 +612,11 @@ namespace App
             checkBox_useVPN.Text = Localization.GetText("ui-settings-usevpn");
             groupBox_UpdateNote.Text = Localization.GetText("ui-updatenote-title");
             label_UpdateNote.Text = Localization.GetText("ui-updatenote-text");
+            groupBox_CustomHttpRequest.Text = Localization.GetText("ui-advanced-http");
+            checkBox_EnableHttpRequest.Text = Localization.GetText("ui-advanced-http-enable");
+            checkBox_RequestOnDutyMatched.Text = Localization.GetText("ui-advanced-http-duty-matched");
+            checkBox_RequestOnFateOccur.Text = Localization.GetText("ui-advanced-http-fate-occured");
+            label_HttpRequestReadme.Text = Localization.GetText("ui-advanced-http-readme");
             toolStripMenuItem_SelectAll.Text = Localization.GetText("ui-fate-selectall");
             toolStripMenuItem_UnSelectAll.Text = Localization.GetText("ui-fate-unselectall");
             presetToolStripMenuItem.Text = Localization.GetText("ui-fate-preset");

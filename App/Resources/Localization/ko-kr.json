@@ -35,6 +35,7 @@
   "ui-topsetting-reset": "재설정",
 
   "ui-tabcontrol-settings": "설정",
+  "ui-tabcontrol-advanced": "고급",
   "ui-tabcontrol-fate": "돌발",
   "ui-tabcontrol-logs": "로그",
   "ui-tabcontrol-info": "정보",
@@ -55,7 +56,13 @@
   "ui-notification-customsound-selectfile": "음악 파일을 먼저 선택해주세요.",
 
   "ui-updatenote-title": "업데이트 노트",
-  "ui-updatenote-text": "1. 돌발임무 알림음 기능 추가 (파판 14 자체 돌발임무 시작 소리로 설정)\n2. 사용자 지정 알림음 설정 기능 추가 (*.wav 파일만 허용)\n3. 트위터 알림 서비스 완전 제거 (기능을 하던 서버가 작동을 중지함)\n4. WTFast VPN 등 일부 VPN에서 작동하지 않던 문제 해결",
+  "ui-updatenote-text": "1. 돌발임무 알림음 기능 추가 (파판 14 자체 돌발임무 시작 소리로 설정)\n2. 사용자 지정 알림음 설정 기능 추가 (*.wav 파일만 허용)\n3. 트위터 알림 서비스 완전 제거 (기능을 하던 서버가 작동을 중지함)\n4. WTFast VPN 등 일부 VPN에서 작동하지 않던 문제 해결\n5. 임의의 서버로 POST 요청을 보내는 기능 추가",
+
+  "ui-advanced-http": "사용자 지정 HTTP 요청",
+  "ui-advanced-http-enable": "활성화",
+  "ui-advanced-http-duty-matched": "던전 매칭 완료시 보내기",
+  "ui-advanced-http-fate-occured": "돌발 임무 발생시 보내기",
+  "ui-advanced-http-readme": "이 기능을 활성화하면 임무/돌발 찾기 도우미는 지정한 URL로 \n\"status\"와 \"info\"를 포함한 POST HTTP Request를 보냅니다.\n\"status\"에는 \"duty-matched\" 또는 \"fate-occured\"라는 String이 포함되어 보내집니다.\n\"info\"에는 매칭된 임무나 발생한 돌발임무 이름이 포함되어 보내집니다.\n\n이 기능은 앞으로 추가적인 개선이 예정되어 있습니다.",
 
   "ui-fate-selectall": "모두 선택",
   "ui-fate-unselectall": "모두 해제",
@@ -147,6 +154,11 @@
   "l-firewall-error": "FW: 추가중 에러 발생",
 
   "l-wav-error": "S: 음악 파일 재생 에러: 잘못된 wav 파일입니다.",
+
+  "l-POST-send": "N: POST 요청 URL: {0}, 데이터: {1}",
+  "l-POST-no-response": "S: POST 요청에 대한 응답이 없습니다.",
+  "l-POST-failed": "S: POST 요청에 실패했습니다!",
+  "l-POST-response": "S: POST 응답: {0}",
 
   "l-analyze-error-length": "A: 메시지 분석중 길이 에러 발생함: {0}, {1}/{2}",
   "l-analyze-error-general": "A: 메시지 분석중 에러 발생함",

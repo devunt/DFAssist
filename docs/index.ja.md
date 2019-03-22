@@ -10,7 +10,7 @@ title: {{ site.name }}
 
 ## Information
 
-- 最新バージョン ```v20190317.1``` ([ダウンロード](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
+- 最新バージョン ```v20190323.1``` ([ダウンロード](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
 - 必要バージョン ```Microsoft .NET Framework 4.0``` ([ダウンロード](https://www.microsoft.com/ja-jp/download/details.aspx?id=17851))
 - ゲームバージョン ```Final Fantasy XIV, バージョン 4.5```
 
@@ -29,6 +29,7 @@ title: {{ site.name }}
   - コンテンツルーレットを使用した場合何のコンテンツにマッチングしたかを表示できます。 (設定が必要です)
   - F.A.T.Eの発生を通知します。(キャラクターがFATEエリア内にいる必要があります)
   - カスタム通知サウンド。
+- 使用者が希望したサーバーに任務マッチング完了,または突発任務発生POST要請可能。 (追加的なアップデートが計画されています。)
 
 ## 問題が起きたら
 

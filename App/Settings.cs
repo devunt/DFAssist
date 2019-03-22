@@ -21,6 +21,10 @@ namespace App
         public static bool useVPN { get; set; } = false;
         public static bool CheatRoulette { get; set; } = false;
         public static bool Updated { get; set; } = false;
+        public static bool customHttpRequest { get; set; } = false;
+        public static string customHttpUrl { get; set; } = "";
+        public static bool requestOnDutyMatched { get; set; } = false;
+        public static bool requestOnFateOccured { get; set; } = false;
         public static HashSet<int> FATEs { get; set; } = new HashSet<int>();
 
         private static void Init()
@@ -52,6 +56,10 @@ namespace App
                 CheatRoulette = iniFile.ReadValue("misc", "cheatroulette") == "1";
                 Language = iniFile.ReadValue("misc", "language") ?? "ko-kr";
                 Updated = iniFile.ReadValue("internal", "updated") == "1";
+                customHttpRequest = iniFile.ReadValue("http", "customHttpRequest") == "1";
+                customHttpUrl = iniFile.ReadValue("http", "customHttpUrl") ?? "";
+                requestOnDutyMatched = iniFile.ReadValue("http", "requestOnDutyMatched") == "1";
+                requestOnFateOccured = iniFile.ReadValue("http", "requestOnFateOccured") == "1";
 
                 var fates = iniFile.ReadValue("fate", "fates");
                 if (!string.IsNullOrEmpty(fates))
@@ -76,6 +84,10 @@ namespace App
             iniFile.WriteValue("misc", "language", Language);
             iniFile.WriteValue("fate", "fates", string.Join(",", FATEs));
             iniFile.WriteValue("internal", "updated", Updated ? "1" : "0");
+            iniFile.WriteValue("http", "customHttpRequest", customHttpRequest ? "1" : "0");
+            iniFile.WriteValue("http", "customHttpUrl", customHttpUrl);
+            iniFile.WriteValue("http", "requestOnDutyMatched", requestOnDutyMatched ? "1" : "0");
+            iniFile.WriteValue("http", "requestOnFateOccured", requestOnFateOccured ? "1" : "0");
         }
     }
 }
