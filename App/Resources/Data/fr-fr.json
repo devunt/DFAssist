@@ -2689,6 +2689,17 @@
     "399": {
       "name": "Arrière-pays dravanien",
       "fates": {
+        "756": "Bouts de ferraille",
+        "757": "Vengeurs de ferraille",
+        "758": "Défi: vengeurs de ferraille II",
+        "759": "Tarentules en rupture de stock",
+        "760": "D'une pierre deux nuisibles",
+        "761": "Défi: une épitaphe pour Épaphos",
+        "762": "Le bal des demoiselles",
+        "763": "Rhume des narbroois",
+        "764": "Défi: Ruginis à éliminer",
+        "766": "Mécanismes à enrayer",
+        "767": "Défi: Moundrinix le virtuose",
         "768": "Ratels au casse-pipe",
         "769": "Défi: Dobharch la matriarche",
         "770": "Écrabouillage d'Écrabouilleuse",
@@ -2706,18 +2717,7 @@
         "783": "Défi: triste Bero Roggo",
         "784": "Défi: un poisson bipède et vorace",
         "785": "Prendre les gens pour des cocons",
-        "786": "Défi: défiler Habetrot",
-        "756": "Bouts de ferraille",
-        "757": "Vengeurs de ferraille",
-        "758": "Défi: vengeurs de ferraille II",
-        "759": "Tarentules en rupture de stock",
-        "760": "D'une pierre deux nuisibles",
-        "761": "Défi: une épitaphe pour Épaphos",
-        "762": "Le bal des demoiselles",
-        "763": "Rhume des narbroois",
-        "764": "Défi: Ruginis à éliminer",
-        "766": "Mécanismes à enrayer",
-        "767": "Défi: Moundrinix le virtuose"
+        "786": "Défi: défiler Habetrot"
       }
     },
     "400": {

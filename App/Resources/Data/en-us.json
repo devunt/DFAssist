@@ -2684,6 +2684,17 @@
     "399": {
       "name": "The Dravanian Hinterlands",
       "fates": {
+        "756": "Metal Gears Rising",
+        "757": "Metal Gears Revengeance",
+        "758": "Metal Gears Revengeance 2",
+        "759": "Tarantula Hawk, Pro Stinger",
+        "760": "Wild Wilde Death",
+        "761": "Gets the Red Out",
+        "762": "Makes the Very Best...Nests",
+        "763": "Olympus Has Pollen",
+        "764": "Feed Me, See More",
+        "766": "Pop Goes the Whizzle",
+        "767": "Revenge of the Vengeful Revengeance",
         "768": "Ratel and Hum",
         "769": "Dobharch Did It for the Best",
         "770": "Infant Vangob",
@@ -2701,18 +2712,7 @@
         "783": "Toad Alone",
         "784": "How Do You Feed a Hungry Manlike Monster",
         "785": "Out of the Woodwork",
-        "786": "Silkworm",
-        "756": "Metal Gears Rising",
-        "757": "Metal Gears Revengeance",
-        "758": "Metal Gears Revengeance 2",
-        "759": "Tarantula Hawk, Pro Stinger",
-        "760": "Wild Wilde Death",
-        "761": "Gets the Red Out",
-        "762": "Makes the Very Best...Nests",
-        "763": "Olympus Has Pollen",
-        "764": "Feed Me, See More",
-        "766": "Pop Goes the Whizzle",
-        "767": "Revenge of the Vengeful Revengeance"
+        "786": "Silkworm"
       }
     },
     "400": {
