@@ -10,7 +10,7 @@ Do other things while in waiting list! DFAssist will give you match notification
 
 ## Information
 
-- Latest Version ```v20190322.1``` ([Download](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
+- Latest Version ```v20190323.1``` ([Download](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
 - Target Version ```Microsoft .NET Framework 4.0``` ([Download](https://www.microsoft.com/en-us/download/details.aspx?id=17851))
 - Game Version ```Final Fantasy XIV, Version 4.5```
 
@@ -29,7 +29,7 @@ Do other things while in waiting list! DFAssist will give you match notification
   - Preview exact matched duty when using duty roulette. (Needs Setting)
   - Notifies when checked F.A.T.E occurs. (Character Need to be in FATE area)
   - Custom notification sound support.
-- Enable to POST request to wherever user wants when Duty Matched and FATE Occured.
+- Enable to POST request to wherever user wants when Duty Matched and FATE Occured. (Additional Update is scheduled.)
 
 ## Problem Solving
 

@@ -337,14 +337,6 @@ namespace App
             checkBox_RequestOnDutyMatched.Enabled = @checked;
             checkBox_RequestOnFateOccur.Enabled = @checked;
             Settings.Save();
-            if (@checked)
-            {
-                WebApi.customHttpRequest("duty-matched", "name");
-            }
-            else
-            {
-                WebApi.customHttpRequest("fate-occured", "name");
-            }
         }
 
         private void textBox_CustomHttpUrl_TextChanged(object sender, EventArgs e)

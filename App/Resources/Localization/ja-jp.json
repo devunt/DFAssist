@@ -62,7 +62,7 @@
   "ui-advanced-http-enable": "活性化",
   "ui-advanced-http-duty-matched": "突入準備完了時",
   "ui-advanced-http-fate-occured": "FATE発生時",
-  "ui-advanced-http-readme": "この機能を活性化すればDFAssistは指定したURLで\n\"status\"と\"info\"を含むPOST HTTP Requestを送ります。\n\"status\"には\"duty-matched\"または\"fate-occured\"というStringが含まれます。\n\"info\"には,マッチングした任務や発生したFATEの名前が含まれます。",
+  "ui-advanced-http-readme": "この機能を活性化すればDFAssistは指定したURLで\n\"status\"と\"info\"を含むPOST HTTP Requestを送ります。\n\"status\"には\"duty-matched\"または\"fate-occured\"というStringが含まれます。\n\"info\"には,マッチングした任務や発生したFATEの名前が含まれます。\n\nこの機能はこれから追加的な改善が予定されています。",
 
   "ui-fate-selectall": "すべて選択",
   "ui-fate-unselectall": "すべて選択解除",

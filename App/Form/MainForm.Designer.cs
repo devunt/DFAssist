@@ -427,7 +427,7 @@
             this.groupBox_CustomHttpRequest.Controls.Add(this.checkBox_EnableHttpRequest);
             this.groupBox_CustomHttpRequest.Location = new System.Drawing.Point(3, 3);
             this.groupBox_CustomHttpRequest.Name = "groupBox_CustomHttpRequest";
-            this.groupBox_CustomHttpRequest.Size = new System.Drawing.Size(423, 257);
+            this.groupBox_CustomHttpRequest.Size = new System.Drawing.Size(423, 189);
             this.groupBox_CustomHttpRequest.TabIndex = 5;
             this.groupBox_CustomHttpRequest.TabStop = false;
             this.groupBox_CustomHttpRequest.Text = "사용자 지정 HTTP 요청";
@@ -436,13 +436,11 @@
             // 
             this.label_HttpRequestReadme.AutoSize = true;
             this.label_HttpRequestReadme.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_HttpRequestReadme.Location = new System.Drawing.Point(4, 113);
+            this.label_HttpRequestReadme.Location = new System.Drawing.Point(0, 101);
             this.label_HttpRequestReadme.Name = "label_HttpRequestReadme";
-            this.label_HttpRequestReadme.Size = new System.Drawing.Size(428, 52);
+            this.label_HttpRequestReadme.Size = new System.Drawing.Size(428, 78);
             this.label_HttpRequestReadme.TabIndex = 9;
-            this.label_HttpRequestReadme.Text = "이 기능을 활성화하면 임무/돌발 찾기 도우미는 지정한 URL로 \r\n\"status\"와 \"info\"를 포함한 POST HTTP Request를 보냅니" +
-    "다.\r\n\"status\"에는 \"duty-matched\" 또는 \"fate-occured\"라는 String이 포함되어 보내집니다.\r\n\"info\"에는 " +
-    "매칭된 임무나 발생한 돌발임무 이름이 포함되어 보내집니다.";
+            this.label_HttpRequestReadme.Text = resources.GetString("label_HttpRequestReadme.Text");
             // 
             // textBox_CustomHttpUrl
             // 
