@@ -102,6 +102,11 @@ namespace App
             }
             SetCheatRoulleteCheckBox(Settings.CheatRoulette);
 
+            checkBox_EnableHttpRequest.Checked = Settings.customHttpRequest;
+            textBox_CustomHttpUrl.Text = Settings.customHttpUrl;
+            checkBox_RequestOnDutyMatched.Checked = Settings.requestOnDutyMatched;
+            checkBox_RequestOnFateOccur.Checked = Settings.requestOnFateOccured;
+
             refresh_Fates();
 
             Task.Factory.StartNew(() =>
@@ -190,11 +195,6 @@ namespace App
         private void linkLabel_GitHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start($"https://github.com/{Global.GITHUB_REPO}");
-        }
-
-        private void linkLabel_NewUpdate_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Process.Start($"https://github.com/{Global.GITHUB_REPO}/releases/latest");
         }
 
         private void button_SelectProcess_Click(object sender, EventArgs e)
@@ -327,6 +327,34 @@ namespace App
             {
                 LMessageBox.I("ui-settings-usevpn-alert");
             }
+        }
+
+        private void checkBox_EnableHttpRequest_CheckedChanged(object sender, EventArgs e)
+        {
+            var @checked = checkBox_EnableHttpRequest.Checked;
+            Settings.customHttpRequest = @checked;
+            textBox_CustomHttpUrl.Enabled = @checked;
+            checkBox_RequestOnDutyMatched.Enabled = @checked;
+            checkBox_RequestOnFateOccur.Enabled = @checked;
+            Settings.Save();
+        }
+
+        private void textBox_CustomHttpUrl_TextChanged(object sender, EventArgs e)
+        {
+            Settings.customHttpUrl = textBox_CustomHttpUrl.Text;
+            Settings.Save();
+        }
+
+        private void checkBox_RequestOnDutyMatched_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.requestOnDutyMatched = checkBox_RequestOnDutyMatched.Checked;
+            Settings.Save();
+        }
+
+        private void checkBox_RequestOnFateOccur_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.requestOnFateOccured = checkBox_RequestOnFateOccur.Checked;
+            Settings.Save();
         }
 
         private void toolStripMenuItem_LogCopy_Click(object sender, EventArgs e)
@@ -567,9 +595,9 @@ namespace App
             button_SelectProcess.Text = Localization.GetText("ui-topsetting-select");
             button_ResetProcess.Text = Localization.GetText("ui-topsetting-reset");
             tabControl.TabPages[0].Text = Localization.GetText("ui-tabcontrol-settings");
-            tabControl.TabPages[1].Text = Localization.GetText("ui-tabcontrol-fate");
-            tabControl.TabPages[2].Text = Localization.GetText("ui-tabcontrol-logs");
-            tabControl.TabPages[3].Text = Localization.GetText("ui-tabcontrol-info");
+            tabControl.TabPages[2].Text = Localization.GetText("ui-tabcontrol-fate");
+            tabControl.TabPages[3].Text = Localization.GetText("ui-tabcontrol-logs");
+            tabControl.TabPages[4].Text = Localization.GetText("ui-tabcontrol-info");
             groupBox_DefaultSet.Text = Localization.GetText("ui-settings-title");
             checkBox_Overlay.Text = Localization.GetText("ui-settings-overlay-use");
             toolTip.SetToolTip(checkBox_Overlay, Localization.GetText("ui-settings-overlay-tooltip"));
