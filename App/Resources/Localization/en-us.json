@@ -41,7 +41,7 @@
   "ui-tabcontrol-info": "Info",
 
   "ui-updatenote-title": "Update Note",
-  "ui-updatenote-text": "1. Added FATE notification sound option. (Uses FFXIV FATE Start Sound)\n2. Added Customize notification sound feature. (only *.wav file accepted.)\n3. Tweet Notify Service completely removed. (Functioning Server went down)\n4. Problem using with some VPN services resolved.",
+  "ui-updatenote-text": "1. Added FATE notification sound option. (Uses FFXIV FATE Start Sound)\n2. Added Customize notification sound feature. (only *.wav file accepted.)\n3. Tweet Notify Service completely removed. (Functioning Server went down)\n4. Problem using with some VPN services resolved.\n5. Send POST Request wherever you want.",
   
   "ui-advanced-http": "Custom HTTP Request",
   "ui-advanced-http-enable": "Enable",

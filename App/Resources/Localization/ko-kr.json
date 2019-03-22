@@ -56,7 +56,7 @@
   "ui-notification-customsound-selectfile": "음악 파일을 먼저 선택해주세요.",
 
   "ui-updatenote-title": "업데이트 노트",
-  "ui-updatenote-text": "1. 돌발임무 알림음 기능 추가 (파판 14 자체 돌발임무 시작 소리로 설정)\n2. 사용자 지정 알림음 설정 기능 추가 (*.wav 파일만 허용)\n3. 트위터 알림 서비스 완전 제거 (기능을 하던 서버가 작동을 중지함)\n4. WTFast VPN 등 일부 VPN에서 작동하지 않던 문제 해결",
+  "ui-updatenote-text": "1. 돌발임무 알림음 기능 추가 (파판 14 자체 돌발임무 시작 소리로 설정)\n2. 사용자 지정 알림음 설정 기능 추가 (*.wav 파일만 허용)\n3. 트위터 알림 서비스 완전 제거 (기능을 하던 서버가 작동을 중지함)\n4. WTFast VPN 등 일부 VPN에서 작동하지 않던 문제 해결\n5. 임의의 서버로 POST 요청을 보내는 기능 추가",
 
   "ui-advanced-http": "사용자 지정 HTTP 요청",
   "ui-advanced-http-enable": "활성화",

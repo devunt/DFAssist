@@ -41,12 +41,12 @@
   "ui-tabcontrol-info": "Infos",
 
   "ui-updatenote-title": "Note de mise à jour",
-  "ui-updatenote-text": "1. Ajout de l’option sonore de notification FATE. \n(Utilise le son de démarrage FFXIV FATE) \n2. Ajout de la fonction de personnalisation du son de notification. (*.wav est accepté.) \n3. Tweet Notify Service complètement supprimé. (Le serveur fonctionnant est tombé en panne)\n4. Problem using with some VPN services resolved.",
+  "ui-updatenote-text": "1. Ajout de l’option sonore de notification ALEA. (Utilise le son FFXIV ALEA) \n2. Ajout de la fonction de personnalisation du son de notification. (*.wav est accepté.) \n3. Tweet Notify Service complètement supprimé. \n4. Solution utilisant des services VPN résolue. \n5. Envoyez une demande POST où vous voulez.",
     
   "ui-advanced-http": "Demande HTTP personnalisée",
   "ui-advanced-http-enable": "Permettre",
   "ui-advanced-http-duty-matched": "Envoyer lorsque le devoir est adapté",
-  "ui-advanced-http-fate-occured": "Envoyer lorsque FATE est survenu",
+  "ui-advanced-http-fate-occured": "Envoyer lorsque ALEA est survenu",
   "ui-advanced-http-readme": "Lorsque cela sera possible, le DFAssist enverra une demande POST HTTP avec \n\"Status\" et \"info\" à l'adresse URL spécifiée.\n\"Status\" est envoyé avec une chaîne appelée \"duty-match\" ou \"fate-occured\".\n\"info\" is sent with the Matched Duty Name or Occured FATE Name",
 
   "ui-settings-title": "Paramètres de base",
@@ -58,8 +58,8 @@
   "ui-settings-cheatroulette": "Montrer la mission en cours d'attente lors des missions aléatoires",
   "ui-settings-usevpn": "J’utilise le VPN, et le DFAssist ne prend pas le jeu Connection.",
   "ui-settings-usevpn-alert": "Lorsque vous n'utilisez pas le VPN, veuillez désactiver cette option.",
-  "ui-settings-fatesound": "Activer le son de notification FATE \n (Désactiver le son personnalisé sur FATE)",
-  "ui-settings-customsound": "Customize the notification sound",
+  "ui-settings-fatesound": "Activer le son de notification ALEA \n (Désactiver le son personnalisé sur ALEA)",
+  "ui-settings-customsound": "Personnaliser le son de notification",
   "ui-settings-getsoundfile": "Choisir",
   "ui-settings-getfilewav": "WAV fichier (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "D'abord, Choisissez un fichier musical.",
@@ -73,7 +73,7 @@
   "ui-logs-copy": "Copier logs",
   "ui-logs-clear": "Vider",
 
-  "ui-info-about": "[Contributor]\n유채색\nLaiglinne\nHibiyasleep\nAlex00728\n\n[Copyright]\nAll company, product, system names are\n registered or unregistered trademarks of their respective owners.\n(C)2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by EYEDENTITY Entertainment.",
+  "ui-info-about": "[Contributeurs]\n유채색\nLaiglinne\nHibiyasleep\nAlex00728\n\n[Copyright]\nAll company, product, system names are\n registered or unregistered trademarks of their respective owners.\n(C)2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by EYEDENTITY Entertainment.",
 
   "ui-msgbox-title-info": "DFA Notice",
   "ui-msgbox-title-warning": "DFA Warning",
