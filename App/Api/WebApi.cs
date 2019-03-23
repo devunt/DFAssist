@@ -26,7 +26,7 @@ namespace App
                     request.Timeout = 30 * 1000;
 
                     // POST할 데이터를 Request Stream에 쓴다
-                    byte[] bytes = Encoding.ASCII.GetBytes(data);
+                    byte[] bytes = Encoding.UTF8.GetBytes(data);
                     request.ContentLength = bytes.Length; // 바이트수 지정
 
                     using (Stream reqStream = request.GetRequestStream())
