@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label_DutyCount = new LocalizableLabel();
-            this.label_DutyName = new LocalizableLabel();
-            this.label_DutyStatus = new LocalizableLabel();
+            this.label_DutyCount = new App.LocalizableLabel();
+            this.label_DutyName = new App.LocalizableLabel();
+            this.label_DutyStatus = new App.LocalizableLabel();
             this.SuspendLayout();
             // 
             // label_DutyCount
@@ -38,7 +38,7 @@
             this.label_DutyCount.Font = new System.Drawing.Font("맑은 고딕", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label_DutyCount.Location = new System.Drawing.Point(1, 3);
             this.label_DutyCount.Name = "label_DutyCount";
-            this.label_DutyCount.Size = new System.Drawing.Size(245, 15);
+            this.label_DutyCount.Size = new System.Drawing.Size(258, 15);
             this.label_DutyCount.TabIndex = 1;
             this.label_DutyCount.Text = "총 1개 임무 매칭중";
             this.label_DutyCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -49,7 +49,7 @@
             this.label_DutyName.Font = new System.Drawing.Font("맑은 고딕", 11.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label_DutyName.Location = new System.Drawing.Point(1, 18);
             this.label_DutyName.Name = "label_DutyName";
-            this.label_DutyName.Size = new System.Drawing.Size(245, 19);
+            this.label_DutyName.Size = new System.Drawing.Size(258, 22);
             this.label_DutyName.TabIndex = 2;
             this.label_DutyName.Text = "대미궁 바하무트: 진성편 4";
             this.label_DutyName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -60,7 +60,7 @@
             this.label_DutyStatus.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label_DutyStatus.Location = new System.Drawing.Point(1, 40);
             this.label_DutyStatus.Name = "label_DutyStatus";
-            this.label_DutyStatus.Size = new System.Drawing.Size(245, 15);
+            this.label_DutyStatus.Size = new System.Drawing.Size(258, 15);
             this.label_DutyStatus.TabIndex = 3;
             this.label_DutyStatus.Text = "1/2    1/2    4/4";
             this.label_DutyStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
