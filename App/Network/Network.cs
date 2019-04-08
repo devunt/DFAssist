@@ -146,6 +146,8 @@ namespace App
 
                 connections = currentConnections.Where(x => !x.remoteEndPoint.Equals(lobbyEndPoint)).ToList();
 
+                mainForm.overlayForm.SetStatus(true);
+
                 foreach (var connection in connections)
                 {
                     Log.I("l-network-detected-connection", connection.ToString());
