@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190218.1",
+  "version": "20190409.1",
 
   // Duty
   "instances": {
@@ -2045,44 +2045,50 @@
       "healer": "0",
       "dps": "0"
     },
+    "608": {
+      "name": "Haute voltige",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
     "643": {
-      "name": "Novice Mahjong (Ranked)",
+      "name": "Mahjong domien : tous rangs (classé)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "644": {
-      "name": "Advanced Mahjong (Ranked)",
+      "name": "Mahjong domien : dan seulement (classé)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "645": {
-      "name": "Four-player Mahjong (Kuitan Enabled)",
+      "name": "Mahjong domien : 4 joueurs (avec kuitan)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "650": {
-      "name": "Four-player Mahjong (Kuitan Disabled)",
+      "name": "Mahjong domien : 4 joueurs (sans kuitan)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "640": {
-      "name": "Air Force One",
+      "name": "As de l'air",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "641": {
-      "name": "Air Force One",
+      "name": "As de l'air",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "642": {
-      "name": "Air Force One",
+      "name": "As de l'air",
       "tank": "0",
       "healer": "0",
       "dps": "0"

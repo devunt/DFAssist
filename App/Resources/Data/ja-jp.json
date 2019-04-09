@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190323.1",
+  "version": "20190409.1",
 
   // Duty
   "instances": {
@@ -2044,44 +2044,50 @@
       "healer": "0",
       "dps": "0"
     },
+    "608": {
+      "name": "挑戦！ ジャンピングアスレチック",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
     "643": {
-      "name": "Novice Mahjong (Ranked)",
+      "name": "ドマ式麻雀：一般卓（段位変動有り）",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "644": {
-      "name": "Advanced Mahjong (Ranked)",
+      "name": "ドマ式麻雀：有段卓（段位変動有り）",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "645": {
-      "name": "Four-player Mahjong (Kuitan Enabled)",
+      "name": "ドマ式麻雀：4人セット卓（クイタン有り）",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "650": {
-      "name": "Four-player Mahjong (Kuitan Disabled)",
+      "name": "ドマ式麻雀：4人セット卓（クイタン無し）",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "640": {
-      "name": "Air Force One",
+      "name": "出撃！ エアフォースパイロット",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "641": {
-      "name": "Air Force One",
+      "name": "出撃！ エアフォースパイロット",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "642": {
-      "name": "Air Force One",
+      "name": "出撃！ エアフォースパイロット",
       "tank": "0",
       "healer": "0",
       "dps": "0"
