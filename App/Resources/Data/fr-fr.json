@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190409.1",
+  "version": "20190430.1",
 
   // Duty
   "instances": {
@@ -3316,6 +3316,12 @@
         "1422": "The Baldesion Arsenal: Expedition Support",
         "1424": "I Don't Want to Believe",
         "1425": "Drink Me"
+      }
+    },
+    "1005": {
+      "name": "événement",
+      "fates": {
+        "1409": "Visiteurs mécaniques"
       }
     }
   }

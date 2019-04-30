@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190409.1",
+  "version": "20190430.1",
 
   // Duty
   "instances": {
@@ -3305,6 +3305,12 @@
         "1380": "Counter-void Training: Premium Cuts",
         "1383": "Joint Training: The Quick and the Undead",
         "1385": "Counter-void Training: A Void at All Costs"
+      }
+    },
+    "1005": {
+      "name": "Event",
+      "fates": {
+        "1409": "Like Clockwork"
       }
     }
   }
