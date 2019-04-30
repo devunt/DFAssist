@@ -78,7 +78,7 @@ title: {{ site.name }}
 ```
   記載されている会社名・製品名・システム名などは、各社の商標、または登録商標です。
 
-  (C) 2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved. Korea Published by EYEDENTITY ENTERTAINMENT.
+  (C) 2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved. Korea Published by ACTOZ SOFT.
 ```
 
 すべてのコード、リソース、データは著作権で保護されていません。

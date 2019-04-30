@@ -34,7 +34,7 @@ WTFast VPN과 호환이 안되는 문제는 v20190317.1 이후의 버전을 사�
 ```
   기재되어있는 회사명 · 제품명 · 시스템 이름은 해당 소유자의 상표 또는 등록 상표입니다.
 
-  (C) 2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved. Korea Published by EYEDENTITY ENTERTAINMENT.
+  (C) 2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved. Korea Published by ACTOZ SOFT.
 ```
 상단 회사에 저작권이 없는 코드, 리소스, 데이터 등은 모두
 [퍼블릭 도메인](https://ko.wikipedia.org/wiki/%ED%8D%BC%EB%B8%94%EB%A6%AD_%EB%8F%84%EB%A9%94%EC%9D%B8)에 따라 배포됩니다.
