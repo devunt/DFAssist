@@ -73,8 +73,8 @@ title: {{ site.name }}
 
 ### 프로그램 UI
 
-![프로그램 UI 1](https://i.imgur.com/4pPVjxm.png)  
-![프로그램 UI 2](https://i.imgur.com/D6opRwI.png)
+![프로그램 UI 1](https://i.imgur.com/0J6jNrV.png)  
+![프로그램 UI 2](https://i.imgur.com/Jde3gd9.png)
 
 ### 알림창 아이콘
 

@@ -66,8 +66,8 @@ Logs on application window helps a lot with problem solving. Attaching logs is h
 
 ### Application UI
 
-![Application UI 1](https://i.imgur.com/sc7kCVO.png)  
-![Application UI 2](https://i.imgur.com/NwuAdyH.jpg)
+![Application UI 1](https://i.imgur.com/mvN0H60.png)  
+![Application UI 2](https://i.imgur.com/qV1pxyS.png)
 
 ### Tray Icon
 

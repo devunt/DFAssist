@@ -66,8 +66,8 @@ title: {{ site.name }}
 
 ### アプリケーションUI
 
-![アプリケーションUI 1](https://i.imgur.com/qCTl6pA.png)  
-![アプリケーションUI 2](https://i.imgur.com/XbOSVVr.png)
+![アプリケーションUI 1](https://i.imgur.com/jv5zM8U.png)  
+![アプリケーションUI 2](https://i.imgur.com/Ff3Yd2q.png)
 
 ### トレイアイコン
 
