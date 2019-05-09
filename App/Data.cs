@@ -72,7 +72,7 @@ namespace App
 
                     if (Initialized)
                     {
-                        mainForm.refresh_Fates();
+                        mainForm.Invoke(mainForm.refresh_Fates);
                         Log.S("l-data-updated", Version);
                     }
 
