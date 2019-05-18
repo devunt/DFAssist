@@ -1,6 +1,6 @@
 ﻿{
   // 버전
-  "version": "20190512.1",
+  "version": "20190518.1",
 
   // 임무
   "instances": {
@@ -2052,25 +2052,25 @@
       "dps": "0"
     },
     "640": {
-      "name": "Air Force One",
+      "name": "출격! 에어포스 조종사",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "641": {
-      "name": "Air Force One",
+      "name": "출격! 에어포스 조종사",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "642": {
-      "name": "Air Force One",
+      "name": "출격! 에어포스 조종사",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
 
-    // 한섭에는 심의상 마작 안 나올 가능성이 크지만 일단 추가
+    // 한섭에는 심의상 마작 안 나올 가능성이 크지만 일단 추가 : 작패유희
     "643": {
       "name": "Novice Mahjong (Ranked)",
       "tank": "0",
