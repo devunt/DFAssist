@@ -241,6 +241,11 @@ namespace App
                                 WinApi.FlashWindow(mainForm.FFXIVProcess);
                             }
 
+                            if (Settings.TwitterEnabled)
+                            {
+                                WebApi.Tweet("fate-occured", fate.Name);
+                            }
+
                             if (Settings.customHttpRequest && Settings.requestOnFateOccured)
                             {
                                 WebApi.customHttpRequest("fate-occured", fate.Name);
@@ -345,6 +350,11 @@ namespace App
                         if (!Settings.ShowOverlay)
                         {
                             mainForm.ShowNotification("notification-queue-matched", instance.Name);
+                        }
+
+                        if (Settings.TwitterEnabled)
+                        {
+                            WebApi.Tweet("duty-matched", instance.Name);
                         }
 
                         if (Settings.customHttpRequest && Settings.requestOnDutyMatched)
@@ -468,6 +478,11 @@ namespace App
                     if (!Settings.ShowOverlay)
                     {
                         mainForm.ShowNotification("notification-queue-matched", instance.Name);
+                    }
+
+                    if (Settings.TwitterEnabled)
+                    {
+                        WebApi.Tweet("duty-matched", instance.Name);
                     }
 
                     if (Settings.customHttpRequest && Settings.requestOnDutyMatched)

@@ -40,13 +40,14 @@
             this.panel_TopSetting = new System.Windows.Forms.Panel();
             this.comboBox_Language = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label_Process = new App.LocalizableLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.checkBox_Overlay = new System.Windows.Forms.CheckBox();
             this.tabControl = new App.TabControlBlack();
             this.tabPage_Settings = new System.Windows.Forms.TabPage();
-            this.groupBox_UpdateNote = new System.Windows.Forms.GroupBox();
-            this.label_UpdateNote = new System.Windows.Forms.Label();
+            this.groupBox_TwitterSet = new System.Windows.Forms.GroupBox();
+            this.textBox_Twitter = new System.Windows.Forms.TextBox();
+            this.label_TwitterAt = new App.LocalizableLabel();
+            this.label_TwitterAbout = new App.LocalizableLabel();
+            this.checkBox_Twitter = new System.Windows.Forms.CheckBox();
             this.groupBox_DefaultSet = new System.Windows.Forms.GroupBox();
             this.checkBox_useVPN = new System.Windows.Forms.CheckBox();
             this.label_CustomSoundFileName = new System.Windows.Forms.Label();
@@ -57,6 +58,7 @@
             this.checkBox_CheatRoullete = new System.Windows.Forms.CheckBox();
             this.checkBox_FlashWindow = new System.Windows.Forms.CheckBox();
             this.checkBox_StartupShow = new System.Windows.Forms.CheckBox();
+            this.checkBox_Overlay = new System.Windows.Forms.CheckBox();
             this.tabPage_Advanced = new System.Windows.Forms.TabPage();
             this.groupBox_CustomHttpRequest = new System.Windows.Forms.GroupBox();
             this.label_HttpRequestReadme = new System.Windows.Forms.Label();
@@ -98,12 +100,13 @@
             this.label_About = new App.LocalizableLabel();
             this.linkLabel_GitHub = new System.Windows.Forms.LinkLabel();
             this.label_AboutTitle = new App.LocalizableLabel();
+            this.label_Process = new App.LocalizableLabel();
             this.contextMenuStrip.SuspendLayout();
             this.panel_TopSetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl.SuspendLayout();
             this.tabPage_Settings.SuspendLayout();
-            this.groupBox_UpdateNote.SuspendLayout();
+            this.groupBox_TwitterSet.SuspendLayout();
             this.groupBox_DefaultSet.SuspendLayout();
             this.tabPage_Advanced.SuspendLayout();
             this.groupBox_CustomHttpRequest.SuspendLayout();
@@ -217,33 +220,6 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // label_Process
-            // 
-            this.label_Process.AutoSize = true;
-            this.label_Process.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label_Process.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_Process.ForeColor = System.Drawing.Color.Gray;
-            this.label_Process.Location = new System.Drawing.Point(5, 5);
-            this.label_Process.Name = "label_Process";
-            this.label_Process.Size = new System.Drawing.Size(101, 17);
-            this.label_Process.TabIndex = 0;
-            this.label_Process.Text = "FFXIV 프로세스";
-            // 
-            // checkBox_Overlay
-            // 
-            this.checkBox_Overlay.AutoSize = true;
-            this.checkBox_Overlay.Checked = true;
-            this.checkBox_Overlay.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_Overlay.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.checkBox_Overlay.Location = new System.Drawing.Point(6, 23);
-            this.checkBox_Overlay.Name = "checkBox_Overlay";
-            this.checkBox_Overlay.Size = new System.Drawing.Size(102, 19);
-            this.checkBox_Overlay.TabIndex = 1;
-            this.checkBox_Overlay.Text = "오버레이 사용";
-            this.toolTip.SetToolTip(this.checkBox_Overlay, "오버레이 UI의 좌측 막대를 이용해 드래그 할 수 있습니다.");
-            this.checkBox_Overlay.UseVisualStyleBackColor = true;
-            this.checkBox_Overlay.CheckedChanged += new System.EventHandler(this.checkBox_Overlay_CheckedChanged);
-            // 
             // tabControl
             // 
             this.tabControl.Alignment = System.Windows.Forms.TabAlignment.Left;
@@ -265,7 +241,7 @@
             // tabPage_Settings
             // 
             this.tabPage_Settings.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_Settings.Controls.Add(this.groupBox_UpdateNote);
+            this.tabPage_Settings.Controls.Add(this.groupBox_TwitterSet);
             this.tabPage_Settings.Controls.Add(this.groupBox_DefaultSet);
             this.tabPage_Settings.Location = new System.Drawing.Point(114, 4);
             this.tabPage_Settings.Name = "tabPage_Settings";
@@ -273,26 +249,59 @@
             this.tabPage_Settings.TabIndex = 1;
             this.tabPage_Settings.Text = "설정";
             // 
-            // groupBox_UpdateNote
+            // groupBox_TwitterSet
             // 
-            this.groupBox_UpdateNote.Controls.Add(this.label_UpdateNote);
-            this.groupBox_UpdateNote.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox_UpdateNote.Location = new System.Drawing.Point(0, 187);
-            this.groupBox_UpdateNote.Name = "groupBox_UpdateNote";
-            this.groupBox_UpdateNote.Size = new System.Drawing.Size(426, 86);
-            this.groupBox_UpdateNote.TabIndex = 0;
-            this.groupBox_UpdateNote.TabStop = false;
-            this.groupBox_UpdateNote.Text = "업데이트 노트";
+            this.groupBox_TwitterSet.Controls.Add(this.textBox_Twitter);
+            this.groupBox_TwitterSet.Controls.Add(this.label_TwitterAt);
+            this.groupBox_TwitterSet.Controls.Add(this.label_TwitterAbout);
+            this.groupBox_TwitterSet.Controls.Add(this.checkBox_Twitter);
+            this.groupBox_TwitterSet.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox_TwitterSet.Location = new System.Drawing.Point(0, 187);
+            this.groupBox_TwitterSet.Name = "groupBox_TwitterSet";
+            this.groupBox_TwitterSet.Size = new System.Drawing.Size(426, 86);
+            this.groupBox_TwitterSet.TabIndex = 0;
+            this.groupBox_TwitterSet.TabStop = false;
+            this.groupBox_TwitterSet.Text = "트위터 알림";
             // 
-            // label_UpdateNote
+            // textBox_Twitter
             // 
-            this.label_UpdateNote.AutoSize = true;
-            this.label_UpdateNote.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_UpdateNote.Location = new System.Drawing.Point(6, 19);
-            this.label_UpdateNote.Name = "label_UpdateNote";
-            this.label_UpdateNote.Size = new System.Drawing.Size(102, 26);
-            this.label_UpdateNote.TabIndex = 10;
-            this.label_UpdateNote.Text = "최대 5줄 작성 가능\r\n(5 line limit)";
+            this.textBox_Twitter.Enabled = false;
+            this.textBox_Twitter.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.textBox_Twitter.Location = new System.Drawing.Point(34, 21);
+            this.textBox_Twitter.MaxLength = 16;
+            this.textBox_Twitter.Name = "textBox_Twitter";
+            this.textBox_Twitter.Size = new System.Drawing.Size(156, 25);
+            this.textBox_Twitter.TabIndex = 11;
+            this.textBox_Twitter.TextChanged += new System.EventHandler(this.textBox_Twitter_TextChanged);
+            // 
+            // label_TwitterAt
+            // 
+            this.label_TwitterAt.AutoSize = true;
+            this.label_TwitterAt.Location = new System.Drawing.Point(9, 24);
+            this.label_TwitterAt.Name = "label_TwitterAt";
+            this.label_TwitterAt.Size = new System.Drawing.Size(21, 17);
+            this.label_TwitterAt.TabIndex = 12;
+            this.label_TwitterAt.Text = "@";
+            // 
+            // label_TwitterAbout
+            // 
+            this.label_TwitterAbout.Font = new System.Drawing.Font("맑은 고딕", 8F);
+            this.label_TwitterAbout.Location = new System.Drawing.Point(10, 50);
+            this.label_TwitterAbout.Name = "label_TwitterAbout";
+            this.label_TwitterAbout.Size = new System.Drawing.Size(407, 30);
+            this.label_TwitterAbout.TabIndex = 13;
+            this.label_TwitterAbout.Text = "입력된 트위터 계정으로도 멘션을 통해 알림을 보냅니다.\r\n계정명 입력시 앞의 @ 표시는 제외하고 순수 계정명만 입력해주세요.";
+            // 
+            // checkBox_Twitter
+            // 
+            this.checkBox_Twitter.AutoSize = true;
+            this.checkBox_Twitter.Location = new System.Drawing.Point(196, 24);
+            this.checkBox_Twitter.Name = "checkBox_Twitter";
+            this.checkBox_Twitter.Size = new System.Drawing.Size(66, 21);
+            this.checkBox_Twitter.TabIndex = 14;
+            this.checkBox_Twitter.Text = "활성화";
+            this.checkBox_Twitter.UseVisualStyleBackColor = true;
+            this.checkBox_Twitter.CheckedChanged += new System.EventHandler(this.checkBox_Twitter_CheckedChanged);
             // 
             // groupBox_DefaultSet
             // 
@@ -418,6 +427,21 @@
             this.checkBox_StartupShow.Text = "프로그램 시작시 이 창 보이기";
             this.checkBox_StartupShow.UseVisualStyleBackColor = true;
             this.checkBox_StartupShow.CheckedChanged += new System.EventHandler(this.checkBox_StartupShow_CheckedChanged);
+            // 
+            // checkBox_Overlay
+            // 
+            this.checkBox_Overlay.AutoSize = true;
+            this.checkBox_Overlay.Checked = true;
+            this.checkBox_Overlay.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_Overlay.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.checkBox_Overlay.Location = new System.Drawing.Point(6, 23);
+            this.checkBox_Overlay.Name = "checkBox_Overlay";
+            this.checkBox_Overlay.Size = new System.Drawing.Size(102, 19);
+            this.checkBox_Overlay.TabIndex = 1;
+            this.checkBox_Overlay.Text = "오버레이 사용";
+            this.toolTip.SetToolTip(this.checkBox_Overlay, "오버레이 UI의 좌측 막대를 이용해 드래그 할 수 있습니다.");
+            this.checkBox_Overlay.UseVisualStyleBackColor = true;
+            this.checkBox_Overlay.CheckedChanged += new System.EventHandler(this.checkBox_Overlay_CheckedChanged);
             // 
             // tabPage_Advanced
             // 
@@ -811,6 +835,18 @@
             this.label_AboutTitle.Text = "VERSION STRING";
             this.label_AboutTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // label_Process
+            // 
+            this.label_Process.AutoSize = true;
+            this.label_Process.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label_Process.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_Process.ForeColor = System.Drawing.Color.Gray;
+            this.label_Process.Location = new System.Drawing.Point(5, 5);
+            this.label_Process.Name = "label_Process";
+            this.label_Process.Size = new System.Drawing.Size(101, 17);
+            this.label_Process.TabIndex = 0;
+            this.label_Process.Text = "FFXIV 프로세스";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -838,8 +874,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl.ResumeLayout(false);
             this.tabPage_Settings.ResumeLayout(false);
-            this.groupBox_UpdateNote.ResumeLayout(false);
-            this.groupBox_UpdateNote.PerformLayout();
+            this.groupBox_TwitterSet.ResumeLayout(false);
+            this.groupBox_TwitterSet.PerformLayout();
             this.groupBox_DefaultSet.ResumeLayout(false);
             this.groupBox_DefaultSet.PerformLayout();
             this.tabPage_Advanced.ResumeLayout(false);
@@ -917,8 +953,6 @@
         private System.Windows.Forms.CheckBox checkBox_CustomSound;
         private System.Windows.Forms.Button button_getSoundFile;
         private System.Windows.Forms.Label label_CustomSoundFileName;
-        private System.Windows.Forms.GroupBox groupBox_UpdateNote;
-        private System.Windows.Forms.Label label_UpdateNote;
         private System.Windows.Forms.CheckBox checkBox_useVPN;
         private System.Windows.Forms.TabPage tabPage_Advanced;
         private System.Windows.Forms.GroupBox groupBox_CustomHttpRequest;
@@ -928,6 +962,11 @@
         private System.Windows.Forms.TextBox textBox_CustomHttpUrl;
         private System.Windows.Forms.Label label_HttpRequestUrl;
         private System.Windows.Forms.Label label_HttpRequestReadme;
+        private System.Windows.Forms.GroupBox groupBox_TwitterSet;
+        private System.Windows.Forms.TextBox textBox_Twitter;
+        private LocalizableLabel label_TwitterAt;
+        private LocalizableLabel label_TwitterAbout;
+        private System.Windows.Forms.CheckBox checkBox_Twitter;
     }
 }
 

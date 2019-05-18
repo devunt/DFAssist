@@ -11,6 +11,28 @@ namespace App
 {
     internal static class WebApi
     {
+        internal static void Tweet(string type, string name)
+        {
+            Task.Factory.StartNew(() =>
+            {
+                var url = $"{Global.API_ENDPOINT}?user={Settings.TwitterAccount}&lang={Settings.Language}&type={type}&name={HttpUtility.UrlEncode(name)}&hash={GetMD5Hash(name)}";
+
+                var resp = Request(url);
+                if (resp == null)
+                {
+                    Log.E("l-tweet-failed-request");
+                }
+                else if (resp == "1")
+                {
+                    Log.E("l-tweet-failed-general");
+                }
+                else if (resp == "0")
+                {
+                    Log.S("l-tweet-success");
+                }
+            });
+        }
+
         internal static void customHttpRequest(string status, string name)
         {
             Task.Factory.StartNew(() =>

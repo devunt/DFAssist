@@ -10,6 +10,8 @@
 
         public const string GITHUB_REPO = @"Jaehyuk-Lee/DFAssist";
 
+        public const string API_ENDPOINT = @"https://dfassist-twitter-api-nodejs.herokuapp.com/";
+
         public const int BLINK_COUNT = 100;
         public const int BLINK_INTERVAL = 200;
 

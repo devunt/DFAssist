@@ -13,6 +13,9 @@
   "notification-fate-occured": "< {0} > Occured!",
 
 
+  "tweet-fate-occured": "< {0} > FATE spawned!",
+  "tweet-queue-matched": "< {0} > Duty matched!",
+
 
   "fate-preset-animus-SkyfireI": "Book of Skyfire I",
   "fate-preset-animus-SkyfireII": "Book of Skyfire II",
@@ -26,7 +29,7 @@
   "fate-preset-Ixion": "Ixion",
   "fate-preset-Tamamo": "Tamamo",
 
-
+  
   "ui-notifymenustrip-open": "Open",
   "ui-notifymenustrip-close": "Exit",
 
@@ -39,15 +42,6 @@
   "ui-tabcontrol-fate": "FATE",
   "ui-tabcontrol-logs": "Logs",
   "ui-tabcontrol-info": "Info",
-
-  "ui-updatenote-title": "Update Note",
-  "ui-updatenote-text": "1. Added FATE notification sound option. (Uses FFXIV FATE Start Sound)\n2. Added Customize notification sound feature. (only *.wav file accepted.)\n3. Tweet Notify Service completely removed. (Functioning Server went down)\n4. Problem using with some VPN services resolved.\n5. Send POST Request wherever you want.",
-  
-  "ui-advanced-http": "Custom HTTP Request",
-  "ui-advanced-http-enable": "Enable",
-  "ui-advanced-http-duty-matched": "Send when Duty Matched",
-  "ui-advanced-http-fate-occured": "Send when Fate Occured",
-  "ui-advanced-http-readme": "When enabled, DFAssistwill send a POST HTTP Request with \n\"status\" and \"info\" to the specified URL.\n\"status\"is sent with a string called \"duty-match\" or \"fate-occured\".\n\"info\" is sent with the Matched Duty Name or Occured FATE Name.\n\nThis feature is scheduled to be updated more.",
 
   "ui-settings-title": "Basic setting",
   "ui-settings-overlay-use": "Use overlay",
@@ -63,6 +57,16 @@
   "ui-settings-getsoundfile": "Select file",
   "ui-settings-getfilewav": "WAV files (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "Select sound file first",
+
+  "ui-settings-tweet-title": "Twitter Alarm",
+  "ui-settings-tweet-activate": "Enable",
+  "ui-settings-tweet-about": "When a queue pops or FATE occurs, send a Tweet with a mention to this Twitter account. Enter the Twitter Account except the preceding symbol @.",
+
+  "ui-advanced-http": "Custom HTTP Request",
+  "ui-advanced-http-enable": "Enable",
+  "ui-advanced-http-duty-matched": "Send when Duty Matched",
+  "ui-advanced-http-fate-occured": "Send when Fate Occured",
+  "ui-advanced-http-readme": "When enabled, DFAssistwill send a POST HTTP Request with \n\"status\" and \"info\" to the specified URL.\n\"status\"is sent with a string called \"duty-match\" or \"fate-occured\".\n\"info\" is sent with the Matched Duty Name or Occured FATE Name.\n\nThis feature is scheduled to be updated more.",
 
   "ui-fate-selectall": "Select all",
   "ui-fate-unselectall": "Unselect all",
@@ -115,6 +119,10 @@
   "l-process-finding": "P: Finding FFXIV process...",
   "l-process-found-nothing": "P: Could not find FFXIV process.",
   "l-process-found-multiple": "P: 2 or more FFXIV processes are running.",
+
+  "l-tweet-failed-request": "T: Error occured while requesting tweet",
+  "l-tweet-failed-general": "T: Failed to send tweet",
+  "l-tweet-success": "T: Tweet sent!",
 
   "l-web-request-failed": "W: Error requesting web service",
 

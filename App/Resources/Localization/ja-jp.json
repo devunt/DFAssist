@@ -13,7 +13,10 @@
   "notification-fate-occured": "< {0} > 発生!",
 
 
+  "tweet-fate-occured": "< {0} > FATE発生!",
+  "tweet-queue-matched": "< {0} > 突入準備完了!",
 
+  
   "fate-preset-animus-SkyfireI": "炎天一巻",
   "fate-preset-animus-SkyfireII": "炎天二巻",
   "fate-preset-animus-NetherfireI": "炎獄一巻",
@@ -55,8 +58,9 @@
   "ui-settings-getfilewav": "WAV ファイル (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "まず,音楽ファイルを選択してください。",
 
-  "ui-updatenote-title": "アップデート·ノート",
-  "ui-updatenote-text": "1. FATE通知音機能を追加（FF14自体FATE開始音に設定）\n2. カスタム通知音設定機能を追加（* .wavファイルのみ）\n3. ツイッター通知サービス完全除去（機能をしていたサーバーが動作を停止する\n4. 一部のVPNで作動しなかった問題を解決\n5. 任意のサーバーにPOSTの要請を送る機能を追加",
+  "ui-settings-tweet-title": "Twitterアラーム",
+  "ui-settings-tweet-activate": "有効化",
+  "ui-settings-tweet-about": "突入準備完了時、FATEが発生した際指定したアカウントにツイートを送信します。Twitterアカウント名の@以降を入力してください。",
 
   "ui-advanced-http": "使用者指定HTTP要請",
   "ui-advanced-http-enable": "活性化",
@@ -95,7 +99,7 @@
 
   "ui-app-crashed": "不明な問題によりアプリケーションが終了しました\n\nエラー: {0}",
 
-
+  
   "overlay-waiting-connection": "クライアントとの接続を待機しています",
   "overlay-not-queuing": "参加申請していません",
   "overlay-duty-count-unknown": "コンテンツ参加申請中",
@@ -116,6 +120,10 @@
   "l-process-found-nothing": "P: FFXIVプロセスが見つかりませんでした。",
   "l-process-found-multiple": "P: 2つ以上のFFXIVプロセスが見つかりました。",
 
+  "l-tweet-failed-request": "T: ツイート送信時にエラーが発生しました。",
+  "l-tweet-failed-general": "T: ツイート送信に失敗しました。",
+  "l-tweet-success": "T: ツイート成功!",
+  
   "l-web-request-failed": "W: Webサービスでエラーが発生しました。",
 
   "l-updater-current-version": "U: 現在のバージョン: {0}",

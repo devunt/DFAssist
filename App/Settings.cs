@@ -18,6 +18,8 @@ namespace App
         public static bool FateSound { get; set; } = false;
         public static bool CustomSound { get; set; } = false;
         public static string CustomSoundPath { get; set; } = "";
+        public static bool TwitterEnabled { get; set; } = false;
+        public static string TwitterAccount { get; set; } = "";
         public static bool useVPN { get; set; } = false;
         public static bool CheatRoulette { get; set; } = false;
         public static bool Updated { get; set; } = false;
@@ -52,6 +54,8 @@ namespace App
                 FateSound = iniFile.ReadValue("notification", "fatesound") == "1";
                 CustomSound = iniFile.ReadValue("notification", "customsound") == "1";
                 CustomSoundPath = iniFile.ReadValue("notification", "customsoundpath") ?? "";
+                TwitterEnabled = iniFile.ReadValue("notification", "twitter") == "1";
+                TwitterAccount = iniFile.ReadValue("notification", "twitteraccount") ?? "";
                 useVPN = iniFile.ReadValue("misc", "useVPN") == "1";
                 CheatRoulette = iniFile.ReadValue("misc", "cheatroulette") == "1";
                 Language = iniFile.ReadValue("misc", "language") ?? "ko-kr";
@@ -79,6 +83,8 @@ namespace App
             iniFile.WriteValue("notification", "fatesound", FateSound ? "1" : "0");
             iniFile.WriteValue("notification", "customsound", CustomSound ? "1" : "0");
             iniFile.WriteValue("notification", "customsoundpath", CustomSoundPath);
+            iniFile.WriteValue("notification", "twitter", TwitterEnabled ? "1" : "0");
+            iniFile.WriteValue("notification", "twitteraccount", TwitterAccount);
             iniFile.WriteValue("misc", "useVPN", useVPN ? "1" : "0");
             iniFile.WriteValue("misc", "cheatroulette", CheatRoulette ? "1" : "0");
             iniFile.WriteValue("misc", "language", Language);

@@ -101,6 +101,9 @@ namespace App
                 Settings.Save();
             }
             SetCheatRoulleteCheckBox(Settings.CheatRoulette);
+            checkBox_Twitter.Checked = Settings.TwitterEnabled;
+            textBox_Twitter.Enabled = Settings.TwitterEnabled;
+            textBox_Twitter.Text = Settings.TwitterAccount;
 
             checkBox_EnableHttpRequest.Checked = Settings.customHttpRequest;
             textBox_CustomHttpUrl.Text = Settings.customHttpUrl;
@@ -327,6 +330,19 @@ namespace App
             {
                 LMessageBox.I("ui-settings-usevpn-alert");
             }
+        }
+
+        private void textBox_Twitter_TextChanged(object sender, EventArgs e)
+        {
+            Settings.TwitterAccount = textBox_Twitter.Text;
+            Settings.Save();
+        }
+
+        private void checkBox_Twitter_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox_Twitter.Enabled = checkBox_Twitter.Checked;
+            Settings.TwitterEnabled = checkBox_Twitter.Checked;
+            Settings.Save();
         }
 
         private void checkBox_EnableHttpRequest_CheckedChanged(object sender, EventArgs e)
@@ -610,8 +626,9 @@ namespace App
             button_getSoundFile.Text = Localization.GetText("ui-settings-getsoundfile");
             checkBox_CheatRoullete.Text = Localization.GetText("ui-settings-cheatroulette");
             checkBox_useVPN.Text = Localization.GetText("ui-settings-usevpn");
-            groupBox_UpdateNote.Text = Localization.GetText("ui-updatenote-title");
-            label_UpdateNote.Text = Localization.GetText("ui-updatenote-text");
+            groupBox_TwitterSet.Text = Localization.GetText("ui-settings-tweet-title");
+            checkBox_Twitter.Text = Localization.GetText("ui-settings-tweet-activate");
+            label_TwitterAbout.Text = Localization.GetText("ui-settings-tweet-about");
             groupBox_CustomHttpRequest.Text = Localization.GetText("ui-advanced-http");
             checkBox_EnableHttpRequest.Text = Localization.GetText("ui-advanced-http-enable");
             checkBox_RequestOnDutyMatched.Text = Localization.GetText("ui-advanced-http-duty-matched");

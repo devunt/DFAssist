@@ -13,7 +13,10 @@
   "notification-fate-occured": "< {0} > 발생!",
 
 
+  "tweet-fate-occured": "< {0} > 돌발 발생!",
+  "tweet-queue-matched": "< {0} > 매칭!",
 
+  
   "fate-preset-animus-SkyfireI": "불의 서 1권",
   "fate-preset-animus-SkyfireII": "불의 서 2권",
   "fate-preset-animus-NetherfireI": "불의 서 3권",
@@ -55,8 +58,9 @@
   "ui-settings-getfilewav": "WAV 파일 (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "음악 파일을 먼저 선택해주세요.",
 
-  "ui-updatenote-title": "업데이트 노트",
-  "ui-updatenote-text": "1. 돌발임무 알림음 기능 추가 (파판 14 자체 돌발임무 시작 소리로 설정)\n2. 사용자 지정 알림음 설정 기능 추가 (*.wav 파일만 허용)\n3. 트위터 알림 서비스 완전 제거 (기능을 하던 서버가 작동을 중지함)\n4. WTFast VPN 등 일부 VPN에서 작동하지 않던 문제 해결\n5. 임의의 서버로 POST 요청을 보내는 기능 추가",
+  "ui-settings-tweet-title": "트위터 알림",
+  "ui-settings-tweet-activate": "활성화",
+  "ui-settings-tweet-about": "입력된 트위터 계정으로도 멘션을 통해 알림을 보냅니다.\n계정명 입력시 앞의 @ 표시는 제외하고 순수 계정명만 입력해주세요.",
 
   "ui-advanced-http": "사용자 지정 HTTP 요청",
   "ui-advanced-http-enable": "활성화",
@@ -115,6 +119,10 @@
   "l-process-finding": "P: 파이널판타지14 프로세스를 찾는 중...",
   "l-process-found-nothing": "P: 파이널판타지14 프로세스를 찾을 수 없습니다.",
   "l-process-found-multiple": "P: 파이널판타지14가 2개 이상 실행중입니다.",
+
+  "l-tweet-failed-request": "T: 트윗 발송 요청중 에러 발생",
+  "l-tweet-failed-general": "T: 트윗 발송 실패",
+  "l-tweet-success": "T: 트윗을 발송했습니다!",
 
   "l-web-request-failed": "W: 웹 요청중 에러 발생",
 
