@@ -13,8 +13,8 @@
   "notification-fate-occured": "< {0} > Occured!",
 
 
-  "tweet-fate-occured": "< {0} > FATE spawned!",
-  "tweet-queue-matched": "< {0} > Duty matched!",
+  "fate-occured": "< {0} > FATE spawned!",
+  "queue-matched": "< {0} > Duty matched!",
 
 
   "fate-preset-animus-SkyfireI": "Book of Skyfire I",
@@ -38,6 +38,7 @@
   "ui-topsetting-reset": "Reset",
 
   "ui-tabcontrol-settings": "Setting",
+  "ui-tabcontrol-3rdparty": "3rd-party",
   "ui-tabcontrol-advanced": "Advanced",
   "ui-tabcontrol-fate": "FATE",
   "ui-tabcontrol-logs": "Logs",
@@ -58,9 +59,12 @@
   "ui-settings-getfilewav": "WAV files (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "Select sound file first",
 
-  "ui-settings-tweet-title": "Twitter Alarm",
-  "ui-settings-tweet-activate": "Enable",
-  "ui-settings-tweet-about": "When a queue pops or FATE occurs, send a Tweet with a mention to this Twitter account. Enter the Twitter Account except the preceding symbol @.",
+  "ui-3rdparty-twitter-title": "Twitter Alarm",
+  "ui-3rdparty-twitter-activate": "Enable",
+  "ui-3rdparty-twitter-about": "When a queue pops or FATE occurs, \nsend a Tweet with a mention to this Twitter account.\nEnter the Twitter Account except the preceding symbol @.",
+  "ui-3rdparty-discord-title": "Discord Alarm",
+  "ui-3rdparty-discord-activate": "Enable",
+  "ui-3rdparty-discord-about": "Notify via Discord message with a mention to this Discord ID.\nEnter the Discord ID except the preceding symbol @!.\n\nTo check Discord ID: Enter '\\@Name#Tag' command on Discord chat.\nPrinted Number on chat logs is your Discord ID.\nAlso, you should be in the DFAssist Discord Server to get notification.",
 
   "ui-advanced-http": "Custom HTTP Request",
   "ui-advanced-http-enable": "Enable",
@@ -120,9 +124,12 @@
   "l-process-found-nothing": "P: Could not find FFXIV process.",
   "l-process-found-multiple": "P: 2 or more FFXIV processes are running.",
 
-  "l-tweet-failed-request": "T: Error occured while requesting tweet",
-  "l-tweet-failed-general": "T: Failed to send tweet",
-  "l-tweet-success": "T: Tweet sent!",
+  "l-twitter-failed-request": "R: Error occured while requesting tweet",
+  "l-twitter-failed-general": "R: Failed to send tweet",
+  "l-twitter-success": "R: Tweet sent!",
+  "l-discord-failed-request": "R: Error occured while requesting discord message",
+  "l-discord-failed-general": "R: Failed to send discord message",
+  "l-discord-success": "R: Discord message sent!",
 
   "l-web-request-failed": "W: Error requesting web service",
 

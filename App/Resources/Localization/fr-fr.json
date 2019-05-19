@@ -13,8 +13,8 @@
   "notification-fate-occured": "< {0} > en cours!",
 
 
-  "tweet-fate-occured": "ALEA < {0} > en cours!",
-  "tweet-queue-matched": "< {0} > disponible!",
+  "fate-occured": "ALEA < {0} > en cours!",
+  "queue-matched": "< {0} > disponible!",
 
 
   "fate-preset-animus-SkyfireI": "Book of Skyfire I",
@@ -38,6 +38,7 @@
   "ui-topsetting-reset": "Rétablir",
 
   "ui-tabcontrol-settings": "Paramètres",
+  "ui-tabcontrol-3rdparty": "Tiercé",
   "ui-tabcontrol-advanced": "Advanced",
   "ui-tabcontrol-fate": "ALEA",
   "ui-tabcontrol-logs": "Logs",
@@ -58,9 +59,12 @@
   "ui-settings-getfilewav": "WAV fichier (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "D'abord, Choisissez un fichier musical.",
 
-  "ui-settings-tweet-title": "Rappel Twiter",
-  "ui-settings-tweet-activate": "Activer",
-  "ui-settings-tweet-about": "Lorsqu'un ALEA choisi se produir, envoyer un tweet avec mention au compte sélectionné. Entrez le nom du compte Twitter sans @.",
+  "ui-3rdparty-twitter-title": "Rappel Twiter",
+  "ui-3rdparty-twitter-activate": "Activer",
+  "ui-3rdparty-twitter-about": "Lorsqu'un ALEA choisi se produir, \nenvoyer un tweet avec mention au compte sélectionné.\nEntrez le nom du compte Twitter sans @.",
+  "ui-3rdparty-discord-title": "Rappel Discord",
+  "ui-3rdparty-discord-activate": "Activer",
+  "ui-3rdparty-discord-about": "Notifier via le message Discord en mentionnant ce Discord ID.\nEntrez l'identifiant Discord sauf le symbole précédent@!.\nPour vérifier l'ID de discord: Entrez la commande '\\@Nom#Numéro' sur le chat Discord.\nLes numéros imprimés dans les journaux de discussion constituent votre identifiant Discord.\nVous devez également être sur le serveur DFAssist Discord pour recevoir une notification.",
 
   "ui-advanced-http": "Demande HTTP personnalisée",
   "ui-advanced-http-enable": "Permettre",
@@ -120,9 +124,12 @@
   "l-process-found-nothing": "P: Impossible de trouver le processus FFXIV.",
   "l-process-found-multiple": "P: 2 ou plus processus FFXIV sont en cours.",
 
-  "l-tweet-failed-request": "T: Une erreur s'est produite lors de la requête du tweet",
-  "l-tweet-failed-general": "T: Impossible d'envoyer le tweet",
-  "l-tweet-success": "T: Tweet envoyé!",
+  "l-twitter-failed-request": "R: Une erreur s'est produite lors de la requête du tweet",
+  "l-twitter-failed-general": "R: Impossible d'envoyer le tweet",
+  "l-twitter-success": "R: Tweet envoyé!",
+  "l-discord-failed-request": "R: Une erreur s'est produite lors de la requête du Discord message",
+  "l-discord-failed-general": "R: Impossible d'envoyer le Discord message",
+  "l-discord-success": "R: Discord message envoyé!",
 
   "l-web-request-failed": "W: Erreur de requête web",
 

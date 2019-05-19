@@ -13,8 +13,8 @@
   "notification-fate-occured": "< {0} > 発生!",
 
 
-  "tweet-fate-occured": "< {0} > FATE発生!",
-  "tweet-queue-matched": "< {0} > 突入準備完了!",
+  "fate-occured": "< {0} > FATE発生!",
+  "queue-matched": "< {0} > 突入準備完了!",
 
   
   "fate-preset-animus-SkyfireI": "炎天一巻",
@@ -38,6 +38,7 @@
   "ui-topsetting-reset": "初期化",
 
   "ui-tabcontrol-settings": "設定",
+  "ui-tabcontrol-3rdparty": "3rd-party",
   "ui-tabcontrol-advanced": "高級",
   "ui-tabcontrol-fate": "FATE",
   "ui-tabcontrol-logs": "ログ",
@@ -58,9 +59,12 @@
   "ui-settings-getfilewav": "WAV ファイル (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "まず,音楽ファイルを選択してください。",
 
-  "ui-settings-tweet-title": "Twitterアラーム",
-  "ui-settings-tweet-activate": "有効化",
-  "ui-settings-tweet-about": "突入準備完了時、FATEが発生した際指定したアカウントにツイートを送信します。Twitterアカウント名の@以降を入力してください。",
+  "ui-3rdparty-twitter-title": "Twitterアラーム",
+  "ui-3rdparty-twitter-activate": "有効化",
+  "ui-3rdparty-twitter-about": "突入準備完了時、FATEが発生した際指定したアカウントに\nツイートを送信します。\nTwitterアカウント名の@以降を入力してください。",
+  "ui-3rdparty-discord-title": "Discordアラーム",
+  "ui-3rdparty-discord-activate": "有効化",
+  "ui-3rdparty-discord-about": "マッチング及びFATE発生の際に指定したアカウントにメッセージを送信します。\nDiscord IDの「＠!」を除いて入力してください。\n\n※Discord IDを確認する方法：チャットウィンドウに「\\@名前#タグ」を入力すると、Discord ID(数字)が出力されます。\nメッセージは、DFAssist Discordサーバに参加している時にのみ受信できます。",
 
   "ui-advanced-http": "使用者指定HTTP要請",
   "ui-advanced-http-enable": "活性化",
@@ -90,7 +94,7 @@
   "ui-cheat-roulette-confirm": "悪用防止のため、基本的に無効になっている機能です。\n特定の嫌なコンテンツを意図的に拒絶することはお控えください。\n\nまだ有効にしますか？",
   "ui-cheat-roulette-enabled": "有になって.\n故意に特定の嫌いなコンテンツを拒否しないでください。",
 
-  "ui-clear-log-confirm": "ログを消しますか?",
+  "ui-clear-log-confirm": "ログを消しますか？",
 
   "ui-fate-selection-saved": "FATE通知がセットされました。",
   "ui-fate-preset-applied": "FATEプリセットが適用されました。",
@@ -120,9 +124,12 @@
   "l-process-found-nothing": "P: FFXIVプロセスが見つかりませんでした。",
   "l-process-found-multiple": "P: 2つ以上のFFXIVプロセスが見つかりました。",
 
-  "l-tweet-failed-request": "T: ツイート送信時にエラーが発生しました。",
-  "l-tweet-failed-general": "T: ツイート送信に失敗しました。",
-  "l-tweet-success": "T: ツイート成功!",
+  "l-twitter-failed-request": "R: ツイート送信時にエラーが発生しました。",
+  "l-twitter-failed-general": "R: ツイート送信に失敗しました。",
+  "l-twitter-success": "R: ツイート成功!",
+  "l-discord-failed-request": "R: Discordメッセージ送信時にエラーが発生しました。",
+  "l-discord-failed-general": "R: Discordメッセージ送信に失敗しました。",
+  "l-discord-success": "R: Discordメッセージ成功!",
   
   "l-web-request-failed": "W: Webサービスでエラーが発生しました。",
 

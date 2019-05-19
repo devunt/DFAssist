@@ -243,7 +243,12 @@ namespace App
 
                             if (Settings.TwitterEnabled)
                             {
-                                WebApi.Tweet("fate-occured", fate.Name);
+                                WebApi.Request("twitter", "fate-occured", fate.Name);
+                            }
+
+                            if (Settings.DiscordEnabled)
+                            {
+                                WebApi.Request("discord", "fate-occured", fate.Name);
                             }
 
                             if (Settings.customHttpRequest && Settings.requestOnFateOccured)
@@ -354,7 +359,12 @@ namespace App
 
                         if (Settings.TwitterEnabled)
                         {
-                            WebApi.Tweet("duty-matched", instance.Name);
+                            WebApi.Request("twitter", "duty-matched", instance.Name);
+                        }
+
+                        if (Settings.DiscordEnabled)
+                        {
+                            WebApi.Request("discord", "duty-matched", instance.Name);
                         }
 
                         if (Settings.customHttpRequest && Settings.requestOnDutyMatched)
@@ -482,7 +492,12 @@ namespace App
 
                     if (Settings.TwitterEnabled)
                     {
-                        WebApi.Tweet("duty-matched", instance.Name);
+                        WebApi.Request("twitter", "duty -matched", instance.Name);
+                    }
+
+                    if (Settings.DiscordEnabled)
+                    {
+                        WebApi.Request("discord", "duty-matched", instance.Name);
                     }
 
                     if (Settings.customHttpRequest && Settings.requestOnDutyMatched)

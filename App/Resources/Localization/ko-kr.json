@@ -13,8 +13,8 @@
   "notification-fate-occured": "< {0} > 발생!",
 
 
-  "tweet-fate-occured": "< {0} > 돌발 발생!",
-  "tweet-queue-matched": "< {0} > 매칭!",
+  "fate-occured": "< {0} > 돌발 발생!",
+  "queue-matched": "< {0} > 매칭!",
 
   
   "fate-preset-animus-SkyfireI": "불의 서 1권",
@@ -38,6 +38,7 @@
   "ui-topsetting-reset": "재설정",
 
   "ui-tabcontrol-settings": "설정",
+  "ui-tabcontrol-3rdparty": "외부 알림",
   "ui-tabcontrol-advanced": "고급",
   "ui-tabcontrol-fate": "돌발",
   "ui-tabcontrol-logs": "로그",
@@ -58,9 +59,12 @@
   "ui-settings-getfilewav": "WAV 파일 (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "음악 파일을 먼저 선택해주세요.",
 
-  "ui-settings-tweet-title": "트위터 알림",
-  "ui-settings-tweet-activate": "활성화",
-  "ui-settings-tweet-about": "입력된 트위터 계정으로도 멘션을 통해 알림을 보냅니다.\n계정명 입력시 앞의 @ 표시는 제외하고 순수 계정명만 입력해주세요.",
+  "ui-3rdparty-twitter-title": "트위터 알림",
+  "ui-3rdparty-twitter-activate": "활성화",
+  "ui-3rdparty-twitter-about": "매칭이 됐을 시 입력된 트위터 계정으로 멘션을 보내 해당 사실을 알립니다.\n원하는 돌발이 발생했을 시에도 멘션을 보내 해당 사실을 알립니다.\n계정명 입력시 앞의 @ 표시는 제외하고 순수 계정명만 입력해주세요.",
+  "ui-3rdparty-discord-title": "디스코드 알림",
+  "ui-3rdparty-discord-activate": "활성화",
+  "ui-3rdparty-discord-about": "입력된 디스코드 계정으로도 멘션을 통해 알림을 보냅니다.\nID 입력시 앞의 @! 표시는 제외하고 순수 ID 숫자만 입력해주세요.\n\n디스코드 ID 확인하는 법: 채팅창에 '\\@아이디#태그번호'를 입력하세요. \n채팅창에 출력되는 숫자가 디스코드 ID입니다. \n또한, DFAssist 디스코드 서버에 참여한 상태여야만 알림을 보낼 수 있습니다.",
 
   "ui-advanced-http": "사용자 지정 HTTP 요청",
   "ui-advanced-http-enable": "활성화",
@@ -120,9 +124,12 @@
   "l-process-found-nothing": "P: 파이널판타지14 프로세스를 찾을 수 없습니다.",
   "l-process-found-multiple": "P: 파이널판타지14가 2개 이상 실행중입니다.",
 
-  "l-tweet-failed-request": "T: 트윗 발송 요청중 에러 발생",
-  "l-tweet-failed-general": "T: 트윗 발송 실패",
-  "l-tweet-success": "T: 트윗을 발송했습니다!",
+  "l-twitter-failed-request": "R: 트윗 발송 요청중 에러 발생",
+  "l-twitter-failed-general": "R: 트윗 발송 실패",
+  "l-twitter-success": "R: 트윗을 발송했습니다!",
+  "l-discord-failed-request": "R: 디스코드 메시지 발송 요청중 에러 발생",
+  "l-discord-failed-general": "R: 디스코드 메시지 발송 실패",
+  "l-discord-success": "R: 디스코드 메시지를 발송했습니다!",
 
   "l-web-request-failed": "W: 웹 요청중 에러 발생",
 

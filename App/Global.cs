@@ -2,7 +2,7 @@
 {
     internal class Global
     {
-        public const string VERSION = "v20190509.1";
+        public const string VERSION = "v20190519.1";
 
         public const string APPNAME = "DFAssist";
         public const string SETTINGS_FILEPATH = @"config.ini";
@@ -10,7 +10,8 @@
 
         public const string GITHUB_REPO = @"Jaehyuk-Lee/DFAssist";
 
-        public const string API_ENDPOINT = @"https://dfassist-twitter-api-nodejs.herokuapp.com/";
+        public const string API_ENDPOINT = @"https://dfassist-api-node.herokuapp.com/";
+        public const string DISCORD_INVITE = @"https://discord.gg/RqesxtS";
 
         public const int BLINK_COUNT = 100;
         public const int BLINK_INTERVAL = 200;

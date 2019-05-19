@@ -104,6 +104,9 @@ namespace App
             checkBox_Twitter.Checked = Settings.TwitterEnabled;
             textBox_Twitter.Enabled = Settings.TwitterEnabled;
             textBox_Twitter.Text = Settings.TwitterAccount;
+            checkBox_Discord.Checked = Settings.DiscordEnabled;
+            textBox_Discord.Enabled = Settings.DiscordEnabled;
+            textBox_Discord.Text = Settings.DiscordAccount;
 
             checkBox_EnableHttpRequest.Checked = Settings.customHttpRequest;
             textBox_CustomHttpUrl.Text = Settings.customHttpUrl;
@@ -193,6 +196,11 @@ namespace App
             richTextBox_Log.SelectionStart = richTextBox_Log.Text.Length;
             richTextBox_Log.SelectionLength = 0;
             richTextBox_Log.ScrollToCaret();
+        }
+
+        private void linkLabel_DiscordServer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(Global.DISCORD_INVITE);
         }
 
         private void linkLabel_GitHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -342,6 +350,19 @@ namespace App
         {
             textBox_Twitter.Enabled = checkBox_Twitter.Checked;
             Settings.TwitterEnabled = checkBox_Twitter.Checked;
+            Settings.Save();
+        }
+
+        private void textBox_Discord_TextChanged(object sender, EventArgs e)
+        {
+            Settings.DiscordAccount = textBox_Discord.Text;
+            Settings.Save();
+        }
+
+        private void checkBox_Discord_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox_Discord.Enabled = checkBox_Discord.Checked;
+            Settings.DiscordEnabled = checkBox_Discord.Checked;
             Settings.Save();
         }
 
@@ -611,10 +632,11 @@ namespace App
             button_SelectProcess.Text = Localization.GetText("ui-topsetting-select");
             button_ResetProcess.Text = Localization.GetText("ui-topsetting-reset");
             tabControl.TabPages[0].Text = Localization.GetText("ui-tabcontrol-settings");
-            tabControl.TabPages[1].Text = Localization.GetText("ui-tabcontrol-advanced");
-            tabControl.TabPages[2].Text = Localization.GetText("ui-tabcontrol-fate");
-            tabControl.TabPages[3].Text = Localization.GetText("ui-tabcontrol-logs");
-            tabControl.TabPages[4].Text = Localization.GetText("ui-tabcontrol-info");
+            tabControl.TabPages[1].Text = Localization.GetText("ui-tabcontrol-3rdparty");
+            tabControl.TabPages[2].Text = Localization.GetText("ui-tabcontrol-advanced");
+            tabControl.TabPages[3].Text = Localization.GetText("ui-tabcontrol-fate");
+            tabControl.TabPages[4].Text = Localization.GetText("ui-tabcontrol-logs");
+            tabControl.TabPages[5].Text = Localization.GetText("ui-tabcontrol-info");
             groupBox_DefaultSet.Text = Localization.GetText("ui-settings-title");
             checkBox_Overlay.Text = Localization.GetText("ui-settings-overlay-use");
             toolTip.SetToolTip(checkBox_Overlay, Localization.GetText("ui-settings-overlay-tooltip"));
@@ -626,9 +648,12 @@ namespace App
             button_getSoundFile.Text = Localization.GetText("ui-settings-getsoundfile");
             checkBox_CheatRoullete.Text = Localization.GetText("ui-settings-cheatroulette");
             checkBox_useVPN.Text = Localization.GetText("ui-settings-usevpn");
-            groupBox_TwitterSet.Text = Localization.GetText("ui-settings-tweet-title");
-            checkBox_Twitter.Text = Localization.GetText("ui-settings-tweet-activate");
-            label_TwitterAbout.Text = Localization.GetText("ui-settings-tweet-about");
+            groupBox_TwitterSet.Text = Localization.GetText("ui-3rdparty-twitter-title");
+            checkBox_Twitter.Text = Localization.GetText("ui-3rdparty-twitter-activate");
+            label_TwitterAbout.Text = Localization.GetText("ui-3rdparty-twitter-about");
+            groupBox_DiscordSet.Text = Localization.GetText("ui-3rdparty-discord-title");
+            checkBox_Discord.Text = Localization.GetText("ui-3rdparty-discord-activate");
+            label_DiscordAbout.Text = Localization.GetText("ui-3rdparty-discord-about");
             groupBox_CustomHttpRequest.Text = Localization.GetText("ui-advanced-http");
             checkBox_EnableHttpRequest.Text = Localization.GetText("ui-advanced-http-enable");
             checkBox_RequestOnDutyMatched.Text = Localization.GetText("ui-advanced-http-duty-matched");
