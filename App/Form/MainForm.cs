@@ -6,6 +6,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Drawing;
+using System.Text.RegularExpressions;
 
 namespace App
 {
@@ -355,8 +357,27 @@ namespace App
 
         private void textBox_Discord_TextChanged(object sender, EventArgs e)
         {
+            string strRegex = "^[0-9]{18}$";
+            Regex re = new Regex(strRegex);
+            if (re.IsMatch(textBox_Discord.Text))
+            {
+                textBox_Discord.ForeColor = Color.Blue;
+            }
+            else
+            {
+                textBox_Discord.ForeColor = Color.Red;
+            }
             Settings.DiscordAccount = textBox_Discord.Text;
             Settings.Save();
+        }
+
+        private void textBox_Discord_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                LMessageBox.I("ui-3rdparty-discord-numberonly-alert");
+                e.Handled = true;
+            }
         }
 
         private void checkBox_Discord_CheckedChanged(object sender, EventArgs e)

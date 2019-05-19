@@ -450,6 +450,9 @@
             // 
             // textBox_Discord
             // 
+            this.textBox_Discord.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox_Discord.Enabled = false;
+            this.textBox_Discord.ForeColor = System.Drawing.Color.Black;
             this.textBox_Discord.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.textBox_Discord.Location = new System.Drawing.Point(34, 21);
             this.textBox_Discord.MaxLength = 18;
@@ -457,6 +460,7 @@
             this.textBox_Discord.Size = new System.Drawing.Size(156, 25);
             this.textBox_Discord.TabIndex = 11;
             this.textBox_Discord.TextChanged += new System.EventHandler(this.textBox_Discord_TextChanged);
+            this.textBox_Discord.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Discord_KeyPress);
             // 
             // label_DiscordAt
             // 
@@ -474,9 +478,9 @@
             this.label_DiscordAbout.Name = "label_DiscordAbout";
             this.label_DiscordAbout.Size = new System.Drawing.Size(415, 94);
             this.label_DiscordAbout.TabIndex = 13;
-            this.label_DiscordAbout.Text = "입력된 디스코드 계정으로도 멘션을 통해 알림을 보냅니다.\r\nID 입력시 앞의 @! 표시는 제외하고 순수 ID 숫자만 입력해주세요.\r\n\r\n디스코드 " +
-    "ID 확인하는 법: 채팅창에 \'\\\\@아이디#태그번호\'를 입력하세요.\r\n채팅창에 출력되는 숫자가 디스코드 ID입니다.\r\n또한, DFAssist 디" +
-    "스코드 서버에 참여한 상태여야만 알림을 보낼 수 있습니다.";
+            this.label_DiscordAbout.Text = "입력된 디스코드 계정으로도 멘션을 통해 알림을 보냅니다.\r\nID 입력시 앞의 @! 표시는 제외하고 순수 18자리 숫자만 입력해주세요.\r\n\r\n디스코" +
+    "드 ID 확인하는 법: 채팅창에 \'\\@아이디#태그번호\'를 입력하세요.\r\n채팅창에 출력되는 숫자가 디스코드 ID입니다.\r\n또한, DFAssist " +
+    "디스코드 서버에 참여한 상태여야만 알림을 보낼 수 있습니다.";
             // 
             // checkBox_Discord
             // 
