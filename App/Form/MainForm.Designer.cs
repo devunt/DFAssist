@@ -40,9 +40,7 @@
             this.panel_TopSetting = new System.Windows.Forms.Panel();
             this.comboBox_Language = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label_Process = new App.LocalizableLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.checkBox_Overlay = new System.Windows.Forms.CheckBox();
             this.tabControl = new App.TabControlBlack();
             this.tabPage_Settings = new System.Windows.Forms.TabPage();
             this.groupBox_DefaultSet = new System.Windows.Forms.GroupBox();
@@ -55,6 +53,7 @@
             this.checkBox_CheatRoullete = new System.Windows.Forms.CheckBox();
             this.checkBox_FlashWindow = new System.Windows.Forms.CheckBox();
             this.checkBox_StartupShow = new System.Windows.Forms.CheckBox();
+            this.checkBox_Overlay = new System.Windows.Forms.CheckBox();
             this.tabPage_3rdParty = new System.Windows.Forms.TabPage();
             this.linkLabel_DiscordServer = new System.Windows.Forms.LinkLabel();
             this.groupBox_DiscordSet = new System.Windows.Forms.GroupBox();
@@ -108,6 +107,8 @@
             this.label_About = new App.LocalizableLabel();
             this.linkLabel_GitHub = new System.Windows.Forms.LinkLabel();
             this.label_AboutTitle = new App.LocalizableLabel();
+            this.label_Process = new App.LocalizableLabel();
+            this.button1 = new System.Windows.Forms.Button();
             this.contextMenuStrip.SuspendLayout();
             this.panel_TopSetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -228,33 +229,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(22, 22);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            // 
-            // label_Process
-            // 
-            this.label_Process.AutoSize = true;
-            this.label_Process.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label_Process.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_Process.ForeColor = System.Drawing.Color.Gray;
-            this.label_Process.Location = new System.Drawing.Point(5, 5);
-            this.label_Process.Name = "label_Process";
-            this.label_Process.Size = new System.Drawing.Size(101, 17);
-            this.label_Process.TabIndex = 0;
-            this.label_Process.Text = "FFXIV 프로세스";
-            // 
-            // checkBox_Overlay
-            // 
-            this.checkBox_Overlay.AutoSize = true;
-            this.checkBox_Overlay.Checked = true;
-            this.checkBox_Overlay.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_Overlay.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.checkBox_Overlay.Location = new System.Drawing.Point(6, 23);
-            this.checkBox_Overlay.Name = "checkBox_Overlay";
-            this.checkBox_Overlay.Size = new System.Drawing.Size(102, 19);
-            this.checkBox_Overlay.TabIndex = 1;
-            this.checkBox_Overlay.Text = "오버레이 사용";
-            this.toolTip.SetToolTip(this.checkBox_Overlay, "오버레이 UI의 좌측 막대를 이용해 드래그 할 수 있습니다.");
-            this.checkBox_Overlay.UseVisualStyleBackColor = true;
-            this.checkBox_Overlay.CheckedChanged += new System.EventHandler(this.checkBox_Overlay_CheckedChanged);
             // 
             // tabControl
             // 
@@ -410,6 +384,21 @@
             this.checkBox_StartupShow.UseVisualStyleBackColor = true;
             this.checkBox_StartupShow.CheckedChanged += new System.EventHandler(this.checkBox_StartupShow_CheckedChanged);
             // 
+            // checkBox_Overlay
+            // 
+            this.checkBox_Overlay.AutoSize = true;
+            this.checkBox_Overlay.Checked = true;
+            this.checkBox_Overlay.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_Overlay.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.checkBox_Overlay.Location = new System.Drawing.Point(6, 23);
+            this.checkBox_Overlay.Name = "checkBox_Overlay";
+            this.checkBox_Overlay.Size = new System.Drawing.Size(102, 19);
+            this.checkBox_Overlay.TabIndex = 1;
+            this.checkBox_Overlay.Text = "오버레이 사용";
+            this.toolTip.SetToolTip(this.checkBox_Overlay, "오버레이 UI의 좌측 막대를 이용해 드래그 할 수 있습니다.");
+            this.checkBox_Overlay.UseVisualStyleBackColor = true;
+            this.checkBox_Overlay.CheckedChanged += new System.EventHandler(this.checkBox_Overlay_CheckedChanged);
+            // 
             // tabPage_3rdParty
             // 
             this.tabPage_3rdParty.BackColor = System.Drawing.SystemColors.Control;
@@ -479,7 +468,7 @@
             this.label_DiscordAbout.Size = new System.Drawing.Size(415, 94);
             this.label_DiscordAbout.TabIndex = 13;
             this.label_DiscordAbout.Text = "입력된 디스코드 계정으로도 멘션을 통해 알림을 보냅니다.\r\nID 입력시 앞의 @! 표시는 제외하고 순수 18자리 숫자만 입력해주세요.\r\n\r\n디스코" +
-    "드 ID 확인하는 법: 채팅창에 \'\\@아이디#태그번호\'를 입력하세요.\r\n채팅창에 출력되는 숫자가 디스코드 ID입니다.\r\n또한, DFAssist " +
+    "드 ID 확인하는 법: 채팅창에 \'＼@아이디#태그번호\'를 입력하세요.\r\n채팅창에 출력되는 숫자가 디스코드 ID입니다.\r\n또한, DFAssist " +
     "디스코드 서버에 참여한 상태여야만 알림을 보낼 수 있습니다.";
             // 
             // checkBox_Discord
@@ -495,6 +484,7 @@
             // 
             // groupBox_TwitterSet
             // 
+            this.groupBox_TwitterSet.Controls.Add(this.button1);
             this.groupBox_TwitterSet.Controls.Add(this.textBox_Twitter);
             this.groupBox_TwitterSet.Controls.Add(this.label_TwitterAt);
             this.groupBox_TwitterSet.Controls.Add(this.label_TwitterAbout);
@@ -940,6 +930,28 @@
             this.label_AboutTitle.Text = "VERSION STRING";
             this.label_AboutTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // label_Process
+            // 
+            this.label_Process.AutoSize = true;
+            this.label_Process.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label_Process.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_Process.ForeColor = System.Drawing.Color.Gray;
+            this.label_Process.Location = new System.Drawing.Point(5, 5);
+            this.label_Process.Name = "label_Process";
+            this.label_Process.Size = new System.Drawing.Size(101, 17);
+            this.label_Process.TabIndex = 0;
+            this.label_Process.Text = "FFXIV 프로세스";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(314, 18);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 23);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "트위터 테스트";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1070,6 +1082,7 @@
         private LocalizableLabel label_TwitterAbout;
         private System.Windows.Forms.CheckBox checkBox_Twitter;
         private System.Windows.Forms.LinkLabel linkLabel_DiscordServer;
+        private System.Windows.Forms.Button button1;
     }
 }
 

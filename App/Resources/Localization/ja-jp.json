@@ -65,7 +65,7 @@
   "ui-3rdparty-discord-title": "Discordアラーム",
   "ui-3rdparty-discord-activate": "有効化",
   "ui-3rdparty-discord-numberonly-alert": "Discord IDは18桁の数字です。 数字のみ入力することができます。",
-  "ui-3rdparty-discord-about": "マッチング及びFATE発生の際に指定したアカウントにメッセージを送信します。\nDiscord IDの「＠!」を除いて18桁の数字を入力してください。\n\n※Discord IDを確認する方法：チャットウィンドウに「\\@名前#タグ」を入力すると、Discord ID(数字)が出力されます。\nメッセージは、DFAssist Discordサーバに参加している時にのみ受信できます。",
+  "ui-3rdparty-discord-about": "マッチング及びFATE発生の際に指定したアカウントにメッセージを送信します。\nDiscord IDの「＠!」を除いて18桁の数字を入力してください。\n\n※Discord IDを確認する方法：チャットウィンドウに「＼@名前#タグ」を入力すると、Discord ID(数字)が出力されます。\nメッセージは、DFAssist Discordサーバに参加している時にのみ受信できます。",
 
   "ui-advanced-http": "使用者指定HTTP要請",
   "ui-advanced-http-enable": "活性化",

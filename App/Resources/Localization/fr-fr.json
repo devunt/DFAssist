@@ -65,7 +65,7 @@
   "ui-3rdparty-discord-title": "Rappel Discord",
   "ui-3rdparty-discord-activate": "Activer",
   "ui-3rdparty-discord-numberonly-alert": "Discord ID est un numéro à 18 chiffres. Seuls les numéros sont acceptés.",
-  "ui-3rdparty-discord-about": "Notifier via le message Discord en mentionnant ce Discord ID.\nEntrez l'ID Discord à 18 chiffres, à l'exception du symbole précédent @ !.\nPour vérifier l'ID discord: Entrez la commande '\\@Nom#Tag' sur le chat Discord. Les numéros imprimés dans les journaux de discussion constituent votre identifiant Discord.\nVous devez également être sur le serveur DFAssist Discord pour recevoir une notification.",
+  "ui-3rdparty-discord-about": "Notifier via le message Discord en mentionnant ce Discord ID.\nEntrez l'ID Discord à 18 chiffres, à l'exception du symbole précédent @ !.\nPour vérifier l'ID discord: Entrez la commande '＼@Nom#Tag' sur le chat Discord. Les numéros imprimés dans les journaux de discussion constituent votre identifiant Discord.\nVous devez également être sur le serveur DFAssist Discord pour recevoir une notification.",
 
   "ui-advanced-http": "Demande HTTP personnalisée",
   "ui-advanced-http-enable": "Permettre",
