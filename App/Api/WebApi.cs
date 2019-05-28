@@ -18,7 +18,9 @@ namespace App
                 var account = "";
                 if(service == "twitter")
                     account = Settings.TwitterAccount;
-                else if(service == "discord")
+                else if (service == "telegram")
+                    account = Settings.TelegramChatId;
+                else if (service == "discord")
                     account = Settings.DiscordAccount;
                 var url = $"{Global.API_ENDPOINT}?service={service}&user={account}&lang={Settings.Language}&type={type}&name={HttpUtility.UrlEncode(name)}&hash={GetMD5Hash(name)}";
 
@@ -27,13 +29,13 @@ namespace App
                 {
                     Log.E($"l-{service}-failed-request");
                 }
-                else if (resp == "1")
-                {
-                    Log.E($"l-{service}-failed-general");
-                }
                 else if (resp == "0")
                 {
                     Log.S($"l-{service}-success");
+                }
+                else
+                {
+                    Log.E($"l-{service}-failed-general", resp);
                 }
             });
         }

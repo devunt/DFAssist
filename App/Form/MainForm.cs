@@ -103,9 +103,12 @@ namespace App
                 Settings.Save();
             }
             SetCheatRoulleteCheckBox(Settings.CheatRoulette);
-            checkBox_Twitter.Checked = Settings.TwitterEnabled;
-            textBox_Twitter.Enabled = Settings.TwitterEnabled;
-            textBox_Twitter.Text = Settings.TwitterAccount;
+            // checkBox_Twitter.Checked = Settings.TwitterEnabled;
+            // textBox_Telegram.Enabled = Settings.TwitterEnabled;
+            // textBox_Telegram.Text = Settings.TwitterAccount;
+            checkBox_Telegram.Checked = Settings.TelegramEnabled;
+            textBox_Telegram.Enabled = Settings.TelegramEnabled;
+            textBox_Telegram.Text = Settings.TelegramChatId;
             checkBox_Discord.Checked = Settings.DiscordEnabled;
             textBox_Discord.Enabled = Settings.DiscordEnabled;
             textBox_Discord.Text = Settings.DiscordAccount;
@@ -198,6 +201,11 @@ namespace App
             richTextBox_Log.SelectionStart = richTextBox_Log.Text.Length;
             richTextBox_Log.SelectionLength = 0;
             richTextBox_Log.ScrollToCaret();
+        }
+
+        private void linkLabel_Telegram_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(Global.TELEGRAM_BOT);
         }
 
         private void linkLabel_DiscordServer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -342,7 +350,20 @@ namespace App
             }
         }
 
-        private void textBox_Twitter_TextChanged(object sender, EventArgs e)
+        private void textBox_Telegram_TextChanged(object sender, EventArgs e)
+        {
+            Settings.TelegramChatId = textBox_Telegram.Text;
+            Settings.Save();
+        }
+
+        private void checkBox_Telegram_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox_Telegram.Enabled = checkBox_Telegram.Checked;
+            Settings.TelegramEnabled = checkBox_Telegram.Checked;
+            Settings.Save();
+        }
+
+        /*private void textBox_Twitter_TextChanged(object sender, EventArgs e)
         {
             Settings.TwitterAccount = textBox_Twitter.Text;
             Settings.Save();
@@ -354,7 +375,7 @@ namespace App
             Settings.TwitterEnabled = checkBox_Twitter.Checked;
             Settings.Save();
         }
-
+        */
         private void textBox_Discord_TextChanged(object sender, EventArgs e)
         {
             string strRegex = "^[0-9]{18}$";
@@ -669,9 +690,12 @@ namespace App
             button_getSoundFile.Text = Localization.GetText("ui-settings-getsoundfile");
             checkBox_CheatRoullete.Text = Localization.GetText("ui-settings-cheatroulette");
             checkBox_useVPN.Text = Localization.GetText("ui-settings-usevpn");
-            groupBox_TwitterSet.Text = Localization.GetText("ui-3rdparty-twitter-title");
-            checkBox_Twitter.Text = Localization.GetText("ui-3rdparty-twitter-activate");
-            label_TwitterAbout.Text = Localization.GetText("ui-3rdparty-twitter-about");
+            // groupBox_TwitterSet.Text = Localization.GetText("ui-3rdparty-twitter-title");
+            // checkBox_Twitter.Text = Localization.GetText("ui-3rdparty-twitter-activate");
+            // label_TwitterAbout.Text = Localization.GetText("ui-3rdparty-twitter-about");
+             groupBox_TelegramSet.Text = Localization.GetText("ui-3rdparty-telegram-title");
+             checkBox_Telegram.Text = Localization.GetText("ui-3rdparty-telegram-activate");
+             label_TelegramAbout.Text = Localization.GetText("ui-3rdparty-telegram-about");
             groupBox_DiscordSet.Text = Localization.GetText("ui-3rdparty-discord-title");
             checkBox_Discord.Text = Localization.GetText("ui-3rdparty-discord-activate");
             label_DiscordAbout.Text = Localization.GetText("ui-3rdparty-discord-about");

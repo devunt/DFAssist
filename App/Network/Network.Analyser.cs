@@ -241,9 +241,14 @@ namespace App
                                 WinApi.FlashWindow(mainForm.FFXIVProcess);
                             }
 
-                            if (Settings.TwitterEnabled)
+                            /*if (Settings.TwitterEnabled)
                             {
                                 WebApi.Request("twitter", "fate-occured", fate.Name);
+                            }*/
+
+                            if (Settings.TelegramEnabled)
+                            {
+                                WebApi.Request("telegram", "fate-occured", fate.Name);
                             }
 
                             if (Settings.DiscordEnabled)
@@ -357,9 +362,14 @@ namespace App
                             mainForm.ShowNotification("notification-queue-matched", instance.Name);
                         }
 
-                        if (Settings.TwitterEnabled)
+                        /*if (Settings.TwitterEnabled)
                         {
                             WebApi.Request("twitter", "duty-matched", instance.Name);
+                        }*/
+
+                        if (Settings.TelegramEnabled)
+                        {
+                            WebApi.Request("telegram", "duty-matched", instance.Name);
                         }
 
                         if (Settings.DiscordEnabled)
@@ -490,9 +500,14 @@ namespace App
                         mainForm.ShowNotification("notification-queue-matched", instance.Name);
                     }
 
-                    if (Settings.TwitterEnabled)
+                    /*if (Settings.TwitterEnabled)
                     {
                         WebApi.Request("twitter", "duty -matched", instance.Name);
+                    }*/
+
+                    if (Settings.TelegramEnabled)
+                    {
+                        WebApi.Request("telegram", "duty-matched", instance.Name);
                     }
 
                     if (Settings.DiscordEnabled)
