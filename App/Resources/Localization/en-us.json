@@ -64,7 +64,7 @@
   "ui-3rdparty-twitter-about": "When a queue pops or FATE occurs, \nsend a Tweet with a mention to this Twitter account.\nEnter the Twitter Account except the preceding symbol @.",
   "ui-3rdparty-telegram-title": "Telegram Alarm",
   "ui-3rdparty-telegram-activate": "Enable",
-  "ui-3rdparty-telegram-about": "When a queue pops or FATE occurs, send a message to this Telegram chat room.\nYou can get Chat ID if you send any message to DFAssist Telegram Bot.",
+  "ui-3rdparty-telegram-about": "When a queue pops or FATE occurs, send a message to this Telegram chat room.\nYou can get your Chat ID if you send any message to DFAssist Telegram Bot.",
   "ui-3rdparty-discord-title": "Discord Alarm",
   "ui-3rdparty-discord-activate": "Enable",
   "ui-3rdparty-discord-numberonly-alert": "Discord ID is a 18-digit number. Only numbers are accepted.",
