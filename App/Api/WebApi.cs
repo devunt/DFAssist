@@ -22,6 +22,7 @@ namespace App
                     account = Settings.TelegramChatId;
                 else if (service == "discord")
                     account = Settings.DiscordAccount;
+                if (account == "") return;
                 var url = $"{Global.API_ENDPOINT}?service={service}&user={account}&lang={Settings.Language}&type={type}&name={HttpUtility.UrlEncode(name)}&hash={GetMD5Hash(name)}";
 
                 var resp = Request(url);
