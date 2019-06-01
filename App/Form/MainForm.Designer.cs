@@ -467,9 +467,9 @@
             this.label_DiscordAt.AutoSize = true;
             this.label_DiscordAt.Location = new System.Drawing.Point(10, 21);
             this.label_DiscordAt.Name = "label_DiscordAt";
-            this.label_DiscordAt.Size = new System.Drawing.Size(25, 17);
+            this.label_DiscordAt.Size = new System.Drawing.Size(24, 17);
             this.label_DiscordAt.TabIndex = 12;
-            this.label_DiscordAt.Text = "@!";
+            this.label_DiscordAt.Text = "ID:";
             // 
             // label_DiscordAbout
             // 
@@ -478,9 +478,9 @@
             this.label_DiscordAbout.Name = "label_DiscordAbout";
             this.label_DiscordAbout.Size = new System.Drawing.Size(415, 92);
             this.label_DiscordAbout.TabIndex = 13;
-            this.label_DiscordAbout.Text = "입력된 디스코드 계정으로도 멘션을 통해 알림을 보냅니다.\r\nID 입력시 앞의 @! 표시는 제외하고 순수 18자리 숫자만 입력해주세요.\r\n\r\n디스코" +
-    "드 ID 확인하는 법: 채팅창에 \'＼@아이디#태그번호\'를 입력하세요.\r\n채팅창에 출력되는 숫자가 디스코드 ID입니다.\r\n또한, DFAssist " +
-    "디스코드 서버에 참여한 상태여야만 알림을 보낼 수 있습니다.";
+            this.label_DiscordAbout.Text = "입력된 디스코드 계정으로도 멘션을 통해 알림을 보냅니다.\r\n디스코드 ID는 순수 18자리 숫자입니다. 18자리 숫자를 입력해주세요.\r\n\r\n디스코드" +
+    " ID는 DFAssist 디스코드 서버에서 #get-discord-id 채널에 !id 를 입력하면 확인할 수 있습니다.\r\n또한, DFAssist" +
+    " 디스코드 서버에 참여한 상태여야만 알림을 보낼 수 있습니다.";
             // 
             // checkBox_Discord
             // 

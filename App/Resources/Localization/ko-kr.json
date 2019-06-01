@@ -68,7 +68,7 @@
   "ui-3rdparty-discord-title": "디스코드 알림",
   "ui-3rdparty-discord-activate": "활성화",
   "ui-3rdparty-discord-numberonly-alert": "디스코드 ID는 18자리 숫자입니다. 숫자만 입력 가능합니다.",
-  "ui-3rdparty-discord-about": "입력된 디스코드 계정으로도 멘션을 통해 알림을 보냅니다.\nID 입력시 앞의 @! 표시는 제외하고 순수 18자리 숫자만 입력해주세요.\n\n디스코드 ID 확인하는 법: 채팅창에 '＼@아이디#태그번호'를 입력하세요. \n채팅창에 출력되는 숫자가 디스코드 ID입니다. \n또한, DFAssist 디스코드 서버에 참여한 상태여야만 알림을 보낼 수 있습니다.",
+  "ui-3rdparty-discord-about": "입력된 디스코드 계정으로도 멘션을 통해 알림을 보냅니다. \n디스코드 ID는 순수 18자리 숫자입니다. 18자리 숫자를 입력해주세요. \n\n디스코드 ID는 DFAssist 디스코드 서버에서 #get-discord-id 채널에 !id 를 입력하면 확인할 수 있습니다. \n또한, DFAssist 디스코드 서버에 참여한 상태여야만 알림을 보낼 수 있습니다.",
 
   "ui-advanced-http": "사용자 지정 HTTP 요청",
   "ui-advanced-http-enable": "활성화",
