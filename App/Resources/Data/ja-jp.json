@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190430.1",
+  "version": "20190601.1",
 
   // Duty
   "instances": {
@@ -1349,7 +1349,6 @@
     },
 
     // 4.45
-    // Read the KR Script.
 
     "595": {
       "name": "真ヨウジンボウ討滅戦",
@@ -1479,151 +1478,151 @@
 
     // Blue Mage 4.5
     "610": {
-      "name": "All's Well That Starts Well",
+      "name": "デビューマッチ",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "612": {
-      "name": "Much Ado About Pudding",
+      "name": "プリン・アラモード",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "613": {
-      "name": "Waiting for Golem",
+      "name": "最初の岩壁「シパクナー」",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "614": {
-      "name": "Gentlemen Prefer Swords",
+      "name": "怪力の鉄巨人「クレイオス」",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "615": {
-      "name": "The Threepenny Turtles",
+      "name": "ギルガメブラザーズ",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "616": {
-      "name": "Eye Society",
+      "name": "ブラインド・フューリー",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "617": {
-      "name": "A Chorus Slime",
+      "name": "シアーハートアタック",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "618": {
-      "name": "Bomb-edy of Errors",
+      "name": "青い牙、赤い牙",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "619": {
-      "name": "To Kill a Mockingslime",
+      "name": "七色の甘味「ギモーヴ」",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "620": {
-      "name": "A Little Knight Music",
+      "name": "首無し王者「クロムドゥーブ」",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "621": {
-      "name": "Some Like It Excruciatingly Hot",
+      "name": "爆ボム・ファーストアタック",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "622": {
-      "name": "The Plant-om of the Opera",
+      "name": "寄生植物「ヒドノラ」",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "623": {
-      "name": "Beauty and a Beast",
+      "name": "紅の死妖姫「カーミラ」",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "624": {
-      "name": "Blobs in the Woods",
+      "name": "死なばもろともーッ！",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "625": {
-      "name": "The Me Nobody Nodes",
+      "name": "アラグの脅威「闘獣システム」",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "626": {
-      "name": "Sunset Bull-evard",
+      "name": "豪腕の獣王「ティクバラン」",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "627": {
-      "name": "The Sword of Music",
+      "name": "剛柔の鉄巨人「クレイオス改」",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "628": {
-      "name": "Midsummer Night's Explosion",
+      "name": "爆破デスマッチ",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "629": {
-      "name": "On a Clear Day You Can Smell Forever",
+      "name": "魅惑の芳香「アロマティック・アムーシャ」",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "630": {
-      "name": "Miss Typhon",
+      "name": "名コンビ「オルトロス＆テュポーン」",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "631": {
-      "name": "Chimera on a Hot Tin Roof",
+      "name": "憤怒の合成獣「アペデマク」",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "632": {
-      "name": "Here Comes the Boom",
+      "name": "爆発の対消滅「グランパボム」",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "633": {
-      "name": "Behemoths and Broomsticks",
+      "name": "魔獣の皇太子「クロンプリンツ・ベヒーモス」",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "634": {
-      "name": "Amazing Technicolor Pit Fiends",
+      "name": "異形の人形師「エペロギ」",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "635": {
-      "name": "Dirty Rotten Azulmagia",
+      "name": "悪の青魔道士「アポカリョープス」",
       "tank": "0",
       "healer": "0",
       "dps": "0"
@@ -1819,6 +1818,12 @@
     },
     "277": {
       "name": "アストラガロス (機工戦)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "599": {
+      "name": "ヒドゥンゴージ（機工戦）",
       "tank": "0",
       "healer": "0",
       "dps": "0"

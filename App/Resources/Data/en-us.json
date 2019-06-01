@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190430.1",
+  "version": "20190601.1",
 
   // Duty
   "instances": {
@@ -1817,6 +1817,12 @@
     },
     "277": {
       "name": "Astragalos",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "599": {
+      "name": "Hidden Gorge",
       "tank": "0",
       "healer": "0",
       "dps": "0"
