@@ -378,7 +378,7 @@ namespace App
         */
         private void textBox_Discord_TextChanged(object sender, EventArgs e)
         {
-            string strRegex = "^[0-9]{18}$";
+            string strRegex = "^[0-9]{15}";
             Regex re = new Regex(strRegex);
             if (re.IsMatch(textBox_Discord.Text))
             {

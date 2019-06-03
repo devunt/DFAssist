@@ -478,9 +478,9 @@
             this.label_DiscordAbout.Name = "label_DiscordAbout";
             this.label_DiscordAbout.Size = new System.Drawing.Size(415, 92);
             this.label_DiscordAbout.TabIndex = 13;
-            this.label_DiscordAbout.Text = "입력된 디스코드 계정으로도 멘션을 통해 알림을 보냅니다.\r\n디스코드 ID는 순수 18자리 숫자입니다. 18자리 숫자를 입력해주세요.\r\n\r\n디스코드" +
-    " ID는 DFAssist 디스코드 서버에서 #get-discord-id 채널에 !id 를 입력하면 확인할 수 있습니다.\r\n또한, DFAssist" +
-    " 디스코드 서버에 참여한 상태여야만 알림을 보낼 수 있습니다.";
+            this.label_DiscordAbout.Text = "입력된 디스코드 계정으로도 멘션을 통해 알림을 보냅니다.\r\n디스코드 ID는 15자리 이상의 숫자입니다.\r\n\r\n디스코드 ID는 DFAssist 디스" +
+    "코드 서버에서 #get-discord-id 채널에 !id 를 입력하면 확인할 수 있습니다.\r\n또한, DFAssist 디스코드 서버에 참여한 상태" +
+    "여야만 알림을 보낼 수 있습니다.";
             // 
             // checkBox_Discord
             // 
@@ -825,7 +825,7 @@
             // 
             this.toolStripMenuItem_SelectApply.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.toolStripMenuItem_SelectApply.Name = "toolStripMenuItem_SelectApply";
-            this.toolStripMenuItem_SelectApply.Size = new System.Drawing.Size(71, 20);
+            this.toolStripMenuItem_SelectApply.Size = new System.Drawing.Size(67, 20);
             this.toolStripMenuItem_SelectApply.Text = "적용하기";
             this.toolStripMenuItem_SelectApply.Click += new System.EventHandler(this.toolStripMenuItem_SelectApply_Click);
             // 
@@ -948,7 +948,7 @@
             this.label_Process.ForeColor = System.Drawing.Color.Gray;
             this.label_Process.Location = new System.Drawing.Point(5, 5);
             this.label_Process.Name = "label_Process";
-            this.label_Process.Size = new System.Drawing.Size(101, 17);
+            this.label_Process.Size = new System.Drawing.Size(100, 17);
             this.label_Process.TabIndex = 0;
             this.label_Process.Text = "FFXIV 프로세스";
             // 
