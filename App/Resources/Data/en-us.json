@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190601.1",
+  "version": "20190603.1",
 
   // Duty
   "instances": {
@@ -2043,6 +2043,12 @@
     // Other things...
     "437": {
       "name": "Triple Triad",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "600": {
+      "name": "Leap of Faith",
       "tank": "0",
       "healer": "0",
       "dps": "0"
