@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190603.1",
+  "version": "20190607.1",
 
   // Duty
   "instances": {
@@ -2052,6 +2052,30 @@
       "dps": "0"
     },
     "600": {
+      "name": "Haute voltige",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "601": {
+      "name": "Haute voltige",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "602": {
+      "name": "Haute voltige",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "603": {
+      "name": "Haute voltige",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "605": {
       "name": "Haute voltige",
       "tank": "0",
       "healer": "0",

@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190603.1",
+  "version": "20190607.1",
 
   // Duty
   "instances": {
@@ -2048,6 +2048,30 @@
       "dps": "0"
     },
     "600": {
+      "name": "Leap of Faith",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "601": {
+      "name": "Leap of Faith",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "602": {
+      "name": "Leap of Faith",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "603": {
+      "name": "Leap of Faith",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "605": {
       "name": "Leap of Faith",
       "tank": "0",
       "healer": "0",
