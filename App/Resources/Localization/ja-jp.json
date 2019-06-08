@@ -67,7 +67,7 @@
   "ui-3rdparty-telegram-about": "突入準備完了時,FATE発生時に指定したチャットルームにメッセージを送信します。\nChat IDは,DFAssist Telegram Botにどのようなメッセージを送っても確認できます。",
   "ui-3rdparty-discord-title": "Discordアラーム",
   "ui-3rdparty-discord-activate": "有効化",
-  "ui-3rdparty-discord-numberonly-alert": "Discord IDは18桁の数字です。 数字のみ入力することができます。",
+  "ui-3rdparty-discord-numberonly-alert": "Discord IDは数字だけ入力可能です。",
   "ui-3rdparty-discord-about": "マッチング及びFATE発生の際に指定したアカウントにメッセージを送信します。\nDiscord IDは純粋な15席以上の数字です。\n\n※Discord IDを確認する方法：DFAssist ディスコードサーバーで#get-discord-idチャンネルに !id を入力すると確認できます。\nメッセージは、DFAssist Discordサーバに参加している時にのみ受信できます。",
 
   "ui-advanced-http": "使用者指定HTTP要請",

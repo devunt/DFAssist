@@ -67,7 +67,7 @@
   "ui-3rdparty-telegram-about": "Lorsque la file d'attente apparaît ou qu'une ALEA choisie se produit, \nenvoyez un message télégramme à la salle de discussion sélectionnée.\nVous pouvez obtenir un ID de Chat si vous envoyez un message à DFAssist Telegram Bot.",
   "ui-3rdparty-discord-title": "Rappel Discord",
   "ui-3rdparty-discord-activate": "Activer",
-  "ui-3rdparty-discord-numberonly-alert": "Discord ID est un numéro à 18 chiffres. Seuls les numéros sont acceptés.",
+  "ui-3rdparty-discord-numberonly-alert": "Discord ID est le seul numéro accepté.",
   "ui-3rdparty-discord-about": "Notifier via le message Discord en mentionnant ce Discord ID.\nEntrez votre numéro d'identification de plus de 15 chiffres.\n\nPour vérifier l'ID discord: Entrez la commande !id sur le canal #get-discord-id de DFAssist Discord Server. DFAsssist Bot vous répondra avec Discord ID.\nVous devez également être sur le serveur DFAssist Discord pour recevoir une notification.",
 
   "ui-advanced-http": "Demande HTTP personnalisée",

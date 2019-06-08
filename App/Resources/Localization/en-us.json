@@ -67,7 +67,7 @@
   "ui-3rdparty-telegram-about": "When a queue pops or FATE occurs, send a message to this Telegram chat room.\nYou can get your Chat ID if you send any message to DFAssist Telegram Bot.",
   "ui-3rdparty-discord-title": "Discord Alarm",
   "ui-3rdparty-discord-activate": "Enable",
-  "ui-3rdparty-discord-numberonly-alert": "Discord ID is a 18-digit number. Only numbers are accepted.",
+  "ui-3rdparty-discord-numberonly-alert": "Discord ID is only number accepted.",
   "ui-3rdparty-discord-about": "Notify via Discord message with a mention to this Discord ID.\nEnter your over 15-digit number Discord ID.\n\nTo check Discord ID: Enter !id command on #get-discord-id channel in DFAssist Discord Server. DFAssist Bot will reply your Discord ID.\nAlso, you should be in the DFAssist Discord Server to get notification.",
 
   "ui-advanced-http": "Custom HTTP Request",
