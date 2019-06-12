@@ -75,7 +75,7 @@ title: {{ site.name }}
 
 ### 프로그램 UI
 
-![프로그램 UI 1](https://i.imgur.com/xsiqN0R.png)  
+![프로그램 UI 1](https://i.imgur.com/K7vc0yd.png)  
 ![프로그램 UI 2](https://i.imgur.com/bkBCc2q.png)  
 ![프로그램 UI 3](https://i.imgur.com/TC9wXBO.png)
 

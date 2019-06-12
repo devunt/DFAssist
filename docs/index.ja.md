@@ -68,7 +68,7 @@ title: {{ site.name }}
 
 ### アプリケーションUI
 
-![アプリケーションUI 1](https://i.imgur.com/9ye2LzH.png)  
+![アプリケーションUI 1](https://i.imgur.com/04glAbH.png)  
 ![アプリケーションUI 2](https://i.imgur.com/83Iuen4.png)  
 ![アプリケーションUI 2](https://i.imgur.com/VC7igXV.png)
 
