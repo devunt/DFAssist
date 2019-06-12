@@ -48,6 +48,8 @@
   "ui-settings-overlay-use": "オーバーレイ",
   "ui-settings-overlay-tooltip": "オーバーレイ左側のバーをドラッグすると移動できます。",
   "ui-settings-overlay-reset": "初期化",
+  "ui-settings-overlay-autohide": "任務をマッチング中でない時,オーバーレイ隠蔽",
+  "ui-notification-overlay-autohide": "マッチングの現況に変化が生じたり,FATEが発生してから適用されます。\nアプリケーションを再起動しても適用されます。\n\nクライアント通信待機中のときはオーバーレイが表示されます。 \n（プログラムが正しく作動するかを確認できるようにするため）",
   "ui-settings-startupshow": "起動時にこのウィンドウを表示する",
   "ui-settings-iconflash": "突入準備完了時FFXIVのアイコンを点滅させる",
   "ui-settings-cheatroulette": "デュティルレット。実際に入場するダンジョンを確認",

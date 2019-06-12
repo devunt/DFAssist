@@ -48,6 +48,8 @@
   "ui-settings-overlay-use": "오버레이 사용",
   "ui-settings-overlay-tooltip": "오버레이 UI의 좌측 막대를 이용해 드래그 할 수 있습니다.",
   "ui-settings-overlay-reset": "위치 초기화",
+  "ui-settings-overlay-autohide": "임무 매칭 중이 아니거나 돌발이 발생하지 않았을 때, 오버레이 숨기기",
+  "ui-notification-overlay-autohide": "매칭 현황에 변화가 생기거나, 돌발 임무가 발생한 후부터 적용됩니다.\n프로그램을 재시작해도 적용됩니다.\n\n클라이언트 통신 대기 중일 때는 오버레이가 표시됩니다.\n(프로그램이 제대로 작동하는지 확인할 수 있게 하기 위함)",
   "ui-settings-startupshow": "프로그램 시작시 이 창 보이기",
   "ui-settings-iconflash": "매칭/돌발 발생시 파이널판타지14 작업 표시줄 아이콘 깜빡이기",
   "ui-settings-cheatroulette": "무작위 임무일 경우에도 실제 매칭된 임무 보여주기",

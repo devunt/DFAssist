@@ -13,6 +13,7 @@ namespace App
         public static bool ShowOverlay { get; set; } = true;
         public static int OverlayX { get; set; } = Global.OVERLAY_XY_UNSET;
         public static int OverlayY { get; set; } = Global.OVERLAY_XY_UNSET;
+        public static bool autoHideOverlay { get; set; } = false;
         public static bool StartupShowMainForm { get; set; } = true;
         public static bool FlashWindow { get; set; } = true;
         public static bool FateSound { get; set; } = false;
@@ -54,6 +55,7 @@ namespace App
                 ShowOverlay = iniFile.ReadValue("overlay", "show") != "0";
                 OverlayX = int.Parse(iniFile.ReadValue("overlay", "x") ?? "0");
                 OverlayY = int.Parse(iniFile.ReadValue("overlay", "y") ?? "0");
+                autoHideOverlay = iniFile.ReadValue("overlay", "autohideoverlay") == "1";
                 FlashWindow = iniFile.ReadValue("notification", "flashwindow") == "1";
                 FateSound = iniFile.ReadValue("notification", "fatesound") == "1";
                 CustomSound = iniFile.ReadValue("notification", "customsound") == "1";
@@ -87,6 +89,7 @@ namespace App
             iniFile.WriteValue("overlay", "show", ShowOverlay ? "1" : "0");
             iniFile.WriteValue("overlay", "x", OverlayX.ToString());
             iniFile.WriteValue("overlay", "y", OverlayY.ToString());
+            iniFile.WriteValue("overlay", "autohideoverlay", autoHideOverlay ? "1" : "0");
             iniFile.WriteValue("notification", "flashwindow", FlashWindow ? "1" : "0");
             iniFile.WriteValue("notification", "fatesound", FateSound ? "1" : "0");
             iniFile.WriteValue("notification", "customsound", CustomSound ? "1" : "0");

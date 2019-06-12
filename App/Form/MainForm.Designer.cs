@@ -40,10 +40,13 @@
             this.panel_TopSetting = new System.Windows.Forms.Panel();
             this.comboBox_Language = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label_Process = new App.LocalizableLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.checkBox_Overlay = new System.Windows.Forms.CheckBox();
             this.tabControl = new App.TabControlBlack();
             this.tabPage_Settings = new System.Windows.Forms.TabPage();
             this.groupBox_DefaultSet = new System.Windows.Forms.GroupBox();
+            this.checkBox_autoHideOverlay = new System.Windows.Forms.CheckBox();
             this.checkBox_useVPN = new System.Windows.Forms.CheckBox();
             this.label_CustomSoundFileName = new System.Windows.Forms.Label();
             this.button_getSoundFile = new System.Windows.Forms.Button();
@@ -53,7 +56,6 @@
             this.checkBox_CheatRoullete = new System.Windows.Forms.CheckBox();
             this.checkBox_FlashWindow = new System.Windows.Forms.CheckBox();
             this.checkBox_StartupShow = new System.Windows.Forms.CheckBox();
-            this.checkBox_Overlay = new System.Windows.Forms.CheckBox();
             this.tabPage_3rdParty = new System.Windows.Forms.TabPage();
             this.linkLabel_Telegram = new System.Windows.Forms.LinkLabel();
             this.linkLabel_DiscordServer = new System.Windows.Forms.LinkLabel();
@@ -108,7 +110,6 @@
             this.label_About = new App.LocalizableLabel();
             this.linkLabel_GitHub = new System.Windows.Forms.LinkLabel();
             this.label_AboutTitle = new App.LocalizableLabel();
-            this.label_Process = new App.LocalizableLabel();
             this.contextMenuStrip.SuspendLayout();
             this.panel_TopSetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -230,6 +231,33 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // label_Process
+            // 
+            this.label_Process.AutoSize = true;
+            this.label_Process.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label_Process.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_Process.ForeColor = System.Drawing.Color.Gray;
+            this.label_Process.Location = new System.Drawing.Point(5, 5);
+            this.label_Process.Name = "label_Process";
+            this.label_Process.Size = new System.Drawing.Size(101, 17);
+            this.label_Process.TabIndex = 0;
+            this.label_Process.Text = "FFXIV 프로세스";
+            // 
+            // checkBox_Overlay
+            // 
+            this.checkBox_Overlay.AutoSize = true;
+            this.checkBox_Overlay.Checked = true;
+            this.checkBox_Overlay.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_Overlay.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.checkBox_Overlay.Location = new System.Drawing.Point(6, 23);
+            this.checkBox_Overlay.Name = "checkBox_Overlay";
+            this.checkBox_Overlay.Size = new System.Drawing.Size(102, 19);
+            this.checkBox_Overlay.TabIndex = 1;
+            this.checkBox_Overlay.Text = "오버레이 사용";
+            this.toolTip.SetToolTip(this.checkBox_Overlay, "오버레이 UI의 좌측 막대를 이용해 드래그 할 수 있습니다.");
+            this.checkBox_Overlay.UseVisualStyleBackColor = true;
+            this.checkBox_Overlay.CheckedChanged += new System.EventHandler(this.checkBox_Overlay_CheckedChanged);
+            // 
             // tabControl
             // 
             this.tabControl.Alignment = System.Windows.Forms.TabAlignment.Left;
@@ -261,6 +289,7 @@
             // 
             // groupBox_DefaultSet
             // 
+            this.groupBox_DefaultSet.Controls.Add(this.checkBox_autoHideOverlay);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_useVPN);
             this.groupBox_DefaultSet.Controls.Add(this.label_CustomSoundFileName);
             this.groupBox_DefaultSet.Controls.Add(this.button_getSoundFile);
@@ -274,19 +303,32 @@
             this.groupBox_DefaultSet.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox_DefaultSet.Location = new System.Drawing.Point(0, 0);
             this.groupBox_DefaultSet.Name = "groupBox_DefaultSet";
-            this.groupBox_DefaultSet.Size = new System.Drawing.Size(426, 187);
+            this.groupBox_DefaultSet.Size = new System.Drawing.Size(426, 208);
             this.groupBox_DefaultSet.TabIndex = 0;
             this.groupBox_DefaultSet.TabStop = false;
             this.groupBox_DefaultSet.Text = "기본설정";
+            // 
+            // checkBox_autoHideOverlay
+            // 
+            this.checkBox_autoHideOverlay.AutoSize = true;
+            this.checkBox_autoHideOverlay.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.checkBox_autoHideOverlay.Location = new System.Drawing.Point(6, 44);
+            this.checkBox_autoHideOverlay.Name = "checkBox_autoHideOverlay";
+            this.checkBox_autoHideOverlay.Size = new System.Drawing.Size(245, 19);
+            this.checkBox_autoHideOverlay.TabIndex = 3;
+            this.checkBox_autoHideOverlay.Text = "임무 매칭 중이 아닐 때, 오버레이 숨기기";
+            this.checkBox_autoHideOverlay.UseVisualStyleBackColor = true;
+            this.checkBox_autoHideOverlay.CheckedChanged += new System.EventHandler(this.checkBox_autoHideOverlay_CheckedChanged);
+            this.checkBox_autoHideOverlay.MouseClick += new System.Windows.Forms.MouseEventHandler(this.checkBox_autoHideOverlay_MouseClick);
             // 
             // checkBox_useVPN
             // 
             this.checkBox_useVPN.AutoSize = true;
             this.checkBox_useVPN.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.checkBox_useVPN.Location = new System.Drawing.Point(6, 107);
+            this.checkBox_useVPN.Location = new System.Drawing.Point(6, 128);
             this.checkBox_useVPN.Name = "checkBox_useVPN";
             this.checkBox_useVPN.Size = new System.Drawing.Size(310, 19);
-            this.checkBox_useVPN.TabIndex = 6;
+            this.checkBox_useVPN.TabIndex = 7;
             this.checkBox_useVPN.Text = "VPN을 사용하는데, FFXIV 프로세스를 찾지 못하네요.";
             this.checkBox_useVPN.UseVisualStyleBackColor = true;
             this.checkBox_useVPN.CheckedChanged += new System.EventHandler(this.checkBox_useVPN_CheckedChanged);
@@ -295,7 +337,7 @@
             // label_CustomSoundFileName
             // 
             this.label_CustomSoundFileName.AutoSize = true;
-            this.label_CustomSoundFileName.Location = new System.Drawing.Point(213, 165);
+            this.label_CustomSoundFileName.Location = new System.Drawing.Point(213, 186);
             this.label_CustomSoundFileName.Name = "label_CustomSoundFileName";
             this.label_CustomSoundFileName.Size = new System.Drawing.Size(115, 17);
             this.label_CustomSoundFileName.TabIndex = 0;
@@ -304,10 +346,10 @@
             // button_getSoundFile
             // 
             this.button_getSoundFile.Font = new System.Drawing.Font("맑은 고딕", 8F);
-            this.button_getSoundFile.Location = new System.Drawing.Point(142, 164);
+            this.button_getSoundFile.Location = new System.Drawing.Point(142, 185);
             this.button_getSoundFile.Name = "button_getSoundFile";
             this.button_getSoundFile.Size = new System.Drawing.Size(70, 20);
-            this.button_getSoundFile.TabIndex = 9;
+            this.button_getSoundFile.TabIndex = 10;
             this.button_getSoundFile.Text = "파일 선택";
             this.button_getSoundFile.UseVisualStyleBackColor = true;
             this.button_getSoundFile.Click += new System.EventHandler(this.button_getSoundFile_Click);
@@ -316,10 +358,10 @@
             // 
             this.checkBox_CustomSound.AutoSize = true;
             this.checkBox_CustomSound.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.checkBox_CustomSound.Location = new System.Drawing.Point(6, 165);
+            this.checkBox_CustomSound.Location = new System.Drawing.Point(6, 186);
             this.checkBox_CustomSound.Name = "checkBox_CustomSound";
             this.checkBox_CustomSound.Size = new System.Drawing.Size(130, 19);
-            this.checkBox_CustomSound.TabIndex = 8;
+            this.checkBox_CustomSound.TabIndex = 9;
             this.checkBox_CustomSound.Text = "알림음 사용자 설정";
             this.checkBox_CustomSound.UseVisualStyleBackColor = true;
             this.checkBox_CustomSound.CheckedChanged += new System.EventHandler(this.checkBox_CustomSound_CheckedChanged);
@@ -329,10 +371,10 @@
             // 
             this.checkBox_FateSound.AutoSize = true;
             this.checkBox_FateSound.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.checkBox_FateSound.Location = new System.Drawing.Point(6, 128);
+            this.checkBox_FateSound.Location = new System.Drawing.Point(6, 149);
             this.checkBox_FateSound.Name = "checkBox_FateSound";
             this.checkBox_FateSound.Size = new System.Drawing.Size(270, 34);
-            this.checkBox_FateSound.TabIndex = 7;
+            this.checkBox_FateSound.TabIndex = 8;
             this.checkBox_FateSound.Text = "돌발임무 알림음 활성화\r\n(돌발임무 알림에서 사용자 알림음 사용 안함)";
             this.checkBox_FateSound.UseVisualStyleBackColor = true;
             this.checkBox_FateSound.CheckedChanged += new System.EventHandler(this.checkBox_FateSound_CheckedChanged);
@@ -352,10 +394,10 @@
             // 
             this.checkBox_CheatRoullete.AutoSize = true;
             this.checkBox_CheatRoullete.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.checkBox_CheatRoullete.Location = new System.Drawing.Point(6, 86);
+            this.checkBox_CheatRoullete.Location = new System.Drawing.Point(6, 107);
             this.checkBox_CheatRoullete.Name = "checkBox_CheatRoullete";
             this.checkBox_CheatRoullete.Size = new System.Drawing.Size(302, 19);
-            this.checkBox_CheatRoullete.TabIndex = 5;
+            this.checkBox_CheatRoullete.TabIndex = 6;
             this.checkBox_CheatRoullete.Text = "무작위 임무일 경우에도 실제 매칭된 임무 보여주기";
             this.checkBox_CheatRoullete.UseVisualStyleBackColor = true;
             this.checkBox_CheatRoullete.CheckedChanged += new System.EventHandler(this.checkBox_CheatRoullete_CheckedChanged);
@@ -364,10 +406,10 @@
             // 
             this.checkBox_FlashWindow.AutoSize = true;
             this.checkBox_FlashWindow.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.checkBox_FlashWindow.Location = new System.Drawing.Point(6, 65);
+            this.checkBox_FlashWindow.Location = new System.Drawing.Point(6, 86);
             this.checkBox_FlashWindow.Name = "checkBox_FlashWindow";
             this.checkBox_FlashWindow.Size = new System.Drawing.Size(369, 19);
-            this.checkBox_FlashWindow.TabIndex = 4;
+            this.checkBox_FlashWindow.TabIndex = 5;
             this.checkBox_FlashWindow.Text = "매칭/돌발 발생시 파이널판타지14 작업 표시줄 아이콘 깜빡이기";
             this.checkBox_FlashWindow.UseVisualStyleBackColor = true;
             this.checkBox_FlashWindow.CheckedChanged += new System.EventHandler(this.checkBox_FlashWindow_CheckedChanged);
@@ -376,28 +418,13 @@
             // 
             this.checkBox_StartupShow.AutoSize = true;
             this.checkBox_StartupShow.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.checkBox_StartupShow.Location = new System.Drawing.Point(6, 44);
+            this.checkBox_StartupShow.Location = new System.Drawing.Point(6, 65);
             this.checkBox_StartupShow.Name = "checkBox_StartupShow";
             this.checkBox_StartupShow.Size = new System.Drawing.Size(186, 19);
-            this.checkBox_StartupShow.TabIndex = 3;
+            this.checkBox_StartupShow.TabIndex = 4;
             this.checkBox_StartupShow.Text = "프로그램 시작시 이 창 보이기";
             this.checkBox_StartupShow.UseVisualStyleBackColor = true;
             this.checkBox_StartupShow.CheckedChanged += new System.EventHandler(this.checkBox_StartupShow_CheckedChanged);
-            // 
-            // checkBox_Overlay
-            // 
-            this.checkBox_Overlay.AutoSize = true;
-            this.checkBox_Overlay.Checked = true;
-            this.checkBox_Overlay.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_Overlay.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.checkBox_Overlay.Location = new System.Drawing.Point(6, 23);
-            this.checkBox_Overlay.Name = "checkBox_Overlay";
-            this.checkBox_Overlay.Size = new System.Drawing.Size(102, 19);
-            this.checkBox_Overlay.TabIndex = 1;
-            this.checkBox_Overlay.Text = "오버레이 사용";
-            this.toolTip.SetToolTip(this.checkBox_Overlay, "오버레이 UI의 좌측 막대를 이용해 드래그 할 수 있습니다.");
-            this.checkBox_Overlay.UseVisualStyleBackColor = true;
-            this.checkBox_Overlay.CheckedChanged += new System.EventHandler(this.checkBox_Overlay_CheckedChanged);
             // 
             // tabPage_3rdParty
             // 
@@ -825,7 +852,7 @@
             // 
             this.toolStripMenuItem_SelectApply.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.toolStripMenuItem_SelectApply.Name = "toolStripMenuItem_SelectApply";
-            this.toolStripMenuItem_SelectApply.Size = new System.Drawing.Size(67, 20);
+            this.toolStripMenuItem_SelectApply.Size = new System.Drawing.Size(71, 20);
             this.toolStripMenuItem_SelectApply.Text = "적용하기";
             this.toolStripMenuItem_SelectApply.Click += new System.EventHandler(this.toolStripMenuItem_SelectApply_Click);
             // 
@@ -939,18 +966,6 @@
             this.label_AboutTitle.TabIndex = 0;
             this.label_AboutTitle.Text = "VERSION STRING";
             this.label_AboutTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label_Process
-            // 
-            this.label_Process.AutoSize = true;
-            this.label_Process.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label_Process.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_Process.ForeColor = System.Drawing.Color.Gray;
-            this.label_Process.Location = new System.Drawing.Point(5, 5);
-            this.label_Process.Name = "label_Process";
-            this.label_Process.Size = new System.Drawing.Size(100, 17);
-            this.label_Process.TabIndex = 0;
-            this.label_Process.Text = "FFXIV 프로세스";
             // 
             // MainForm
             // 
@@ -1083,6 +1098,7 @@
         private System.Windows.Forms.CheckBox checkBox_Telegram;
         private LocalizableLabel label_Telegram_ChatId;
         private System.Windows.Forms.LinkLabel linkLabel_Telegram;
+        private System.Windows.Forms.CheckBox checkBox_autoHideOverlay;
     }
 }
 

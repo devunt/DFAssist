@@ -238,6 +238,9 @@ namespace App
         internal void CancelDutyFinder()
         {
             this.Invoke(CancelDutyFinderSync);
+
+            if (Settings.autoHideOverlay)
+                this.Hide();
         }
 
         internal void CancelDutyFinderSync()
@@ -269,6 +272,10 @@ namespace App
             if (accentColor == Color.DarkOrange) // 현재 타이머가 돌발이면
             {
                 accentColor = Color.Black;
+
+                // 오버레이 자동 숨기기 옵션에 숨겨주고
+                if(Settings.autoHideOverlay)
+                    this.Hide();
 
                 // 내용을 비움
                 CancelDutyFinder();

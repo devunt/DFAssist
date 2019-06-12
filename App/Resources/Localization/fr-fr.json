@@ -48,6 +48,8 @@
   "ui-settings-overlay-use": "Utiliser l'overlay",
   "ui-settings-overlay-tooltip": "Bouger l'overlay avec la barre gauche",
   "ui-settings-overlay-reset": "Rétablir",
+  "ui-settings-overlay-autohide": "Affichez la l'overlay seulement lorsqu'il y a une file d'attente ou une ALEA",
+  "ui-notification-overlay-autohide": "Cette option sera appliquée après le changement d'état de la file d'attente ou l'apparition d'un nouvel ALEA.\nLe redémarrage de l'application rend également l'appliance immédiate.\n\nEn attendant la connexion du client, la l'overlay est affichée\n(Noter à l'utilisateur que l'application fonctionne bien ou pas.).",
   "ui-settings-startupshow": "Afficher la fenêtre principale au démarrage",
   "ui-settings-iconflash": "Faire clignorer l'icône de FFXIV en cas d'ALEA/Mission",
   "ui-settings-cheatroulette": "Montrer la mission en cours d'attente lors des missions aléatoires",

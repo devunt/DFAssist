@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -85,6 +85,7 @@ namespace App
             comboBox_Language.SelectedValueChanged += comboBox_Language_SelectedValueChanged;
 
             checkBox_StartupShow.Checked = Settings.StartupShowMainForm;
+            checkBox_autoHideOverlay.Checked = Settings.autoHideOverlay;
             checkBox_FlashWindow.Checked = Settings.FlashWindow;
             checkBox_FateSound.Checked = Settings.FateSound;
             checkBox_useVPN.Checked = Settings.useVPN;
@@ -240,6 +241,18 @@ namespace App
         private void checkBox_Overlay_CheckedChanged(object sender, EventArgs e)
         {
             Settings.ShowOverlay = checkBox_Overlay.Checked;
+
+            // Disable autohide overlay function when ShowOverlay is disabled
+            if (checkBox_Overlay.Checked)
+            {
+                checkBox_autoHideOverlay.Enabled = true;
+            }
+            else
+            {
+                checkBox_autoHideOverlay.Enabled = false;
+                checkBox_autoHideOverlay.Checked = false;
+                Settings.autoHideOverlay = false;
+            }
             Settings.Save();
 
             if (Settings.ShowOverlay)
@@ -255,6 +268,20 @@ namespace App
         private void button_ResetOverlayPosition_Click(object sender, EventArgs e)
         {
             overlayForm.ResetFormLocation();
+        }
+
+        private void checkBox_autoHideOverlay_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.autoHideOverlay = checkBox_autoHideOverlay.Checked;
+            Settings.Save();
+        }
+
+        private void checkBox_autoHideOverlay_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (checkBox_autoHideOverlay.Checked)
+            {
+                LMessageBox.I("ui-notification-overlay-autohide");
+            }
         }
 
         private void checkBox_StartupShow_CheckedChanged(object sender, EventArgs e)
@@ -683,6 +710,7 @@ namespace App
             checkBox_Overlay.Text = Localization.GetText("ui-settings-overlay-use");
             toolTip.SetToolTip(checkBox_Overlay, Localization.GetText("ui-settings-overlay-tooltip"));
             button_ResetOverlayPosition.Text = Localization.GetText("ui-settings-overlay-reset");
+            checkBox_autoHideOverlay.Text = Localization.GetText("ui-settings-overlay-autohide");
             checkBox_StartupShow.Text = Localization.GetText("ui-settings-startupshow");
             checkBox_FlashWindow.Text = Localization.GetText("ui-settings-iconflash");
             checkBox_FateSound.Text = Localization.GetText("ui-settings-fatesound");
