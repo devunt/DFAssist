@@ -10,7 +10,7 @@ title: {{ site.name }}
 
 ## Information
 
-- 最新バージョン ```v20190603.1``` ([ダウンロード](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
+- 最新バージョン ```v20190612.1``` ([ダウンロード](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
 - 必要バージョン ```Microsoft .NET Framework 4.0``` ([ダウンロード](https://www.microsoft.com/ja-jp/download/details.aspx?id=17851))
 - ゲームバージョン ```Final Fantasy XIV, バージョン 4.5```
 
