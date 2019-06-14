@@ -221,7 +221,8 @@ namespace App
                         if (Settings.FATEs.Contains(code))
                         {
                             mainForm.overlayForm.SetFATEAsOccured(fate);
-                            mainForm.overlayForm.Show();
+                            if(Settings.ShowOverlay)
+                                mainForm.overlayForm.Show();
                             Log.I("l-fate-occured-info", fate.Name);
 
                             if(Settings.FateSound)
@@ -288,8 +289,9 @@ namespace App
                         state = State.QUEUED;
 
                         rouletteCode = data[20];
-
-                        mainForm.overlayForm.Show();
+                        
+                        if(Settings.ShowOverlay)
+                            mainForm.overlayForm.Show();
 
                         if (rouletteCode != 0 && (data[15] == 0 || data[15] == 64)) //무작위 임무 신청, 한국서버/글로벌 서버
                         {
