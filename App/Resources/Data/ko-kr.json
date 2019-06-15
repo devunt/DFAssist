@@ -1,6 +1,6 @@
 ﻿{
   // 버전
-  "version": "20190607.2",
+  "version": "20190615.1",
 
   // 임무
   "instances": {
@@ -2106,27 +2106,27 @@
       "dps": "0"
     },
 
-    // 한섭에는 심의상 마작 안 나올 가능성이 크지만 일단 추가 : 작패유희
+    // 작패유희
     "643": {
-      "name": "Novice Mahjong (Ranked)",
+      "name": "작패유희: 일반 탁자 (등급전)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "644": {
-      "name": "Advanced Mahjong (Ranked)",
+      "name": "작패유희: 유단자 탁자 (등급전)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "645": {
-      "name": "Four-player Mahjong (Kuitan Enabled)",
+      "name": "작패유희: 4인용 탁자 (부르기 단요구 있음)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "650": {
-      "name": "Four-player Mahjong (Kuitan Disabled)",
+      "name": "작패유희: 4인용 탁자 (부르기 단요구 없음)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
