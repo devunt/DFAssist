@@ -1,6 +1,6 @@
 ﻿{
   // 버전
-  "version": "20190615.1",
+  "version": "20190618.1",
 
   // 임무
   "instances": {
@@ -1381,7 +1381,7 @@
       "dps": "4"
     },
 
-    // 4.5 Raids
+    // 4.5 레이드
     "636": {
       "name": "오본느 수도원",
       "tank": "3",
@@ -1478,151 +1478,151 @@
 
     // 4.5 청마도사
     "610": {
-      "name": "All's Well That Starts Well",
+      "name": "데뷔전",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "612": {
-      "name": "Much Ado About Pudding",
+      "name": "후식은 푸딩으로",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "613": {
-      "name": "Waiting for Golem",
+      "name": "최초의 암벽",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "614": {
-      "name": "Gentlemen Prefer Swords",
+      "name": "괴력의 철거인",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "615": {
-      "name": "The Threepenny Turtles",
+      "name": "길거북 형제",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "616": {
-      "name": "Eye Society",
+      "name": "눈먼 공포",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "617": {
-      "name": "A Chorus Slime",
+      "name": "슬라임 대소동",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "618": {
-      "name": "Bomb-edy of Errors",
+      "name": "푸른 이빨, 붉은 이빨",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "619": {
-      "name": "To Kill a Mockingslime",
+      "name": "무지개맛 푸딩",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "620": {
-      "name": "A Little Knight Music",
+      "name": "비뚤어진 어둠",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "621": {
-      "name": "Some Like It Excruciatingly Hot",
+      "name": "폭발하는 봄",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "622": {
-      "name": "The Plant-om of the Opera",
+      "name": "기생식물",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "623": {
-      "name": "Beauty and a Beast",
+      "name": "붉은 죽음의 요희",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "624": {
-      "name": "Blobs in the Woods",
+      "name": "죽어도 같이 죽어",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "625": {
-      "name": "The Me Nobody Nodes",
+      "name": "알라그의 위협",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "626": {
-      "name": "Sunset Bull-evard",
+      "name": "완력의 야수왕",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "627": {
-      "name": "The Sword of Music",
+      "name": "강유의 철거인",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "628": {
-      "name": "Midsummer Night's Explosion",
+      "name": "폭파 데스매치",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "629": {
-      "name": "On a Clear Day You Can Smell Forever",
+      "name": "매혹적인 향기",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "630": {
-      "name": "Miss Typhon",
+      "name": "명콤비",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "631": {
-      "name": "Chimera on a Hot Tin Roof",
+      "name": "분노한 합성수",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "632": {
-      "name": "Here Comes the Boom",
+      "name": "쌍소멸 폭발",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "633": {
-      "name": "Behemoths and Broomsticks",
+      "name": "마수의 황태자",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "634": {
-      "name": "Amazing Technicolor Pit Fiends",
+      "name": "기괴한 인형사",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "635": {
-      "name": "Dirty Rotten Azulmagia",
+      "name": "사악한 청마도사",
       "tank": "0",
       "healer": "0",
       "dps": "0"
