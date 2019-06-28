@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190628.1",
+  "version": "20190628.2",
 
   // Duty
   "instances": {
@@ -1390,6 +1390,12 @@
 
     // 5.0 Shadowbringers
     // 5.0 Dungeons
+    "676": {
+      "name": "殺戮郷村 ホルミンスター",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
     "649": {
       "name": "水妖幻園 ドォーヌ・メグ",
       "tank": "1",
