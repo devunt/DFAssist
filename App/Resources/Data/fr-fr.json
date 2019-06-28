@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190607.1",
+  "version": "20190628.1",
 
   // Duty
   "instances": {
@@ -1390,6 +1390,83 @@
       "dps": "15"
     },
 
+    // 5.0 Shadowbringers
+    // 5.0 Dungeons
+    "649": {
+      "name": "Dohn Mheg",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "651": {
+      "name": "L'Enchevêtrement des Qitari",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "656": {
+      "name": "le Puits de Malikah",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "659": {
+      "name": "le Mont Gulg",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "652": {
+      "name": "Amaurote",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "655": {
+      "name": "la Macle de Syrcus",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "661": {
+      "name": "Akadaemia Anydre",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 5.0 Trials
+    "657": {
+      "name": "la Valse du Monarque",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "658": {
+      "name": "la Valse du Monarque (extrême)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "666": {
+      "name": "La Couronne de l'Immaculé",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "667": {
+      "name": "La Couronne de l'Immaculé (extrême)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "687": {
+      "name": "Le Râle de l'Agonie",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
 
     // Guildhests
     "43": {
@@ -2143,13 +2220,13 @@
   // Duty Roulette
   "roulettes": {
     "1": "Mission aléatorie: gain de niveaux",
-    "2": "Mission aléatorie: donjons nv 50/60",
+    "2": "Mission aléatorie: donjons nv 50/60/70",
     "3": "Mission aléatorie: épopée",
     "4": "Mission aléatorie: opérations de guilde",
     "5": "Mission aléatorie: expert",
     "6": "Mission aléatorie: défis",
     "7": "Mission aléatorie: Front",
-    "8": "Mission aléatorie: donjons nv 70",
+    "8": "Mission aléatorie: donjons nv 80",
     "9": "Mission aléatorie: Mentor",
     "10": "The Feast (8x8/entraînement)",
     "13": "The Feast (4x4/classé)",
