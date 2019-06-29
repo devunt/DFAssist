@@ -70,7 +70,7 @@ Logs on application window helps a lot with problem solving. Attaching logs is h
 
 ![Application UI 1](https://i.imgur.com/W3K1k76.png)  
 ![Application UI 2](https://i.imgur.com/xdBmYgc.png)  
-![Application UI 3](https://i.imgur.com/SnvH7Zf.png)
+![Application UI 3](https://i.imgur.com/eC8zs5B.png)
 
 ### Tray Icon
 
