@@ -1,6 +1,6 @@
 ﻿{
   // 버전
-  "version": "20190702.1",
+  "version": "20190705.1",
 
   // 임무
   "instances": {
@@ -3441,29 +3441,13 @@
     "500": {
       "name": "칠흑의 반역자",
       "fates": {
-        "1427": "Ondo of Blood",
-        "1428": "Lookin' Back on the Track",
-        "1431": "Nothing Like a Trappin' Life",
-        "1432": "The Head, the Tail, the Whole Damned Thing",
-        "1438": "Hydrozoan of the Enders",
-        "1439": "A Lot to Swallow",
-        "1440": "Natural Prawn Killers",
-        "1445": "Tojil War",
-        "1446": "Tojil Annihilation",
-        "1447": "Tojil Annihilation",
+        // 아직까지 알려지지 않았거나 특정 지역 없음
         "1448": "Tojil Carnage",
         "1449": "Tojil Carnage",
         "1450": "Tojil Eclipse",
-        "1487": "Fuath to Be Reckoned With",
-        "1489": "Bear Necessities",
-        "1503": "Toxic Nightshade",
-        "1504": "Deadly Nightshade",
-        "1513": "Cactus Makes Perfect",
-        "1514": "Theft from Above",
         "1528": "Tojil Carnage",
         "1529": "Tojil Carnage",
-        "1530": "Tojil Eclipse",
-        "1531": "Great Daens"
+        "1530": "Tojil Eclipse"
       }
     },
     "501": {
@@ -3481,6 +3465,8 @@
         "1507": "A Beast among Men",
         "1508": "Little Gate of Horrors",
         "1509": "Behind Anemone Lines",
+        "1503": "Toxic Nightshade",
+        "1504": "Deadly Nightshade",
         "1510": "Calm a Chameleon"
       }
     },
@@ -3489,7 +3475,7 @@
       "fates": {
         "1462": "Foes Most Formidable",
         "1463": "A Family Most Formidable",
-        "1464": "? - A Finale Most Formidable",
+        "1464": "A Finale Most Formidable",
         "1465": "Shadow Over Stilltide",
         "1466": "Shadow Over Stilltide",
         "1467": "The Wright Stuff",
@@ -3524,6 +3510,8 @@
         "1524": "Baddie Longlegs",
         "1525": "The Odd Couple",
         "1526": "Anti-eruption Measures",
+        "1514": "Theft from Above",
+        "1513": "Cactus Makes Perfect",
         "1527": "Let's Dance (with Swords)"
       }
     },
@@ -3545,6 +3533,9 @@
         "1494": "Thrice Upon a Time",
         "1495": "Once Upon a Time",
         "1532": "Fuath of Habit",
+        "1531": "Great Daens",
+        "1489": "Bear Necessities",
+        "1487": "Fuath to Be Reckoned With",
         "1533": "Back and Fuath"
       }
     },
@@ -3565,6 +3556,9 @@
         "1458": "Nest of Kin",
         "1459": "Monkeying Around",
         "1460": "Shot Through the Hart",
+        "1445": "Tojil War",
+        "1446": "Tojil Annihilation",
+        "1447": "Tojil Annihilation",
         "1461": "Attack the Block"
       }
     },
@@ -3578,6 +3572,13 @@
         "1434": "The Seashells He Sells",
         "1435": "Pearls Apart",
         "1436": "My Friend's Enemy is Anemone of Mine",
+        "1427": "Ondo of Blood",
+        "1428": "Lookin' Back on the Track",
+        "1431": "Nothing Like a Trappin' Life",
+        "1432": "The Head, the Tail, the Whole Damned Thing",
+        "1438": "Hydrozoan of the Enders",
+        "1439": "A Lot to Swallow",
+        "1440": "Natural Prawn Killers",
         "1437": "The Nets Best Thing"
       }
     },
