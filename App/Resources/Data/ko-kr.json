@@ -1,6 +1,6 @@
 ﻿{
   // 버전
-  "version": "20190705.1",
+  "version": "20190705.2",
 
   // 임무
   "instances": {
@@ -3438,18 +3438,6 @@
         "1425": "Drink Me"
       }
     },
-    "500": {
-      "name": "칠흑의 반역자",
-      "fates": {
-        // 아직까지 알려지지 않았거나 특정 지역 없음
-        "1448": "Tojil Carnage",
-        "1449": "Tojil Carnage",
-        "1450": "Tojil Eclipse",
-        "1528": "Tojil Carnage",
-        "1529": "Tojil Carnage",
-        "1530": "Tojil Eclipse"
-      }
-    },
     "501": {
       "name": "레이크랜드",
       "fates": {
@@ -3460,13 +3448,13 @@
         "1500": "Pick-up Sticks",
         "1501": "Flowering Nightshade",
         "1502": "Subtle Nightshade",
+        "1503": "Toxic Nightshade",
+        "1504": "Deadly Nightshade",
         "1505": "Economic Peril",
         "1506": "Don't Feed the Gremlins",
         "1507": "A Beast among Men",
         "1508": "Little Gate of Horrors",
         "1509": "Behind Anemone Lines",
-        "1503": "Toxic Nightshade",
-        "1504": "Deadly Nightshade",
         "1510": "Calm a Chameleon"
       }
     },
@@ -3498,6 +3486,8 @@
       "fates": {
         "1511": "Scavengers Hunted",
         "1512": "Reptilian Roadblock",
+        "1513": "Cactus Makes Perfect",
+        "1514": "Theft from Above",
         "1515": "Sand and Deliver",
         "1516": "This Time, It's Personal",
         "1517": "Armadillo Peccadillo",
@@ -3510,8 +3500,6 @@
         "1524": "Baddie Longlegs",
         "1525": "The Odd Couple",
         "1526": "Anti-eruption Measures",
-        "1514": "Theft from Above",
-        "1513": "Cactus Makes Perfect",
         "1527": "Let's Dance (with Swords)"
       }
     },
@@ -3525,17 +3513,17 @@
         "1484": "Brute Fuath",
         "1485": "Breaking the Fuath Wall",
         "1486": "Go Fuath a Conqueror",
+        "1487": "Fuath to Be Reckoned With",
         "1488": "Mad Magic",
+        "1489": "Bear Necessities",
         "1490": "Weave 'Em and Weep",
         "1491": "Locus Terribilis",
         "1492": "Twice Upon a Time",
         "1493": "Hedge Mazed",
         "1494": "Thrice Upon a Time",
         "1495": "Once Upon a Time",
-        "1532": "Fuath of Habit",
         "1531": "Great Daens",
-        "1489": "Bear Necessities",
-        "1487": "Fuath to Be Reckoned With",
+        "1532": "Fuath of Habit",
         "1533": "Back and Fuath"
       }
     },
@@ -3546,6 +3534,15 @@
         "1442": "Creepy Crawlers",
         "1443": "Pluck of the Draw",
         "1444": "The End of the Sentry",
+        "1445": "Tojil War",
+        "1446": "Tojil Annihilation",
+        "1447": "Tojil Annihilation",
+        "1448": "Tojil Carnage",
+        "1449": "Tojil Carnage",
+        "1450": "Tojil Eclipse",
+        "1528": "Tojil Carnage",
+        "1529": "Tojil Carnage",
+        "1530": "Tojil Eclipse",
         "1451": "I'll Be Bark",
         "1452": "We Are Venom",
         "1453": "Picking up the Pieces",
@@ -3556,9 +3553,6 @@
         "1458": "Nest of Kin",
         "1459": "Monkeying Around",
         "1460": "Shot Through the Hart",
-        "1445": "Tojil War",
-        "1446": "Tojil Annihilation",
-        "1447": "Tojil Annihilation",
         "1461": "Attack the Block"
       }
     },
@@ -3566,20 +3560,20 @@
       "name": "템페스트",
       "fates": {
         "1426": "Where Has the Dagon",
+        "1427": "Ondo of Blood",
+        "1428": "Lookin' Back on the Track",
         "1429": "Coral Support",
         "1430": "Low Coral Fiber",
+        "1431": "Nothing Like a Trappin' Life",
+        "1432": "The Head, the Tail, the Whole Damned Thing",
         "1433": "The Devil in the Deep Blue Sea",
         "1434": "The Seashells He Sells",
         "1435": "Pearls Apart",
         "1436": "My Friend's Enemy is Anemone of Mine",
-        "1427": "Ondo of Blood",
-        "1428": "Lookin' Back on the Track",
-        "1431": "Nothing Like a Trappin' Life",
-        "1432": "The Head, the Tail, the Whole Damned Thing",
+        "1437": "The Nets Best Thing",
         "1438": "Hydrozoan of the Enders",
         "1439": "A Lot to Swallow",
-        "1440": "Natural Prawn Killers",
-        "1437": "The Nets Best Thing"
+        "1440": "Natural Prawn Killers"
       }
     },
     "1005": {

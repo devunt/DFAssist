@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190629.1",
+  "version": "20190705.1",
 
   // Duty
   "instances": {
@@ -3432,45 +3432,29 @@
         "1425": "Rien que de l'eau"
       }
     },
-    "500": {
-      "name": "Shadowbringers",
+    "501": {
+      "name": "Grand-Lac",
       "fates": {
-        "1426": "L'annonciatrice du chaos: l'ouverture de la chasse",
-        "1427": "L'annonciatrice du chaos: Zumshs la terreur des abysses",
-        "1428": "L'annonciatrice du chaos: oléofurors furax",
-        "1429": "L'annonciatrice du chaos: expédition spéléologique",
-        "1430": "L'annonciatrice du chaos: pêche aux coraux",
-        "1431": "L'annonciatrice du chaos: les rets de Zumshs",
-        "1432": "L'annonciatrice du chaos: bataille au sommet des fonds",
-        "1433": "Défi: La belle des abysses",
-        "1434": "Une histoire de coquillages",
-        "1435": "Les perles éternelles",
-        "1436": "Adieu, anémones",
-        "1437": "Filets de dambanha en tranches",
-        "1438": "Hydrozoaires protozoaires",
-        "1439": "Oiseaux de malheur",
-        "1440": "Une histoire de crustacés",
-        "1441": "Patrouille de Myalna: la maladie de l'écho",
-        "1442": "Patrouille de Myalna: les chenilles infectées",
-        "1443": "Patrouille de Myalna: en manque de plumes",
-        "1444": "Patrouille de Myalna: l'escorte du gardien ancien",
-        "1445": "Chasse de Myalna: Opération Tojil",
-        "1446": "Chasse de Myalna: à la poursuite du Tojil",
-        "1447": "Chasse de Myalna: à la poursuite du Tojil",
-        "1448": "Chasse de Myalna: un Tojil courroucé",
-        "1449": "Chasse de Myalna: un Tojil courroucé",
-        "1450": "Chasse de Myalna: l'élimination du Tojil",
-        "1451": "Défi: le tréant apyre",
-        "1452": "Arachnophobie",
-        "1453": "Flamants empoisonnés",
-        "1454": "Cuisine raptorienne",
-        "1455": "Amour et Mort",
-        "1456": "L'attaque du tomatl tueur",
-        "1457": "Défi: l'oiseau de l'ombre de la mort",
-        "1458": "Quand l'instinct se réveille",
-        "1459": "Le début d'une légende",
-        "1460": "Quilmet et Salmet",
-        "1461": "Défi: L'œil du dieu de feu",
+        "1496": "La menace des Fanes pourpres: un repaire convoité",
+        "1497": "La menace des Fanes pourpres: un repaire investi",
+        "1498": "Défi: Ophion, le reptile sanguinaire",
+        "1499": "La trahison des wargs",
+        "1500": "Dur dur d'être un bûcheron",
+        "1501": "La menace des Fanes pourpres: le bûcheron attaqué",
+        "1502": "La menace des Fanes pourpres: un vil piège",
+        "1503": "La menace des Fanes pourpres: l'insurrection",
+        "1504": "La menace des Fanes pourpres: les wargs s'en mêlent",
+        "1505": "Pour le salut du petit commerce",
+        "1506": "Pas venu ici pour souffrir",
+        "1507": "Défi: le noble Lugarhoo",
+        "1508": "La petite porte des horreurs",
+        "1509": "Il est frais, mon poisson",
+        "1510": "Défi: le Casse-noisette excédé"
+      }
+    },
+    "502": {
+      "name": "Kholusia",
+      "fates": {
         "1462": "Formidable: la menace",
         "1463": "Formidable: la filature",
         "1464": "Formidable: l'arme secrète",
@@ -3488,38 +3472,12 @@
         "1476": "Défi: Mort à Mort rampante!",
         "1477": "Bataille d'ingénieurs: automate en construction",
         "1478": "Bataille d'ingénieurs: dernière mise au point",
-        "1479": "Bataille d'ingénieurs: la lutte finale",
-        "1480": "Les frères Daen: Pixie en vue!",
-        "1481": "Les frères Daen: amaro en vue!",
-        "1482": "Les frères Daen: Nu Mou en vue!",
-        "1483": "Les frères Daen: riposte arborescente",
-        "1484": "Les frères Daen: rétribution",
-        "1485": "Les frères Daen: partie remise",
-        "1486": "Les frères Daen: Fusion!",
-        "1487": "Les frères Daen: la bataille finale",
-        "1488": "Défi: Samyaza",
-        "1489": "Ours sur un lit de rose",
-        "1490": "Floraison virulente",
-        "1491": "Défi: Nécropsychée",
-        "1492": "La Pixie butineuse et les abeilles tueuses",
-        "1493": "Amis pour la vie",
-        "1494": "La Pixie butineuse et la bête à plumes",
-        "1495": "La Pixie butineuse et l'or liquide",
-        "1496": "La menace des Fanes pourpres: un repaire convoité",
-        "1497": "La menace des Fanes pourpres: un repaire investi",
-        "1498": "Défi: Ophion, le reptile sanguinaire",
-        "1499": "La trahison des wargs",
-        "1500": "Dur dur d'être un bûcheron",
-        "1501": "La menace des Fanes pourpres: le bûcheron attaqué",
-        "1502": "La menace des Fanes pourpres: un vil piège",
-        "1503": "La menace des Fanes pourpres: l'insurrection",
-        "1504": "La menace des Fanes pourpres: les wargs s'en mêlent",
-        "1505": "Pour le salut du petit commerce",
-        "1506": "Pas venu ici pour souffrir",
-        "1507": "Défi: le noble Lugarhoo",
-        "1508": "La petite porte des horreurs",
-        "1509": "Il est frais, mon poisson",
-        "1510": "Défi: le Casse-noisette excédé",
+        "1479": "Bataille d'ingénieurs: la lutte finale"
+      }
+    },
+    "503": {
+      "name": "Amh Araeng",
+      "fates": {
         "1511": "Course au trésor: mandibules sécatrices",
         "1512": "Course au trésor: y a trop de lézards",
         "1513": "Course au trésor: une très grosse épine",
@@ -3536,41 +3494,84 @@
         "1524": "Ça casse pas trois pattes à un phorusrhacos",
         "1525": "Kurukadi et Mumba, duo de choc",
         "1526": "Exploser la gueule des huldus explosifs",
-        "1527": "Un dernier tango armé",
-        "1528": "Chasse de Myalna: un Tojil courroucé",
-        "1529": "Chasse de Myalna: un Tojil courroucé",
-        "1530": "Chasse de Myalna: l'élimination du Tojil",
-        "1531": "Les frères Daen: amaro en vue!",
-        "1532": "Les frères Daen: Nu Mou en vue!",
-        "1533": "Les frères Daen: riposte arborescente"
-      }
-    },
-    "501": {
-      "name": "Grand-Lac",
-      "fates": {
-        
-      }
-    },
-    "502": {
-      "name": "Kholusia",
-      "fates": {
-        
-      }
-    },
-    "503": {
-      "name": "Amh Araeng",
-      "fates": {
-        
+        "1527": "Un dernier tango armé"
       }
     },
     "504": {
       "name": "Il Mheg",
       "fates": {
-        
+        "1480": "Les frères Daen: Pixie en vue!",
+        "1481": "Les frères Daen: amaro en vue!",
+        "1482": "Les frères Daen: Nu Mou en vue!",
+        "1483": "Les frères Daen: riposte arborescente",
+        "1484": "Les frères Daen: rétribution",
+        "1485": "Les frères Daen: partie remise",
+        "1486": "Les frères Daen: Fusion!",
+        "1487": "Les frères Daen: la bataille finale",
+        "1488": "Défi: Samyaza",
+        "1489": "Ours sur un lit de rose",
+        "1490": "Floraison virulente",
+        "1491": "Défi: Nécropsychée",
+        "1492": "La Pixie butineuse et les abeilles tueuses",
+        "1493": "Amis pour la vie",
+        "1494": "La Pixie butineuse et la bête à plumes",
+        "1495": "La Pixie butineuse et l'or liquide",
+        "1531": "Les frères Daen: amaro en vue!",
+        "1532": "Les frères Daen: Nu Mou en vue!",
+        "1533": "Les frères Daen: riposte arborescente"
       }
     },
     "505": {
       "name": "Rak'tika",
+      "fates": {
+        "1441": "Patrouille de Myalna: la maladie de l'écho",
+        "1442": "Patrouille de Myalna: les chenilles infectées",
+        "1443": "Patrouille de Myalna: en manque de plumes",
+        "1444": "Patrouille de Myalna: l'escorte du gardien ancien",
+        "1445": "Chasse de Myalna: Opération Tojil",
+        "1446": "Chasse de Myalna: à la poursuite du Tojil",
+        "1447": "Chasse de Myalna: à la poursuite du Tojil",
+        "1448": "Chasse de Myalna: un Tojil courroucé",
+        "1449": "Chasse de Myalna: un Tojil courroucé",
+        "1450": "Chasse de Myalna: l'élimination du Tojil",
+        "1528": "Chasse de Myalna: un Tojil courroucé",
+        "1529": "Chasse de Myalna: un Tojil courroucé",
+        "1530": "Chasse de Myalna: l'élimination du Tojil",
+        "1451": "Défi: le tréant apyre",
+        "1452": "Arachnophobie",
+        "1453": "Flamants empoisonnés",
+        "1454": "Cuisine raptorienne",
+        "1455": "Amour et Mort",
+        "1456": "L'attaque du tomatl tueur",
+        "1457": "Défi: l'oiseau de l'ombre de la mort",
+        "1458": "Quand l'instinct se réveille",
+        "1459": "Le début d'une légende",
+        "1460": "Quilmet et Salmet",
+        "1461": "Défi: L'œil du dieu de feu"
+      }
+    },
+    "506": {
+      "name": "Tempest",
+      "fates": {
+        "1426": "L'annonciatrice du chaos: l'ouverture de la chasse",
+        "1427": "L'annonciatrice du chaos: Zumshs la terreur des abysses",
+        "1428": "L'annonciatrice du chaos: oléofurors furax",
+        "1429": "L'annonciatrice du chaos: expédition spéléologique",
+        "1430": "L'annonciatrice du chaos: pêche aux coraux",
+        "1431": "L'annonciatrice du chaos: les rets de Zumshs",
+        "1432": "L'annonciatrice du chaos: bataille au sommet des fonds",
+        "1433": "Défi: La belle des abysses",
+        "1434": "Une histoire de coquillages",
+        "1435": "Les perles éternelles",
+        "1436": "Adieu, anémones",
+        "1437": "Filets de dambanha en tranches",
+        "1438": "Hydrozoaires protozoaires",
+        "1439": "Oiseaux de malheur",
+        "1440": "Une histoire de crustacés"
+      }
+    },
+    "1005": {
+      "name": "Events",
       "fates": {
         
       }
