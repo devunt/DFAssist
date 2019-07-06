@@ -26,8 +26,10 @@
   "fate-preset-animus-SkywindI": "風天一巻",
   "fate-preset-animus-SkywindII": "風天二巻",
   "fate-preset-animus-SkyearthI": "土天一巻",
-  "fate-preset-Ixion": "伝説の雷馬「イクシオン」",
-  "fate-preset-Tamamo": "九尾の妖狐「玉藻御前」",
+  "fate-preset-Ixion": "伝説の雷馬「イクシオン」(湖畔地帯)",
+  "fate-preset-Tamamo": "九尾の妖狐「玉藻御前」(ヤンサ)",
+  "fate-preset-frogMount": "カエルマウント(コルシア島)",
+  "fate-preset-frogSuit": "カエル衣服(テンペスト)",
 
 
   "ui-notifymenustrip-open": "開く",

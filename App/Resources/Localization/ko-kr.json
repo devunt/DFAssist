@@ -26,8 +26,10 @@
   "fate-preset-animus-SkywindI": "바람의 서 1권",
   "fate-preset-animus-SkywindII": "바람의 서 2권",
   "fate-preset-animus-SkyearthI": "땅의 서 1권",
-  "fate-preset-Ixion": "익시온",
-  "fate-preset-Tamamo": "타마모",
+  "fate-preset-Ixion": "익시온 (호반지대)",
+  "fate-preset-Tamamo": "타마모 (얀샤)",
+  "fate-preset-frogMount": "개구리 탈 것 (콜루시아)",
+  "fate-preset-frogSuit": "개구리 옷 (템페스트)",
 
 
   "ui-notifymenustrip-open": "열기",

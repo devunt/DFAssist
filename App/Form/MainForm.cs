@@ -526,8 +526,6 @@ namespace App
 
         private void PresetAccept(int[] arr)
         {
-            FateAllUnset();
-
             foreach (var node in nodes)
             {
                 var c = ushort.Parse(node.Name);
@@ -605,6 +603,18 @@ namespace App
         private void TamamoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int[] arr = { 1106, 1107, 1108, 1109, 1110, 1111 };
+            PresetAccept(arr);
+        }
+
+        private void frogSuitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int[] arr = { 1426, 1427, 1428, 1429, 1430, 1431, 1432 };
+            PresetAccept(arr);
+        }
+
+        private void frogMountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int[] arr = { 1462, 1463, 1464, 1477, 1478, 1479 };
             PresetAccept(arr);
         }
 
@@ -746,6 +756,8 @@ namespace App
             bookOfSkyearthIToolStripMenuItem.Text = Localization.GetText("fate-preset-animus-SkyearthI");
             IxionToolStripMenuItem.Text = Localization.GetText("fate-preset-Ixion");
             TamamoToolStripMenuItem.Text = Localization.GetText("fate-preset-Tamamo");
+            frogMountToolStripMenuItem.Text = Localization.GetText("fate-preset-frogMount");
+            frogSuitToolStripMenuItem.Text = Localization.GetText("fate-preset-frogSuit");
             toolStripMenuItem_SelectApply.Text = Localization.GetText("ui-fate-apply");
             label_FATEAbout.Text = Localization.GetText("ui-fate-about");
             toolStripMenuItem_LogCopy.Text = Localization.GetText("ui-logs-copy");

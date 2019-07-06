@@ -26,8 +26,10 @@
   "fate-preset-animus-SkywindI": "Book of Skywind I",
   "fate-preset-animus-SkywindII": "Book of Skywind II",
   "fate-preset-animus-SkyearthI": "Book of Skyearth I",
-  "fate-preset-Ixion": "Ixion",
-  "fate-preset-Tamamo": "Tamamo",
+  "fate-preset-Ixion": "Ixion (Les Lacs)",
+  "fate-preset-Tamamo": "Tamamo (Yanxia)",
+  "fate-preset-frogMount": "Frog Mount (Kholusia)",
+  "fate-preset-frogSuit": "Frog Suit (Tempest)",
 
 
   "ui-notifymenustrip-open": "Ouvrir",

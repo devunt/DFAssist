@@ -99,6 +99,9 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.IxionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TamamoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.frogSuitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.frogMountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_SelectApply = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage_Log = new System.Windows.Forms.TabPage();
             this.panel_LogCover = new System.Windows.Forms.Panel();
@@ -746,7 +749,10 @@
             this.bookOfSkyearthIToolStripMenuItem,
             this.toolStripSeparator1,
             this.IxionToolStripMenuItem,
-            this.TamamoToolStripMenuItem});
+            this.TamamoToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.frogMountToolStripMenuItem,
+            this.frogSuitToolStripMenuItem});
             this.presetToolStripMenuItem.Name = "presetToolStripMenuItem";
             this.presetToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.presetToolStripMenuItem.Text = "프리셋";
@@ -754,99 +760,118 @@
             // bookOfSkyfireIToolStripMenuItem
             // 
             this.bookOfSkyfireIToolStripMenuItem.Name = "bookOfSkyfireIToolStripMenuItem";
-            this.bookOfSkyfireIToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.bookOfSkyfireIToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.bookOfSkyfireIToolStripMenuItem.Text = "불의 서 1권";
             this.bookOfSkyfireIToolStripMenuItem.Click += new System.EventHandler(this.bookOfSkyfireIToolStripMenuItem_Click);
             // 
             // bookOfSkyfireIIToolStripMenuItem
             // 
             this.bookOfSkyfireIIToolStripMenuItem.Name = "bookOfSkyfireIIToolStripMenuItem";
-            this.bookOfSkyfireIIToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.bookOfSkyfireIIToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.bookOfSkyfireIIToolStripMenuItem.Text = "불의 서 2권";
             this.bookOfSkyfireIIToolStripMenuItem.Click += new System.EventHandler(this.bookOfSkyfireIIToolStripMenuItem_Click);
             // 
             // bookOfNetherfireIToolStripMenuItem
             // 
             this.bookOfNetherfireIToolStripMenuItem.Name = "bookOfNetherfireIToolStripMenuItem";
-            this.bookOfNetherfireIToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.bookOfNetherfireIToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.bookOfNetherfireIToolStripMenuItem.Text = "불의 서 3권";
             this.bookOfNetherfireIToolStripMenuItem.Click += new System.EventHandler(this.bookOfNetherfireIToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(146, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(199, 6);
             // 
             // bookOfSkyfallIToolStripMenuItem
             // 
             this.bookOfSkyfallIToolStripMenuItem.Name = "bookOfSkyfallIToolStripMenuItem";
-            this.bookOfSkyfallIToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.bookOfSkyfallIToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.bookOfSkyfallIToolStripMenuItem.Text = "물의 서 1권";
             this.bookOfSkyfallIToolStripMenuItem.Click += new System.EventHandler(this.bookOfSkyfallIToolStripMenuItem_Click);
             // 
             // bookOfSkyfallIIToolStripMenuItem
             // 
             this.bookOfSkyfallIIToolStripMenuItem.Name = "bookOfSkyfallIIToolStripMenuItem";
-            this.bookOfSkyfallIIToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.bookOfSkyfallIIToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.bookOfSkyfallIIToolStripMenuItem.Text = "물의 서 2권";
             this.bookOfSkyfallIIToolStripMenuItem.Click += new System.EventHandler(this.bookOfSkyfallIIToolStripMenuItem_Click);
             // 
             // bookOfNetherfireIToolStripMenuItem1
             // 
             this.bookOfNetherfireIToolStripMenuItem1.Name = "bookOfNetherfireIToolStripMenuItem1";
-            this.bookOfNetherfireIToolStripMenuItem1.Size = new System.Drawing.Size(149, 22);
+            this.bookOfNetherfireIToolStripMenuItem1.Size = new System.Drawing.Size(202, 22);
             this.bookOfNetherfireIToolStripMenuItem1.Text = "물의 서 3권";
             this.bookOfNetherfireIToolStripMenuItem1.Click += new System.EventHandler(this.bookOfNetherfireIToolStripMenuItem1_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(146, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(199, 6);
             // 
             // bookOfSkywindIToolStripMenuItem
             // 
             this.bookOfSkywindIToolStripMenuItem.Name = "bookOfSkywindIToolStripMenuItem";
-            this.bookOfSkywindIToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.bookOfSkywindIToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.bookOfSkywindIToolStripMenuItem.Text = "바람의 서 1권";
             this.bookOfSkywindIToolStripMenuItem.Click += new System.EventHandler(this.bookOfSkywindIToolStripMenuItem_Click);
             // 
             // bookOfSkywindIIToolStripMenuItem
             // 
             this.bookOfSkywindIIToolStripMenuItem.Name = "bookOfSkywindIIToolStripMenuItem";
-            this.bookOfSkywindIIToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.bookOfSkywindIIToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.bookOfSkywindIIToolStripMenuItem.Text = "바람의 서 2권";
             this.bookOfSkywindIIToolStripMenuItem.Click += new System.EventHandler(this.bookOfSkywindIIToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(146, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(199, 6);
             // 
             // bookOfSkyearthIToolStripMenuItem
             // 
             this.bookOfSkyearthIToolStripMenuItem.Name = "bookOfSkyearthIToolStripMenuItem";
-            this.bookOfSkyearthIToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.bookOfSkyearthIToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.bookOfSkyearthIToolStripMenuItem.Text = "땅의 서 1권";
             this.bookOfSkyearthIToolStripMenuItem.Click += new System.EventHandler(this.bookOfSkyearthIToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(146, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(199, 6);
             // 
             // IxionToolStripMenuItem
             // 
             this.IxionToolStripMenuItem.Name = "IxionToolStripMenuItem";
-            this.IxionToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.IxionToolStripMenuItem.Text = "익시온";
+            this.IxionToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.IxionToolStripMenuItem.Text = "익시온 (호반지대)";
             this.IxionToolStripMenuItem.Click += new System.EventHandler(this.IxionToolStripMenuItem_Click);
             // 
             // TamamoToolStripMenuItem
             // 
             this.TamamoToolStripMenuItem.Name = "TamamoToolStripMenuItem";
-            this.TamamoToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.TamamoToolStripMenuItem.Text = "타마모";
+            this.TamamoToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.TamamoToolStripMenuItem.Text = "타마모 (얀샤)";
             this.TamamoToolStripMenuItem.Click += new System.EventHandler(this.TamamoToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(199, 6);
+            // 
+            // frogSuitToolStripMenuItem
+            // 
+            this.frogSuitToolStripMenuItem.Name = "frogSuitToolStripMenuItem";
+            this.frogSuitToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.frogSuitToolStripMenuItem.Text = "개구리 옷 (템페스트)";
+            this.frogSuitToolStripMenuItem.Click += new System.EventHandler(this.frogSuitToolStripMenuItem_Click);
+            // 
+            // frogMountToolStripMenuItem
+            // 
+            this.frogMountToolStripMenuItem.Name = "frogMountToolStripMenuItem";
+            this.frogMountToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.frogMountToolStripMenuItem.Text = "개구리 탈 것 (콜루시아)";
+            this.frogMountToolStripMenuItem.Click += new System.EventHandler(this.frogMountToolStripMenuItem_Click);
             // 
             // toolStripMenuItem_SelectApply
             // 
@@ -1099,6 +1124,9 @@
         private LocalizableLabel label_Telegram_ChatId;
         private System.Windows.Forms.LinkLabel linkLabel_Telegram;
         private System.Windows.Forms.CheckBox checkBox_autoHideOverlay;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem frogSuitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem frogMountToolStripMenuItem;
     }
 }
 
