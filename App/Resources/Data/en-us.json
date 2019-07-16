@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190705.2",
+  "version": "20190716.1",
 
   // Duty
   "instances": {
@@ -1472,6 +1472,33 @@
       "dps": "4"
     },
     
+    // 5.01 Raids
+
+    "653": {
+      "name": "Eden's Gate: Resurrection",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "684": {
+      "name": "Eden's Gate: Descent",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "682": {
+      "name": "Eden's Gate: Inundation",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "689": {
+      "name": "Eden's Gate: Sepulture",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
 
     // Guildhests
     "43": {
