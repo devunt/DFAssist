@@ -89,13 +89,13 @@
   "ui-logs-copy": "Copy Logs",
   "ui-logs-clear": "Clear",
 
-  "ui-info-about": "[Mitwirkender]\n유채색\nLaiglinne\nHibiyasleep\nAlex00728\n\n[Urheberrechte]\nAll company, product, system names are\n registered or unregistered trademarks of their respective owners.\n(C)2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by ACTOZ SOFT.",
+  "ui-info-about": "[Mitwirkender]\n유채색\nLaiglinne\nHibiyasleep\nAlex00728 (Jaehyuk-Lee)\n\n[Urheberrechte]\nAll company, product, system names are\n registered or unregistered trademarks of their respective owners.\n(C)2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by ACTOZ SOFT.",
 
   "ui-msgbox-title-info": "DFA Notice",
   "ui-msgbox-title-warning": "DFA warning",
   "ui-msgbox-title-error": "DFA error",
 
-  "ui-language-changed": "Language changed to Deutsch. Deutsch UI needs translation.\nOnly Duty/FATE data will be shown in Deutsch.\n\nPlease restart the application for it to fully take effect.",
+  "ui-language-changed": "Language changed to Deutsch. Deutsch UI needs translation.\nOnly Duty/FATE data will be shown in Deutsch.\nHelp translating. See Github repository linked in information tab.\n\nPlease restart the application for it to fully take effect.",
 
   "ui-clipboard-copied": "Copied to clipboard.",
 
