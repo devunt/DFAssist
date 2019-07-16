@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190716.1",
+  "version": "20190716.2",
 
   // Duty
   "instances": {
@@ -1349,8 +1349,6 @@
     },
 
     // 4.45
-    // Read the KR Script.
-
     "595": {
       "name": "Kugane Ohashi",
       "tank": "2",
@@ -1737,9 +1735,6 @@
       "healer": "0",
       "dps": "0"
     },
-
-
-    // Blue Mage 4.5x
 
 
     // Novice Training
@@ -2278,7 +2273,7 @@
     "10": "The Feast (8 on 8) - Training",
     "13": "The Feast (4 on 4) - Ranked",
     "15": "Duty Roulette: Alliance Raids",
-    "17": "Duty Roulette: Raids"
+    "17": "Duty Roulette: Normal Raids"
   },
 
   // FATEs
@@ -2286,12 +2281,8 @@
     "134": {
       "name": "Middle La Noscea",
       "fates": {
-        "533": "Return of the King",
         "649": "Sister Crustacean",
-        "687": "Embiggened Spriggans",
         "688": "Tower of Power",
-        "693": "Stay Frosty",
-        "717": "Gloria in Eggcelsis",
         "220": "Menuis at Work",
         "221": "Overnight Migration",
         "222": "Go Wespe",
@@ -2318,12 +2309,7 @@
         "262": "Don't Drink the Water",
         "264": "Enter Beastman",
         "265": "One Pickman Enters",
-        "534": "Return of the King",
         "333": "Under the Bridge",
-        "666": "Brick by Brick",
-        "667": "Brick by Stone Brick",
-        "694": "Stay Frosty",
-        "718": "Gloria in Eggcelsis",
         "245": "One Prince",
         "246": "Fight the Flower",
         "249": "You Call That a Toad",
@@ -2339,7 +2325,6 @@
         "271": "Thrill of the Hunt",
         "272": "The Pelican Briefing",
         "274": "Them",
-        "532": "Return of the King",
         "278": "Careless Whiskers",
         "279": "No Lip",
         "280": "Jewels of the Isle",
@@ -2355,13 +2340,6 @@
         "566": "Cliff Hanger",
         "334": "Consigned, Sealed, and Undelivered",
         "335": "It's Not Lupus",
-        "913": "The Sarong Song",
-        "914": "The Belle of the Beach",
-        "915": "Sparking Up the Wrong Beach",
-        "916": "It Came from Beneath the Deep",
-        "917": "Life's a Beach",
-        "918": "Feeling Groggy",
-        "689": "Embiggened Spriggans",
         "690": "Tower of Power",
         "701": "What's Yours Is Mine"
       }
@@ -2380,7 +2358,6 @@
         "577": "The King's Justice",
         "578": "Making Waves",
         "650": "Tender Buttons",
-        "702": "Eggcelsior",
         "289": "Absolutely, Positively",
         "290": "Tender Buttons",
         "291": "The Killing Fields",
@@ -2408,11 +2385,6 @@
         "323": "Giant Enemy Crab",
         "329": "Shell Shocked",
         "331": "Peeping Ja",
-        "332": "Hop, Skip, and a Jump",
-        "668": "Brick by Brick",
-        "669": "Brick by Stone Brick",
-        "670": "Brick by Brick",
-        "671": "Brick by Gold Brick",
         "703": "What's Yours Is Mine",
         "451": "Poor Maid's Mess",
         "452": "Poor Maid's Mishap",
@@ -2461,8 +2433,6 @@
         "361": "Pound for Pound",
         "366": "He's Got Legs",
         "367": "Staying Dead",
-        "911": "Recurring Bugs",
-        "683": "Embiggened Spriggans",
         "684": "Tower of Power",
         "704": "What's Yours Is Mine"
       }
@@ -2470,7 +2440,6 @@
     "141": {
       "name": "Central Thanalan",
       "fates": {
-        "535": "Return of the King",
         "370": "Something to Prove",
         "373": "Like an Eft out of Water",
         "374": "Wrecked Rats",
@@ -2483,25 +2452,18 @@
         "383": "Big Time",
         "385": "Cold-blooded",
         "389": "A Warm Welcome",
-        "393": "Leaving the Nest",
-        "912": "Recurring Bugs",
-        "660": "Brick by Brick",
-        "661": "Brick by Stone Brick",
-        "695": "Stay Frosty",
-        "719": "Gloria in Eggcelsis"
+        "393": "Leaving the Nest"
       }
     },
     "145": {
       "name": "Eastern Thanalan",
       "fates": {
-        "536": "Return of the King",
         "540": "Quartz Coupling",
         "541": "A Man Rides Through",
         "542": "Bad Hair Day",
         "543": "The Big Bagoly Theory",
         "394": "Men Who See Goats",
         "395": "License to Quill",
-        "652": "Lightning Strikes - Armored Beast",
         "397": "Westward Bound",
         "398": "Bad Camp",
         "400": "Bazaar Blood Triangle",
@@ -2512,14 +2474,11 @@
         "409": "Desert Rose",
         "412": "Almost Paradise",
         "413": "Deep in the Heart of Sagolii",
-        "696": "Stay Frosty",
         "191": "Attack on Highbridge: Prelude",
         "192": "Attack on Highbridge: Act I",
         "193": "Attack on Highbridge: Act II",
         "194": "Attack on Highbridge: Act III",
-        "195": "Attack on Highbridge: Denouement",
-        "705": "Eggcelsior",
-        "720": "Gloria in Eggcelsis"
+        "195": "Attack on Highbridge: Denouement"
       }
     },
     "146": {
@@ -2537,8 +2496,6 @@
         "555": "Fallen Corpses Writhe in Style",
         "557": "Quenching the Flame",
         "558": "He's a Firestarter",
-        "651": "Lightning Strikes - Armored Beast",
-        "685": "Embiggened Spriggans",
         "686": "Tower of Power",
         "706": "What's Yours Is Mine",
         "419": "Adventures in Throat Slitting",
@@ -2584,7 +2541,6 @@
     "148": {
       "name": "Central Shroud",
       "fates": {
-        "537": "Return of the King",
         "600": "The Lindwurm Has Turned",
         "601": "What's Your Poison",
         "602": "Revenant Things",
@@ -2608,9 +2564,6 @@
         "140": "Spirithold Run",
         "141": "Love is in the Air",
         "142": "There's Something about Lou",
-        "672": "Brick by Brick",
-        "673": "Brick by Stone Brick",
-        "697": "Stay Frosty",
         "707": "What's Yours Is Mine",
         "196": "Steel Reign",
         "197": "Steel Reign",
@@ -2641,7 +2594,6 @@
         "150": "Jack of All Trades",
         "151": "줄다리 사투",
         "152": "Protecting the Patch",
-        "679": "Embiggened Spriggans",
         "680": "Tower of Power",
         "691": "A Wrench in the Works",
         "692": "What a Boar",
@@ -2678,7 +2630,6 @@
         "170": "To Whom the Toll Goes",
         "171": "Eat In, Hide Out",
         "172": "Robbin' Goblins",
-        "681": "Embiggened Spriggans",
         "682": "Tower of Power",
         "190": "Where the Stone Rolls",
         "708": "What's Yours Is Mine",
@@ -2692,15 +2643,10 @@
     "154": {
       "name": "North Shroud",
       "fates": {
-        "538": "Return of the King",
         "631": "Don't Disturb This Grove",
         "632": "Rude Awakening",
         "633": "Air Supply",
         "634": "Smells Like Tree Spirit",
-        "674": "Brick by Brick",
-        "675": "Brick by Stone Brick",
-        "676": "Brick by Brick",
-        "677": "Brick by Gold Brick",
         "174": "No Birds Allowed",
         "178": "Dschubba Snacks",
         "179": "Now Fall",
@@ -2708,24 +2654,18 @@
         "183": "Breaking Bud",
         "184": "The Magical Fruit",
         "185": "Micromanaging",
-        "698": "Stay Frosty",
         "187": "The Big Issue",
         "188": "It Ziz What It Is",
         "189": "Hare Today",
         "205": "Steel Reign",
         "206": "Steel Reign",
         "207": "Steel Reign",
-        "722": "Gloria in Eggcelsis",
         "216": "Waiting for a Moon to Fall"
       }
     },
     "155": {
       "name": "Coerthas Central Highlands",
       "fates": {
-        "653": "Lightning Strikes - Dread on Arrival",
-        "654": "Lightning Strikes - Dread on Arrival",
-        "699": "Stay Frosty",
-        "709": "Eggcelsior",
         "460": "Twelve Ilms of Snow",
         "463": "Baa Baa Black Sheep",
         "464": "Gavial",
@@ -2781,11 +2721,7 @@
         "526": "Home Is Where the Horn Is",
         "527": "Gone with the Shadow",
         "529": "The Prodigal Son",
-        "530": "V for Vinedetta",
-        "655": "Lightning Strikes - Anubys Assault",
-        "656": "Lightning Strikes - Anubys Assault",
-        "657": "Lightning Strikes - On Wings of Chaos",
-        "658": "Lightning Strikes - On Wings of Chaos"
+        "530": "V for Vinedetta"
       }
     },
     "397": {

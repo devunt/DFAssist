@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190716.1",
+  "version": "20190716.2",
 
   // Duty
   "instances": {
@@ -1742,9 +1742,6 @@
     },
 
 
-    // Blue Mage 4.5x
-
-
     // Novice Training
     "151": {
       "name": "Éviter les attaques à aire d'effet",
@@ -2291,12 +2288,8 @@
     "134": {
       "name": "la Noscea centrale",
       "fates": {
-        "533": "Le retour d'un roi",
         "649": "La famille avant tout",
-        "687": "Manigances manifestes: quand la magie fait rage",
         "688": "Manigances manifestes: la tour infernale",
-        "693": "L'effet boule de neige",
-        "717": "La chasse aux Fabulœufs",
         "220": "Défi: Menuis le terrible",
         "221": "Migration nocturne",
         "222": "Ça va piquer",
@@ -2323,12 +2316,7 @@
         "262": "Eau non potable",
         "264": "L'éveil des bêtes",
         "265": "Bonne pioche",
-        "534": "Le retour d'un roi",
         "333": "Défi: lien brisé",
-        "666": "Fort comme une brique: golems",
-        "667": "Fort comme une brique: golem de pierre",
-        "694": "L'effet boule de neige",
-        "718": "La chasse aux Fabulœufs",
         "245": "Défi: le prince",
         "246": "Dangereux végétaux",
         "249": "Problème de nuisibles",
@@ -2344,7 +2332,6 @@
         "271": "Peur du vide",
         "272": "Appel aux pélicans",
         "274": "Microcosme",
-        "532": "Le retour d'un roi",
         "278": "Maudites moustaches",
         "279": "Colibris voleurs",
         "280": "Défi: voler aux riches",
@@ -2360,13 +2347,6 @@
         "566": "Quand le liège assiège",
         "334": "Complainte d'une fille de choix",
         "335": "Défi: cancer, le casque de mort",
-        "913": "Défi: le regard froid du Mamool Ja",
-        "914": "Ce n'est qu'un amour de vacances",
-        "915": "Jouer avec le feu",
-        "916": "Défi: dressé contre son maître",
-        "917": "Dragueurs de bac à sable",
-        "918": "Des bouteilles à la mer",
-        "689": "Manigances manifestes: quand la magie fait rage",
         "690": "Manigances manifestes: la tour infernale",
         "701": "Ce qui est à nous est à nous"
       }
@@ -2385,7 +2365,6 @@
         "577": "Défi: mante à l'eau",
         "578": "Défi: le messager des vagues",
         "650": "Défi: volatile carnivore",
-        "702": "Attention au cholestérol!",
         "289": "Livraison de missive",
         "290": "Défi: volatile carnivore",
         "291": "Sauvagerie animale",
@@ -2414,10 +2393,6 @@
         "329": "Défi: prudence avec l'eau chaude...",
         "331": "Défi: un baigneur gênant",
         "332": "Trop d'œufs, bonjour les dégâts",
-        "668": "Fort comme une brique: golems",
-        "669": "Fort comme une brique: golem de pierre",
-        "670": "Fort comme une brique: golems",
-        "671": "Fort comme une brique: golem d'or",
         "703": "Ce qui est à nous est à nous",
         "451": "Pauvre hameau: des rats qui grignotent",
         "452": "Pauvre hameau: des Kobolds qui saccagent",
@@ -2466,8 +2441,6 @@
         "361": "Coup sur coup",
         "366": "Défi: le monstre aux grandes pattes",
         "367": "Retour à la mort",
-        "911": "Corriger les bugs",
-        "683": "Manigances manifestes: quand la magie fait rage",
         "684": "Manigances manifestes: la tour infernale",
         "704": "Ce qui est à nous est à nous"
       }
@@ -2475,7 +2448,6 @@
     "141": {
       "name": "Thanalan central",
       "fates": {
-        "535": "Le retour d'un roi",
         "370": "Défi: quelque chose à prouver",
         "373": "Comme un triton hors de l'eau",
         "374": "Ivres comme des rats",
@@ -2488,25 +2460,18 @@
         "383": "Massacre de volatiles",
         "385": "Défi: cruelle créature",
         "389": "Défi: un accueil brûlant",
-        "393": "Défi: sortie du nid",
-        "912": "Corriger les bugs",
-        "660": "Fort comme une brique: golems",
-        "661": "Fort comme une brique: golem de pierre",
-        "695": "L'effet boule de neige",
-        "719": "La chasse aux Fabulœufs"
+        "393": "Défi: sortie du nid"
       }
     },
     "145": {
       "name": "Thanalan oriental",
       "fates": {
-        "536": "Le retour d'un roi",
         "540": "Quitte ou doblyn",
         "541": "De l'autre côté du miroir",
         "542": "Défi: pelote en colère",
         "543": "Défi: se forger des chimères",
         "394": "Des chèvres voraces",
         "395": "De mortels piquants",
-        "652": "Retour d'éclair: créature inconnue",
         "397": "En route vers l'ouest",
         "398": "Défi: destruction de camp",
         "400": "Quel bazar",
@@ -2517,14 +2482,11 @@
         "409": "Rose des sables",
         "412": "Le prix de l'eau",
         "413": "Les longues-cornes se cachent pour mourir",
-        "696": "L'effet boule de neige",
         "191": "Assaut sur Le Viaduc: prélude",
         "192": "Assaut sur Le Viaduc: acte I",
         "193": "Assaut sur Le Viaduc: acte II",
         "194": "Assaut sur Le Viaduc: acte III",
-        "195": "Assaut sur Le Viaduc: dénouement",
-        "705": "Attention au cholestérol!",
-        "720": "La chasse aux Fabulœufs"
+        "195": "Assaut sur Le Viaduc: dénouement"
       }
     },
     "146": {
@@ -2542,8 +2504,6 @@
         "555": "D'élégants morts-vivants",
         "557": "L'élite des Crocs",
         "558": "Défi: l'attiseur des flammes infernales",
-        "651": "Retour d'éclair: créature inconnue",
-        "685": "Manigances manifestes: quand la magie fait rage",
         "686": "Manigances manifestes: la tour infernale",
         "706": "Ce qui est à nous est à nous",
         "419": "Défi: mise à mort",
@@ -2589,7 +2549,6 @@
     "148": {
       "name": "Forêt centrale",
       "fates": {
-        "537": "Le retour d'un roi",
         "600": "Mornes lindwurms",
         "601": "Soigner le mal par le mal",
         "602": "Départs",
@@ -2613,9 +2572,6 @@
         "140": "Les évadés",
         "141": "Il y a de l'amour dans l'air",
         "142": "Défi: Lou y es-tu?",
-        "672": "Fort comme une brique: golems",
-        "673": "Fort comme une brique: golem de pierre",
-        "697": "L'effet boule de neige",
         "707": "Ce qui est à nous est à nous",
         "196": "Défi: le Chevalier des ombres",
         "197": "Défi: le Chevalier des ombres",
@@ -2646,7 +2602,6 @@
         "150": "Défi: les fauteurs de trouble",
         "151": "Le petit pont de bois",
         "152": "La protection du Massif",
-        "679": "Manigances manifestes: quand la magie fait rage",
         "680": "Manigances manifestes: la tour infernale",
         "691": "Défi: bon pour la ferraille",
         "692": "Défi: ben mon cochon!",
@@ -2683,7 +2638,6 @@
         "170": "À qui profite le crime",
         "171": "Gobelins malhonnêtes",
         "172": "Robbin' Goblins",
-        "681": "Manigances manifestes: quand la magie fait rage",
         "682": "Manigances manifestes: la tour infernale",
         "190": "Défi: un grand fracas",
         "708": "Ce qui est à nous est à nous",
@@ -2697,15 +2651,10 @@
     "154": {
       "name": "Forêt du nord",
       "fates": {
-        "538": "Le retour d'un roi",
         "631": "Touche pas à mon arbre !",
         "632": "Défi: les morts en marche",
         "633": "Raid sur le site de déboisement ixal",
         "634": "Défi: chêne déchaîné",
-        "674": "Fort comme une brique: golems",
-        "675": "Fort comme une brique: golem de pierre",
-        "676": "Fort comme une brique: golems",
-        "677": "Fort comme une brique: golem d'or",
         "174": "Voler dans les plumes",
         "178": "Défi: l'élu des acari",
         "179": "Protecteur du Radeau",
@@ -2713,24 +2662,18 @@
         "183": "Menace simiesque",
         "184": "La faim des haricots",
         "185": "Défi: un parfum de catastrophe",
-        "698": "L'effet boule de neige",
         "187": "La caravane passe",
         "188": "Un appétit d'oiseau",
         "189": "Dangereux xylophages",
         "205": "Défi: le Chevalier des ombres",
         "206": "Défi: le Chevalier des ombres",
         "207": "Défi: le Chevalier des ombres",
-        "722": "La chasse aux Fabulœufs",
         "216": "Les rejetons de la lune rouge"
       }
     },
     "155": {
       "name": "Hautes terres du Coerthas central",
       "fates": {
-        "653": "Retour d'éclair: cuirassé outrecuidant",
-        "654": "Retour d'éclair: cuirassé outrecuidant",
-        "699": "L'effet boule de neige",
-        "709": "Attention au cholestérol!7",
         "460": "Un loup pour l'homme",
         "463": "Défi: tondre le mouton noir",
         "464": "Défi: cric, crac, croc!",
@@ -2786,11 +2729,7 @@
         "526": "Pas les bienvenus",
         "527": "Défi: en proie aux ombres",
         "529": "Une escorte pour la science",
-        "530": "Défi: parfum trompeur",
-        "655": "Retour d'éclair: anubis annonciateurs",
-        "656": "Retour d'éclair: anubis annonciateurs",
-        "657": "Retour d'éclair: le dragon du Chaos",
-        "658": "Retour d'éclair: le dragon du Chaos"
+        "530": "Défi: parfum trompeur"
       }
     },
     "397": {

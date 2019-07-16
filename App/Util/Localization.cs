@@ -26,6 +26,10 @@ namespace App
                     json = Resources.Localization_FR_FR;
                     break;
 
+                case "de-de":
+                    json = Resources.Localization_DE_DE;
+                    break;
+
                 case "ja-jp":
                     json = Resources.Localization_JA_JP;
                     break;

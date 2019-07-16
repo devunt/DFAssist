@@ -169,6 +169,7 @@
     <None Include="app.manifest">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Resources\Data\de-de.json" />
     <None Include="Resources\Data\en-us.json" />
     <None Include="Resources\Data\fr-fr.json" />
     <None Include="Resources\Data\ja-jp.json" />
@@ -186,6 +187,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\Localization\de-de.json" />
     <None Include="Resources\Localization\en-us.json" />
     <None Include="Resources\Localization\fr-fr.json" />
     <None Include="Resources\Localization\ja-jp.json" />

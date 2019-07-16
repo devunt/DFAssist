@@ -148,4 +148,10 @@
   <data name="FFXIV_FATE_Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FFXIV_FATE_Start.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Data_DE_DE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Data\de-de.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Localization_DE_DE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Localization\de-de.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
 </root>

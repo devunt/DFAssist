@@ -33,6 +33,10 @@ namespace App
                     json = Resources.Data_FR_FR;
                     break;
 
+                case "de-de":
+                    json = Resources.Data_DE_DE;
+                    break;
+
                 case "ja-jp":
                     json = Resources.Data_JA_JP;
                     break;
