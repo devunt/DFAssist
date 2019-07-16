@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190705.1",
+  "version": "20190716.1",
 
   // Duty
   "instances": {
@@ -1472,6 +1472,34 @@
       "healer": "2",
       "dps": "4"
     },
+
+    // 5.01 Raids
+
+    "653": {
+      "name": "L'Éveil d'Éden - Résurrection",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "684": {
+      "name": "L'Éveil d'Éden - Déluge",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "682": {
+      "name": "L'Éveil d'Éden - Descente",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "689": {
+      "name": "L'Éveil d'Éden - Inhumation",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
 
 
     // Guildhests
