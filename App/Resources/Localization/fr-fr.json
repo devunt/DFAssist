@@ -55,7 +55,7 @@
   "ui-settings-startupshow": "Afficher la fenêtre principale au démarrage",
   "ui-settings-iconflash": "Faire clignorer l'icône de FFXIV en cas d'ALEA/Mission",
   "ui-settings-cheatroulette": "Montrer la mission en cours d'attente lors des missions aléatoires",
-  "ui-settings-usevpn": "J’utilise le VPN, et le DFAssist ne prend pas le jeu Connection.",
+  "ui-settings-usevpn": "ne pas filtrer la connexion réseau locale (VPN, etc.)",
   "ui-settings-usevpn-alert": "Lorsque vous n'utilisez pas le VPN, veuillez désactiver cette option.",
   "ui-settings-fatesound": "Activer le son de notification ALEA \n (Désactiver le son personnalisé sur ALEA)",
   "ui-settings-customsound": "Personnaliser le son de notification",

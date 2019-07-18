@@ -55,7 +55,7 @@
   "ui-settings-startupshow": "Show window when program starts",
   "ui-settings-iconflash": "FFXIV icon blinks when duty matched/FATE occurs",
   "ui-settings-cheatroulette": "Show actual matched duty when using Duty Roulette",
-  "ui-settings-usevpn": "I use VPN, DFAssist is not catching Game Connection.",
+  "ui-settings-usevpn": "don't Filter local network connection (VPN, etc)",
   "ui-settings-usevpn-alert": "When you are not using VPN, please disable this option.",
   "ui-settings-fatesound": "Enable FATE notification sound\n(disables custom sound)",
   "ui-settings-customsound": "Custom FATE/Duty notification sound",
