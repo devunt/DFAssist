@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: {{ site.name }}
 ---
@@ -10,7 +10,7 @@ title: {{ site.name }}
 
 ## Information
 
-- 最新バージョン ```v20190716.1``` ([ダウンロード](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
+- 最新バージョン ```v20190720.1``` ([ダウンロード](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
 - 必要バージョン ```Microsoft .NET Framework 4.0``` ([ダウンロード](https://www.microsoft.com/ja-jp/download/details.aspx?id=17851))
 - ゲームバージョン ```Final Fantasy XIV, バージョン 5.0```
 
@@ -69,9 +69,9 @@ title: {{ site.name }}
 
 ### アプリケーションUI
 
-![アプリケーションUI 1](https://i.imgur.com/04glAbH.png)  
+![アプリケーションUI 1](https://i.imgur.com/IKGvVAh.png)  
 ![アプリケーションUI 2](https://i.imgur.com/83Iuen4.png)  
-![アプリケーションUI 2](https://i.imgur.com/RYXEtuT.png)
+![アプリケーションUI 2](https://i.imgur.com/Q6ZZY3f.png)
 
 ### トレイアイコン
 

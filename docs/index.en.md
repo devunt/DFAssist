@@ -10,7 +10,7 @@ Do other things while in waiting list! DFAssist will give you match notification
 
 ## Information
 
-- Latest Version ```v20190716.1``` ([Download](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
+- Latest Version ```v20190720.1``` ([Download](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
 - Target Version ```Microsoft .NET Framework 4.0``` ([Download](https://www.microsoft.com/en-us/download/details.aspx?id=17851))
 - Game Version ```Final Fantasy XIV, Version 5.0```
 
@@ -69,9 +69,9 @@ Logs on application window helps a lot with problem solving. Attaching logs is h
 
 ### Application UI
 
-![Application UI 1](https://i.imgur.com/W3K1k76.png)  
+![Application UI 1](https://i.imgur.com/Z4csdPL.png)  
 ![Application UI 2](https://i.imgur.com/xdBmYgc.png)  
-![Application UI 3](https://i.imgur.com/eC8zs5B.png)
+![Application UI 3](https://i.imgur.com/nU0awyg.png)
 
 ### Tray Icon
 

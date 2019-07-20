@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: {{ site.name }}
 ---
@@ -10,7 +10,7 @@ title: {{ site.name }}
 
 ## 정보
 
-- 최신 버전 ```v20190716.1``` ([다운로드](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
+- 최신 버전 ```v20190720.1``` ([다운로드](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
 - 타겟 버전 ```Microsoft .NET Framework 4.0``` ([다운로드](https://www.microsoft.com/ko-kr/download/details.aspx?id=17851))
 - 게임 버전 ```파이널 판타지 14 한국판, 버전 4.5```또는 ```글로벌판, 버전 5.0```
 
@@ -76,9 +76,9 @@ title: {{ site.name }}
 
 ### 프로그램 UI
 
-![프로그램 UI 1](https://i.imgur.com/K7vc0yd.png)  
+![프로그램 UI 1](https://i.imgur.com/u27a3Hh.png)  
 ![프로그램 UI 2](https://i.imgur.com/bkBCc2q.png)  
-![프로그램 UI 3](https://i.imgur.com/90XXXkz.png)
+![프로그램 UI 3](https://i.imgur.com/9v7REPc.png)
 
 ### 알림창 아이콘
 
