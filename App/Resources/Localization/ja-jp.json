@@ -57,7 +57,7 @@
   "ui-settings-cheatroulette": "デュティルレット。実際に入場するダンジョンを確認",
   "ui-settings-fatesound": "FATEを知らせる音の活性化\n(FATEについてカスタム通知サウンド非活性化)",
   "ui-settings-usevpn": "ローカルネットワークフィルタリング解除(VPNなど)",
-  "ui-settings-usevpn-alert": "VPNを使わないときには、プログラムの作動のためにチェックしないでください。",
+  "ui-settings-usevpn-alert": "一般的には,このオプションを解除してこそ,プログラムが作動します。",
   "ui-settings-customsound": "カスタム通知サウンド",
   "ui-settings-getsoundfile": "ファイル",
   "ui-settings-getfilewav": "WAV ファイル (*.wav)|*.wav",

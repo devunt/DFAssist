@@ -56,7 +56,7 @@
   "ui-settings-iconflash": "Faire clignorer l'icône de FFXIV en cas d'ALEA/Mission",
   "ui-settings-cheatroulette": "Montrer la mission en cours d'attente lors des missions aléatoires",
   "ui-settings-usevpn": "ne pas filtrer la connexion réseau locale (VPN, etc.)",
-  "ui-settings-usevpn-alert": "Lorsque vous n'utilisez pas le VPN, veuillez désactiver cette option.",
+  "ui-settings-usevpn-alert": "Normalement, vous devez désactiver cette option pour capturer le paquet réseau.",
   "ui-settings-fatesound": "Activer le son de notification ALEA \n (Désactiver le son personnalisé sur ALEA)",
   "ui-settings-customsound": "Personnaliser le son de notification",
   "ui-settings-getsoundfile": "Choisir",
