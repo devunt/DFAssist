@@ -25,6 +25,15 @@ namespace App
             return Show(bodyKey, "ui-msgbox-title-error", buttons, MessageBoxIcon.Error, defaultButton);
         }
 
+        internal static DialogResult Dialog(
+            string body, string title,
+            MessageBoxButtons buttons = MessageBoxButtons.OK,
+            MessageBoxIcon icon = MessageBoxIcon.None,
+            MessageBoxDefaultButton defaultButton = MessageBoxDefaultButton.Button1)
+        {
+            return MessageBox.Show(body, title, buttons, icon, defaultButton);
+        }
+
         private static DialogResult Show(
             string bodyKey, string titleKey,
             MessageBoxButtons buttons = MessageBoxButtons.OK,

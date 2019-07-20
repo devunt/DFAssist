@@ -27,6 +27,7 @@ namespace App
         public static string DiscordAccount { get; set; } = "";
         public static bool useVPN { get; set; } = false;
         public static bool CheatRoulette { get; set; } = false;
+        public static bool copyMacro { get; set; } = false;
         public static bool Updated { get; set; } = false;
         public static bool customHttpRequest { get; set; } = false;
         public static string customHttpUrl { get; set; } = "";
@@ -68,6 +69,7 @@ namespace App
                 DiscordAccount = iniFile.ReadValue("notification", "discordaccount") ?? "";
                 useVPN = iniFile.ReadValue("misc", "useVPN") == "1";
                 CheatRoulette = iniFile.ReadValue("misc", "cheatroulette") == "1";
+                copyMacro = iniFile.ReadValue("misc", "copymacro") == "1";
                 Language = iniFile.ReadValue("misc", "language") ?? "ko-kr";
                 Updated = iniFile.ReadValue("internal", "updated") == "1";
                 customHttpRequest = iniFile.ReadValue("http", "customHttpRequest") == "1";
@@ -102,6 +104,7 @@ namespace App
             iniFile.WriteValue("notification", "discordaccount", DiscordAccount);
             iniFile.WriteValue("misc", "useVPN", useVPN ? "1" : "0");
             iniFile.WriteValue("misc", "cheatroulette", CheatRoulette ? "1" : "0");
+            iniFile.WriteValue("misc", "copymacro", copyMacro ? "1" : "0");
             iniFile.WriteValue("misc", "language", Language);
             iniFile.WriteValue("fate", "fates", string.Join(",", FATEs));
             iniFile.WriteValue("internal", "updated", Updated ? "1" : "0");

@@ -105,6 +105,7 @@ namespace App
                 Settings.Save();
             }
             SetCheatRoulleteCheckBox(Settings.CheatRoulette);
+            checkBox_CopyMacro.Checked = Settings.copyMacro;
             // checkBox_Twitter.Checked = Settings.TwitterEnabled;
             // textBox_Telegram.Enabled = Settings.TwitterEnabled;
             // textBox_Telegram.Text = Settings.TwitterAccount;
@@ -358,6 +359,12 @@ namespace App
             }
 
             Settings.CheatRoulette = checkBox_CheatRoullete.Checked;
+            Settings.Save();
+        }
+
+        private void checkBox_CopyMacro_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.copyMacro = checkBox_CopyMacro.Checked;
             Settings.Save();
         }
 
@@ -728,6 +735,7 @@ namespace App
             checkBox_CustomSound.Text = Localization.GetText("ui-settings-customsound");
             button_getSoundFile.Text = Localization.GetText("ui-settings-getsoundfile");
             checkBox_CheatRoullete.Text = Localization.GetText("ui-settings-cheatroulette");
+            checkBox_CopyMacro.Text = Localization.GetText("ui-settings-copymacro");
             checkBox_useVPN.Text = Localization.GetText("ui-settings-usevpn");
             // groupBox_TwitterSet.Text = Localization.GetText("ui-3rdparty-twitter-title");
             // checkBox_Twitter.Text = Localization.GetText("ui-3rdparty-twitter-activate");

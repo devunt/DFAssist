@@ -1,4 +1,4 @@
-{
+﻿{
   "app-name": "Duty/FATE Benachrichtiger",
 
 
@@ -55,6 +55,9 @@
   "ui-settings-startupshow": "Show window when program starts",
   "ui-settings-iconflash": "FFXIV icon blinks when duty matched/FATE occurs",
   "ui-settings-cheatroulette": "Show actual matched duty when using Duty Roulette",
+  "ui-settings-copymacro": "Automatically copy macro from duty data when duty matched",
+  "ui-settings-copymacro-dialog-title": "DFA Copy macro",
+  "ui-settings-copymacro-dialog-text": "Copy <{0}> macro to clipboard?",
   "ui-settings-usevpn": "don't Filter local network connection (VPN, etc)",
   "ui-settings-usevpn-alert": "Normally, you have to turn off this option to capture network packet.",
   "ui-settings-fatesound": "Enable FATE notification sound\n(disables custom sound)",

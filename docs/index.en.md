@@ -28,6 +28,7 @@ Do other things while in waiting list! DFAssist will give you match notification
   - Realtime Duty matching information while Final Fantasy XIV is minimized. Also gives notification when matched.
   - Preview exact matched duty when using duty roulette. (Needs Setting)
   - Notifies when checked F.A.T.E occurs. (Character Need to be in FATE area)
+  - Automatically copy macro function. (macro data should be included in D/F data)
   - Custom notification sound support.
 - Alarm via Telegram Message or Discord Message with Mention.
   - To receive discord message, you should be in the [DFAssist Discord Server](https://discord.gg/RqesxtS).

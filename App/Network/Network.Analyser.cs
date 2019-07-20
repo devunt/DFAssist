@@ -13,6 +13,7 @@ namespace App
         private byte rouletteCode;
         private State state = State.IDLE;
         private int lastMember = 0;
+        private ushort lastCode = 0;
         internal SoundPlayer notificationPlayer;
         private SoundPlayer fatePlayer;
         private System.IO.Stream str = Properties.Resources.FFXIV_FATE_Start;
@@ -338,6 +339,7 @@ namespace App
                         mainForm.overlayForm.CancelDutyFinder();
 
                         Log.I("l-queue-entered");
+                        mainForm.overlayForm.instances_callback(lastCode);
                     }
                     else if (status == 4) //글섭에서 매칭 잡혔을 때 출력
                     {
@@ -507,6 +509,7 @@ namespace App
                         // 매칭 뒤 참가자 확인 현황 패킷
                         mainForm.overlayForm.SetConfirmStatus(instance, tank, dps, healer);
                     }
+                    lastCode = code;
                     Log.I("l-queue-updated", instance.Name, status, tank, instance.Tank, healer, instance.Healer, dps,
                         instance.DPS);
                 }

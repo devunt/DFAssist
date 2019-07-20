@@ -46,6 +46,7 @@
             this.tabControl = new App.TabControlBlack();
             this.tabPage_Settings = new System.Windows.Forms.TabPage();
             this.groupBox_DefaultSet = new System.Windows.Forms.GroupBox();
+            this.checkBox_CopyMacro = new System.Windows.Forms.CheckBox();
             this.checkBox_autoHideOverlay = new System.Windows.Forms.CheckBox();
             this.checkBox_useVPN = new System.Windows.Forms.CheckBox();
             this.label_CustomSoundFileName = new System.Windows.Forms.Label();
@@ -100,8 +101,8 @@
             this.IxionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TamamoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.frogSuitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.frogMountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.frogSuitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_SelectApply = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage_Log = new System.Windows.Forms.TabPage();
             this.panel_LogCover = new System.Windows.Forms.Panel();
@@ -292,6 +293,7 @@
             // 
             // groupBox_DefaultSet
             // 
+            this.groupBox_DefaultSet.Controls.Add(this.checkBox_CopyMacro);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_autoHideOverlay);
             this.groupBox_DefaultSet.Controls.Add(this.checkBox_useVPN);
             this.groupBox_DefaultSet.Controls.Add(this.label_CustomSoundFileName);
@@ -306,10 +308,22 @@
             this.groupBox_DefaultSet.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox_DefaultSet.Location = new System.Drawing.Point(0, 0);
             this.groupBox_DefaultSet.Name = "groupBox_DefaultSet";
-            this.groupBox_DefaultSet.Size = new System.Drawing.Size(426, 208);
+            this.groupBox_DefaultSet.Size = new System.Drawing.Size(426, 229);
             this.groupBox_DefaultSet.TabIndex = 0;
             this.groupBox_DefaultSet.TabStop = false;
             this.groupBox_DefaultSet.Text = "기본설정";
+            // 
+            // checkBox_CopyMacro
+            // 
+            this.checkBox_CopyMacro.AutoSize = true;
+            this.checkBox_CopyMacro.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.checkBox_CopyMacro.Location = new System.Drawing.Point(6, 128);
+            this.checkBox_CopyMacro.Name = "checkBox_CopyMacro";
+            this.checkBox_CopyMacro.Size = new System.Drawing.Size(345, 19);
+            this.checkBox_CopyMacro.TabIndex = 7;
+            this.checkBox_CopyMacro.Text = "매크로 정보가 있는 경우, 클립보드에 자동으로 매크로 복사";
+            this.checkBox_CopyMacro.UseVisualStyleBackColor = true;
+            this.checkBox_CopyMacro.CheckedChanged += new System.EventHandler(this.checkBox_CopyMacro_CheckedChanged);
             // 
             // checkBox_autoHideOverlay
             // 
@@ -328,11 +342,11 @@
             // 
             this.checkBox_useVPN.AutoSize = true;
             this.checkBox_useVPN.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.checkBox_useVPN.Location = new System.Drawing.Point(6, 128);
+            this.checkBox_useVPN.Location = new System.Drawing.Point(6, 149);
             this.checkBox_useVPN.Name = "checkBox_useVPN";
-            this.checkBox_useVPN.Size = new System.Drawing.Size(310, 19);
-            this.checkBox_useVPN.TabIndex = 7;
-            this.checkBox_useVPN.Text = "VPN을 사용하는데, FFXIV 프로세스를 찾지 못하네요.";
+            this.checkBox_useVPN.Size = new System.Drawing.Size(222, 19);
+            this.checkBox_useVPN.TabIndex = 8;
+            this.checkBox_useVPN.Text = "로컬 네트워크 필터링 해제 (VPN 등)";
             this.checkBox_useVPN.UseVisualStyleBackColor = true;
             this.checkBox_useVPN.CheckedChanged += new System.EventHandler(this.checkBox_useVPN_CheckedChanged);
             this.checkBox_useVPN.MouseUp += new System.Windows.Forms.MouseEventHandler(this.checkBox_useVPN_MouseUp);
@@ -340,7 +354,7 @@
             // label_CustomSoundFileName
             // 
             this.label_CustomSoundFileName.AutoSize = true;
-            this.label_CustomSoundFileName.Location = new System.Drawing.Point(213, 186);
+            this.label_CustomSoundFileName.Location = new System.Drawing.Point(213, 207);
             this.label_CustomSoundFileName.Name = "label_CustomSoundFileName";
             this.label_CustomSoundFileName.Size = new System.Drawing.Size(115, 17);
             this.label_CustomSoundFileName.TabIndex = 0;
@@ -349,10 +363,10 @@
             // button_getSoundFile
             // 
             this.button_getSoundFile.Font = new System.Drawing.Font("맑은 고딕", 8F);
-            this.button_getSoundFile.Location = new System.Drawing.Point(142, 185);
+            this.button_getSoundFile.Location = new System.Drawing.Point(142, 206);
             this.button_getSoundFile.Name = "button_getSoundFile";
             this.button_getSoundFile.Size = new System.Drawing.Size(70, 20);
-            this.button_getSoundFile.TabIndex = 10;
+            this.button_getSoundFile.TabIndex = 11;
             this.button_getSoundFile.Text = "파일 선택";
             this.button_getSoundFile.UseVisualStyleBackColor = true;
             this.button_getSoundFile.Click += new System.EventHandler(this.button_getSoundFile_Click);
@@ -361,10 +375,10 @@
             // 
             this.checkBox_CustomSound.AutoSize = true;
             this.checkBox_CustomSound.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.checkBox_CustomSound.Location = new System.Drawing.Point(6, 186);
+            this.checkBox_CustomSound.Location = new System.Drawing.Point(6, 207);
             this.checkBox_CustomSound.Name = "checkBox_CustomSound";
             this.checkBox_CustomSound.Size = new System.Drawing.Size(130, 19);
-            this.checkBox_CustomSound.TabIndex = 9;
+            this.checkBox_CustomSound.TabIndex = 10;
             this.checkBox_CustomSound.Text = "알림음 사용자 설정";
             this.checkBox_CustomSound.UseVisualStyleBackColor = true;
             this.checkBox_CustomSound.CheckedChanged += new System.EventHandler(this.checkBox_CustomSound_CheckedChanged);
@@ -374,10 +388,10 @@
             // 
             this.checkBox_FateSound.AutoSize = true;
             this.checkBox_FateSound.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.checkBox_FateSound.Location = new System.Drawing.Point(6, 149);
+            this.checkBox_FateSound.Location = new System.Drawing.Point(6, 170);
             this.checkBox_FateSound.Name = "checkBox_FateSound";
             this.checkBox_FateSound.Size = new System.Drawing.Size(270, 34);
-            this.checkBox_FateSound.TabIndex = 8;
+            this.checkBox_FateSound.TabIndex = 9;
             this.checkBox_FateSound.Text = "돌발임무 알림음 활성화\r\n(돌발임무 알림에서 사용자 알림음 사용 안함)";
             this.checkBox_FateSound.UseVisualStyleBackColor = true;
             this.checkBox_FateSound.CheckedChanged += new System.EventHandler(this.checkBox_FateSound_CheckedChanged);
@@ -859,19 +873,19 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(199, 6);
             // 
-            // frogSuitToolStripMenuItem
-            // 
-            this.frogSuitToolStripMenuItem.Name = "frogSuitToolStripMenuItem";
-            this.frogSuitToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.frogSuitToolStripMenuItem.Text = "개구리 옷 (템페스트)";
-            this.frogSuitToolStripMenuItem.Click += new System.EventHandler(this.frogSuitToolStripMenuItem_Click);
-            // 
             // frogMountToolStripMenuItem
             // 
             this.frogMountToolStripMenuItem.Name = "frogMountToolStripMenuItem";
             this.frogMountToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.frogMountToolStripMenuItem.Text = "개구리 탈 것 (콜루시아)";
             this.frogMountToolStripMenuItem.Click += new System.EventHandler(this.frogMountToolStripMenuItem_Click);
+            // 
+            // frogSuitToolStripMenuItem
+            // 
+            this.frogSuitToolStripMenuItem.Name = "frogSuitToolStripMenuItem";
+            this.frogSuitToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.frogSuitToolStripMenuItem.Text = "개구리 옷 (템페스트)";
+            this.frogSuitToolStripMenuItem.Click += new System.EventHandler(this.frogSuitToolStripMenuItem_Click);
             // 
             // toolStripMenuItem_SelectApply
             // 
@@ -1127,6 +1141,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem frogSuitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem frogMountToolStripMenuItem;
+        private System.Windows.Forms.CheckBox checkBox_CopyMacro;
     }
 }
 

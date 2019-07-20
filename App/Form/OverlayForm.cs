@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using System.Threading.Tasks;
 
 namespace App
 {
@@ -279,6 +280,25 @@ namespace App
 
                 // 내용을 비움
                 CancelDutyFinder();
+            }
+        }
+
+        internal void instances_callback(int code)
+        {
+            if (Settings.copyMacro)
+            {
+                Task.Factory.StartNew(() =>
+                {
+                    var instance = Data.GetInstance(code);
+                    if (instance.Macro != null)
+                    {
+                        var respond = LMessageBox.Dialog(Localization.GetText("ui-settings-copymacro-dialog-text", instance.Name), Localization.GetText("ui-settings-copymacro-dialog-title"), MessageBoxButtons.YesNo, MessageBoxIcon.None, MessageBoxDefaultButton.Button1);
+                        if (respond == DialogResult.Yes)
+                        {
+                            this.Invoke(() => { Clipboard.SetDataObject(instance.Macro, true); });
+                        }
+                    }
+                });
             }
         }
 
