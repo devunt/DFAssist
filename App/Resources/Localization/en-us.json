@@ -51,7 +51,7 @@
   "ui-settings-overlay-tooltip": "Move the overlay by dragging the colored bar on the left",
   "ui-settings-overlay-reset": "Reset",
   "ui-settings-overlay-autohide": "Show overlay only while in queue or FATE occurs",
-  "ui-notification-overlay-autohide": "This option will be appplied after waiting queue state changes or new FATE occurs.\nRestarting the application also make immediate appliance.\n\nWhile waiting for client connection, overlay is shown.\n(To notice user that application is working well or not.)",
+  "ui-notification-overlay-autohide": "This option will be appplied after waiting queue state changes or new FATE occurs.\nRestarting the application also make immediate appliance.\n\nWhile waiting for client connection, overlay is shown.\n(To notice user whether application is working well or not.)",
   "ui-settings-startupshow": "Show window when program starts",
   "ui-settings-iconflash": "FFXIV icon blinks when duty matched/FATE occurs",
   "ui-settings-cheatroulette": "Show actual matched duty when using Duty Roulette",
@@ -98,7 +98,7 @@
   "ui-msgbox-title-warning": "DFA warning",
   "ui-msgbox-title-error": "DFA error",
 
-  "ui-language-changed": "Language changed to English.\nPlease restart the application for it to fully take effect.",
+  "ui-language-changed": "Language changed to English.\nOverlay language will be applied after queue status changes.\nPlease restart the application for it to fully take effect right away.",
 
   "ui-clipboard-copied": "Copied to clipboard.",
 

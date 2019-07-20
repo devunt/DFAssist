@@ -98,7 +98,7 @@
   "ui-msgbox-title-warning": "DFA 경고",
   "ui-msgbox-title-error": "DFA 오류",
 
-  "ui-language-changed": "언어가 한국어로 변경되었습니다.\n일부 부분은 프로그램 재시작을 해야 반영됩니다.\n프로그램을 재시작해주세요.",
+  "ui-language-changed": "언어가 한국어로 변경되었습니다.\n오버레이 부분은 매칭 현황에 변화가 생기면 적용됩니다.\n지금 바로 적용하고 싶다면, 프로그램을 재시작해주세요.",
 
   "ui-clipboard-copied": "클립보드에 복사되었습니다.",
 

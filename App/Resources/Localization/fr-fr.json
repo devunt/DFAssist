@@ -98,7 +98,7 @@
   "ui-msgbox-title-warning": "DFA Warning",
   "ui-msgbox-title-error": "DFA Error",
 
-  "ui-language-changed": "Langue changée en Français.\nUn redémarrage est nécessaire.\nVeuillez redémarrer l'application.",
+  "ui-language-changed": "Langue changée en Français.\nLe langage de superposition sera appliqué après les changements de statut de la file d'attente.\nVeuillez redémarrer l'application pour qu'elle prenne effet immédiatement.",
 
   "ui-clipboard-copied": "Copié dans le presse-papiers.",
 

@@ -98,7 +98,7 @@
   "ui-msgbox-title-warning": "DFA警告",
   "ui-msgbox-title-error": "DFAエラー",
 
-  "ui-language-changed": "言語が日本語に変更されました。\nいくつかの部分は再起動するまで変更されません。\nアプリケーションを再起動してください。",
+  "ui-language-changed": "言語が日本語に変更されました。\nオーバーレイ部分は,現状に変化が生じると適用されます。\n今すぐ適用したいなら,アプリケーションを再起動してください。",
 
   "ui-clipboard-copied": "コピーしましした。",
 
