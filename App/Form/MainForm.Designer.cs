@@ -518,9 +518,9 @@
             // label_DiscordAbout
             // 
             this.label_DiscordAbout.Font = new System.Drawing.Font("맑은 고딕", 8F);
-            this.label_DiscordAbout.Location = new System.Drawing.Point(10, 45);
+            this.label_DiscordAbout.Location = new System.Drawing.Point(4, 45);
             this.label_DiscordAbout.Name = "label_DiscordAbout";
-            this.label_DiscordAbout.Size = new System.Drawing.Size(415, 92);
+            this.label_DiscordAbout.Size = new System.Drawing.Size(421, 92);
             this.label_DiscordAbout.TabIndex = 13;
             this.label_DiscordAbout.Text = "입력된 디스코드 계정으로도 멘션을 통해 알림을 보냅니다.\r\n디스코드 ID는 15자리 이상의 숫자입니다.\r\n\r\n디스코드 ID는 DFAssist 디스" +
     "코드 서버에서 #get-discord-id 채널에 !id 를 입력하면 확인할 수 있습니다.\r\n또한, DFAssist 디스코드 서버에 참여한 상태" +
@@ -574,9 +574,9 @@
             // label_TelegramAbout
             // 
             this.label_TelegramAbout.Font = new System.Drawing.Font("맑은 고딕", 8F);
-            this.label_TelegramAbout.Location = new System.Drawing.Point(10, 45);
+            this.label_TelegramAbout.Location = new System.Drawing.Point(4, 45);
             this.label_TelegramAbout.Name = "label_TelegramAbout";
-            this.label_TelegramAbout.Size = new System.Drawing.Size(407, 53);
+            this.label_TelegramAbout.Size = new System.Drawing.Size(421, 53);
             this.label_TelegramAbout.TabIndex = 13;
             this.label_TelegramAbout.Text = "매칭이 되면 입력한 텔레그램 채팅방으로 메시지를 보내 해당 사실을 알립니다.\r\n원하는 돌발이 발생했을 시에도 메시지를 보내 해당 사실을 알립니다." +
     "\r\n채팅방 ID는 DFAssist Notify Bot에게 아무 메시지나 보내면 확인할 수 있습니다.";
@@ -976,9 +976,9 @@
             this.label_About.Name = "label_About";
             this.label_About.Size = new System.Drawing.Size(426, 211);
             this.label_About.TabIndex = 0;
-            this.label_About.Text = "[제작 및 문의]\r\n유채색\r\n라그린네\r\n히비야\r\n\r\n[저작권]\r\n기재되어있는 회사명 · 제품명 · 시스템 이름은\r\n해당 소유자의 상표 또는 등록 " +
-    "상표입니다.\r\n(C) 2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved.\r\nKorea Publish" +
-    "ed by ACTOZ SOFT.";
+            this.label_About.Text = "[제작 및 문의]\r\n유채색\r\n라그린네\r\n히비야\r\n윈도ce\r\n[도움] 고먐미\r\n[저작권]\r\n기재되어있는 회사명 · 제품명 · 시스템 이름은\r\n해당 " +
+    "소유자의 상표 또는 등록 상표입니다.\r\n(C) 2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved.\r" +
+    "\nKorea Published by ACTOZ SOFT.";
             this.label_About.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel_GitHub

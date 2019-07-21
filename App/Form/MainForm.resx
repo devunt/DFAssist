@@ -267,6 +267,12 @@
   <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>506, 17</value>
   </metadata>
+  <metadata name="menuStrip_FATETab.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>274, 17</value>
+  </metadata>
+  <metadata name="menuStrip_LogTab.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>390, 17</value>
+  </metadata>
   <data name="label_HttpRequestReadme.Text" xml:space="preserve">
     <value>이 기능을 활성화하면 임무/돌발 찾기 도우미는 지정한 URL로 
 "status", "info"와 "id"를 포함한 POST HTTP Request를 보냅니다.
