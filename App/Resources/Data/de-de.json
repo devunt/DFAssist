@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190721.2",
+  "version": "20190721.3",
 
   // Duty
   "instances": {
@@ -2681,7 +2681,7 @@
       }
     },
     "155": {
-      "name": "Zentrales Hochland von Coerthas",
+      "name": "Westliches Hochland von Coerthas",
       "fates": {
         "460": "Wer fürchtet sich",
         "463": "Pech für schwarze Schafe",
