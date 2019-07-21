@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190720.1",
+  "version": "20190721.1",
 
   // Duty
   "instances": {
@@ -2295,7 +2295,7 @@
   // FATEs
   "areas": {
     "134": {
-      "name": "Zentralen La Noscea",
+      "name": "Zentrales La Noscea",
       "fates": {
         "649": "Nicht ohne meine Eier",
         "688": "Der schwarze Dämon: Frau Größenwahn",
@@ -2317,7 +2317,7 @@
       }
     },
     "135": {
-      "name": "Unteren La Noscea",
+      "name": "Unteres La Noscea",
       "fates": {
         "257": "Zum Dahinschmelzen",
         "260": "Blinder Passagier",
@@ -2334,7 +2334,7 @@
       }
     },
     "137": {
-      "name": "östlichen La Noscea",
+      "name": "Östliches La Noscea",
       "fates": {
         "267": "Mein Wein bleibt mein Wein ",
         "268": "Seeräubersommelier in spe",
@@ -2361,7 +2361,7 @@
       }
     },
     "138": {
-      "name": "Westlichen La Noscea",
+      "name": "Westliches La Noscea",
       "fates": {
         "568": "Aufklärung am Norddamm",
         "569": "Schlacht am Norddamm",
@@ -2391,7 +2391,7 @@
       }
     },
     "139": {
-      "name": "Oberen La Noscea",
+      "name": "Oberes La Noscea",
       "fates": {
         "314": "Schrecken der Coeurl",
         "317": "Schutz und Hilfe",
@@ -2410,7 +2410,7 @@
       }
     },
     "180": {
-      "name": "äußeren La Noscea",
+      "name": "äußeres La Noscea",
       "fates": {
         "580": "Basaltblockade",
         "581": "Für unsere Pioniere ",
@@ -2430,7 +2430,7 @@
       }
     },
     "140": {
-      "name": "Westlichen Thanalan",
+      "name": "Westliches Thanalan",
       "fates": {
         "342": "Chaos in Grün",
         "343": "Knabberspaß",
@@ -2455,7 +2455,7 @@
       }
     },
     "141": {
-      "name": "Zentralen Thanalan",
+      "name": "Zentrales Thanalan",
       "fates": {
         "370": "Kräftemessen",
         "373": "Füttern verboten",
@@ -2473,7 +2473,7 @@
       }
     },
     "145": {
-      "name": "östlichen Thanalan",
+      "name": "Östliches Thanalan",
       "fates": {
         "540": "Dem Quarz zuliebe",
         "541": "Angst vor dem Unbekannten",
@@ -2499,7 +2499,7 @@
       }
     },
     "146": {
-      "name": "Südlichen Thanalan",
+      "name": "Südliches Thanalan",
       "fates": {
         "545": "Zeremonienverderber",
         "546": "Ifrit nahm sein Leben",
@@ -2535,7 +2535,7 @@
       }
     },
     "147": {
-      "name": "Nördlichen Thanalan",
+      "name": "Nördliches Thanalan",
       "fates": {
         "556": "Erdkern für Erdseim",
         "637": "Spritfresser",
@@ -2556,7 +2556,7 @@
       }
     },
     "148": {
-      "name": "Tiefen Wald",
+      "name": "Tiefer Wald",
       "fates": {
         "600": "Wurmige Ernte",
         "601": "Dosis macht Gift",
@@ -2681,7 +2681,7 @@
       }
     },
     "155": {
-      "name": "Zentralen Hochland von Coerthas",
+      "name": "Zentrales Hochland von Coerthas",
       "fates": {
         "460": "Wer fürchtet sich",
         "463": "Pech für schwarze Schafe",
@@ -2742,7 +2742,7 @@
       }
     },
     "397": {
-      "name": "Westlichen Hochland von Coerthas",
+      "name": "Dravanisches Hochland von Coerthas",
       "fates": {
         "787": "Was gibt's da zu glotzen?",
         "788": "Ins Bocknäpfchen getreten",
@@ -3547,7 +3547,7 @@
       }
     },
     "1005": {
-      "name": "Veranstaltung",
+      "name": "Events",
       "fates": {
         
       }
