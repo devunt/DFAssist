@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190721.1",
+  "version": "20190721.2",
 
   // Duty
   "instances": {
@@ -2410,7 +2410,7 @@
       }
     },
     "180": {
-      "name": "äußeres La Noscea",
+      "name": "Äußeres La Noscea",
       "fates": {
         "580": "Basaltblockade",
         "581": "Für unsere Pioniere ",
@@ -3527,7 +3527,7 @@
       }
     },
     "506": {
-      "name": "The Tempest",
+      "name": "Tempest",
       "fates": {
         "1426": "Schrecken der Tiefsee Archaeotania: Die Jagd beginnt",
         "1427": "Schrecken der Tiefsee Archaeotania: Zumshs Ritual",
