@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190721.3",
+  "version": "20190722.1",
 
   // Duty
   "instances": {
@@ -2681,7 +2681,7 @@
       }
     },
     "155": {
-      "name": "Westliches Hochland von Coerthas",
+      "name": "Zentrales Hochland von Coerthas",
       "fates": {
         "460": "Wer fürchtet sich",
         "463": "Pech für schwarze Schafe",
@@ -2742,7 +2742,7 @@
       }
     },
     "397": {
-      "name": "Dravanisches Hochland von Coerthas",
+      "name": "Westliches Hochland von Coerthas",
       "fates": {
         "787": "Was gibt's da zu glotzen?",
         "788": "Ins Bocknäpfchen getreten",

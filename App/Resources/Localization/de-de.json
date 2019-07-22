@@ -8,9 +8,9 @@
   "unknown-fate": "Unbekanntes FATE ({0})",
 
 
-  "notification-app-updated": "Version {0} aktualisiert",
+  "notification-app-updated": "Auf Version {0} aktualisiert",
   "notification-queue-matched": "Gruppe für < {0} > gefunden!",
-  "notification-fate-occured": "< {0} > erschienen!",
+  "notification-fate-occured": "FATE < {0} > erschienen!",
 
 
   "fate-occured": "< {0} > FATE erschienen!",
@@ -47,15 +47,15 @@
   "ui-tabcontrol-info": "Informationen",
 
   "ui-settings-title": "Grundlegende Einstellungen",
-  "ui-settings-overlay-use": "Overlay anzeigen",
+  "ui-settings-overlay-use": "Zeige Overlay",
   "ui-settings-overlay-tooltip": "Bewege das Overlay, indem du den farbigen Balken auf der linken Seite ziehst",
   "ui-settings-overlay-reset": "Reset",
-  "ui-settings-overlay-autohide": "Overlay nur in Warteschlange/bei Erscheinen eines FATEs anzeigen",
-  "ui-notification-overlay-autohide": "Diese Einstellung wird angewendet, nachdem sich der Status der Warteschlange ändert oder ein neues FATE erscheint.\nNach einem Neustart wird diese Einstellung direkt angewendet.\n\nWährend auf eine Client-Verbindung gewartet wird, wird das Overlay angezeigt.\n(Damit kannst du prüfen, ob das Programm korrekt ausgeführt wird.)",
+  "ui-settings-overlay-autohide": "Zeige Overlay nur in Warteschlange/bei Erscheinen eines FATEs",
+  "ui-notification-overlay-autohide": "Diese Einstellung wird erst angewendet, nachdem sich der Status der Warteschlange ändert oder ein neues FATE erscheint.\nNach einem Neustart wird diese Einstellung direkt angewendet.\n\nWährend auf eine Client-Verbindung gewartet wird, wird das Overlay angezeigt.\n(Damit kannst du prüfen, ob das Programm korrekt ausgeführt wird.)",
   "ui-settings-startupshow": "Öffne Fenster bei Programmstart",
-  "ui-settings-iconflash": "FFXIV-Icon blinkt, wenn Gruppe für Inhalt gefunden wird/FATE erscheint",
-  "ui-settings-cheatroulette": "Zeige den tatsächlichen Inhalt bei Teilnahme an einem Zufallsinhalt",
-  "ui-settings-copymacro": "Kopiere Makro für Inhalt automatisch, wenn Gruppe gefunden wurde",
+  "ui-settings-iconflash": "FFXIV-Icon blinkt, wenn Gruppe gefunden wird/FATE erscheint",
+  "ui-settings-cheatroulette": "Zeige den tatsächlichen Inhalt bei einem Zufallsinhalt",
+  "ui-settings-copymacro": "Kopiere Makro für Inhalt automatisch, sobald Gruppe gefunden wurde",
   "ui-settings-copymacro-dialog-title": "DFA-Makro kopieren",
   "ui-settings-copymacro-dialog-text": "<{0}>-Makro in die Zwischenablage kopieren?",
   "ui-settings-usevpn": "Lokale Netzwerkverbindung nicht filtern (VPN, etc.)",
@@ -64,18 +64,18 @@
   "ui-settings-customsound": "Benutzerdefinierter Benachrichtigungston",
   "ui-settings-getsoundfile": "Datei auswählen",
   "ui-settings-getfilewav": "WAV-Dateien (*.wav)|*.wav",
-  "ui-notification-customsound-selectfile": "Wähle zuerst eine Sound-Datei aus",
+  "ui-notification-customsound-selectfile": "Wähle zuerst eine Sound-Datei aus.",
 
-  "ui-3rdparty-twitter-title": "Twitter-Benachrichtigung",
+  "ui-3rdparty-twitter-title": "Twitter-Mitteilung",
   "ui-3rdparty-twitter-activate": "Aktivieren",
-  "ui-3rdparty-twitter-about": "Sobald eine Gruppe gefunden wird oder ein FATE erscheint, \nwird ein Tweet mit Erwähnung des angegebenen Twitter-Accounts gesendet.\nFüge den Twitter-Account ohne das vorstehende @-Symbol ein.",
-  "ui-3rdparty-telegram-title": "Telegram-Benachrichtigung",
+  "ui-3rdparty-twitter-about": "Sobald eine Gruppe gefunden wird oder ein FATE erscheint, \nwird ein Tweet mit Erwähnung des angegebenen Twitter-Accounts gesendet.\nFüge den Twitter-Namen ohne das vorstehende @-Symbol ein.",
+  "ui-3rdparty-telegram-title": "Telegram-Mitteilung",
   "ui-3rdparty-telegram-activate": "Aktivieren",
-  "ui-3rdparty-telegram-about": "Sobald eine Gruppe gefunden wird oder ein FATE erscheint, wird eine Nachricht an diesen Telegram-Chat gesendet.\nDu erhältst deine Chat-ID, indem du eine beliebige Nachricht an den DFAssist Telegram-Bot sendest.",
-  "ui-3rdparty-discord-title": "Discord-Benachrichtigung",
+  "ui-3rdparty-telegram-about": "Sobald eine Gruppe gefunden wird oder ein FATE erscheint, wird eine Nachricht an diesen Telegram-Chat gesendet.\nDu erhältst deine Chat-ID, indem du eine Nachricht an den DFAssist Telegram-Bot sendest.",
+  "ui-3rdparty-discord-title": "Discord-Mitteilung",
   "ui-3rdparty-discord-activate": "Aktivieren",
   "ui-3rdparty-discord-numberonly-alert": "Die Discord-ID besteht ausschließlich aus Zahlen.",
-  "ui-3rdparty-discord-about": "Benachrichtigung per Discord-Nachricht, die die obige Discord-ID erwähnt.\nBitte gib deine 15-stellige Discord-ID an.\n\nDiscord-ID herauszufinden: Sende !id command im #get-discord-id Kanal des DFAssist Discord-Servers. Der DFAssist Bot antwortet anschließend mit deiner Discord-ID.\nUm Benachrichtigungen zu erhalten, musst du im DFAssist Discord-Server sein.",
+  "ui-3rdparty-discord-about": "Benachrichtigung per Discord-Nachricht, die die obige Discord-ID erwähnt.\nBitte gib deine 15-stellige Discord-ID an.\n\nDiscord-ID bekommen: Sende !id command im #get-discord-id Kanal des DFAssist Discord-Servers. Der DFAssist Bot antwortet mit deiner Discord-ID.\nUm Mitteilungen zu erhalten, musst du im DFAssist Discord-Server sein.",
 
   "ui-advanced-http": "Benutzerdefinierte HTTP-Anfrage",
   "ui-advanced-http-enable": "Aktivieren",
@@ -87,9 +87,9 @@
   "ui-fate-unselectall": "Alle abwählen",
   "ui-fate-preset": "Voreinstellungen",
   "ui-fate-apply": "Anwenden",
-  "ui-fate-about": "Wähle, für welche FATEs du benachrichtigt werden willst und klicke \"Anwenden\".\nBenachrichtigungen funktionieren nur, wenn du dich im Gebiet des FATEs befindest.",
+  "ui-fate-about": "Wähle, für welche FATEs du benachrichtigt werden willst und klicke \"Anwenden\".\nDu wirst nur benachrichtigt, wenn du dich im Gebiet des FATEs aufhältst.",
 
-  "ui-logs-copy": "Kopiere Logs",
+  "ui-logs-copy": "Kopiere Protokoll",
   "ui-logs-clear": "Leeren",
 
   "ui-info-about": "[Mitwirkende]\n유채색\nLaiglinne\nHibiyasleep\nAlex00728 (Jaehyuk-Lee)\n[Übersetzer] Linco#0322 (Discord)\n[Urheberrechte]\nAlle Firmen-, Produkt- und Systemnamen sind eingetragene oder nicht eingetragene Warenzeichen ihrer jeweiligen Inhaber.\n(C) 2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by ACTOZ SOFT.",
@@ -98,12 +98,12 @@
   "ui-msgbox-title-warning": "DFA-Warnung",
   "ui-msgbox-title-error": "DFA-Fehler",
 
-  "ui-language-changed": "Sprache zu Deutsch geändert.\nOverlay-Sprache wird angewendet, sobald sich der Status der Warteschlange ändert.\nBitte starte die Anwendung neu, um die Änderungen sofort durchzuführen.",
+  "ui-language-changed": "Sprache zu Deutsch geändert.\nOverlay-Sprache wird erst angewendet, sobald sich der Status der Warteschlange ändert.\nBitte starte die Anwendung neu, um die Änderungen sofort durchzuführen.",
 
   "ui-clipboard-copied": "In die Zwischenablage kopiert.",
 
   "ui-cheat-roulette-confirm": "Diese Funktion ist standardmäßig deaktiviert, um Missbrauch zu verhindern.\nBitte unterlasse das absichtliche Zurückziehen von Inhalten, nur weil du sie nicht magst.\n\nMöchtest du sie trotzdem aktivieren?",
-  "ui-cheat-roulette-enabled": "Aktiviert.\nBitte ziehe dich NICHT absichtlich von Inhalten zurück, weil du sie nicht magst.",
+  "ui-cheat-roulette-enabled": "Aktiviert.\nBitte ziehe dich NICHT absichtlich von Inhalten zurück, nur weil du sie nicht magst.",
 
   "ui-clear-log-confirm": "Protokoll leeren?",
 
@@ -115,13 +115,13 @@
   "ui-app-crashed": "Anwendung aufgrund eines unbekannten Fehlers beendet.\n\nFehler: {0}",
 
 
-  "overlay-waiting-connection": "Warten auf Client-Verbindung",
-  "overlay-not-queuing": "Momentan nicht auf Gruppensuche",
-  "overlay-duty-count-unknown": "Auf Gruppensuche",
-  "overlay-duty-count": "Auf Gruppensuche für {0} Inhalte",
-  "overlay-queue-waiting-party": "Gruppensuche: {0} / {1} / {2}",
+  "overlay-waiting-connection": "Warte auf Client-Verbindung",
+  "overlay-not-queuing": "Nicht auf Inhaltssuche",
+  "overlay-duty-count-unknown": "Auf Inhaltssuche",
+  "overlay-duty-count": "Auf Inhaltssuche für {0} Inhalte",
+  "overlay-queue-waiting-party": "Inhaltssuche: {0} / {1} / {2}",
   "overlay-queue-waiting": "Rufe Informationen ab...",
-  "overlay-queue-order": "Nummer {0} in Warteschlange für deine Rolle",
+  "overlay-queue-order": "#{0} in Warteschlange für Rolle",
   "overlay-roulette": "Zufallsinhalt",
   "overlay-queue-waiting-confirm": "Warte auf deine Bestätigung",
   "overlay-queue-matched": "Gruppe gefunden!",
@@ -149,13 +149,13 @@
 
   "l-updater-current-version": "U: Aktuelle Version: {0}",
   "l-updater-latest-version": "U: Neueste Version: {0}",
-  "l-updater-is-latest": "U: Neueste Version wird genutzt.",
-  "l-updater-new-version": "U: Aktualisierung verfügbar.",
+  "l-updater-is-latest": "U: Neueste Version wird genutzt",
+  "l-updater-new-version": "U: Aktualisierung verfügbar",
   "l-updater-error-general": "U: Beim Aktualisieren der Daten ist ein Fehler aufgetreten",
   "l-updater-error-data": "U: Beim Aktualisieren der Inhalts-/FATE-Daten ist ein Fehler aufgetreten",
-  "l-updater-error-check": "U: Aktualisierungs-Informationen konnten nicht gefunden werden.",
-  "l-updater-error-no-url": "U: Aktualisierungsdatei konnte nicht gefunden werden.",
-  "l-updater-error-downloading": "U: Bei der Beschaffung von Aktualisierungsdaten ist ein Fehler aufgetreten.",
+  "l-updater-error-check": "U: Aktualisierungs-Informationen konnten nicht gefunden werden",
+  "l-updater-error-no-url": "U: Aktualisierungsdatei konnte nicht gefunden werden",
+  "l-updater-error-downloading": "U: Bei der Beschaffung von Aktualisierungsdaten ist ein Fehler aufgetreten",
 
   "l-data-updated": "D: Inhalts-/FATE-Daten auf Version {0} aktualisiert.",
   "l-data-is-latest": "D: Neueste Inhalts-/FATE-Daten genutzt (Version {0}).",
@@ -193,8 +193,8 @@
   "l-analyze-error-general": "A: Fehler beim Analysieren der Nachricht",
   "l-analyze-error": "A: Fehler beim Bearbeiten der Nachricht",
 
-  "l-queue-started-general": "Q: Inhaltssuche gestartet [{0}]",
-  "l-queue-started-roulette": "Q: Zufallsinhalt-Suche gestartet [{0}]",
+  "l-queue-started-general": "Q: Inhaltssuche für [{0}] gestartet",
+  "l-queue-started-roulette": "Q: Zufallsinhalt-Suche [{0}] gestartet",
   "l-queue-stopped": "Q: Inhaltssuche angehalten",
   "l-queue-entered": "Q: Instanz-Gebiet betreten",
   "l-queue-matched": "Q: Gruppe für [{0}] gefunden",
