@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190720.1",
+  "version": "20190730.1",
 
   // Duty
   "instances": {
@@ -1507,6 +1507,33 @@
     },
     "689": {
       "name": "Eden's Gate: Sepulture",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 5.05 Raids Savage
+
+    "654": {
+      "name": "Eden's Gate: Resurrection (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "685": {
+      "name": "Eden's Gate: Descent (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "683": {
+      "name": "Eden's Gate: Inundation (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "690": {
+      "name": "Eden's Gate: Sepulture (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"

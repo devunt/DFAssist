@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190722.1",
+  "version": "20190730.1",
 
   // Duty
   "instances": {
@@ -1513,6 +1513,32 @@
       "dps": "4"
     },
     
+    // 5.05 Raids Savage
+
+    "654": {
+      "name": "Edens Erwachen - Auferstehung (episch)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "685": {
+      "name": "Edens Erwachen - Niederkunft (episch)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "683": {
+      "name": "Edens Erwachen - Überflutung (episch)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "690": {
+      "name": "Edens Erwachen - Beerdigung (episch)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
 
     // Guildhests
     "43": {
