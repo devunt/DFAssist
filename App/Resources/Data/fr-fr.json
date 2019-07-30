@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190720.1",
+  "version": "20190730.1",
 
   // Duty
   "instances": {
@@ -1497,13 +1497,13 @@
       "dps": "4"
     },
     "684": {
-      "name": "L'Éveil d'Éden - Déluge",
+      "name": "L'Éveil d'Éden - Descente",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "682": {
-      "name": "L'Éveil d'Éden - Descente",
+      "name": "L'Éveil d'Éden - Déluge",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -1515,6 +1515,32 @@
       "dps": "4"
     },
 
+    // 5.05 Raids Savage
+
+    "654": {
+      "name": "L'Éveil d'Éden - Résurrection (sadique)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "685": {
+      "name": "L'Éveil d'Éden - Descente (sadique)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "683": {
+      "name": "L'Éveil d'Éden - Déluge (sadique)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "690": {
+      "name": "L'Éveil d'Éden - Inhumation (sadique)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
 
 
     // Guildhests
