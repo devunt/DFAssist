@@ -16,7 +16,7 @@
   "fate-occured": "< {0} > FATE発生!",
   "queue-matched": "< {0} > 突入準備完了!",
 
-  
+
   "fate-preset-animus-SkyfireI": "炎天一巻",
   "fate-preset-animus-SkyfireII": "炎天二巻",
   "fate-preset-animus-NetherfireI": "炎獄一巻",
@@ -31,7 +31,7 @@
   "fate-preset-frogMount": "カエルマウント(コルシア島)",
   "fate-preset-frogSuit": "カエル衣服(テンペスト)",
 
-
+  
   "ui-notifymenustrip-open": "開く",
   "ui-notifymenustrip-close": "終了",
 
@@ -41,53 +41,53 @@
 
   "ui-tabcontrol-settings": "設定",
   "ui-tabcontrol-3rdparty": "3rd-party",
-  "ui-tabcontrol-advanced": "高級",
+  "ui-tabcontrol-advanced": "上級設定",
   "ui-tabcontrol-fate": "FATE",
   "ui-tabcontrol-logs": "ログ",
   "ui-tabcontrol-info": "情報",
 
   "ui-settings-title": "基本設定",
-  "ui-settings-overlay-use": "オーバーレイ",
+  "ui-settings-overlay-use": "オーバーレイを使う",
   "ui-settings-overlay-tooltip": "オーバーレイ左側のバーをドラッグすると移動できます。",
   "ui-settings-overlay-reset": "初期化",
-  "ui-settings-overlay-autohide": "任務をマッチング中でない時,オーバーレイ隠蔽",
-  "ui-notification-overlay-autohide": "マッチングの現況に変化が生じたり,FATEが発生してから適用されます。\nアプリケーションを再起動しても適用されます。\n\nクライアント通信待機中のときはオーバーレイが表示されます。 \n（プログラムが正しく作動するかを確認できるようにするため）",
+  "ui-settings-overlay-autohide": "マッチング中でない時にオーバーレイを隠す",
+  "ui-notification-overlay-autohide": "マッチング状況に変化が生じるかFATEが発生してから適用されます。\nアプリケーションを再起動しても適用されます。\n\nクライアントへの接続待機中のときはオーバーレイが表示されます。 \n（プログラムが正しく作動しているか確認できるようにするため）",
   "ui-settings-startupshow": "起動時にこのウィンドウを表示する",
   "ui-settings-iconflash": "突入準備完了時FFXIVのアイコンを点滅させる",
-  "ui-settings-cheatroulette": "デュティルレット。実際に入場するダンジョンを確認",
-  "ui-settings-copymacro": "マクロ情報がある場合,自動にマクロをクリップボードにコピー",
-  "ui-settings-copymacro-dialog-title": "DFA マクロ放射",
-  "ui-settings-copymacro-dialog-text": "<{0}> 任務のマクロをクリップボードにコピーしますか？",
-  "ui-settings-fatesound": "FATEを知らせる音の活性化\n(FATEについてカスタム通知サウンド非活性化)",
-  "ui-settings-usevpn": "ローカルネットワークフィルタリング解除(VPNなど)",
-  "ui-settings-usevpn-alert": "一般的には,このオプションを解除してこそ,プログラムが作動します。",
-  "ui-settings-customsound": "カスタム通知サウンド",
-  "ui-settings-getsoundfile": "ファイル",
+  "ui-settings-cheatroulette": "コンテンツルーレット参加時に実際の突入先を表示する",
+  "ui-settings-copymacro": "マクロがある場合、自動でマクロをクリップボードにコピー",
+  "ui-settings-copymacro-dialog-title": "DFA マクロコピー",
+  "ui-settings-copymacro-dialog-text": "<{0}> コンテンツのマクロをクリップボードにコピーしますか？",
+  "ui-settings-usevpn": "ローカルネットワーク接続をフィルターしない(VPNなど)",
+  "ui-settings-usevpn-alert": "通常、ネットワークパケットをキャプチャするためにはこのオプションを無効にする必要があります。",
+  "ui-settings-fatesound": "FATE通知音を使う\n(カスタム通知音を無効化)",
+  "ui-settings-customsound": "FATE/コンテンツファインダーのカスタム通知音",
+  "ui-settings-getsoundfile": "ファイル選択",
   "ui-settings-getfilewav": "WAV ファイル (*.wav)|*.wav",
-  "ui-notification-customsound-selectfile": "まず,音楽ファイルを選択してください。",
+  "ui-notification-customsound-selectfile": "最初に音声ファイルを選択してください。",
 
   "ui-3rdparty-twitter-title": "Twitterアラーム",
   "ui-3rdparty-twitter-activate": "有効化",
-  "ui-3rdparty-twitter-about": "突入準備完了時、FATEが発生した際指定したアカウントに\nツイートを送信します。\nTwitterアカウント名の@以降を入力してください。",
+  "ui-3rdparty-twitter-about": "突入準備完了時かFATE発生時に、指定したアカウントまで\nツイートを送信します。\nTwitterアカウント名の@以降を入力してください。",
   "ui-3rdparty-telegram-title": "Telegramアラーム",
   "ui-3rdparty-telegram-activate": "有効化",
-  "ui-3rdparty-telegram-about": "突入準備完了時,FATE発生時に指定したチャットルームにメッセージを送信します。\nChat IDは,DFAssist Telegram Botにどのようなメッセージを送っても確認できます。",
+  "ui-3rdparty-telegram-about": "突入準備完了時かFATE発生時に、指定したチャットルームにメッセージを送信します。\nChat IDはDFAssist Telegram Botにメッセージを送ることで確認できます。",
   "ui-3rdparty-discord-title": "Discordアラーム",
   "ui-3rdparty-discord-activate": "有効化",
-  "ui-3rdparty-discord-numberonly-alert": "Discord IDは数字だけ入力可能です。",
-  "ui-3rdparty-discord-about": "マッチング及びFATE発生の際に指定したアカウントにメッセージを送信します。\nDiscord IDは純粋な15席以上の数字です。\n\n※Discord IDを確認する方法：DFAssist ディスコードサーバーで#get-discord-idチャンネルに !id を入力すると確認できます。\nメッセージは、DFAssist Discordサーバに参加している時にのみ受信できます。",
+  "ui-3rdparty-discord-numberonly-alert": "Discord IDは数字のみ入力できます。",
+  "ui-3rdparty-discord-about": "Discordアカウントにメッセージを送って通知します。\nDiscord ID (15桁以上の数字) を入力してください。\n\n※Discord IDを確認する方法: DFAssist Discord Serverの#get-discord-idチャンネルで !id を入力すると確認できます。\nメッセージはDFAssist Discord Serverに参加している時にのみ受信できます。",
 
-  "ui-advanced-http": "使用者指定HTTP要請",
-  "ui-advanced-http-enable": "活性化",
+  "ui-advanced-http": "カスタムHTTPリクエスト",
+  "ui-advanced-http-enable": "有効化",
   "ui-advanced-http-duty-matched": "突入準備完了時",
   "ui-advanced-http-fate-occured": "FATE発生時",
-  "ui-advanced-http-readme": "この機能を活性化すればDFAssistは指定したURLで\n\"status\"と\"info\"を含むPOST HTTP Requestを送ります。\n\"status\"には\"duty-matched\"または\"fate-occured\"というStringが含まれます。\n\"info\"には,マッチングした任務や発生したFATEの名前が含まれます。\n\nこの機能はこれから追加的な改善が予定されています。",
+  "ui-advanced-http-readme": "この機能を有効にすると\"status\"と \"info\"を持つHTTP POSTリクエストを設定したURLに送信します。\n\n\"status\"には\"duty-matched\"または\"fate-occured\"という文字列が含まれます。\n\"info\"には,マッチングしたダンジョンや発生したFATEの名前が含まれます。\n\nこの機能にはアップデートが予定されています。",
 
   "ui-fate-selectall": "すべて選択",
   "ui-fate-unselectall": "すべて選択解除",
   "ui-fate-preset": "プリセット",
   "ui-fate-apply": "適用",
-  "ui-fate-about": "通知を受け取りたい物を選んで上の適用ボタンを押してください。\nアラートはキャラクターがFATEエリア内にいる場合のみ動作します。",
+  "ui-fate-about": "通知を受け取りたいFATEを選んで上の適用ボタンを押してください。\nアラートはキャラクターがFATEエリア内にいる場合のみ動作します。",
 
   "ui-logs-copy": "ログをコピー",
   "ui-logs-clear": "消去",
@@ -98,14 +98,14 @@
   "ui-msgbox-title-warning": "DFA警告",
   "ui-msgbox-title-error": "DFAエラー",
 
-  "ui-language-changed": "言語が日本語に変更されました。\nオーバーレイ部分は,現状に変化が生じると適用されます。\n今すぐ適用したいなら,アプリケーションを再起動してください。",
+  "ui-language-changed": "言語が日本語に変更されました。\nオーバーレイ部分は状態が変化すると適用されます。\n今すぐ適用するにはアプリケーションを再起動してください。",
 
-  "ui-clipboard-copied": "コピーしましした。",
+  "ui-clipboard-copied": "コピーしました。",
 
-  "ui-cheat-roulette-confirm": "悪用防止のため、基本的に無効になっている機能です。\n特定の嫌なコンテンツを意図的に拒絶することはお控えください。\n\nまだ有効にしますか？",
-  "ui-cheat-roulette-enabled": "有になって.\n故意に特定の嫌いなコンテンツを拒否しないでください。",
+  "ui-cheat-roulette-confirm": "悪用防止のため、標準では無効になっている機能です。\n特定の嫌なコンテンツを意図的に避けることはお控えください。\n\n本当に有効にしますか？",
+  "ui-cheat-roulette-enabled": "有効になりました。\n絶対に故意に特定のコンテンツを拒否しないでください。",
 
-  "ui-clear-log-confirm": "ログを消しますか？",
+  "ui-clear-log-confirm": "ログを削除しますか？",
 
   "ui-fate-selection-saved": "FATE通知がセットされました。",
   "ui-fate-preset-applied": "FATEプリセットが適用されました。",
@@ -114,9 +114,9 @@
 
   "ui-app-crashed": "不明な問題によりアプリケーションが終了しました\n\nエラー: {0}",
 
-  
-  "overlay-waiting-connection": "クライアントとの接続を待機しています",
-  "overlay-not-queuing": "参加申請していません",
+
+  "overlay-waiting-connection": "クライアントへの接続待機中",
+  "overlay-not-queuing": "参加申請をしていません",
   "overlay-duty-count-unknown": "コンテンツ参加申請中",
   "overlay-duty-count": "{0} コンテンツ参加申請中",
   "overlay-queue-waiting-party": "パーティ構築中: {0} / {1} / {2}",
@@ -138,13 +138,13 @@
   "l-twitter-failed-request": "R: ツイート送信時にエラーが発生しました。",
   "l-twitter-failed-general": "R: ツイート送信に失敗しました。: {0}",
   "l-twitter-success": "R: ツイート成功!",
-  "l-telegram-failed-request": "R: Telegramメッセージ送信時にエラーが発生しました。",
-  "l-telegram-failed-general": "R: Telegramメッセージ送信に失敗しました。: {0}",
-  "l-telegram-success": "R: Telegramメッセージ成功!",
-  "l-discord-failed-request": "R: Discordメッセージ送信時にエラーが発生しました。",
-  "l-discord-failed-general": "R: Discordメッセージ送信に失敗しました。: {0}",
-  "l-discord-success": "R: Discordメッセージ成功!",
-  
+  "l-telegram-failed-request": "R: Telegramメッセージの送信時にエラーが発生しました。",
+  "l-telegram-failed-general": "R: Telegramメッセージの送信に失敗しました。: {0}",
+  "l-telegram-success": "R: Telegramメッセージ送信完了!",
+  "l-discord-failed-request": "R: Discordメッセージの送信時にエラーが発生しました。",
+  "l-discord-failed-general": "R: Discordメッセージの送信に失敗しました。: {0}",
+  "l-discord-success": "R: Discordメッセージ送信完了!",
+
   "l-web-request-failed": "W: Webサービスでエラーが発生しました。",
 
   "l-updater-current-version": "U: 現在のバージョン: {0}",
@@ -158,7 +158,7 @@
   "l-updater-error-downloading": "U: アップデートデータのダウンロード中にエラーが発生しました。",
 
   "l-data-updated": "D: コンテンツデータはバージョン {0} へアップデートされました。",
-  "l-data-is-latest": "D: 最深のコンテンツデートを利用しています(バージョン {0})。",
+  "l-data-is-latest": "D: 最新のコンテンツデータを使用しています(バージョン {0})。",
   "l-data-error": "D: コンテンツデータを処理中にエラーが発生しました。",
 
   "l-packet-error-ip": "P: IPパケット解析エラー",
@@ -182,11 +182,11 @@
   "l-firewall-registered": "FW: 登録済み",
   "l-firewall-error": "FW: 登録中にエラーが発生しました",
   
-  "l-wav-error": "S: 音楽ファイルの再生エラー：正しくないwavファイルです。",
+  "l-wav-error": "S: 音楽ファイルの再生エラー: 正しくないwavファイルです。",
 
-  "l-POST-send": "N: POST 要請 URL: {0}, データ: {1}",
+  "l-POST-send": "N: POST リクエスト URL: {0}, データ: {1}",
   "l-POST-no-response": "S: POST 応答なし!",
-  "l-POST-failed": "S: POST 要請失敗!",
+  "l-POST-failed": "S: POST リクエスト失敗!",
   "l-POST-response": "S: POST 応答: {0}",
 
   "l-analyze-error-length": "A: メッセージ解析中に長さエラーが発生しました: {0}, {1}/{2}",
