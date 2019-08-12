@@ -740,9 +740,9 @@ namespace App
             // groupBox_TwitterSet.Text = Localization.GetText("ui-3rdparty-twitter-title");
             // checkBox_Twitter.Text = Localization.GetText("ui-3rdparty-twitter-activate");
             // label_TwitterAbout.Text = Localization.GetText("ui-3rdparty-twitter-about");
-             groupBox_TelegramSet.Text = Localization.GetText("ui-3rdparty-telegram-title");
-             checkBox_Telegram.Text = Localization.GetText("ui-3rdparty-telegram-activate");
-             label_TelegramAbout.Text = Localization.GetText("ui-3rdparty-telegram-about");
+            groupBox_TelegramSet.Text = Localization.GetText("ui-3rdparty-telegram-title");
+            checkBox_Telegram.Text = Localization.GetText("ui-3rdparty-telegram-activate");
+            label_TelegramAbout.Text = Localization.GetText("ui-3rdparty-telegram-about");
             groupBox_DiscordSet.Text = Localization.GetText("ui-3rdparty-discord-title");
             checkBox_Discord.Text = Localization.GetText("ui-3rdparty-discord-activate");
             label_DiscordAbout.Text = Localization.GetText("ui-3rdparty-discord-about");
@@ -773,6 +773,22 @@ namespace App
             toolStripMenuItem_LogClear.Text = Localization.GetText("ui-logs-clear");
             label_About.Text = Localization.GetText("ui-info-about");
 
+            // change Font
+            List<Control> allControls = GetAllControls(this, GetAllControls(overlayForm));
+            allControls.Add(groupBox_DefaultSet);
+            allControls.Add(groupBox_TelegramSet);
+            allControls.Add(groupBox_DiscordSet);
+            allControls.Add(groupBox_CustomHttpRequest);
+            if (Settings.Language == "ja-jp")
+            {
+                allControls.ForEach(k => k.Font = new Font("Yu Gothic", k.Font.Size));
+            }
+            else
+            {
+                allControls.ForEach(k => k.Font = new Font("Malgun Gothic", k.Font.Size));
+            }
+            label_AboutTitle.Font = new Font(label_AboutTitle.Font, FontStyle.Bold);
+
             // Move items as String length change with languages.
             button_ResetOverlayPosition.Left = checkBox_Overlay.Location.X + checkBox_Overlay.Size.Width;
             button_getSoundFile.Left = checkBox_CustomSound.Location.X + checkBox_CustomSound.Size.Width;
@@ -780,6 +796,23 @@ namespace App
             comboBox_Process.Left = label_Process.Location.X + label_Process.Size.Width;
             button_SelectProcess.Left = comboBox_Process.Location.X + comboBox_Process.Size.Width;
             button_ResetProcess.Left = button_SelectProcess.Location.X + button_SelectProcess.Size.Width;
+        }
+
+        private List<Control> GetAllControls(Control container, List<Control> list)
+        {
+            foreach (Control c in container.Controls)
+            {
+                if (c.Controls.Count > 0)
+                    list = GetAllControls(c, list);
+                else
+                    list.Add(c);
+            }
+
+            return list;
+        }
+        private List<Control> GetAllControls(Control container)
+        {
+            return GetAllControls(container, new List<Control>());
         }
     }
 }

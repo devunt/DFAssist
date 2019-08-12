@@ -62,7 +62,7 @@
   "ui-settings-usevpn-alert": "通常、ネットワークパケットをキャプチャするためにはこのオプションを無効にする必要があります。",
   "ui-settings-fatesound": "FATE通知音を使う\n(カスタム通知音を無効化)",
   "ui-settings-customsound": "FATE/コンテンツファインダーのカスタム通知音",
-  "ui-settings-getsoundfile": "ファイル選択",
+  "ui-settings-getsoundfile": "選択",
   "ui-settings-getfilewav": "WAV ファイル (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "最初に音声ファイルを選択してください。",
 
