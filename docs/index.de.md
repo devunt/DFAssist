@@ -44,20 +44,20 @@ Das Protokoll innerhalb des Programms ist hilfreich zur Behebung von Problemen. 
 
 ### Overlay-Interface
 
-![Overlay-Interface 1](https://i.imgur.com/W904lHM.jpg)  
-![Overlay-Interface 2](https://i.imgur.com/r1KmWb3.jpg)
+![Overlay-Interface 1](https://i.imgur.com/ZtC3Tbq.png)  
+![Overlay-Interface 2](https://i.imgur.com/5JlTNfi.png)
 
 ### Informationen zur Inhaltssuche
 
-![Informationen zur Inhaltssuche](https://i.imgur.com/kVfTFyD.jpg)
+![Informationen zur Inhaltssuche](https://i.imgur.com/DgKCADL.png)
 
 ### Gruppe gefunden
 
-![Gruppe gefunden](https://i.imgur.com/JgBA1F3.gif)
+![Gruppe gefunden](https://i.imgur.com/si2DAmx.gif)
 
 ### FATE erschienen
 
-![FATE erschienen](https://i.imgur.com/AwRA9Ac.gif)
+![FATE erschienen](https://i.imgur.com/qr9TPCm.gif)
 
 ### FFXIV-Icon blinkt
 
@@ -65,7 +65,7 @@ Das Protokoll innerhalb des Programms ist hilfreich zur Behebung von Problemen. 
 
 ### Anzeige des tatsächlichen Inhalts bei Zufallsinhalten
 
-![Anzeige des tatsächlichen Inhalts bei Zufallsinhalten](https://i.imgur.com/4ztaLkR.jpg)
+![Anzeige des tatsächlichen Inhalts bei Zufallsinhalten](https://i.imgur.com/DauT3Ie.png)
 
 ### Anwendungsinterface
 
