@@ -65,7 +65,7 @@ title: {{ site.name }}
 
 ### コンテンツルーレットで選ばれたコンテンツの表示
 
-![コンテンツルーレットで選ばれたコンテンツの表示](https://i.imgur.com/4ztaLkR.jpg)
+![コンテンツルーレットで選ばれたコンテンツの表示](https://i.imgur.com/JrOrkAr.png)
 
 ### アプリケーションUI
 
