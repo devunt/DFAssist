@@ -451,12 +451,20 @@ namespace App
                             {
                                 mainForm.overlayForm.SetDutyStatus(instance, order, dps, healer);
                             }
+                            else
+                            {
+                                mainForm.overlayForm.SetDutyStatus(instance, tank, dps, healer);
+                            }
                         }
                         else if (state == State.QUEUED)
                         {
                             if (rouletteCode > 0)
                             {
                                 mainForm.overlayForm.SetDutyStatus(instance, order, dps, healer);
+                            }
+                            else
+                            {
+                                mainForm.overlayForm.SetDutyStatus(instance, tank, dps, healer);
                             }
                         }
 
