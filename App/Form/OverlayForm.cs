@@ -160,13 +160,13 @@ namespace App
                 }
                 else if (isRoulette)
                 {
-                    if (tank == 255) // 순번 대기
+                    if (tank == 0) // 순번 대기
                     {
                         label_DutyStatus.SetLocalizedText("overlay-queue-waiting");
                     }
                     else // TODO: 순번이 1번일 때?
                     {
-                        label_DutyStatus.SetLocalizedText("overlay-queue-order", tank + 1);
+                        label_DutyStatus.SetLocalizedText("overlay-queue-order", tank);
                     }
                 }
                 else

@@ -9,7 +9,6 @@ namespace App
 {
     internal partial class Network
     {
-        private bool NetCompatibility;
         private byte rouletteCode;
         private State state = State.IDLE;
         private int lastMember = 0;
@@ -286,7 +285,6 @@ namespace App
 
                     if (status == 0)
                     {
-                        NetCompatibility = false;
                         state = State.QUEUED;
 
                         rouletteCode = data[20];
@@ -425,36 +423,11 @@ namespace App
                 else if (opcode == 0x0079)
                 {
                     var code = BitConverter.ToUInt16(data, 0);
-                    byte status = 0;
-                    byte tank = 0;
-                    byte dps = 0;
-                    byte healer = 0;
-                    byte order = 255;
-                    if (NetCompatibility)
-                    {
-                        order = data[4];
-                        order--;
-                        status = data[8];
-                        tank = data[9];
-                        dps = data[10];
-                        healer = data[11];
-                    }
-                    else
-                    {
-                        order = data[5];
-                        status = data[4];
-                        tank = data[5];
-                        dps = data[6];
-                        healer = data[7];
-                    }
-                    if (status == 0 && tank == 0 && healer == 0 && dps == 0) // v4.5~ compatibility (data location changed, original location sends "0")
-                    {
-                        NetCompatibility = true;
-                        status = data[8];
-                        tank = data[9];
-                        dps = data[10];
-                        healer = data[11];
-                    }
+                    var status = data[8];
+                    var tank = data[9];
+                    var dps = data[10];
+                    var healer = data[11];
+                    var order = data[4];
 
                     var instance = Data.GetInstance(code);
 
@@ -474,24 +447,16 @@ namespace App
                             // 프로그램이 매칭 중간에 켜짐
                             state = State.QUEUED;
                             mainForm.overlayForm.SetDutyCount(-1); // 알 수 없음으로 설정함 (TODO: 알아낼 방법 있으면 정확히 나오게 수정하기)
-                            if (NetCompatibility && rouletteCode > 0)
+                            if (rouletteCode > 0)
                             {
                                 mainForm.overlayForm.SetDutyStatus(instance, order, dps, healer);
-                            }
-                            else
-                            {
-                                mainForm.overlayForm.SetDutyStatus(instance, tank, dps, healer);
                             }
                         }
                         else if (state == State.QUEUED)
                         {
-                            if (NetCompatibility && rouletteCode > 0)
+                            if (rouletteCode > 0)
                             {
                                 mainForm.overlayForm.SetDutyStatus(instance, order, dps, healer);
-                            }
-                            else
-                            {
-                                mainForm.overlayForm.SetDutyStatus(instance, tank, dps, healer);
                             }
                         }
 
