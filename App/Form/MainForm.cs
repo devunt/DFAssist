@@ -106,9 +106,6 @@ namespace App
             }
             SetCheatRoulleteCheckBox(Settings.CheatRoulette);
             checkBox_CopyMacro.Checked = Settings.copyMacro;
-            // checkBox_Twitter.Checked = Settings.TwitterEnabled;
-            // textBox_Telegram.Enabled = Settings.TwitterEnabled;
-            // textBox_Telegram.Text = Settings.TwitterAccount;
             checkBox_Telegram.Checked = Settings.TelegramEnabled;
             textBox_Telegram.Enabled = Settings.TelegramEnabled;
             textBox_Telegram.Text = Settings.TelegramChatId;
@@ -398,19 +395,6 @@ namespace App
             Settings.Save();
         }
 
-        /*private void textBox_Twitter_TextChanged(object sender, EventArgs e)
-        {
-            Settings.TwitterAccount = textBox_Twitter.Text;
-            Settings.Save();
-        }
-
-        private void checkBox_Twitter_CheckedChanged(object sender, EventArgs e)
-        {
-            textBox_Twitter.Enabled = checkBox_Twitter.Checked;
-            Settings.TwitterEnabled = checkBox_Twitter.Checked;
-            Settings.Save();
-        }
-        */
         private void textBox_Discord_TextChanged(object sender, EventArgs e)
         {
             string strRegex = "^[0-9]{15}";
@@ -737,9 +721,6 @@ namespace App
             checkBox_CheatRoullete.Text = Localization.GetText("ui-settings-cheatroulette");
             checkBox_CopyMacro.Text = Localization.GetText("ui-settings-copymacro");
             checkBox_useVPN.Text = Localization.GetText("ui-settings-usevpn");
-            // groupBox_TwitterSet.Text = Localization.GetText("ui-3rdparty-twitter-title");
-            // checkBox_Twitter.Text = Localization.GetText("ui-3rdparty-twitter-activate");
-            // label_TwitterAbout.Text = Localization.GetText("ui-3rdparty-twitter-about");
             groupBox_TelegramSet.Text = Localization.GetText("ui-3rdparty-telegram-title");
             checkBox_Telegram.Text = Localization.GetText("ui-3rdparty-telegram-activate");
             label_TelegramAbout.Text = Localization.GetText("ui-3rdparty-telegram-about");

@@ -132,9 +132,6 @@
   "l-process-found-nothing": "P: 파이널판타지14 프로세스를 찾을 수 없습니다.",
   "l-process-found-multiple": "P: 파이널판타지14가 2개 이상 실행중입니다.",
 
-  "l-twitter-failed-request": "R: 트윗 발송 요청중 에러 발생",
-  "l-twitter-failed-general": "R: 트윗 발송 실패: {0}",
-  "l-twitter-success": "R: 트윗을 발송했습니다!",
   "l-telegram-failed-request": "R: 텔레그램 메시지 발송 요청중 에러 발생",
   "l-telegram-failed-general": "R: 텔레그램 메시지 발송 실패: {0}",
   "l-telegram-success": "R: 텔레그램 메시지를 발송했습니다!",

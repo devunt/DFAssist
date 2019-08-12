@@ -132,9 +132,6 @@
   "l-process-found-nothing": "P: FFXIV-Prozess konnte nicht gefunden werden.",
   "l-process-found-multiple": "P: Zwei oder mehrere FFXIV-Prozesse sind am Laufen.",
 
-  "l-twitter-failed-request": "R: Beim Anfragen eines Tweets ist ein Fehler aufgetreten",
-  "l-twitter-failed-general": "R: Tweet konnte nicht gesendet werden: {0}",
-  "l-twitter-success": "R: Tweet gesendet!",
   "l-telegram-failed-request": "R: Beim Anfragen einer Telegram-Nachricht ist ein Fehler aufgetreten",
   "l-telegram-failed-general": "R: Telegram-Nachricht konnte nicht gesendet werden: {0}",
   "l-telegram-success": "R: Telegram-Nachricht gesendet!",

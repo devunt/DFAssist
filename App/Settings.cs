@@ -19,8 +19,6 @@ namespace App
         public static bool FateSound { get; set; } = false;
         public static bool CustomSound { get; set; } = false;
         public static string CustomSoundPath { get; set; } = "";
-        public static bool TwitterEnabled { get; set; } = false;
-        public static string TwitterAccount { get; set; } = "";
         public static bool TelegramEnabled { get; set; } = false;
         public static string TelegramChatId { get; set; } = "";
         public static bool DiscordEnabled { get; set; } = false;
@@ -61,8 +59,6 @@ namespace App
                 FateSound = iniFile.ReadValue("notification", "fatesound") == "1";
                 CustomSound = iniFile.ReadValue("notification", "customsound") == "1";
                 CustomSoundPath = iniFile.ReadValue("notification", "customsoundpath") ?? "";
-                TwitterEnabled = iniFile.ReadValue("notification", "twitter") == "1";
-                TwitterAccount = iniFile.ReadValue("notification", "twitteraccount") ?? "";
                 TelegramEnabled = iniFile.ReadValue("notification", "telegram") == "1";
                 TelegramChatId = iniFile.ReadValue("notification", "telegramchatid") ?? "";
                 DiscordEnabled = iniFile.ReadValue("notification", "discord") == "1";
@@ -96,8 +92,6 @@ namespace App
             iniFile.WriteValue("notification", "fatesound", FateSound ? "1" : "0");
             iniFile.WriteValue("notification", "customsound", CustomSound ? "1" : "0");
             iniFile.WriteValue("notification", "customsoundpath", CustomSoundPath);
-            iniFile.WriteValue("notification", "twitter", TwitterEnabled ? "1" : "0");
-            iniFile.WriteValue("notification", "twitteraccount", TwitterAccount);
             iniFile.WriteValue("notification", "telegram", TelegramEnabled ? "1" : "0");
             iniFile.WriteValue("notification", "telegramChatId", TelegramChatId);
             iniFile.WriteValue("notification", "discord", DiscordEnabled ? "1" : "0");
