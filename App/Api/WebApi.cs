@@ -16,9 +16,7 @@ namespace App
             Task.Factory.StartNew(() =>
             {
                 var account = "";
-                if(service == "twitter")
-                    account = Settings.TwitterAccount;
-                else if (service == "telegram")
+                if (service == "telegram")
                     account = Settings.TelegramChatId;
                 else if (service == "discord")
                     account = Settings.DiscordAccount;

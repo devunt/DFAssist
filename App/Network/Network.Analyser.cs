@@ -245,11 +245,6 @@ namespace App
                                 WinApi.FlashWindow(mainForm.FFXIVProcess);
                             }
 
-                            /*if (Settings.TwitterEnabled)
-                            {
-                                WebApi.Request("twitter", "fate-occured", fate.Name);
-                            }*/
-
                             if (Settings.TelegramEnabled)
                             {
                                 WebApi.Request("telegram", "fate-occured", fate.Name);
@@ -267,17 +262,6 @@ namespace App
                         }
                     }
                 }
-                /*else if (opcode == 0x006C) // 3.5 cross-world 파티 참가하면 문제가 발생하는 부분.
-                {
-                    var code = BitConverter.ToUInt16(data, 192);
-
-                    var instance = Data.GetInstance(code);
-
-                    state = State.QUEUED;
-                    mainForm.overlayForm.SetDutyCount(1);
-
-                    Log.I("l-queue-started-general", instance.Name);
-                }*/
                 else if (opcode == 0x0078)
                 {
                     var status = data[0];
@@ -370,11 +354,6 @@ namespace App
                         {
                             mainForm.ShowNotification("notification-queue-matched", instance.Name);
                         }
-
-                        /*if (Settings.TwitterEnabled)
-                        {
-                            WebApi.Request("twitter", "duty-matched", instance.Name);
-                        }*/
 
                         if (Settings.TelegramEnabled)
                         {
@@ -517,11 +496,6 @@ namespace App
                     {
                         mainForm.ShowNotification("notification-queue-matched", instance.Name);
                     }
-
-                    /*if (Settings.TwitterEnabled)
-                    {
-                        WebApi.Request("twitter", "duty -matched", instance.Name);
-                    }*/
 
                     if (Settings.TelegramEnabled)
                     {

@@ -66,9 +66,6 @@
   "ui-settings-getfilewav": "WAV ファイル (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "最初に音声ファイルを選択してください。",
 
-  "ui-3rdparty-twitter-title": "Twitterアラーム",
-  "ui-3rdparty-twitter-activate": "有効化",
-  "ui-3rdparty-twitter-about": "突入準備完了時かFATE発生時に、指定したアカウントまで\nツイートを送信します。\nTwitterアカウント名の@以降を入力してください。",
   "ui-3rdparty-telegram-title": "Telegramアラーム",
   "ui-3rdparty-telegram-activate": "有効化",
   "ui-3rdparty-telegram-about": "突入準備完了時かFATE発生時に、指定したチャットルームにメッセージを送信します。\nChat IDはDFAssist Telegram Botにメッセージを送ることで確認できます。",

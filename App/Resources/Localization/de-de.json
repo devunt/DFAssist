@@ -66,9 +66,6 @@
   "ui-settings-getfilewav": "WAV-Dateien (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "Wähle zuerst eine Sound-Datei aus.",
 
-  "ui-3rdparty-twitter-title": "Twitter-Mitteilung",
-  "ui-3rdparty-twitter-activate": "Aktivieren",
-  "ui-3rdparty-twitter-about": "Sobald eine Gruppe gefunden wird oder ein FATE erscheint, \nwird ein Tweet mit Erwähnung des angegebenen Twitter-Accounts gesendet.\nFüge den Twitter-Namen ohne das vorstehende @-Symbol ein.",
   "ui-3rdparty-telegram-title": "Telegram-Mitteilung",
   "ui-3rdparty-telegram-activate": "Aktivieren",
   "ui-3rdparty-telegram-about": "Sobald eine Gruppe gefunden wird oder ein FATE erscheint, wird eine Nachricht an diesen Telegram-Chat gesendet.\nDu erhältst deine Chat-ID, indem du eine Nachricht an den DFAssist Telegram-Bot sendest.",
