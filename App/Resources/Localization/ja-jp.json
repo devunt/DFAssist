@@ -68,6 +68,7 @@
 
   "ui-3rdparty-telegram-title": "Telegramアラーム",
   "ui-3rdparty-telegram-activate": "有効化",
+  "ui-3rdparty-telegram-queuestatus": "マッチング状況も",
   "ui-3rdparty-telegram-about": "突入準備完了時かFATE発生時に、指定したチャットルームにメッセージを送信します。\nChat IDはDFAssist Telegram Botにメッセージを送ることで確認できます。",
   "ui-3rdparty-discord-title": "Discordアラーム",
   "ui-3rdparty-discord-activate": "有効化",
@@ -78,7 +79,7 @@
   "ui-advanced-http-enable": "有効化",
   "ui-advanced-http-duty-matched": "突入準備完了時",
   "ui-advanced-http-fate-occured": "FATE発生時",
-  "ui-advanced-http-readme": "この機能を有効にすると\"status\"と \"info\"を持つHTTP POSTリクエストを設定したURLに送信します。\n\n\"status\"には\"duty-matched\"または\"fate-occured\"という文字列が含まれます。\n\"info\"には,マッチングしたダンジョンや発生したFATEの名前が含まれます。\n\nこの機能にはアップデートが予定されています。",
+  "ui-advanced-http-readme": "この機能を有効にすると\"status\"と \"info\"を持つHTTP POSTリクエストを\n設定したURLに送信します。\n\"status\"には\"duty-matched\"または\"fate-occured\"という文字列が含まれます。\n\"info\"には,マッチングしたダンジョンや発生したFATEの名前が含まれます。\n\nこの機能にはアップデートが予定されています。",
 
   "ui-fate-selectall": "すべて選択",
   "ui-fate-unselectall": "すべて選択解除",

@@ -107,6 +107,7 @@ namespace App
             SetCheatRoulleteCheckBox(Settings.CheatRoulette);
             checkBox_CopyMacro.Checked = Settings.copyMacro;
             checkBox_Telegram.Checked = Settings.TelegramEnabled;
+            checkBox_Telegram_Queue_Status.Checked = Settings.TelegramQueueStatusEnabled;
             textBox_Telegram.Enabled = Settings.TelegramEnabled;
             textBox_Telegram.Text = Settings.TelegramChatId;
             checkBox_Discord.Checked = Settings.DiscordEnabled;
@@ -395,9 +396,15 @@ namespace App
             Settings.Save();
         }
 
+        private void checkBox_Telegram_Queue_Status_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.TelegramQueueStatusEnabled = checkBox_Telegram_Queue_Status.Checked;
+            Settings.Save();
+        }
+
         private void textBox_Discord_TextChanged(object sender, EventArgs e)
         {
-            string strRegex = "^[0-9]{15}";
+            string strRegex = "^[0-9]{15,}";
             Regex re = new Regex(strRegex);
             if (re.IsMatch(textBox_Discord.Text))
             {
@@ -723,6 +730,7 @@ namespace App
             checkBox_useVPN.Text = Localization.GetText("ui-settings-usevpn");
             groupBox_TelegramSet.Text = Localization.GetText("ui-3rdparty-telegram-title");
             checkBox_Telegram.Text = Localization.GetText("ui-3rdparty-telegram-activate");
+            checkBox_Telegram_Queue_Status.Text = Localization.GetText("ui-3rdparty-telegram-queuestatus");
             label_TelegramAbout.Text = Localization.GetText("ui-3rdparty-telegram-about");
             groupBox_DiscordSet.Text = Localization.GetText("ui-3rdparty-discord-title");
             checkBox_Discord.Text = Localization.GetText("ui-3rdparty-discord-activate");
@@ -777,6 +785,7 @@ namespace App
             comboBox_Process.Left = label_Process.Location.X + label_Process.Size.Width;
             button_SelectProcess.Left = comboBox_Process.Location.X + comboBox_Process.Size.Width;
             button_ResetProcess.Left = button_SelectProcess.Location.X + button_SelectProcess.Size.Width;
+            checkBox_Telegram_Queue_Status.Left = checkBox_Telegram.Location.X + checkBox_Telegram.Size.Width;
         }
 
         private List<Control> GetAllControls(Control container, List<Control> list)

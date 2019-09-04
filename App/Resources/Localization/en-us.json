@@ -68,6 +68,7 @@
 
   "ui-3rdparty-telegram-title": "Telegram Alarm",
   "ui-3rdparty-telegram-activate": "Enable",
+  "ui-3rdparty-telegram-queuestatus": "Send queue status",
   "ui-3rdparty-telegram-about": "When a queue pops or FATE occurs, send a message to this Telegram chat room.\nYou can get your Chat ID if you send any message to DFAssist Telegram Bot.",
   "ui-3rdparty-discord-title": "Discord Alarm",
   "ui-3rdparty-discord-activate": "Enable",

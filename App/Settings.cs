@@ -20,6 +20,7 @@ namespace App
         public static bool CustomSound { get; set; } = false;
         public static string CustomSoundPath { get; set; } = "";
         public static bool TelegramEnabled { get; set; } = false;
+        public static bool TelegramQueueStatusEnabled { get; set; } = false;
         public static string TelegramChatId { get; set; } = "";
         public static bool DiscordEnabled { get; set; } = false;
         public static string DiscordAccount { get; set; } = "";
@@ -60,6 +61,7 @@ namespace App
                 CustomSound = iniFile.ReadValue("notification", "customsound") == "1";
                 CustomSoundPath = iniFile.ReadValue("notification", "customsoundpath") ?? "";
                 TelegramEnabled = iniFile.ReadValue("notification", "telegram") == "1";
+                TelegramQueueStatusEnabled = iniFile.ReadValue("notification", "telegramqueuestatus") == "1";
                 TelegramChatId = iniFile.ReadValue("notification", "telegramchatid") ?? "";
                 DiscordEnabled = iniFile.ReadValue("notification", "discord") == "1";
                 DiscordAccount = iniFile.ReadValue("notification", "discordaccount") ?? "";
@@ -93,6 +95,7 @@ namespace App
             iniFile.WriteValue("notification", "customsound", CustomSound ? "1" : "0");
             iniFile.WriteValue("notification", "customsoundpath", CustomSoundPath);
             iniFile.WriteValue("notification", "telegram", TelegramEnabled ? "1" : "0");
+            iniFile.WriteValue("notification", "telegramqueuestatus", TelegramQueueStatusEnabled ? "1" : "0");
             iniFile.WriteValue("notification", "telegramChatId", TelegramChatId);
             iniFile.WriteValue("notification", "discord", DiscordEnabled ? "1" : "0");
             iniFile.WriteValue("notification", "discordaccount", DiscordAccount);

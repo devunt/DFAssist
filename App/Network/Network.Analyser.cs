@@ -12,6 +12,7 @@ namespace App
         private byte rouletteCode;
         private State state = State.IDLE;
         private int lastMember = 0;
+        private int lastOrder = 0;
         private ushort lastCode = 0;
         internal SoundPlayer notificationPlayer;
         private SoundPlayer fatePlayer;
@@ -447,7 +448,22 @@ namespace App
                             }
                         }
 
+                        // 직전 맴버 구성과 같은 상황이면 알림주지 않음
+                        if (Settings.TelegramEnabled && Settings.TelegramQueueStatusEnabled)
+                        {
+                            if (rouletteCode == 0 && lastMember != member) // 무작위 임무가 아님 (Not roulette duty)
+                            {
+                                WebApi.Request("telegram", "duty-status", $"{instance.Name}, {tank}/{instance.Tank}, {healer}/{instance.Healer}, {dps}/{instance.DPS}");
+                            }
+                            else if (order != 0 && lastOrder != order) // 매칭 현황을 받아오는 중이면 제외 (except 'retrieving information')
+                            {
+                                var roulette = Data.GetRoulette(rouletteCode);
+                                WebApi.Request("telegram", "duty-status-roulette", $"{roulette.Name} - #{order}");
+                            }
+                        }
+
                         lastMember = member;
+                        lastOrder = order;
                     }
                     else if (status == 2)
                     {
