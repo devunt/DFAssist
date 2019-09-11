@@ -10,7 +10,7 @@ Erledige andere Dinge, während du in der Warteschlange bist! DFAssist informier
 
 ## Informationen
 
-- Neueste Version ```v20190904.1``` ([Download](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
+- Neueste Version ```v20190911.1``` ([Download](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
 - .NET Framework-Version ```Microsoft .NET Framework 4.0``` ([Download](https://www.microsoft.com/en-us/download/details.aspx?id=17851))
 - Spiel-Version ```Final Fantasy XIV, Version 5.0```
 
