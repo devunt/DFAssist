@@ -65,6 +65,7 @@
   "ui-settings-getsoundfile": "選択",
   "ui-settings-getfilewav": "WAV ファイル (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "最初に音声ファイルを選択してください。",
+  "ui-link-localization": "DFAssist翻訳参加",
 
   "ui-3rdparty-telegram-title": "Telegramアラーム",
   "ui-3rdparty-telegram-activate": "有効化",

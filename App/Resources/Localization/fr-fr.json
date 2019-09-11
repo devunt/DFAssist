@@ -65,6 +65,7 @@
   "ui-settings-getsoundfile": "Choisir",
   "ui-settings-getfilewav": "WAV fichier (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "D'abord, Choisissez un fichier musical.",
+  "ui-link-localization": "Participer à la localisation du DFAssist",
 
   "ui-3rdparty-telegram-title": "Rappel Telegram",
   "ui-3rdparty-telegram-activate": "Activer",

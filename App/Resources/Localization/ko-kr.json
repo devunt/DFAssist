@@ -65,6 +65,7 @@
   "ui-settings-getsoundfile": "파일 선택",
   "ui-settings-getfilewav": "WAV 파일 (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "음악 파일을 먼저 선택해주세요.",
+  "ui-link-localization": "DFAssist 번역 참여",
 
   "ui-3rdparty-telegram-title": "텔레그램 알림",
   "ui-3rdparty-telegram-activate": "활성화",

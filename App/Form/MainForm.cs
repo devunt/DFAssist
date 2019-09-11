@@ -204,6 +204,11 @@ namespace App
             richTextBox_Log.ScrollToCaret();
         }
 
+        private void linkLabel_Localization_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(Global.LOCALIZATION);
+        }
+
         private void linkLabel_Telegram_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(Global.TELEGRAM_BOT);
@@ -728,6 +733,7 @@ namespace App
             checkBox_CheatRoullete.Text = Localization.GetText("ui-settings-cheatroulette");
             checkBox_CopyMacro.Text = Localization.GetText("ui-settings-copymacro");
             checkBox_useVPN.Text = Localization.GetText("ui-settings-usevpn");
+            linkLabel_Localization.Text = Localization.GetText("ui-link-localization");
             groupBox_TelegramSet.Text = Localization.GetText("ui-3rdparty-telegram-title");
             checkBox_Telegram.Text = Localization.GetText("ui-3rdparty-telegram-activate");
             checkBox_Telegram_Queue_Status.Text = Localization.GetText("ui-3rdparty-telegram-queuestatus");
