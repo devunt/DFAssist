@@ -118,7 +118,7 @@
   "overlay-not-queuing": "매칭중인 임무 없음",
   "overlay-duty-count-unknown": "임무 매칭 중",
   "overlay-duty-count": "총 {0}개 임무 매칭 중",
-  "overlay-queue-waiting-party": "파티 매칭 중: {0} / {1} / {2}",
+  "overlay-queue-waiting-party": "PvP 매칭: {0}명 대기 중",
   "overlay-queue-waiting": "매칭 대기 중",
   "overlay-queue-order": "대기 순번: {0}",
   "overlay-roulette": "무작위 임무",

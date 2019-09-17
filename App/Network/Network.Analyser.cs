@@ -427,9 +427,9 @@ namespace App
                             // 프로그램이 매칭 중간에 켜짐
                             state = State.QUEUED;
                             mainForm.overlayForm.SetDutyCount(-1); // 알 수 없음으로 설정함 (TODO: 알아낼 방법 있으면 정확히 나오게 수정하기)
-                            if (rouletteCode > 0)
+                            if (rouletteCode > 0 || (tank == 0 && dps == 0 && healer == 0))
                             {
-                                mainForm.overlayForm.SetDutyStatus(instance, order, dps, healer);
+                                mainForm.overlayForm.SetDutyStatus(instance, order);
                             }
                             else
                             {
@@ -438,9 +438,9 @@ namespace App
                         }
                         else if (state == State.QUEUED)
                         {
-                            if (rouletteCode > 0)
+                            if (rouletteCode > 0 || (tank == 0 && dps == 0 && healer == 0))
                             {
-                                mainForm.overlayForm.SetDutyStatus(instance, order, dps, healer);
+                                mainForm.overlayForm.SetDutyStatus(instance, order);
                             }
                             else
                             {
@@ -451,7 +451,7 @@ namespace App
                         // 직전 맴버 구성과 같은 상황이면 알림주지 않음
                         if (Settings.TelegramEnabled && Settings.TelegramQueueStatusEnabled)
                         {
-                            if (rouletteCode == 0 && lastMember != member) // 무작위 임무가 아님 (Not roulette duty)
+                            if (rouletteCode == 0 && lastMember != member || !(tank == 0 && dps == 0 && healer == 0)) // 무작위 임무가 아님 (Not roulette duty)
                             {
                                 WebApi.Request("telegram", "duty-status", $"{instance.Name}, {tank}/{instance.Tank}, {healer}/{instance.Healer}, {dps}/{instance.DPS}");
                             }

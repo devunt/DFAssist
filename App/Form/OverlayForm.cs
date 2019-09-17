@@ -140,6 +140,28 @@ namespace App
             });
         }
 
+        internal void SetDutyStatus(Instance instance, byte order)
+        {
+            isMatched = false;
+            memberCount = null;
+            this.Invoke(() =>
+            {
+                label_DutyCount.SetLocalizedText("overlay-roulette");
+                if (order == 0) // 순번 대기
+                {
+                    label_DutyStatus.SetLocalizedText("overlay-queue-waiting");
+                }
+                else // TODO: 순번이 1번일 때?
+                {
+                    label_DutyStatus.SetLocalizedText("overlay-queue-order", order);
+                    Roulette roulette = new Roulette();
+                    roulette = Data.GetRoulette(0);
+                    if (!isRoulette)
+                        label_DutyName.Text = roulette.Name;
+                }
+            });
+        }
+
         internal void SetDutyStatus(Instance instance, byte tank, byte dps, byte healer)
         {
             isMatched = false;
@@ -158,7 +180,7 @@ namespace App
                         label_DutyStatus.SetLocalizedText("overlay-queue-waiting");
                     }
                 }
-                else if (isRoulette)
+                /* else if (isRoulette)
                 {
                     if (tank == 0) // 순번 대기
                     {
@@ -168,7 +190,7 @@ namespace App
                     {
                         label_DutyStatus.SetLocalizedText("overlay-queue-order", tank);
                     }
-                }
+                } */
                 else
                 {
                     label_DutyName.Text = instance.Name;
