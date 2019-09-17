@@ -42,6 +42,10 @@ namespace App
                     json = Resources.Data_JA_JP;
                     break;
 
+                case "ru-ru":
+                    json = Resources.Data_EN_US;
+                    break;
+
                 default:
                     return;
             }

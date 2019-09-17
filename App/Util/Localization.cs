@@ -34,6 +34,10 @@ namespace App
                     json = Resources.Localization_JA_JP;
                     break;
 
+                case "ru-ru":
+                    json = Resources.Localization_RU_RU;
+                    break;
+
                 default:
                     return;
             }
