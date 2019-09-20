@@ -154,10 +154,12 @@ namespace App
                 else // TODO: 순번이 1번일 때?
                 {
                     label_DutyStatus.SetLocalizedText("overlay-queue-order", order);
-                    Roulette roulette = new Roulette();
-                    roulette = Data.GetRoulette(0);
                     if (!isRoulette)
+                    {
+                        Roulette roulette = new Roulette();
+                        roulette = Data.GetRoulette(0);
                         label_DutyName.Text = roulette.Name;
+                    }
                 }
             });
         }
