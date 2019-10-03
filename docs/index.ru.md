@@ -10,7 +10,7 @@ title: {{ site.name }}
 
 ## Информация
 
-- Последняя версия ```v20190911.1``` ([Загрузить](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
+- Последняя версия ```v20191003.1``` ([Загрузить](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
 - Требуемая версия ```Microsoft .NET Framework 4.0``` ([Загрузить](https://www.microsoft.com/en-us/download/details.aspx?id=17851))
 - Версия игры ```Final Fantasy XIV, Version 5.0```
 
