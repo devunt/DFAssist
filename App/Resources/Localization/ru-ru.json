@@ -1,20 +1,20 @@
 {
-  "app-name": "Duty/FATE Оповещения",
+  "app-name": "Duty/FATE Notifier",
 
 
-  "unknown-instance": "Неизвестное подземелье ({0})",
+  "unknown-instance": "Неизвестный Duty ({0})",
   "unknown-roulette": "Неизвестная Рулетка ({0})",
   "unknown-area": "Неизвестная Область ({0})",
-  "unknown-fate": "Неизвестный Фэйт ({0})",
+  "unknown-fate": "Неизвестный FATE ({0})",
 
 
   "notification-app-updated": "Версия {0} Обновлена",
-  "notification-queue-matched": "< {0} > Найдено!",
+  "notification-queue-matched": "< {0} > Собрана!",
   "notification-fate-occured": "< {0} > Состоялся!",
 
 
-  "fate-occured": "< {0} > Фэйт Заспавнился!",
-  "queue-matched": "< {0} > Подземелье найдено!",
+  "fate-occured": "< {0} > FATE Заспавнился!",
+  "queue-matched": "< {0} > Duty подобран!",
 
 
   "fate-preset-animus-SkyfireI": "Book of Skyfire I",
@@ -36,57 +36,57 @@
   "ui-notifymenustrip-close": "Выход",
 
   "ui-topsetting-process": "Процесс FFXIV ",
-  "ui-topsetting-select": "вручную",
+  "ui-topsetting-select": " Вручную",
   "ui-topsetting-reset": "Сброс",
 
   "ui-tabcontrol-settings": "Настройки",
   "ui-tabcontrol-3rdparty": "Уведомления",
-  "ui-tabcontrol-advanced": "Продвинутый",
-  "ui-tabcontrol-fate": "ФЭЙТ",
+  "ui-tabcontrol-advanced": "Продвинутые",
+  "ui-tabcontrol-fate": "FATE",
   "ui-tabcontrol-logs": "Логи",
   "ui-tabcontrol-info": "Информация",
 
   "ui-settings-title": "Базовая настройка",
   "ui-settings-overlay-use": "Использовать оверлэй",
-  "ui-settings-overlay-tooltip": "Переместите оверлей, перетаскивая цветную полосу слева",
+  "ui-settings-overlay-tooltip": "Чтобы переместить оверлей зажми цветную полосу слева",
   "ui-settings-overlay-reset": "Сброс",
-  "ui-settings-overlay-autohide": "Показывать оверлей только в очереди или в ФЕЙТЕ",
-  "ui-notification-overlay-autohide": "Эта опция будет применена после изменения состояния очереди или при появлении ФЭЙТА.\nПерезапуск приложения немедленно применяет внесённые изменения\nВ ожидании подключения к клиенту игры, отображается оверлей.\n(Чтобы уведомить о состоянии подключения.)",
+  "ui-settings-overlay-autohide": "Оверлей только в очереди или FATE",
+  "ui-notification-overlay-autohide": "Опция будет применена после изменения состояния очереди или при появлении FATE.\nДля корректного отображения, пожалуйста, перезапустите приложение.\nВ ожидании подключения к клиенту игры, отображается оверлей.\n(Чтобы уведомить о состоянии подключения.)",
   "ui-settings-startupshow": "Показать окно при запуске программы",
-  "ui-settings-iconflash": "Мигать значком если подземелье/ФЭЙТ будут найдены",
-  "ui-settings-cheatroulette": "Показывать название подземелья в режиме Рулетки Подземелий",
-  "ui-settings-copymacro": "Автоматически копировать макрос из информации о подземелье, когда оно будет найдено",
+  "ui-settings-iconflash": "Мигать значком если Duty/FATE найдены",
+  "ui-settings-cheatroulette": "Показывать название Duty в режиме Duty Roulette",
+  "ui-settings-copymacro": "Копировать данные о duty в буфер, когда он будет найден.",
   "ui-settings-copymacro-dialog-title": "скопировать макрос DFA",
   "ui-settings-copymacro-dialog-text": "Скопировать <{0}> макрос в буфер обмена?",
   "ui-settings-usevpn": "Не фильтровать подключение к локальной сети (VPN, и т.д)",
-  "ui-settings-usevpn-alert": "Как правило, вы должны отключить эту опцию для захвата сетевого пакета.",
-  "ui-settings-fatesound": "Включить звук уведомления FATE \n(отключает пользовательский звук)",
+  "ui-settings-usevpn-alert": "Отключите эту опцию для захвата сетевого пакета.",
+  "ui-settings-fatesound": "Включить звуковое уведомления FATE \n(отключает пользовательский сигнал)",
   "ui-settings-customsound": "Свой сигнал уведомлений FATE/Duty ",
   "ui-settings-getsoundfile": "Обзор",
   "ui-settings-getfilewav": "WAV files (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "Сначала выберите звуковой файл",
   "ui-link-localization": "Прими участие в локализации DFAssist",
 
-  "ui-3rdparty-telegram-title": "Оповещения Телеграм",
+  "ui-3rdparty-telegram-title": "Telegram оповещения",
   "ui-3rdparty-telegram-activate": "Включить",
-  "ui-3rdparty-telegram-queuestatus": "Показывать статус очереди",
-  "ui-3rdparty-telegram-about": "Когда подошла очередь или возникает FATE, отправить сообщение в этот чат телеграм.\nВы можете получить свой чат ID, если вы отправляете любое сообщение DF Assist Telegram Bot.",
-  "ui-3rdparty-discord-title": "Оповещения Дискорд",
+  "ui-3rdparty-telegram-queuestatus": "Cтатус очереди",
+  "ui-3rdparty-telegram-about": "Если подбор завершен или появится FATE, отправить сообщение в Telegram.\nПолучить Chat ID, можно у DF Assist Telegram Bot отправив любое сообщение.",
+  "ui-3rdparty-discord-title": "Discord оповещения",
   "ui-3rdparty-discord-activate": "Включить",
   "ui-3rdparty-discord-numberonly-alert": "Ваш Discord ID.",
-  "ui-3rdparty-discord-about": "Уведомить в чат Discord упомянув Вас.\nВведите свой 15-значный Discord ID.\n\nЧтобы узнать свой Discord ID: введите команду !id в канале #get-discord-id на сервере DFAssist Discord Server. DFAssist Bot отправит его ответным сообщением.\nИмейте ввиду, чтобы получить уведомление, вы должны быть на сервере.",
+  "ui-3rdparty-discord-about": "Оповестить в чат Discord упомянув Вас.\nВведите свой 15-значный Discord ID.\n\nУзнать свой Discord ID: введите команду !id в канале #get-discord-id на сервере DFAssist Discord Server. Ответом будет ваш Discord ID.\nЧтобы получить уведомление, вы должны быть на сервере.",
 
   "ui-advanced-http": "Пользовательский HTTP запрос",
   "ui-advanced-http-enable": "Включить",
-  "ui-advanced-http-duty-matched": "Отправить как команда будет сформирована",
-  "ui-advanced-http-fate-occured": "Отправить как ФЭЙТ будет обнаружен",
-  "ui-advanced-http-readme": "В случае активации, DFAssist будет отсылать POST HTTP запросы \n\"status\" и \"info\" по указанному адресу.\n\"status\" отправляется если \"duty-match\" или \"fate-occured\".\n\"info\" отправляется если известно название подземелья или название фэйта.\n\nЭта функция будет улучшена в будущем.",
+  "ui-advanced-http-duty-matched": "Отправить когда Duty будет подобран",
+  "ui-advanced-http-fate-occured": "Отправить когда FATE будет обнаружен",
+  "ui-advanced-http-readme": "Если включено, DFAssist будет отсылать POST HTTP запросы \n\"status\" и \"info\" по указанному адресу.\n\"status\" отправляется в случае \"duty-match\" или \"fate-occured\".\n\"info\" отправляется если известен Duty или FATE.\n\nЭта функция будет улучшена в будущем.",
 
   "ui-fate-selectall": "Выбрать всё",
   "ui-fate-unselectall": "Отменить всё",
   "ui-fate-preset": "Пресеты",
   "ui-fate-apply": "Применить",
-  "ui-fate-about": "Выберите Фейты о которых вы хотите получать уведомление и нажмите  \"Применить\"\nОповещения работают только когда вы на локации предполагаемого Фэйта",
+  "ui-fate-about": "Выбери FATE чтобы получить уведомление о начале и нажми \"Применить\". Оповещения работают только на локации выбранного  FATE",
 
   "ui-logs-copy": "Копировать Логи",
   "ui-logs-clear": "Очистить",
@@ -101,31 +101,31 @@
 
   "ui-clipboard-copied": "Скопировано в буфер",
 
-  "ui-cheat-roulette-confirm": "Эта функция отключена по умолчанию для предотвращения неприятных ситуаций \nПожалуйста, воздержитесь от намеренного отказа от участия в подземелье только потому, что оно вам не нравится.\nВы все еще хотите включить ее?",
+  "ui-cheat-roulette-confirm": "Эта функция отключена по умолчанию для предотвращения неприятных ситуаций \nПожалуйста, не стоит отказываться от участия в Duty, только потому что оно вам не нравится. \nВы все еще хотите включить ее?",
   "ui-cheat-roulette-enabled": "Включено. \nПожалуйста, не стоит отказываться от участия в подземелье, только потому что оно вам не нравится. ",
 
   "ui-clear-log-confirm": "Очистить логи?",
 
-  "ui-fate-selection-saved": "Оповещения о FATE установлены.",
+  "ui-fate-selection-saved": "FATE оповещения установлены.",
   "ui-fate-preset-applied": "FATE пресет принят.",
 
   "ui-updating": "Обновление программы...\n{0}",
 
-  "ui-app-crashed": "Приложение закрыто из-за неизвестной проблемы.\n\nОшибка: {0}",
+  "ui-app-crashed": "Приложение закрылось из-за неизвестной проблемы.\n\nОшибка: {0}",
 
 
-  "overlay-waiting-connection": "Ожидание подключения клиента",
-  "overlay-not-queuing": "Не ведётся поиск очереди",
+  "overlay-waiting-connection": "Ожидаем подключения FFXIV ",
+  "overlay-not-queuing": "Поиск очереди не ведётся",
   "overlay-duty-count-unknown": "Идет подбор",
   "overlay-duty-count": "{0}  Идет подбор",
   "overlay-queue-waiting-party": "Поиск группы: {0} / {1} / {2}",
-  "overlay-queue-waiting": "Восстановление информации...",
+  "overlay-queue-waiting": "Получение информации...",
   "overlay-queue-order": "#{0} в очереди на вашу роль",
-  "overlay-roulette": "Рулетка подземелий",
+  "overlay-roulette": "Duty roulette",
   "overlay-queue-waiting-confirm": "Ожидает вашего подтверждения",
   "overlay-queue-matched": "Подобран!",
   "overlay-queue-confirming": "Ждем подтверждения",
-  "overlay-fate-occured": "FATE начался!",
+  "overlay-fate-occured": "Начался FATE!",
 
 
   "l-process-set-success": "P: выбран процесс FFXIV: {0}",
@@ -154,7 +154,7 @@
   "l-updater-error-downloading": "U: Ошибка при получении файла обновления",
 
   "l-data-updated": "D: Данные Duty/FATE обновлены до весрии {0}.",
-  "l-data-is-latest": "D: Используются последнтие Duty/FATE данные  (version {0}).",
+  "l-data-is-latest": "D: Используются последние Duty/FATE данные  (version {0}).",
   "l-data-error": "D: Произошла ошибка при обработке данных Duty/FATE",
 
   "l-packet-error-ip": "P: Ошибка парсинга IP пакетов",
@@ -196,7 +196,7 @@
   "l-queue-matched": "Q: Найдено [{0}]",
   "l-queue-updated": "Q: Обновление статуса поиска [{0}, {1}, {2}/{3}, {4}/{5}, {6}/{7}]",
 
-  "l-fate-occured-info": "F: {0} FATE начался!",
+  "l-fate-occured-info": "F: {0} Начался FATE!",
 
   "l-field-instance-entered": "I: Подтверждение входа в подземелье [{0}]",
   "l-field-instance-left": "I: Покидаем подземелье"

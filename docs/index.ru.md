@@ -85,4 +85,4 @@ title: {{ site.name }}
   (C) 2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved. Korea Published by ACTOZ SOFT.
 ```
 
-Весь код, ресурсы, данные, не защищенные авторскими правами вышеупомянутой компании, являются общественным достоянием [Public Domain](https://en.wikipedia.org/wiki/Public_domain).
+Весь код, ресурсы, данные, не защищенные авторскими правами вышеупомянутой компании, являются общественным достоянием [Public Domain](https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%B4%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D0%B5).
