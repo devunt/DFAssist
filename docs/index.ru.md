@@ -44,7 +44,7 @@ title: {{ site.name }}
 
 ### Всплывающие окна
 
-![Всплывающее окно 1](https://i.imgur.com/W904lHM.jpg) 
+![Всплывающее окно 1](https://i.imgur.com/W904lHM.jpg)  
 ![Всплывающее окно 2](https://i.imgur.com/r1KmWb3.jpg)
 
 ### Информация о поиске подземелья
@@ -69,9 +69,9 @@ title: {{ site.name }}
 
 ### Интерфейс приложения
 
-![Интерфейс приложения 1](https://i.imgur.com/Z4csdPL.png) 
-![Интерфейс приложения 2](https://i.imgur.com/xdBmYgc.png) 
-![Интерфейс приложения 3](https://i.imgur.com/nU0awyg.png)
+![Интерфейс приложения 1](https://i.imgur.com/1A4aXFr.png) 
+![Интерфейс приложения 2](https://i.imgur.com/vbkja8h.png) 
+![Интерфейс приложения 3](https://i.imgur.com/LXmwpNF.png)
 
 ### Иконка в трее
 
