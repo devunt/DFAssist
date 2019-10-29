@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190730.1",
+  "version": "20191030.1",
 
   // Duty
   "instances": {
@@ -1542,6 +1542,28 @@
       "dps": "4"
     },
 
+    // 5.1 Patch
+
+    "693": {
+      "name": "Le Râle de l'Agonie (extrême)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    "700": {
+      "name": "Réplique de l'usine désaffectée",
+      "tank": "3",
+      "healer": "6",
+      "dps": "15"
+    },
+
+    "692": {
+      "name": "le Cosmos coruscant",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
 
     // Guildhests
     "43": {

@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190824.1",
+  "version": "20191030.1",
 
   // Duty
   "instances": {
@@ -1575,6 +1575,29 @@
       "tank": "2",
       "healer": "2",
       "dps": "4"
+    },
+
+    // 5.1 Patch
+
+    "693": {
+      "name": "極ハーデス討滅戦",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    "700": {
+      "name": "複製サレタ工場廃墟",
+      "tank": "3",
+      "healer": "6",
+      "dps": "15"
+    },
+
+    "692": {
+      "name": "魔法宮殿 グラン・コスモス",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
     },
 
     // Guildhests
