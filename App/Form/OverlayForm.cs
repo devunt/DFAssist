@@ -140,7 +140,7 @@ namespace App
             });
         }
 
-        internal void SetDutyStatus(Instance instance, byte order)
+        internal void SetDutyStatus(byte order)
         {
             isMatched = false;
             memberCount = null;
@@ -200,6 +200,18 @@ namespace App
                 }
             });
         }
+
+        internal void SetDutyStatus(byte tank, byte tankMax, byte dps, byte dpsMax, byte healer, byte healerMax) // v5.1
+        {
+            isMatched = false;
+            memberCount = null;
+            this.Invoke(() =>
+            {
+                label_DutyName.SetLocalizedText("overlay-queue-waiting");
+                label_DutyStatus.Text = $@"{tank}/{tankMax}    {healer}/{healerMax}    {dps}/{dpsMax}";
+            });
+        }
+
 
         internal void SetRoulleteDuty(Roulette roulette)
         {
