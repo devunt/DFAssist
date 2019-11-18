@@ -148,7 +148,22 @@ namespace App
                     opcode != 0x006F &&
                     opcode != 0x0121 &&
                     opcode != 0x0143 &&
-                    opcode != 0x022F)
+                    opcode != 0x022F &&
+                    // v5.1
+                    opcode != 0x008F && 
+                    opcode != 0x00AE &&
+                    opcode != 0x00B3 && 
+                    opcode != 0x015E && 
+                    opcode != 0x0121 && 
+                    opcode != 0x0304 && 
+                    // v5.11
+                    opcode != 0x0164 &&
+                    opcode != 0x032D &&
+                    opcode != 0x03CF &&
+                    opcode != 0x02A8 &&
+                    opcode != 0x032F &&
+                    opcode != 0x0339 &&
+                    opcode != 0x0002)
                     return;
 #endif
 
@@ -374,7 +389,7 @@ namespace App
                         Log.S("l-queue-matched", instance.Name);
                     }
                 }
-                else if (opcode == 0x008F) // v5.1 (enroll duty)
+                else if (opcode == 0x008F || opcode == 0x0164) // v5.1, v5.11 (enroll duty)
                 {
                     var status = data[0];
                     var reason = data[4];
@@ -415,7 +430,7 @@ namespace App
                             string.Join(", ", instances.Select(x => x.Name).ToArray()));
                     }
                 }
-                else if (opcode == 0x00B3) // v5.1 (duty matched)
+                else if (opcode == 0x00B3 || opcode == 0x032D) // v5.1, v5.11 (duty matched)
                 {
                     var roulette = rouletteCode;
                     var code = BitConverter.ToUInt16(data, 20);
@@ -490,7 +505,7 @@ namespace App
                         Log.E("l-queue-stopped");
                     }
                 }
-                else if (opcode == 0x0121) //글로벌 서버
+                else if (opcode == 0x0121 || opcode == 0x03CF) // v5.1, v5.11 commence duty
                 {
                     var status = data[5];
 
@@ -659,7 +674,7 @@ namespace App
                     }*/
                     Log.I("l-queue-updated", "", /*status*/1, tank, tankMax, healer, healerMax, dps, dpsMax);
                 }
-                else if (opcode == 0x00AE) // 매칭 뒤 참가자 확인 현황 패킷
+                else if (opcode == 0x00AE || opcode == 0x032F) // v5.1, v5.11 매칭 뒤 참가자 확인 현황 패킷
                 {
                     var code = BitConverter.ToUInt16(data, 8);
                     var tank = data[12];
