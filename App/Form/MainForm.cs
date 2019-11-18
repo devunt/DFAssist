@@ -76,7 +76,7 @@ namespace App
                 new Language { Name = "Français", Code = "fr-fr" },
                 new Language { Name = "Deutsch", Code = "de-de" },
                 new Language { Name = "日本語", Code = "ja-jp" },
-                new Language { Name = "简体汉语", Code = "zh-cn" },
+                new Language { Name = "简体中文", Code = "zh-cn" },
                 new Language { Name = "Русский", Code = "ru-ru" },
             };
 
