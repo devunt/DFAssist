@@ -193,6 +193,7 @@
     <None Include="Resources\Localization\ja-jp.json" />
     <None Include="Resources\Localization\ko-kr.json" />
     <None Include="Resources\Localization\ru-ru.json" />
+    <None Include="Resources\Localization\zh-cn.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.ico" />

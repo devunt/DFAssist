@@ -19,7 +19,7 @@ namespace App.Properties {
     // 클래스에서 자동으로 생성되었습니다.
     // 멤버를 추가하거나 제거하려면 .ResX 파일을 편집한 다음 /str 옵션을 사용하여 ResGen을
     // 다시 실행하거나 VS 프로젝트를 다시 빌드하십시오.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -63,7 +63,7 @@ namespace App.Properties {
         /// <summary>
         ///   {
         ///  // Version
-        ///  &quot;version&quot;: &quot;20190730.1&quot;,
+        ///  &quot;version&quot;: &quot;20191030.1&quot;,
         ///
         ///  // Duty
         ///  &quot;instances&quot;: {
@@ -99,7 +99,7 @@ namespace App.Properties {
         /// <summary>
         ///   {
         ///  // Version
-        ///  &quot;version&quot;: &quot;20190730.1&quot;,
+        ///  &quot;version&quot;: &quot;20191030.1&quot;,
         ///
         ///  // Duty
         ///  &quot;instances&quot;: {
@@ -135,7 +135,7 @@ namespace App.Properties {
         /// <summary>
         ///   {
         ///  // Version
-        ///  &quot;version&quot;: &quot;20190730.1&quot;,
+        ///  &quot;version&quot;: &quot;20191030.1&quot;,
         ///
         ///  // Duty
         ///  &quot;instances&quot;: {
@@ -171,7 +171,7 @@ namespace App.Properties {
         /// <summary>
         ///   {
         ///  // Version
-        ///  &quot;version&quot;: &quot;20190824.1&quot;,
+        ///  &quot;version&quot;: &quot;20191030.1&quot;,
         ///
         ///  // Duty
         ///  &quot;instances&quot;: {
@@ -208,7 +208,7 @@ namespace App.Properties {
         /// <summary>
         ///   {
         ///  // 버전
-        ///  &quot;version&quot;: &quot;20190810.1&quot;,
+        ///  &quot;version&quot;: &quot;20191030.1&quot;,
         ///
         ///  // 임무
         ///  &quot;instances&quot;: {
@@ -404,29 +404,59 @@ namespace App.Properties {
         
         /// <summary>
         ///   {
-        ///  &quot;app-name&quot;: &quot;Duty/FATE Оповещения&quot;,
+        ///  &quot;app-name&quot;: &quot;Duty/FATE Notifier&quot;,
         ///
         ///
-        ///  &quot;unknown-instance&quot;: &quot;Неизвестное подземелье ({0})&quot;,
+        ///  &quot;unknown-instance&quot;: &quot;Неизвестный Duty ({0})&quot;,
         ///  &quot;unknown-roulette&quot;: &quot;Неизвестная Рулетка ({0})&quot;,
         ///  &quot;unknown-area&quot;: &quot;Неизвестная Область ({0})&quot;,
-        ///  &quot;unknown-fate&quot;: &quot;Неизвестный Фэйт ({0})&quot;,
+        ///  &quot;unknown-fate&quot;: &quot;Неизвестный FATE ({0})&quot;,
         ///
         ///
         ///  &quot;notification-app-updated&quot;: &quot;Версия {0} Обновлена&quot;,
-        ///  &quot;notification-queue-matched&quot;: &quot;&lt; {0} &gt; Найдено!&quot;,
+        ///  &quot;notification-queue-matched&quot;: &quot;&lt; {0} &gt; Собрана!&quot;,
         ///  &quot;notification-fate-occured&quot;: &quot;&lt; {0} &gt; Состоялся!&quot;,
         ///
         ///
-        ///  &quot;fate-occured&quot;: &quot;&lt; {0} &gt; Фэйт Заспавнился!&quot;,
-        ///  &quot;queue-matched&quot;: &quot;&lt; {0} &gt; Подземелье найдено!&quot;,
+        ///  &quot;fate-occured&quot;: &quot;&lt; {0} &gt; FATE Заспавнился!&quot;,
+        ///  &quot;queue-matched&quot;: &quot;&lt; {0} &gt; Duty подобран!&quot;,
         ///
         ///
-        ///  &quot;fate-pres[나머지 문자열은 잘림]&quot;;과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///  &quot;fat[나머지 문자열은 잘림]&quot;;과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Localization_RU_RU {
             get {
                 return ResourceManager.GetString("Localization_RU_RU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   {
+        ///  &quot;app-name&quot;: &quot;任务/危命通知器&quot;,
+        ///
+        ///
+        ///  &quot;unknown-instance&quot;: &quot;未知任务 ({0})&quot;,
+        ///  &quot;unknown-roulette&quot;: &quot;未知随机任务 ({0})&quot;,
+        ///  &quot;unknown-area&quot;: &quot;未知区域 ({0})&quot;,
+        ///  &quot;unknown-fate&quot;: &quot;未知危命 ({0})&quot;,
+        ///
+        ///
+        ///  &quot;notification-app-updated&quot;: &quot;版本 {0} 已更新&quot;,
+        ///  &quot;notification-queue-matched&quot;: &quot;「{0}」匹配成功！&quot;,
+        ///  &quot;notification-fate-occured&quot;: &quot;「{0}」出现！&quot;,
+        ///
+        ///
+        ///  &quot;fate-occured&quot;: &quot;「{0}」危命已出现！&quot;,
+        ///  &quot;queue-matched&quot;: &quot;「{0}」任务匹配成功！&quot;,
+        ///
+        ///
+        ///  &quot;fate-preset-animus-SkyfireI&quot;: &quot;火天文书 第一卷&quot;,
+        ///  &quot;fate-preset-animus-SkyfireII&quot;: &quot;火天文书 第二卷&quot;,
+        ///  &quot;fate-preset-animus-NetherfireI&quot;: &quot;火狱文书 第一卷&quot;[나머지 문자열은 잘림]&quot;;과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string Localization_ZH_CN {
+            get {
+                return ResourceManager.GetString("Localization_ZH_CN", resourceCulture);
             }
         }
     }

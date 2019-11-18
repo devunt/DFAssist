@@ -1,0 +1,203 @@
+{
+  "app-name": "任务/危命通知器",
+
+
+  "unknown-instance": "未知任务 ({0})",
+  "unknown-roulette": "未知随机任务 ({0})",
+  "unknown-area": "未知区域 ({0})",
+  "unknown-fate": "未知危命 ({0})",
+
+
+  "notification-app-updated": "版本 {0} 已更新",
+  "notification-queue-matched": "「{0}」匹配成功！",
+  "notification-fate-occured": "「{0}」出现！",
+
+
+  "fate-occured": "「{0}」危命已出现！",
+  "queue-matched": "「{0}」任务匹配成功！",
+
+
+  "fate-preset-animus-SkyfireI": "火天文书 第一卷",
+  "fate-preset-animus-SkyfireII": "火天文书 第二卷",
+  "fate-preset-animus-NetherfireI": "火狱文书 第一卷",
+  "fate-preset-animus-SkyfallI": "水天文书 第一卷",
+  "fate-preset-animus-SkyfallII": "水天文书 第二卷",
+  "fate-preset-animus-NetherfallI": "风天文书 第三卷",
+  "fate-preset-animus-SkywindI": "风天文书 第一卷",
+  "fate-preset-animus-SkywindII": "风天文书 第二卷",
+  "fate-preset-animus-SkyearthI": "土天文书 第一卷",
+  "fate-preset-Ixion": "伊克西翁（基拉巴尼亚湖区）",
+  "fate-preset-Tamamo": "玉藻前（延夏）",
+  "fate-preset-frogMount": "畏惧装甲（珂露西亚岛）",
+  "fate-preset-frogSuit": "古塔尼亚（黑风海）",
+
+  
+  "ui-notifymenustrip-open": "打开",
+  "ui-notifymenustrip-close": "退出",
+
+  "ui-topsetting-process": "FFXIV 进程 ID",
+  "ui-topsetting-select": "手动选择",
+  "ui-topsetting-reset": "重置",
+
+  "ui-tabcontrol-settings": "设置",
+  "ui-tabcontrol-3rdparty": "第三方",
+  "ui-tabcontrol-advanced": "高级",
+  "ui-tabcontrol-fate": "危命",
+  "ui-tabcontrol-logs": "日志",
+  "ui-tabcontrol-info": "信息",
+
+  "ui-settings-title": "基础设置",
+  "ui-settings-overlay-use": "使用悬浮窗",
+  "ui-settings-overlay-tooltip": "拖动悬浮窗左侧彩色部分以移动该窗口",
+  "ui-settings-overlay-reset": "重置",
+  "ui-settings-overlay-autohide": "仅在队列中或危命出现时显示悬浮窗",
+  "ui-notification-overlay-autohide": "该选项将在队列状态发生改变时或新危命出现时生效。\n重启应用也能使该选项立即生效。\n\n在等待客户端连接时，悬浮窗将一直显示。\n（以通知用户该应用是否正常工作。）",
+  "ui-settings-startupshow": "在应用启动时显示主窗体",
+  "ui-settings-iconflash": "在任务匹配完成或危命出现时使 FFXIV 图标闪烁",
+  "ui-settings-cheatroulette": "显示匹配到的随机任务副本名",
+  "ui-settings-copymacro": "当任务匹配完成时自动从任务数据中复制宏",
+  "ui-settings-copymacro-dialog-title": "DFA 复制宏",
+  "ui-settings-copymacro-dialog-text": "是否将宏 <{0}> 复制到剪贴板？",
+  "ui-settings-usevpn": "不过滤本地网络连接（例如：VPN）",
+  "ui-settings-usevpn-alert": "通常你需要关闭这个选项来抓取网络包",
+  "ui-settings-fatesound": "启动危命通知音效\n（禁用自定义音效）",
+  "ui-settings-customsound": "自定义危命/任务的提示音",
+  "ui-settings-getsoundfile": "选择文件",
+  "ui-settings-getfilewav": "WAV 音频文件 (*.wav) | *.wav",
+  "ui-notification-customsound-selectfile": "请先选择音频文件",
+  "ui-link-localization": "帮助 DFAssist 翻译文本",
+
+  "ui-3rdparty-telegram-title": "Telegram 提示",
+  "ui-3rdparty-telegram-activate": "开启",
+  "ui-3rdparty-telegram-queuestatus": "发送队列状态",
+  "ui-3rdparty-telegram-about": "当队列弹出或新危命出现时，发送一条消息到该 Telegram 聊天室。\n你可以通过向 DFAssist Telegram Bot 发送消息来获取你的 Chat ID。",
+  "ui-3rdparty-discord-title": "Discord 提示",
+  "ui-3rdparty-discord-activate": "开启",
+  "ui-3rdparty-discord-numberonly-alert": "Discord ID 只能输入数字",
+  "ui-3rdparty-discord-about": "以 @ 提及对该 Discord ID 进行通知。\n输入你的 Discord ID（至少 15 位）。\n\n要获取 Discord ID，在 DFAssist Discord Server 中 #get-discord-id 频道中输入 !id 命令，DFAssist Bot 会回复你的 Discord ID。\n同时，你需要加入到 DFAssist Discord Server 中以接受通知。",
+
+  "ui-advanced-http": "自定义 HTTP 请求",
+  "ui-advanced-http-enable": "开启",
+  "ui-advanced-http-duty-matched": "当匹配到任务时发送请求",
+  "ui-advanced-http-fate-occured": "当匹配到危命时发送请求",
+  "ui-advanced-http-readme": "开启时，DFAssist 将发送一个包含 \"status\" 和 \"info\" 的 HTTP POST 请求到指定的 URL。\n\"status\" 为 \"duty-match\" 或 \"fate-occured\"。\n\"info\" 为匹配到的任务名或出现的危命名。\n\n计划中，该选项将被更新更多功能。",
+
+  "ui-fate-selectall": "全选",
+  "ui-fate-unselectall": "全不选",
+  "ui-fate-preset": "预置",
+  "ui-fate-apply": "应用",
+  "ui-fate-about": "选择你想接收通知的危命，并按「应用」按钮。\n通知仅在你位于这些危命的区域时工作。",
+
+  "ui-logs-copy": "复制日志",
+  "ui-logs-clear": "清空",
+
+  "ui-info-about": "[贡献者]\n유채색\nLaiglinne\nHibiyasleep\nAlex00728 (Jaehyuk-Lee)\n[支持]：fpdhs698\n[版权信息]\n所有公司，产品，系统名称均为\n其各自所有者的注册或未注册商标。\n(C)2010 - 2019 SQUARE ENIX CO., LTD 保留一切权利。\n韩国版由 ACTOZ SOFT 发布。\n中国版由盛趣游戏发布。\n ",
+
+  "ui-msgbox-title-info": "DFA 提示",
+  "ui-msgbox-title-warning": "DFA 警告",
+  "ui-msgbox-title-error": "DFA 错误",
+
+  "ui-language-changed": "语言切换为中文。\n悬浮窗的语言将在队列状态发送改变时改变。\n若要立即生效，请重启本应用程序。",
+
+  "ui-clipboard-copied": "已复制到剪切版。",
+
+  "ui-cheat-roulette-confirm": "该功能默认被关闭，以避免滥用。\n请不要仅仅因为不喜欢而辞退任务。\n\n仍要启用该功能吗？",
+  "ui-cheat-roulette-enabled": "已启用。\n请再次注意，不要仅仅因为不喜欢而辞退任务。",
+
+  "ui-clear-log-confirm": "清除日志？",
+
+  "ui-fate-selection-saved": "危命通知已设置。",
+  "ui-fate-preset-applied": "危命预置已应用。",
+
+  "ui-updating": "正在更新本程序 ……\n{0}",
+
+  "ui-app-crashed": "由于未知错误，应用已退出。\n\n错误：{0}",
+
+
+  "overlay-waiting-connection": "正在等待客户端连接",
+  "overlay-not-queuing": "当前不在任务搜索队列中",
+  "overlay-duty-count-unknown": "匹配中的任务",
+  "overlay-duty-count": "{0} 任务正在匹配",
+  "overlay-queue-waiting-party": "队员确认情况：{0} / {1} / {2}",
+  "overlay-queue-waiting": "正在获取信息 ……",
+  "overlay-queue-order": "职能等待顺序：${0} ",
+  "overlay-roulette": "随机任务",
+  "overlay-queue-waiting-confirm": "正在等待你的确认",
+  "overlay-queue-matched": "已匹配到任务！",
+  "overlay-queue-confirming": "正在等待确认",
+  "overlay-fate-occured": "危命出现！",
+
+
+  "l-process-set-success": "P: 选择的 FFXIV 进程：{0}",
+  "l-process-set-failed": "P: 设置 FFXIV 进程失败。",
+  "l-process-finding": "P: 正在寻找 FFXIV 进程 ……",
+  "l-process-found-nothing": "P: 寻找 FFXIV 进程失败 ……",
+  "l-process-found-multiple": "P: 2 个或以上的 FFXIV 进程正在运行。",
+
+  "l-telegram-failed-request": "R: 请求 Telegram 消息时出错。",
+  "l-telegram-failed-general": "R: 发送 Telegram 消息失败：{0}。",
+  "l-telegram-success": "R: Telegram 消息已发送！",
+  "l-discord-failed-request": "R: 请求 Discord 消息时出错。",
+  "l-discord-failed-general": "R: 发送 Discord 消息失败：{0}。",
+  "l-discord-success": "R: Discord 消息已发送！",
+
+  "l-web-request-failed": "W: 请求 Web Service 时出错。",
+
+  "l-updater-current-version": "U: 当前版本：{0}",
+  "l-updater-latest-version": "U: 最新版本：{0}",
+  "l-updater-is-latest": "U: 正在使用最新版本。",
+  "l-updater-new-version": "U: 更新可用。",
+  "l-updater-error-general": "U: 更新数据时出错。",
+  "l-updater-error-data": "U: 更新任务/危命数据时出错。",
+  "l-updater-error-check": "U: 无法获取更新信息。",
+  "l-updater-error-no-url": "U: 无法获取更新文件。",
+  "l-updater-error-downloading": "U: 获取更新数据时出错。",
+
+  "l-data-updated": "D: 任务/危命更新到版本 {0}。",
+  "l-data-is-latest": "D: 正在使用最新任务/危命数据（版本 {0}）。",
+  "l-data-error": "D: 处理任务/危命数据时出错。",
+
+  "l-packet-error-ip": "P: IP 包解析错误。",
+  "l-packet-error-tcp": "P: TCP 包解析错误。",
+
+  "l-network-started": "N: 已开始读取 FFXIV 网络数据包。",
+  "l-network-starting": "N: 正在开始读取 FFXIV 网络数据包 ……",
+  "l-network-stopped": "N: 已停止读取 FFXIV 网络数据包。",
+  "l-network-stopping": "N: 正在停止读取 FFXIV 网络数据包 ……",
+  "l-network-error-starting": "N: 启动失败。",
+  "l-network-error-stopping": "N: 停止失败。",
+  "l-network-error-already-started": "N: 已启动。",
+  "l-network-error-already-stopped": "N: 已停止。",
+  "l-network-error-no-connection": "N: 无法找到 FFXIV 服务器连接。",
+  "l-network-error-receiving-packet": "N: 接收数据包时出错。",
+  "l-network-error-filtering-packet": "N: 过滤数据包时出错。",
+  "l-network-error-finding-lobby": "N: 获取大厅服务器信息时出错。",
+  "l-network-detected-connection-closing": "N: 检测到从 FFXIV 服务器断开连接。",
+  "l-network-detected-connection": "N: 检测到与 FFXIV 服务器的连接：{0}。",
+
+  "l-firewall-registered": "FW: 已注册。",
+  "l-firewall-error": "FW: 注册时出错。",
+  
+  "l-wav-error": "S: 无效的 wav 文件。",
+
+  "l-POST-send": "N: POST 请求 URL：{0}，数据：{1}。",
+  "l-POST-no-response": "S: POST 无响应！",
+  "l-POST-failed": "S: POST 请求失败！",
+  "l-POST-response": "S: POST 响应：{0}。",
+
+  "l-analyze-error-length": "A: 分析消息时长度错误：{0}，{1}/{2}。",
+  "l-analyze-error-general": "A: 分析消息时出错。",
+  "l-analyze-error": "A: 处理消息时出错。",
+
+  "l-queue-started-general": "Q: 任务匹配开始 [{0}]。",
+  "l-queue-started-roulette": "Q: 随机任务匹配开始 [{0}]。",
+  "l-queue-stopped": "Q: 任务匹配已停止。",
+  "l-queue-entered": "Q: 已进入副本区域。",
+  "l-queue-matched": "Q: 匹配到 [{0}]。",
+  "l-queue-updated": "Q: 匹配状态已更新  [{0}, {1}, {2}/{3}, {4}/{5}, {6}/{7}]。",
+
+  "l-fate-occured-info": "F: {0} 危命出现！",
+
+  "l-field-instance-entered": "I: 已进入副本区域 [{0}]。",
+  "l-field-instance-left": "I: 已离开副本区域。"
+}

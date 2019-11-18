@@ -157,4 +157,7 @@
   <data name="Localization_RU_RU" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Localization\ru-ru.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="Localization_ZH_CN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Localization\zh-cn.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
 </root>
