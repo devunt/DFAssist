@@ -396,7 +396,7 @@ namespace App
 
                     state = State.QUEUED;
 
-                    rouletteCode = data[20];
+                    // rouletteCode = data[20];
                     rouletteCode = data[8];
 
                     if (Settings.ShowOverlay)
@@ -426,6 +426,7 @@ namespace App
                             return;
                         }
                         mainForm.overlayForm.SetDutyCount(instances.Count);
+                        mainForm.overlayForm.SetDutyAsMatching();
                         Log.I("l-queue-started-general",
                             string.Join(", ", instances.Select(x => x.Name).ToArray()));
                     }
@@ -495,9 +496,9 @@ namespace App
                         mainForm.overlayForm.StopBlink();
                     }
                 }
-                else if (opcode == 0x015E) // v5.1 cancel duty
+                else if (opcode == 0x015E) // cancel duty
                 {
-                    if (data[3] == 0) // 신청 취소
+                    if (data[3] == 0 || data[3] == 8) // v5.1에서 8로 바뀌었다고 들음
                     {
                         state = State.IDLE;
                         mainForm.overlayForm.CancelDutyFinder();
@@ -505,7 +506,7 @@ namespace App
                         Log.E("l-queue-stopped");
                     }
                 }
-                else if (opcode == 0x0121 || opcode == 0x03CF) // v5.1, v5.11 commence duty
+                else if (opcode == 0x0121) // v5.1 commence duty
                 {
                     var status = data[5];
 
@@ -513,6 +514,18 @@ namespace App
                     {
                         // 매칭 참가 신청 확인 창에서 확인을 누름
                         mainForm.overlayForm.StopBlink();
+                    }
+                }
+                else if (opcode == 0x03CF) // v5.11 cancel duty
+                {
+                    var status = data[0];
+
+                    if (status == 0x73) // 매칭 취소
+                    {
+                        state = State.IDLE;
+                        mainForm.overlayForm.CancelDutyFinder();
+
+                        Log.E("l-queue-stopped");
                     }
                 }
                 else if (opcode == 0x0079)

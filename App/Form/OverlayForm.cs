@@ -239,6 +239,15 @@ namespace App
             });
         }
 
+        internal void SetDutyAsMatching()
+        {
+            this.Invoke(() =>
+            {
+                label_DutyName.SetLocalizedText("overlay-duty-count-unknown");
+                label_DutyStatus.SetLocalizedText("overlay-queue-waiting");
+            });
+        }
+
         internal void SetMemberCount(byte tank, byte dps, byte healer)
         {
             memberCount = new byte[] { tank, dps, healer };
