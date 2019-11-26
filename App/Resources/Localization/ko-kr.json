@@ -82,6 +82,9 @@
   "ui-advanced-http-fate-occured": "돌발 임무 발생시 보내기",
   "ui-advanced-http-readme": "이 기능을 활성화하면 임무/돌발 찾기 도우미는 지정한 URL로 \n\"status\"와 \"info\"를 포함한 POST HTTP Request를 보냅니다.\n\"status\"에는 \"duty-matched\" 또는 \"fate-occured\"라는 String이 포함되어 보내집니다.\n\"info\"에는 매칭된 임무나 발생한 돌발임무 이름이 포함되어 보내집니다.\n\n이 기능은 앞으로 추가적인 개선이 예정되어 있습니다.",
 
+  "ui-debug": "디버그",
+  "ui-debug-log": "디버그 로그 출력",
+
   "ui-fate-selectall": "모두 선택",
   "ui-fate-unselectall": "모두 해제",
   "ui-fate-preset": "프리셋",

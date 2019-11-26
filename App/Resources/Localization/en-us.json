@@ -82,6 +82,9 @@
   "ui-advanced-http-fate-occured": "Send when Fate Occured",
   "ui-advanced-http-readme": "When enabled, DFAssist will send a POST HTTP Request with \n\"status\" and \"info\" to the specified URL.\n\"status\"is sent with a string called \"duty-match\" or \"fate-occured\".\n\"info\" is sent with the Matched Duty Name or Occured FATE Name.\n\nThis feature is scheduled to be updated more.",
 
+  "ui-debug": "Debug",
+  "ui-debug-log": "Log Debug logs",
+
   "ui-fate-selectall": "Select all",
   "ui-fate-unselectall": "Unselect all",
   "ui-fate-preset": "Preset",

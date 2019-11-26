@@ -32,6 +32,7 @@ namespace App
         public static string customHttpUrl { get; set; } = "";
         public static bool requestOnDutyMatched { get; set; } = false;
         public static bool requestOnFateOccured { get; set; } = false;
+        public static bool debugLog { get; set; } = false;
         public static HashSet<int> FATEs { get; set; } = new HashSet<int>();
 
         private static void Init()
@@ -74,6 +75,7 @@ namespace App
                 customHttpUrl = iniFile.ReadValue("http", "customHttpUrl") ?? "";
                 requestOnDutyMatched = iniFile.ReadValue("http", "requestOnDutyMatched") == "1";
                 requestOnFateOccured = iniFile.ReadValue("http", "requestOnFateOccured") == "1";
+                debugLog = iniFile.ReadValue("dev", "debuglog") == "1";
 
                 var fates = iniFile.ReadValue("fate", "fates");
                 if (!string.IsNullOrEmpty(fates))
@@ -109,6 +111,7 @@ namespace App
             iniFile.WriteValue("http", "customHttpUrl", customHttpUrl);
             iniFile.WriteValue("http", "requestOnDutyMatched", requestOnDutyMatched ? "1" : "0");
             iniFile.WriteValue("http", "requestOnFateOccured", requestOnFateOccured ? "1" : "0");
+            iniFile.WriteValue("dev", "debuglog", debugLog ? "1" : "0");
         }
     }
 }

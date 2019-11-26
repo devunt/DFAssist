@@ -525,6 +525,7 @@ namespace App
                         state = State.IDLE;
                         mainForm.overlayForm.CancelDutyFinder();
 
+                        Log.D("v5.11");
                         Log.E("l-queue-stopped");
                     }
                 }

@@ -82,6 +82,9 @@
   "ui-advanced-http-fate-occured": "FATE発生時",
   "ui-advanced-http-readme": "この機能を有効にすると\"status\"と \"info\"を持つHTTP POSTリクエストを\n設定したURLに送信します。\n\"status\"には\"duty-matched\"または\"fate-occured\"という文字列が含まれます。\n\"info\"には,マッチングしたダンジョンや発生したFATEの名前が含まれます。\n\nこの機能にはアップデートが予定されています。",
 
+  "ui-debug": "デバグ",
+  "ui-debug-log": "デバグログ出力",
+
   "ui-fate-selectall": "すべて選択",
   "ui-fate-unselectall": "すべて選択解除",
   "ui-fate-preset": "プリセット",

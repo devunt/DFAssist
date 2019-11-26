@@ -120,6 +120,7 @@ namespace App
             textBox_CustomHttpUrl.Text = Settings.customHttpUrl;
             checkBox_RequestOnDutyMatched.Checked = Settings.requestOnDutyMatched;
             checkBox_RequestOnFateOccur.Checked = Settings.requestOnFateOccured;
+            checkBox_DebugLog.Checked = Settings.debugLog;
 
             refresh_Fates();
 
@@ -469,6 +470,12 @@ namespace App
             Settings.Save();
         }
 
+        private void checkBox_DebugLog_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.debugLog = checkBox_DebugLog.Checked;
+            Settings.Save();
+        }
+
         private void toolStripMenuItem_LogCopy_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(richTextBox_Log.Text);
@@ -748,6 +755,8 @@ namespace App
             checkBox_RequestOnDutyMatched.Text = Localization.GetText("ui-advanced-http-duty-matched");
             checkBox_RequestOnFateOccur.Text = Localization.GetText("ui-advanced-http-fate-occured");
             label_HttpRequestReadme.Text = Localization.GetText("ui-advanced-http-readme");
+            groupBox_debug.Text = Localization.GetText("ui-debug");
+            checkBox_DebugLog.Text = Localization.GetText("ui-debug-log");
             toolStripMenuItem_SelectAll.Text = Localization.GetText("ui-fate-selectall");
             toolStripMenuItem_UnSelectAll.Text = Localization.GetText("ui-fate-unselectall");
             presetToolStripMenuItem.Text = Localization.GetText("ui-fate-preset");

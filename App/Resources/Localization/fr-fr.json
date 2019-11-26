@@ -82,6 +82,9 @@
   "ui-advanced-http-fate-occured": "Envoyer lorsque ALEA est survenu",
   "ui-advanced-http-readme": "Lorsque cela sera possible, le DFAssist enverra une demande POST HTTP avec \n\"Status\" et \"info\" à l'adresse URL spécifiée.\n\"Status\" est envoyé avec une chaîne appelée \"duty-match\" ou \"fate-occured\".\n\"info\" is sent with the Matched Duty Name or Occured FATE Name.\n\nCette fonctionnalité est prévue pour être mise à jour plus.",
 
+  "ui-debug": "Debug",
+  "ui-debug-log": "Log Debug logs",
+
   "ui-fate-selectall": "Selectionner tout",
   "ui-fate-unselectall": "Déselectionner tout",
   "ui-fate-preset": "Preselections",

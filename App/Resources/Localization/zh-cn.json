@@ -82,6 +82,9 @@
   "ui-advanced-http-fate-occured": "当匹配到危命时发送请求",
   "ui-advanced-http-readme": "开启时，DFAssist 将发送一个包含 \"status\" 和 \"info\" 的 HTTP POST 请求到指定的 URL。\n\"status\" 为 \"duty-match\" 或 \"fate-occured\"。\n\"info\" 为匹配到的任务名或出现的危命名。\n\n计划中，该选项将被更新更多功能。",
 
+  "ui-debug": "Debug",
+  "ui-debug-log": "Log Debug logs",
+
   "ui-fate-selectall": "全选",
   "ui-fate-unselectall": "全不选",
   "ui-fate-preset": "预置",
