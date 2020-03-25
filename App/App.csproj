@@ -74,9 +74,6 @@
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="SharpRaven, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SharpRaven.2.2.0\lib\net40\SharpRaven.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -128,7 +125,6 @@
     <Compile Include="Network\Network.cs" />
     <Compile Include="Network\Network.Analyser.cs" />
     <Compile Include="Network\Network.Packet.cs" />
-    <Compile Include="Util\Sentry.cs" />
     <Compile Include="Component\TriStateTreeView.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -173,6 +169,7 @@
     <None Include="app.manifest">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Resources\Data\de-de.json" />
     <None Include="Resources\Data\en-us.json" />
     <None Include="Resources\Data\fr-fr.json" />
     <None Include="Resources\Data\ja-jp.json" />
@@ -190,17 +187,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\Localization\de-de.json" />
     <None Include="Resources\Localization\en-us.json" />
     <None Include="Resources\Localization\fr-fr.json" />
     <None Include="Resources\Localization\ja-jp.json" />
     <None Include="Resources\Localization\ko-kr.json" />
+    <None Include="Resources\Localization\ru-ru.json" />
+    <None Include="Resources\Localization\zh-cn.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.ico" />
     <Content Include="ILMergeOrder.txt" />
-    <Content Include="Resources\ZoneList.xml">
-      <SubType>Designer</SubType>
-    </Content>
+    <None Include="Resources\FFXIV_FATE_Start.wav" />
+    <None Include="Resources\language2.png" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="NetFwTypeLib">

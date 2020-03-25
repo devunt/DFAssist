@@ -146,6 +146,8 @@ namespace App
 
                 connections = currentConnections.Where(x => !x.remoteEndPoint.Equals(lobbyEndPoint)).ToList();
 
+                mainForm.overlayForm.SetStatus(true);
+
                 foreach (var connection in connections)
                 {
                     Log.I("l-network-detected-connection", connection.ToString());
@@ -358,8 +360,8 @@ namespace App
                             {
                                 var local = new IPEndPoint(row.localAddr, (ushort)IPAddress.NetworkToHostOrder((short)row.localPort));
                                 var remote = new IPEndPoint(row.remoteAddr, (ushort)IPAddress.NetworkToHostOrder((short)row.remotePort));
-
-                                connections.Add(new Connection() { localEndPoint = local, remoteEndPoint = remote });
+                                if(!remote.Address.Equals(IPAddress.Parse("127.0.0.1")) || Settings.useVPN) // 원격 IP가 127.0.0.1(자기 컴퓨터)이면 커넥션 목록에 추가하지 않음
+                                    connections.Add(new Connection() { localEndPoint = local, remoteEndPoint = remote });
                             }
 
                             rowPtr = new IntPtr(rowPtr.ToInt64() + Marshal.SizeOf(typeof(TcpRow)));

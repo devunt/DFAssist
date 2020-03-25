@@ -10,10 +10,11 @@
 
   "notification-app-updated": "Mise à jour version {0}",
   "notification-queue-matched": "< {0} > disponible!",
+  "notification-fate-occured": "< {0} > en cours!",
 
 
-  "tweet-fate-occured": "ALEA < {0} > en cours!",
-  "tweet-queue-matched": "< {0} > disponible!",
+  "fate-occured": "ALEA < {0} > en cours!",
+  "queue-matched": "< {0} > disponible!",
 
 
   "fate-preset-animus-SkyfireI": "Book of Skyfire I",
@@ -25,6 +26,10 @@
   "fate-preset-animus-SkywindI": "Book of Skywind I",
   "fate-preset-animus-SkywindII": "Book of Skywind II",
   "fate-preset-animus-SkyearthI": "Book of Skyearth I",
+  "fate-preset-Ixion": "Ixion (Les Lacs)",
+  "fate-preset-Tamamo": "Tamamo (Yanxia)",
+  "fate-preset-frogMount": "Frog Mount (Kholusia)",
+  "fate-preset-frogSuit": "Frog Suit (Tempest)",
 
 
   "ui-notifymenustrip-open": "Ouvrir",
@@ -35,6 +40,8 @@
   "ui-topsetting-reset": "Rétablir",
 
   "ui-tabcontrol-settings": "Paramètres",
+  "ui-tabcontrol-3rdparty": "3rd-party",
+  "ui-tabcontrol-advanced": "Advanced",
   "ui-tabcontrol-fate": "ALEA",
   "ui-tabcontrol-logs": "Logs",
   "ui-tabcontrol-info": "Infos",
@@ -43,13 +50,40 @@
   "ui-settings-overlay-use": "Utiliser l'overlay",
   "ui-settings-overlay-tooltip": "Bouger l'overlay avec la barre gauche",
   "ui-settings-overlay-reset": "Rétablir",
-  "ui-settings-overlay-announcement": "Show announcement on Overlay",
+  "ui-settings-overlay-autohide": "Affichez la l'overlay seulement lorsqu'il y a une file d'attente ou une ALEA",
+  "ui-notification-overlay-autohide": "Cette option sera appliquée après le changement d'état de la file d'attente ou l'apparition d'un nouvel ALEA.\nLe redémarrage de l'application rend également l'appliance immédiate.\n\nEn attendant la connexion du client, la l'overlay est affichée\n(Noter à l'utilisateur que l'application fonctionne bien ou pas.).",
   "ui-settings-startupshow": "Afficher la fenêtre principale au démarrage",
-  "ui-settings-autohide": "Cacher automatiquement l'overlay pendant les missions",
   "ui-settings-iconflash": "Faire clignorer l'icône de FFXIV en cas d'ALEA/Mission",
-  "ui-settings-tweet-title": "Rappel Twiter",
-  "ui-settings-tweet-activate": "Activer",
-  "ui-settings-tweet-about": "Lorsqu'un ALEA choisi se produir, \nenvoyer un tweet avec mention au compte sélectionné.\nEntrez le nom du compte Twitter sans @.",
+  "ui-settings-cheatroulette": "Montrer la mission en cours d'attente lors des missions aléatoires",
+  "ui-settings-copymacro": "Copier automatiquement les macros à partir des données de mission lorsque le mission correspond.",
+  "ui-settings-copymacro-dialog-title": "DFA Copy macro",
+  "ui-settings-copymacro-dialog-text": "Copiez la <{0}> macro dans le presse-papiers?",
+  "ui-settings-usevpn": "ne pas filtrer la connexion réseau locale (VPN, etc.)",
+  "ui-settings-usevpn-alert": "Normalement, vous devez désactiver cette option pour capturer le paquet réseau.",
+  "ui-settings-fatesound": "Activer le son de notification ALEA \n (Désactiver le son personnalisé sur ALEA)",
+  "ui-settings-customsound": "Personnaliser le son de notification",
+  "ui-settings-getsoundfile": "Choisir",
+  "ui-settings-getfilewav": "WAV fichier (*.wav)|*.wav",
+  "ui-notification-customsound-selectfile": "D'abord, Choisissez un fichier musical.",
+  "ui-link-localization": "Participer à la localisation du DFAssist",
+
+  "ui-3rdparty-telegram-title": "Rappel Telegram",
+  "ui-3rdparty-telegram-activate": "Activer",
+  "ui-3rdparty-telegram-queuestatus": "Envoyer statut de d'attente",
+  "ui-3rdparty-telegram-about": "Lorsque la file d'attente apparaît ou qu'une ALEA choisie se produit, \nenvoyez un message télégramme à la salle de discussion sélectionnée.\nVous pouvez obtenir un ID de Chat si vous envoyez un message à DFAssist Telegram Bot.",
+  "ui-3rdparty-discord-title": "Rappel Discord",
+  "ui-3rdparty-discord-activate": "Activer",
+  "ui-3rdparty-discord-numberonly-alert": "Discord ID est le seul numéro accepté.",
+  "ui-3rdparty-discord-about": "Notifier via le message Discord en mentionnant ce Discord ID.\nEntrez votre numéro d'identification de plus de 15 chiffres.\n\nPour vérifier l'ID discord: Entrez la commande !id sur le canal #get-discord-id de DFAssist Discord Server. DFAsssist Bot vous répondra avec Discord ID.\nVous devez également être sur le serveur DFAssist Discord pour recevoir une notification.",
+
+  "ui-advanced-http": "Demande HTTP personnalisée",
+  "ui-advanced-http-enable": "Permettre",
+  "ui-advanced-http-duty-matched": "Envoyer lorsque le devoir est adapté",
+  "ui-advanced-http-fate-occured": "Envoyer lorsque ALEA est survenu",
+  "ui-advanced-http-readme": "Lorsque cela sera possible, le DFAssist enverra une demande POST HTTP avec \n\"Status\" et \"info\" à l'adresse URL spécifiée.\n\"Status\" est envoyé avec une chaîne appelée \"duty-match\" ou \"fate-occured\".\n\"info\" is sent with the Matched Duty Name or Occured FATE Name.\n\nCette fonctionnalité est prévue pour être mise à jour plus.",
+
+  "ui-debug": "Debug",
+  "ui-debug-log": "Log Debug logs",
 
   "ui-fate-selectall": "Selectionner tout",
   "ui-fate-unselectall": "Déselectionner tout",
@@ -60,15 +94,18 @@
   "ui-logs-copy": "Copier logs",
   "ui-logs-clear": "Vider",
 
-  "ui-info-about": "[Contributor]\n유채색\nLaiglinne\nHibiyasleep\nAlex00728\n\n[Copyright]\nAll company, product, system names are\n registered or unregistered trademarks of their respective owners.\n(C)2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by EYEDENTITY Entertainment.",
+  "ui-info-about": "[Contributeurs]\n유채색\nLaiglinne\nHibiyasleep\nAlex00728 (Jaehyuk-Lee)\n\n[Copyright]\nAll company, product, system names are\n registered or unregistered trademarks of their respective owners.\n(C)2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by ACTOZ SOFT.",
 
   "ui-msgbox-title-info": "DFA Notice",
   "ui-msgbox-title-warning": "DFA Warning",
   "ui-msgbox-title-error": "DFA Error",
 
-  "ui-language-changed": "Langue changée en Français.\nUn redémarrage est nécessaire.\nVeuillez redémarrer l'application.",
+  "ui-language-changed": "Langue changée en Français.\nLe langage de superposition sera appliqué après les changements de statut de la file d'attente.\nVeuillez redémarrer l'application pour qu'elle prenne effet immédiatement.",
 
   "ui-clipboard-copied": "Copié dans le presse-papiers.",
+
+  "ui-cheat-roulette-confirm": "Cette fonction est désactivée par défaut pour éviter les abus.\nVeuillez vous abstenir de rejeter délibérément un devoir spécifique mission.\n\nVoulez-vous toujours l'activer?",
+  "ui-cheat-roulette-enabled": "Activée.\nS'il vous plaît, ne rejetez pas délibérément un devoir spécifique mission.",
 
   "ui-clear-log-confirm": "Vider les logs?",
 
@@ -79,8 +116,7 @@
 
   "ui-app-crashed": "L'application a été fermée suite à une erreur inconnue.\n\nErreur: {0}",
 
-
-  "overlay-announcement": "",
+  
   "overlay-waiting-connection": "En attente de connection au client",
   "overlay-not-queuing": "Aucune file d'attente",
   "overlay-duty-count-unknown": "Mission trouvée",
@@ -101,9 +137,12 @@
   "l-process-found-nothing": "P: Impossible de trouver le processus FFXIV.",
   "l-process-found-multiple": "P: 2 ou plus processus FFXIV sont en cours.",
 
-  "l-tweet-failed-request": "T: Une erreur s'est produite lors de la requête du tweet",
-  "l-tweet-failed-general": "T: Impossible d'envoyer le tweet",
-  "l-tweet-success": "T: Tweet envoyé!",
+  "l-telegram-failed-request": "R: Une erreur s'est produite lors de la requête du Telegram message",
+  "l-telegram-failed-general": "R: Impossible d'envoyer le Telegram message: {0}",
+  "l-telegram-success": "R: Telegram message envoyé!",
+  "l-discord-failed-request": "R: Une erreur s'est produite lors de la requête du Discord message",
+  "l-discord-failed-general": "R: Impossible d'envoyer le Discord message: {0}",
+  "l-discord-success": "R: Discord message envoyé!",
 
   "l-web-request-failed": "W: Erreur de requête web",
 
@@ -141,6 +180,13 @@
 
   "l-firewall-registered": "Pare-feu: enregistré",
   "l-firewall-error": "Pare-feu: erreur d'enregistrement",
+  
+  "l-wav-error": "S: Erreur de lecture du son personnalisé: fichier wav invalide. ",
+  
+  "l-POST-send": "N: POST demande URL: {0}, Données: {1}",
+  "l-POST-no-response": "S: POST no response!",
+  "l-POST-failed": "S: POST Demande rejetée!",
+  "l-POST-response": "S: POST répondre: {0}",
 
   "l-analyze-error-length": "A: Erreur de longueur lors de l'analyse du message: {0}, {1}/{2}",
   "l-analyze-error-general": "A: Erreur d'analyse du message",

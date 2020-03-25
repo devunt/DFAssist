@@ -1,102 +1,102 @@
-{
+﻿{
   // Version
-  "version": "20171029.1",
+  "version": "20191030.1",
 
   // Duty
   "instances": {
     // 2.0 A Realm Reborn
     // 2.0 Dungeons
-    "157": {
+    "4": {
       "name": "Sastasha",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "158": {
+    "8": {
       "name": "Brayflox's Longstop",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "159": {
+    "10": {
       "name": "The Wanderer's Palace",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "161": {
+    "3": {
       "name": "Copperbell Mines",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "162": {
+    "7": {
       "name": "Halatali",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "163": {
+    "9": {
       "name": "Sunken Temple of Qarn",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "164": {
+    "2": {
       "name": "The Tam-Tara Deepcroft",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "166": {
+    "6": {
       "name": "Haukke Manor",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "167": {
+    "14": {
       "name": "Amdapor Keep",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "168": {
+    "11": {
       "name": "The Stone Vigil",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "169": {
+    "1": {
       "name": "The Thousand Maws of Toto-Rak",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "170": {
+    "12": {
       "name": "Cutter's Cry",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "171": {
+    "13": {
       "name": "Dzemael Darkhold",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "172": {
+    "5": {
       "name": "The Aurum Vale",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "217": {
+    "15": {
       "name": "Castrum Meridianum",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "224": {
+    "16": {
       "name": "The Praetorium",
       "tank": "2",
       "healer": "2",
@@ -104,43 +104,43 @@
     },
 
     // 2.0 Trials
-    "202": {
+    "56": {
       "name": "The Bowl of Embers",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "206": {
+    "57": {
       "name": "The Navel",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "208": {
+    "58": {
       "name": "The Howling Eye",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "292": {
+    "59": {
       "name": "The Bowl of Embers (Hard)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "293": {
+    "60": {
       "name": "The Navel (Hard)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "294": {
+    "61": {
       "name": "The Howling Eye (Hard)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "332": {
+    "62": {
       "name": "Cape Westwind",
       "tank": "2",
       "healer": "2",
@@ -150,19 +150,19 @@
 
     // 2.1 A Realm Awoken
     // 2.1 Dungeons
-    "160": {
+    "17": {
       "name": "Pharos Sirius",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "349": {
+    "18": {
       "name": "Copperbell Mines (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "350": {
+    "19": {
       "name": "Haukke Manor (Hard)",
       "tank": "1",
       "healer": "1",
@@ -170,44 +170,44 @@
     },
 
     // 2.1 Trials
-    "207": {
-      "name": "Thornmarch",
+    "66": {
+      "name": "Thornmarch (Hard)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "295": {
+    "63": {
       "name": "The Bowl of Embers (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "296": {
+    "64": {
       "name": "The Navel (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "297": {
+    "65": {
       "name": "The Howling Eye (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "348": {
+    "68": {
       "name": "The Minstrel's Ballad: Ultima's Bane",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     // 2.16 Trials
-    "368": {
+    "74": {
       "name": "A Relic Reborn: the Chimera",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "369": {
+    "75": {
       "name": "A Relic Reborn: the Hydra",
       "tank": "2",
       "healer": "2",
@@ -215,37 +215,37 @@
     },
 
     // 2.1 Raids
-    "174": {
+    "92": {
       "name": "The Labyrinth of the Ancients",
-      "tank": "6",
+      "tank": "3",
       "healer": "6",
-      "dps": "12"
+      "dps": "15"
     },
-    "241": {
+    "93": {
       "name": "Binding Coil of Bahamut - T1",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "242": {
+    "94": {
       "name": "Binding Coil of Bahamut - T2",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "243": {
+    "95": {
       "name": "Binding Coil of Bahamut - T3",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "244": {
+    "96": {
       "name": "Binding Coil of Bahamut - T4",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "245": {
+    "97": {
       "name": "Binding Coil of Bahamut - T5",
       "tank": "2",
       "healer": "2",
@@ -255,19 +255,19 @@
 
     // 2.2 Through the Maelstrom
     // 2.2 Dungeons
-    "363": {
+    "22": {
       "name": "The Lost City of Amdapor",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "360": {
+    "21": {
       "name": "Halatali (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "362": {
+    "20": {
       "name": "Brayflox's Longstop (Hard)",
       "tank": "1",
       "healer": "1",
@@ -275,25 +275,25 @@
     },
 
     // 2.2 Trials
-    "281": {
-      "name": "The Whorleater",
+    "72": {
+      "name": "The Whorleater (Hard)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "359": {
+    "73": {
       "name": "The Whorleater (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "364": {
+    "67": {
       "name": "Thornmarch (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "366": {
+    "76": {
       "name": "Battle on the Big Bridge",
       "tank": "2",
       "healer": "2",
@@ -301,25 +301,25 @@
     },
 
     // 2.2 Raids
-    "355": {
+    "98": {
       "name": "Second Coil of Bahamut - T1",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "356": {
+    "99": {
       "name": "Second Coil of Bahamut - T2",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "357": {
+    "100": {
       "name": "Second Coil of Bahamut - T3",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "358": {
+    "101": {
       "name": "Second Coil of Bahamut - T4",
       "tank": "2",
       "healer": "2",
@@ -329,19 +329,19 @@
 
     // 2.3 Defenders of Eorzea
     // 2.3 Dungeons
-    "361": {
+    "23": {
       "name": "Hullbreaker Isle",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "365": {
+    "25": {
       "name": "The Stone Vigil (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "373": {
+    "24": {
       "name": "The Tam-Tara Deepcroft (Hard)",
       "tank": "1",
       "healer": "1",
@@ -349,13 +349,13 @@
     },
 
     // 2.3 Trials
-    "374": {
-      "name": "The Striking Tree",
+    "77": {
+      "name": "The Striking Tree (Hard)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "375": {
+    "78": {
       "name": "The Striking Tree (Extreme)",
       "tank": "2",
       "healer": "2",
@@ -363,31 +363,31 @@
     },
 
     // 2.3 Raids
-    "372": {
+    "102": {
       "name": "Syrcus Tower",
       "tank": "3",
       "healer": "6",
       "dps": "15"
     },
-    "380": {
+    "103": {
       "name": "Second Coil of Bahamut S - T1",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "381": {
+    "104": {
       "name": "Second Coil of Bahamut S - T2",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "382": {
+    "105": {
       "name": "Second Coil of Bahamut S - T3",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "383": {
+    "106": {
       "name": "Second Coil of Bahamut S - T4",
       "tank": "2",
       "healer": "2",
@@ -397,19 +397,19 @@
 
     // 2.4 Dreams of Ice
     // 2.4 Dungeons
-    "371": {
+    "27": {
       "name": "Snowcloak",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "367": {
+    "26": {
       "name": "Sunken Temple of Qarn (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "387": {
+    "28": {
       "name": "Sastasha (Hard)",
       "tank": "1",
       "healer": "1",
@@ -417,19 +417,19 @@
     },
 
     // 2.4 Trials
-    "377": {
-      "name": "Akh Afah Amphitheatre",
+    "79": {
+      "name": "Akh Afah Amphitheatre (Hard)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "378": {
+    "80": {
       "name": "Akh Afah Amphitheatre (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "142": {
+    "81": {
       "name": "The Dragon's Neck",
       "tank": "2",
       "healer": "2",
@@ -437,25 +437,25 @@
     },
 
     // 2.4 Raids
-    "193": {
+    "107": {
       "name": "Final Coil of Bahamut - T1",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "194": {
+    "108": {
       "name": "Final Coil of Bahamut - T2",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "195": {
+    "109": {
       "name": "Final Coil of Bahamut - T3",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "196": {
+    "110": {
       "name": "Final Coil of Bahamut - T4",
       "tank": "2",
       "healer": "2",
@@ -465,19 +465,19 @@
 
     // 2.5 Before the Fall
     // 2.5 Dungeons
-    "150": {
+    "32": {
       "name": "The Keeper of the Lake",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "188": {
+    "30": {
       "name": "The Wanderer's Palace (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "189": {
+    "29": {
       "name": "Amdapor Keep (Hard)",
       "tank": "1",
       "healer": "1",
@@ -485,26 +485,26 @@
     },
 
     // 2.5 Trials
-    "426": {
+    "84": {
       "name": "The Chrysalis",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "394": {
+    "82": {
       "name": "Urth's Fount",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "396": {
+    "85": {
       "name": "Battle in the Big Keep",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     // 2.55 Trials
-    "143": {
+    "83": {
       "name": "The Steps of Faith",
       "tank": "2",
       "healer": "2",
@@ -512,7 +512,7 @@
     },
 
     // 2.5 Raids
-    "151": {
+    "111": {
       "name": "The World of Darkness",
       "tank": "3",
       "healer": "6",
@@ -522,49 +522,49 @@
 
     // 3.0 Heavensward
     // 3.0 Dungeons
-    "435": {
+    "39": {
       "name": "The Aery",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "416": {
+    "31": {
       "name": "The Great Gubal Library",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "421": {
+    "34": {
       "name": "The Vault",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "430": {
+    "35": {
       "name": "The Fractal Continuum",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "434": {
+    "36": {
       "name": "The Dusk Vigil",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "438": {
+    "38": {
       "name": "Aetherochemical Research Facility",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "441": {
+    "37": {
       "name": "Sohm Al",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "420": {
+    "33": {
       "name": "Neverreap",
       "tank": "1",
       "healer": "1",
@@ -572,31 +572,31 @@
     },
 
     // 3.0 Trials
-    "432": {
-      "name": "Thok ast Thok",
+    "86": {
+      "name": "Thok ast Thok (Hard)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "436": {
-      "name": "The Limitless Blue",
+    "88": {
+      "name": "The Limitless Blue (Hard)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "437": {
+    "90": {
       "name": "The Singularity Reactor",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "446": {
+    "87": {
       "name": "Thok ast Thok (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "447": {
+    "89": {
       "name": "The Limitless Blue (Extreme)",
       "tank": "2",
       "healer": "2",
@@ -604,50 +604,50 @@
     },
 
     // 3.01 Raids
-    "442": {
+    "112": {
       "name": "A - Fist of the Father",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "443": {
+    "113": {
       "name": "A - Cuff of the Father",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "444": {
+    "114": {
       "name": "A - Arm of the Father",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "445": {
+    "115": {
       "name": "A - Burden of the Father",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     // 3.05 Raids
-    "449": {
+    "116": {
       "name": "A - Fist of the Father (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "450": {
+    "117": {
       "name": "A - Cuff of the Father (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "451": {
+    "118": {
       "name": "A - Arm of the Father (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "452": {
+    "119": {
       "name": "A - Burden of the Father (Savage)",
       "tank": "2",
       "healer": "2",
@@ -657,13 +657,13 @@
 
     // 3.1 As Goes Light So Goes Darkness
     // 3.1 Dungeons
-    "510": {
+    "40": {
       "name": "Pharos Sirius (Hard)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "511": {
+    "41": {
       "name": "Saint Mocianne's Arboretum",
       "tank": "1",
       "healer": "1",
@@ -671,7 +671,7 @@
     },
 
     // 3.1 Trials
-    "448": {
+    "91": {
       "name": "The Minstrel's Ballad: Thordan's Reign",
       "tank": "2",
       "healer": "2",
@@ -679,7 +679,7 @@
     },
 
     // 3.1 Raids
-    "508": {
+    "120": {
       "name": "The Void Ark",
       "tank": "3",
       "healer": "6",
@@ -687,19 +687,19 @@
     },
 
     // 3.1 Party Contents
-    "512": {
+    "131": {
       "name": "The Diadem (Easy)",
       "tank": "1",
       "healer": "2",
       "dps": "5"
     },
-    "514": {
+    "132": {
       "name": "The Diadem",
       "tank": "1",
       "healer": "2",
       "dps": "5"
     },
-    "515": {
+    "133": {
       "name": "The Diadem (Hard)",
       "tank": "1",
       "healer": "2",
@@ -709,13 +709,13 @@
 
     // 3.2 The Gears of Chance
     // 3.2 Dungeons
-    "516": {
+    "141": {
       "name": "The Antitower",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "519": {
+    "140": {
       "name": "Lost City of Amdapor (Hard)",
       "tank": "1",
       "healer": "1",
@@ -723,13 +723,13 @@
     },
 
     // 3.2 Trials
-    "517": {
+    "134": {
       "name": "Containment Bay S1T7",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "524": {
+    "135": {
       "name": "Containment Bay S1T7 (Extreme)",
       "tank": "2",
       "healer": "2",
@@ -737,49 +737,49 @@
     },
 
     // 3.2 Raids
-    "520": {
+    "136": {
       "name": "A - Fist of the Son",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "521": {
+    "137": {
       "name": "A - Cuff of the Son",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "522": {
+    "138": {
       "name": "A - Arm of the Son",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "523": {
+    "139": {
       "name": "A - Burden of the Son",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "529": {
+    "147": {
       "name": "A - Fist of the Son (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "530": {
+    "148": {
       "name": "A - Cuff of the Son (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "531": {
+    "149": {
       "name": "A - Arm of the Son (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "532": {
+    "150": {
       "name": "A - Burden of the Son (Savage)",
       "tank": "2",
       "healer": "2",
@@ -789,13 +789,13 @@
 
     // 3.3 Revenge of the Horde
     // 3.3 Dungeons
-    "555": {
+    "171": {
       "name": "Sohr Khai",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "557": {
+    "172": {
       "name": "Hullbreaker Isle (Hard)",
       "tank": "1",
       "healer": "1",
@@ -803,13 +803,13 @@
     },
 
     // 3.3 Trials
-    "559": {
+    "169": {
       "name": "The Final Steps of Faith",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "566": {
+    "170": {
       "name": "The Minstrel's Ballad: Nidhogg's Rage",
       "tank": "2",
       "healer": "2",
@@ -817,7 +817,7 @@
     },
 
     // 3.3 Raids
-    "556": {
+    "168": {
       "name": "The Weeping City of Mhach",
       "tank": "3",
       "healer": "6",
@@ -825,7 +825,7 @@
     },
 
     // 3.3 Party Contents
-    "558": {
+    "179": {
       "name": "The Aquapolis",
       "tank": "0",
       "healer": "0",
@@ -835,13 +835,13 @@
 
     // 3.4 Soul Surrender
     // 3.4 Dungeons
-    "572": {
+    "182": {
       "name": "Xelphatol",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "578": {
+    "196": {
       "name": "The Great Gubal Library (Hard)",
       "tank": "1",
       "healer": "1",
@@ -849,13 +849,13 @@
     },
 
     // 3.4 Trials
-    "576": {
+    "183": {
       "name": "Containment Bay P1T6",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "577": {
+    "184": {
       "name": "Containment Bay P1T6 (Extreme)",
       "tank": "2",
       "healer": "2",
@@ -863,49 +863,49 @@
     },
 
     // 3.4 Raids
-    "580": {
+    "186": {
       "name": "A - Eyes of the Creator",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "581": {
+    "187": {
       "name": "A - Breath of the Creator",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "582": {
+    "188": {
       "name": "A - Heart of the Creator",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "583": {
+    "189": {
       "name": "A - Soul of the Creator",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "584": {
+    "190": {
       "name": "A- Eyes of the Creator (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "585": {
+    "191": {
       "name": "A - Breath of the Creator (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "586": {
+    "192": {
       "name": "A - Heart of the Creator (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "587": {
+    "193": {
       "name": "A - Soul of the Creator (Savage)",
       "tank": "2",
       "healer": "2",
@@ -915,13 +915,13 @@
 
     // 3.5 The Far Edge of Fate
     // 3.5 Dungeons
-    "615": {
+    "219": {
       "name": "Baelsar's Wall",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "617": {
+    "221": {
       "name": "Sohm Al (Hard)",
       "tank": "1",
       "healer": "1",
@@ -929,13 +929,13 @@
     },
 
     // 3.5 Trials
-    "637": {
+    "223": {
       "name": "Containment Bay Z1T9",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "638": {
+    "224": {
       "name": "Containment Bay Z1T9 (Extreme)",
       "tank": "2",
       "healer": "2",
@@ -943,7 +943,7 @@
     },
 
     // 3.5 Raids
-    "627": {
+    "220": {
       "name": "Dun Scaith",
       "tank": "3",
       "healer": "6",
@@ -953,49 +953,49 @@
 
     // 4.0 Stormblood
     // 4.0 Dungeons
-    "626": {
+    "238": {
       "name": "The Sirensong Sea",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "616": {
+    "235": {
       "name": "Shisui of the Violet Tides",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "623": {
+    "240": {
       "name": "Bardam's Mettle",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "660": {
+    "241": {
       "name": "Doma Castle",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "661": {
+    "242": {
       "name": "Castrum Abania",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "689": {
+    "247": {
       "name": "Ala Mhigo",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "662": {
+    "262": {
       "name": "Kugane Castle",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "663": {
+    "236": {
       "name": "The Temple of the Fist",
       "tank": "1",
       "healer": "1",
@@ -1003,31 +1003,31 @@
     },
 
     // 4.0 Trials
-    "674": {
+    "243": {
       "name": "The Pool of Tribute",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "677": {
+    "244": {
       "name": "The Pool of Tribute (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "719": {
+    "263": {
       "name": "Emanation",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "720": {
+    "264": {
       "name": "Emanation (Extreme)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "679": {
+    "239": {
       "name": "The Royal Menagerie",
       "tank": "2",
       "healer": "2",
@@ -1035,59 +1035,59 @@
     },
 
     // 4.01 Raids
-    "691": {
+    "252": {
       "name": "Deltascape V1.0",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "692": {
+    "253": {
       "name": "Deltascape V2.0",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "693": {
+    "254": {
       "name": "Deltascape V3.0",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "694": {
+    "255": {
       "name": "Deltascape V4.0",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-	
+
     // 4.05 Raids
-    "695": {
+    "256": {
       "name": "Deltascape V1.0 (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "696": {
+    "257": {
       "name": "Deltascape V2.0 (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "697": {
+    "258": {
       "name": "Deltascape V3.0 (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "698": {
+    "259": {
       "name": "Deltascape V4.0 (Savage)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-	
-	//4.05 Party Contents
-    "712": {
+
+    //4.05 Party Contents
+    "268": {
       "name": "The Lost Canals of Uznair",
       "tank": "0",
       "healer": "0",
@@ -1097,7 +1097,7 @@
 
     // 4.1 The Legend Returns
     // 4.1 Dungeon
-    "731": {
+    "279": {
       "name": "The Drowned City of Skalla",
       "tank": "1",
       "healer": "1",
@@ -1105,217 +1105,795 @@
     },
 
     // 4.1 Trials
-    "730": {
-      "name": "The Minstel's Ballad: Shinryu's Domain",
+    "278": {
+      "name": "The Minstrel's Ballad: Shinryu's Domain",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
     // 4.1 Raids
-    "734": {
+    "281": {
       "name": "The Royal City of Rabanastre",
       "tank": "3",
       "healer": "6",
       "dps": "15"
     },
-	
-	//4.1 Party Contents
-    "725": {
+
+    //4.1 Party Contents
+    "276": {
       "name": "The Hidden Canals of Uznair",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-	
-	//4.11 Raids
-    "733": {
+
+    //4.11 Raids
+    "280": {
       "name": "Unending Coil of Bahamut (Ultimate)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
+    // 4.2 Rise of a New Sun
+    // 4.2 Dungeon
+    "284": {
+      "name": "Hells' Lid",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "285": {
+      "name": "the Fractal Continuum (Hard)",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 4.2 Trials
+    "290": {
+      "name": "Jade Stoa",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "291": {
+      "name": "Jade Stoa (Extreme)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 4.2 Raids
+    "286": {
+      "name": "Sigmascape V1.0",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "287": {
+      "name": "Sigmascape V2.0",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "288": {
+      "name": "Sigmascape V3.0",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "289": {
+      "name": "Sigmascape V4.0",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "292": {
+      "name": "Sigmascape V1.0 (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "293": {
+      "name": "Sigmascape V2.0 (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "294": {
+      "name": "Sigmascape V3.0 (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "295": {
+      "name": "Sigmascape V4.0 (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 4.3 Under the MoonLight
+    // 4.3 Dungeon
+    "536": {
+      "name": "The Swallow's Compass",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 4.3 Trials
+    "537": {
+      "name": "Castrum Fluminis",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "538": {
+      "name": "the Minstrel's Ballad: Tsukuyomi's Pain",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 4.3 Raids
+    "550": {
+      "name": "The Ridorana Lighthouse",
+      "tank": "3",
+      "healer": "6",
+      "dps": "15"
+    },
+
+    // 4.31 Raids
+    "539": {
+      "name": "The Weapon's Refrain (Ultimate)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    //4.36 Trials
+    "474": {
+      "name": "The Great Hunt",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "475": {
+      "name": "The Great Hunt (Extreme)",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 4.4 Prelude in Violet
+    // 4.4 Dungeon
+    "585": {
+      "name": "The Burn",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "584": {
+      "name": "Saint Mocianne's Arboretum (Hard)",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 4.4 Trials
+    "596": {
+      "name": "Hells' Kier",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "597": {
+      "name": "Hells' Kier (Extreme)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 4.4 Raids
+
+    "587": {
+      "name": "Alphascape V1.0",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "588": {
+      "name": "Alphascape V2.0",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "589": {
+      "name": "Alphascape V3.0",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "590": {
+      "name": "Alphascape V4.0",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "591": {
+      "name": "Alphascape V1.0 (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "592": {
+      "name": "Alphascape V2.0 (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "593": {
+      "name": "Alphascape V3.0 (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "594": {
+      "name": "Alphascape V4.0 (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 4.45
+    "595": {
+      "name": "Kugane Ohashi",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 4.5 A Requiem for Heroes
+    // 4.5 Dungeon
+    "611": {
+      "name": "The Ghimlyt Dark",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 4.5 Trials
+    "637": {
+      "name": "The Wreath of Snakes",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "638": {
+      "name": "The Wreath of Snakes (Extreme)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 4.5 Raids
+    "636": {
+      "name": "The Orbonne Monastery",
+      "tank": "3",
+      "healer": "6",
+      "dps": "15"
+    },
+
+    // 5.0 Shadowbringers
+    // 5.0 Dungeons
+    "676": {
+      "name": "Holminster Switch",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "649": {
+      "name": "Dohn Mheg",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "651": {
+      "name": "the Qitana Ravel",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "656": {
+      "name": "Malikah's Well",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "659": {
+      "name": "Mt. Gulg",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "652": {
+      "name": "Amaurot",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "655": {
+      "name": "the Twinning",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "661": {
+      "name": "Akadaemia Anyder",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 5.0 Trials
+    "657": {
+      "name": "the Dancing Plague",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "658": {
+      "name": "the Dancing Plague (Extreme)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4",
+      "macro": "/p H1   (水 Water)    H2
+/p                MT
+/p   　D1              D2
+/p                ST
+/p D3                            D4
+/p ------ 2連頭割り 2 Split ------
+/p 西 West  : MT-H1-D1-D3
+/p 東 East : ST-H2-D2-D4
+/p 時計回りの回転 Clockwise Rotation
+/p ---------- 連鎖 1 Chain 1 ----------
+/p 北西 N/W : Tank Healer | 南東 S/E : DPS
+/p -- Tether テザー : 9時受 (①西 West)】--
+/p ST->D1->D2->D3->-D4->H1
+/p ---------- 連鎖 2 Chain 2 ----------
+/p 北 North : Tank Healer | 南 South : DPS"
+    },
+    "666": {
+      "name": "the Crown of the Immaculate",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "667": {
+      "name": "the Crown of the Immaculate (Extreme)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "687": {
+      "name": "the Dying Gasp",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    
+    // 5.01 Raids
+
+    "653": {
+      "name": "Eden's Gate: Resurrection",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "684": {
+      "name": "Eden's Gate: Descent",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "682": {
+      "name": "Eden's Gate: Inundation",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "689": {
+      "name": "Eden's Gate: Sepulture",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 5.05 Raids Savage
+
+    "654": {
+      "name": "Eden's Gate: Resurrection (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "685": {
+      "name": "Eden's Gate: Descent (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "683": {
+      "name": "Eden's Gate: Inundation (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "690": {
+      "name": "Eden's Gate: Sepulture (Savage)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 5.1 Patch
+
+    "693": {
+      "name": "The Minstrel's Ballad: Hades's Elegy",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    "700": {
+      "name": "The Copied Factory",
+      "tank": "3",
+      "healer": "6",
+      "dps": "15"
+    },
+
+    "692": {
+      "name": "The Grand Cosmos",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
 
     // Guildhests
-    "190": {
+    "43": {
       "name": "Under the Armor",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "191": {
+    "46": {
       "name": "Pulling Poison Posies",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "192": {
+    "47": {
       "name": "Stinging Back",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "214": {
+    "42": {
       "name": "Basic Training: Enemy Parties",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "215": {
+    "44": {
       "name": "Basic Training: Enemy Strongholds",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "216": {
-      "name": "Hero on the Halfshell",
+    "45": {
+      "name": "Hero on the Half Shell",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "219": {
+    "49": {
       "name": "Flicking Sticks and Taking Names",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "220": {
+    "48": {
       "name": "All's Well that Ends in the Well",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "221": {
+    "50": {
       "name": "More than a Feeler",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "222": {
+    "51": {
       "name": "Annoy the Void",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "223": {
+    "52": {
       "name": "Shadow and Claw",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "298": {
+    "53": {
       "name": "Long Live the Queen",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "299": {
+    "54": {
       "name": "Ward Up",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "300": {
+    "55": {
       "name": "Solemn Trinity",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
+    // Blue Mage 4.5
+    "610": {
+      "name": "All's Well That Starts Well",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "612": {
+      "name": "Much Ado About Pudding",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "613": {
+      "name": "Waiting for Golem",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "614": {
+      "name": "Gentlemen Prefer Swords",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "615": {
+      "name": "The Threepenny Turtles",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "616": {
+      "name": "Eye Society",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "617": {
+      "name": "A Chorus Slime",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "618": {
+      "name": "Bomb-edy of Errors",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "619": {
+      "name": "To Kill a Mockingslime",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "620": {
+      "name": "A Little Knight Music",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "621": {
+      "name": "Some Like It Excruciatingly Hot",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "622": {
+      "name": "The Plant-om of the Opera",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "623": {
+      "name": "Beauty and a Beast",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "624": {
+      "name": "Blobs in the Woods",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "625": {
+      "name": "The Me Nobody Nodes",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "626": {
+      "name": "Sunset Bull-evard",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "627": {
+      "name": "The Sword of Music",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "628": {
+      "name": "Midsummer Night's Explosion",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "629": {
+      "name": "On a Clear Day You Can Smell Forever",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "630": {
+      "name": "Miss Typhon",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "631": {
+      "name": "Chimera on a Hot Tin Roof",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "632": {
+      "name": "Here Comes the Boom",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "633": {
+      "name": "Behemoths and Broomsticks",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "634": {
+      "name": "Amazing Technicolor Pit Fiends",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "635": {
+      "name": "Dirty Rotten Azulmagia",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+
 
     // Novice Training
-    "537": {
+    "151": {
       "name": "Avoid Area of Effect Attacks",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "538": {
+    "152": {
       "name": "Execute a Combo to Increase Enmity",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "539": {
+    "153": {
       "name": "Execute a Combo in Battle",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "540": {
+    "154": {
       "name": "Accrue Enmity from Multiple Targets",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "541": {
+    "155": {
       "name": "Engage Multiple Targets",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "542": {
+    "156": {
       "name": "Execute a Ranged Attack to Increase Enmity",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "543": {
+    "157": {
       "name": "Engage Enemy Reinforcements",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "544": {
+    "158": {
       "name": "Assist Allies in Defeating a Target",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "545": {
+    "159": {
       "name": "Defeat an Occupied Target",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "546": {
+    "160": {
       "name": "Avoid Engaged Targets",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "547": {
+    "161": {
       "name": "Engage Enemy Reinforcements",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "548": {
+    "162": {
       "name": "Interact with the Battlefield",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "549": {
+    "163": {
       "name": "Heal an Ally",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "550": {
+    "164": {
       "name": "Heal Multiple Allies",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "551": {
+    "165": {
       "name": "Avoid Engaged Targets",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "552": {
+    "166": {
       "name": "Final Exercise",
       "tank": "0",
       "healer": "0",
@@ -1324,104 +1902,98 @@
 
 
     // PvP
-    "175": {
-      "name": "The Fold",
-      "tank": "0",
-      "healer": "0",
-      "dps": "0"
-    },
-    "336": {
-      "name": "The Fold",
-      "tank": "0",
-      "healer": "0",
-      "dps": "0"
-    },
-    "337": {
-      "name": "The Fold (Matched Party)",
-      "tank": "0",
-      "healer": "0",
-      "dps": "0"
-    },
-    "352": {
-      "name": "The Fold (Light Party)",
-      "tank": "0",
-      "healer": "0",
-      "dps": "0"
-    },
-    "184": {
-      "name": "The Fold (Matched Party)",
-      "tank": "0",
-      "healer": "0",
-      "dps": "0"
-    },
-    "186": {
-      "name": "The Fold (Light Party)",
-      "tank": "0",
-      "healer": "0",
-      "dps": "0"
-    },
-    "376": {
+    "127": {
       "name": "The Borderland Ruins (Secure)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "422": {
-      "name": "The Borderland Ruins (Slaughter)",
-      "tank": "0",
-      "healer": "0",
-      "dps": "0"
-    },
-    "431": {
+    "130": {
       "name": "Seal Rock (Seize)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "518": {
-      "name": "The Feast (8 on 8 - Matched Party)",
+    "145": {
+      "name": "The Feast (4 on 4 - Ranked)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "525": {
-      "name": "The Feast (4 on 4 - Solo)",
+    "228": {
+      "name": "The Feast (4 on 4 - Training)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "526": {
-      "name": "The Feast (4 on 4 - Light Party)",
+    "230": {
+      "name": "The Feast (4 on 4 - Ranked)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "527": {
-      "name": "The Feast (4 on 4 - Solo)",
+    "143": {
+      "name": "The Feast (4 on 4 - Training)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "528": {
-      "name": "The Feast (4 on 4 - Light Party)",
+    "201": {
+      "name": "The Feast (Custom Match - Feasting Grounds)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "618": {
-      "name": "The Feast (8 on 8 - Custom Match - Feasting Grounds)",
+    "233": {
+      "name": "The Feast (Custom Match - Lichenweed)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "619": {
-      "name": "The Feast (4 on 4 - Custom Match - Feasting Grounds)",
+    "476": {
+      "name": "The Feast (Team Ranked)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "554": {
+    "478": {
+      "name": "The Feast (Ranked)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "479": {
+      "name": "The Feast (Training)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "480": {
+      "name": "The Feast (Custom Match - Crystal Tower)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "580": {
+      "name": "The Feast (Team Custom Match - Crystal Tower)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "180": {
       "name": "The Fields of Glory (Shatter)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "277": {
+      "name": "Astragalos",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "599": {
+      "name": "Hidden Gorge",
       "tank": "0",
       "healer": "0",
       "dps": "0"
@@ -1429,139 +2001,322 @@
 
 
     // Deep Dungeons
-    "561": {
+    // The Palace of the Dead
+    "174": {
       "name": "The Palace of the Dead B1~B10",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "562": {
+    "175": {
       "name": "The Palace of the Dead B11~B20",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "563": {
+    "176": {
       "name": "The Palace of the Dead B21~B30",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "564": {
+    "177": {
       "name": "The Palace of the Dead B31~B40",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "565": {
+    "178": {
       "name": "The Palace of the Dead B41~B50",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "593": {
+    "204": {
       "name": "The Palace of the Dead B51~B60",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "594": {
+    "205": {
       "name": "The Palace of the Dead B61~B70",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "595": {
+    "206": {
       "name": "The Palace of the Dead B71~B80",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "596": {
+    "207": {
       "name": "The Palace of the Dead B81~B90",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "597": {
+    "208": {
       "name": "The Palace of the Dead B91~B100",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "598": {
+    "209": {
       "name": "The Palace of the Dead B101~B110",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "599": {
+    "210": {
       "name": "The Palace of the Dead B111~B120",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "600": {
+    "211": {
       "name": "The Palace of the Dead B121~B130",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "601": {
+    "212": {
       "name": "The Palace of the Dead B131~B140",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "602": {
+    "213": {
       "name": "The Palace of the Dead B141~B150",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "603": {
+    "214": {
       "name": "The Palace of the Dead B151~B160",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "604": {
+    "215": {
       "name": "The Palace of the Dead B161~B170",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "605": {
+    "216": {
       "name": "The Palace of the Dead B171~B180",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "606": {
+    "217": {
       "name": "The Palace of the Dead B181~B190",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "607": {
+    "218": {
       "name": "The Palace of the Dead B191~B200",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
 
+    // Heaven-on-High
+    "540": {
+      "name": "Heaven-on-High (1-10)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "541": {
+      "name": "Heaven-on-High (11-20)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "542": {
+      "name": "Heaven-on-High (21-30)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "543": {
+      "name": "Heaven-on-High (31-40)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "544": {
+      "name": "Heaven-on-High (41-50)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "545": {
+      "name": "Heaven-on-High (51-60)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "546": {
+      "name": "Heaven-on-High (61-70)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "547": {
+      "name": "Heaven-on-High (71-80)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "548": {
+      "name": "Heaven-on-High (81-90)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "549": {
+      "name": "Heaven-on-High (91-100)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+
+    // The Forbidden Land, Eureka
+    "283": {
+      "name": "The Forbidden Land, Eureka Anemos",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "581": {
+      "name": "The Forbidden Land, Eureka Pagos",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "598": {
+      "name": "The Forbidden Land, Eureka Pyros",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "639": {
+      "name": "The Forbidden Land, Eureka Hydatos",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
 
     // Other things...
-    "579": {
+    "437": {
       "name": "Triple Triad",
       "tank": "0",
       "healer": "0",
       "dps": "0"
-    }
-  },
-  
-	//Event Instance
-    "571": {
+    },
+    "600": {
+      "name": "Leap of Faith",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "601": {
+      "name": "Leap of Faith",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "602": {
+      "name": "Leap of Faith",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "603": {
+      "name": "Leap of Faith",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "604": {
+      "name": "Leap of Faith",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "605": {
+      "name": "Leap of Faith",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "606": {
+      "name": "Leap of Faith",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "607": {
+      "name": "Leap of Faith",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "608": {
+      "name": "Leap of Faith",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "643": {
+      "name": "Novice Mahjong (Ranked)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "644": {
+      "name": "Advanced Mahjong (Ranked)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "645": {
+      "name": "Four-player Mahjong (Kuitan Enabled)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "650": {
+      "name": "Four-player Mahjong (Kuitan Disabled)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "640": {
+      "name": "Air Force One",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "641": {
+      "name": "Air Force One",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "642": {
+      "name": "Air Force One",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+
+    //Event Instance
+    "181": {
       "name": "Haunted Manor",
       "tank": "0",
       "healer": "0",
@@ -1572,17 +2327,18 @@
   // Duty Roulette
   "roulettes": {
     "1": "Duty Roulette: Leveling",
-    "2": "Duty Roulette: Level 50/60 Dungeons",
+    "2": "Duty Roulette: Level 50/60/70 Dungeons",
     "3": "Duty Roulette: Main Scenario",
     "4": "Duty Roulette: Guildhests",
     "5": "Duty Roulette: Expert",
     "6": "Duty Roulette: Trials",
     "7": "Duty Roulette: Frontline",
-    "8": "Duty Roulette: Level 70 Dungeons",
+    "8": "Duty Roulette: Level 80 Dungeons",
     "9": "Duty Roulette: Mentor",
     "10": "The Feast (8 on 8) - Training",
     "13": "The Feast (4 on 4) - Ranked",
-    "15": "Duty Roulette: Alliance Raids"
+    "15": "Duty Roulette: Alliance Raids",
+    "17": "Duty Roulette: Normal Raids"
   },
 
   // FATEs
@@ -1590,12 +2346,8 @@
     "134": {
       "name": "Middle La Noscea",
       "fates": {
-        "533": "Return of the King",
         "649": "Sister Crustacean",
-        "687": "Embiggened Spriggans",
         "688": "Tower of Power",
-        "693": "Stay Frosty",
-        "717": "Gloria in Eggcelsis",
         "220": "Menuis at Work",
         "221": "Overnight Migration",
         "222": "Go Wespe",
@@ -1622,12 +2374,7 @@
         "262": "Don't Drink the Water",
         "264": "Enter Beastman",
         "265": "One Pickman Enters",
-        "534": "Return of the King",
         "333": "Under the Bridge",
-        "666": "Brick by Brick",
-        "667": "Brick by Stone Brick",
-        "694": "Stay Frosty",
-        "718": "Gloria in Eggcelsis",
         "245": "One Prince",
         "246": "Fight the Flower",
         "249": "You Call That a Toad",
@@ -1643,7 +2390,6 @@
         "271": "Thrill of the Hunt",
         "272": "The Pelican Briefing",
         "274": "Them",
-        "532": "Return of the King",
         "278": "Careless Whiskers",
         "279": "No Lip",
         "280": "Jewels of the Isle",
@@ -1659,13 +2405,6 @@
         "566": "Cliff Hanger",
         "334": "Consigned, Sealed, and Undelivered",
         "335": "It's Not Lupus",
-        "913": "The Sarong Song",
-        "914": "The Belle of the Beach",
-        "915": "Sparking Up the Wrong Beach",
-        "916": "It Came from Beneath the Deep",
-        "917": "Life's a Beach",
-        "918": "Feeling Groggy",
-        "689": "Embiggened Spriggans",
         "690": "Tower of Power",
         "701": "What's Yours Is Mine"
       }
@@ -1684,7 +2423,6 @@
         "577": "The King's Justice",
         "578": "Making Waves",
         "650": "Tender Buttons",
-        "702": "Eggcelsior",
         "289": "Absolutely, Positively",
         "290": "Tender Buttons",
         "291": "The Killing Fields",
@@ -1712,11 +2450,6 @@
         "323": "Giant Enemy Crab",
         "329": "Shell Shocked",
         "331": "Peeping Ja",
-        "332": "Hop, Skip, and a Jump",
-        "668": "Brick by Brick",
-        "669": "Brick by Stone Brick",
-        "670": "Brick by Brick",
-        "671": "Brick by Gold Brick",
         "703": "What's Yours Is Mine",
         "451": "Poor Maid's Mess",
         "452": "Poor Maid's Mishap",
@@ -1765,8 +2498,6 @@
         "361": "Pound for Pound",
         "366": "He's Got Legs",
         "367": "Staying Dead",
-        "911": "Recurring Bugs",
-        "683": "Embiggened Spriggans",
         "684": "Tower of Power",
         "704": "What's Yours Is Mine"
       }
@@ -1774,7 +2505,6 @@
     "141": {
       "name": "Central Thanalan",
       "fates": {
-        "535": "Return of the King",
         "370": "Something to Prove",
         "373": "Like an Eft out of Water",
         "374": "Wrecked Rats",
@@ -1787,25 +2517,18 @@
         "383": "Big Time",
         "385": "Cold-blooded",
         "389": "A Warm Welcome",
-        "393": "Leaving the Nest",
-        "912": "Recurring Bugs",
-        "660": "Brick by Brick",
-        "661": "Brick by Stone Brick",
-        "695": "Stay Frosty",
-        "719": "Gloria in Eggcelsis"
+        "393": "Leaving the Nest"
       }
     },
     "145": {
       "name": "Eastern Thanalan",
       "fates": {
-        "536": "Return of the King",
         "540": "Quartz Coupling",
         "541": "A Man Rides Through",
         "542": "Bad Hair Day",
         "543": "The Big Bagoly Theory",
         "394": "Men Who See Goats",
         "395": "License to Quill",
-        "652": "Lightning Strikes - Armored Beast",
         "397": "Westward Bound",
         "398": "Bad Camp",
         "400": "Bazaar Blood Triangle",
@@ -1816,14 +2539,11 @@
         "409": "Desert Rose",
         "412": "Almost Paradise",
         "413": "Deep in the Heart of Sagolii",
-        "696": "Stay Frosty",
         "191": "Attack on Highbridge: Prelude",
         "192": "Attack on Highbridge: Act I",
         "193": "Attack on Highbridge: Act II",
         "194": "Attack on Highbridge: Act III",
-        "195": "Attack on Highbridge: Denouement",
-        "705": "Eggcelsior",
-        "720": "Gloria in Eggcelsis"
+        "195": "Attack on Highbridge: Denouement"
       }
     },
     "146": {
@@ -1841,8 +2561,6 @@
         "555": "Fallen Corpses Writhe in Style",
         "557": "Quenching the Flame",
         "558": "He's a Firestarter",
-        "651": "Lightning Strikes - Armored Beast",
-        "685": "Embiggened Spriggans",
         "686": "Tower of Power",
         "706": "What's Yours Is Mine",
         "419": "Adventures in Throat Slitting",
@@ -1888,7 +2606,6 @@
     "148": {
       "name": "Central Shroud",
       "fates": {
-        "537": "Return of the King",
         "600": "The Lindwurm Has Turned",
         "601": "What's Your Poison",
         "602": "Revenant Things",
@@ -1912,9 +2629,6 @@
         "140": "Spirithold Run",
         "141": "Love is in the Air",
         "142": "There's Something about Lou",
-        "672": "Brick by Brick",
-        "673": "Brick by Stone Brick",
-        "697": "Stay Frosty",
         "707": "What's Yours Is Mine",
         "196": "Steel Reign",
         "197": "Steel Reign",
@@ -1945,7 +2659,6 @@
         "150": "Jack of All Trades",
         "151": "줄다리 사투",
         "152": "Protecting the Patch",
-        "679": "Embiggened Spriggans",
         "680": "Tower of Power",
         "691": "A Wrench in the Works",
         "692": "What a Boar",
@@ -1982,7 +2695,6 @@
         "170": "To Whom the Toll Goes",
         "171": "Eat In, Hide Out",
         "172": "Robbin' Goblins",
-        "681": "Embiggened Spriggans",
         "682": "Tower of Power",
         "190": "Where the Stone Rolls",
         "708": "What's Yours Is Mine",
@@ -1996,15 +2708,10 @@
     "154": {
       "name": "North Shroud",
       "fates": {
-        "538": "Return of the King",
         "631": "Don't Disturb This Grove",
         "632": "Rude Awakening",
         "633": "Air Supply",
         "634": "Smells Like Tree Spirit",
-        "674": "Brick by Brick",
-        "675": "Brick by Stone Brick",
-        "676": "Brick by Brick",
-        "677": "Brick by Gold Brick",
         "174": "No Birds Allowed",
         "178": "Dschubba Snacks",
         "179": "Now Fall",
@@ -2012,24 +2719,18 @@
         "183": "Breaking Bud",
         "184": "The Magical Fruit",
         "185": "Micromanaging",
-        "698": "Stay Frosty",
         "187": "The Big Issue",
         "188": "It Ziz What It Is",
         "189": "Hare Today",
         "205": "Steel Reign",
         "206": "Steel Reign",
         "207": "Steel Reign",
-        "722": "Gloria in Eggcelsis",
         "216": "Waiting for a Moon to Fall"
       }
     },
     "155": {
       "name": "Coerthas Central Highlands",
       "fates": {
-        "653": "Lightning Strikes - Dread on Arrival",
-        "654": "Lightning Strikes - Dread on Arrival",
-        "699": "Stay Frosty",
-        "709": "Eggcelsior",
         "460": "Twelve Ilms of Snow",
         "463": "Baa Baa Black Sheep",
         "464": "Gavial",
@@ -2085,11 +2786,7 @@
         "526": "Home Is Where the Horn Is",
         "527": "Gone with the Shadow",
         "529": "The Prodigal Son",
-        "530": "V for Vinedetta",
-        "655": "Lightning Strikes - Anubys Assault",
-        "656": "Lightning Strikes - Anubys Assault",
-        "657": "Lightning Strikes - On Wings of Chaos",
-        "658": "Lightning Strikes - On Wings of Chaos"
+        "530": "V for Vinedetta"
       }
     },
     "397": {
@@ -2159,6 +2856,17 @@
     "399": {
       "name": "The Dravanian Hinterlands",
       "fates": {
+        "756": "Metal Gears Rising",
+        "757": "Metal Gears Revengeance",
+        "758": "Metal Gears Revengeance 2",
+        "759": "Tarantula Hawk, Pro Stinger",
+        "760": "Wild Wilde Death",
+        "761": "Gets the Red Out",
+        "762": "Makes the Very Best...Nests",
+        "763": "Olympus Has Pollen",
+        "764": "Feed Me, See More",
+        "766": "Pop Goes the Whizzle",
+        "767": "Revenge of the Vengeful Revengeance",
         "768": "Ratel and Hum",
         "769": "Dobharch Did It for the Best",
         "770": "Infant Vangob",
@@ -2176,18 +2884,7 @@
         "783": "Toad Alone",
         "784": "How Do You Feed a Hungry Manlike Monster",
         "785": "Out of the Woodwork",
-        "786": "Silkworm",
-        "756": "Metal Gears Rising",
-        "757": "Metal Gears Revengeance",
-        "758": "Metal Gears Revengeance 2",
-        "759": "Tarantula Hawk, Pro Stinger",
-        "760": "Wild Wilde Death",
-        "761": "Gets the Red Out",
-        "762": "Makes the Very Best...Nests",
-        "763": "Olympus Has Pollen",
-        "764": "Feed Me, See More",
-        "766": "Pop Goes the Whizzle",
-        "767": "Revenge of the Vengeful Revengeance"
+        "786": "Silkworm"
       }
     },
     "400": {
@@ -2283,48 +2980,15 @@
         "901": "Do Spinners Dream of Electric Rooks"
       }
     },
-    "612": {
-      "name": "Stormblood",
+    "351": {
+      "name": "Diadem",
       "fates": {
-        "932": "Our Favorite Pastime",
-        "933": "The Way of the Samurai",
-        "934": "Serket Breaker",
-        "935": "The Key to Amatsu: Kyori",
-        "936": "Pounding Rice, Pounding Hearts",
-        "937": "Pounding Rice, Pounding Hearts",
-        "938": "Pounding Rice, Pounding Hearts",
-        "939": "Pounding Rice, Pounding Hearts",
-        "940": "Pounding Rice, Pounding Hearts",
-        "941": "Pounding Rice, Pounding Hearts",
-        "942": "Eggstract and Eggspedite",
-        "943": "Eggstract and Eggspedite",
-        "944": "Eggstract and Eggspedite",
-        "945": "In Deep Water",
-        "946": "Trial by Fire",
-        "959": "Pounding More Mochi, Pounding More Hearts",
-        "960": "Pounding More Mochi, Pounding More Hearts",
-        "963": "Excitable Boys",
         "964": "Mad Ventures in Retainer-sitting",
-        "965": "Excitable Boys",
-        "966": "Prepare for Gory",
-        "967": "Prepare for Gory",
-        "968": "Secret of the Lost Legend",
-        "969": "Excitable Boys",
-        "970": "Slaughter of the Lost Legend",
-        "971": "Embrace of the Serpent",
-        "972": "The Pelican Grief",
-        "973": "Excitable Boys",
-        "974": "Late Night Torama Queen",
-        "975": "Late Night Torama Queen",
         "976": "Mad Ventures in Retainer-sitting",
-        "977": "Crawllateral Damage",
-        "978": "Excitable Boys",
         "979": "Mad Ventures in Retainer-sitting",
-        "980": "I Can Wring a Rainbow",
-        "981": "I Can Wring a Rainbow",
-        "982": "I Can Wring a Rainbow",
-        "983": "Excitable Boys",
-        "984": "Excitable Boys",
+        "1034": "Mad Ventures in Retainer-sitting",
+        "1062": "Mad Ventures in Retainer-sitting",
+        "1085": "Mad Ventures in Retainer-sitting",
         "985": "Shard to Get",
         "986": "Shard to Get",
         "987": "Shard to Get",
@@ -2337,33 +3001,77 @@
         "994": "Shard to Get",
         "995": "Shard to Get",
         "996": "Shard to Get",
-        "997": "Excitable Boys",
-        "998": "How I Met Your Marid",
         "999": "Shard to Get",
         "1000": "Shard to Get",
         "1001": "Shard to Get",
         "1002": "Shard to Get",
         "1003": "Shard to Get",
         "1004": "Shard to Get",
+        "963": "Excitable Boys",
+        "965": "Excitable Boys",
+        "969": "Excitable Boys",
+        "973": "Excitable Boys",
+        "978": "Excitable Boys",
+        "983": "Excitable Boys",
+        "984": "Excitable Boys",
+        "997": "Excitable Boys",
+        "1009": "Excitable Boys",
+        "1023": "Excitable Boys",
+        "1036": "Excitable Boys",
+        "1040": "Excitable Boys",
+        "1044": "Excitable Boys",
+        "1045": "Excitable Boys",
+        "1046": "Excitable Boys",
+        "1049": "Excitable Boys",
+        "1051": "Excitable Boys",
+        "1055": "Excitable Boys",
+        "1060": "Excitable Boys",
+        "1061": "Excitable Boys",
+        "1069": "Excitable Boys",
+        "1075": "Excitable Boys",
+        "1077": "Excitable Boys",
+        "1078": "Excitable Boys",
+        "1081": "Excitable Boys",
+        "1083": "Excitable Boys",
+        "1086": "Excitable Boys",
+        "1089": "Excitable Boys",
+        "1090": "Excitable Boys",
         "1005": "Root of the Problem",
         "1006": "Root of the Problem",
         "1007": "Root of the Problem",
+        "1072": "Root of the Problem",
+        "980": "I Can Wring a Rainbow",
+        "981": "I Can Wring a Rainbow",
+        "982": "I Can Wring a Rainbow",
+        "1016": "Who'll Stop the Sovereign",
+        "1017": "Who'll Stop the Sovereign",
+        "1018": "Who'll Stop the Sovereign",
+        "998": "How I Met Your Marid",
+        "1098": "How I Met Your Marid",
+        "1073": "Good-bye Solo",
+        "1091": "Who's for Dinner",
+        "1092": "Who's for Dinner",
+        "1093": "Who's for Dinner",
+        "1020": "Battle Toads",
+        "1021": "Battle Toads",
+        "1022": "Battle Toads",
+        "966": "Prepare for Gory",
+        "967": "Prepare for Gory",
+        "968": "Secret of the Lost Legend",
+        "970": "Slaughter of the Lost Legend",
+        "971": "Embrace of the Serpent",
+        "972": "The Pelican Grief",
+        "974": "Late Night Torama Queen",
+        "975": "Late Night Torama Queen",
+        "977": "Crawllateral Damage",
         "1008": "Nice Pirates",
-        "1009": "Excitable Boys",
         "1010": "Pretty Flies",
         "1011": "Late-night Snack",
         "1012": "Late-night Snack",
         "1013": "Any Which Way",
         "1014": "Any Which Way",
         "1015": "Nice Pirates",
-        "1016": "Who'll Stop the Sovereign",
-        "1017": "Who'll Stop the Sovereign",
-        "1018": "Who'll Stop the Sovereign",
         "1019": "Hard of Heren",
-        "1020": "Battle Toads",
-        "1021": "Battle Toads",
-        "1022": "Battle Toads",
-        "1023": "Excitable Boys",
         "1024": "Loose Endymions",
         "1025": "Bounty Hunter",
         "1026": "Bounty Hunter",
@@ -2374,82 +3082,50 @@
         "1031": "Cloudy with a Chance of...Thal's Balls",
         "1032": "Cloudy with a Chance of...Thal's Balls",
         "1033": "Cloudy with a Chance of...Thal's Balls",
-        "1034": "Mad Ventures in Retainer-sitting",
         "1035": "Where's the Beef",
-        "1036": "Excitable Boys",
         "1037": "Sticking Celphies",
         "1038": "Can You Smell the Blood Tonight",
         "1039": "Can You Smell the Blood Tonight",
-        "1040": "Excitable Boys",
         "1041": "Hail to the E",
         "1042": "Lunantishee in the Sky",
         "1043": "Lunantishee in the Sky",
-        "1044": "Excitable Boys",
-        "1045": "Excitable Boys",
-        "1046": "Excitable Boys",
         "1047": "Whiplash",
         "1048": "Whiplash",
-        "1049": "Excitable Boys",
         "1050": "Blood Wings",
-        "1051": "Excitable Boys",
         "1052": "NOT THE TREES",
         "1053": "NOT THE TREES",
         "1054": "NOT THE TREES",
-        "1055": "Excitable Boys",
         "1056": "Tightropen",
         "1057": "I'm the Scatman",
         "1058": "Wild Hunt",
         "1059": "Wild Hunt",
-        "1060": "Excitable Boys",
-        "1061": "Excitable Boys",
-        "1062": "Mad Ventures in Retainer-sitting",
         "1063": "(You're) Killing My Mitelings",
         "1064": "(You're) Killing My Mitelings",
         "1065": "(You're) Killing My Mitelings",
         "1066": "(You're) Killing My Mitelings",
         "1067": "(You're) Having My Mitelings",
         "1068": "Nice Pirates",
-        "1069": "Excitable Boys",
         "1070": "(You're Not) Having My Mitelings",
         "1071": "(You're Not) Having My Mitelings",
-        "1072": "Root of the Problem",
-        "1073": "Good-bye Solo",
         "1074": "Purple Haze",
-        "1075": "Excitable Boys",
         "1076": "Fly by Day",
-        "1077": "Excitable Boys",
-        "1078": "Excitable Boys",
         "1079": "Forest for the Trees",
         "1080": "Forest for the Trees",
-        "1081": "Excitable Boys",
         "1082": "Hard of Heren",
-        "1083": "Excitable Boys",
         "1084": "The Other White Meat",
-        "1085": "Mad Ventures in Retainer-sitting",
-        "1086": "Excitable Boys",
         "1087": "Westwhirled",
         "1088": "Am I Blue",
-        "1089": "Excitable Boys",
-        "1090": "Excitable Boys",
-        "1091": "Who's for Dinner",
-        "1092": "Who's for Dinner",
-        "1093": "Who's for Dinner",
         "1094": "On the Inside",
         "1095": "Blacker than the Foulest Witch",
         "1096": "Blacker than the Foulest Witch",
         "1097": "Blacker than the Foulest Witch",
-        "1098": "How I Met Your Marid",
         "1099": "Lunantishee in the Sky",
-        "1100": "Pretty Flies",
-        "1103": "A Horse Outside",
-        "1104": "A Horse Outside",
-        "1105": "A Horse Outside",
-        "1106": "Foxy Lady",
-        "1107": "Foxy Lady",
-        "1108": "Foxy Lady",
-        "1109": "Outfoxed",
-        "1110": "Freedom Flies",
-        "1111": "More to Offer",
+        "1100": "Pretty Flies"
+      }
+    },
+    "411": {
+      "name": "The Fringes",
+      "fates": {
         "1112": "Showing the Recruits What For",
         "1113": "Showing the Officers What For",
         "1114": "Showing the Commanders What For",
@@ -2478,37 +3154,12 @@
         "1138": "Ananta and Her Sisters",
         "1139": "Raisin' Hell",
         "1140": "Yes, This Is Dogs",
-        "1141": "M Bop",
-        "1142": "Wet",
-        "1143": "Clean Bill of Health",
-        "1144": "Quoth the Raven",
-        "1145": "Lay of the Lang",
-        "1146": "Pool Party",
-        "1147": "Soak Up the Sun",
-        "1148": "Agni's Philosophy",
-        "1149": "The Coral High Ground",
-        "1150": "The Big Banquet Theory",
-        "1151": "Uncivil Serpents",
-        "1152": "Ray Band",
-        "1153": "Princess, Princess",
-        "1154": "Kill the Messenger",
-        "1155": "The F-bomb",
-        "1156": "Raise the Red Flag",
-        "1157": "Double Dream Clams",
-        "1158": "There Be Dragonflies",
-        "1159": "Bilge-hold Jin",
-        "1160": "Days of Plunder",
-        "1161": "Forever Younglier",
-        "1162": "Treasure Island",
-        "1163": "Sailor Marooned",
-        "1164": "Jumping the Shark",
-        "1165": "Red Cliff",
-        "1166": "Ranging Bull",
-        "1167": "Another One Bites the Dust",
-        "1168": "Turtle Power",
-        "1170": "Crab Mentality",
-        "1171": "Independence Ray",
-        "1172": "Never Say Daimyo",
+        "1141": "M Bop"
+      }
+    },
+    "412": {
+      "name": "The Peaks",
+      "fates": {
         "1173": "A New Leaf",
         "1174": "Salad Days",
         "1175": "A Bone to Pick",
@@ -2540,71 +3191,15 @@
         "1203": "Das Bhoot",
         "1204": "5-year Energy",
         "1205": "Mouth for Water",
-        "1207": "The Magitek Is Back",
-        "1208": "A Tisket, A Tasket",
-        "1209": "A Fish to Fry",
-        "1210": "Falling Drown",
-        "1211": "Scared Straightheart",
-        "1212": "Wolves of a Feather",
-        "1213": "Goodwill Hunterling",
-        "1214": "Stay of Eggsecution",
-        "1215": "Get Ready for a Nu Wave",
-        "1216": "Deep Red Sea",
-        "1217": "To Catch a Weasel",
-        "1218": "Footing the Bills",
-        "1219": "Tiger Need",
-        "1220": "Leave the Meters Running",
-        "1221": "The Long and Rhino Road",
-        "1222": "Raze the Red Lantern",
-        "1223": "Long Hands, Long Fingers",
-        "1224": "Rice and Shine",
-        "1225": "In One Basket",
-        "1226": "Tsurubebi Snugly",
-        "1227": "Motherly Love",
-        "1228": "Killer Apsaras",
-        "1229": "Linquan Continental",
-        "1230": "This Is a Da, This Is a Peng",
-        "1231": "Oneblade Wonder",
-        "1232": "Mister Whiskers",
-        "1233": "Crying Wolves",
-        "1234": "Mada's Ilk",
-        "1235": "Tora Tora Tora",
-        "1236": "Ragoh to Extremes",
-        "1237": "Très Bian",
-        "1238": "Curiosity Killed the Catfish",
-        "1239": "The Virgin Homicides",
-        "1240": "Dead to Rites: Kiyofusa",
-        "1241": "Dead to Rites: Koja",
-        "1242": "Don't You Mean Kirata",
-        "1243": "The State of Reunion",
-        "1244": "Cold Comes the Wind",
-        "1245": "A Tall Order",
-        "1246": "Duck and Cover",
-        "1247": "Feel the Noise",
-        "1248": "Get Out the Vochu",
-        "1249": "Buzzkill",
-        "1250": "A Good Day to Die",
-        "1251": "Wooly Boys",
-        "1252": "Razing the Baras",
-        "1253": "The Fangover",
-        "1254": "Hat's Off",
-        "1255": "Rock for Food",
-        "1256": "Purbol Reign",
-        "1257": "Eat You Better",
-        "1258": "Man to Mangas",
-        "1259": "Not Just a Tribute",
-        "1260": "Good Day to Mate",
-        "1261": "Killing Dzo",
-        "1262": "Burn After Evening",
-        "1263": "Hey, Manzasiri",
-        "1264": "Khan Artist",
-        "1265": "Hook, Like, and Stinker",
-        "1266": "Fired",
-        "1267": "Wham, Bam, Thank You, Mammoth",
-        "1268": "More than You Chaochu",
-        "1269": "They Shall Not Want",
-        "1270": "A Walk Through the Valley",
-        "1271": "Live for the Mettle",
+        "1207": "The Magitek Is Back"
+      }
+    },
+    "413": {
+      "name": "The Lochs",
+      "fates": {
+        "1103": "A Horse Outside",
+        "1104": "A Horse Outside",
+        "1105": "A Horse Outside",
         "1272": "Off Their Yabby",
         "1273": "Foul Bachelor Frogamander",
         "1274": "Old Bucket of Boruta",
@@ -2638,7 +3233,122 @@
         "1302": "OK, Golem",
         "1303": "Ancelot's Fear",
         "1304": "Ancelot's Folly",
-        "1305": "Ancelot's Finale",
+        "1305": "Ancelot's Finale"
+      }
+    },
+    "421": {
+      "name": "The Ruby Sea",
+      "fates": {
+        "1142": "Wet",
+        "1143": "Clean Bill of Health",
+        "1144": "Quoth the Raven",
+        "1145": "Lay of the Lang",
+        "1146": "Pool Party",
+        "1147": "Soak Up the Sun",
+        "1148": "Agni's Philosophy",
+        "1149": "The Coral High Ground",
+        "1150": "The Big Banquet Theory",
+        "1151": "Uncivil Serpents",
+        "1152": "Ray Band",
+        "1153": "Princess, Princess",
+        "1154": "Kill the Messenger",
+        "1155": "The F-bomb",
+        "1156": "Raise the Red Flag",
+        "1157": "Double Dream Clams",
+        "1158": "There Be Dragonflies",
+        "1159": "Bilge-hold Jin",
+        "1160": "Days of Plunder",
+        "1161": "Forever Younglier",
+        "1162": "Treasure Island",
+        "1163": "Sailor Marooned",
+        "1164": "Jumping the Shark",
+        "1165": "Red Cliff",
+        "1166": "Ranging Bull",
+        "1167": "Another One Bites the Dust",
+        "1168": "Turtle Power",
+        "1170": "Crab Mentality",
+        "1171": "Independence Ray",
+        "1172": "Never Say Daimyo"
+      }
+    },
+    "422": {
+      "name": "Yanxia",
+      "fates": {
+        "1106": "Foxy Lady",
+        "1107": "Foxy Lady",
+        "1108": "Foxy Lady",
+        "1109": "Outfoxed",
+        "1110": "Freedom Flies",
+        "1111": "More to Offer",
+        "1208": "A Tisket, A Tasket",
+        "1209": "A Fish to Fry",
+        "1210": "Falling Drown",
+        "1211": "Scared Straightheart",
+        "1212": "Wolves of a Feather",
+        "1213": "Goodwill Hunterling",
+        "1214": "Stay of Eggsecution",
+        "1215": "Get Ready for a Nu Wave",
+        "1216": "Deep Red Sea",
+        "1217": "To Catch a Weasel",
+        "1218": "Footing the Bills",
+        "1219": "Tiger Need",
+        "1220": "Leave the Meters Running",
+        "1221": "The Long and Rhino Road",
+        "1222": "Raze the Red Lantern",
+        "1223": "Long Hands, Long Fingers",
+        "1224": "Rice and Shine",
+        "1225": "In One Basket",
+        "1226": "Tsurubebi Snugly",
+        "1227": "Motherly Love",
+        "1228": "Killer Apsaras",
+        "1229": "Linquan Continental",
+        "1230": "This Is a Da, This Is a Peng",
+        "1231": "Oneblade Wonder",
+        "1232": "Mister Whiskers",
+        "1233": "Crying Wolves",
+        "1234": "Mada's Ilk",
+        "1235": "Tora Tora Tora",
+        "1236": "Ragoh to Extremes",
+        "1237": "Très Bian",
+        "1238": "Curiosity Killed the Catfish",
+        "1239": "The Virgin Homicides",
+        "1240": "Dead to Rites: Kiyofusa",
+        "1241": "Dead to Rites: Koja"
+      }
+    },
+    "423": {
+      "name": "The Azim Steppe",
+      "fates": {
+        "1242": "Don't You Mean Kirata",
+        "1243": "The State of Reunion",
+        "1244": "Cold Comes the Wind",
+        "1245": "A Tall Order",
+        "1246": "Duck and Cover",
+        "1247": "Feel the Noise",
+        "1248": "Get Out the Vochu",
+        "1249": "Buzzkill",
+        "1250": "A Good Day to Die",
+        "1251": "Wooly Boys",
+        "1252": "Razing the Baras",
+        "1253": "The Fangover",
+        "1254": "Hat's Off",
+        "1255": "Rock for Food",
+        "1256": "Purbol Reign",
+        "1257": "Eat You Better",
+        "1258": "Man to Mangas",
+        "1259": "Not Just a Tribute",
+        "1260": "Good Day to Mate",
+        "1261": "Killing Dzo",
+        "1262": "Burn After Evening",
+        "1263": "Hey, Manzasiri",
+        "1264": "Khan Artist",
+        "1265": "Hook, Like, and Stinker",
+        "1266": "Fired",
+        "1267": "Wham, Bam, Thank You, Mammoth",
+        "1268": "More than You Chaochu",
+        "1269": "They Shall Not Want",
+        "1270": "A Walk Through the Valley",
+        "1271": "Live for the Mettle",
         "1306": "The Dataqi Chronicles: Departures",
         "1307": "The Dataqi Chronicles: Distractions",
         "1308": "The Dataqi Chronicles: Duty",
@@ -2651,11 +3361,243 @@
         "1316": "The Dataqi Chronicles: Decimation",
         "1318": "The Dataqi Chronicles: Divergence",
         "1319": "The Dataqi Chronicles: Declarations",
-        "1320": "The Dataqi Chronicles: Dominion",
-        "1321": "The Summer of Ultros",
-        "1322": "To Bait a Baiter",
-        "1323": "Snippers Gonna Snip",
-        "1324": "Adopt a Beach"
+        "1320": "The Dataqi Chronicles: Dominion"
+      }
+    },
+    "999": {
+      "name": "Eureka - Anemos",
+      "fates": {
+        "1328": "The Swarm Never Sets",
+        "1329": "Wall in the Willows",
+        "1331": "Wine and Honey",
+        "1332": "Unsafety Dance",
+        "1333": "Teles House",
+        "1334": "Prove Your Amemettle",
+        "1335": "Caym What May",
+        "1336": "The Killing of a Sacred Bombardier",
+        "1337": "Sing, Muse",
+        "1338": "Drama Lamashtu",
+        "1339": "Short Serket 2",
+        "1340": "I Amarok",
+        "1341": "To the Mat",
+        "1342": "Simurghasbord",
+        "1343": "When You Ride Alone",
+        "1344": "One Missed Callisto",
+        "1345": "Disinherit the Wind",
+        "1346": "Don't Judge Me, Morbol",
+        "1347": "By Numbers",
+        "1348": "The Shadow over Anemos"
+      }
+    },
+    "998": {
+      "name": "Eureka - Pagos",
+      "fates": {
+        "1351": "Eternity",
+        "1352": "Cows for Concern",
+        "1353": "Ash the Magic Dragon",
+        "1354": "Conqueror Worm",
+        "1355": "Melting Point",
+        "1356": "Disorder in the Court",
+        "1357": "Does It Have to Be a Snowman",
+        "1358": "Brothers",
+        "1359": "Eye of Horus",
+        "1360": "Morte Arthro",
+        "1361": "Apocalypse Cow",
+        "1362": "Third Impact",
+        "1363": "Eye Scream for Ice Cream",
+        "1364": "Louhi on Ice",
+        "1365": "Cassie and the Copycats",
+        "1366": "The Wobbler in Darkness",
+        "1367": "Down the Rabbit Hole",
+        "1368": "Curiouser and Curiouser",
+        "1369": "Cairn Blight 451"
+      }
+    },
+    "997": {
+      "name": "Eureka - Pyros",
+      "fates": {
+        "1388": "Medias Res",
+        "1389": "High Voltage",
+        "1390": "On the Non-existent",
+        "1391": "Creepy Doll",
+        "1392": "Quiet, Please",
+        "1393": "Up and Batym",
+        "1394": "Rondo Aetolus",
+        "1395": "Scorchpion King",
+        "1396": "Burning Hunger",
+        "1397": "Dry Iris",
+        "1398": "Thirty Whacks",
+        "1399": "Put Up Your Dux",
+        "1400": "You Do Know Jack",
+        "1401": "Mister Bright-eyes",
+        "1402": "Haunter of the Dark",
+        "1403": "Heavens' Warg",
+        "1404": "Lost Epic",
+        "1407": "We're All Mad Here",
+        "1408": "Uncommon Nonsense"
+      }
+    },
+    "1004": {
+      "name": "Eureka - Hydatos",
+      "fates": {
+        "1412": "I Ink, Therefore I Am",
+        "1413": "From Tusk till Dawn",
+        "1414": "Bullheaded Berserker",
+        "1415": "Mad, Bad, and Fabulous to Know",
+        "1416": "Fearful Symmetry",
+        "1417": "Crawling Chaos",
+        "1418": "Duty-free",
+        "1419": "Leukewarm Reception",
+        "1420": "Robber Barong",
+        "1421": "Stone-cold Killer",
+        "1422": "The Baldesion Arsenal: Expedition Support",
+        "1423": "Crystalline Provenance",
+        "1424": "I Don't Want to Believe",
+        "1425": "Drink Me"
+      }
+    },
+    "501": {
+      "name": "Lakeland",
+      "fates": {
+        "1496": "Looming Nightshade",
+        "1497": "Creeping Nightshade",
+        "1498": "Draconian Measures",
+        "1499": "Cry Not Wolf",
+        "1500": "Pick-up Sticks",
+        "1501": "Flowering Nightshade",
+        "1502": "Subtle Nightshade",
+        "1503": "Toxic Nightshade",
+        "1504": "Deadly Nightshade",
+        "1505": "Economic Peril",
+        "1506": "Don't Feed the Gremlins",
+        "1507": "A Beast among Men",
+        "1508": "Little Gate of Horrors",
+        "1509": "Behind Anemone Lines",
+        "1510": "Calm a Chameleon"
+      }
+    },
+    "502": {
+      "name": "Kholusia",
+      "fates": {
+        "1462": "Foes Most Formidable",
+        "1463": "A Family Most Formidable",
+        "1464": "A Finale Most Formidable",
+        "1465": "Shadow Over Stilltide",
+        "1466": "Shadow Over Stilltide",
+        "1467": "The Wright Stuff",
+        "1468": "The Wright Stuff",
+        "1469": "Bitter Barley",
+        "1470": "JELL-NO",
+        "1471": "Roadside Dinner",
+        "1472": "One-punch Mantis",
+        "1473": "Knockout",
+        "1474": "Season of Our Discord",
+        "1475": "The Amity Village Horror",
+        "1476": "Not Today",
+        "1477": "Ironbeard Builders - Rebuilt",
+        "1478": "Ironbeard Builders - Resist",
+        "1479": "Ironbeard Builders - Revolt"
+      }
+    },
+    "503": {
+      "name": "Amh Araeng",
+      "fates": {
+        "1511": "Scavengers Hunted",
+        "1512": "Reptilian Roadblock",
+        "1513": "Cactus Makes Perfect",
+        "1514": "Theft from Above",
+        "1515": "Sand and Deliver",
+        "1516": "This Time, It's Personal",
+        "1517": "Armadillo Peccadillo",
+        "1518": "The Elderblade",
+        "1519": "Harbingers of Bloom",
+        "1520": "Pray Destroy the Waking Sands",
+        "1521": "Tolba No. 1",
+        "1522": "Bayawak Attack",
+        "1523": "Bloody Simple",
+        "1524": "Baddie Longlegs",
+        "1525": "The Odd Couple",
+        "1526": "Anti-eruption Measures",
+        "1527": "Let's Dance (with Swords)"
+      }
+    },
+    "504": {
+      "name": "Il Mheg",
+      "fates": {
+        "1480": "Frog Standard",
+        "1481": "Great Daens",
+        "1482": "Fuath of Habit",
+        "1483": "Back and Fuath",
+        "1484": "Brute Fuath",
+        "1485": "Breaking the Fuath Wall",
+        "1486": "Go Fuath a Conqueror",
+        "1487": "Fuath to Be Reckoned With",
+        "1488": "Mad Magic",
+        "1489": "Bear Necessities",
+        "1490": "Weave 'Em and Weep",
+        "1491": "Locus Terribilis",
+        "1492": "Twice Upon a Time",
+        "1493": "Hedge Mazed",
+        "1494": "Thrice Upon a Time",
+        "1495": "Once Upon a Time",
+        "1531": "Great Daens",
+        "1532": "Fuath of Habit",
+        "1533": "Back and Fuath"
+      }
+    },
+    "505": {
+      "name": "The Rak'tika Greatwood",
+      "fates": {
+        "1441": "Barking Mad",
+        "1442": "Creepy Crawlers",
+        "1443": "Pluck of the Draw",
+        "1444": "The End of the Sentry",
+        "1445": "Tojil War",
+        "1446": "Tojil Annihilation",
+        "1447": "Tojil Annihilation",
+        "1448": "Tojil Carnage",
+        "1449": "Tojil Carnage",
+        "1450": "Tojil Eclipse",
+        "1528": "Tojil Carnage",
+        "1529": "Tojil Carnage",
+        "1530": "Tojil Eclipse",
+        "1451": "I'll Be Bark",
+        "1452": "We Are Venom",
+        "1453": "Picking up the Pieces",
+        "1454": "Six Fulm Turkeys",
+        "1455": "Dark Matters",
+        "1456": "Attack of the Killer Tomatl",
+        "1457": "Queen of the Harpies",
+        "1458": "Nest of Kin",
+        "1459": "Monkeying Around",
+        "1460": "Shot Through the Hart",
+        "1461": "Attack the Block"
+      }
+    },
+    "506": {
+      "name": "The Tempest",
+      "fates": {
+        "1426": "Where Has the Dagon",
+        "1427": "Ondo of Blood",
+        "1428": "Lookin' Back on the Track",
+        "1429": "Coral Support",
+        "1430": "Low Coral Fiber",
+        "1431": "Nothing Like a Trappin' Life",
+        "1432": "The Head, the Tail, the Whole Damned Thing",
+        "1433": "The Devil in the Deep Blue Sea",
+        "1434": "The Seashells He Sells",
+        "1435": "Pearls Apart",
+        "1436": "My Friend's Enemy is Anemone of Mine",
+        "1437": "The Nets Best Thing",
+        "1438": "Hydrozoan of the Enders",
+        "1439": "A Lot to Swallow",
+        "1440": "Natural Prawn Killers"
+      }
+    },
+    "1005": {
+      "name": "The Events",
+      "fates": {
+        
       }
     }
   }

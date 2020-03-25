@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using App.Properties;
 using Newtonsoft.Json;
-using SharpRaven.Data;
 
 namespace App
 {
@@ -10,13 +9,14 @@ namespace App
     {
         public static bool Initialized { get; private set; } = false;
         public static decimal Version { get; private set; } = 0;
+        public static string Language { get; private set; } = "";
 
         public static Dictionary<int, Area> Areas { get; private set; } = new Dictionary<int, Area>();
         public static Dictionary<int, Instance> Instances { get; private set; } = new Dictionary<int, Instance>();
         public static Dictionary<int, Roulette> Roulettes { get; private set; } = new Dictionary<int, Roulette>();
         public static Dictionary<int, FATE> FATEs { get; private set; } = new Dictionary<int, FATE>();
 
-        internal static void Initialize(string language)
+        internal static void Initialize(string language, MainForm mainForm)
         {
             string json;
 
@@ -34,18 +34,26 @@ namespace App
                     json = Resources.Data_FR_FR;
                     break;
 
+                case "de-de":
+                    json = Resources.Data_DE_DE;
+                    break;
+
                 case "ja-jp":
                     json = Resources.Data_JA_JP;
+                    break;
+
+                case "ru-ru":
+                    json = Resources.Data_EN_US;
                     break;
 
                 default:
                     return;
             }
 
-            Fill(json);
+            Fill(json, mainForm);
         }
 
-        public static void Fill(string json)
+        public static void Fill(string json, MainForm mainForm)
         {
             try
             {
@@ -53,7 +61,7 @@ namespace App
 
                 var version = data.Version;
 
-                if (version > Version)
+                if (version > Version || Language != Settings.Language)
                 {
                     var fates = new Dictionary<int, FATE>();
                     foreach (var area in data.Areas)
@@ -70,9 +78,11 @@ namespace App
                     Roulettes = data.Roulettes;
                     FATEs = fates;
                     Version = version;
+                    Language = Settings.Language;
 
                     if (Initialized)
                     {
+                        mainForm.Invoke(mainForm.refresh_Fates);
                         Log.S("l-data-updated", Version);
                     }
 
@@ -98,10 +108,7 @@ namespace App
 
             if (code != 0)
             {
-                var @event = new SentryEvent("Missing instance code");
-                @event.Level = ErrorLevel.Warning;
-                @event.Tags["code"] = code.ToString();
-                Sentry.ReportAsync(@event);
+                // "Missing instance code"
             }
 
             return new Instance { Name = Localization.GetText("unknown-instance", code) };
@@ -116,10 +123,7 @@ namespace App
 
             if (code != 0)
             {
-                var @event = new SentryEvent("Missing Roulette code");
-                @event.Level = ErrorLevel.Warning;
-                @event.Tags["code"] = code.ToString();
-                Sentry.ReportAsync(@event);
+                // "Missing Roulette code"
             }
 
             return new Roulette { Name = Localization.GetText("unknown-roulette", code) };
@@ -134,10 +138,7 @@ namespace App
 
             if (code != 0)
             {
-                var @event = new SentryEvent("Missing area code");
-                @event.Level = ErrorLevel.Warning;
-                @event.Tags["code"] = code.ToString();
-                Sentry.ReportAsync(@event);
+                // "Missing area code"
             }
 
             return new Area { Name = Localization.GetText("unknown-area", code) };
@@ -152,10 +153,7 @@ namespace App
 
             if (code != 0)
             {
-                var @event = new SentryEvent("Missing FATE code");
-                @event.Level = ErrorLevel.Warning;
-                @event.Tags["code"] = code.ToString();
-                Sentry.ReportAsync(@event);
+                // "Missing FATE code"
             }
 
             return new FATE { Name = Localization.GetText("unknown-fate", code) };

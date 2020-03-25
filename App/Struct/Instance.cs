@@ -7,5 +7,6 @@
         public byte Healer { get; set; }
         public byte DPS { get; set; }
         public bool PvP { get; set; }
+        public string Macro { get; set; }
     }
 }

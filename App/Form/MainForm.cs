@@ -1,10 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Drawing;
+using System.Text.RegularExpressions;
 
 namespace App
 {
@@ -39,7 +42,7 @@ namespace App
         private void MainForm_Load(object sender, EventArgs e)
         {
             Localization.Initialize(Settings.Language);
-            Data.Initialize(Settings.Language);
+            Data.Initialize(Settings.Language, this);
 
             ApplyLanguage();
 
@@ -55,6 +58,7 @@ namespace App
                 overlayForm.Hide();
                 checkBox_Overlay.Checked = false;
             }
+            networkWorker.notificationPlayer = new System.Media.SoundPlayer();
 
             Task.Factory.StartNew(() =>
             {
@@ -70,7 +74,10 @@ namespace App
                 new Language { Name = "한국어", Code = "ko-kr" },
                 new Language { Name = "English", Code = "en-us" },
                 new Language { Name = "Français", Code = "fr-fr" },
+                new Language { Name = "Deutsch", Code = "de-de" },
                 new Language { Name = "日本語", Code = "ja-jp" },
+                new Language { Name = "简体中文", Code = "zh-cn" },
+                new Language { Name = "Русский", Code = "ru-ru" },
             };
 
             comboBox_Language.DisplayMember = "Name";
@@ -81,36 +88,41 @@ namespace App
             comboBox_Language.SelectedValueChanged += comboBox_Language_SelectedValueChanged;
 
             checkBox_StartupShow.Checked = Settings.StartupShowMainForm;
-            checkBox_AutoOverlayHide.Checked = Settings.AutoOverlayHide;
+            checkBox_autoHideOverlay.Checked = Settings.autoHideOverlay;
             checkBox_FlashWindow.Checked = Settings.FlashWindow;
-            checkBox_PlaySound.Checked = Settings.PlaySound;
-            if (System.IO.File.Exists(Settings.SoundLocation) == false)
+            checkBox_FateSound.Checked = Settings.FateSound;
+            checkBox_useVPN.Checked = Settings.useVPN;
+            // Check if Custom Sound File Exists
+            if (File.Exists(Settings.CustomSoundPath))
             {
-                checkBox_PlaySound.Checked = false;
-                label_SoundLocation.Text = "";
+                label_CustomSoundFileName.Text = Path.GetFileName(Settings.CustomSoundPath);
+                checkBox_CustomSound.Checked = Settings.CustomSound;
+                networkWorker.notificationPlayer.SoundLocation = Settings.CustomSoundPath;
             }
             else
             {
-                label_SoundLocation.Text = System.IO.Path.GetFileName(Settings.SoundLocation);
+                label_CustomSoundFileName.Text = "";
+                checkBox_CustomSound.Checked = false;
+                Settings.CustomSound = false;
+                Settings.Save();
             }
-            if (checkBox_PlaySound.Checked == false) { button_SoundLocation.Enabled = false; }
-            checkBox_ShowAnnouncement.Checked = Settings.ShowAnnouncement;
+            SetCheatRoulleteCheckBox(Settings.CheatRoulette);
+            checkBox_CopyMacro.Checked = Settings.copyMacro;
+            checkBox_Telegram.Checked = Settings.TelegramEnabled;
+            checkBox_Telegram_Queue_Status.Checked = Settings.TelegramQueueStatusEnabled;
+            textBox_Telegram.Enabled = Settings.TelegramEnabled;
+            textBox_Telegram.Text = Settings.TelegramChatId;
+            checkBox_Discord.Checked = Settings.DiscordEnabled;
+            textBox_Discord.Enabled = Settings.DiscordEnabled;
+            textBox_Discord.Text = Settings.DiscordAccount;
 
-            checkBox_Twitter.Checked = Settings.TwitterEnabled;
-            textBox_Twitter.Enabled = Settings.TwitterEnabled;
-            textBox_Twitter.Text = Settings.TwitterAccount;
+            checkBox_EnableHttpRequest.Checked = Settings.customHttpRequest;
+            textBox_CustomHttpUrl.Text = Settings.customHttpUrl;
+            checkBox_RequestOnDutyMatched.Checked = Settings.requestOnDutyMatched;
+            checkBox_RequestOnFateOccur.Checked = Settings.requestOnFateOccured;
+            checkBox_DebugLog.Checked = Settings.debugLog;
 
-            foreach (var area in Data.Areas)
-            {
-                triStateTreeView_FATEs.Nodes.Add(area.Key.ToString(), area.Value.Name);
-
-                foreach (var fate in area.Value.FATEs)
-                {
-                    var node = triStateTreeView_FATEs.Nodes[area.Key.ToString()].Nodes.Add(fate.Key.ToString(), fate.Value.Name);
-                    node.Checked = Settings.FATEs.Contains(fate.Key);
-                    nodes.Add(node);
-                }
-            }
+            refresh_Fates();
 
             Task.Factory.StartNew(() =>
             {
@@ -146,8 +158,22 @@ namespace App
                 Settings.Save();
                 ShowNotification("notification-app-updated", Global.VERSION);
             }
+        }
 
-            Sentry.ReportAsync("App started");
+        internal void refresh_Fates()
+        {
+            triStateTreeView_FATEs.Nodes.Clear();
+            foreach (var area in Data.Areas)
+            {
+                triStateTreeView_FATEs.Nodes.Add(area.Key.ToString(), area.Value.Name);
+
+                foreach (var fate in area.Value.FATEs)
+                {
+                    var node = triStateTreeView_FATEs.Nodes[area.Key.ToString()].Nodes.Add(fate.Key.ToString(), fate.Value.Name);
+                    node.Checked = Settings.FATEs.Contains(fate.Key);
+                    nodes.Add(node);
+                }
+            }
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -181,14 +207,24 @@ namespace App
             richTextBox_Log.ScrollToCaret();
         }
 
+        private void linkLabel_Localization_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(Global.LOCALIZATION);
+        }
+
+        private void linkLabel_Telegram_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(Global.TELEGRAM_BOT);
+        }
+
+        private void linkLabel_DiscordServer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(Global.DISCORD_INVITE);
+        }
+
         private void linkLabel_GitHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start($"https://github.com/{Global.GITHUB_REPO}");
-        }
-
-        private void linkLabel_NewUpdate_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Process.Start($"https://github.com/{Global.GITHUB_REPO}/releases/latest");
         }
 
         private void button_SelectProcess_Click(object sender, EventArgs e)
@@ -213,6 +249,18 @@ namespace App
         private void checkBox_Overlay_CheckedChanged(object sender, EventArgs e)
         {
             Settings.ShowOverlay = checkBox_Overlay.Checked;
+
+            // Disable autohide overlay function when ShowOverlay is disabled
+            if (checkBox_Overlay.Checked)
+            {
+                checkBox_autoHideOverlay.Enabled = true;
+            }
+            else
+            {
+                checkBox_autoHideOverlay.Enabled = false;
+                checkBox_autoHideOverlay.Checked = false;
+                Settings.autoHideOverlay = false;
+            }
             Settings.Save();
 
             if (Settings.ShowOverlay)
@@ -230,22 +278,23 @@ namespace App
             overlayForm.ResetFormLocation();
         }
 
+        private void checkBox_autoHideOverlay_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.autoHideOverlay = checkBox_autoHideOverlay.Checked;
+            Settings.Save();
+        }
+
+        private void checkBox_autoHideOverlay_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (checkBox_autoHideOverlay.Checked)
+            {
+                LMessageBox.I("ui-notification-overlay-autohide");
+            }
+        }
+
         private void checkBox_StartupShow_CheckedChanged(object sender, EventArgs e)
         {
             Settings.StartupShowMainForm = checkBox_StartupShow.Checked;
-            Settings.Save();
-        }
-
-        private void checkBox_Twitter_CheckedChanged(object sender, EventArgs e)
-        {
-            textBox_Twitter.Enabled = checkBox_Twitter.Checked;
-            Settings.TwitterEnabled = checkBox_Twitter.Checked;
-            Settings.Save();
-        }
-
-        private void checkBox_AutoOverlayHide_CheckedChanged(object sender, EventArgs e)
-        {
-            Settings.AutoOverlayHide = checkBox_AutoOverlayHide.Checked;
             Settings.Save();
         }
 
@@ -255,15 +304,175 @@ namespace App
             Settings.Save();
         }
 
-        private void checkBox_ShowAnnouncement_CheckedChanged(object sender, EventArgs e)
+        private void checkBox_FateSound_CheckedChanged(object sender, EventArgs e)
         {
-            Settings.ShowAnnouncement = checkBox_ShowAnnouncement.Checked;
+            Settings.FateSound = checkBox_FateSound.Checked;
             Settings.Save();
         }
 
-        private void textBox_Twitter_TextChanged(object sender, EventArgs e)
+        private void checkBox_CustomSound_CheckedChanged(object sender, EventArgs e)
         {
-            Settings.TwitterAccount = textBox_Twitter.Text;
+            Settings.CustomSound = checkBox_CustomSound.Checked;
+            Settings.Save();
+        }
+
+        private void checkBox_CustomSound_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (label_CustomSoundFileName.Text == "")
+            {
+                LMessageBox.I("ui-notification-customsound-selectfile");
+                checkBox_CustomSound.Checked = false;
+            }
+        }
+
+        private void button_getSoundFile_Click(object sender, EventArgs e)
+        {
+            // Create a new OpenFileDialog.
+            OpenFileDialog dlg = new OpenFileDialog();
+
+            // Make sure the dialog checks for existence of the 
+            // selected file.
+            dlg.CheckFileExists = true;
+            
+            dlg.Filter = Localization.GetText("ui-settings-getfilewav");
+            dlg.DefaultExt = ".wav";
+
+            // Activate the file selection dialog.
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                // Get the selected file's path from the dialog.
+                this.label_CustomSoundFileName.Text = Path.GetFileName(dlg.FileName);
+
+                Settings.CustomSoundPath = dlg.FileName;
+                Settings.Save();
+                
+                networkWorker.notificationPlayer.SoundLocation = dlg.FileName;
+            }
+        }
+
+        private void checkBox_CheatRoullete_CheckedChanged(object sender, EventArgs e)
+        {
+            var @checked = checkBox_CheatRoullete.Checked;
+            SetCheatRoulleteCheckBox(false);
+            if (@checked)
+            {
+                var respond = LMessageBox.W("ui-cheat-roulette-confirm", MessageBoxButtons.YesNo, MessageBoxDefaultButton.Button2);
+                if (respond == DialogResult.Yes)
+                {
+                    LMessageBox.I("ui-cheat-roulette-enabled");
+                    SetCheatRoulleteCheckBox(true);
+                }
+            }
+
+            Settings.CheatRoulette = checkBox_CheatRoullete.Checked;
+            Settings.Save();
+        }
+
+        private void checkBox_CopyMacro_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.copyMacro = checkBox_CopyMacro.Checked;
+            Settings.Save();
+        }
+
+        private void checkBox_useVPN_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.useVPN = checkBox_useVPN.Checked;
+            Settings.Save();
+            networkWorker.StopCapture();
+            FFXIVProcess = null;
+            FindFFXIVProcess();
+        }
+
+        private void checkBox_useVPN_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (checkBox_useVPN.Checked)
+            {
+                LMessageBox.I("ui-settings-usevpn-alert");
+            }
+        }
+
+        private void textBox_Telegram_TextChanged(object sender, EventArgs e)
+        {
+            Settings.TelegramChatId = textBox_Telegram.Text;
+            Settings.Save();
+        }
+
+        private void checkBox_Telegram_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox_Telegram.Enabled = checkBox_Telegram.Checked;
+            Settings.TelegramEnabled = checkBox_Telegram.Checked;
+            Settings.Save();
+        }
+
+        private void checkBox_Telegram_Queue_Status_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.TelegramQueueStatusEnabled = checkBox_Telegram_Queue_Status.Checked;
+            Settings.Save();
+        }
+
+        private void textBox_Discord_TextChanged(object sender, EventArgs e)
+        {
+            string strRegex = "^[0-9]{15,}";
+            Regex re = new Regex(strRegex);
+            if (re.IsMatch(textBox_Discord.Text))
+            {
+                textBox_Discord.ForeColor = Color.Blue;
+            }
+            else
+            {
+                textBox_Discord.ForeColor = Color.Red;
+            }
+            Settings.DiscordAccount = textBox_Discord.Text;
+            Settings.Save();
+        }
+
+        private void textBox_Discord_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                LMessageBox.I("ui-3rdparty-discord-numberonly-alert");
+                e.Handled = true;
+            }
+        }
+
+        private void checkBox_Discord_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox_Discord.Enabled = checkBox_Discord.Checked;
+            Settings.DiscordEnabled = checkBox_Discord.Checked;
+            Settings.Save();
+        }
+
+        private void checkBox_EnableHttpRequest_CheckedChanged(object sender, EventArgs e)
+        {
+            var @checked = checkBox_EnableHttpRequest.Checked;
+            Settings.customHttpRequest = @checked;
+            textBox_CustomHttpUrl.Enabled = @checked;
+            checkBox_RequestOnDutyMatched.Enabled = @checked;
+            checkBox_RequestOnFateOccur.Enabled = @checked;
+            Settings.Save();
+        }
+
+        private void textBox_CustomHttpUrl_TextChanged(object sender, EventArgs e)
+        {
+            Settings.customHttpUrl = textBox_CustomHttpUrl.Text;
+            Settings.Save();
+        }
+
+        private void checkBox_RequestOnDutyMatched_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.requestOnDutyMatched = checkBox_RequestOnDutyMatched.Checked;
+            Settings.Save();
+        }
+
+        private void checkBox_RequestOnFateOccur_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.requestOnFateOccured = checkBox_RequestOnFateOccur.Checked;
+            Settings.Save();
+        }
+
+        private void checkBox_DebugLog_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.debugLog = checkBox_DebugLog.Checked;
             Settings.Save();
         }
 
@@ -330,8 +539,6 @@ namespace App
 
         private void PresetAccept(int[] arr)
         {
-            FateAllUnset();
-
             foreach (var node in nodes)
             {
                 var c = ushort.Parse(node.Name);
@@ -398,6 +605,37 @@ namespace App
         {
             int[] arr = { 543, 493, 587 };
             PresetAccept(arr);
+        }
+
+        private void IxionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int[] arr = { 1103, 1104, 1105 };
+            PresetAccept(arr);
+        }
+
+        private void TamamoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int[] arr = { 1106, 1107, 1108, 1109, 1110, 1111 };
+            PresetAccept(arr);
+        }
+
+        private void frogSuitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int[] arr = { 1426, 1427, 1428, 1429, 1430, 1431, 1432 };
+            PresetAccept(arr);
+        }
+
+        private void frogMountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int[] arr = { 1462, 1463, 1464, 1477, 1478, 1479 };
+            PresetAccept(arr);
+        }
+
+        private void SetCheatRoulleteCheckBox(bool @checked)
+        {
+            checkBox_CheatRoullete.CheckedChanged -= checkBox_CheatRoullete_CheckedChanged;
+            checkBox_CheatRoullete.Checked = @checked;
+            checkBox_CheatRoullete.CheckedChanged += checkBox_CheatRoullete_CheckedChanged;
         }
 
         private void FindFFXIVProcess()
@@ -469,7 +707,7 @@ namespace App
             Settings.Save();
 
             Localization.Initialize(Settings.Language);
-            Data.Initialize(Settings.Language);
+            Data.Initialize(Settings.Language, this);
 
             ApplyLanguage();
 
@@ -486,22 +724,39 @@ namespace App
             button_SelectProcess.Text = Localization.GetText("ui-topsetting-select");
             button_ResetProcess.Text = Localization.GetText("ui-topsetting-reset");
             tabControl.TabPages[0].Text = Localization.GetText("ui-tabcontrol-settings");
-            tabControl.TabPages[1].Text = Localization.GetText("ui-tabcontrol-fate");
-            tabControl.TabPages[2].Text = Localization.GetText("ui-tabcontrol-logs");
-            tabControl.TabPages[3].Text = Localization.GetText("ui-tabcontrol-info");
+            tabControl.TabPages[1].Text = Localization.GetText("ui-tabcontrol-3rdparty");
+            tabControl.TabPages[2].Text = Localization.GetText("ui-tabcontrol-advanced");
+            tabControl.TabPages[3].Text = Localization.GetText("ui-tabcontrol-fate");
+            tabControl.TabPages[4].Text = Localization.GetText("ui-tabcontrol-logs");
+            tabControl.TabPages[5].Text = Localization.GetText("ui-tabcontrol-info");
             groupBox_DefaultSet.Text = Localization.GetText("ui-settings-title");
             checkBox_Overlay.Text = Localization.GetText("ui-settings-overlay-use");
             toolTip.SetToolTip(checkBox_Overlay, Localization.GetText("ui-settings-overlay-tooltip"));
             button_ResetOverlayPosition.Text = Localization.GetText("ui-settings-overlay-reset");
+            checkBox_autoHideOverlay.Text = Localization.GetText("ui-settings-overlay-autohide");
             checkBox_StartupShow.Text = Localization.GetText("ui-settings-startupshow");
-            checkBox_AutoOverlayHide.Text = Localization.GetText("ui-settings-autohide");
             checkBox_FlashWindow.Text = Localization.GetText("ui-settings-iconflash");
-            checkBox_PlaySound.Text = Localization.GetText("ui-settings-playsound");
-            button_SoundLocation.Text = Localization.GetText("ui-settings-soundlocation");
-            checkBox_ShowAnnouncement.Text = Localization.GetText("ui-settings-overlay-announcement");
-            groupBox_TwitterSet.Text = Localization.GetText("ui-settings-tweet-title");
-            checkBox_Twitter.Text = Localization.GetText("ui-settings-tweet-activate");
-            label_TwitterAbout.Text = Localization.GetText("ui-settings-tweet-about");
+            checkBox_FateSound.Text = Localization.GetText("ui-settings-fatesound");
+            checkBox_CustomSound.Text = Localization.GetText("ui-settings-customsound");
+            button_getSoundFile.Text = Localization.GetText("ui-settings-getsoundfile");
+            checkBox_CheatRoullete.Text = Localization.GetText("ui-settings-cheatroulette");
+            checkBox_CopyMacro.Text = Localization.GetText("ui-settings-copymacro");
+            checkBox_useVPN.Text = Localization.GetText("ui-settings-usevpn");
+            linkLabel_Localization.Text = Localization.GetText("ui-link-localization");
+            groupBox_TelegramSet.Text = Localization.GetText("ui-3rdparty-telegram-title");
+            checkBox_Telegram.Text = Localization.GetText("ui-3rdparty-telegram-activate");
+            checkBox_Telegram_Queue_Status.Text = Localization.GetText("ui-3rdparty-telegram-queuestatus");
+            label_TelegramAbout.Text = Localization.GetText("ui-3rdparty-telegram-about");
+            groupBox_DiscordSet.Text = Localization.GetText("ui-3rdparty-discord-title");
+            checkBox_Discord.Text = Localization.GetText("ui-3rdparty-discord-activate");
+            label_DiscordAbout.Text = Localization.GetText("ui-3rdparty-discord-about");
+            groupBox_CustomHttpRequest.Text = Localization.GetText("ui-advanced-http");
+            checkBox_EnableHttpRequest.Text = Localization.GetText("ui-advanced-http-enable");
+            checkBox_RequestOnDutyMatched.Text = Localization.GetText("ui-advanced-http-duty-matched");
+            checkBox_RequestOnFateOccur.Text = Localization.GetText("ui-advanced-http-fate-occured");
+            label_HttpRequestReadme.Text = Localization.GetText("ui-advanced-http-readme");
+            groupBox_debug.Text = Localization.GetText("ui-debug");
+            checkBox_DebugLog.Text = Localization.GetText("ui-debug-log");
             toolStripMenuItem_SelectAll.Text = Localization.GetText("ui-fate-selectall");
             toolStripMenuItem_UnSelectAll.Text = Localization.GetText("ui-fate-unselectall");
             presetToolStripMenuItem.Text = Localization.GetText("ui-fate-preset");
@@ -514,41 +769,57 @@ namespace App
             bookOfSkywindIToolStripMenuItem.Text = Localization.GetText("fate-preset-animus-SkywindI");
             bookOfSkywindIIToolStripMenuItem.Text = Localization.GetText("fate-preset-animus-SkywindII");
             bookOfSkyearthIToolStripMenuItem.Text = Localization.GetText("fate-preset-animus-SkyearthI");
+            IxionToolStripMenuItem.Text = Localization.GetText("fate-preset-Ixion");
+            TamamoToolStripMenuItem.Text = Localization.GetText("fate-preset-Tamamo");
+            frogMountToolStripMenuItem.Text = Localization.GetText("fate-preset-frogMount");
+            frogSuitToolStripMenuItem.Text = Localization.GetText("fate-preset-frogSuit");
             toolStripMenuItem_SelectApply.Text = Localization.GetText("ui-fate-apply");
             label_FATEAbout.Text = Localization.GetText("ui-fate-about");
             toolStripMenuItem_LogCopy.Text = Localization.GetText("ui-logs-copy");
             toolStripMenuItem_LogClear.Text = Localization.GetText("ui-logs-clear");
             label_About.Text = Localization.GetText("ui-info-about");
 
-        }
-
-        private void checkBox_PlaySound_CheckedChanged(object sender, EventArgs e)
-        {
-            button_SoundLocation.Enabled = checkBox_PlaySound.Checked;
-            if (button_SoundLocation.Enabled == false)
+            // change Font
+            List<Control> allControls = GetAllControls(this, GetAllControls(overlayForm));
+            allControls.Add(groupBox_DefaultSet);
+            allControls.Add(groupBox_TelegramSet);
+            allControls.Add(groupBox_DiscordSet);
+            allControls.Add(groupBox_CustomHttpRequest);
+            if (Settings.Language == "ja-jp")
             {
-                label_SoundLocation.Text = "";
-                Settings.SoundLocation = "";
+                allControls.ForEach(k => k.Font = new Font("Yu Gothic", k.Font.Size));
             }
-            Settings.PlaySound = checkBox_PlaySound.Checked;
-            Settings.Save();
-        }
-
-        private void button_SoundLocation_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.Filter = "WAVE Files|*.wav";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            else
             {
-                label_SoundLocation.Text = System.IO.Path.GetFileName(openFileDialog1.FileName);
-                Settings.SoundLocation = openFileDialog1.FileName;
-                Settings.Save();
+                allControls.ForEach(k => k.Font = new Font("Malgun Gothic", k.Font.Size));
             }
+            label_AboutTitle.Font = new Font(label_AboutTitle.Font, FontStyle.Bold);
+
+            // Move items as String length change with languages.
+            button_ResetOverlayPosition.Left = checkBox_Overlay.Location.X + checkBox_Overlay.Size.Width;
+            button_getSoundFile.Left = checkBox_CustomSound.Location.X + checkBox_CustomSound.Size.Width;
+            label_CustomSoundFileName.Left = button_getSoundFile.Location.X + button_getSoundFile.Size.Width;
+            comboBox_Process.Left = label_Process.Location.X + label_Process.Size.Width;
+            button_SelectProcess.Left = comboBox_Process.Location.X + comboBox_Process.Size.Width;
+            button_ResetProcess.Left = button_SelectProcess.Location.X + button_SelectProcess.Size.Width;
+            checkBox_Telegram_Queue_Status.Left = checkBox_Telegram.Location.X + checkBox_Telegram.Size.Width;
         }
 
-        private void groupBox_DefaultSet_Enter(object sender, EventArgs e)
+        private List<Control> GetAllControls(Control container, List<Control> list)
         {
+            foreach (Control c in container.Controls)
+            {
+                if (c.Controls.Count > 0)
+                    list = GetAllControls(c, list);
+                else
+                    list.Add(c);
+            }
 
+            return list;
+        }
+        private List<Control> GetAllControls(Control container)
+        {
+            return GetAllControls(container, new List<Control>());
         }
     }
 }

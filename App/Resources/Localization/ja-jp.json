@@ -1,5 +1,5 @@
-﻿{
-  "app-name": "Duty/FATE Notificator",
+{
+  "app-name": "Duty/FATE Notifier",
 
 
   "unknown-instance": "不明なコンテンツ ({0})",
@@ -10,10 +10,11 @@
 
   "notification-app-updated": "バージョン {0} に更新されました",
   "notification-queue-matched": "< {0} > 突入準備完了!",
+  "notification-fate-occured": "< {0} > 発生!",
 
 
-  "tweet-fate-occured": "< {0} > FATE発生!",
-  "tweet-queue-matched": "< {0} > 突入準備完了!",
+  "fate-occured": "< {0} > FATE発生!",
+  "queue-matched": "< {0} > 突入準備完了!",
 
 
   "fate-preset-animus-SkyfireI": "炎天一巻",
@@ -25,8 +26,12 @@
   "fate-preset-animus-SkywindI": "風天一巻",
   "fate-preset-animus-SkywindII": "風天二巻",
   "fate-preset-animus-SkyearthI": "土天一巻",
+  "fate-preset-Ixion": "伝説の雷馬「イクシオン」(湖畔地帯)",
+  "fate-preset-Tamamo": "九尾の妖狐「玉藻御前」(ヤンサ)",
+  "fate-preset-frogMount": "カエルマウント(コルシア島)",
+  "fate-preset-frogSuit": "カエル衣服(テンペスト)",
 
-
+  
   "ui-notifymenustrip-open": "開く",
   "ui-notifymenustrip-close": "終了",
 
@@ -35,42 +40,74 @@
   "ui-topsetting-reset": "初期化",
 
   "ui-tabcontrol-settings": "設定",
+  "ui-tabcontrol-3rdparty": "3rd-party",
+  "ui-tabcontrol-advanced": "上級設定",
   "ui-tabcontrol-fate": "FATE",
   "ui-tabcontrol-logs": "ログ",
   "ui-tabcontrol-info": "情報",
 
   "ui-settings-title": "基本設定",
-  "ui-settings-overlay-use": "オーバーレイ",
+  "ui-settings-overlay-use": "オーバーレイを使う",
   "ui-settings-overlay-tooltip": "オーバーレイ左側のバーをドラッグすると移動できます。",
   "ui-settings-overlay-reset": "初期化",
-  "ui-settings-overlay-announcement": "オーバーレイにアナウンスを表示する",
+  "ui-settings-overlay-autohide": "マッチング中でない時にオーバーレイを隠す",
+  "ui-notification-overlay-autohide": "マッチング状況に変化が生じるかFATEが発生してから適用されます。\nアプリケーションを再起動しても適用されます。\n\nクライアントへの接続待機中のときはオーバーレイが表示されます。 \n（プログラムが正しく作動しているか確認できるようにするため）",
   "ui-settings-startupshow": "起動時にこのウィンドウを表示する",
-  "ui-settings-autohide": "コンテンツ中オーバーレイを非表示にする",
   "ui-settings-iconflash": "突入準備完了時FFXIVのアイコンを点滅させる",
-  "ui-settings-tweet-title": "Twitterアラーム",
-  "ui-settings-tweet-activate": "有効化",
-  "ui-settings-tweet-about": "突入準備完了時、FATEが発生した際指定したアカウントに\nツイートを送信します。\nTwitterアカウント名の@以降を入力してください。",
+  "ui-settings-cheatroulette": "コンテンツルーレット参加時に実際の突入先を表示する",
+  "ui-settings-copymacro": "マクロがある場合、自動でマクロをクリップボードにコピー",
+  "ui-settings-copymacro-dialog-title": "DFA マクロコピー",
+  "ui-settings-copymacro-dialog-text": "<{0}> コンテンツのマクロをクリップボードにコピーしますか？",
+  "ui-settings-usevpn": "ローカルネットワーク接続をフィルターしない(VPNなど)",
+  "ui-settings-usevpn-alert": "通常、ネットワークパケットをキャプチャするためにはこのオプションを無効にする必要があります。",
+  "ui-settings-fatesound": "FATE通知音を使う\n(カスタム通知音を無効化)",
+  "ui-settings-customsound": "FATE/コンテンツファインダーのカスタム通知音",
+  "ui-settings-getsoundfile": "選択",
+  "ui-settings-getfilewav": "WAV ファイル (*.wav)|*.wav",
+  "ui-notification-customsound-selectfile": "最初に音声ファイルを選択してください。",
+  "ui-link-localization": "DFAssist翻訳参加",
+
+  "ui-3rdparty-telegram-title": "Telegramアラーム",
+  "ui-3rdparty-telegram-activate": "有効化",
+  "ui-3rdparty-telegram-queuestatus": "マッチング状況も",
+  "ui-3rdparty-telegram-about": "突入準備完了時かFATE発生時に、指定したチャットルームにメッセージを送信します。\nChat IDはDFAssist Telegram Botにメッセージを送ることで確認できます。",
+  "ui-3rdparty-discord-title": "Discordアラーム",
+  "ui-3rdparty-discord-activate": "有効化",
+  "ui-3rdparty-discord-numberonly-alert": "Discord IDは数字のみ入力できます。",
+  "ui-3rdparty-discord-about": "Discordアカウントにメッセージを送って通知します。\nDiscord ID (15桁以上の数字) を入力してください。\n\n※Discord IDを確認する方法: DFAssist Discord Serverの#get-discord-idチャンネルで !id を入力すると確認できます。\nメッセージはDFAssist Discord Serverに参加している時にのみ受信できます。",
+
+  "ui-advanced-http": "カスタムHTTPリクエスト",
+  "ui-advanced-http-enable": "有効化",
+  "ui-advanced-http-duty-matched": "突入準備完了時",
+  "ui-advanced-http-fate-occured": "FATE発生時",
+  "ui-advanced-http-readme": "この機能を有効にすると\"status\"と \"info\"を持つHTTP POSTリクエストを\n設定したURLに送信します。\n\"status\"には\"duty-matched\"または\"fate-occured\"という文字列が含まれます。\n\"info\"には,マッチングしたダンジョンや発生したFATEの名前が含まれます。\n\nこの機能にはアップデートが予定されています。",
+
+  "ui-debug": "デバグ",
+  "ui-debug-log": "デバグログ出力",
 
   "ui-fate-selectall": "すべて選択",
   "ui-fate-unselectall": "すべて選択解除",
   "ui-fate-preset": "プリセット",
   "ui-fate-apply": "適用",
-  "ui-fate-about": "通知を受け取りたい物を選んで上の適用ボタンを押してください。\nアラートはキャラクターがFATEエリア内にいる場合のみ動作します。",
+  "ui-fate-about": "通知を受け取りたいFATEを選んで上の適用ボタンを押してください。\nアラートはキャラクターがFATEエリア内にいる場合のみ動作します。",
 
   "ui-logs-copy": "ログをコピー",
   "ui-logs-clear": "消去",
 
-  "ui-info-about": "[貢献者]\n유채색\nLaiglinne\nHibiyasleep\nAlex00728\n\n[Copyright]\n記載されている会社名・製品名・システム名などは、各社の商標、または登録商標です。\n(C)2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by EYEDENTITY Entertainment.",
+  "ui-info-about": "[貢献者]\n유채색\nLaiglinne\nHibiyasleep\nAlex00728 (Jaehyuk-Lee)\n\n[Copyright]\n記載されている会社名・製品名・システム名などは、各社の商標、または登録商標です。\n(C)2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by ACTOZ SOFT.",
 
   "ui-msgbox-title-info": "DFA通知",
   "ui-msgbox-title-warning": "DFA警告",
   "ui-msgbox-title-error": "DFAエラー",
 
-  "ui-language-changed": "言語が日本語に変更されました。\nいくつかの部分は再起動するまで変更されません。\nアプリケーションを再起動してください。",
+  "ui-language-changed": "言語が日本語に変更されました。\nオーバーレイ部分は状態が変化すると適用されます。\n今すぐ適用するにはアプリケーションを再起動してください。",
 
-  "ui-clipboard-copied": "コピーしましした。",
+  "ui-clipboard-copied": "コピーしました。",
 
-  "ui-clear-log-confirm": "ログを消しますか?",
+  "ui-cheat-roulette-confirm": "悪用防止のため、標準では無効になっている機能です。\n特定の嫌なコンテンツを意図的に避けることはお控えください。\n\n本当に有効にしますか？",
+  "ui-cheat-roulette-enabled": "有効になりました。\n絶対に故意に特定のコンテンツを拒否しないでください。",
+
+  "ui-clear-log-confirm": "ログを削除しますか？",
 
   "ui-fate-selection-saved": "FATE通知がセットされました。",
   "ui-fate-preset-applied": "FATEプリセットが適用されました。",
@@ -80,9 +117,8 @@
   "ui-app-crashed": "不明な問題によりアプリケーションが終了しました\n\nエラー: {0}",
 
 
-  "overlay-announcement": "",
-  "overlay-waiting-connection": "クライアントとの接続を待機しています",
-  "overlay-not-queuing": "参加申請していません",
+  "overlay-waiting-connection": "クライアントへの接続待機中",
+  "overlay-not-queuing": "参加申請をしていません",
   "overlay-duty-count-unknown": "コンテンツ参加申請中",
   "overlay-duty-count": "{0} コンテンツ参加申請中",
   "overlay-queue-waiting-party": "パーティ構築中: {0} / {1} / {2}",
@@ -101,9 +137,12 @@
   "l-process-found-nothing": "P: FFXIVプロセスが見つかりませんでした。",
   "l-process-found-multiple": "P: 2つ以上のFFXIVプロセスが見つかりました。",
 
-  "l-tweet-failed-request": "T: ツイート送信時にエラーが発生しました。",
-  "l-tweet-failed-general": "T: ツイート送信に失敗しました。",
-  "l-tweet-success": "T: ツイート成功!",
+  "l-telegram-failed-request": "R: Telegramメッセージの送信時にエラーが発生しました。",
+  "l-telegram-failed-general": "R: Telegramメッセージの送信に失敗しました。: {0}",
+  "l-telegram-success": "R: Telegramメッセージ送信完了!",
+  "l-discord-failed-request": "R: Discordメッセージの送信時にエラーが発生しました。",
+  "l-discord-failed-general": "R: Discordメッセージの送信に失敗しました。: {0}",
+  "l-discord-success": "R: Discordメッセージ送信完了!",
 
   "l-web-request-failed": "W: Webサービスでエラーが発生しました。",
 
@@ -118,7 +157,7 @@
   "l-updater-error-downloading": "U: アップデートデータのダウンロード中にエラーが発生しました。",
 
   "l-data-updated": "D: コンテンツデータはバージョン {0} へアップデートされました。",
-  "l-data-is-latest": "D: 最深のコンテンツデートを利用しています(バージョン {0})。",
+  "l-data-is-latest": "D: 最新のコンテンツデータを使用しています(バージョン {0})。",
   "l-data-error": "D: コンテンツデータを処理中にエラーが発生しました。",
 
   "l-packet-error-ip": "P: IPパケット解析エラー",
@@ -141,6 +180,13 @@
 
   "l-firewall-registered": "FW: 登録済み",
   "l-firewall-error": "FW: 登録中にエラーが発生しました",
+  
+  "l-wav-error": "S: 音楽ファイルの再生エラー: 正しくないwavファイルです。",
+
+  "l-POST-send": "N: POST リクエスト URL: {0}, データ: {1}",
+  "l-POST-no-response": "S: POST 応答なし!",
+  "l-POST-failed": "S: POST リクエスト失敗!",
+  "l-POST-response": "S: POST 応答: {0}",
 
   "l-analyze-error-length": "A: メッセージ解析中に長さエラーが発生しました: {0}, {1}/{2}",
   "l-analyze-error-general": "A: メッセージ解析中にエラーが発生しました",

@@ -1,4 +1,4 @@
-﻿{
+{
   "app-name": "임무/돌발 찾기 도우미",
 
 
@@ -10,12 +10,13 @@
 
   "notification-app-updated": "버전 {0} 업데이트됨",
   "notification-queue-matched": "< {0} > 매칭!",
+  "notification-fate-occured": "< {0} > 발생!",
 
 
-  "tweet-fate-occured": "< {0} > 돌발 발생!",
-  "tweet-queue-matched": "< {0} > 매칭!",
+  "fate-occured": "< {0} > 돌발 발생!",
+  "queue-matched": "< {0} > 매칭!",
 
-
+  
   "fate-preset-animus-SkyfireI": "불의 서 1권",
   "fate-preset-animus-SkyfireII": "불의 서 2권",
   "fate-preset-animus-NetherfireI": "불의 서 3권",
@@ -25,6 +26,10 @@
   "fate-preset-animus-SkywindI": "바람의 서 1권",
   "fate-preset-animus-SkywindII": "바람의 서 2권",
   "fate-preset-animus-SkyearthI": "땅의 서 1권",
+  "fate-preset-Ixion": "익시온 (호반지대)",
+  "fate-preset-Tamamo": "타마모 (얀샤)",
+  "fate-preset-frogMount": "개구리 탈 것 (콜루시아)",
+  "fate-preset-frogSuit": "개구리 옷 (템페스트)",
 
 
   "ui-notifymenustrip-open": "열기",
@@ -35,6 +40,8 @@
   "ui-topsetting-reset": "재설정",
 
   "ui-tabcontrol-settings": "설정",
+  "ui-tabcontrol-3rdparty": "외부 알림",
+  "ui-tabcontrol-advanced": "고급",
   "ui-tabcontrol-fate": "돌발",
   "ui-tabcontrol-logs": "로그",
   "ui-tabcontrol-info": "정보",
@@ -43,13 +50,40 @@
   "ui-settings-overlay-use": "오버레이 사용",
   "ui-settings-overlay-tooltip": "오버레이 UI의 좌측 막대를 이용해 드래그 할 수 있습니다.",
   "ui-settings-overlay-reset": "위치 초기화",
-  "ui-settings-overlay-announcement": "오버레이에 공지사항 보여주기",
+  "ui-settings-overlay-autohide": "임무 매칭 중이 아니거나 돌발이 발생하지 않았을 때, 오버레이 숨기기",
+  "ui-notification-overlay-autohide": "매칭 현황에 변화가 생기거나, 돌발 임무가 발생한 후부터 적용됩니다.\n프로그램을 재시작해도 적용됩니다.\n\n클라이언트 통신 대기 중일 때는 오버레이가 표시됩니다.\n(프로그램이 제대로 작동하는지 확인할 수 있게 하기 위함)",
   "ui-settings-startupshow": "프로그램 시작시 이 창 보이기",
-  "ui-settings-autohide": "임무 입장시 자동으로 오버레이 숨김",
   "ui-settings-iconflash": "매칭/돌발 발생시 파이널판타지14 작업 표시줄 아이콘 깜빡이기",
-  "ui-settings-tweet-title": "트위터 알림",
-  "ui-settings-tweet-activate": "활성화",
-  "ui-settings-tweet-about": "매칭이 됐을 시 입력된 트위터 계정으로 멘션을 보내 해당 사실을 알립니다.\n원하는 돌발이 발생했을 시에도 멘션을 보내 해당 사실을 알립니다.\n계정명 입력시 앞의 @ 표시는 제외하고 순수 계정명만 입력해주세요.",
+  "ui-settings-cheatroulette": "무작위 임무일 경우에도 실제 매칭된 임무 보여주기",
+  "ui-settings-copymacro": "매크로 정보가 있는 경우, 클립보드에 자동으로 매크로 복사",
+  "ui-settings-copymacro-dialog-title": "DFA 매크로 복사",
+  "ui-settings-copymacro-dialog-text": "<{0}> 임무의 매크로를 클립보드에 복사하시겠습니까?",
+  "ui-settings-usevpn": "로컬 네트워크 필터링 해제 (VPN 등)",
+  "ui-settings-usevpn-alert": "보통은 꺼주셔야 네트워크 패킷을 읽을 수 있습니다.",
+  "ui-settings-fatesound": "돌발임무 알림음 활성화\n(돌발임무 알림에서 사용자 알림음 사용 안함)",
+  "ui-settings-customsound": "알림음 사용자 설정",
+  "ui-settings-getsoundfile": "파일 선택",
+  "ui-settings-getfilewav": "WAV 파일 (*.wav)|*.wav",
+  "ui-notification-customsound-selectfile": "음악 파일을 먼저 선택해주세요.",
+  "ui-link-localization": "DFAssist 번역 참여",
+
+  "ui-3rdparty-telegram-title": "텔레그램 알림",
+  "ui-3rdparty-telegram-activate": "활성화",
+  "ui-3rdparty-telegram-queuestatus": "매칭 현황 전송",
+  "ui-3rdparty-telegram-about": "매칭이 되면 입력한 텔레그램 채팅방으로 메시지를 보내 해당 사실을 알립니다.\n원하는 돌발이 발생했을 시에도 메시지를 보내 해당 사실을 알립니다.\n채팅방 ID는 DFAssist Notify Bot에게 아무 메시지나 보내면 확인할 수 있습니다.",
+  "ui-3rdparty-discord-title": "디스코드 알림",
+  "ui-3rdparty-discord-activate": "활성화",
+  "ui-3rdparty-discord-numberonly-alert": "디스코드 ID는 숫자만 입력 가능합니다.",
+  "ui-3rdparty-discord-about": "입력된 디스코드 계정으로도 멘션을 통해 알림을 보냅니다. \n디스코드 ID는 15자리 이상의 숫자입니다. \n\n디스코드 ID는 DFAssist 디스코드 서버에서 #get-discord-id 채널에 !id 를 입력하면 확인할 수 있습니다. \n또한, DFAssist 디스코드 서버에 참여한 상태여야만 알림을 보낼 수 있습니다.",
+
+  "ui-advanced-http": "사용자 지정 HTTP 요청",
+  "ui-advanced-http-enable": "활성화",
+  "ui-advanced-http-duty-matched": "던전 매칭 완료시 보내기",
+  "ui-advanced-http-fate-occured": "돌발 임무 발생시 보내기",
+  "ui-advanced-http-readme": "이 기능을 활성화하면 임무/돌발 찾기 도우미는 지정한 URL로 \n\"status\"와 \"info\"를 포함한 POST HTTP Request를 보냅니다.\n\"status\"에는 \"duty-matched\" 또는 \"fate-occured\"라는 String이 포함되어 보내집니다.\n\"info\"에는 매칭된 임무나 발생한 돌발임무 이름이 포함되어 보내집니다.\n\n이 기능은 앞으로 추가적인 개선이 예정되어 있습니다.",
+
+  "ui-debug": "디버그",
+  "ui-debug-log": "디버그 로그 출력",
 
   "ui-fate-selectall": "모두 선택",
   "ui-fate-unselectall": "모두 해제",
@@ -60,15 +94,18 @@
   "ui-logs-copy": "로그 복사",
   "ui-logs-clear": "로그 삭제",
 
-  "ui-info-about": "[제작 및 문의]\n유채색\n라그린네\n히비야\n윈도ce\n\n[저작권]\n기재되어있는 회사명 · 제품명 · 시스템 이름은\n해당 소유자의 상표 또는 등록 상표입니다.\n(C) 2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by EYEDENTITY Entertainment.",
+  "ui-info-about": "[제작 및 문의]\n유채색\n라그린네\n히비야\n윈도ce\n[도움] 고먐미\n[저작권]\n기재되어있는 회사명 · 제품명 · 시스템 이름은\n해당 소유자의 상표 또는 등록 상표입니다.\n(C) 2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by ACTOZ SOFT.",
 
   "ui-msgbox-title-info": "DFA 알림",
   "ui-msgbox-title-warning": "DFA 경고",
   "ui-msgbox-title-error": "DFA 오류",
 
-  "ui-language-changed": "언어가 한국어로 변경되었습니다.\n일부 부분은 프로그램 재시작을 해야 반영됩니다.\n프로그램을 재시작해주세요.",
+  "ui-language-changed": "언어가 한국어로 변경되었습니다.\n오버레이 부분은 매칭 현황에 변화가 생기면 적용됩니다.\n지금 바로 적용하고 싶다면, 프로그램을 재시작해주세요.",
 
   "ui-clipboard-copied": "클립보드에 복사되었습니다.",
+
+  "ui-cheat-roulette-confirm": "악용 방지를 위해 기본적으로 비활성화 되어있는 기능입니다.\n특정 비인기 임무를 고의적으로 입장 거부하는 행위 등은 자제해주세요.\n\n그래도 활성화 하시겠습니까?",
+  "ui-cheat-roulette-enabled": "활성화되었습니다.\n특정 비인기 임무를 고의적으로 입장 거부하는 행위 등은 자제해주세요.",
 
   "ui-clear-log-confirm": "로그를 지우시겠습니까?",
 
@@ -80,12 +117,11 @@
   "ui-app-crashed": "알 수 없는 오류가 발생해 프로그램을 종료합니다.\n\n에러: {0}",
 
 
-  "overlay-announcement": "페미니즘을 지지하고 연대합니다", 
   "overlay-waiting-connection": "클라이언트 통신 대기 중",
   "overlay-not-queuing": "매칭중인 임무 없음",
   "overlay-duty-count-unknown": "임무 매칭 중",
   "overlay-duty-count": "총 {0}개 임무 매칭 중",
-  "overlay-queue-waiting-party": "파티 매칭 중: {0} / {1} / {2}",
+  "overlay-queue-waiting-party": "PvP 매칭: {0}명 대기 중",
   "overlay-queue-waiting": "매칭 대기 중",
   "overlay-queue-order": "대기 순번: {0}",
   "overlay-roulette": "무작위 임무",
@@ -94,16 +130,19 @@
   "overlay-queue-confirming": "입장 확인 중",
   "overlay-fate-occured": "돌발 임무 발생!",
 
-  
+
   "l-process-set-success": "P: 파이널판타지14 프로세스가 선택되었습니다: {0}",
   "l-process-set-failed": "P: 파이널판타지14 프로세스 설정에 실패했습니다.",
   "l-process-finding": "P: 파이널판타지14 프로세스를 찾는 중...",
   "l-process-found-nothing": "P: 파이널판타지14 프로세스를 찾을 수 없습니다.",
   "l-process-found-multiple": "P: 파이널판타지14가 2개 이상 실행중입니다.",
 
-  "l-tweet-failed-request": "T: 트윗 발송 요청중 에러 발생",
-  "l-tweet-failed-general": "T: 트윗 발송 실패",
-  "l-tweet-success": "T: 트윗을 발송했습니다!",
+  "l-telegram-failed-request": "R: 텔레그램 메시지 발송 요청중 에러 발생",
+  "l-telegram-failed-general": "R: 텔레그램 메시지 발송 실패: {0}",
+  "l-telegram-success": "R: 텔레그램 메시지를 발송했습니다!",
+  "l-discord-failed-request": "R: 디스코드 메시지 발송 요청중 에러 발생",
+  "l-discord-failed-general": "R: 디스코드 메시지 발송 실패: {0}",
+  "l-discord-success": "R: 디스코드 메시지를 발송했습니다!",
 
   "l-web-request-failed": "W: 웹 요청중 에러 발생",
 
@@ -141,6 +180,13 @@
 
   "l-firewall-registered": "FW: 추가됨",
   "l-firewall-error": "FW: 추가중 에러 발생",
+
+  "l-wav-error": "S: 음악 파일 재생 에러: 잘못된 wav 파일입니다.",
+
+  "l-POST-send": "N: POST 요청 URL: {0}, 데이터: {1}",
+  "l-POST-no-response": "S: POST 요청에 대한 응답이 없습니다.",
+  "l-POST-failed": "S: POST 요청에 실패했습니다!",
+  "l-POST-response": "S: POST 응답: {0}",
 
   "l-analyze-error-length": "A: 메시지 분석중 길이 에러 발생함: {0}, {1}/{2}",
   "l-analyze-error-general": "A: 메시지 분석중 에러 발생함",

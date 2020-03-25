@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>587, 17</value>
-  </metadata>
   <metadata name="notifyIcon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -268,8 +265,16 @@
 </value>
   </data>
   <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>587, 17</value>
+    <value>506, 17</value>
   </metadata>
+  <data name="label_HttpRequestReadme.Text" xml:space="preserve">
+    <value>이 기능을 활성화하면 임무/돌발 찾기 도우미는 지정한 URL로 
+"status", "info"와 "id"를 포함한 POST HTTP Request를 보냅니다.
+"status"에는 "duty-matched" 또는 "fate-occured"라는 String이 포함되어 보내집니다.
+"info"에는 매칭된 임무나 발생한 돌발임무 이름이 포함되어 보내집니다.
+
+이 기능은 앞으로 추가적인 개선이 예정되어 있습니다.</value>
+  </data>
   <metadata name="menuStrip_FATETab.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>274, 17</value>
   </metadata>
@@ -277,13 +282,10 @@
     <value>274, 17</value>
   </metadata>
   <metadata name="menuStrip_LogTab.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>434, 17</value>
+    <value>390, 17</value>
   </metadata>
   <metadata name="menuStrip_LogTab.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>434, 17</value>
-  </metadata>
-  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>677, 17</value>
+    <value>390, 17</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

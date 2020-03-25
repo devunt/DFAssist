@@ -59,16 +59,15 @@ namespace App
 
             message = Escape(message);
             E($"{format}: {message}", args);
-
-            Sentry.ReportAsync(ex, new { LogMessage = string.Format(format.ToString(), args) });
 #endif
         }
 
         internal static void D(object format, params object[] args)
         {
-#if DEBUG
-            Write(Color.Gray, format, args);
-#endif
+            if (Settings.debugLog)
+            {
+                Write(Color.Gray, format, args);
+            }
         }
 
         internal static void B(byte[] buffer)

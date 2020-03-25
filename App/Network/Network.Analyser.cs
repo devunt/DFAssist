@@ -3,15 +3,21 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
-using System.Text;
+using System.Media;
 
 namespace App
 {
     internal partial class Network
     {
+        private byte rouletteCode;
         private State state = State.IDLE;
         private int lastMember = 0;
-        
+        private int lastOrder = 0;
+        private ushort lastCode = 0;
+        internal SoundPlayer notificationPlayer;
+        private SoundPlayer fatePlayer;
+        private System.IO.Stream str = Properties.Resources.FFXIV_FATE_Start;
+
         private void AnalyseFFXIVPacket(byte[] payload)
         {
             try {
@@ -142,7 +148,22 @@ namespace App
                     opcode != 0x006F &&
                     opcode != 0x0121 &&
                     opcode != 0x0143 &&
-                    opcode != 0x022F)
+                    opcode != 0x022F &&
+                    // v5.1
+                    opcode != 0x008F && 
+                    opcode != 0x00AE &&
+                    opcode != 0x00B3 && 
+                    opcode != 0x015E && 
+                    opcode != 0x0121 && 
+                    opcode != 0x0304 && 
+                    // v5.11
+                    opcode != 0x0164 &&
+                    opcode != 0x032D &&
+                    opcode != 0x03CF &&
+                    opcode != 0x02A8 &&
+                    opcode != 0x032F &&
+                    opcode != 0x0339 &&
+                    opcode != 0x0002)
                     return;
 #endif
 
@@ -153,8 +174,6 @@ namespace App
                     var code = BitConverter.ToInt16(data, 4);
                     var type = data[8];
 
-                    Log.B(data);
-
                     if (type == 0x0B)
                     {
                         Log.I("l-field-instance-entered", Data.GetInstance(code).Name);
@@ -164,7 +183,7 @@ namespace App
                         Log.I("l-field-instance-left");
                     }
 
-                    if (Settings.ShowOverlay && Settings.AutoOverlayHide)
+                    /*if (Settings.ShowOverlay && Settings.AutoOverlayHide)
                     {
                         mainForm.overlayForm.Invoke(() =>
                         {
@@ -177,7 +196,7 @@ namespace App
                                 mainForm.overlayForm.Show();
                             }
                         });
-                    }
+                    }*/
                 }
                 else if (opcode == 0x0143)
                 {
@@ -218,31 +237,47 @@ namespace App
                         if (Settings.FATEs.Contains(code))
                         {
                             mainForm.overlayForm.SetFATEAsOccured(fate);
+                            if(Settings.ShowOverlay)
+                                mainForm.overlayForm.Show();
                             Log.I("l-fate-occured-info", fate.Name);
+
+                            if(Settings.FateSound)
+                            {
+                                fatePlayer = new SoundPlayer(str);
+                                fatePlayer.Stream.Position = 0; // fatePlayer가 Play()를 끝내기 전에 다시 Play()를 할 때 (한 번에 여러 돌발이 나타날 때) 버그 방지를 위해 필요한 코드
+                                fatePlayer.Play();
+                            }
+                            else if (Settings.CustomSound)
+                            {
+                                notificationPlayer.Play();
+                            }
+                            if (!Settings.ShowOverlay)
+                            {
+                                mainForm.ShowNotification("notification-fate-occured", fate.Name);
+                            }
 
                             if (Settings.FlashWindow)
                             {
                                 WinApi.FlashWindow(mainForm.FFXIVProcess);
                             }
 
-                            if (Settings.TwitterEnabled)
+                            if (Settings.TelegramEnabled)
                             {
-                                WebApi.Tweet("tweet-fate-occured", fate.Name);
+                                WebApi.Request("telegram", "fate-occured", fate.Name);
+                            }
+
+                            if (Settings.DiscordEnabled)
+                            {
+                                WebApi.Request("discord", "fate-occured", fate.Name);
+                            }
+
+                            if (Settings.customHttpRequest && Settings.requestOnFateOccured)
+                            {
+                                WebApi.customHttpRequest("fate-occured", fate.Name);
                             }
                         }
                     }
                 }
-                /*else if (opcode == 0x006C) // 3.5 cross-world 파티 참가하면 문제가 발생하는 부분.
-                {
-                    var code = BitConverter.ToUInt16(data, 192);
-
-                    var instance = Data.GetInstance(code);
-
-                    state = State.QUEUED;
-                    mainForm.overlayForm.SetDutyCount(1);
-
-                    Log.I("l-queue-started-general", instance.Name);
-                }*/
                 else if (opcode == 0x0078)
                 {
                     var status = data[0];
@@ -252,7 +287,10 @@ namespace App
                     {
                         state = State.QUEUED;
 
-                        var rouletteCode = data[20];
+                        rouletteCode = data[20];
+                        
+                        if(Settings.ShowOverlay)
+                            mainForm.overlayForm.Show();
 
                         if (rouletteCode != 0 && (data[15] == 0 || data[15] == 64)) //무작위 임무 신청, 한국서버/글로벌 서버
                         {
@@ -262,6 +300,7 @@ namespace App
                         }
                         else //특정 임무 신청
                         {
+                            rouletteCode = 0;
                             var instances = new List<Instance>();
 
                             for (int i = 0; i < 5; i++)
@@ -298,6 +337,7 @@ namespace App
                         mainForm.overlayForm.CancelDutyFinder();
 
                         Log.I("l-queue-entered");
+                        mainForm.overlayForm.instances_callback(lastCode);
                     }
                     else if (status == 4) //글섭에서 매칭 잡혔을 때 출력
                     {
@@ -305,7 +345,10 @@ namespace App
                         var code = BitConverter.ToUInt16(data, 22);
 
                         Instance instance;
-
+                        if (Settings.CustomSound)
+                        {
+                            notificationPlayer.Play();
+                        }
                         if (!Settings.CheatRoulette && roulette != 0)
                         {
                             instance = new Instance { Name = Data.GetRoulette(roulette).Name };
@@ -322,107 +365,82 @@ namespace App
                         {
                             WinApi.FlashWindow(mainForm.FFXIVProcess);
                         }
-                        if (Settings.PlaySound && Settings.SoundLocation != "" && System.IO.File.Exists(Settings.SoundLocation))
-                        {
-                            System.Media.SoundPlayer player = new System.Media.SoundPlayer(Settings.SoundLocation);
-                            player.Play();
-                        }
+
                         if (!Settings.ShowOverlay)
                         {
                             mainForm.ShowNotification("notification-queue-matched", instance.Name);
                         }
 
-                        if (Settings.TwitterEnabled)
+                        if (Settings.TelegramEnabled)
                         {
-                            WebApi.Tweet("tweet-queue-matched", instance.Name);
+                            WebApi.Request("telegram", "duty-matched", instance.Name);
+                        }
+
+                        if (Settings.DiscordEnabled)
+                        {
+                            WebApi.Request("discord", "duty-matched", instance.Name);
+                        }
+
+                        if (Settings.customHttpRequest && Settings.requestOnDutyMatched)
+                        {
+                            WebApi.customHttpRequest("duty-matched", instance.Name);
                         }
 
                         Log.S("l-queue-matched", instance.Name);
                     }
                 }
-                else if (opcode == 0x006F)
+                else if (opcode == 0x008F || opcode == 0x0164) // v5.1, v5.11 (enroll duty)
                 {
                     var status = data[0];
+                    var reason = data[4];
 
-                    if (status == 0)
+                    state = State.QUEUED;
+
+                    // rouletteCode = data[20];
+                    rouletteCode = data[8];
+
+                    if (Settings.ShowOverlay)
+                        mainForm.overlayForm.Show();
+                    if (rouletteCode != 0 && (data[15] == 0 || data[15] == 64)) //무작위 임무 신청, 한국서버/글로벌 서버
                     {
-                        // 플레이어가 매칭 참가 확인 창에서 취소를 누르거나 참가 확인 제한 시간이 초과됨
-                        // 매칭 중단을 알리기 위해 상단 2DB status 3 패킷이 연이어 옴
+                        var roulette = Data.GetRoulette(rouletteCode);
+                        mainForm.overlayForm.SetRoulleteDuty(roulette);
+                        Log.I("l-queue-started-roulette", roulette.Name);
                     }
-                    if (status == 1)
+                    else //특정 임무 신청
                     {
-                        // 플레이어가 매칭 참가 확인 창에서 확인을 누름
-                        // 다른 매칭 인원들도 전부 확인을 눌렀을 경우 입장을 위해 상단 2DB status 6 패킷이 옴
-                        mainForm.overlayForm.StopBlink();
+                        rouletteCode = 0;
+                        var instances = new List<Instance>();
+
+                        for (int i = 0; i < 5; i++)
+                        {
+                            var code = BitConverter.ToUInt16(data, 12 + (i * 4));
+                            if (code == 0)
+                            {
+                                break;
+                            }
+                            instances.Add(Data.GetInstance(code));
+                        }
+                        if (!instances.Any())
+                        {
+                            return;
+                        }
+                        mainForm.overlayForm.SetDutyCount(instances.Count);
+                        mainForm.overlayForm.SetDutyAsMatching();
+                        Log.I("l-queue-started-general",
+                            string.Join(", ", instances.Select(x => x.Name).ToArray()));
                     }
                 }
-                else if (opcode == 0x0121) //글로벌 서버
+                else if (opcode == 0x00B3 || opcode == 0x032D) // v5.1, v5.11 (duty matched)
                 {
-                    var status = data[5];
-
-                    if (status == 128)
-                    {
-                        // 매칭 참가 신청 확인 창에서 확인을 누름
-                        mainForm.overlayForm.StopBlink();
-                    }
-                }
-                else if (opcode == 0x0079)
-                {
-                    var code = BitConverter.ToUInt16(data, 0);
-                    var status = data[4];
-                    var tank = data[5];
-                    var dps = data[6];
-                    var healer = data[7];
-
-                    var instance = Data.GetInstance(code);
-
-                    if (status == 1)
-                    {
-                        // 인원 현황 패킷
-                        var member = tank * 10000 + dps * 100 + healer;
-
-                        if (state == State.MATCHED && lastMember != member)
-                        {
-                            // 매칭도중일 때 인원 현황 패킷이 오고 마지막 인원 정보와 다른 경우에 누군가에 의해 큐가 취소된 경우.
-                            state = State.QUEUED;
-                            mainForm.overlayForm.CancelDutyFinder();
-                        }
-                        else if (state == State.IDLE)
-                        {
-                            // 프로그램이 매칭 중간에 켜짐
-                            state = State.QUEUED;
-                            mainForm.overlayForm.SetDutyCount(-1); // 알 수 없음으로 설정함 (TODO: 알아낼 방법 있으면 정확히 나오게 수정하기)
-                            mainForm.overlayForm.SetDutyStatus(instance, tank, dps, healer);
-                        }
-                        else if (state == State.QUEUED)
-                        {
-                            mainForm.overlayForm.SetDutyStatus(instance, tank, dps, healer);
-                        }
-
-                        lastMember = member;
-                    }
-                    else if (status == 2)
-                    {
-                        // 현재 매칭된 파티의 역할별 인원 수 정보
-                        // 조율 해제 상태여도 역할별로 정확히 날아옴
-                        mainForm.overlayForm.SetMemberCount(tank, dps, healer);
-                        return;
-                    }
-                    else if (status == 4)
-                    {
-                        // 매칭 뒤 참가자 확인 현황 패킷
-                        mainForm.overlayForm.SetConfirmStatus(instance, tank, dps, healer);
-                    }
-                    Log.I("l-queue-updated", instance.Name, status, tank, instance.Tank, healer, instance.Healer, dps,
-                        instance.DPS);
-                }
-                else if (opcode == 0x0080)
-                {
-                    var roulette = data[2];
-                    var code = BitConverter.ToUInt16(data, 4);
+                    var roulette = rouletteCode;
+                    var code = BitConverter.ToUInt16(data, 20);
 
                     Instance instance;
-
+                    if (Settings.CustomSound)
+                    {
+                        notificationPlayer.Play();
+                    }
                     if (!Settings.CheatRoulette && roulette != 0)
                     {
                         instance = new Instance { Name = Data.GetRoulette(roulette).Name };
@@ -445,9 +463,291 @@ namespace App
                         mainForm.ShowNotification("notification-queue-matched", instance.Name);
                     }
 
-                    if (Settings.TwitterEnabled)
+                    if (Settings.TelegramEnabled)
                     {
-                        WebApi.Tweet("tweet-queue-matched", instance.Name);
+                        WebApi.Request("telegram", "duty-matched", instance.Name);
+                    }
+
+                    if (Settings.DiscordEnabled)
+                    {
+                        WebApi.Request("discord", "duty-matched", instance.Name);
+                    }
+
+                    if (Settings.customHttpRequest && Settings.requestOnDutyMatched)
+                    {
+                        WebApi.customHttpRequest("duty-matched", instance.Name);
+                    }
+
+                    Log.S("l-queue-matched", instance.Name);
+                }
+                else if (opcode == 0x006F)
+                {
+                    var status = data[0];
+
+                    if (status == 0)
+                    {
+                        // 플레이어가 매칭 참가 확인 창에서 취소를 누르거나 참가 확인 제한 시간이 초과됨
+                        // 매칭 중단을 알리기 위해 상단 2DB status 3 패킷이 연이어 옴
+                    }
+                    if (status == 1)
+                    {
+                        // 플레이어가 매칭 참가 확인 창에서 확인을 누름
+                        // 다른 매칭 인원들도 전부 확인을 눌렀을 경우 입장을 위해 상단 2DB status 6 패킷이 옴
+                        mainForm.overlayForm.StopBlink();
+                    }
+                }
+                else if (opcode == 0x015E) // cancel duty
+                {
+                    if (data[3] == 0 || data[3] == 8) // v5.1에서 8로 바뀌었다고 들음
+                    {
+                        state = State.IDLE;
+                        mainForm.overlayForm.CancelDutyFinder();
+
+                        Log.E("l-queue-stopped");
+                    }
+                }
+                else if (opcode == 0x0121) // v5.1 commence duty
+                {
+                    var status = data[5];
+
+                    if (status == 128)
+                    {
+                        // 매칭 참가 신청 확인 창에서 확인을 누름
+                        mainForm.overlayForm.StopBlink();
+                    }
+                }
+                else if (opcode == 0x03CF) // v5.11 cancel duty
+                {
+                    var status = data[0];
+
+                    if (status == 0x73) // 매칭 취소
+                    {
+                        state = State.IDLE;
+                        mainForm.overlayForm.CancelDutyFinder();
+
+                        Log.D("v5.11");
+                        Log.E("l-queue-stopped");
+                    }
+                }
+                else if (opcode == 0x0079)
+                {
+                    var code = BitConverter.ToUInt16(data, 0);
+                    var status = data[8];
+                    var tank = data[9];
+                    var dps = data[10];
+                    var healer = data[11];
+                    var order = data[4];
+
+                    var instance = Data.GetInstance(code);
+
+                    if (status == 1)
+                    {
+                        // 인원 현황 패킷
+                        var member = tank * 10000 + dps * 100 + healer;
+
+                        if (state == State.MATCHED && lastMember != member)
+                        {
+                            // 매칭도중일 때 인원 현황 패킷이 오고 마지막 인원 정보와 다른 경우에 누군가에 의해 큐가 취소된 경우.
+                            state = State.QUEUED;
+                            mainForm.overlayForm.CancelDutyFinder();
+                        }
+                        else if (state == State.IDLE)
+                        {
+                            // 프로그램이 매칭 중간에 켜짐
+                            state = State.QUEUED;
+                            mainForm.overlayForm.SetDutyCount(-1); // 알 수 없음으로 설정함 (TODO: 알아낼 방법 있으면 정확히 나오게 수정하기)
+                            if (rouletteCode > 0 || (tank == 0 && dps == 0 && healer == 0))
+                            {
+                                mainForm.overlayForm.SetDutyStatus(order);
+                            }
+                            else
+                            {
+                                mainForm.overlayForm.SetDutyStatus(instance, tank, dps, healer);
+                            }
+                        }
+                        else if (state == State.QUEUED)
+                        {
+                            if (rouletteCode > 0 || (tank == 0 && dps == 0 && healer == 0))
+                            {
+                                mainForm.overlayForm.SetDutyStatus(order);
+                            }
+                            else
+                            {
+                                mainForm.overlayForm.SetDutyStatus(instance, tank, dps, healer);
+                            }
+                        }
+
+                        // 직전 맴버 구성과 같은 상황이면 알림주지 않음
+                        if (Settings.TelegramEnabled && Settings.TelegramQueueStatusEnabled)
+                        {
+                            if (rouletteCode == 0 && lastMember != member || !(tank == 0 && dps == 0 && healer == 0)) // 무작위 임무가 아님 (Not roulette duty)
+                            {
+                                WebApi.Request("telegram", "duty-status", $"{instance.Name}, {tank}/{instance.Tank}, {healer}/{instance.Healer}, {dps}/{instance.DPS}");
+                            }
+                            else if (order != 0 && lastOrder != order) // 매칭 현황을 받아오는 중이면 제외 (except 'retrieving information')
+                            {
+                                var roulette = Data.GetRoulette(rouletteCode);
+                                WebApi.Request("telegram", "duty-status-roulette", $"{roulette.Name} - #{order}");
+                            }
+                        }
+
+                        lastMember = member;
+                        lastOrder = order;
+                    }
+                    else if (status == 2)
+                    {
+                        // 현재 매칭된 파티의 역할별 인원 수 정보
+                        // 조율 해제 상태여도 역할별로 정확히 날아옴
+                        mainForm.overlayForm.SetMemberCount(tank, dps, healer);
+                        return;
+                    }
+                    else if (status == 4)
+                    {
+                        // 매칭 뒤 참가자 확인 현황 패킷
+                        mainForm.overlayForm.SetConfirmStatus(instance, tank, dps, healer);
+                    }
+                    lastCode = code;
+                    Log.I("l-queue-updated", instance.Name, status, tank, instance.Tank, healer, instance.Healer, dps,
+                        instance.DPS);
+                }
+                else if (opcode == 0x0304)
+                {
+                    //var code = BitConverter.ToUInt16(data, 0); // 이제 던전 안알려줌. 대신 max 인원 알려줌.
+                    //var status = data[8];
+                    var order = data[6];
+                    var waitTime = data[7];
+                    var tank = data[8];
+                    var tankMax = data[9];
+                    var healer = data[10];
+                    var healerMax = data[11];
+                    var dps = data[12];
+                    var dpsMax = data[13];
+
+                    //var instance = Data.GetInstance(code);
+
+                    //if (status == 1)
+                    //{
+                    // 인원 현황 패킷
+                    var member = tank * 10000 + dps * 100 + healer;
+
+                    if (state == State.MATCHED && lastMember != member)
+                    {
+                        // 매칭도중일 때 인원 현황 패킷이 오고 마지막 인원 정보와 다른 경우에 누군가에 의해 큐가 취소된 경우.
+                        state = State.QUEUED;
+                        mainForm.overlayForm.CancelDutyFinder();
+                    }
+                    else if (state == State.IDLE)
+                    {
+                        // 프로그램이 매칭 중간에 켜짐
+                        state = State.QUEUED;
+                        mainForm.overlayForm.SetDutyCount(-1); // 알 수 없음으로 설정함 (TODO: 알아낼 방법 있으면 정확히 나오게 수정하기)
+                        if (rouletteCode > 0)
+                        {
+                            mainForm.overlayForm.SetDutyStatus(order);
+                        }
+                        else
+                        {
+                            mainForm.overlayForm.SetDutyStatus(tank, tankMax, dps, dpsMax, healer, healerMax);
+                        }
+                    }
+                    else if (state == State.QUEUED)
+                    {
+                        if (rouletteCode > 0)
+                        {
+                            mainForm.overlayForm.SetDutyStatus(order);
+                        }
+                        else
+                        {
+                            mainForm.overlayForm.SetDutyStatus(tank, tankMax, dps, dpsMax, healer, healerMax);
+                        }
+                    }
+
+                    // 직전 맴버 구성과 같은 상황이면 알림주지 않음
+                    if (Settings.TelegramEnabled && Settings.TelegramQueueStatusEnabled)
+                    {
+                        if (rouletteCode == 0 && lastMember != member || !(tank == 0 && dps == 0 && healer == 0)) // 무작위 임무가 아님 (Not roulette duty)
+                        {
+                            WebApi.Request("telegram", "duty-status", $"{tank}/{tankMax}, {healer}/{healerMax}, {dps}/{dpsMax}");
+                        }
+                        else if (order != 0 && lastOrder != order) // 매칭 현황을 받아오는 중이면 제외 (except 'retrieving information')
+                        {
+                            var roulette = Data.GetRoulette(rouletteCode);
+                            WebApi.Request("telegram", "duty-status-roulette", $"{roulette.Name} - #{order}");
+                        }
+                    }
+
+                    lastMember = member;
+                    lastOrder = order;
+                    //}
+                    /*else if (status == 2)
+                    {
+                        // 현재 매칭된 파티의 역할별 인원 수 정보
+                        // 조율 해제 상태여도 역할별로 정확히 날아옴
+                        mainForm.overlayForm.SetMemberCount(tank, dps, healer);
+                        return;
+                    }*/
+                    Log.I("l-queue-updated", "", /*status*/1, tank, tankMax, healer, healerMax, dps, dpsMax);
+                }
+                else if (opcode == 0x00AE || opcode == 0x032F) // v5.1, v5.11 매칭 뒤 참가자 확인 현황 패킷
+                {
+                    var code = BitConverter.ToUInt16(data, 8);
+                    var tank = data[12];
+                    var healer = data[14];
+                    var dps = data[16];
+
+                    var instance = Data.GetInstance(code);
+
+                    mainForm.overlayForm.SetConfirmStatus(instance, tank, dps, healer);
+
+                    lastCode = code;
+                    Log.I("l-queue-updated", instance.Name, 4, tank, instance.Tank, healer, instance.Healer, dps,
+                        instance.DPS);
+                }
+                else if (opcode == 0x0080)
+                {
+                    var roulette = data[2];
+                    var code = BitConverter.ToUInt16(data, 4);
+
+                    Instance instance;
+                    if (Settings.CustomSound)
+                    {
+                        notificationPlayer.Play();
+                    }
+                    if (!Settings.CheatRoulette && roulette != 0)
+                    {
+                        instance = new Instance { Name = Data.GetRoulette(roulette).Name };
+                    }
+                    else
+                    {
+                        instance = Data.GetInstance(code);
+                    }
+
+                    state = State.MATCHED;
+                    mainForm.overlayForm.SetDutyAsMatched(instance);
+
+                    if (Settings.FlashWindow)
+                    {
+                        WinApi.FlashWindow(mainForm.FFXIVProcess);
+                    }
+
+                    if (!Settings.ShowOverlay)
+                    {
+                        mainForm.ShowNotification("notification-queue-matched", instance.Name);
+                    }
+
+                    if (Settings.TelegramEnabled)
+                    {
+                        WebApi.Request("telegram", "duty-matched", instance.Name);
+                    }
+
+                    if (Settings.DiscordEnabled)
+                    {
+                        WebApi.Request("discord", "duty-matched", instance.Name);
+                    }
+
+                    if (Settings.customHttpRequest && Settings.requestOnDutyMatched)
+                    {
+                        WebApi.customHttpRequest("duty-matched", instance.Name);
                     }
 
                     Log.S("l-queue-matched", instance.Name);

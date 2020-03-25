@@ -1,102 +1,102 @@
 ﻿{
   // Version
-  "version": "20171029.1",
+  "version": "20191030.1",
 
   // Duty
   "instances": {
     // 2.0 A Realm Reborn
     // 2.0 Dungeons
-    "157": {
+    "4": {
       "name": "Sastasha",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "158": {
+    "8": {
       "name": "le Bivouac de Brayflox",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "159": {
+    "10": {
       "name": "le Palais du Vagabond",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "161": {
+    "3": {
       "name": "les Mines de Clochecuivre",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "162": {
+    "7": {
       "name": "Halatali",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "163": {
+    "9": {
       "name": "le Temple enseveli de Qarn",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "164": {
+    "2": {
       "name": "l'Hypogée de Tam-Tara",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "166": {
+    "6": {
       "name": "le Manoir des Haukke",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "167": {
+    "14": {
       "name": "le Château d'Amdapor",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "168": {
+    "11": {
       "name": "le Vigile de Pierre",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "169": {
+    "1": {
       "name": "les Mille Gueules de Toto-Rak",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "170": {
+    "12": {
       "name": "le Gouffre hurlant",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "171": {
+    "13": {
       "name": "la Forteresse de Dzemael",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "172": {
+    "5": {
       "name": "le Val d'Aurum",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "217": {
+    "15": {
       "name": "Castrum Meridianum",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "224": {
+    "16": {
       "name": "le Praetorium",
       "tank": "2",
       "healer": "2",
@@ -104,43 +104,43 @@
     },
 
     // 2.0 Trials
-    "202": {
+    "56": {
       "name": "le Cratère des tisons",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "206": {
+    "57": {
       "name": "le Nombril",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "208": {
+    "58": {
       "name": "Hurlœil",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "292": {
+    "59": {
       "name": "le Cratère des tisons (brutal)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "293": {
+    "60": {
       "name": "le Nombril (brutal)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "294": {
+    "61": {
       "name": "Hurlœil (brutal)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "332": {
+    "62": {
       "name": "le Cap Vendouest",
       "tank": "2",
       "healer": "2",
@@ -150,19 +150,19 @@
 
     // 2.1 A Realm Awoken
     // 2.1 Dungeons
-    "160": {
+    "17": {
       "name": "le Phare de Sirius",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "349": {
+    "18": {
       "name": "les Mines de Clochecuivre (brutal)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "350": {
+    "19": {
       "name": "le Manoir des Haukke (brutal)",
       "tank": "1",
       "healer": "1",
@@ -170,44 +170,44 @@
     },
 
     // 2.1 Trials
-    "207": {
+    "66": {
       "name": "la Lisière de ronces (brutal)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "295": {
+    "63": {
       "name": "le Cratère des tisons (extrême)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "296": {
+    "64": {
       "name": "le Nombril (extrême)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "297": {
+    "65": {
       "name": "Hurlœil (extrême)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "348": {
+    "68": {
       "name": "le fléau d'Ultima",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     // 2.16 Trials
-    "368": {
+    "74": {
       "name": "la chimère dhorme du Coerthas",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "369": {
+    "75": {
       "name": "l'hydre d'Halatali",
       "tank": "2",
       "healer": "2",
@@ -215,37 +215,37 @@
     },
 
     // 2.1 Raids
-    "174": {
+    "92": {
       "name": "la Tour de Cristal - Dédale antique",
-      "tank": "6",
+      "tank": "3",
       "healer": "6",
-      "dps": "12"
+      "dps": "15"
     },
-    "241": {
+    "93": {
       "name": "le Labyrinthe de Bahamut I",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "242": {
+    "94": {
       "name": "le Labyrinthe de Bahamut II",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "243": {
+    "95": {
       "name": "le Labyrinthe de Bahamut III",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "244": {
+    "96": {
       "name": "le Labyrinthe de Bahamut IV",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "245": {
+    "97": {
       "name": "le Labyrinthe de Bahamut V",
       "tank": "2",
       "healer": "2",
@@ -255,19 +255,19 @@
 
     // 2.2 Through the Maelstrom
     // 2.2 Dungeons
-    "363": {
+    "22": {
       "name": "les Vestiges de la cité d'Amdapor",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "360": {
+    "21": {
       "name": "Halatali (brutal)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "362": {
+    "20": {
       "name": "le Bivouac de Brayflox (brutal)",
       "tank": "1",
       "healer": "1",
@@ -275,25 +275,25 @@
     },
 
     // 2.2 Trials
-    "281": {
+    "72": {
       "name": "le Briseur de marées (brutal)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "359": {
+    "73": {
       "name": "le Briseur de marées (extrême)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "364": {
+    "67": {
       "name": "la Lisière de ronces (extrême)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "366": {
+    "76": {
       "name": "Affrontement sur le grand pont",
       "tank": "2",
       "healer": "2",
@@ -301,25 +301,25 @@
     },
 
     // 2.2 Raids
-    "355": {
+    "98": {
       "name": "les Méandres de Bahamut I",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "356": {
+    "99": {
       "name": "les Méandres de Bahamut II",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "357": {
+    "100": {
       "name": "les Méandres de Bahamut III",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "358": {
+    "101": {
       "name": "les Méandres de Bahamut IV",
       "tank": "2",
       "healer": "2",
@@ -329,19 +329,19 @@
 
     // 2.3 Defenders of Eorzea
     // 2.3 Dungeons
-    "361": {
+    "23": {
       "name": "l'Île de Crèvecarène",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "365": {
+    "25": {
       "name": "le Vigile de Pierre (brutal)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "373": {
+    "24": {
       "name": "l'Hypogée de Tam-Tara (brutal)",
       "tank": "1",
       "healer": "1",
@@ -349,13 +349,13 @@
     },
 
     // 2.3 Trials
-    "374": {
+    "77": {
       "name": "l'Arbre du jugement (brutal)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "375": {
+    "78": {
       "name": "l'Arbre du jugement (extrême)",
       "tank": "2",
       "healer": "2",
@@ -363,31 +363,31 @@
     },
 
     // 2.3 Raids
-    "372": {
+    "102": {
       "name": "la Tour de Cristal - Tour de Syrcus",
       "tank": "3",
       "healer": "6",
       "dps": "15"
     },
-    "380": {
+    "103": {
       "name": "les Méandres de Bahamut I (sadique)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "381": {
+    "104": {
       "name": "les Méandres de Bahamut II (sadique)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "382": {
+    "105": {
       "name": "les Méandres de Bahamut III (sadique)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "383": {
+    "106": {
       "name": "les Méandres de Bahamut IV (sadique)",
       "tank": "2",
       "healer": "2",
@@ -397,19 +397,19 @@
 
     // 2.4 Dreams of Ice
     // 2.4 Dungeons
-    "371": {
+    "27": {
       "name": "Manteneige",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "367": {
+    "26": {
       "name": "le Temple enseveli de Qarn (brutal)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "387": {
+    "28": {
       "name": "Sastasha (brutal)",
       "tank": "1",
       "healer": "1",
@@ -417,19 +417,19 @@
     },
 
     // 2.4 Trials
-    "377": {
+    "79": {
       "name": "l'Amphithéâtre d'Akh Afah (brutal)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "378": {
+    "80": {
       "name": "l'Amphithéâtre d'Akh Afah (extrême)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "142": {
+    "81": {
       "name": "le Col du dragon",
       "tank": "2",
       "healer": "2",
@@ -437,25 +437,25 @@
     },
 
     // 2.4 Raids
-    "193": {
+    "107": {
       "name": "l'Abîme de Bahamut I",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "194": {
+    "108": {
       "name": "l'Abîme de Bahamut II",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "195": {
+    "109": {
       "name": "l'Abîme de Bahamut III",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "196": {
+    "110": {
       "name": "l'Abîme de Bahamut IV",
       "tank": "2",
       "healer": "2",
@@ -465,19 +465,19 @@
 
     // 2.5 Before the Fall
     // 2.5 Dungeons
-    "150": {
+    "32": {
       "name": "le Gardien du lac",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "188": {
+    "30": {
       "name": "le Palais du Vagabond (brutal)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "189": {
+    "29": {
       "name": "le Château d'Amdapor (brutal)",
       "tank": "1",
       "healer": "1",
@@ -485,26 +485,26 @@
     },
 
     // 2.5 Trials
-    "426": {
+    "84": {
       "name": "La Chrysalide",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "394": {
+    "82": {
       "name": "la Fontaine d'Urth",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "396": {
+    "85": {
       "name": "Revanche au vieux château",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     // 2.55 Trials
-    "143": {
+    "83": {
       "name": "le Siège de la sainte Cité d'Ishgard",
       "tank": "2",
       "healer": "2",
@@ -512,7 +512,7 @@
     },
 
     // 2.5 Raids
-    "151": {
+    "111": {
       "name": "la Tour de Cristal - Monde des Ténèbres",
       "tank": "3",
       "healer": "6",
@@ -522,49 +522,49 @@
 
     // 3.0 Heavensward
     // 3.0 Dungeons
-    "435": {
+    "39": {
       "name": "L'Aire",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "416": {
+    "31": {
       "name": "la Grande bibliothèque de Gubal",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "421": {
+    "34": {
       "name": "La Voûte",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "430": {
+    "35": {
       "name": "Le Continuum fractal",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "434": {
+    "36": {
       "name": "le Vigile du Crépuscule",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "438": {
+    "38": {
       "name": "le Laboratoire de magismologie",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "441": {
+    "37": {
       "name": "Sohm Al",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "420": {
+    "33": {
       "name": "Nalloncques",
       "tank": "1",
       "healer": "1",
@@ -572,31 +572,31 @@
     },
 
     // 3.0 Trials
-    "432": {
+    "86": {
       "name": "Thok ast Thok (brutal)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "436": {
+    "88": {
       "name": "L'Immensité bleue (brutal)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "437": {
+    "90": {
       "name": "le Réacteur de singularité",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "446": {
+    "87": {
       "name": "Thok ast Thok (extrême)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "447": {
+    "89": {
       "name": "L'Immensité bleue (extrême)",
       "tank": "2",
       "healer": "2",
@@ -604,50 +604,50 @@
     },
 
     // 3.01 Raids
-    "442": {
+    "112": {
       "name": "Alexander - Le Poing du Père",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "443": {
+    "113": {
       "name": "Alexander - Le Poignet du Père",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "444": {
+    "114": {
       "name": "Alexander - Le Bras du Père",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "445": {
+    "115": {
       "name": "Alexander - Le Fardeau du Père",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     // 3.05 Raids
-    "449": {
+    "116": {
       "name": "Alexander - Le Poing du Père (sadique)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "450": {
+    "117": {
       "name": "Alexander - Le Poignet du Père (sadique)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "451": {
+    "118": {
       "name": "Alexander - Le Bras du Père (sadique)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "452": {
+    "119": {
       "name": "Alexander - Le Fardeau du Père (sadique)",
       "tank": "2",
       "healer": "2",
@@ -657,13 +657,13 @@
 
     // 3.1 As Goes Light So Goes Darkness
     // 3.1 Dungeons
-    "510": {
+    "40": {
       "name": "le Phare de Sirius (brutal)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "511": {
+    "41": {
       "name": "l'Arboretum Sainte-Mocianne",
       "tank": "1",
       "healer": "1",
@@ -671,7 +671,7 @@
     },
 
     // 3.1 Trials
-    "448": {
+    "91": {
       "name": "le règne de Thordan",
       "tank": "2",
       "healer": "2",
@@ -679,7 +679,7 @@
     },
 
     // 3.1 Raids
-    "508": {
+    "120": {
       "name": "l'Arche du néant",
       "tank": "3",
       "healer": "6",
@@ -687,19 +687,19 @@
     },
 
     // 3.1 Party Contents
-    "512": {
-      "name": "The Diadem(Easy)",
+    "131": {
+      "name": "The Diadem (Easy)",
       "tank": "1",
       "healer": "2",
       "dps": "5"
     },
-    "514": {
+    "132": {
       "name": "The Diadem",
       "tank": "1",
       "healer": "2",
       "dps": "5"
     },
-    "515": {
+    "133": {
       "name": "The Diadem (Hard)",
       "tank": "1",
       "healer": "2",
@@ -709,13 +709,13 @@
 
     // 3.2 The Gears of Chance
     // 3.2 Dungeons
-    "516": {
+    "141": {
       "name": "L'Antitour",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "519": {
+    "140": {
       "name": "les Vestiges de la cité d'Amdapor (brutal)",
       "tank": "1",
       "healer": "1",
@@ -723,13 +723,13 @@
     },
 
     // 3.2 Trials
-    "517": {
+    "134": {
       "name": "Unité de contention S1P7",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "524": {
+    "135": {
       "name": "Unité de contention S1P7 (extrême)",
       "tank": "2",
       "healer": "2",
@@ -737,49 +737,49 @@
     },
 
     // 3.2 Raids
-    "520": {
+    "136": {
       "name": "Alexander - Le Poing du Fils",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "521": {
+    "137": {
       "name": "Alexander - Le Poignet du Fils",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "522": {
+    "138": {
       "name": "Alexander - Le Bras du Fils",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "523": {
+    "139": {
       "name": "Alexander - Le Fardeau du Fils",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "529": {
+    "147": {
       "name": "Alexander - Le Poing du Fils (sadique)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "530": {
+    "148": {
       "name": "Alexander - Le Poignet du Fils (sadique)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "531": {
+    "149": {
       "name": "Alexander - Le Bras du Fils (sadique)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "532": {
+    "150": {
       "name": "Alexander - Le Fardeau du Fils (sadique)",
       "tank": "2",
       "healer": "2",
@@ -789,13 +789,13 @@
 
     // 3.3 Revenge of the Horde
     // 3.3 Dungeons
-    "555": {
+    "171": {
       "name": "Sohr Khai",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "557": {
+    "172": {
       "name": "l'Île de Crèvecarène (brutal)",
       "tank": "1",
       "healer": "1",
@@ -803,13 +803,13 @@
     },
 
     // 3.3 Trials
-    "559": {
+    "169": {
       "name": "la Dernière avancée de la Foi",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "566": {
+    "170": {
       "name": "l'ire de Nidhogg",
       "tank": "2",
       "healer": "2",
@@ -817,7 +817,7 @@
     },
 
     // 3.3 Raids
-    "556": {
+    "168": {
       "name": "la Cité défendue de Mhach",
       "tank": "3",
       "healer": "6",
@@ -825,7 +825,7 @@
     },
 
     // 3.3 Party Contents
-    "558": {
+    "179": {
       "name": "l'Aquapole",
       "tank": "0",
       "healer": "0",
@@ -835,13 +835,13 @@
 
     // 3.4 Soul Surrender
     // 3.4 Dungeons
-    "572": {
+    "182": {
       "name": "Xelphatol",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "578": {
+    "196": {
       "name": "la Grande bibliothèque de Gubal (brutal)",
       "tank": "1",
       "healer": "1",
@@ -849,13 +849,13 @@
     },
 
     // 3.4 Trials
-    "576": {
+    "183": {
       "name": "Unité de contention P1P6",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "577": {
+    "184": {
       "name": "Unité de contention P1P6 (extrême)",
       "tank": "2",
       "healer": "2",
@@ -863,49 +863,49 @@
     },
 
     // 3.4 Raids
-    "580": {
+    "186": {
       "name": "Alexander - Les Yeux du Créateur",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "581": {
+    "187": {
       "name": "Alexander - Le Souffle du Créateur",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "582": {
+    "188": {
       "name": "Alexander - Le Cœur du Créateur",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "583": {
+    "189": {
       "name": "Alexander - L'Âme du Créateur",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "584": {
+    "190": {
       "name": "Alexander - Les Yeux du Créateur (sadique)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "585": {
+    "191": {
       "name": "Alexander - Le Souffle du Créateur (sadique)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "586": {
+    "192": {
       "name": "Alexander - Le Cœur du Créateur (sadique)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "587": {
+    "193": {
       "name": "Alexander - L'Âme du Créateur (sadique)",
       "tank": "2",
       "healer": "2",
@@ -915,13 +915,13 @@
 
     // 3.5 The Far Edge of Fate
     // 3.5 Dungeons
-    "615": {
+    "219": {
       "name": "la Muraille de Baelsar",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "617": {
+    "221": {
       "name": "Sohm Al (brutal)",
       "tank": "1",
       "healer": "1",
@@ -929,13 +929,13 @@
     },
 
     // 3.5 Trials
-    "637": {
+    "223": {
       "name": "Unité de contention Z1P9",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "638": {
+    "224": {
       "name": "Unité de contention Z1P9 (extrême)",
       "tank": "2",
       "healer": "2",
@@ -943,7 +943,7 @@
     },
 
     // 3.5 Raids
-    "627": {
+    "220": {
       "name": "Dun Scaith",
       "tank": "3",
       "healer": "6",
@@ -953,49 +953,49 @@
 
     // 4.0 Stormblood
     // 4.0 Dungeons
-    "626": {
+    "238": {
       "name": "la Mer du Chant des sirènes",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "616": {
+    "235": {
       "name": "le Palais aux Marées violettes",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "623": {
+    "240": {
       "name": "la Force de Bardam",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "660": {
+    "241": {
       "name": "le Château de Doma",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "661": {
+    "242": {
       "name": "Castrum Abania",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "689": {
+    "247": {
       "name": "Ala Mhigo",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "662": {
+    "262": {
       "name": "le Château de Kugane",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "663": {
+    "236": {
       "name": "le Temple du Poing",
       "tank": "1",
       "healer": "1",
@@ -1003,31 +1003,31 @@
     },
 
     // 4.0 Trials
-    "674": {
+    "243": {
       "name": "la Crique aux tributs",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "677": {
+    "244": {
       "name": "la Crique aux tributs (extrême)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "719": {
+    "263": {
       "name": "Émanation",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "720": {
+    "264": {
       "name": "Émanation (extrême)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "679": {
+    "239": {
       "name": "la Ménagerie royale",
       "tank": "2",
       "healer": "2",
@@ -1035,59 +1035,59 @@
     },
 
     // 4.01 Raids
-    "691": {
+    "252": {
       "name": "Deltastice v1.0",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "692": {
+    "253": {
       "name": "Deltastice v2.0",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "693": {
+    "254": {
       "name": "Deltastice v3.0",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "694": {
+    "255": {
       "name": "Deltastice v4.0",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-	
+
     // 4.05 Raids
-    "695": {
+    "256": {
       "name": "Deltastice v1.0 (sadique)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "696": {
+    "257": {
       "name": "Deltastice v2.0 (sadique)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "697": {
+    "258": {
       "name": "Deltastice v3.0 (sadique)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-    "698": {
+    "259": {
       "name": "Deltastice v4.0 (sadique)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
-	
-	//4.05 Party Contents
-    "712": {
+
+    //4.05 Party Contents
+    "268": {
       "name": "les Canaux perdus d'Uznair",
       "tank": "0",
       "healer": "0",
@@ -1097,7 +1097,7 @@
 
     // 4.1 The Legend Returns
     // 4.1 Dungeon
-    "731": {
+    "279": {
       "name": "la Cité engloutie de Skalla",
       "tank": "1",
       "healer": "1",
@@ -1105,7 +1105,7 @@
     },
 
     // 4.1 Trials
-    "730": {
+    "278": {
       "name": "Le domaine de Shinryu",
       "tank": "2",
       "healer": "2",
@@ -1113,110 +1113,538 @@
     },
 
     // 4.1 Raids
-    "734": {
+    "281": {
       "name": "la Cité royale de Rabanastre",
       "tank": "3",
       "healer": "6",
       "dps": "15"
     },
-	
-	//4.1 Party Contents
-    "725": {
+
+    //4.1 Party Contents
+    "276": {
       "name": "les Canaux cachés d'Uznair",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-	
-	//4.11 Raids
-    "733": {
+
+    //4.11 Raids
+    "280": {
       "name": "l'Abîme infini de Bahamut (fatal)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
+    // 4.2 Rise of a New Sun
+    // 4.2 Dungeon
+    "284": {
+      "name": "Le Couvercle des enfers",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "285": {
+      "name": "Le Continuum fractal (brutal)",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 4.2 Trials
+    "290": {
+      "name": "La Clairière de Jade",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "291": {
+      "name": "La Clairière de Jade (extrême)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 4.2 Raids
+    "286": {
+      "name": "Sigmastice v1.0",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "287": {
+      "name": "Sigmastice v2.0",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "288": {
+      "name": "Sigmastice v3.0",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "289": {
+      "name": "Sigmastice v4.0",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "292": {
+      "name": "Sigmastice v1.0 (sadique)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "293": {
+      "name": "Sigmastice v2.0 (sadique)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "294": {
+      "name": "Sigmastice v3.0 (sadique)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "295": {
+      "name": "Sigmastice v4.0 (sadique)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 4.3 Under the MoonLight
+    // 4.3 Dungeon
+    "536": {
+      "name": "Le Compas de l'Hirondelle",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 4.3 Trials
+    "537": {
+      "name": "Castrum Fluminis",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "538": {
+      "name": "Castrum Fluminis (extrême)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 4.3 Raids
+    "550": {
+      "name": "Le Phare de Ridorana",
+      "tank": "3",
+      "healer": "6",
+      "dps": "15"
+    },
+
+    // 4.31 Raids
+    "539": {
+      "name": "La Fantasmagorie d'Ultima (fatal)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    //4.36 Trials
+    "474": {
+      "name": "Chasse au Rathalos",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "475": {
+      "name": "Chasse au Rathalos (extrême)",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 4.4 Prelude in Violet
+    // 4.4 Dungeon
+    "585": {
+      "name": "L'Escarre",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "584": {
+      "name": "L'Arboretum Sainte-Mocianne (brutal)",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 4.4 Trials
+    "596": {
+      "name": "le Nid des Lamentations",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "597": {
+      "name": "le Nid des Lamentations (extrême)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 4.4 Raids
+
+    "587": {
+      "name": "Alphastice V1.0",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "588": {
+      "name": "Alphastice V2.0",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "589": {
+      "name": "Alphastice V3.0",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "590": {
+      "name": "Alphastice V4.0",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "591": {
+      "name": "Alphastice V1.0 (sadique)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "592": {
+      "name": "Alphastice V2.0 (sadique)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "593": {
+      "name": "Alphastice V3.0 (sadique)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "594": {
+      "name": "Alphastice V4.0 (sadique)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 4.45
+    // Read the KR Script.
+
+    "595": {
+      "name": "Kugane Ohashi",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+
+    // 4.5 A Requiem for Heroes
+    // 4.5 Dungeon
+    "611": {
+      "name": "The Ghimlyt Dark",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 4.5 Trials
+    "637": {
+      "name": "The Wreath of Snakes",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "638": {
+      "name": "The Wreath of Snakes (Extreme)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 4.5 Raids
+    "636": {
+      "name": "The Orbonne Monastery",
+      "tank": "3",
+      "healer": "6",
+      "dps": "15"
+    },
+
+    // 5.0 Shadowbringers
+    // 5.0 Dungeons
+    "676": {
+      "name": "Holminster",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "649": {
+      "name": "Dohn Mheg",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "651": {
+      "name": "L'Enchevêtrement des Qitari",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "656": {
+      "name": "le Puits de Malikah",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "659": {
+      "name": "le Mont Gulg",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "652": {
+      "name": "Amaurote",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "655": {
+      "name": "la Macle de Syrcus",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+    "661": {
+      "name": "Akadaemia Anydre",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
+
+    // 5.0 Trials
+    "657": {
+      "name": "la Valse du Monarque",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "658": {
+      "name": "la Valse du Monarque (extrême)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4",
+      "macro": "/p H1   (水 Water)    H2
+/p                MT
+/p   　D1              D2
+/p                ST
+/p D3                            D4
+/p ------ 2連頭割り 2 Split ------
+/p 西 West  : MT-H1-D1-D3
+/p 東 East : ST-H2-D2-D4
+/p 時計回りの回転 Clockwise Rotation
+/p ---------- 連鎖 1 Chain 1 ----------
+/p 北西 N/W : Tank Healer | 南東 S/E : DPS
+/p -- Tether テザー : 9時受 (①西 West)】--
+/p ST->D1->D2->D3->-D4->H1
+/p ---------- 連鎖 2 Chain 2 ----------
+/p 北 North : Tank Healer | 南 South : DPS"
+    },
+    "666": {
+      "name": "La Couronne de l'Immaculé",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "667": {
+      "name": "La Couronne de l'Immaculé (extrême)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "687": {
+      "name": "Le Râle de l'Agonie",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 5.01 Raids
+
+    "653": {
+      "name": "L'Éveil d'Éden - Résurrection",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "684": {
+      "name": "L'Éveil d'Éden - Descente",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "682": {
+      "name": "L'Éveil d'Éden - Déluge",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "689": {
+      "name": "L'Éveil d'Éden - Inhumation",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 5.05 Raids Savage
+
+    "654": {
+      "name": "L'Éveil d'Éden - Résurrection (sadique)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "685": {
+      "name": "L'Éveil d'Éden - Descente (sadique)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "683": {
+      "name": "L'Éveil d'Éden - Déluge (sadique)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+    "690": {
+      "name": "L'Éveil d'Éden - Inhumation (sadique)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    // 5.1 Patch
+
+    "693": {
+      "name": "Le Râle de l'Agonie (extrême)",
+      "tank": "2",
+      "healer": "2",
+      "dps": "4"
+    },
+
+    "700": {
+      "name": "Réplique de l'usine désaffectée",
+      "tank": "3",
+      "healer": "6",
+      "dps": "15"
+    },
+
+    "692": {
+      "name": "le Cosmos coruscant",
+      "tank": "1",
+      "healer": "1",
+      "dps": "2"
+    },
 
     // Guildhests
-    "190": {
+    "43": {
       "name": "Chasse au fantôme fantoche",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "191": {
+    "46": {
       "name": "Opération fleurs du mal",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "192": {
+    "47": {
       "name": "Expédition punitive contre les Ventrerouge",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "214": {
+    "42": {
       "name": "Entraînement: groupes d'ennemis",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "215": {
+    "44": {
       "name": "Entraînement: infiltration en base ennemie",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "216": {
+    "45": {
       "name": "Reconquête d'une carapace escamotée",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "219": {
+    "49": {
       "name": "Les Gobelins bombardiers",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "220": {
+    "48": {
       "name": "Briaxio à bras raccourcis",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "221": {
+    "50": {
       "name": "Sus au morbol pollueur",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "222": {
+    "51": {
       "name": "Buso l'immolateur",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "223": {
+    "52": {
       "name": "Ombres et griffes",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "298": {
+    "53": {
       "name": "Longue vie à la Reine",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "299": {
+    "54": {
       "name": "Quintettes infernaux",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
-    "300": {
+    "55": {
       "name": "Trinité sinistre",
       "tank": "2",
       "healer": "2",
@@ -1224,98 +1652,251 @@
     },
 
 
+    // Blue Mage 4.5
+    "610": {
+      "name": "Début du spectacle",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "612": {
+      "name": "Puddings à la mode",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "613": {
+      "name": "Zipacna, le premier obstacle",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "614": {
+      "name": "Kreios, le destructeur d'acier",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "615": {
+      "name": "La fratrie des gilkhélones",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "616": {
+      "name": "Vengeance aveugle",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "617": {
+      "name": "Pure attaque cardiaque",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "618": {
+      "name": "Crocs bleus et crocs rouges",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "619": {
+      "name": "Guimauve, le goût de l'arc-en-ciel",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "620": {
+      "name": "Crom Dubh, roi des idoles",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "621": {
+      "name": "Les courtes mèches",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "622": {
+      "name": "Hydnora, la plante parasite",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "623": {
+      "name": "La mystérieuse Carmilla",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "624": {
+      "name": "La mort n'a pas d'ami",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "625": {
+      "name": "La sphère bestiale, une menace allagoise",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "626": {
+      "name": "Tikbalang, bras tout-puissant",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "627": {
+      "name": "Kreios plie, mais ne rompt pas",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "628": {
+      "name": "Rencontre explosive",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "629": {
+      "name": "Miroir, mon beau miroir",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "630": {
+      "name": "Duo de choc : Orthros et maître Typhon",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "631": {
+      "name": "La chimèrique colère d'Apademak",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "632": {
+      "name": "L'histoire détonante de Papi bombo",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "633": {
+      "name": "Kronprinz béhémoth, le prince héritier",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "634": {
+      "name": "Epilogi, l'étrange marionnettiste",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "635": {
+      "name": "L'abominable Azulmagia",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+
+
     // Novice Training
-    "537": {
+    "151": {
       "name": "Éviter les attaques à aire d'effet",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "538": {
+    "152": {
       "name": "Générer de l'inimitié avec un combo",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "539": {
+    "153": {
       "name": "Effectuer le combo en combat",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "540": {
+    "154": {
       "name": "Attirer l'inimitié de plusieurs ennemis sur soi",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "541": {
+    "155": {
       "name": "Affronter plusieurs ennemis",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "542": {
+    "156": {
       "name": "Générer de l'inimitié à distance",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "543": {
+    "157": {
       "name": "Faire face à des renforts ennemis",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "544": {
+    "158": {
       "name": "Vaincre un ennemi en assistant des alliés",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "545": {
+    "159": {
       "name": "Vaincre un ennemi occupé par un allié",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "546": {
+    "160": {
       "name": "Combattre en évitant les attaques ennemies",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "547": {
+    "161": {
       "name": "Éliminer les renforts ennemis",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "548": {
+    "162": {
       "name": "Interagir avec le décor en combat",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "549": {
+    "163": {
       "name": "Soigner un allié",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "550": {
+    "164": {
       "name": "Soigner plusieurs alliés",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "551": {
+    "165": {
       "name": "Combattre en évitant les attaques ennemies",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "552": {
+    "166": {
       "name": "Exercice final",
       "tank": "0",
       "healer": "0",
@@ -1324,104 +1905,98 @@
 
 
     // PvP
-    "175": {
-      "name": "The Fold",
-      "tank": "0",
-      "healer": "0",
-      "dps": "0"
-    },
-    "336": {
-      "name": "The Fold",
-      "tank": "0",
-      "healer": "0",
-      "dps": "0"
-    },
-    "337": {
-      "name": "The Fold (Matched Party)",
-      "tank": "0",
-      "healer": "0",
-      "dps": "0"
-    },
-    "352": {
-      "name": "The Fold (Light Party)",
-      "tank": "0",
-      "healer": "0",
-      "dps": "0"
-    },
-    "184": {
-      "name": "The Fold (Matched Party)",
-      "tank": "0",
-      "healer": "0",
-      "dps": "0"
-    },
-    "186": {
-      "name": "The Fold (Light Party)",
-      "tank": "0",
-      "healer": "0",
-      "dps": "0"
-    },
-    "376": {
+    "127": {
       "name": "les Ruines frontalières (annexion)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "422": {
-      "name": "The Borderland Ruins (Slaughter)",
-      "tank": "0",
-      "healer": "0",
-      "dps": "0"
-    },
-    "431": {
+    "130": {
       "name": "le Rocher des tréfonds (invasion)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "518": {
-      "name": "The Feast (8x8/entraînement)",
-      "tank": "0",
-      "healer": "0",
-      "dps": "0"
-    },
-    "525": {
+    "145": {
       "name": "The Feast (4x4/classé)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "526": {
-      "name": "The Feast (4 on 4 - Light Party)",
+    "228": {
+      "name": "The Feast (4x4/entraînement)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "527": {
+    "230": {
       "name": "The Feast (4x4/classé)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "528": {
-      "name": "The Feast (4 on 4 - Light Party)",
+    "143": {
+      "name": "The Feast (4x4/entraînement)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "618": {
-      "name": "The Feast (8x8/personnalisé/Festin des loups)",
+    "201": {
+      "name": "The Feast (personnalisé/Festin des loups)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "619": {
-      "name": "The Feast (4x4/personnalisé/Festin des loups)",
+    "233": {
+      "name": "The Feast (personnalisé/Pré-de-lichen)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "554": {
+    "476": {
+      "name": "The Feast (classé/équipe JcJ)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "478": {
+      "name": "The Feast (classé)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "479": {
+      "name": "The Feast (entraînement)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "480": {
+      "name": "The Feast (personnalisé/Tour de Cristal)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "580": {
+      "name": "The Feast (personnalisé/équipe JcJ/Tour de Cristal)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "180": {
       "name": "les Champs de la Gloire (brise-glace)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "277": {
+      "name": "Astragalos (machinerie)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "599": {
+      "name": "Gorge dérobée (machinerie)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
@@ -1429,122 +2004,211 @@
 
 
     // Deep Dungeons
-    "561": {
+    // The Palace of the Dead
+    "174": {
       "name": "le Palais des morts (sous-sols 1-10)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "562": {
+    "175": {
       "name": "le Palais des morts (sous-sols 11-20)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "563": {
+    "176": {
       "name": "le Palais des morts (sous-sols 21-30)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "564": {
+    "177": {
       "name": "le Palais des morts (sous-sols 31-40)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "565": {
+    "178": {
       "name": "le Palais des morts (sous-sols 41-50)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "593": {
+    "204": {
       "name": "le Palais des morts (sous-sols 51-60)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "594": {
+    "205": {
       "name": "le Palais des morts (sous-sols 61-70)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "595": {
+    "206": {
       "name": "le Palais des morts (sous-sols 71-80)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "596": {
+    "207": {
       "name": "le Palais des morts (sous-sols 81-90)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "597": {
+    "208": {
       "name": "le Palais des morts (sous-sols 91-100)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "598": {
+    "209": {
       "name": "le Palais des morts (sous-sols 101-110)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "599": {
+    "210": {
       "name": "le Palais des morts (sous-sols 111-120)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "600": {
+    "211": {
       "name": "le Palais des morts (sous-sols 121-130)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "601": {
+    "212": {
       "name": "le Palais des morts (sous-sols 131-140)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "602": {
+    "213": {
       "name": "le Palais des morts (sous-sols 141-150)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "603": {
+    "214": {
       "name": "le Palais des morts (sous-sols 151-160)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "604": {
+    "215": {
       "name": "le Palais des morts (sous-sols 161-170)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "605": {
+    "216": {
       "name": "le Palais des morts (sous-sols 171-180)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "606": {
+    "217": {
       "name": "le Palais des morts (sous-sols 181-190)",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
-    "607": {
+    "218": {
       "name": "le Palais des morts (sous-sols 191-200)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+
+    // Heaven-on-High
+    "540": {
+      "name": "Pilier des Cieux (1-10)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "541": {
+      "name": "Pilier des Cieux (11-20)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "542": {
+      "name": "Pilier des Cieux (21-30)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "543": {
+      "name": "Pilier des Cieux (31-40)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "544": {
+      "name": "Pilier des Cieux (41-50)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "545": {
+      "name": "Pilier des Cieux (51-60)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "546": {
+      "name": "Pilier des Cieux (61-70)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "547": {
+      "name": "Pilier des Cieux (71-80)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "548": {
+      "name": "Pilier des Cieux (81-90)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "549": {
+      "name": "Pilier des Cieux (91-100)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+
+    // The Forbidden Land, Eureka
+    "283": {
+      "name": "a terre interdite d'Eurêka: Anemos",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "581": {
+      "name": "a terre interdite d'Eurêka: Pagos",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "598": {
+      "name": "a terre interdite d'Eurêka: Pyros",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "639": {
+      "name": "a terre interdite d'Eurêka: Hydatos",
       "tank": "0",
       "healer": "0",
       "dps": "0"
@@ -1552,16 +2216,112 @@
 
 
     // Other things...
-    "579": {
+    "437": {
       "name": "Triple Triad",
       "tank": "0",
       "healer": "0",
       "dps": "0"
-    }
-  },
-  
-	//Event Instance
-    "571": {
+    },
+    "600": {
+      "name": "Haute voltige",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "601": {
+      "name": "Haute voltige",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "602": {
+      "name": "Haute voltige",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "603": {
+      "name": "Haute voltige",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "604": {
+      "name": "Haute voltige",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "605": {
+      "name": "Haute voltige",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "606": {
+      "name": "Haute voltige",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "607": {
+      "name": "Haute voltige",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "608": {
+      "name": "Haute voltige",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "643": {
+      "name": "Mahjong domien : tous rangs (classé)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "644": {
+      "name": "Mahjong domien : dan seulement (classé)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "645": {
+      "name": "Mahjong domien : 4 joueurs (avec kuitan)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "650": {
+      "name": "Mahjong domien : 4 joueurs (sans kuitan)",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "640": {
+      "name": "As de l'air",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "641": {
+      "name": "As de l'air",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "642": {
+      "name": "As de l'air",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+
+
+    //Event Instance
+    "181": {
       "name": "le Manoir hanté",
       "tank": "0",
       "healer": "0",
@@ -1572,17 +2332,18 @@
   // Duty Roulette
   "roulettes": {
     "1": "Mission aléatorie: gain de niveaux",
-    "2": "Mission aléatorie: donjons nv 50/60",
+    "2": "Mission aléatorie: donjons nv 50/60/70",
     "3": "Mission aléatorie: épopée",
     "4": "Mission aléatorie: opérations de guilde",
     "5": "Mission aléatorie: expert",
     "6": "Mission aléatorie: défis",
     "7": "Mission aléatorie: Front",
-    "8": "Mission aléatorie: donjons nv 70",
+    "8": "Mission aléatorie: donjons nv 80",
     "9": "Mission aléatorie: Mentor",
     "10": "The Feast (8x8/entraînement)",
     "13": "The Feast (4x4/classé)",
-    "15": "Mission aléatorie: raids en alliance"
+    "15": "Mission aléatorie: raids en alliance",
+    "17": "Mission aléatorie: raids"
   },
 
   // FATEs
@@ -1590,12 +2351,8 @@
     "134": {
       "name": "la Noscea centrale",
       "fates": {
-        "533": "Le retour d'un roi",
         "649": "La famille avant tout",
-        "687": "Manigances manifestes: quand la magie fait rage",
         "688": "Manigances manifestes: la tour infernale",
-        "693": "L'effet boule de neige",
-        "717": "La chasse aux Fabulœufs",
         "220": "Défi: Menuis le terrible",
         "221": "Migration nocturne",
         "222": "Ça va piquer",
@@ -1622,12 +2379,7 @@
         "262": "Eau non potable",
         "264": "L'éveil des bêtes",
         "265": "Bonne pioche",
-        "534": "Le retour d'un roi",
         "333": "Défi: lien brisé",
-        "666": "Fort comme une brique: golems",
-        "667": "Fort comme une brique: golem de pierre",
-        "694": "L'effet boule de neige",
-        "718": "La chasse aux Fabulœufs",
         "245": "Défi: le prince",
         "246": "Dangereux végétaux",
         "249": "Problème de nuisibles",
@@ -1643,7 +2395,6 @@
         "271": "Peur du vide",
         "272": "Appel aux pélicans",
         "274": "Microcosme",
-        "532": "Le retour d'un roi",
         "278": "Maudites moustaches",
         "279": "Colibris voleurs",
         "280": "Défi: voler aux riches",
@@ -1659,13 +2410,6 @@
         "566": "Quand le liège assiège",
         "334": "Complainte d'une fille de choix",
         "335": "Défi: cancer, le casque de mort",
-        "913": "Défi: le regard froid du Mamool Ja",
-        "914": "Ce n'est qu'un amour de vacances",
-        "915": "Jouer avec le feu",
-        "916": "Défi: dressé contre son maître",
-        "917": "Dragueurs de bac à sable",
-        "918": "Des bouteilles à la mer",
-        "689": "Manigances manifestes: quand la magie fait rage",
         "690": "Manigances manifestes: la tour infernale",
         "701": "Ce qui est à nous est à nous"
       }
@@ -1684,7 +2428,6 @@
         "577": "Défi: mante à l'eau",
         "578": "Défi: le messager des vagues",
         "650": "Défi: volatile carnivore",
-        "702": "Attention au cholestérol!",
         "289": "Livraison de missive",
         "290": "Défi: volatile carnivore",
         "291": "Sauvagerie animale",
@@ -1713,10 +2456,6 @@
         "329": "Défi: prudence avec l'eau chaude...",
         "331": "Défi: un baigneur gênant",
         "332": "Trop d'œufs, bonjour les dégâts",
-        "668": "Fort comme une brique: golems",
-        "669": "Fort comme une brique: golem de pierre",
-        "670": "Fort comme une brique: golems",
-        "671": "Fort comme une brique: golem d'or",
         "703": "Ce qui est à nous est à nous",
         "451": "Pauvre hameau: des rats qui grignotent",
         "452": "Pauvre hameau: des Kobolds qui saccagent",
@@ -1765,8 +2504,6 @@
         "361": "Coup sur coup",
         "366": "Défi: le monstre aux grandes pattes",
         "367": "Retour à la mort",
-        "911": "Corriger les bugs",
-        "683": "Manigances manifestes: quand la magie fait rage",
         "684": "Manigances manifestes: la tour infernale",
         "704": "Ce qui est à nous est à nous"
       }
@@ -1774,7 +2511,6 @@
     "141": {
       "name": "Thanalan central",
       "fates": {
-        "535": "Le retour d'un roi",
         "370": "Défi: quelque chose à prouver",
         "373": "Comme un triton hors de l'eau",
         "374": "Ivres comme des rats",
@@ -1787,25 +2523,18 @@
         "383": "Massacre de volatiles",
         "385": "Défi: cruelle créature",
         "389": "Défi: un accueil brûlant",
-        "393": "Défi: sortie du nid",
-        "912": "Corriger les bugs",
-        "660": "Fort comme une brique: golems",
-        "661": "Fort comme une brique: golem de pierre",
-        "695": "L'effet boule de neige",
-        "719": "La chasse aux Fabulœufs"
+        "393": "Défi: sortie du nid"
       }
     },
     "145": {
       "name": "Thanalan oriental",
       "fates": {
-        "536": "Le retour d'un roi",
         "540": "Quitte ou doblyn",
         "541": "De l'autre côté du miroir",
         "542": "Défi: pelote en colère",
         "543": "Défi: se forger des chimères",
         "394": "Des chèvres voraces",
         "395": "De mortels piquants",
-        "652": "Retour d'éclair: créature inconnue",
         "397": "En route vers l'ouest",
         "398": "Défi: destruction de camp",
         "400": "Quel bazar",
@@ -1816,14 +2545,11 @@
         "409": "Rose des sables",
         "412": "Le prix de l'eau",
         "413": "Les longues-cornes se cachent pour mourir",
-        "696": "L'effet boule de neige",
         "191": "Assaut sur Le Viaduc: prélude",
         "192": "Assaut sur Le Viaduc: acte I",
         "193": "Assaut sur Le Viaduc: acte II",
         "194": "Assaut sur Le Viaduc: acte III",
-        "195": "Assaut sur Le Viaduc: dénouement",
-        "705": "Attention au cholestérol!",
-        "720": "La chasse aux Fabulœufs"
+        "195": "Assaut sur Le Viaduc: dénouement"
       }
     },
     "146": {
@@ -1841,8 +2567,6 @@
         "555": "D'élégants morts-vivants",
         "557": "L'élite des Crocs",
         "558": "Défi: l'attiseur des flammes infernales",
-        "651": "Retour d'éclair: créature inconnue",
-        "685": "Manigances manifestes: quand la magie fait rage",
         "686": "Manigances manifestes: la tour infernale",
         "706": "Ce qui est à nous est à nous",
         "419": "Défi: mise à mort",
@@ -1888,7 +2612,6 @@
     "148": {
       "name": "Forêt centrale",
       "fates": {
-        "537": "Le retour d'un roi",
         "600": "Mornes lindwurms",
         "601": "Soigner le mal par le mal",
         "602": "Départs",
@@ -1912,9 +2635,6 @@
         "140": "Les évadés",
         "141": "Il y a de l'amour dans l'air",
         "142": "Défi: Lou y es-tu?",
-        "672": "Fort comme une brique: golems",
-        "673": "Fort comme une brique: golem de pierre",
-        "697": "L'effet boule de neige",
         "707": "Ce qui est à nous est à nous",
         "196": "Défi: le Chevalier des ombres",
         "197": "Défi: le Chevalier des ombres",
@@ -1945,7 +2665,6 @@
         "150": "Défi: les fauteurs de trouble",
         "151": "Le petit pont de bois",
         "152": "La protection du Massif",
-        "679": "Manigances manifestes: quand la magie fait rage",
         "680": "Manigances manifestes: la tour infernale",
         "691": "Défi: bon pour la ferraille",
         "692": "Défi: ben mon cochon!",
@@ -1982,7 +2701,6 @@
         "170": "À qui profite le crime",
         "171": "Gobelins malhonnêtes",
         "172": "Robbin' Goblins",
-        "681": "Manigances manifestes: quand la magie fait rage",
         "682": "Manigances manifestes: la tour infernale",
         "190": "Défi: un grand fracas",
         "708": "Ce qui est à nous est à nous",
@@ -1996,15 +2714,10 @@
     "154": {
       "name": "Forêt du nord",
       "fates": {
-        "538": "Le retour d'un roi",
         "631": "Touche pas à mon arbre !",
         "632": "Défi: les morts en marche",
         "633": "Raid sur le site de déboisement ixal",
         "634": "Défi: chêne déchaîné",
-        "674": "Fort comme une brique: golems",
-        "675": "Fort comme une brique: golem de pierre",
-        "676": "Fort comme une brique: golems",
-        "677": "Fort comme une brique: golem d'or",
         "174": "Voler dans les plumes",
         "178": "Défi: l'élu des acari",
         "179": "Protecteur du Radeau",
@@ -2012,24 +2725,18 @@
         "183": "Menace simiesque",
         "184": "La faim des haricots",
         "185": "Défi: un parfum de catastrophe",
-        "698": "L'effet boule de neige",
         "187": "La caravane passe",
         "188": "Un appétit d'oiseau",
         "189": "Dangereux xylophages",
         "205": "Défi: le Chevalier des ombres",
         "206": "Défi: le Chevalier des ombres",
         "207": "Défi: le Chevalier des ombres",
-        "722": "La chasse aux Fabulœufs",
         "216": "Les rejetons de la lune rouge"
       }
     },
     "155": {
       "name": "Hautes terres du Coerthas central",
       "fates": {
-        "653": "Retour d'éclair: cuirassé outrecuidant",
-        "654": "Retour d'éclair: cuirassé outrecuidant",
-        "699": "L'effet boule de neige",
-        "709": "Attention au cholestérol!7",
         "460": "Un loup pour l'homme",
         "463": "Défi: tondre le mouton noir",
         "464": "Défi: cric, crac, croc!",
@@ -2085,11 +2792,7 @@
         "526": "Pas les bienvenus",
         "527": "Défi: en proie aux ombres",
         "529": "Une escorte pour la science",
-        "530": "Défi: parfum trompeur",
-        "655": "Retour d'éclair: anubis annonciateurs",
-        "656": "Retour d'éclair: anubis annonciateurs",
-        "657": "Retour d'éclair: le dragon du Chaos",
-        "658": "Retour d'éclair: le dragon du Chaos"
+        "530": "Défi: parfum trompeur"
       }
     },
     "397": {
@@ -2159,6 +2862,17 @@
     "399": {
       "name": "Arrière-pays dravanien",
       "fates": {
+        "756": "Bouts de ferraille",
+        "757": "Vengeurs de ferraille",
+        "758": "Défi: vengeurs de ferraille II",
+        "759": "Tarentules en rupture de stock",
+        "760": "D'une pierre deux nuisibles",
+        "761": "Défi: une épitaphe pour Épaphos",
+        "762": "Le bal des demoiselles",
+        "763": "Rhume des narbroois",
+        "764": "Défi: Ruginis à éliminer",
+        "766": "Mécanismes à enrayer",
+        "767": "Défi: Moundrinix le virtuose",
         "768": "Ratels au casse-pipe",
         "769": "Défi: Dobharch la matriarche",
         "770": "Écrabouillage d'Écrabouilleuse",
@@ -2176,18 +2890,7 @@
         "783": "Défi: triste Bero Roggo",
         "784": "Défi: un poisson bipède et vorace",
         "785": "Prendre les gens pour des cocons",
-        "786": "Défi: défiler Habetrot",
-        "756": "Bouts de ferraille",
-        "757": "Vengeurs de ferraille",
-        "758": "Défi: vengeurs de ferraille II",
-        "759": "Tarentules en rupture de stock",
-        "760": "D'une pierre deux nuisibles",
-        "761": "Défi: une épitaphe pour Épaphos",
-        "762": "Le bal des demoiselles",
-        "763": "Rhume des narbroois",
-        "764": "Défi: Ruginis à éliminer",
-        "766": "Mécanismes à enrayer",
-        "767": "Défi: Moundrinix le virtuose"
+        "786": "Défi: défiler Habetrot"
       }
     },
     "400": {
@@ -2283,48 +2986,15 @@
         "901": "Défi: les drilles rêvent-ils de meules électriques ?"
       }
     },
-    "612": {
-      "name": "Stormblood",
+    "351": {
+      "name": "Diadem",
       "fates": {
-        "932": "Crabes martyrs",
-        "933": "De l'excellence du samouraï",
-        "934": "Un scorpion pas si pacifique",
-        "935": "Le secret d'Amatsu: Kyôri",
-        "936": "Le mochi, ça rend marteau!",
-        "937": "Le mochi, ça rend marteau!",
-        "938": "Le mochi, ça rend marteau!",
-        "939": "Le mochi, ça rend marteau!",
-        "940": "Le mochi, ça rend marteau!",
-        "941": "Le mochi, ça rend marteau!",
-        "942": "Chasse aux Prœufs",
-        "943": "Chasse aux Prœufs",
-        "944": "Chasse aux Prœufs",
-        "945": "Pourvu que les méchants perdent!",
-        "946": "Pourvu que les gentils gagnent!",
-        "959": "Pour une poignée de mochi",
-        "960": "Pour une poignée de mochi",
-        "963": "Radiations néfastes",
         "964": "Dévouement aveugle",
-        "965": "Radiations néfastes",
-        "966": "Le parfum enivrant de l'éther",
-        "967": "Le parfum enivrant de l'éther",
-        "968": "Défi: brachiosaures en famille",
-        "969": "Radiations néfastes",
-        "970": "Petit, un jour tu ne seras pas grand",
-        "971": "Défi: le serpent aux écailles d'argent",
-        "972": "La brise de pierre",
-        "973": "Radiations néfastes",
-        "974": "La nuit du chasseur",
-        "975": "La nuit du chasseur",
         "976": "Dévouement aveugle",
-        "977": "Amitié entomologique",
-        "978": "Radiations néfastes",
         "979": "Dévouement aveugle",
-        "980": "Les dévoreuses de couleurs",
-        "981": "Les dévoreuses de couleurs",
-        "982": "Les dévoreuses de couleurs",
-        "983": "Radiations néfastes",
-        "984": "Radiations néfastes",
+        "1034": "Dévouement aveugle",
+        "1062": "Dévouement aveugle",
+        "1085": "Dévouement aveugle",
         "985": "Les éléments s'éclatent!",
         "986": "Les éléments s'éclatent!",
         "987": "Les éléments s'éclatent!",
@@ -2337,33 +3007,77 @@
         "994": "Les éléments s'éclatent!",
         "995": "Les éléments s'éclatent!",
         "996": "Les éléments s'éclatent!",
-        "997": "Radiations néfastes",
-        "998": "Défi: crise de noctambulisme",
         "999": "Les éléments s'éclatent!",
         "1000": "Les éléments s'éclatent!",
         "1001": "Les éléments s'éclatent!",
         "1002": "Les éléments s'éclatent!",
         "1003": "Les éléments s'éclatent!",
         "1004": "Les éléments s'éclatent!",
+        "963": "Radiations néfastes",
+        "965": "Radiations néfastes",
+        "969": "Radiations néfastes",
+        "973": "Radiations néfastes",
+        "978": "Radiations néfastes",
+        "983": "Radiations néfastes",
+        "984": "Radiations néfastes",
+        "997": "Radiations néfastes",
+        "1009": "Radiations néfastes",
+        "1023": "Radiations néfastes",
+        "1036": "Radiations néfastes",
+        "1040": "Radiations néfastes",
+        "1044": "Radiations néfastes",
+        "1045": "Radiations néfastes",
+        "1046": "Radiations néfastes",
+        "1049": "Radiations néfastes",
+        "1051": "Radiations néfastes",
+        "1055": "Radiations néfastes",
+        "1060": "Radiations néfastes",
+        "1061": "Radiations néfastes",
+        "1069": "Radiations néfastes",
+        "1075": "Radiations néfastes",
+        "1077": "Radiations néfastes",
+        "1078": "Radiations néfastes",
+        "1081": "Radiations néfastes",
+        "1083": "Radiations néfastes",
+        "1086": "Radiations néfastes",
+        "1089": "Radiations néfastes",
+        "1090": "Radiations néfastes",
         "1005": "Nécrophagie végétale",
         "1006": "Nécrophagie végétale",
         "1007": "Nécrophagie végétale",
+        "1072": "Nécrophagie végétale",
+        "980": "Les dévoreuses de couleurs",
+        "981": "Les dévoreuses de couleurs",
+        "982": "Les dévoreuses de couleurs",
+        "1016": "Défi: la vengeance d'un monarque",
+        "1017": "Défi: la vengeance d'un monarque",
+        "1018": "Défi: la vengeance d'un monarque",
+        "998": "Défi: crise de noctambulisme",
+        "1098": "Défi: crise de noctambulisme",
+        "1073": "Défi: le félin ermite",
+        "1091": "Sus aux constricteurs",
+        "1092": "Sus aux constricteurs",
+        "1093": "Sus aux constricteurs",
+        "1020": "Périr le ventre vide",
+        "1021": "Périr le ventre vide",
+        "1022": "Périr le ventre vide",
+        "966": "Le parfum enivrant de l'éther",
+        "967": "Le parfum enivrant de l'éther",
+        "968": "Défi: brachiosaures en famille",
+        "970": "Petit, un jour tu ne seras pas grand",
+        "971": "Défi: le serpent aux écailles d'argent",
+        "972": "La brise de pierre",
+        "974": "La nuit du chasseur",
+        "975": "La nuit du chasseur",
+        "977": "Amitié entomologique",
         "1008": "La détresse d'un pirate",
-        "1009": "Radiations néfastes",
         "1010": "Accros à l'hémoglobine",
         "1011": "Gorilles dans les ténèbres",
         "1012": "Gorilles dans les ténèbres",
         "1013": "Les mauvais garçons",
         "1014": "Les mauvais garçons",
         "1015": "La détresse d'un pirate",
-        "1016": "Défi: la vengeance d'un monarque",
-        "1017": "Défi: la vengeance d'un monarque",
-        "1018": "Défi: la vengeance d'un monarque",
         "1019": "Carnivores des nuages",
-        "1020": "Périr le ventre vide",
-        "1021": "Périr le ventre vide",
-        "1022": "Périr le ventre vide",
-        "1023": "Radiations néfastes",
         "1024": "Les séducteurs ailés",
         "1025": "Défi: la terreur des aéronefs",
         "1026": "Défi: la terreur des aéronefs",
@@ -2374,82 +3088,50 @@
         "1031": "Les nuages mangeurs d'hommes",
         "1032": "Les nuages mangeurs d'hommes",
         "1033": "Les nuages mangeurs d'hommes",
-        "1034": "Dévouement aveugle",
         "1035": "Défi: le bovin mythique",
-        "1036": "Radiations néfastes",
         "1037": "Un regard très perçant",
         "1038": "Rois ou empereurs?",
         "1039": "Rois ou empereurs?",
-        "1040": "Radiations néfastes",
         "1041": "Défi: efflorescence fétide",
         "1042": "Entreprise de désodorisation ",
         "1043": "Entreprise de désodorisation ",
-        "1044": "Radiations néfastes",
-        "1045": "Radiations néfastes",
-        "1046": "Radiations néfastes",
         "1047": "Experts en torture",
         "1048": "Experts en torture",
-        "1049": "Radiations néfastes",
         "1050": "À tire d'aile",
-        "1051": "Radiations néfastes",
         "1052": "Les géants au feuillage touffu",
         "1053": "Les géants au feuillage touffu",
         "1054": "Les géants au feuillage touffu",
-        "1055": "Radiations néfastes",
         "1056": "Défi: pêche au gros",
         "1057": "Migration interdite",
         "1058": "Les yeux plus gros que le ventre",
         "1059": "Les yeux plus gros que le ventre",
-        "1060": "Radiations néfastes",
-        "1061": "Radiations néfastes",
-        "1062": "Dévouement aveugle",
         "1063": "Le temps des amours",
         "1064": "Le temps des amours",
         "1065": "Le temps des amours",
         "1066": "Le temps des amours",
         "1067": "Lune de miel sans fin",
         "1068": "La détresse d'un pirate",
-        "1069": "Radiations néfastes",
         "1070": "Les malheurs du célibat",
         "1071": "Les malheurs du célibat",
-        "1072": "Nécrophagie végétale",
-        "1073": "Défi: le félin ermite",
         "1074": "Défi: un régime à base de calories",
-        "1075": "Radiations néfastes",
         "1076": "Ça part en vrille!",
-        "1077": "Radiations néfastes",
-        "1078": "Radiations néfastes",
         "1079": "Arbres en folie",
         "1080": "Arbres en folie",
-        "1081": "Radiations néfastes",
         "1082": "Carnivores des nuages",
-        "1083": "Radiations néfastes",
         "1084": "Empêcheurs de pêcher en rond",
-        "1085": "Dévouement aveugle",
-        "1086": "Radiations néfastes",
         "1087": "Invasion de sanuwas",
         "1088": "Le bleu de la Mer de nuages",
-        "1089": "Radiations néfastes",
-        "1090": "Radiations néfastes",
-        "1091": "Sus aux constricteurs",
-        "1092": "Sus aux constricteurs",
-        "1093": "Sus aux constricteurs",
         "1094": "Défi: l'éventreur de l'azur",
         "1095": "Les admiratrices du cheval ailé",
         "1096": "Les admiratrices du cheval ailé",
         "1097": "Les admiratrices du cheval ailé",
-        "1098": "Défi: crise de noctambulisme",
         "1099": "Entreprise de désodorisation ",
-        "1100": "Accros à l'hémoglobine",
-        "1103": "Défi: l'étalon survolté",
-        "1104": "Défi: l'étalon survolté",
-        "1105": "Défi: l'étalon survolté",
-        "1106": "Défi: la renarde fait surface",
-        "1107": "Défi: la renarde fait surface",
-        "1108": "Défi: la renarde fait surface",
-        "1109": "Rusera bien qui rusera le dernier",
-        "1110": "Prétendants gênants",
-        "1111": "Les offrandes de Ginko",
+        "1100": "Accros à l'hémoglobine"
+      }
+    },
+    "411": {
+      "name": "Les Marges",
+      "fates": {
         "1112": "Donner la réplique aux soldats",
         "1113": "Donner la réplique aux sous-officiers",
         "1114": "Donner la réplique aux officiers",
@@ -2478,37 +3160,12 @@
         "1138": "Défi: sœurs vengeresses",
         "1139": "Défi: la fille du soleil",
         "1140": "Honnis soient les canis",
-        "1141": "La chasse gardée des M",
-        "1142": "Défi: l'eau elle aime ça",
-        "1143": "De corvée avec les bucorves",
-        "1144": "Défi: à tout jamais",
-        "1145": "Défi: on craint gedan",
-        "1146": "Vidange pour les Bleus",
-        "1147": "Défi: le crabe marche sous la tête",
-        "1148": "Défi: la philosophie d'Agni",
-        "1149": "Bons comptes à OK corail",
-        "1150": "Privés de banquet",
-        "1151": "Des serpents dans les îlots",
-        "1152": "Lâcher de raies",
-        "1153": "Défi: la princesse aux longues dents",
-        "1154": "Athlétiques bibao",
-        "1155": "Pêche à la bombe",
-        "1156": "L'écarlate scélérate",
-        "1157": "Mollusque à brusquer",
-        "1158": "Les horreurs de l'aurore",
-        "1159": "Défi: prendre le clandestin par les cornes",
-        "1160": "Le butin, ça va, ça vient",
-        "1161": "Défi: le chevalier d'écailles",
-        "1162": "Reprendre n'est pas voler",
-        "1163": "Maille à partir",
-        "1164": "Les vils requins",
-        "1165": "Défi: fais tes prières, Sogenbi",
-        "1166": "Avant qu'il ne soit taureau tard",
-        "1167": "Défi: le samouraï vagabond",
-        "1168": "Vagabond contre chasseur",
-        "1170": "Casse-toi et marche en crabe",
-        "1171": "Enrayer les raies rayées",
-        "1172": "Défi: amocher les daimyo",
+        "1141": "La chasse gardée des M"
+      }
+    },
+    "412": {
+      "name": "Les Pics",
+      "fates": {
         "1173": "Le Qiqirn végétarien",
         "1174": "Le top de la fraîcheur",
         "1175": "Défi: le Qiqirn sournois au ventre vide",
@@ -2540,71 +3197,15 @@
         "1203": "Le don du repos éternel",
         "1204": "Défi: métamorphose en suspens",
         "1205": "Guerrière de la tribu des J",
-        "1207": "Défi: alarme fatale",
-        "1208": "Détrousseurs koja",
-        "1209": "Détrousseurs namazu",
-        "1210": "Défi: Gyogun le garde-pêche",
-        "1211": "Le Lupin est un loup pour le Lupin",
-        "1212": "La meute sanguinaire",
-        "1213": "Défi: Wakizashi le chasseur de lames",
-        "1214": "Prise de bec",
-        "1215": "Défi: ovipare ovivore",
-        "1216": "Les dents du ciel",
-        "1217": "Défi: il court, il court, le furet",
-        "1218": "Éclosion explosive",
-        "1219": "Tigres grégaires",
-        "1220": "Topographie rizicole",
-        "1221": "Régulation de population",
-        "1222": "La meute de l'ombre",
-        "1223": "Racines ambulantes",
-        "1224": "Les écumeurs de rizières",
-        "1225": "La recette de l'omelette",
-        "1226": "Défi: la lueur des champs",
-        "1227": "Défi: le comédien pourpre",
-        "1228": "Défi: pollution environnementale",
-        "1229": "Défi: le chien noir de Yanxia",
-        "1230": "Défi: l'éclipse à plumes",
-        "1231": "Défi: qui épouvante l'épouvantail?",
-        "1232": "Les malandrins du goûter",
-        "1233": "Les Lupins solitaires",
-        "1234": "Renforts intrépides",
-        "1235": "Tora! Tora! Tora! ",
-        "1236": "Défi: Ragoh perd la tête",
-        "1237": "Défi: avis d'éviction",
-        "1238": "Défi: le géant de fer",
-        "1239": "Chiens de bonne herpe",
-        "1240": "Cosmologie hingashienne: le shikigami kiyofusa",
-        "1241": "Cosmologie hingashienne: le shikigami koja",
-        "1242": "Défi: la proie vengeresse",
-        "1243": "Défi: silence, ça pousse!",
-        "1244": "Défi: refroidir le vent glaçant",
-        "1245": "Chasse privée",
-        "1246": "Défi: buffet à volonté",
-        "1247": "Défi: taratata",
-        "1248": "Défi: tondeuse sur pattes",
-        "1249": "Vombrellules en surnombre",
-        "1250": "Sur un malentendu...",
-        "1251": "On ne marchande pas avec un mammouth",
-        "1252": "Bon, des baras",
-        "1253": "En emportant le duvet qui était son nid un beau matin",
-        "1254": "Défi: contrôle des naissances",
-        "1255": "On ne peut pas tromper mille fois une personne",
-        "1256": "Le bol d'air pue",
-        "1257": "Défi: cinq troncs et feuillages par jour",
-        "1258": "Défi: l'indomptable",
-        "1259": "Défi: Gergei a la bougeotte",
-        "1260": "Il va y avoir du sport",
-        "1261": "Qui veut la peau de mon hainag?",
-        "1262": "Désert brûlant",
-        "1263": "Manzasiri, y es-tu?",
-        "1264": "Défi: repousser du gulo",
-        "1265": "Défi: l'odeur de la tortue verte",
-        "1266": "Les analas se mettent au vert",
-        "1267": "Défi: attention, passage de mammouths",
-        "1268": "Bataille pour les pâturages du milieu",
-        "1269": "Je t'ai volé ton lait",
-        "1270": "Berger, un métier à risque",
-        "1271": "Défi: où es-tu",
+        "1207": "Défi: alarme fatale"
+      }
+    },
+    "413": {
+      "name": "Les Lacs",
+      "fates": {
+        "1103": "Défi: l'étalon survolté",
+        "1104": "Défi: l'étalon survolté",
+        "1105": "Défi: l'étalon survolté",
         "1272": "Sélection semi-naturelle",
         "1273": "Défi: ce pataud de crapaud",
         "1274": "Défi: la belle est la bête",
@@ -2638,7 +3239,122 @@
         "1302": "L'argile est agile",
         "1303": "L'affliction d'Anselot",
         "1304": "La hantise d'Anselot",
-        "1305": "La dernière volonté d'Anselot",
+        "1305": "La dernière volonté d'Anselot"
+      }
+    },
+    "421": {
+      "name": "Mer de Rubis",
+      "fates": {
+        "1142": "Défi: l'eau elle aime ça",
+        "1143": "De corvée avec les bucorves",
+        "1144": "Défi: à tout jamais",
+        "1145": "Défi: on craint gedan",
+        "1146": "Vidange pour les Bleus",
+        "1147": "Défi: le crabe marche sous la tête",
+        "1148": "Défi: la philosophie d'Agni",
+        "1149": "Bons comptes à OK corail",
+        "1150": "Privés de banquet",
+        "1151": "Des serpents dans les îlots",
+        "1152": "Lâcher de raies",
+        "1153": "Défi: la princesse aux longues dents",
+        "1154": "Athlétiques bibao",
+        "1155": "Pêche à la bombe",
+        "1156": "L'écarlate scélérate",
+        "1157": "Mollusque à brusquer",
+        "1158": "Les horreurs de l'aurore",
+        "1159": "Défi: prendre le clandestin par les cornes",
+        "1160": "Le butin, ça va, ça vient",
+        "1161": "Défi: le chevalier d'écailles",
+        "1162": "Reprendre n'est pas voler",
+        "1163": "Maille à partir",
+        "1164": "Les vils requins",
+        "1165": "Défi: fais tes prières, Sogenbi",
+        "1166": "Avant qu'il ne soit taureau tard",
+        "1167": "Défi: le samouraï vagabond",
+        "1168": "Vagabond contre chasseur",
+        "1170": "Casse-toi et marche en crabe",
+        "1171": "Enrayer les raies rayées",
+        "1172": "Défi: amocher les daimyo"
+      }
+    },
+    "422": {
+      "name": "Yanxia",
+      "fates": {
+        "1106": "Défi: la renarde fait surface",
+        "1107": "Défi: la renarde fait surface",
+        "1108": "Défi: la renarde fait surface",
+        "1109": "Rusera bien qui rusera le dernier",
+        "1110": "Prétendants gênants",
+        "1111": "Les offrandes de Ginko",
+        "1208": "Détrousseurs koja",
+        "1209": "Détrousseurs namazu",
+        "1210": "Défi: Gyogun le garde-pêche",
+        "1211": "Le Lupin est un loup pour le Lupin",
+        "1212": "La meute sanguinaire",
+        "1213": "Défi: Wakizashi le chasseur de lames",
+        "1214": "Prise de bec",
+        "1215": "Défi: ovipare ovivore",
+        "1216": "Les dents du ciel",
+        "1217": "Défi: il court, il court, le furet",
+        "1218": "Éclosion explosive",
+        "1219": "Tigres grégaires",
+        "1220": "Topographie rizicole",
+        "1221": "Régulation de population",
+        "1222": "La meute de l'ombre",
+        "1223": "Racines ambulantes",
+        "1224": "Les écumeurs de rizières",
+        "1225": "La recette de l'omelette",
+        "1226": "Défi: la lueur des champs",
+        "1227": "Défi: le comédien pourpre",
+        "1228": "Défi: pollution environnementale",
+        "1229": "Défi: le chien noir de Yanxia",
+        "1230": "Défi: l'éclipse à plumes",
+        "1231": "Défi: qui épouvante l'épouvantail?",
+        "1232": "Les malandrins du goûter",
+        "1233": "Les Lupins solitaires",
+        "1234": "Renforts intrépides",
+        "1235": "Tora! Tora! Tora! ",
+        "1236": "Défi: Ragoh perd la tête",
+        "1237": "Défi: avis d'éviction",
+        "1238": "Défi: le géant de fer",
+        "1239": "Chiens de bonne herpe",
+        "1240": "Cosmologie hingashienne: le shikigami kiyofusa",
+        "1241": "Cosmologie hingashienne: le shikigami koja"
+      }
+    },
+    "423": {
+      "name": "Steppe d'Azim",
+      "fates": {
+        "1242": "Défi: la proie vengeresse",
+        "1243": "Défi: silence, ça pousse!",
+        "1244": "Défi: refroidir le vent glaçant",
+        "1245": "Chasse privée",
+        "1246": "Défi: buffet à volonté",
+        "1247": "Défi: taratata",
+        "1248": "Défi: tondeuse sur pattes",
+        "1249": "Vombrellules en surnombre",
+        "1250": "Sur un malentendu...",
+        "1251": "On ne marchande pas avec un mammouth",
+        "1252": "Bon, des baras",
+        "1253": "En emportant le duvet qui était son nid un beau matin",
+        "1254": "Défi: contrôle des naissances",
+        "1255": "On ne peut pas tromper mille fois une personne",
+        "1256": "Le bol d'air pue",
+        "1257": "Défi: cinq troncs et feuillages par jour",
+        "1258": "Défi: l'indomptable",
+        "1259": "Défi: Gergei a la bougeotte",
+        "1260": "Il va y avoir du sport",
+        "1261": "Qui veut la peau de mon hainag?",
+        "1262": "Désert brûlant",
+        "1263": "Manzasiri, y es-tu?",
+        "1264": "Défi: repousser du gulo",
+        "1265": "Défi: l'odeur de la tortue verte",
+        "1266": "Les analas se mettent au vert",
+        "1267": "Défi: attention, passage de mammouths",
+        "1268": "Bataille pour les pâturages du milieu",
+        "1269": "Je t'ai volé ton lait",
+        "1270": "Berger, un métier à risque",
+        "1271": "Défi: où es-tu",
         "1306": "Sur la route des Dataq",
         "1307": "Toujours Dataq",
         "1308": "La première traite n'attend pas",
@@ -2651,11 +3367,243 @@
         "1316": "Rancune d'éléphant",
         "1318": "Dataq, Goro, même combat",
         "1319": "On prend les matanga et on recommence",
-        "1320": "Le roi des matanga",
-        "1321": "Y a du soleil et des pieuvres",
-        "1322": "Punir l'infâme marchand",
-        "1323": "Coquillages et cisailleurs",
-        "1324": "Ah, ces touristes..."
+        "1320": "Le roi des matanga"
+      }
+    },
+    "990": {
+      "name": "Anemos",
+      "fates": {
+        "1328": "Défi: l'empereur des bourrasques",
+        "1329": "Défi: le démon des tempêtes",
+        "1331": "Défi: le dragon démentiel",
+        "1332": "Défi: la fleur d'Eurêka",
+        "1333": "Défi: l'ultime soupir de la beauté",
+        "1334": "Défi: le dévoreur",
+        "1335": "Défi: la bête humaine",
+        "1336": "Défi: le sage putréfié",
+        "1337": "Défi: le géant légendaire",
+        "1338": "Défi: la reine infernale",
+        "1339": "Défi: le scorpion mythique",
+        "1340": "Défi: l'insatiable cerbère",
+        "1341": "Défi: douche froide pour le hazmat roi",
+        "1342": "Défi: colère aviaire",
+        "1343": "Défi: on m'appelle le cavalier blanc",
+        "1344": "Défi: un cadavre tout sauf exquis",
+        "1345": "Défi: tempête sur Eurêka",
+        "1346": "Défi: le jugement de Julika",
+        "1347": "Défi: régler son compte à Number",
+        "1348": "Défi: le Seigneur de la terre interdite"
+      }
+    },
+    "991": {
+      "name": "Pagos",
+      "fates": {
+        "1351": "Défi: neige écarlate",
+        "1352": "Défi: les chèvres à lait",
+        "1353": "Défi: des cendres aux cendres",
+        "1354": "Défi: la mort vient d'en bas",
+        "1355": "Défi: cycle thermodynamique",
+        "1356": "Défi: ni chair ni poisson",
+        "1357": "Défi: malhomme de neige",
+        "1358": "Défi: les deux frères",
+        "1359": "Défi: du jour à la nuit",
+        "1360": "Défi: le retour du roi",
+        "1361": "Défi: oh, la vache!",
+        "1362": "Défi: un cri dans la tempête",
+        "1363": "Défi: mon œil!",
+        "1364": "Défi: lames glacées",
+        "1365": "Défi: morbole de neige",
+        "1366": "Défi: les yeux dans les yeux dans les yeux",
+        "1367": "Défi: petits bonds dans la neige",
+        "1368": "Défi: lapereaux apeurés",
+        "1369": "Défi: zombie-bliophile"
+      }
+    },
+    "992": {
+      "name": "Pyros",
+      "fates": {
+        "1388": "Défi: la blanche créature",
+        "1389": "Défi: les foudres de Flauros",
+        "1390": "Défi: monstres sophistiqués",
+        "1391": "Défi: une méchante griffe",
+        "1392": "Défi: livrez les irrévérents!",
+        "1393": "Défi: les cousins de Machin",
+        "1394": "Défi: les éclairs de génie d'Aetolos",
+        "1395": "Défi: chaud comme la braise",
+        "1396": "Défi: un peu gluantes, mais appétissantes!",
+        "1397": "Défi: ses larmes n'y pourront rien changer",
+        "1398": "Défi: la détresse des mots qu'ils envoient",
+        "1399": "Défi: coup de foudre à Eurêka Pyros",
+        "1400": "Défi: rencontre de deux sales types",
+        "1401": "Défi: les yeux qui brillent",
+        "1402": "Défi: frères ennemis",
+        "1403": "Défi: Sköll, offenses-tu?",
+        "1404": "Défi: papillons de la reine",
+        "1407": "Défi: les coraux de la colère",
+        "1408": "Défi: roches porte-bonheur"
+      }
+    },
+    "1004": {
+      "name": "Hydatos",
+      "fates": {
+        "1412": "Saison seiche",
+        "1413": "Défi: Gros comme un Stegodon",
+        "1414": "Défi: Va te faire cuire un œuf",
+        "1415": "Défi: Petits oiseaux, si vous n'avez pas d'ailes",
+        "1416": "Défi: Tigre et Crinière-de-givre",
+        "1417": "Défi: Les lauriers de la colère",
+        "1418": "Défi: Retourne d'où tu viens",
+        "1419": "Défi: Une plante d'enfer",
+        "1420": "Défi: Rugir de déplaisir",
+        "1421": "Défi: La reine des langues de vipère",
+        "1422": "Eurêka et son arsenal",
+        "1423": "Défi: Provenance indéfinie",
+        "1424": "Défi: La vérité est à Hydatos",
+        "1425": "Rien que de l'eau"
+      }
+    },
+    "501": {
+      "name": "Grand-Lac",
+      "fates": {
+        "1496": "La menace des Fanes pourpres: un repaire convoité",
+        "1497": "La menace des Fanes pourpres: un repaire investi",
+        "1498": "Défi: Ophion, le reptile sanguinaire",
+        "1499": "La trahison des wargs",
+        "1500": "Dur dur d'être un bûcheron",
+        "1501": "La menace des Fanes pourpres: le bûcheron attaqué",
+        "1502": "La menace des Fanes pourpres: un vil piège",
+        "1503": "La menace des Fanes pourpres: l'insurrection",
+        "1504": "La menace des Fanes pourpres: les wargs s'en mêlent",
+        "1505": "Pour le salut du petit commerce",
+        "1506": "Pas venu ici pour souffrir",
+        "1507": "Défi: le noble Lugarhoo",
+        "1508": "La petite porte des horreurs",
+        "1509": "Il est frais, mon poisson",
+        "1510": "Défi: le Casse-noisette excédé"
+      }
+    },
+    "502": {
+      "name": "Kholusia",
+      "fates": {
+        "1462": "Formidable: la menace",
+        "1463": "Formidable: la filature",
+        "1464": "Formidable: l'arme secrète",
+        "1465": "Défendre Douceonde",
+        "1466": "Défendre Douceonde",
+        "1467": "Des chenapans à Cherpant",
+        "1468": "Des chenapans à Cherpant",
+        "1469": "Orgie d'orge organisée",
+        "1470": "La menace née-des-vents",
+        "1471": "Les vilains petits tragopans",
+        "1472": "Crever les crevettes",
+        "1473": "Frapper les frappeurs",
+        "1474": "Les cris de la discorde",
+        "1475": "Par amitié pour Amistie",
+        "1476": "Défi: Mort à Mort rampante!",
+        "1477": "Bataille d'ingénieurs: automate en construction",
+        "1478": "Bataille d'ingénieurs: dernière mise au point",
+        "1479": "Bataille d'ingénieurs: la lutte finale"
+      }
+    },
+    "503": {
+      "name": "Amh Araeng",
+      "fates": {
+        "1511": "Course au trésor: mandibules sécatrices",
+        "1512": "Course au trésor: y a trop de lézards",
+        "1513": "Course au trésor: une très grosse épine",
+        "1514": "Course au trésor: au volatile voleur!",
+        "1515": "Appel à l'aide: bandits en bande",
+        "1516": "Appel à l'aide: débander les bandits",
+        "1517": "Appel à l'aide: fouilles aux ruines",
+        "1518": "Appel à l'aide: l'épée de l'ancien",
+        "1519": "Un guet-apens piquant",
+        "1520": "Gare aux sables mouvants!",
+        "1521": "Touchez pas à ma truffe!",
+        "1522": "Bayawak, la reine des lézards",
+        "1523": "Des iguanes assoiffés de sang!",
+        "1524": "Ça casse pas trois pattes à un phorusrhacos",
+        "1525": "Kurukadi et Mumba, duo de choc",
+        "1526": "Exploser la gueule des huldus explosifs",
+        "1527": "Un dernier tango armé"
+      }
+    },
+    "504": {
+      "name": "Il Mheg",
+      "fates": {
+        "1480": "Les frères Daen: Pixie en vue!",
+        "1481": "Les frères Daen: amaro en vue!",
+        "1482": "Les frères Daen: Nu Mou en vue!",
+        "1483": "Les frères Daen: riposte arborescente",
+        "1484": "Les frères Daen: rétribution",
+        "1485": "Les frères Daen: partie remise",
+        "1486": "Les frères Daen: Fusion!",
+        "1487": "Les frères Daen: la bataille finale",
+        "1488": "Défi: Samyaza",
+        "1489": "Ours sur un lit de rose",
+        "1490": "Floraison virulente",
+        "1491": "Défi: Nécropsychée",
+        "1492": "La Pixie butineuse et les abeilles tueuses",
+        "1493": "Amis pour la vie",
+        "1494": "La Pixie butineuse et la bête à plumes",
+        "1495": "La Pixie butineuse et l'or liquide",
+        "1531": "Les frères Daen: amaro en vue!",
+        "1532": "Les frères Daen: Nu Mou en vue!",
+        "1533": "Les frères Daen: riposte arborescente"
+      }
+    },
+    "505": {
+      "name": "Rak'tika",
+      "fates": {
+        "1441": "Patrouille de Myalna: la maladie de l'écho",
+        "1442": "Patrouille de Myalna: les chenilles infectées",
+        "1443": "Patrouille de Myalna: en manque de plumes",
+        "1444": "Patrouille de Myalna: l'escorte du gardien ancien",
+        "1445": "Chasse de Myalna: Opération Tojil",
+        "1446": "Chasse de Myalna: à la poursuite du Tojil",
+        "1447": "Chasse de Myalna: à la poursuite du Tojil",
+        "1448": "Chasse de Myalna: un Tojil courroucé",
+        "1449": "Chasse de Myalna: un Tojil courroucé",
+        "1450": "Chasse de Myalna: l'élimination du Tojil",
+        "1528": "Chasse de Myalna: un Tojil courroucé",
+        "1529": "Chasse de Myalna: un Tojil courroucé",
+        "1530": "Chasse de Myalna: l'élimination du Tojil",
+        "1451": "Défi: le tréant apyre",
+        "1452": "Arachnophobie",
+        "1453": "Flamants empoisonnés",
+        "1454": "Cuisine raptorienne",
+        "1455": "Amour et Mort",
+        "1456": "L'attaque du tomatl tueur",
+        "1457": "Défi: l'oiseau de l'ombre de la mort",
+        "1458": "Quand l'instinct se réveille",
+        "1459": "Le début d'une légende",
+        "1460": "Quilmet et Salmet",
+        "1461": "Défi: L'œil du dieu de feu"
+      }
+    },
+    "506": {
+      "name": "Tempest",
+      "fates": {
+        "1426": "L'annonciatrice du chaos: l'ouverture de la chasse",
+        "1427": "L'annonciatrice du chaos: Zumshs la terreur des abysses",
+        "1428": "L'annonciatrice du chaos: oléofurors furax",
+        "1429": "L'annonciatrice du chaos: expédition spéléologique",
+        "1430": "L'annonciatrice du chaos: pêche aux coraux",
+        "1431": "L'annonciatrice du chaos: les rets de Zumshs",
+        "1432": "L'annonciatrice du chaos: bataille au sommet des fonds",
+        "1433": "Défi: La belle des abysses",
+        "1434": "Une histoire de coquillages",
+        "1435": "Les perles éternelles",
+        "1436": "Adieu, anémones",
+        "1437": "Filets de dambanha en tranches",
+        "1438": "Hydrozoaires protozoaires",
+        "1439": "Oiseaux de malheur",
+        "1440": "Une histoire de crustacés"
+      }
+    },
+    "1005": {
+      "name": "Events",
+      "fates": {
+        
       }
     }
   }

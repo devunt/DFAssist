@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using System.Threading.Tasks;
 
 namespace App
 {
@@ -139,6 +140,30 @@ namespace App
             });
         }
 
+        internal void SetDutyStatus(byte order)
+        {
+            isMatched = false;
+            memberCount = null;
+            this.Invoke(() =>
+            {
+                label_DutyCount.SetLocalizedText("overlay-roulette");
+                if (order == 0) // 순번 대기
+                {
+                    label_DutyStatus.SetLocalizedText("overlay-queue-waiting");
+                }
+                else // TODO: 순번이 1번일 때?
+                {
+                    label_DutyStatus.SetLocalizedText("overlay-queue-order", order);
+                    if (!isRoulette)
+                    {
+                        Roulette roulette = new Roulette();
+                        roulette = Data.GetRoulette(0);
+                        label_DutyName.Text = roulette.Name;
+                    }
+                }
+            });
+        }
+
         internal void SetDutyStatus(Instance instance, byte tank, byte dps, byte healer)
         {
             isMatched = false;
@@ -157,17 +182,17 @@ namespace App
                         label_DutyStatus.SetLocalizedText("overlay-queue-waiting");
                     }
                 }
-                else if (isRoulette)
+                /* else if (isRoulette)
                 {
-                    if (tank == 255) // 순번 대기
+                    if (tank == 0) // 순번 대기
                     {
                         label_DutyStatus.SetLocalizedText("overlay-queue-waiting");
                     }
                     else // TODO: 순번이 1번일 때?
                     {
-                        label_DutyStatus.SetLocalizedText("overlay-queue-order", tank + 1);
+                        label_DutyStatus.SetLocalizedText("overlay-queue-order", tank);
                     }
-                }
+                } */
                 else
                 {
                     label_DutyName.Text = instance.Name;
@@ -175,6 +200,18 @@ namespace App
                 }
             });
         }
+
+        internal void SetDutyStatus(byte tank, byte tankMax, byte dps, byte dpsMax, byte healer, byte healerMax) // v5.1
+        {
+            isMatched = false;
+            memberCount = null;
+            this.Invoke(() =>
+            {
+                label_DutyName.SetLocalizedText("overlay-queue-waiting");
+                label_DutyStatus.Text = $@"{tank}/{tankMax}    {healer}/{healerMax}    {dps}/{dpsMax}";
+            });
+        }
+
 
         internal void SetRoulleteDuty(Roulette roulette)
         {
@@ -199,6 +236,15 @@ namespace App
 
                 accentColor = Color.Red;
                 StartBlink();
+            });
+        }
+
+        internal void SetDutyAsMatching()
+        {
+            this.Invoke(() =>
+            {
+                label_DutyName.SetLocalizedText("overlay-duty-count-unknown");
+                label_DutyStatus.SetLocalizedText("overlay-queue-waiting");
             });
         }
 
@@ -238,6 +284,9 @@ namespace App
         internal void CancelDutyFinder()
         {
             this.Invoke(CancelDutyFinderSync);
+
+            if (Settings.autoHideOverlay)
+                this.Hide();
         }
 
         internal void CancelDutyFinderSync()
@@ -245,7 +294,7 @@ namespace App
             isMatched = true;
             StopBlink();
 
-            label_DutyCount.Text = Settings.ShowAnnouncement ? Localization.GetText("overlay-announcement") : "";
+            label_DutyCount.Text = "";
             label_DutyName.SetLocalizedText("overlay-not-queuing");
             label_DutyStatus.Text = "";
         }
@@ -270,8 +319,31 @@ namespace App
             {
                 accentColor = Color.Black;
 
+                // 오버레이 자동 숨기기 옵션에 숨겨주고
+                if(Settings.autoHideOverlay)
+                    this.Hide();
+
                 // 내용을 비움
                 CancelDutyFinder();
+            }
+        }
+
+        internal void instances_callback(int code)
+        {
+            if (Settings.copyMacro)
+            {
+                Task.Factory.StartNew(() =>
+                {
+                    var instance = Data.GetInstance(code);
+                    if (instance.Macro != null)
+                    {
+                        var respond = LMessageBox.Dialog(Localization.GetText("ui-settings-copymacro-dialog-text", instance.Name), Localization.GetText("ui-settings-copymacro-dialog-title"), MessageBoxButtons.YesNo, MessageBoxIcon.None, MessageBoxDefaultButton.Button1);
+                        if (respond == DialogResult.Yes)
+                        {
+                            this.Invoke(() => { Clipboard.SetDataObject(instance.Macro, true); });
+                        }
+                    }
+                });
             }
         }
 

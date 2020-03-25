@@ -1,0 +1,206 @@
+{
+  "app-name": "Duty/FATE Notifier",
+
+
+  "unknown-instance": "Неизвестный Duty ({0})",
+  "unknown-roulette": "Неизвестная Рулетка ({0})",
+  "unknown-area": "Неизвестная Область ({0})",
+  "unknown-fate": "Неизвестный FATE ({0})",
+
+
+  "notification-app-updated": "Версия {0} Обновлена",
+  "notification-queue-matched": "< {0} > Собрана!",
+  "notification-fate-occured": "< {0} > Состоялся!",
+
+
+  "fate-occured": "< {0} > FATE Заспавнился!",
+  "queue-matched": "< {0} > Duty подобран!",
+
+
+  "fate-preset-animus-SkyfireI": "Book of Skyfire I",
+  "fate-preset-animus-SkyfireII": "Book of Skyfire II",
+  "fate-preset-animus-NetherfireI": "Book of Netherfire I",
+  "fate-preset-animus-SkyfallI": "Book of Skyfall I",
+  "fate-preset-animus-SkyfallII": "Book of Skyfall II",
+  "fate-preset-animus-NetherfallI": "Book of Netherfall I",
+  "fate-preset-animus-SkywindI": "Book of Skywind I",
+  "fate-preset-animus-SkywindII": "Book of Skywind II",
+  "fate-preset-animus-SkyearthI": "Book of Skyearth I",
+  "fate-preset-Ixion": "Ixion (The Lochs)",
+  "fate-preset-Tamamo": "Tamamo (Yanxia)",
+  "fate-preset-frogMount": "Frog Mount (Kholusia)",
+  "fate-preset-frogSuit": "Frog Suit (Tempest)",
+
+  
+  "ui-notifymenustrip-open": "Открыть",
+  "ui-notifymenustrip-close": "Выход",
+
+  "ui-topsetting-process": "Процесс FFXIV ",
+  "ui-topsetting-select": " Вручную",
+  "ui-topsetting-reset": "Сброс",
+
+  "ui-tabcontrol-settings": "Настройки",
+  "ui-tabcontrol-3rdparty": "Уведомления",
+  "ui-tabcontrol-advanced": "Продвинутые",
+  "ui-tabcontrol-fate": "FATE",
+  "ui-tabcontrol-logs": "Логи",
+  "ui-tabcontrol-info": "Информация",
+
+  "ui-settings-title": "Базовая настройка",
+  "ui-settings-overlay-use": "Использовать оверлэй",
+  "ui-settings-overlay-tooltip": "Чтобы переместить оверлей зажми цветную полосу слева",
+  "ui-settings-overlay-reset": "Сброс",
+  "ui-settings-overlay-autohide": "Оверлей только в очереди или FATE",
+  "ui-notification-overlay-autohide": "Опция будет применена после изменения состояния очереди или при появлении FATE.\nДля корректного отображения, пожалуйста, перезапустите приложение.\nВ ожидании подключения к клиенту игры, отображается оверлей.\n(Чтобы уведомить о состоянии подключения.)",
+  "ui-settings-startupshow": "Показать окно при запуске программы",
+  "ui-settings-iconflash": "Мигать значком если Duty/FATE найдены",
+  "ui-settings-cheatroulette": "Показывать название Duty в режиме Duty Roulette",
+  "ui-settings-copymacro": "Копировать данные о duty в буфер, когда он будет найден.",
+  "ui-settings-copymacro-dialog-title": "скопировать макрос DFA",
+  "ui-settings-copymacro-dialog-text": "Скопировать <{0}> макрос в буфер обмена?",
+  "ui-settings-usevpn": "Не фильтровать подключение к локальной сети (VPN, и т.д)",
+  "ui-settings-usevpn-alert": "Отключите эту опцию для захвата сетевого пакета.",
+  "ui-settings-fatesound": "Включить звуковое уведомления FATE \n(отключает пользовательский сигнал)",
+  "ui-settings-customsound": "Свой сигнал уведомлений FATE/Duty ",
+  "ui-settings-getsoundfile": "Обзор",
+  "ui-settings-getfilewav": "WAV files (*.wav)|*.wav",
+  "ui-notification-customsound-selectfile": "Сначала выберите звуковой файл",
+  "ui-link-localization": "Прими участие в локализации DFAssist",
+
+  "ui-3rdparty-telegram-title": "Telegram оповещения",
+  "ui-3rdparty-telegram-activate": "Включить",
+  "ui-3rdparty-telegram-queuestatus": "Cтатус очереди",
+  "ui-3rdparty-telegram-about": "Если подбор завершен или появится FATE, отправить сообщение в Telegram.\nПолучить Chat ID, можно у DF Assist Telegram Bot отправив любое сообщение.",
+  "ui-3rdparty-discord-title": "Discord оповещения",
+  "ui-3rdparty-discord-activate": "Включить",
+  "ui-3rdparty-discord-numberonly-alert": "Ваш Discord ID.",
+  "ui-3rdparty-discord-about": "Оповестить в чат Discord упомянув Вас.\nВведите свой 15-значный Discord ID.\n\nУзнать свой Discord ID: введите команду !id в канале #get-discord-id на сервере DFAssist Discord Server. Ответом будет ваш Discord ID.\nЧтобы получить уведомление, вы должны быть на сервере.",
+
+  "ui-advanced-http": "Пользовательский HTTP запрос",
+  "ui-advanced-http-enable": "Включить",
+  "ui-advanced-http-duty-matched": "Отправить когда Duty будет подобран",
+  "ui-advanced-http-fate-occured": "Отправить когда FATE будет обнаружен",
+  "ui-advanced-http-readme": "Если включено, DFAssist будет отсылать POST HTTP запросы \n\"status\" и \"info\" по указанному адресу.\n\"status\" отправляется в случае \"duty-match\" или \"fate-occured\".\n\"info\" отправляется если известен Duty или FATE.\n\nЭта функция будет улучшена в будущем.",
+
+  "ui-debug": "Debug",
+  "ui-debug-log": "Log Debug logs",
+
+  "ui-fate-selectall": "Выбрать всё",
+  "ui-fate-unselectall": "Отменить всё",
+  "ui-fate-preset": "Пресеты",
+  "ui-fate-apply": "Применить",
+  "ui-fate-about": "Выбери FATE чтобы получить уведомление о начале и нажми \"Применить\". Оповещения работают только на локации выбранного  FATE",
+
+  "ui-logs-copy": "Копировать Логи",
+  "ui-logs-clear": "Очистить",
+
+  "ui-info-about": "[Участники]\n유채색\nLaiglinne\nHibiyasleep\nAlex00728 (Jaehyuk-Lee)\n[При поддержке] : fpdhs698\n[Copyright]\nВсе названия компаний, продуктов являются зарегистрированными или незарегистрированными товарными знаками соответствующих владельцев\n(C)2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by ACTOZ SOFT.",
+
+  "ui-msgbox-title-info": "DFA Оповещения ",
+  "ui-msgbox-title-warning": "DFA предупреждения ",
+  "ui-msgbox-title-error": "DFA ошибки",
+
+  "ui-language-changed": "Был выбран русский язык.\nДля корректного отображения, пожалуйста, перезапустите приложение.",
+
+  "ui-clipboard-copied": "Скопировано в буфер",
+
+  "ui-cheat-roulette-confirm": "Эта функция отключена по умолчанию для предотвращения неприятных ситуаций \nПожалуйста, не стоит отказываться от участия в Duty, только потому что оно вам не нравится. \nВы все еще хотите включить ее?",
+  "ui-cheat-roulette-enabled": "Включено. \nПожалуйста, не стоит отказываться от участия в подземелье, только потому что оно вам не нравится. ",
+
+  "ui-clear-log-confirm": "Очистить логи?",
+
+  "ui-fate-selection-saved": "FATE оповещения установлены.",
+  "ui-fate-preset-applied": "FATE пресет принят.",
+
+  "ui-updating": "Обновление программы...\n{0}",
+
+  "ui-app-crashed": "Приложение закрылось из-за неизвестной проблемы.\n\nОшибка: {0}",
+
+
+  "overlay-waiting-connection": "Ожидаем подключения FFXIV ",
+  "overlay-not-queuing": "Поиск очереди не ведётся",
+  "overlay-duty-count-unknown": "Идет подбор",
+  "overlay-duty-count": "{0}  Идет подбор",
+  "overlay-queue-waiting-party": "Поиск группы: {0} / {1} / {2}",
+  "overlay-queue-waiting": "Получение информации...",
+  "overlay-queue-order": "#{0} в очереди на вашу роль",
+  "overlay-roulette": "Duty roulette",
+  "overlay-queue-waiting-confirm": "Ожидает вашего подтверждения",
+  "overlay-queue-matched": "Подобран!",
+  "overlay-queue-confirming": "Ждем подтверждения",
+  "overlay-fate-occured": "Начался FATE!",
+
+
+  "l-process-set-success": "P: выбран процесс FFXIV: {0}",
+  "l-process-set-failed": "P: не удалось назначить процесс FFXIV.",
+  "l-process-finding": "P: Поиск процесса FFXIV...",
+  "l-process-found-nothing": "P: Не удалось найти процесс FFXIV.",
+  "l-process-found-multiple": "P: 2 или более FFXIV процесов уже запущено.",
+
+  "l-telegram-failed-request": "R: Произошла ошибка при запросе сообщения в телеграм",
+  "l-telegram-failed-general": "R: Произошла ошибка при отправке сообщения в телеграм: {0}",
+  "l-telegram-success": "R: Сообщение отправлено в Telegram!",
+  "l-discord-failed-request": "R: Произошла ошибка при запросе сообщения Discord",
+  "l-discord-failed-general": "R: Произошла ошибка при отправке сообщения в Discord: {0}",
+  "l-discord-success": "R: Сообщение отправлено в Discord!",
+
+  "l-web-request-failed": "W: W: ошибка запроса веб-службы",
+
+  "l-updater-current-version": "U: Текушая версия: {0}",
+  "l-updater-latest-version": "U: Последняя версия: {0}",
+  "l-updater-is-latest": "U: Используется последняя версия.",
+  "l-updater-new-version": "U: Доступно обновление.",
+  "l-updater-error-general": "U: Ошибка при обновлении данных",
+  "l-updater-error-data": "U: Ошибка при обновлении Duty/FATE ",
+  "l-updater-error-check": "U: Не удалось найти информацию об обновлении.",
+  "l-updater-error-no-url": "U: Не удается найти файл обновления.",
+  "l-updater-error-downloading": "U: Ошибка при получении файла обновления",
+
+  "l-data-updated": "D: Данные Duty/FATE обновлены до весрии {0}.",
+  "l-data-is-latest": "D: Используются последние Duty/FATE данные  (version {0}).",
+  "l-data-error": "D: Произошла ошибка при обработке данных Duty/FATE",
+
+  "l-packet-error-ip": "P: Ошибка парсинга IP пакетов",
+  "l-packet-error-tcp": "P: Ошибка парсинга TCP-пакетов",
+
+  "l-network-started": "N: Чтение сетевых пакетов FFXIV начато",
+  "l-network-starting": "N: Начинаю читать сетевые пакеты FFXIV",
+  "l-network-stopped": "N: Чтение сетевых пакетов FFXIV остановлено",
+  "l-network-stopping": "N: Прекращаю читать сетевые пакеты FFXIV",
+  "l-network-error-starting": "N: Не получилось начать",
+  "l-network-error-stopping": "N: Не получилось остановиться",
+  "l-network-error-already-started": "N: Уже начато",
+  "l-network-error-already-stopped": "Уже прекращено",
+  "l-network-error-no-connection": "N: Нет соединения с серверами FFXIV",
+  "l-network-error-receiving-packet": "N: Ошибка получения пакета",
+  "l-network-error-filtering-packet": "N: Ошибка фильтрации пакетов",
+  "l-network-error-finding-lobby": "N: Ошибка получения информации от lobby-сервера",
+  "l-network-detected-connection-closing": "N: Обнаружено отключение от серверов FFXIV",
+  "l-network-detected-connection": "N: Обнаружено подключение к серверам FFXIV: {0}",
+
+  "l-firewall-registered": "FW: Регистрация",
+  "l-firewall-error": "FW: Ошибка регистрация",
+  
+  "l-wav-error": "S: неверный wav-файл.",
+
+  "l-POST-send": "N: POST Запрашиваемый URl: {0}, Data: {1}",
+  "l-POST-no-response": "S: POST нет ответа!",
+  "l-POST-failed": "S: POST Запрос не удался!",
+  "l-POST-response": "S: POST Ожидание ответа: {0}",
+
+  "l-analyze-error-length": "A: Ошибка длины в анализируемом сообщении: {0}, {1}/{2}",
+  "l-analyze-error-general": "A: Ошибка анализируемого сообщения",
+  "l-analyze-error": "A: Ошибка обработки сообщения",
+
+  "l-queue-started-general": "Q: Начало подбора [{0}]",
+  "l-queue-started-roulette": "Q: Начало подбора Duty-рулетки [{0}]",
+  "l-queue-stopped": "Q: подбор прекращен",
+  "l-queue-entered": "Q: Входим в подземелье",
+  "l-queue-matched": "Q: Найдено [{0}]",
+  "l-queue-updated": "Q: Обновление статуса поиска [{0}, {1}, {2}/{3}, {4}/{5}, {6}/{7}]",
+
+  "l-fate-occured-info": "F: {0} Начался FATE!",
+
+  "l-field-instance-entered": "I: Подтверждение входа в подземелье [{0}]",
+  "l-field-instance-left": "I: Покидаем подземелье"
+}

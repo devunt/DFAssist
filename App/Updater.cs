@@ -78,8 +78,6 @@ namespace App
                             updaterForm.ShowDialog();
                         });
 
-                        Sentry.Report("Update started");
-
                         var exepath = Process.GetCurrentProcess().MainModule.FileName;
 
                         var stream = GetDownloadStreamByUrl(url);
@@ -137,7 +135,7 @@ namespace App
                 try
                 {
                     var json = WebApi.Request($"https://raw.githubusercontent.com/{Global.GITHUB_REPO}/master/App/Resources/Data/{Settings.Language}.json");
-                    Data.Fill(json);
+                    Data.Fill(json, mainForm);
                 }
                 catch (Exception ex)
                 {
